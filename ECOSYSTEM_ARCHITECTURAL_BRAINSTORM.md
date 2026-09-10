@@ -765,3 +765,68 @@ Automate headless/background detection of limits and dynamic rotation across 5 l
 Migrate an active task across heterogeneous backends (Claude Desktop ──> Gemini Pro ──> Local Ollama).
 ```
 
+---
+
+### 7.16 Current State Audit: Phase 0.8 (Human-in-the-Loop) to Phase 1.0 (Autonomous Walk-Away)
+
+> *"You are not trying to build Jarvis from scratch; you have a manually-operated prototype of an AI research operating system, and the goal is to remove yourself from its control loop."*
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                                SYSTEM MATURITY AUDIT                                  │
+├──────────────────────────────────────┬─────────────┬───────────────────────────────────┤
+│ Architectural Dimension              │ Maturity    │ Operational Status                │
+├──────────────────────────────────────┼─────────────┼───────────────────────────────────┤
+│ Vision & Conceptual Scope            │ **9 / 10**  │ Comprehensive & formal            │
+│ 4-Tier Systems Architecture          │ **8 / 10**  │ Decoupled & documented            │
+│ Local Capability Mesh Inventory      │ **8 / 10**  │ 13 foundational modules on disk   │
+│ Research Hypotheses & Schemas        │ **7.5 / 10**│ HYP-001/002 & INV/FLEET specs     │
+│ Manual Multi-Agent Operation         │ **WORKING** │ Operating across free accounts    │
+│ Orchestration Substrate              │ **PARTIAL** │ FastAPI, SQLite WAL, atomic lease │
+│ Worker Session Runtime (WSR)         │ **BLOCKED** │ Manual window focus & claiming    │
+│ Autonomous Quota / Tool Migration    │ **BLOCKED** │ Manual copy-paste handoffs        │
+│ Persistent Autonomous Research       │ **PHASE 2** │ Requires automated WSR bridge     │
+└──────────────────────────────────────┴─────────────┴───────────────────────────────────┘
+```
+
+#### Phase 0.8: Human-Operated Distributed Cognition (Where You Are Today)
+In Phase 0.8, the human researcher personally acts as the:
+$$\text{Human} = \text{Scheduler} + \text{Dispatcher} + \text{Window Switcher} + \text{Quota Watchdog} + \text{Context Migrator} + \text{Synthesizer}$$
+This is not a failure; it is **empirical dogfooding**. By manually performing the role of the orchestrator, the researcher discovers the exact failure modes (tool limits, context loss, session freezes) that must be automated.
+
+#### Phase 1.0: Machine-Operated Distributed Cognition (The Immediate Target)
+In Phase 1.0, the human steps entirely out of the execution loop:
+
+```
+[Human PI] ──(Input: One Research Task)──> [Jarvis Orchestrator] ──(Walk Away)
+                                                    │
+                                                    ▼
+                                    [Worker Session Runtime]
+                                    • Selects Profile A
+                                    • Executes Tool Steps 1 & 2
+                                    • Intercepts Tool Limit Event
+                                    • Checkpoints State ($C_2$)
+                                    • Migrates to Profile B
+                                    • Resumes Steps 3, 4, 5
+                                    • Verifies via SMT / Sandbox
+                                                    │
+                                                    ▼
+[Human PI] <──(Output: Verified Audit Dossier)──────┘
+```
+
+#### The North Star Metric: The Autonomy Ratio
+Progress is no longer measured by lines of code or feature count, but by **human attention eliminated**:
+
+$$\text{Autonomy Ratio} = \frac{\text{Autonomous Machine Compute Time}}{\text{Human Cognitive Intervention Minutes}}$$
+
+$$\text{Phase 0.8 Baseline:} \quad \frac{40\text{ min computation}}{20\text{ min human babysitting}} = 2.0$$
+
+$$\text{Phase 1.0 Target:} \quad \frac{60\text{ min computation}}{1\text{ min task input}} = 60.0$$
+
+#### The Crossing Condition: The "Walk-Away" Benchmark
+The transition from Phase 0.8 to Phase 1.0 is achieved when the system passes the **Walk-Away Benchmark** ([`FLEET-001`](research/experiments/FLEET-001.md)):
+1. The human enters one multi-step task.
+2. The human **stops touching the keyboard**.
+3. Profile A hits its tool quota $\rightarrow$ WSR extracts state $\rightarrow$ Profile B resumes $\rightarrow$ task completes with verified artifacts.
+
+

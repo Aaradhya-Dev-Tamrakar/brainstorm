@@ -829,4 +829,64 @@ The transition from Phase 0.8 to Phase 1.0 is achieved when the system passes th
 2. The human **stops touching the keyboard**.
 3. Profile A hits its tool quota $\rightarrow$ WSR extracts state $\rightarrow$ Profile B resumes $\rightarrow$ task completes with verified artifacts.
 
+---
+
+### 7.17 Capital Allocation Matrix: Subscriptions vs. Machine-Facing API Credits
+
+> *"The goal is not to have the smartest consumer chatbot; it is to maximize verified research throughput per dollar and per minute of human attention."*
+
+#### The "Headstart Powerup" Evaluation: Where to Invest First
+When bootstrapping an AI systems R&D program, the common impulse is to collect multiple \$20/month consumer subscriptions (ChatGPT Plus, Claude Pro, Perplexity Pro). This is evaluated against architectural leverage:
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                          CAPITAL ALLOCATION PRIORITY MATRIX                            │
+├───────────────────────────────────┬──────────┬──────────────┬──────────────────────────┤
+│ Investment Target                 │ Cost     │ ROI Score    │ Strategic Verdict        │
+├───────────────────────────────────┼──────────┼──────────────┼──────────────────────────┤
+│ **Keep Active Gemini AI Pro**     │ ~$5/mo   │ **10 / 10**  │ **Anchor Workspace:**    │
+│ (4-yr student discount)           │          │              │ High-context reasoning.  │
+├───────────────────────────────────┼──────────┼──────────────┼──────────────────────────┤
+│ **Build WSR Automation**          │ $0.00    │ **10 / 10**  │ **Highest Priority:**    │
+│ (Worker Session Runtime bridge)   │          │              │ Eliminates human glue.   │
+├───────────────────────────────────┼──────────┼──────────────┼──────────────────────────┤
+│ **Micro Pay-As-You-Go API Fund**  │ $10–30/mo│ **9.0 / 10** │ **Machine-Facing:**      │
+│ (OpenAI / Anthropic / Gemini API) │          │              │ Headless worker sockets. │
+├───────────────────────────────────┼──────────┼──────────────┼──────────────────────────┤
+│ **Claude Pro Subscription**       │ $20/mo   │ **7.5 / 10** │ Buy **only** if consumer │
+│                                   │          │              │ limits block experiments.│
+├───────────────────────────────────┼──────────┼──────────────┼──────────────────────────┤
+│ **ChatGPT Plus Subscription**     │ $20/mo   │ **7.0 / 10** │ Improves ergonomics, but │
+│                                   │          │              │ does not automate fleet. │
+├───────────────────────────────────┼──────────┼──────────────┼──────────────────────────┤
+│ **General Search / Wrapper Subs** │ $20/mo   │ **4.0 / 10** │ Low architectural ROI;   │
+│ (Perplexity, Poe, etc.)           │          │              │ bypass via free MCP/DOM. │
+├───────────────────────────────────┼──────────┼──────────────┼──────────────────────────┤
+│ **Enterprise / \$100+ Tiers**     │ $100+/mo │ **2.0 / 10** │ **Severely Premature:**  │
+│                                   │          │              │ Token burn without WSR.  │
+└───────────────────────────────────┴──────────┴──────────────┴──────────────────────────┘
+```
+
+#### The Fundamental Dichotomy: Consumer Web UIs vs. Programmatic API Sockets
+* **Consumer Subscriptions (\$20/mo Web Chatbots):** Designed for humans typing in browser tabs. They feature rate limits, anti-automation protections, and session constraints that resist autonomous orchestration.
+* **API Credits (\$10–\$30 Pay-As-You-Go):** Designed for autonomous software agents. They expose programmatic endpoints allowing an orchestrator to programmatically select models, set schemas, handle retries, branch hypotheses, and inspect raw token usage.
+
+$$\text{Optimal Resource Split:} \quad \underbrace{\text{Gemini AI Pro (\$5/mo)}}_{\text{Human Cognitive Workspace}} \quad + \quad \underbrace{\text{Free Tiers \& Micro API Pool}}_{\text{Headless Machine Workers}}$$
+
+#### The 10-Task Diagnostic Benchmark
+Before spending money on any new model, execute a 10-task benchmark across your actual workload (3 architecture, 2 coding, 2 research, 2 adversarial red-teaming, 1 synthesis) to isolate the true bottleneck:
+
+* **Diagnostic A (Orchestration Bottleneck):** Reasoning quality is acceptable, but tasks stall due to manual window switching and session hand-offs $\implies$ **Spend \$0 on models; invest 100% of effort into WSR automation.**
+* **Diagnostic B (Capability Ceiling):** The worker repeatedly fails to express constraints in SMT-LIB despite prompt mutations $\implies$ **Allocate \$10 to frontier reasoning API credits (Claude 3.7 / o3).**
+* **Diagnostic C (Information Retrieval Ceiling):** The worker hallucinates external protocol specifications $\implies$ **Enhance Super-NLM or local SQLite FTS5 RAG pipelines.**
+* **Diagnostic D (Execution Ceiling):** The worker generates correct code, but local test execution is too slow $\implies$ **Use NovaOptimizer to prioritize compiler and fuzzer threads.**
+
+#### The Systemic R&D Leverage Equation
+Every investment across the ecosystem is evaluated through a unified optimization function:
+
+$$\text{R\&D Leverage} = \frac{\text{Verified Invariant Discoveries}}{\text{Financial Spend (\$) } + \text{Human Cognitive Minutes} + \text{Inference Compute (M tokens)}}$$
+
+Operating at Phase 0.8 keeps financial spend at \$5/month while driving the denominator down through automation, guaranteeing maximum research leverage.
+
+
 

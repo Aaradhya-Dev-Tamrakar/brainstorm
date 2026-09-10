@@ -94,6 +94,18 @@ $$\text{Claude Worker Fleet} \xrightarrow{\text{task}} \text{NovaOptimizer} \xri
 $$\text{SPARK Telemetry} \xrightarrow{\text{dimensions}} \text{Fusion 360 MCP} \xrightarrow{\text{parametric CAD}} \text{md2pdf} \xrightarrow{\text{dossier}}$$
 * **Flow:** Kinematic and sensor dimension constraints stream from SPARK $\rightarrow$ Fusion 360 MCP parametrically updates the 3D TPU enclosure model $\rightarrow$ md2pdf generates a unified hardware/clinical engineering dossier.
 
+### Pipeline D: The Autonomous Invariant & Arbitrage Discovery Loop
+$$\text{Screen Q\&A / Super-NLM} \xrightarrow{\text{ingest}} \text{Nexus} \xrightarrow{\text{formalize}} \text{Claude Fleet / AI Solver} \xrightarrow{\text{adversarial SMT}} \text{Deterministic Sandbox} \xrightarrow{\text{verify}} \text{md2pdf / RSVP}$$
+* **Problem Reframing:** Moving past fragile heuristic "loophole bots" into a mathematically grounded **Systemic Invariant & Constraint Divergence Engine**:
+  $$\text{Observable Executable State} \neq \text{Intended Statutory / Invariant Specification}$$
+  Works across software protocols, DeFi/EVM invariants, IAM access-control policies, platform terms/promotions, and cross-border regulatory thresholds.
+* **The 5-Stage Automated Discovery Architecture:**
+  1. **Sense & Ingestion:** `Screen Q&A` captures live DOM/TOS text, `Super-NLM` synthesizes multi-source regulatory/statutory corpuses, and `yt-dlp-live` ingests audiovisual filings.
+  2. **Semantic Formalization:** `Nexus` coordinates LLMs to convert natural language rules, treaty clauses, and protocol invariants into declarative logic (SMT-LIB, Z3 constraints, Datalog/Catala).
+  3. **Adversarial Red-Teaming:** `Claude Worker Fleet` conducts parallel hypothesis generation, mutates edge-case assumptions, and schedules state exploration via `AI Constraint Solver` (`F:\AaradhyaDT\AI`).
+  4. **Deterministic Sandbox Verification:** An automated execution sandbox (Z3 solver, local EVM testnet, or API mock harness) deterministically executes the exploit/arbitrage tuple. Hallucinated pseudo-loopholes are autonomously discarded.
+  5. **Dossier Compilation & Rapid Review:** `md2pdf` compiles an audit-grade evidence dossier (proof tree, invariant delta, remediation patch), while `RSVP Reader` enables high-speed human cognitive review and `Alpha-SuperApp` issues priority push telemetry.
+
 ---
 
 ## 5. Architectural Blueprint: The Personal Jarvis Engine
@@ -148,6 +160,38 @@ To integrate existing and future tools without rewriting their codebases, each r
       "name": "boost_process",
       "description": "Sets process CPU priority to High and locks core affinity",
       "args": ["--pid", "{pid}", "--priority", "high"]
+    }
+  ]
+}
+```
+
+### Upgrading to Semantic Capability Contracts (`capability.contract.v1.json`)
+To allow the Jarvis Cortex to autonomously compose verification pipelines (such as Pipeline D) without hallucinating capability boundaries, manifests can declare strict **Semantic Contracts** specifying determinism, side effects, and verification tiers:
+
+```json
+{
+  "$schema": "https://aaradhyadt.dev/schemas/capability.contract.v1.json",
+  "module": "AI-Constraint-Solver",
+  "location": "F:\\AaradhyaDT\\AI",
+  "runtime": "python3.11",
+  "capabilities": [
+    {
+      "id": "solve_combinatorial_invariants",
+      "category": "formal_verification",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "formal_smt",
+      "inputs": {
+        "variables": "array<EntityVariable>",
+        "invariants": "array<ConstraintExpression>",
+        "objective": "maximize | minimize | find_counterexample"
+      },
+      "outputs": {
+        "satisfiable": "boolean",
+        "counterexample_state": "object | null",
+        "proof_tree": "string | null",
+        "execution_time_ms": "number"
+      }
     }
   ]
 }

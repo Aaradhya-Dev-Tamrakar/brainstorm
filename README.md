@@ -53,6 +53,13 @@ Connected through standardized protocols (**Model Context Protocol / MCP**, loca
                              └────────────────────────┘
 ```
 
+### ⚡ Emergent Compound Workflows
+When autonomous modules are chained via MCP and Semantic Contracts, new workflows emerge dynamically:
+- **Pipeline A (Rapid Learning):** `Screen Q&A` $\rightarrow$ `Super-NLM` $\rightarrow$ `md2pdf` $\rightarrow$ `RSVP Reader` (750 WPM synthesis).
+- **Pipeline B (Heavy Compute/Audit):** `Claude Fleet` $\rightarrow$ `NovaOptimizer` (RAM purge/priority) $\rightarrow$ `BiasAperture` $\rightarrow$ `Alpha-SuperApp`.
+- **Pipeline C (Physical Hardware Prototyping):** `SPARK` $\rightarrow$ `Fusion 360 MCP` (parametric CAD) $\rightarrow$ `md2pdf` (engineering dossier).
+- **Pipeline D (Invariant & Arbitrage Discovery):** `Screen Q&A / Super-NLM` $\rightarrow$ `Nexus` (formalizer) $\rightarrow$ `Claude Fleet / AI Solver` $\rightarrow$ `Z3 SMT Sandbox` $\rightarrow$ `md2pdf`.
+
 ---
 
 ## 🗂️ Ecosystem Branches & Module Catalog

@@ -17,40 +17,37 @@ The complete architectural log, module specifications, and compound workflow des
 
 ---
 
-## 🧭 Core Concept: The Composable Capability Mesh
+## 🧭 Core Concept: The 4-Tier Jarvis Capability Mesh
 
 Rather than treating projects as isolated applications, this brainstorm models every tool as an **autonomous capability module** spanning **Local**, **Cloud**, and **Hybrid** execution environments.
 
-Connected through standardized protocols (**Model Context Protocol / MCP**, local HTTP endpoints, or CLI manifests), these independent modules combine into a **Personal Jarvis** that moves beyond chat to sensory perception and physical/OS actuation.
+Connected through standardized protocols (**Model Context Protocol / MCP**, local HTTP endpoints, and **Semantic Capability Contracts**), these independent modules combine into an extensible **4-Tier Architecture**:
 
 ```
-                             ┌────────────────────────┐
-                             │     JARVIS CORTEX      │
-                             │   (Nexus / Agent Core) │
-                             └───────────┬────────────┘
-                                         │
-                 ┌───────────────────────┴───────────────────────┐
-                 ▼                                               ▼
-     ┌────────────────────────┐                     ┌────────────────────────┐
-     │   SENSORY ORGANS       │                     │    EXECUTIVE ACTUATORS │
-     │   (How Jarvis Sees)    │                     │    (Jarvis's Hands)    │
-     ├────────────────────────┤                     ├────────────────────────┤
-     │ • Screen Q&A (Browser) │                     │ • NovaOptimizer (OS)   │
-     │ • SPARK (Hardware/BLE) │                     │ • Fusion 360 (3D CAD)  │
-     │ • yt-dlp-live (Media)  │                     │ • md2pdf (Publishing)  │
-     │ • Alpha-SuperApp (Cam) │                     │ • Claude Fleet (Agents)│
-     └────────────────────────┘                     └────────────────────────┘
-                 │                                               │
-                 └───────────────────────┬───────────────────────┘
-                                         ▼
-                             ┌────────────────────────┐
-                             │     DEEP MEMORY        │
-                             │  (What Jarvis Remembers│
-                             ├────────────────────────┤
-                             │ • Super-NLM (Notebooks)│
-                             │ • Nexus (Projects/FTS5)│
-                             │ • RSVP Reader (Buffer) │
-                             └────────────────────────┘
+┌────────────────────────────────────────────────────────────────────────────────┐
+│ 1. JARVIS COGNITIVE INTERFACE (The Mind)                                       │
+│    Listen ──> Understand ──> Reason ──> Plan ──> Explain ──> Natural Telemetry │
+└───────────────────────────────────────┬────────────────────────────────────────┘
+                                        │ High-Level Intent
+┌───────────────────────────────────────▼────────────────────────────────────────┐
+│ 2. ORCHESTRATION LAYER (The Nervous System)                                    │
+│    Task Decomposition │ Capability Selection │ Workflow DAG │ State / Memory   │
+│    • Nexus (multiplexer/workspace) & Claude Worker Fleet (DAG coordinator)     │
+└───────────────────────────────────────┬────────────────────────────────────────┘
+                                        │ Typed Capability Contracts
+┌───────────────────────────────────────▼────────────────────────────────────────┐
+│ 3. CAPABILITY MESH (The Body)                                                  │
+│    • Ingestion : Screen Q&A (DOM), Super-NLM (Notebooks), yt-dlp-live (Media)  │
+│    • Compute   : Fusion 360 MCP (CAD), BiasAperture (Fairness), Claude Workers │
+│    • Solvers   : AI Constraint Solver (F:\AaradhyaDT\AI)                       │
+│    • Actuation : NovaOptimizer (NT Kernel Tuning), SPARK (Wearable / BLE)      │
+│    • Cognition : md2pdf (Publishing), RSVP Reader (High-Speed Reading HUD)     │
+└───────────────────────────────────────┬────────────────────────────────────────┘
+                                        │ Deterministic Verification & Reality
+┌───────────────────────────────────────▼────────────────────────────────────────┐
+│ 4. VERIFICATION / REALITY LAYER (The Ground Truth)                             │
+│    SMT / Z3 Solvers │ EVM Sandboxes │ Win32 NT APIs │ Executable Test Suites   │
+└────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### ⚡ Emergent Compound Workflows
@@ -59,6 +56,9 @@ When autonomous modules are chained via MCP and Semantic Contracts, new workflow
 - **Pipeline B (Heavy Compute/Audit):** `Claude Fleet` $\rightarrow$ `NovaOptimizer` (RAM purge/priority) $\rightarrow$ `BiasAperture` $\rightarrow$ `Alpha-SuperApp`.
 - **Pipeline C (Physical Hardware Prototyping):** `SPARK` $\rightarrow$ `Fusion 360 MCP` (parametric CAD) $\rightarrow$ `md2pdf` (engineering dossier).
 - **Pipeline D (Invariant & Arbitrage Discovery):** `Screen Q&A / Super-NLM` $\rightarrow$ `Nexus` (formalizer) $\rightarrow$ `Claude Fleet / AI Solver` $\rightarrow$ `Z3 SMT Sandbox` $\rightarrow$ `md2pdf`.
+
+### 🎯 The Flagship Wedge: Adversarial Rule & Invariant Assurance
+To prevent platform sprawl across 13 heterogeneous modules, the ecosystem anchors around a proven first wedge: **Software, API & Protocol Invariant Assurance** (validated at scale by DARPA's 2025 AI Cyber Challenge). Ground truth is enforced via deterministic execution sandboxes before expanding outward into smart contracts, platform terms, and regulatory thresholds.
 
 ---
 

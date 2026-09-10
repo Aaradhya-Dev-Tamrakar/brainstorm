@@ -1,0 +1,23 @@
+id: HYP-001
+title: "SMT Solver Grounding Eliminates 95%+ of LLM Hallucinated Invariant Violations"
+author: "Aaradhya Dev Tamrakar"
+date: "2026-09-10"
+
+# Theoretical Justification
+hypothesis: >
+  Passing LLM-generated invariant violation candidates through a Z3 SMT solver
+  will autonomously prune >= 95% of false-positive discoveries before sandbox execution.
+why_we_believe_it: >
+  LLMs struggle with deep non-linear integer arithmetic and state reachability,
+  producing plausible-sounding but mathematically impossible exploit traces.
+counterargument: >
+  LLMs may generate syntactically invalid SMT-LIB constraints, causing false UNSAT
+  classifications (false negatives) rather than true refutations.
+
+# Experimental Falsification Protocol
+target_experiment: "INV-001"
+success_metric: "Pruning ratio >= 95% with zero false-negative prunes on planted bugs"
+failure_condition: "Solver times out or rejects valid planted bugs due to constraint syntax errors"
+
+# Lifecycle State: proposed | active | verified | falsified | retired
+status: proposed

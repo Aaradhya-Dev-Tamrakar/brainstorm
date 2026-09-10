@@ -69,6 +69,9 @@ The formal R&D evaluation establishes **Adversarial Invariant Assurance** as the
 - **Superlinear Scaling Thresholds:** Injecting paid intelligence and compute scales reasoning access, worker throughput, simulation capacity, and agentic persistence without requiring architectural rewrites.
 - **Calibrated Evidence Tiers:** Mandatory tagging of all discoveries as `FORMALLY_PROVEN`, `EMPIRICALLY_VERIFIED`, `STATISTICALLY_OBSERVED`, or `HEURISTIC_HYPOTHESIS` to eliminate hallucinated findings.
 - **The INV Experiment Standard & Capital Discipline:** Structured telemetry tracking (`INV-xxx`) with strict rules preventing premature subscription spend until empirical bottlenecks are demonstrated.
+- **The Three-Output Rule:** To escape recursive planning ("planning a plan for a plan"), every brainstorm session must produce an Experiment (`INV-xxx`), an Implementation Artifact, or a Falsifiable Claim (`HYP-xxx`).
+- **Asymmetric Cognitive Council:** Bootstraps model plurality at $0 cost by assigning specialized roles to free models (Architect, Skeptic, Researcher, Simplifier) synthesized by Gemini Pro and grounded into repository state by Antigravity.
+- **Externalized Epistemic Memory:** Structured under [`research/`](file:///f:/Aaradhya-Dev-Tamrakar/brainstorm/research/) (`hypotheses/`, `experiments/`, `invariants/`, `results/`, `failures/`) as machine-readable research state.
 - **Safeguards Against the 4 Traps:** The **Rule of Two** (preventing platform quagmire), **Closed-Loop Replay** (preventing formalization hallucinations), sandbox fidelity grading, and restriction to deterministic executable state spaces.
 
 👉 See **[Section 7 of ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md](ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md#7-rd-strategic-evaluation-5-horizon-forecast--feasibility-analysis)** for the complete evaluation, domain feasibility matrix, zero-cost funnel, and initial experiments.

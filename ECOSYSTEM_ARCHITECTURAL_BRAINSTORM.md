@@ -512,4 +512,85 @@ $$\text{Human Intervention Index} = \frac{\text{Human Cognitive Minutes Required
 
 By driving the **Funnel Pruning Ratio** toward $98\%+$ during Phase 1, the architecture guarantees that when compute capital is injected in Phase 2, every dollar converts into genuine discovery leverage rather than wasted tokens.
 
+---
+
+### 7.10 The $5/mo Operating Baseline & Cognitive Worker Decoupling
+
+> **Operational Reality:** Current paid infrastructure consists of exactly **one Gemini AI Pro student subscription (4-year discount at ~$5/month)**.
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                      JARVIS EXECUTIVE & INTERACTION LAYER                       │
+│     (Intent Parser • Workflow Planner • Memory • Contract Orchestrator)         │
+└───────────────────────────────────────┬─────────────────────────────────────────┘
+                                        │ Delegates via Capability Contracts
+         ┌──────────────────────────────┼──────────────────────────────┐
+         ▼                              ▼                              ▼
+┌──────────────────┐          ┌───────────────────┐          ┌───────────────────┐
+│ COGNITIVE WORKER │          │  VOLUME GENERATOR │          │  DETERMINISTIC    │
+│      (Tier 1)    │          │     (Tier 2)      │          │     MACHINES      │
+│  Gemini AI Pro   │          │ Free Gemini Flash │          │ Z3 / CVC5 Solvers │
+│   ($5/mo anchor) │          │ Local LM Studio   │          │ Anvil / Docker    │
+│  • Deep Planning │          │ • High-RPM Fuzzing│          │ Win32 NT APIs     │
+│  • Formalization │          │ • AST Generation  │          │ Test Harnesses    │
+│  • Dossier Synth │          │ • Syntax Filtering│          │ Zero Token Cost   │
+└──────────────────┘          └───────────────────┘          └───────────────────┘
+```
+
+#### The Decoupling Principle: "Jarvis is Not Gemini"
+A critical architectural boundary must be maintained:
+* **The Error:** Treating Gemini Pro as "Jarvis." If the system hardcodes prompt logic or API clients to Gemini, the architecture is locked to a single vendor.
+* **The Correct Model:** Jarvis is the **interaction and orchestration paradigm** (the executive control plane). Gemini Pro is currently **`CognitiveWorker_01`**—the highest-leverage reasoning worker in the capability mesh.
+* **Commodity Interchangeability:** The capability contracts (`capability.contract.v1.json`) ensure that whether a task is executed by Gemini Pro, an open-source local model on LM Studio, or a future external endpoint, the orchestrator and verification layers remain unchanged.
+
+#### The Capital Discipline Rule
+To maximize research output and avoid subscription creep, adopt a strict operational constraint:
+> [!IMPORTANT]
+> **The Capital Discipline Rule:** Do **not** purchase additional AI subscriptions, API credits, or cloud compute based on hypothetical benefits. Only acquire new compute when an empirical experiment records an unavoidable bottleneck:
+> 1. **Throughput Bottleneck:** Daily quota or rate limits objectively halt an active, falsifiable research loop.
+> 2. **Reasoning Class Failure:** Gemini Pro repeatedly fails at a specific formalization class that an independent model architecture (e.g., Claude Opus / o3) is proven to solve.
+> 3. **Cross-Model Verification Requirement:** A discovery requires independent adversarial cross-examination by a separate model family to eliminate blind spots.
+
+---
+
+### 7.11 The Formal Experiment Protocol & INV Telemetry Specification
+
+To ensure that R&D progress is measurable rather than anecdotal, every research run is recorded in a standardized **Invariant Discovery Log (`INV-xxx`)**:
+
+#### Telemetry Schema (`experiments/INV-template.md`)
+
+```markdown
+# Experiment Log: INV-[ID]
+
+- **Date / Time:** YYYY-MM-DD HH:MM
+- **Target System:** [e.g., Mock REST API v1.2 / ERC-20 Ledger]
+- **Target Invariant:** [e.g., "Account balance can never be negative under concurrent transfer"]
+- **Cognitive Workers:** 
+  - Reasoning Lead: Gemini Pro ($5/mo baseline)
+  - Generator: Free Gemini Flash / Local Qwen 2.5 (LM Studio)
+- **Deterministic Verifiers:** Z3 SMT Solver v4.13 + Local Python Async Sandbox
+
+## Quantitative Metrics
+| Metric | Value |
+|---|---|
+| Hypotheses Generated | [e.g., 42] |
+| Pruned by Syntax / AST Checker | [e.g., 28] |
+| Pruned by SMT Solver (Unsat) | [e.g., 11] |
+| Counterexamples Submitted to Sandbox | [e.g., 3] |
+| Empirically Verified Divergences | [e.g., 1] |
+| False Positive Pruning Ratio | [e.g., 97.6%] |
+| Total Inference Spend | $0.00 (within $5/mo quota) |
+| Human Cognitive Minutes | [e.g., 12 mins] |
+
+## Findings & Epistemic Classification
+- **Classification:** `TIER 2: EMPIRICALLY_VERIFIED`
+- **Violation Description:** [Exact sequence of operations triggering the unintended state]
+- **Counterexample Trace:** [Machine-readable execution trace]
+- **Identified Bottleneck:** [e.g., "LLM struggled to formulate non-linear modular arithmetic constraints in Z3; required 2 prompt mutations"]
+- **Actionable Next Hypothesis:** [Follow-up experiment based on this result]
+```
+
+By logging 20–30 structured `INV` runs, the ecosystem accumulates empirical evidence of what AI architectures and formal techniques actually work, transforming a solo researcher with a $5/month student account into a rigorous, verifiable research laboratory.
+
+
 

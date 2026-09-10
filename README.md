@@ -63,10 +63,12 @@ To prevent platform sprawl across 13 heterogeneous modules, the ecosystem anchor
 ### 🔬 R&D Roadmap, 5-Horizon Forecast & Feasibility
 The formal R&D evaluation establishes **Adversarial Invariant Assurance** as the primary research program, moving from synthetic benchmarks to real-world software and protocol state machines:
 - **Research Director Paradigm:** Systems architecture, domain invariants, and constraint formulation driven by human judgment; implementation and combinatorial search handled by AI coding agents, SMT solvers (Z3/CVC5), and deterministic sandboxes (Anvil, Docker).
+- **$5/mo Student Baseline & Worker Decoupling:** Anchored by a single **Gemini AI Pro student plan (~$5/month)** treated strictly as `CognitiveWorker_01` (not as Jarvis itself). Jarvis remains the vendor-agnostic executive interface; models are interchangeable commodities.
 - **Zero-Cost Funnel Architecture:** Built on free/open tiers (free Gemini API, local LM Studio, Z3, Anvil) filtering 1,000 rough hypotheses down to validated discoveries before paid tokens or heavy compute are ever consumed.
 - **5 Horizons:** (1) Synthetic Invariant Rediscovery (0–3 mo) $\rightarrow$ (2) Real API State Machines (3–9 mo) $\rightarrow$ (3) EVM/Protocol Invariants (9–18 mo) $\rightarrow$ (4) Semi-Formal Rules (18–36 mo) $\rightarrow$ (5) Autonomous Systems Researcher (36+ mo).
 - **Superlinear Scaling Thresholds:** Injecting paid intelligence and compute scales reasoning access, worker throughput, simulation capacity, and agentic persistence without requiring architectural rewrites.
 - **Calibrated Evidence Tiers:** Mandatory tagging of all discoveries as `FORMALLY_PROVEN`, `EMPIRICALLY_VERIFIED`, `STATISTICALLY_OBSERVED`, or `HEURISTIC_HYPOTHESIS` to eliminate hallucinated findings.
+- **The INV Experiment Standard & Capital Discipline:** Structured telemetry tracking (`INV-xxx`) with strict rules preventing premature subscription spend until empirical bottlenecks are demonstrated.
 - **Safeguards Against the 4 Traps:** The **Rule of Two** (preventing platform quagmire), **Closed-Loop Replay** (preventing formalization hallucinations), sandbox fidelity grading, and restriction to deterministic executable state spaces.
 
 👉 See **[Section 7 of ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md](ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md#7-rd-strategic-evaluation-5-horizon-forecast--feasibility-analysis)** for the complete evaluation, domain feasibility matrix, zero-cost funnel, and initial experiments.

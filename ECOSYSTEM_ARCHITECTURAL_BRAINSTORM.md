@@ -442,3 +442,74 @@ To bootstrap this R&D program with minimal boilerplate:
      $$\text{Pruning Efficiency} = \frac{\text{Hallucinated Hypotheses Rejected by Solver}}{\text{Total Hypotheses Generated}}$$
    - Verify that 100% of flawed hypotheses are discarded before reaching the human review layer.
 
+---
+
+### 7.9 Economic Strategy: Zero-Cost Bootstrapping & The Superlinear Compute Threshold
+
+> *"Building the operating system before buying the mainframe."*
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                        PHASE 1: ARCHITECTURE-RICH ($0 STACK)                           │
+│  Free Gemini API • Local Models (LM Studio) • Z3 SMT • SQLite • Anvil • Git Automation │
+│  Focus: Maximum leverage per token, crisp invariant formulation, and zero-cost filters │
+└───────────────────────────────────────────┬────────────────────────────────────────────┘
+                                            │ Superlinear Scaling Transition
+                                            │ (Injecting Subscriptions & API Credits)
+┌───────────────────────────────────────────▼────────────────────────────────────────────┐
+│                       PHASE 2: INTELLIGENCE INJECTION (SCALED)                         │
+│  Frontier Reasoning • Distributed Worker Fleets • High-Throughput Parallel Sandboxes   │
+│  Focus: Scaling search space from 10 to 10,000 hypotheses without architectural redesign│
+└────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+#### The Capital Asymmetry: Why Constraints Breed Superior Architecture
+Building an autonomous discovery engine on **free tiers, open-source solvers, and zero subscriptions** is not a limitation—it is a competitive design filter:
+* **The Token Burn Trap:** Teams with large API budgets frequently build sloppy, brute-force agent loops: thousands of unconstrained LLM calls generating redundant context, hallucinatory debates, and expensive noise.
+* **The High-Efficiency Funnel:** Operating with quota limits forces the construction of an intelligent **evaluation funnel**. Cheap or free models generate hypotheses, fast deterministic filters discard syntax errors, SMT solvers prune mathematical impossibilities, and frontier models or paid compute are reserved exclusively for complex counterexample synthesis:
+
+```
+[1,000 Hypotheses]          ───> Generated via Free Gemini Flash / Local LM Studio
+        │
+        ▼
+ [100 Well-Formed ASTs]     ───> Filtered via Fast Static Rule Checkers (0 cost)
+        │
+        ▼
+   [20 SMT Assertions]      ───> Solved via Z3 / CVC5 Formal Engine (0 cost)
+        │
+        ▼
+  [3 Executable Traces]     ───> Replayed in Deterministic Sandbox / Mock API (0 cost)
+        │
+        ▼
+  [1 Verified Discovery]    ───> Synthesized & Explained via High-Reasoning Frontier LLM
+```
+
+#### The 4 Scaling Thresholds
+When paid AI subscriptions or dedicated compute budgets are eventually introduced, the system does not need an architectural rewrite. It experiences a **superlinear capability jump** across four distinct thresholds:
+
+1. **Threshold 1 — Reasoning Access:** Transitioning from lightweight free models to frontier reasoning models increases formalization accuracy: fewer translation errors when converting ambiguous specifications into SMT-LIB constraints.
+2. **Threshold 2 — Search Throughput:** Expanding from single-agent sequential runs to concurrent fleets (`Claude Worker Fleet`) allows the system to mutate hundreds of edge cases and adversarial scenarios in parallel.
+3. **Threshold 3 — Verification Capacity:** Injecting cloud GPU/CPU compute scales the sandbox layer: running full-system integration tests, symbolic memory execution, or exhaustive protocol fuzzing clusters.
+4. **Threshold 4 — Agentic Persistence:** Jarvis transitions from synchronous, turn-based commands to a persistent autonomous research daemon that maintains long-running state over days:
+   ```text
+   Research Question : RQ-042 [OAuth2 Concurrent Revocation Invariant]
+   Status            : ACTIVE (Running 14 hours)
+   Hypotheses Tested : 482
+   Pruned by Z3      : 459 (Zero cost, mathematically false)
+   Failed in Sandbox : 21 (Replay divergence)
+   Verified Exploits : 2 (Evidence dossiers generated)
+   Compute Spent     : $1.84
+   ```
+
+#### Economic Telemetry Metrics
+To maintain empirical discipline across both Phase 1 and Phase 2, the Jarvis executive layer tracks three primary economic metrics:
+
+$$\text{Discovery Cost Efficiency} = \frac{\text{Total Compute / API Spend}}{\text{Verified Invariant Divergences}}$$
+
+$$\text{Funnel Pruning Ratio} = \frac{\text{Hypotheses Discarded by Zero-Cost Solvers}}{\text{Total Hypotheses Generated}}$$
+
+$$\text{Human Intervention Index} = \frac{\text{Human Cognitive Minutes Required}}{\text{Verified Invariant Discovery}}$$
+
+By driving the **Funnel Pruning Ratio** toward $98\%+$ during Phase 1, the architecture guarantees that when compute capital is injected in Phase 2, every dollar converts into genuine discovery leverage rather than wasted tokens.
+
+

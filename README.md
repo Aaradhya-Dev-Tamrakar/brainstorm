@@ -76,9 +76,10 @@ The formal R&D evaluation establishes **Adversarial Invariant Assurance** as the
 - **Phase 0.8 to Phase 1.0 (The Walk-Away Benchmark):** Tracks maturity from human-operated distributed cognition (manual scheduler/dispatcher) to machine-operated cognition, measured by the **Autonomy Ratio** (autonomous compute time vs human intervention minutes). Crossing condition: launching a multi-step task and walking away while the machine autonomously recovers across profile limits.
 - **Capital Allocation Matrix (API Credits > Subscriptions):** Preserves the \$5/mo Gemini Pro workspace for human reasoning while prioritizing micro pay-as-you-go API credits (\$10–30/mo) over redundant \$20 consumer chatbot subscriptions for machine-facing worker sockets, governed by the **10-Task Diagnostic Benchmark** and the R&D Leverage equation.
 - **Economic Asset Base & Capital Leverage:** Establishes a **~$20,000–$35,000 USD replacement-equivalent technical asset base** (17 repositories, WSR orchestration, MCP topologies, tacit research models) built on an ultra-disciplined **~$2,965 USD total fixed capital input** over 3.5 years ($8.4\times$ capital leverage ratio, with near-infinite AI expenditure leverage prior to the Sep 2026 dollar card).
+- **Conversational Provenance & Transcripts:** Preserves foundational transcripts conducted between Aaradhya and ChatGPT Think (`chatgpt.com/share/6aa2ae31...` and `chatgpt.com/share/6aa2ae3c...`) formalizing the Jarvis cognitive paradigm, last-mile worker session runtimes, and the capital valuation models.
 - **Safeguards Against the 4 Traps:** The **Rule of Two** (preventing platform quagmire), **Closed-Loop Replay** (preventing formalization hallucinations), sandbox fidelity grading, and restriction to deterministic executable state spaces.
 
-👉 See **[Section 7 of ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md](ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md#7-rd-strategic-evaluation-5-horizon-forecast--feasibility-analysis)** for the complete evaluation, domain feasibility matrix, zero-cost funnel, and initial experiments.
+👉 See **[Section 7 of ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md](ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md#7-rd-strategic-evaluation-5-horizon-forecast--feasibility-analysis)** for the complete evaluation, domain feasibility matrix, zero-cost funnel, initial experiments, and conversational provenance.
 
 ---
 

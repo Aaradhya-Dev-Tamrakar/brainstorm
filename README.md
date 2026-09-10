@@ -60,6 +60,15 @@ When autonomous modules are chained via MCP and Semantic Contracts, new workflow
 ### 🎯 The Flagship Wedge: Adversarial Rule & Invariant Assurance
 To prevent platform sprawl across 13 heterogeneous modules, the ecosystem anchors around a proven first wedge: **Software, API & Protocol Invariant Assurance** (validated at scale by DARPA's 2025 AI Cyber Challenge). Ground truth is enforced via deterministic execution sandboxes before expanding outward into smart contracts, platform terms, and regulatory thresholds.
 
+### 🔬 R&D Roadmap, 5-Horizon Forecast & Feasibility
+The formal R&D evaluation establishes **Adversarial Invariant Assurance** as the primary research program, moving from synthetic benchmarks to real-world software and protocol state machines:
+- **Research Director Paradigm:** Systems architecture, domain invariants, and constraint formulation driven by human judgment; implementation and combinatorial search handled by AI coding agents, SMT solvers (Z3/CVC5), and deterministic sandboxes (Anvil, Docker).
+- **5 Horizons:** (1) Synthetic Invariant Rediscovery (0–3 mo) $\rightarrow$ (2) Real API State Machines (3–9 mo) $\rightarrow$ (3) EVM/Protocol Invariants (9–18 mo) $\rightarrow$ (4) Semi-Formal Rules (18–36 mo) $\rightarrow$ (5) Autonomous Systems Researcher (36+ mo).
+- **Calibrated Evidence Tiers:** Mandatory tagging of all discoveries as `FORMALLY_PROVEN`, `EMPIRICALLY_VERIFIED`, `STATISTICALLY_OBSERVED`, or `HEURISTIC_HYPOTHESIS` to eliminate hallucinated findings.
+- **Safeguards Against the 4 Traps:** The **Rule of Two** (preventing platform quagmire), **Closed-Loop Replay** (preventing formalization hallucinations), sandbox fidelity grading, and restriction to deterministic executable state spaces.
+
+👉 See **[Section 7 of ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md](ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md#7-rd-strategic-evaluation-5-horizon-forecast--feasibility-analysis)** for the complete evaluation, domain feasibility matrix, and initial experiments.
+
 ---
 
 ## 🗂️ Ecosystem Branches & Module Catalog

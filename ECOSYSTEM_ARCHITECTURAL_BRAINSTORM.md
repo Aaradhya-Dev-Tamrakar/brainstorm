@@ -694,8 +694,74 @@ F:\Aaradhya-Dev-Tamrakar\brainstorm/
 ├── sync.ps1                                # Multi-branch git engine with secret guard
 └── research/                               # Externalized Epistemic Memory
     ├── hypotheses/                         # HYP-xxx cards (open falsifiable claims)
-    ├── experiments/                        # INV-xxx logs (empirical telemetry runs)
+    ├── experiments/                        # INV-xxx & FLEET-xxx logs (telemetry runs)
     ├── invariants/                         # Formal specifications (SMT-LIB, Z3, Datalog)
     ├── results/                            # Verified evidence dossiers & counterexamples
     └── failures/                           # Disproved hypotheses & negative results
 ```
+
+---
+
+### 7.15 The Worker Session Runtime: Resolving the Last-Mile Consumer Fleet Bottleneck
+
+> **The True Bottleneck:** The system does not lack a task scheduler (which `Claude-Desktop` already implements via FastAPI, SQLite WAL, atomic task leasing, and DAG decomposition). The actual operational friction is **the last-mile bridge between abstract task queues and interactive, quota-constrained consumer AI sessions**.
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                        ORCHESTRATION LAYER (Task Coordinator)                          │
+│   Knows what tasks exist • Maintains DAG dependencies • Owns checkpoint state ($C_k$)   │
+└───────────────────────────────────────────┬────────────────────────────────────────────┘
+                                            │ Dispatches Task $T_{id}$ with State $C_k$
+┌───────────────────────────────────────────▼────────────────────────────────────────────┐
+│                    WORKER SESSION RUNTIME (The Missing Layer)                          │
+│  ├── Profile / Session Allocator   : Selects active, unexhausted account profile       │
+│  ├── Session Activator & Injector  : Focuses client, injects task prompt & tool context│
+│  ├── Quota / Tool-Limit Detector   : Intercepts rate limits, tool-caps, & UI freezes   │
+│  ├── State Extractor & Compactor   : Extracts partial ASTs, tool outputs, & memories   │
+│  └── Semantic Hand-off Controller  : Checkpoints $C_{k+1}$ & migrates to next worker   │
+└───────────────────────────────────────────┬────────────────────────────────────────────┘
+                                            │ Controls Ephemeral Execution Sockets
+         ┌──────────────────────────────────┼──────────────────────────────────┐
+         ▼                                  ▼                                  ▼
+┌──────────────────┐              ┌──────────────────┐               ┌──────────────────┐
+│ Claude Profile A │              │ Claude Profile B │               │ Gemini Pro / API │
+│ (Hits Tool Limit)│ ──[Migrate]─>│ (Restores State) │               │  (Fallback Node) │
+└──────────────────┘              └──────────────────┘               └──────────────────┘
+```
+
+#### The Core Invariant: "The Task Belongs to the Orchestrator, Not the Worker"
+When automating across rate-limited consumer accounts or heterogeneous models, the system enforces a strict invariant:
+* **The Worker is Ephemeral:** A worker account (Claude session, Gemini endpoint, local model) is merely a transient, disposable computational socket.
+* **The Task is Stateful & Immortal:** The task ($T_{184}$), its goal vector, its partial artifacts, its completed DAG steps, and its latest checkpoint ($C_7$) belong permanently to the central orchestrator.
+* **Abstracted Graceful Degradation:** The Jarvis cognitive layer never encounters low-level operational failures like `"Claude Account 3 hit rate limit"`. The capability mesh surfaces an abstract telemetry state:
+  $$\text{capability.reasoning.available} = \text{false} \implies \text{resumable} = \text{true} \implies \text{fallback} = [\text{claude/profile-2}, \text{gemini-pro}, \text{local-qwen}]$$
+
+#### The 5-Part Control Loop of the Worker Session Runtime (WSR)
+The manual labor of opening tabs, claiming tasks, hitting tool limits, and transferring context to a new session is formalized into an automated 5-stage loop:
+1. **Session Allocation:** Inspects profile health, token quotas, and cooldown timers; leases an eligible worker profile.
+2. **Session Activation & Injection:** Focuses or interfaces with the client runtime, asserting the worker identity and piping task context and MCP tool definitions into the session.
+3. **Task Acquisition & Observation:** Listens for worker acknowledgment; verifies that tool calls are executing and progress is emitting heartbeat pulses.
+4. **Quota & Tool-Limit Interception:** Monitors for rate-limit modals, tool use ceilings, or network socket disconnects.
+5. **Semantic Checkpointing & Migration:**
+   - Halts the interrupted worker session cleanly.
+   - Extracts the latest diff, generated code fragments, and intermediate reasoning summary.
+   - Saves checkpoint $C_{k+1}$ to SQLite WAL storage.
+   - Marks Profile A in cooldown; activates Profile B.
+   - Restores $C_{k+1}$ and resumes execution without human intervention.
+
+#### The 3-Stage Implementation Sequencing
+Rather than attempting to build a fully autonomous 20-worker consumer swarm immediately, development follows a strict milestone ladder:
+
+```
+[Milestone 1: Single-Task Resumption]
+Prove reliable checkpoint & migration of ONE interrupted task between Account A and Account B.
+        │
+        ▼
+[Milestone 2: Automated Quota Watchdog & Profile Rotation]
+Automate headless/background detection of limits and dynamic rotation across 5 local profiles.
+        │
+        ▼
+[Milestone 3: Cross-Model Semantic Handoff]
+Migrate an active task across heterogeneous backends (Claude Desktop ──> Gemini Pro ──> Local Ollama).
+```
+

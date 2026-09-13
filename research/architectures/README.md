@@ -18,3 +18,9 @@
 1. **Architectural Decoupling:** Hardware problems are treated as communications, queueing theory, and information flow challenges.
 2. **Epistemic Ownership:** The human architect dictates the structural rules; the AI apprentice drafts simulations and telemetry scripts.
 3. **Reproducibility:** Every charter links directly to an executable Python/C++ simulation in `sim/`.
+
+---
+
+## 🎙️ Verbatim Provenance Logs
+- **Codename:** `STRANGLER-IPU` / `SIPU-6G`
+- **Complete Session Transcript:** [`research/transcripts/2026-09-13_STRANGLER-IPU_CONVERSATION.md`](../transcripts/2026-09-13_STRANGLER-IPU_CONVERSATION.md) (1,692 lines verbatim log capturing every user prompt, response, and architectural breakthrough).

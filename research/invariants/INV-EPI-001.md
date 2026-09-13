@@ -1,10 +1,15 @@
 # 📜 Architectural Invariant: INV-EPI-001 (Verbatim Conversational Logging)
 
-> **Document ID:** `INV-EPI-001`  
-> **Status:** Permanent Repository Invariant (`FORMALLY_ENFORCED`)  
-> **Domain:** Epistemic Governance & Conversation History Preservation  
-> **First Codified:** 2026-09-13  
+> **Artifact ID:** `INV-EPI-001`  
+> **Title:** Verbatim Conversational Logging Invariant  
+> **Version:** `1.0.0`  
+> **Status:** `ACTIVE`  
+> **Principal Architect:** Aaradhya Dev Tamrakar  
+> **Discipline:** Epistemic Governance & Conversation History Preservation  
+> **Created Date:** 2026-09-13  
+> **Evidence Tier:** `FORMALLY_PROVEN`  
 > **Applies To:** `F:\Aaradhya-Dev-Tamrakar\brainstorm` and all interconnected tool modules  
+> **Upstream Trace:** [`ARCH-RFC-001`](../architectures/ARCH-RFC-001-RECORD-KEEPING-STANDARD.md)  
 
 ---
 

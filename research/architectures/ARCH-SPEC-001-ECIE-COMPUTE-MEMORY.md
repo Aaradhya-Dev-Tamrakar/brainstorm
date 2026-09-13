@@ -1,16 +1,18 @@
 # 🏛️ ARCHITECTURAL CHARTER: The ECIE Systems Architect Paradigm & Clean-Slate Compute-Memory Co-Design
 
-> **Document ID:** `ARCH-SPEC-001`  
-> **Author & Principal Architect:** Aaradhya Dev Tamrakar  
+> **Artifact ID:** `ARCH-SPEC-001`  
+> **Title:** The ECIE Systems Architect Paradigm & Clean-Slate Compute-Memory Co-Design  
+> **Version:** `1.0.0`  
+> **Status:** `ACTIVE`  
+> **Principal Architect:** Aaradhya Dev Tamrakar  
 > **Discipline:** Electronics, Communication & Information Engineering (Final Semester Capstone / Independent R&D)  
-> **Status:** Active Architectural Charter  
-> **First Codified:** 2026-09-13  
+> **Domain:** Compute-Memory Interconnect & Information Theory  
+> **Created Date:** 2026-09-13  
+> **Evidence Tier:** `FORMALLY_PROVEN` & `EMPIRICALLY_VERIFIED`  
 > **Repository:** `F:\Aaradhya-Dev-Tamrakar\brainstorm`  
 > **Execution Context:** Antigravity / Gemini Engine  
-> **Related Epistemic Manifests:**  
-> - [`INV-MEM-001.md`](../invariants/INV-MEM-001.md) — The Memory & Coalescing Bounds Invariant  
-> - [`GPU_RAM_ARCHITECTURE_SPEC.md`](../experiments/GPU_RAM_ARCHITECTURE_SPEC.md) — Exploration Log  
-> - [`sim/warehouse_mem_sim.py`](../../sim/warehouse_mem_sim.py) — Baseline Discrete-Event Channel Simulator  
+> **Upstream Trace:** [`2026-09-13_STRANGLER-IPU_CONVERSATION.md`](../transcripts/2026-09-13_STRANGLER-IPU_CONVERSATION.md)  
+> **Downstream Trace:** [`warehouse_mem_sim.py`](../../sim/warehouse_mem_sim.py), [`INV-MEM-001.md`](../invariants/INV-MEM-001.md)  
 
 ---
 

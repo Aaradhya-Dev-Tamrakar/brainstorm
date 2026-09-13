@@ -1,9 +1,16 @@
 # 🔬 Invariant Spec: INV-MEM-001 (The Von Neumann Chasm & Coalescing Bounds)
 
-> **Status:** Active / Invariant Grounding  
+> **Artifact ID:** `INV-MEM-001`  
+> **Title:** The Von Neumann Chasm & Coalescing Bounds Invariant  
+> **Version:** `1.0.0`  
+> **Status:** `ACTIVE`  
+> **Principal Architect:** Aaradhya Dev Tamrakar  
+> **Discipline:** Electronics, Communication & Information Engineering  
 > **Domain:** Memory Hierarchy & Compute Co-Design  
-> **Derived In:** Session 2026-09-13 (GPU & RAM Clean Architecture)  
-> **Mathematical Tier:** `STATISTICALLY_OBSERVED` & `EMPIRICALLY_VERIFIED`
+> **Created Date:** 2026-09-13  
+> **Evidence Tier:** `STATISTICALLY_OBSERVED` & `EMPIRICALLY_VERIFIED`  
+> **Upstream Trace:** [`ARCH-SPEC-001`](../architectures/ARCH-SPEC-001-ECIE-COMPUTE-MEMORY.md)  
+> **Downstream Trace:** [`warehouse_mem_sim.py`](../../sim/warehouse_mem_sim.py)
 
 ---
 

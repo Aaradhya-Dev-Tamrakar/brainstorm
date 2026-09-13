@@ -1,17 +1,18 @@
 # 🏛️ ARCHITECTURAL CHARTER: The IPU (Ingestion Processing Unit) Paradigm
 
-> **Document ID:** `ARCH-SPEC-002`  
+> **Artifact ID:** `ARCH-SPEC-002`  
 > **Title:** The Ingestion Processing Unit (IPU) & The Telecommunications Evolutionary Transition Strategy  
-> **Author & Principal Architect:** Aaradhya Dev Tamrakar  
+> **Version:** `1.0.0`  
+> **Status:** `ACTIVE`  
+> **Principal Architect:** Aaradhya Dev Tamrakar  
 > **Discipline:** Electronics, Communication & Information Engineering (ECIE Capstone / Independent R&D)  
-> **Status:** Active Architectural Charter  
-> **First Codified:** 2026-09-13  
+> **Domain:** 6G Edge Ingestion, Coexistence & Near-Memory Computing  
+> **Created Date:** 2026-09-13  
+> **Evidence Tier:** `FORMALLY_PROVEN` & `EMPIRICALLY_VERIFIED`  
 > **Repository:** `F:\Aaradhya-Dev-Tamrakar\brainstorm`  
 > **Execution Context:** Antigravity / Gemini Engine  
-> **Related Epistemic Files:**  
-> - [`ARCH-SPEC-001`](ARCH-SPEC-001-ECIE-COMPUTE-MEMORY.md) — ECIE Systems Architect Paradigm  
-> - [`INV-MEM-001.md`](../invariants/INV-MEM-001.md) — Von Neumann Chasm & Coalescing Bounds  
-> - [`warehouse_mem_sim.py`](../../sim/warehouse_mem_sim.py) — Discrete Event Simulator  
+> **Upstream Trace:** [`ARCH-SPEC-001`](ARCH-SPEC-001-ECIE-COMPUTE-MEMORY.md), [`2026-09-13_STRANGLER-IPU_CONVERSATION.md`](../transcripts/2026-09-13_STRANGLER-IPU_CONVERSATION.md)  
+> **Downstream Trace:** [`warehouse_mem_sim.py`](../../sim/warehouse_mem_sim.py), [`INV-MEM-001.md`](../invariants/INV-MEM-001.md)  
 
 ---
 

@@ -1,14 +1,12 @@
-# 🏛️ ARCHITECTURAL CHARTER: The IPU (Ingestion Processing Unit) Paradigm
-
 > **Artifact ID:** `ARCH-SPEC-002`  
-> **Title:** The Ingestion Processing Unit (IPU) & The Telecommunications Evolutionary Transition Strategy  
-> **Version:** `1.0.0`  
-> **Status:** `ACTIVE`  
+> **Title:** The Ingestion Processing Unit (IPU) & The Evolutionary Boundary-Reduction Strategy  
+> **Version:** `1.1.0`  
+> **Status:** `PROPOSED_ARCHITECTURE`  
 > **Principal Architect:** Aaradhya Dev Tamrakar  
 > **Discipline:** Electronics, Communication & Information Engineering (ECIE Capstone / Independent R&D)  
-> **Domain:** 6G Edge Ingestion, Coexistence & Near-Memory Computing  
+> **Domain:** Ingress-Aware Near-Memory Processing for High-Velocity Irregular Data Streams  
 > **Created Date:** 2026-09-13  
-> **Evidence Tier:** `FORMALLY_PROVEN` & `EMPIRICALLY_VERIFIED`  
+> **Evidence Tier:** `HEURISTIC_HYPOTHESIS`  
 > **Repository:** `F:\Aaradhya-Dev-Tamrakar\brainstorm`  
 > **Execution Context:** Antigravity / Gemini Engine  
 > **Upstream Trace:** [`ARCH-SPEC-001`](ARCH-SPEC-001-ECIE-COMPUTE-MEMORY.md), [`2026-09-13_STRANGLER-IPU_CONVERSATION.md`](../transcripts/2026-09-13_STRANGLER-IPU_CONVERSATION.md)  
@@ -16,20 +14,27 @@
 
 ---
 
-## 1. Executive Philosophy: The "Strangler Fig" Telecom Transition
+## 1. Executive Philosophy: The "Strangler Fig" Evolutionary Transition
 
 ### 1.1 The Revolutionary Fallacy vs. The Evolutionary Invariant
 Clean-slate architectures almost always fail commercially if they demand a "rip-and-replace" of the existing global computing and telecommunications infrastructure. 
 
-Just as **2G and 3G cellular standards could not be dismantled overnight** when 4G and 5G arrived (requiring multi-mode software-defined radios, backward compatibility, and gradual spectrum refarming over 20+ years), computing cannot simply abolish the PCIe/CXL bus, standard DDR5/HBM DRAM, or the CUDA/PyTorch software ecosystem overnight.
+Just as **2G and 3G cellular standards could not be dismantled overnight** when 4G and 5G arrived (requiring multi-mode software-defined radios, backward compatibility, and gradual spectrum refarming over 20+ years), computing cannot simply abolish PCIe/CXL interconnects, standard DDR5/HBM DRAM, or the CUDA/PyTorch software ecosystem overnight.
 
-### 1.2 The Ingestion Processing Unit (IPU) Thesis
-Instead of redesigning the GPU core or demanding exotic DRAM fabrication:
-* We introduce an **Ingestion Processing Unit (IPU)** as a **bump-in-the-wire / smart bridge** sitting directly between high-velocity ingress channels (6G Sub-THz RF, high-speed networking, sensor streams) and the legacy memory/compute subsystem.
-* **The Strategic Evolutionary Path:**
-  1. **Phase 1 (Passive Coexistence / Transparent Bump):** The IPU acts as an enhanced, backward-compatible memory controller/NIC bridge (delivering smart coalescing and pre-filtering without host driver rewrites).
-  2. **Phase 2 (Opportunistic Offload):** As host compilers become aware of the IPU, streaming reductions, baseband FFTs, and semantic vector transformations are intercepted at the ingress boundary before polluting host memory.
-  3. **Phase 3 (Legacy Atrophy / Compute Subsumption):** Over time, as ingress processing handles 80–90% of raw data reduction, the expensive, power-hungry host GPU shrinks from a monolithic beast into a high-level executive coordinator.
+### 1.2 The Core Thesis: Ingress Boundary Reduction
+The fundamental question is not *"Can we invent a faster GPU from scratch?"*
+The thesis is:
+> **"Even when interconnect bandwidth scales (PCIe 6.0/7.0, CXL 3.0/4.0 at 128 GT/s), moving semantically reducible data through the conventional memory hierarchy remains unnecessarily expensive in energy, queue contention, and latency. By moving programmable reduction logic directly to the ingress boundary—where data first becomes expensive to transport—we can absorb high-velocity, low-semantic-density streams before they choke host memory."**
+
+* **The 3 Workload Classes:**
+  1. **High-Rate Communications:** Massive MIMO channel estimation, FFT pipelines, beamforming, and Sub-THz symbol detection.
+  2. **AI Inference & KV-Cache:** Selective attention reductions, KV-cache filtering, token routing, and sparse embedding transformations.
+  3. **High-Rate Sensing:** Radar point clouds, ISAC telemetry, and high-frequency vision streams.
+
+* **The Strategic Evolutionary Path (The STRANGLER Model):**
+  1. **Phase 1 (Transparent Compatibility):** The IPU acts as an enhanced, backward-compatible CXL/PCIe memory controller or smart NIC bridge (delivering burst packing and smart coalescing without host driver changes).
+  2. **Phase 2 (Opportunistic Stream Processing):** Compilers and runtimes offload streaming reductions, baseband transforms, and attention pre-filters in-flight.
+  3. **Phase 3 (Eventual Architectural Dominance):** As boundary processing absorbs 80–90% of raw data movement, monolithic host GPUs shrink into lightweight executive coordinators.
 
 ---
 
@@ -73,18 +78,15 @@ Instead of redesigning the GPU core or demanding exotic DRAM fabrication:
 
 ---
 
-## 3. The 6G Ingestion Problem Solved by the IPU
+## 3. High-Velocity Ingress Stress Scenarios: Telecom & AI Workloads
 
-In 6G communications, an antenna array receiving Sub-THz signals faces a catastrophic impedance mismatch with host memory:
-* **Ingress Data Rate:** $R_{\text{in}} \ge 1\text{ Tbps} = 125\text{ GB/sec}$.
-* **PCIe 5.0 x16 Limit:** $\sim 64\text{ GB/sec}$ (Host bus instantly chokes).
-* **Energy Cost:** Moving $125\text{ GB/sec}$ into host RAM and out to GPU ALUs consumes over $100\text{ W}$ in interconnect copper dissipation alone.
-
-### The IPU Solution:
-1. The IPU intercepts raw I/Q samples right at the ADC/RF interface.
-2. It executes channel estimation and match filtering **in-flight** in its stream accumulator.
-3. It emits only decoded constellation symbols or semantic feature embeddings to the host bus.
-4. **Result:** Bus traffic drops from $125\text{ GB/sec}$ down to $< 1\text{ GB/sec}$, allowing standard, affordable computing hardware to run 6G basebands.
+To stress-test host interconnect boundaries, consider high-velocity ingress scenarios across emerging telecommunications and distributed accelerator topologies:
+* **Constructed Ingress Stress Test:** In extreme Sub-THz massive MIMO front-ends or multi-channel sensor arrays, aggregate raw digitized sample streams can peak in the $R_{\text{in}} \sim 50\text{ to } 200+\text{ Gbps}$ range (with research targets exploring higher aggregate burst rates).
+* **The Modern Interconnect Context:** While modern interconnects continue scaling aggressively (PCIe 6.0/CXL 3.0 delivering $\sim 128\text{ GB/s}$ and CXL 4.0 reaching $128\text{ GT/s}$), brute-force bus bandwidth scaling does not eliminate the **thermodynamic energy cost of data transport**, queue latency, or memory bank contention.
+* **The Ingress Boundary Advantage:** By intercepting streams directly at the ADC/PHY boundary:
+  1. The IPU executes channel estimation, matched filtering, or KV-cache indexing **in-flight** in its stream accumulator.
+  2. It emits only decoded symbols, high-value tokens, or semantic embeddings to the host bus.
+  3. **Break-Even Condition:** Downstream memory pressure is reduced whenever the semantic compression ratio exceeds the IPU pipeline processing latency.
 
 ---
 

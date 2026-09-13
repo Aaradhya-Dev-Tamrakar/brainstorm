@@ -8,7 +8,7 @@
 > **Discipline:** Electronics, Communication & Information Engineering (Final Semester Capstone / Independent R&D)  
 > **Domain:** Compute-Memory Interconnect & Information Theory  
 > **Created Date:** 2026-09-13  
-> **Evidence Tier:** `FORMALLY_PROVEN` & `EMPIRICALLY_VERIFIED`  
+> **Evidence Tier:** `HEURISTIC_HYPOTHESIS`  
 > **Repository:** `F:\Aaradhya-Dev-Tamrakar\brainstorm`  
 > **Execution Context:** Antigravity / Gemini Engine  
 > **Upstream Trace:** [`2026-09-13_STRANGLER-IPU_CONVERSATION.md`](../transcripts/2026-09-13_STRANGLER-IPU_CONVERSATION.md)  
@@ -46,10 +46,10 @@ In this repository, **the human is the Systems Architect; the AI is the junior d
 
 ## 2. Reframing Hardware Architecture as an Information & Communication Channel
 
-Modern computer architecture is not primarily an analog electronics problem; it is a **high-speed digital communication network**:
+At the architectural abstraction level, many compute-memory bottlenecks can be rigorously studied as dataflow, communication, queuing, and scheduling problems before committing to circuit-level implementation:
 
 1. **The Memory Bus as a Constrained Communication Channel:**
-   - Physical copper traces on a PCB or silicon interposer are band-limited channels subject to Shannon capacity limits, latency penalties ($t_{prop}$), and signal integrity trade-offs.
+   - Physical copper traces on a PCB or silicon interposer are band-limited channels subject to Shannon capacity limits, latency penalties ($t_{prop}$), and signal integrity trade-offs. While thermal dissipation, packaging, and PHY overhead matter in physical silicon, the architectural dataflow dominates total power and latency bounds.
    - Pushing 16KB of data across this channel to perform a 1-scalar reduction violates basic information efficiency.
 2. **GPU Warps as Packet Broadcast Networks:**
    - A 32-thread SIMT warp is an asynchronous multi-agent communication network requesting packets from a banked storage array.

@@ -8,9 +8,9 @@
 > **Discipline:** Electronics, Communication & Information Engineering  
 > **Domain:** Memory Hierarchy & Compute Co-Design  
 > **Created Date:** 2026-09-13  
-> **Evidence Tier:** `STATISTICALLY_OBSERVED` & `EMPIRICALLY_VERIFIED`  
+> **Evidence Tier:** `HEURISTIC_HYPOTHESIS` & `SYNTHETIC_PROOF_OF_CONCEPT`  
 > **Upstream Trace:** [`ARCH-SPEC-001`](../architectures/ARCH-SPEC-001-ECIE-COMPUTE-MEMORY.md)  
-> **Downstream Trace:** [`warehouse_mem_sim.py`](../../sim/warehouse_mem_sim.py)
+> **Downstream Trace:** [`warehouse_mem_sim.py`](../../sim/warehouse_mem_sim.py)  
 
 ---
 
@@ -36,12 +36,15 @@ $$\text{Stall Factor} = \frac{T_{\text{uncoalesced}}}{T_{\text{coalesced}}} \le 
 
 ---
 
-## 3. The Near-Memory Reduction Invariant
+## 3. The Isolated Scalar-Reduction Boundary Bound
 
-For an activation vector $V \in \mathbb{R}^N$ under a reduction operation $R(V) \in \mathbb{R}^1$ (e.g., Softmax denominator, LayerNorm sum-of-squares):
+For an isolated activation vector $V \in \mathbb{R}^N$ under a pure reduction operation $R(V) \in \mathbb{R}^1$ (e.g., isolated sum-of-squares):
 
 $$\text{Bus Traffic Ratio } (\beta) = \frac{\text{Data Transferred}_{\text{PIM}}}{\text{Data Transferred}_{\text{Standard}}} = \frac{\text{sizeof}(\text{Scalar})}{\text{sizeof}(V)} = \frac{1}{N}$$
 
-For $N = 4096$ (standard LLM hidden dimension):
+For $N = 4096$:
 
-$$\beta = \frac{1}{4096} \approx 0.024\% \quad (\mathbf{99.976\%\text{ Bus Traffic Reduction}})$$
+$$\beta = \frac{1}{4096} \approx 0.024\% \quad (\mathbf{99.976\%\text{ Boundary Traffic Reduction}})$$
+
+> [!WARNING]
+> **Scope Limitation:** This $99.976\%$ bound applies strictly to the isolated scalar reduction output boundary. It does NOT represent total system traffic reduction for a full attention pipeline (which involves $Q, K, V$ data movement, query-dependent selection, token routing, and normalization states). Total system gain must be evaluated via end-to-end parameter sweeps.

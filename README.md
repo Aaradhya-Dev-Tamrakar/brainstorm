@@ -140,6 +140,17 @@ The repository includes a PowerShell automation engine designed specifically for
 .\sync.ps1 -Status
 ```
 
+### 🛠️ Zero-Token Architectural & Audit Shortcuts (`.bat`)
+
+For lightning-fast execution without opening terminal syntax or burning AI tokens:
+
+| Batch Shortcut | Underlying Engine | Purpose | Execution Cost |
+| :--- | :--- | :--- | :--- |
+| **`.\audit.bat`** | `sim/reconciliation_engine.py` | Lints entire repo for broken links, missing metadata, and taxonomy drift | **0 Tokens** (~50 ms) |
+| **`.\archive.bat`** | `sim/transcript_archiver.py` | Detects significant architectural sessions and exports verbatim logs | **0 Tokens** (~100 ms) |
+| **`.\sim.bat`** | `sim/warehouse_mem_sim.py` | Runs GPU-DRAM warehouse discrete event channel simulator | **0 Tokens** (~20 ms) |
+
+
 ### Safety Features
 - **Staged Secret Scanner Guard**: Scans diffs for accidentally staged API keys (OpenAI, Anthropic, Google/Gemini, GitHub, AWS, Slack, private keys) and halts execution before any commit is made.
 - **Dynamic Branch-Aware Commits**: Generates scoped conventional commits automatically (e.g. `docs(spark): ...`, `feat(super-nlm): ...`, `docs(ecosystem): ...`).

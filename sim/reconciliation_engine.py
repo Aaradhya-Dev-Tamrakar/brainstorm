@@ -56,6 +56,10 @@ def audit_repository():
             
         file_dir = os.path.dirname(full_path)
         
+        # Skip checking literal link strings inside raw transcripts (transcripts contain unrendered template examples)
+        if "research/transcripts" in rel_path:
+            continue
+
         for match in link_pattern.finditer(content):
             target = match.group(2).split("#")[0].strip()
             if not target or target.startswith("http") or target.startswith("mailto") or target.startswith("file:"):

@@ -1,0 +1,144 @@
+{
+  "$schema": "../capability.contract.v1.json",
+  "module": "yt-dlp-live",
+  "version": "1.1.0",
+  "location": "F:\\AaradhyaDT\\yt-dlp-live",
+  "tracking_branch": "yt-dlp-live",
+  "runtime": "powershell7-python3.11",
+  "capabilities": [
+    {
+      "id": "capture_live_stream",
+      "description": "High-efficiency, resilient YouTube Live Stream recorder with auto-cut and lossless MP4 remuxing.",
+      "category": "media_ingestion",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "empirical_benchmark",
+      "cost_tier": "zero_token_local",
+      "inputs": {
+        "type": "object",
+        "required": ["stream_url"],
+        "properties": {
+          "stream_url": { "type": "string" },
+          "resolution_limit": { "type": "string", "default": "480p" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["mp4_path"],
+        "properties": {
+          "mp4_path": { "type": "string" },
+          "file_size_bytes": { "type": "integer" }
+        }
+      }
+    },
+    {
+      "id": "relay_live_broadcast",
+      "description": "Streams source broadcast directly to private YouTube channel via RTMP while saving lossless local MP4 copy.",
+      "category": "broadcast_streaming",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "empirical_benchmark",
+      "cost_tier": "zero_token_local",
+      "inputs": {
+        "type": "object",
+        "required": ["source_url"],
+        "properties": {
+          "source_url": { "type": "string" },
+          "stream_key": { "type": "string" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["broadcast_status"],
+        "properties": {
+          "broadcast_status": { "type": "string" },
+          "local_mp4_backup": { "type": "string" }
+        }
+      }
+    },
+    {
+      "id": "audio_transform_nightcore",
+      "description": "Converts input audio into high-energy Nightcore using calibrated pitch shifting, tempo acceleration, sub-harmonic bass EQ, and ITU-R BS.1770 loudness normalization (-14 LUFS).",
+      "category": "dsp_audio_processing",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "empirical_benchmark",
+      "cost_tier": "zero_token_local",
+      "inputs": {
+        "type": "object",
+        "required": ["input_audio_path"],
+        "properties": {
+          "input_audio_path": { "type": "string" },
+          "pitch_shift_semitones": { "type": "number", "default": 2.5 },
+          "tempo_scale": { "type": "number", "default": 1.20 },
+          "bass_boost_db": { "type": "number", "default": 4.5 },
+          "target_lufs": { "type": "number", "default": -14.0 }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["output_audio_path", "measured_lufs"],
+        "properties": {
+          "output_audio_path": { "type": "string" },
+          "measured_lufs": { "type": "number" },
+          "sample_rate_hz": { "type": "integer" }
+        }
+      }
+    },
+    {
+      "id": "generate_karaoke_subtitles",
+      "description": "Performs word-level forced alignment and compiles Advanced Substation Alpha (.ass) karaoke scripts with syllable bounce and visual glow effects.",
+      "category": "subtitles_and_alignment",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "empirical_benchmark",
+      "cost_tier": "zero_token_local",
+      "inputs": {
+        "type": "object",
+        "required": ["audio_path"],
+        "properties": {
+          "audio_path": { "type": "string" },
+          "lyrics_text": { "type": "string" },
+          "style_preset": { "type": "string", "enum": ["nightcore_neon", "kids_bubble"], "default": "nightcore_neon" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["ass_file_path", "aligned_words"],
+        "properties": {
+          "ass_file_path": { "type": "string" },
+          "aligned_words": { "type": "integer" }
+        }
+      }
+    },
+    {
+      "id": "compose_and_render_video",
+      "description": "Composites audio, audio-reactive visualizers, vector backgrounds, and dynamic karaoke subtitles using Intel Arc QuickSync (QSV) hardware acceleration.",
+      "category": "hardware_accelerated_render",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "empirical_benchmark",
+      "cost_tier": "zero_token_local",
+      "inputs": {
+        "type": "object",
+        "required": ["audio_file", "subtitle_file"],
+        "properties": {
+          "audio_file": { "type": "string" },
+          "subtitle_file": { "type": "string" },
+          "background_mode": { "type": "string", "enum": ["reactive_bars", "vectorscope", "kids_vector_loop"] },
+          "orientation": { "type": "string", "enum": ["16:9", "9:16"], "default": "16:9" },
+          "encoder": { "type": "string", "enum": ["h264_qsv", "av1_qsv"], "default": "h264_qsv" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["output_video_path", "render_fps"],
+        "properties": {
+          "output_video_path": { "type": "string" },
+          "render_fps": { "type": "number" },
+          "duration_seconds": { "type": "number" }
+        }
+      }
+    }
+  ]
+}

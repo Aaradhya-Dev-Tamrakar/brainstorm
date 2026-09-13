@@ -134,8 +134,8 @@
       "category": "computational_engine",
       "tech_stack": "PowerShell, yt-dlp, FFmpeg",
       "execution_context": "Local Daemon",
-      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\yt-dlp-live",
-      "core_superpower": "Resilient live stream capture daemon, auto-cut, and lossless remuxing/relaying"
+      "local_path": "F:\\AaradhyaDT\\yt-dlp-live",
+      "core_superpower": "Resilient live stream capture daemon, RTMP relay, and autonomous media transformer cluster (Normal-to-Nightcore DSP, QSV render)"
     },
     {
       "index": 12,

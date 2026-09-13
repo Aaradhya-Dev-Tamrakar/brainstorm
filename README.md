@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Status: Living Architecture](https://img.shields.io/badge/Status-Living%20Architecture-brightgreen)
-![Modules: 18 Branches](https://img.shields.io/badge/Modules-18%20Branches-indigo)
+![Ecosystem: 17 Tools (18 Branches)](https://img.shields.io/badge/Ecosystem-17%20Tools%20(18%20Branches)-indigo)
 ![Engine: sync.ps1](https://img.shields.io/badge/Engine-sync.ps1%20v2.0-cyan)
 
 > A unified architectural blueprint and dynamic capability mesh interconnecting tools, hardware, and AI engines across `F:\AaradhyaDT`, `F:\Aaradhya-Dev-Tamrakar`, and `F:\FuseAIF2026`.
@@ -58,7 +58,7 @@ When autonomous modules are chained via MCP and Semantic Contracts, new workflow
 - **Pipeline D (Invariant & Arbitrage Discovery):** `Screen Q&A / Super-NLM` $\rightarrow$ `Nexus` (formalizer) $\rightarrow$ `Claude Fleet / AI Solver` $\rightarrow$ `Z3 SMT Sandbox` $\rightarrow$ `md2pdf`.
 
 ### 🎯 The Flagship Wedge: Adversarial Rule & Invariant Assurance
-To prevent platform sprawl across 13 heterogeneous modules, the ecosystem anchors around a proven first wedge: **Software, API & Protocol Invariant Assurance** (validated at scale by DARPA's 2025 AI Cyber Challenge). Ground truth is enforced via deterministic execution sandboxes before expanding outward into smart contracts, platform terms, and regulatory thresholds.
+To prevent platform sprawl across 17 heterogeneous ecosystem modules (13 active computational engines + 4 presentation/web hubs), the ecosystem anchors around a proven first wedge: **Software, API & Protocol Invariant Assurance** (validated at scale by DARPA's 2025 AI Cyber Challenge). Ground truth is enforced via deterministic execution sandboxes before expanding outward into smart contracts, platform terms, and regulatory thresholds.
 
 ### 🔬 R&D Roadmap, 5-Horizon Forecast & Feasibility
 The formal R&D evaluation establishes **Adversarial Invariant Assurance** as the primary research program, moving from synthetic benchmarks to real-world software and protocol state machines:
@@ -88,7 +88,10 @@ The formal R&D evaluation establishes **Adversarial Invariant Assurance** as the
 
 ## 🗂️ Ecosystem Branches & Module Catalog
 
-Every tool in the ecosystem has a corresponding tracking branch in this repository for module-specific brainstorm logs, manifests, and interface prototypes:
+Every tool in the ecosystem has a corresponding tracking branch in this repository for module-specific brainstorm logs, manifests, and interface prototypes. Together with the `main` orchestration root, the ecosystem maintains **18 Git branches** across **17 local tool repositories** (13 computational engines + 4 presentation/educational hubs):
+
+> 📖 **Machine-Readable Architecture Registry:** [`schemas/ecosystem.registry.json`](schemas/ecosystem.registry.json)  
+> 📜 **Semantic Capability Contract Schema:** [`schemas/capability.contract.v1.json`](schemas/capability.contract.v1.json) (Reference: [`AI-Constraint-Solver.contract.json`](schemas/examples/AI-Constraint-Solver.contract.json))
 
 | # | Dedicated Branch | Tool / Module | Tech Stack | Execution Context | Core Superpower |
 |---|---|---|---|---|---|
@@ -124,10 +127,10 @@ The repository includes a PowerShell automation engine designed specifically for
 .\sync.ps1 -b SPARK
 .\sync.ps1 -Branch super-nlm -m "docs(super-nlm): document multi-account session rotation"
 
-# 3. Synchronize all 18 tool branches with GitHub origin in a single command
+# 3. Synchronize all 18 repository branches (17 tool branches + main) with GitHub origin in a single command
 .\sync.ps1 -AllBranches
 
-# 4. Audit brainstorm branch status across all 17 local repositories on disk
+# 4. Audit brainstorm branch status across all 17 local tool repositories on disk
 .\sync.ps1 -SyncToolRepos
 
 # 5. Provision a new tool branch in brainstorm and configure its local repo

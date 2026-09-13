@@ -12,6 +12,7 @@
 | **[`ARCH-RFC-003`](ARCH-RFC-003-CAPSTONE-DEFENSE-STANDARD.md)** | **Capstone Defense & Academic Repository Standard** | ABET/IEEE Curriculum Alignment & Dual-Track Defense | Aaradhya Dev Tamrakar | Mandatory Standard |
 | **[`ARCH-SPEC-001`](ARCH-SPEC-001-ECIE-COMPUTE-MEMORY.md)** | **The ECIE Systems Architect Paradigm & Clean-Slate Compute-Memory Co-Design** | Compute-Memory Interconnect & Information Theory | Aaradhya Dev Tamrakar | Active Baseline |
 | **[`ARCH-SPEC-002`](ARCH-SPEC-002-INGESTION-PROCESSING-UNIT.md)** | **The Ingestion Processing Unit (IPU) & The Telecom Evolutionary Transition Strategy** | 6G Edge Ingestion, Coexistence & Near-Memory Shock Absorption | Aaradhya Dev Tamrakar | Active Charter |
+| **[`ARCH-SPEC-003`](ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md)** | **The Headless Orchestration Substrate: Decoupled Verification & CLI-First Lifecycle** | Autonomous Reasoning, Verification & Interface Decoupling | Aaradhya Dev Tamrakar | Active Charter |
 
 ---
 

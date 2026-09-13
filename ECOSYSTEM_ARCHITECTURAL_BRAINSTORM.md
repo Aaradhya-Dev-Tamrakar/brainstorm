@@ -207,8 +207,12 @@ To allow the Jarvis Cortex to autonomously compose verification pipelines (such 
 
 A central orchestrator scanner crawls specified workspace roots, registers capabilities, and exposes them directly to the AI Cortex via **Model Context Protocol (MCP)** or a local REST API.
 
+> 📜 **Formal Schema Definition:** [`schemas/capability.contract.v1.json`](schemas/capability.contract.v1.json)  
+> 🧪 **Concrete Instance Example:** [`schemas/examples/AI-Constraint-Solver.contract.json`](schemas/examples/AI-Constraint-Solver.contract.json)  
+> 📖 **Architecture Registry:** [`schemas/ecosystem.registry.json`](schemas/ecosystem.registry.json)
+
 ### 5.4 The Strategic Wedge vs. Platform Vision
-* **The Platform Risk:** 13 heterogeneous modules across multiple languages (.NET 10, C/C++, Python, Kotlin, Svelte) and execution layers create an enormous integration surface. Polishing the ecosystem indefinitely without demonstrating a single undeniable capability leads to premature platform exhaustion.
+* **The Platform Risk:** 17 ecosystem modules (including 13 active computational engines across .NET 10, C/C++, Python, Kotlin, Svelte) and diverse execution layers create an enormous integration surface. Polishing the ecosystem indefinitely without demonstrating a single undeniable capability leads to premature platform exhaustion.
 * **The Flagship Wedge:** **Adversarial Assurance for Software, API, and Protocol Invariants**.
   - Grounded by DARPA's 2025 AI Cyber Challenge (AIxCC), which demonstrated autonomous Cyber Reasoning Systems finding and patching vulnerabilities across 54M lines of code at ~$152 per task.
   - Software provides an unambiguous ground-truth loop:
@@ -234,10 +238,11 @@ Rather than marketing an "exploit generator" (civil/legal liability), the commer
 ## 6. Next Steps & Tactical Sequencing
 
 When ready to transition from brainstorm to iterative prototyping:
-1. **Define the Primary Interface**: Decide whether Jarvis is summoned via a global hotkey HUD (Raycast/Spotlight style), a secondary-monitor web dashboard (Nexus 2.0), or mobile (Alpha-SuperApp).
-2. **First Proof-of-Concept Link**: Connect 2 high-value complementary modules first (e.g., *Super-NLM + RSVP Reader*, or *NovaOptimizer + Worker Fleet*).
-3. **Execute the Strategic Wedge in `F:\AaradhyaDT\AI`**: Write a bounded Z3 invariant verification script targeting an API or token balance constraint to prove Tier 4 reality grounding.
-4. **Draft the Minimal Standard Manifest**: Establish a uniform `tool.manifest.json` and `capability.contract.v1.json` standard for new tools going forward.
+1. **Adopt Headless Engine First (`ARCH-SPEC-003`)**: Do not wait for the conversational Jarvis UI or multi-agent speech cortex. Build and validate the core orchestration engine as a headless substrate with a direct CLI / Python script entrypoint (`nexus research` or `jarvis "..."`).
+2. **Execute the Strategic Wedge in `F:\AaradhyaDT\AI`**: Write a bounded Z3 invariant verification script targeting an API or token balance constraint to prove Tier 4 reality grounding.
+3. **Draft the Minimal Standard Manifest**: Establish a uniform `tool.manifest.json` and `capability.contract.v1.json` standard across tools.
+4. **First Proof-of-Concept Link**: Connect 2 high-value complementary modules first (e.g., *Super-NLM + RSVP Reader*, or *NovaOptimizer + Worker Fleet*).
+5. **Decoupled Interface Layer**: Once the underlying substrate deterministically executes `compose → execute → verify`, attach Jarvis UI, Web dashboards, or voice interfaces as thin API consumers.
 
 ---
 

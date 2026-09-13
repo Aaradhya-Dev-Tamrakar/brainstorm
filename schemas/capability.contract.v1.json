@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aaradhyadt.dev/schemas/capability.contract.v1.json",
+  "title": "Semantic Capability Contract Schema v1",
+  "description": "Formal contract schema for declaring deterministic capabilities, verification tiers, execution side-effects, and typed I/O boundaries across the personal AI capability mesh.",
+  "type": "object",
+  "required": [
+    "$schema",
+    "module",
+    "version",
+    "location",
+    "runtime",
+    "capabilities"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "URI of the capability contract schema version."
+    },
+    "module": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]+$",
+      "description": "Canonical name of the ecosystem tool/module (e.g., AI-Constraint-Solver, NovaOptimizer, SPARK)."
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(-[a-zA-Z0-9.]+)?$",
+      "description": "Semantic version of the capability contract (e.g., 1.0.0)."
+    },
+    "location": {
+      "type": "string",
+      "description": "Canonical disk path or URI for the local repository root (e.g., F:\\AaradhyaDT\\AI)."
+    },
+    "tracking_branch": {
+      "type": "string",
+      "description": "Dedicated tracking branch in the central brainstorm repository (e.g., AI, super-nlm, system-optimizer)."
+    },
+    "runtime": {
+      "type": "string",
+      "description": "Primary execution runtime environment (e.g., python3.11, dotnet10, cpp-esp32, kotlin2.2, node-vite, svelte-vite, powershell7)."
+    },
+    "mcp_endpoint": {
+      "type": "object",
+      "description": "Model Context Protocol (MCP) server configuration if exposed to the orchestrator.",
+      "required": ["transport"],
+      "properties": {
+        "transport": {
+          "type": "string",
+          "enum": ["stdio", "sse", "stream", "http"]
+        },
+        "command": {
+          "type": "string",
+          "description": "Executable command to launch the MCP server."
+        },
+        "args": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "port": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 65535
+        },
+        "env": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+    "capabilities": {
+      "type": "array",
+      "minItems": 1,
+      "description": "List of discrete capabilities provided by this module.",
+      "items": {
+        "$ref": "#/$defs/capability"
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "author": { "type": "string" },
+        "license": { "type": "string" },
+        "repository_url": { "type": "string", "format": "uri" },
+        "last_updated": { "type": "string", "format": "date" }
+      }
+    }
+  },
+  "$defs": {
+    "capability": {
+      "type": "object",
+      "required": [
+        "id",
+        "category",
+        "deterministic",
+        "side_effects",
+        "verification_tier",
+        "inputs",
+        "outputs"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]+$",
+          "description": "Unique snake_case identifier for the capability within this module."
+        },
+        "description": {
+          "type": "string",
+          "description": "Human- and LLM-readable description of what this capability performs."
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "formal_verification",
+            "ingestion",
+            "compute",
+            "actuation",
+            "cognition",
+            "orchestration",
+            "hardware_interop",
+            "presentation"
+          ],
+          "description": "Taxonomic category within the 4-Tier Jarvis Capability Mesh."
+        },
+        "deterministic": {
+          "type": "boolean",
+          "description": "True if identical inputs strictly guarantee identical outputs with zero stochasticity."
+        },
+        "side_effects": {
+          "type": "boolean",
+          "description": "False if purely functional; true if it mutates disk, memory, network, hardware, or OS kernel state."
+        },
+        "verification_tier": {
+          "type": "string",
+          "enum": [
+            "formal_smt",
+            "empirical_sandbox",
+            "statistical_audit",
+            "heuristic_unverified"
+          ],
+          "description": "Epistemic verification level enforced on output claims."
+        },
+        "cost_tier": {
+          "type": "string",
+          "enum": [
+            "zero_token_local",
+            "free_tier_api",
+            "paid_api",
+            "heavy_compute"
+          ],
+          "default": "zero_token_local",
+          "description": "Financial and compute tier required to invoke this capability."
+        },
+        "objective": {
+          "type": "string",
+          "enum": [
+            "maximize",
+            "minimize",
+            "find_counterexample",
+            "verify_invariant",
+            "transform",
+            "execute",
+            "synthesize",
+            "audit"
+          ],
+          "description": "Optimization or proof objective for solvers and verification engines."
+        },
+        "timeout_ms": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Hard execution deadline in milliseconds before the orchestrator forcibly aborts."
+        },
+        "invariants_checked": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "List of system invariants (e.g. INV-MEM-001, INV-EPI-001) verified by this capability."
+        },
+        "inputs": {
+          "type": "object",
+          "description": "Typed parameter schema specifying required and optional input arguments."
+        },
+        "outputs": {
+          "type": "object",
+          "description": "Typed output schema guaranteed upon successful execution."
+        },
+        "counterexample_schema": {
+          "type": "object",
+          "description": "Typed schema for counterexample state when a verification failure or invariant violation occurs."
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

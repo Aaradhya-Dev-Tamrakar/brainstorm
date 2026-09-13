@@ -1,0 +1,71 @@
+{
+  "$schema": "../capability.contract.v1.json",
+  "module": "AI-Constraint-Solver",
+  "version": "1.0.0",
+  "location": "F:\\AaradhyaDT\\AI",
+  "tracking_branch": "AI",
+  "runtime": "python3.11",
+  "mcp_endpoint": {
+    "transport": "stdio",
+    "command": "python",
+    "args": ["-m", "solver.mcp_server"]
+  },
+  "capabilities": [
+    {
+      "id": "solve_combinatorial_invariants",
+      "description": "Performs deterministic constraint satisfaction, invariant checking, and counterexample search across state machines and discrete rule systems.",
+      "category": "formal_verification",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "formal_smt",
+      "cost_tier": "zero_token_local",
+      "objective": "find_counterexample",
+      "timeout_ms": 30000,
+      "invariants_checked": [
+        "INV-STATE-001"
+      ],
+      "inputs": {
+        "type": "object",
+        "required": ["variables", "invariants"],
+        "properties": {
+          "variables": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "invariants": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "objective": {
+            "type": "string",
+            "enum": ["maximize", "minimize", "find_counterexample", "verify_invariant"]
+          }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["satisfiable", "execution_time_ms"],
+        "properties": {
+          "satisfiable": { "type": "boolean" },
+          "counterexample_state": { "type": ["object", "null"] },
+          "proof_tree": { "type": ["string", "null"] },
+          "execution_time_ms": { "type": "number" }
+        }
+      },
+      "counterexample_schema": {
+        "type": "object",
+        "properties": {
+          "violating_state": { "type": "object" },
+          "violated_invariant": { "type": "string" },
+          "step_trace": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "author": "Aaradhya Dev Tamrakar",
+    "license": "MIT",
+    "repository_url": "https://github.com/Aaradhya-Dev-Tamrakar/brainstorm/tree/AI",
+    "last_updated": "2026-09-14"
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "name": "Aaradhya Personal Tool Ecosystem Registry",
+  "orchestration_root": {
+    "repository": "https://github.com/Aaradhya-Dev-Tamrakar/brainstorm.git",
+    "branch": "main",
+    "local_path": "F:\\Aaradhya-Dev-Tamrakar\\brainstorm",
+    "role": "Central Architecture Registry, Verification Engine, and Orchestration Blueprint"
+  },
+  "statistics": {
+    "total_git_branches": 18,
+    "orchestration_branches": 1,
+    "total_tool_modules": 17,
+    "computational_modules": 13,
+    "presentation_and_educational_modules": 4
+  },
+  "modules": [
+    {
+      "index": 1,
+      "id": "super-nlm",
+      "branch": "super-nlm",
+      "name": "Super-NLM Hub",
+      "category": "computational_engine",
+      "tech_stack": "Python (FastAPI), React, MCP",
+      "execution_context": "Cloud / Hybrid",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\super-nlm",
+      "core_superpower": "Multi-account Google NotebookLM aggregator, cross-notebook synthesis, MCP round-robin agent rotation"
+    },
+    {
+      "index": 2,
+      "id": "Autodesk-Fusion-360-MCP-Server",
+      "branch": "Autodesk-Fusion-360-MCP-Server",
+      "name": "Autodesk Fusion 360 MCP",
+      "category": "computational_engine",
+      "tech_stack": "Python, Fusion 360 API, MCP",
+      "execution_context": "Local Desktop",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\Autodesk-Fusion-360-MCP-Server",
+      "core_superpower": "Conversational 3D CAD, parametric modeling automation via AI / MCP"
+    },
+    {
+      "index": 3,
+      "id": "system-optimizer",
+      "branch": "system-optimizer",
+      "name": "NovaOptimizer",
+      "category": "computational_engine",
+      "tech_stack": "C# .NET 10, WPF, Win32/NT APIs",
+      "execution_context": "Local (Bare Metal)",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\system-optimizer",
+      "core_superpower": "Micro-footprint Windows OS tuning, deep RAM cache purge (EmptyWorkingSet), process priority boosting"
+    },
+    {
+      "index": 4,
+      "id": "SPARK",
+      "branch": "SPARK",
+      "name": "SPARK Wearable Gateway",
+      "category": "computational_engine",
+      "tech_stack": "C/C++ (ESP32-S3), Python, SHAP, BLE",
+      "execution_context": "Edge Hardware / Local",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\SPARK",
+      "core_superpower": "Two-layer edge fall detection, sensor kinematics, SHAP clinical explainability, automated PDF reporting"
+    },
+    {
+      "index": 5,
+      "id": "Nexus",
+      "branch": "Nexus",
+      "name": "Nexus",
+      "category": "computational_engine",
+      "tech_stack": "FastAPI, React (Vite), SQLite FTS5",
+      "execution_context": "Local / Hybrid",
+      "local_path": "F:\\AaradhyaDT\\Nexus",
+      "core_superpower": "Project-centric AI workspace, prompt multiplexing across parallel LLMs, contextual note memory"
+    },
+    {
+      "index": 6,
+      "id": "Claude-Desktop",
+      "branch": "Claude-Desktop",
+      "name": "Claude Worker Fleet (v2)",
+      "category": "computational_engine",
+      "tech_stack": "FastAPI coordinator, SQLite WAL, PowerShell",
+      "execution_context": "Local / Distributed",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\Claude-Desktop",
+      "core_superpower": "Multi-profile session persistence, distributed DAG task worker fleet, SKU pipeline decomposition"
+    },
+    {
+      "index": 7,
+      "id": "BiasAperture",
+      "branch": "BiasAperture",
+      "name": "BiasAperture",
+      "category": "computational_engine",
+      "tech_stack": "PyTorch, Python CLI, LaTeX",
+      "execution_context": "Local / Compute",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\BiasAperture",
+      "core_superpower": "Demographic bias auditing framework for vision models, disparity metrics, automated LaTeX/PDF generation"
+    },
+    {
+      "index": 8,
+      "id": "Alpha-SuperApp",
+      "branch": "Alpha-SuperApp",
+      "name": "Alpha-SuperApp",
+      "category": "computational_engine",
+      "tech_stack": "Kotlin 2.2, Jetpack Compose, Android 16",
+      "execution_context": "Mobile Device",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\Alpha-SuperApp",
+      "core_superpower": "Mobile super-app: Computer Vision, BLE hardware control, Personal Finance, AI assistants"
+    },
+    {
+      "index": 9,
+      "id": "screen-qa-extension",
+      "branch": "screen-qa-extension",
+      "name": "Screen Q&A",
+      "category": "computational_engine",
+      "tech_stack": "Chrome MV3 (JS), Gemini Flash",
+      "execution_context": "Ambient Browser",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\screen-qa-extension",
+      "core_superpower": "Ambient browser intelligence, instant question extraction and zero-click overlay response"
+    },
+    {
+      "index": 10,
+      "id": "md2pdf-desktop",
+      "branch": "md2pdf-desktop",
+      "name": "md2pdf-desktop",
+      "category": "computational_engine",
+      "tech_stack": "Python, Tkinter, Pandoc, wkhtmltopdf",
+      "execution_context": "Local Desktop",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\md2pdf-desktop",
+      "core_superpower": "Publication-quality Markdown-to-PDF rendering pipeline"
+    },
+    {
+      "index": 11,
+      "id": "yt-dlp-live",
+      "branch": "yt-dlp-live",
+      "name": "yt-dlp-live",
+      "category": "computational_engine",
+      "tech_stack": "PowerShell, yt-dlp, FFmpeg",
+      "execution_context": "Local Daemon",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\yt-dlp-live",
+      "core_superpower": "Resilient live stream capture daemon, auto-cut, and lossless remuxing/relaying"
+    },
+    {
+      "index": 12,
+      "id": "AI",
+      "branch": "AI",
+      "name": "AI Constraint Solver",
+      "category": "computational_engine",
+      "tech_stack": "Python, FastAPI, CLI",
+      "execution_context": "Local Microservice",
+      "local_path": "F:\\AaradhyaDT\\AI",
+      "core_superpower": "Cryptarithmetic and combinatorial constraint satisfaction solver with JSON metrics reporting",
+      "contract_ref": "schemas/examples/AI-Constraint-Solver.contract.json"
+    },
+    {
+      "index": 13,
+      "id": "rsvp-reading",
+      "branch": "rsvp-reading",
+      "name": "RSVP Reader",
+      "category": "computational_engine",
+      "tech_stack": "Svelte, Vite",
+      "execution_context": "Local Web",
+      "local_path": "F:\\AaradhyaDT\\rsvp-reading",
+      "core_superpower": "High-speed RSVP reader with Optimal Recognition Point (ORP) highlighting for EPUB/PDF"
+    },
+    {
+      "index": 14,
+      "id": "Aaradhya-Dev-Tamrakar.github.io",
+      "branch": "Aaradhya-Dev-Tamrakar.github.io",
+      "name": "Portfolio Website",
+      "category": "presentation_and_educational",
+      "tech_stack": "Static Web, Vanilla JS, CSS",
+      "execution_context": "Web Hub",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\Aaradhya-Dev-Tamrakar.github.io",
+      "core_superpower": "Central portfolio, interactive radar, and project presentation engine"
+    },
+    {
+      "index": 15,
+      "id": "AaradhyaDT.github.io",
+      "branch": "AaradhyaDT.github.io",
+      "name": "Portfolio Mirror",
+      "category": "presentation_and_educational",
+      "tech_stack": "Static Web",
+      "execution_context": "Mirror Web",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\AaradhyaDT.github.io",
+      "core_superpower": "Secondary public mirror and documentation host"
+    },
+    {
+      "index": 16,
+      "id": "makerspace",
+      "branch": "makerspace",
+      "name": "Makerspace",
+      "category": "presentation_and_educational",
+      "tech_stack": "CAD / Hardware Assets",
+      "execution_context": "Hardware Hub",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\makerspace",
+      "core_superpower": "Physical maker laboratory, fabrication assets, and 3D printing staging"
+    },
+    {
+      "index": 17,
+      "id": "react-workshop-ieeekecktm",
+      "branch": "react-workshop-ieeekecktm",
+      "name": "React Workshop",
+      "category": "presentation_and_educational",
+      "tech_stack": "React, TypeScript, Vite",
+      "execution_context": "Educational",
+      "local_path": "F:\\AaradhyaDT\\react-workshop-ieeekecktm",
+      "core_superpower": "Hands-on curriculum and modern frontend architecture reference"
+    }
+  ]
+}

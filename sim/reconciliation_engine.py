@@ -40,13 +40,27 @@ def audit_repository():
         if ".git" in root:
             continue
         for f in files:
-            if f.endswith(".md") or f.endswith(".py"):
+            if f.endswith(".md") or f.endswith(".py") or f.endswith(".json"):
                 rel_path = os.path.relpath(os.path.join(root, f), BRAINSTORM_ROOT)
                 all_files[rel_path.replace("\\", "/")] = os.path.join(root, f)
 
     link_pattern = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
     
     for rel_path, full_path in all_files.items():
+        if rel_path.endswith(".json"):
+            import json
+            total_files_audited += 1
+            try:
+                with open(full_path, "r", encoding="utf-8") as jf:
+                    json.load(jf)
+            except Exception as e:
+                discrepancies.append({
+                    "type": "INVALID_JSON",
+                    "file": rel_path,
+                    "detail": str(e)
+                })
+            continue
+
         if not rel_path.endswith(".md"):
             continue
         total_files_audited += 1

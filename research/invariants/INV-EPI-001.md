@@ -22,11 +22,25 @@
 
 ---
 
-## 3. Mandatory Invariant Protocol
+---
 
-At the conclusion or major milestone of any significant conversation:
-1. **Target Directory:** `research/transcripts/`
-2. **File Naming Convention:** `YYYY-MM-DD_<PROJECT_OR_TOPIC_CODENAME>_CONVERSATION.md`
-3. **Format Requirement:** Verbatim extraction of both User (`USER_INPUT`) and Assistant (`PLANNER_RESPONSE`) messages, complete with ISO timestamps.
-4. **Index Requirement:** The new transcript must be linked in [`research/transcripts/README.md`](README.md) and referenced in the corresponding architectural spec (`research/architectures/`).
-5. **Git Sync:** Must be staged, committed, and pushed to remote origin via `sync.ps1`.
+## 4. Operational Recognition & Automation Criteria
+
+How does the repository automatically distinguish a **"significant architectural session"** from casual banter or quick syntax questions?
+
+A session is classified as **Significant / Archival-Mandatory** if it satisfies **ANY** of these three deterministic conditions:
+
+1. **Explicit Directive Trigger:**
+   - The user or assistant mentions keywords: `"log this"`, `"archive this"`, `"record verbatim"`, or assigns a project `"codename"` / `"codeword"`.
+2. **Architectural Artifact Genesis:**
+   - Any commit that creates or updates a document in `research/architectures/` (`ARCH-SPEC-xxx`), `research/invariants/` (`INV-xxx`), or `sim/`.
+3. **Cognitive Density Threshold:**
+   - The dialogue exceeds $\ge 5$ user turns and contains $\ge 3$ domain architectural keyword hits (`"architect"`, `"channel"`, `"capacity"`, `"chasm"`, `"6G"`, `"IPU"`, `"coalescing"`).
+
+### Automated Archival Utility
+The repository maintains [`sim/transcript_archiver.py`](../../sim/transcript_archiver.py) to automatically inspect the current conversation, evaluate significance against these thresholds, and export the verbatim Markdown record with one command:
+
+```powershell
+python .\sim\transcript_archiver.py --auto
+```
+

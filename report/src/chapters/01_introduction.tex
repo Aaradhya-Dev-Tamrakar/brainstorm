@@ -1,0 +1,20 @@
+\chapter{Introduction \& Theoretical Formulation}
+\label{chap:intro}
+
+\section{Background: The Von Neumann Memory Chasm}
+Modern computing architectures are fundamentally constrained by the physical and thermodynamic energy penalties associated with data movement across the Von Neumann chasm. In traditional accelerator systems, fetching an operand from off-chip dynamic random-access memory (DRAM) across physical bus traces incurs two to three orders of magnitude higher energy dissipation than the actual arithmetic multiply-accumulate (MAC) operation.
+
+$$\frac{E_{\text{DRAM\_FETCH}}(32\text{-bit})}{E_{\text{ALU\_FMA}}(32\text{-bit})} \ge 100\times$$
+
+While proprietary accelerator vendors (e.g., NVIDIA Hopper and Blackwell architectures) scale high-bandwidth memory (HBM) interfaces via advanced 2.5D/3D packaging technologies (e.g., TSMC CoWoS), such brute-force bandwidth scaling does not eliminate the fundamental thermodynamic dissipation or queue latency inherent in moving semantically reducible data across the host memory hierarchy.
+
+\section{Problem Statement: High-Velocity Ingress Mismatch}
+In emerging high-throughput workloads---ranging from 6G Sub-THz massive MIMO baseband front-ends to long-context Transformer key-value (KV) cache retrieval---the rate of incoming data generates extreme pressure at the host interconnect boundary. When high-velocity streams possess low semantic density (i.e., where only a fraction of raw bits represent actionable state), delivering raw bytes directly to host DRAM before execution creates severe bus contention and wasted memory bandwidth.
+
+\section{Research Objectives}
+This research formulates and evaluates an alternative architectural paradigm governed by the following core questions:
+\begin{enumerate}
+    \item \textbf{Traffic Reducibility:} Can programmable semantic processing directly at the ingress boundary reduce interconnect pressure more efficiently than scaling raw bus bandwidth?
+    \item \textbf{Break-Even Frontier:} Under what ingress rates ($R_{\text{in}}$) and semantic density ratios ($\rho$) does boundary processing strictly dominate conventional host-side architectures?
+    \item \textbf{Evolutionary Coexistence (The STRANGLER Model):} Can an Ingestion Processing Unit (IPU) be introduced transparently without demanding application-level rewrites or obsolete standard CXL/PCIe protocols?
+\end{enumerate}

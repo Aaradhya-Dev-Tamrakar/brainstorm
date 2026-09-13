@@ -1,0 +1,19 @@
+\chapter{System Architecture \& Ingestion Processing Unit (IPU)}
+\label{chap:architecture}
+
+\section{The STRANGLER Evolutionary Paradigm}
+Clean-slate architectures typically fail commercial deployment when they require complete replacement of established software ecosystems (e.g., CUDA, PyTorch) or physical motherboard standards. Analogous to the multi-decade coexistence of cellular generations (2G, 3G, 4G, and 5G), the \textbf{STRANGLER} model introduces an evolutionary, bump-in-the-wire ingress processor that attaches directly to existing interconnect standards:
+
+\begin{itemize}
+    \item \textbf{Phase 1 (Transparent Compatibility):} The IPU acts as an enhanced memory controller or smart NIC, executing dynamic request coalescing and burst packing without requiring host driver modifications.
+    \item \textbf{Phase 2 (Opportunistic Stream Processing):} High-volume streaming reductions, baseband channel estimations, and attention pre-filters are intercepted and computed in-flight before entering host memory.
+    \item \textbf{Phase 3 (Architectural Dominance):} As boundary reduction handles the vast majority of raw data movement, monolithic host accelerators transition into lightweight executive coordinators.
+\end{itemize}
+
+\section{IPU Subsystem Topology}
+The Ingestion Processing Unit consists of three decoupled hardware stages:
+\begin{enumerate}
+    \item \textbf{Line-Rate Ingress Buffer:} Absorbs multi-gigabit bursts directly from high-speed PHY interfaces (Sub-THz ADC, Ethernet, SerDes) to eliminate host interrupt storms.
+    \item \textbf{In-Flight Stream Transform Engine:} Executes streaming arithmetic (matrix reductions, FFT pipelines, vector dot products) locally next to the ingress buffer.
+    \item \textbf{Interconnect Adapter:} Emits reduced semantic payloads formatted as standard, cacheline-aligned bursts over PCIe 5.0/6.0 or CXL 3.0/4.0 channels.
+\end{enumerate}

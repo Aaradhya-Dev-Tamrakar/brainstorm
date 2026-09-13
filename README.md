@@ -149,6 +149,7 @@ For lightning-fast execution without opening terminal syntax or burning AI token
 | **`.\audit.bat`** | `sim/reconciliation_engine.py` | Lints entire repo for broken links, missing metadata, and taxonomy drift | **0 Tokens** (~50 ms) |
 | **`.\archive.bat`** | `sim/transcript_archiver.py` | Detects significant architectural sessions and exports verbatim logs | **0 Tokens** (~100 ms) |
 | **`.\sim.bat`** | `sim/warehouse_mem_sim.py` | Runs GPU-DRAM warehouse discrete event channel simulator | **0 Tokens** (~20 ms) |
+| **`.\build_report.bat`** | `pdflatex / bibtex` | Compiles print-ready LaTeX research technical report (`report/main.pdf`) | **0 Tokens** (~3 sec) |
 
 
 ### Safety Features

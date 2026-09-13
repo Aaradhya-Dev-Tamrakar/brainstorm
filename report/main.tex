@@ -1,0 +1,53 @@
+\documentclass[11pt,a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+\input{vars.tex}
+
+\begin{document}
+
+% Title Page
+\begin{titlepage}
+    \centering
+    \vspace*{1.5cm}
+    {\Huge \textbf{\projectTitle}\par}
+    \vspace{1cm}
+    {\Large \textbf{Research Specification \& Architectural Technical Report}\par}
+    \vspace{0.5cm}
+    {\large \textbf{Codename:} \texttt{\projectCodename}\par}
+    \vspace{2cm}
+    {\Large \textbf{\authorName}\par}
+    {\normalsize \authorRoll\par}
+    \vspace{0.5cm}
+    {\normalsize \authorDepartment\par}
+    {\normalsize \institutionName\par}
+    \vfill
+    {\large \reportDate\par}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% Chapters
+\input{src/chapters/01_introduction.tex}
+\input{src/chapters/02_architecture.tex}
+\input{src/chapters/03_results.tex}
+
+% Bibliography
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

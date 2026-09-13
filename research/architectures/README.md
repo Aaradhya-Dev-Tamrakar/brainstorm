@@ -10,6 +10,7 @@
 | Charter ID | Title | Domain | Principal Architect | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | **[`ARCH-SPEC-001`](ARCH-SPEC-001-ECIE-COMPUTE-MEMORY.md)** | **The ECIE Systems Architect Paradigm & Clean-Slate Compute-Memory Co-Design** | Compute-Memory Interconnect & Information Theory | Aaradhya Dev Tamrakar | Active Baseline |
+| **[`ARCH-SPEC-002`](ARCH-SPEC-002-INGESTION-PROCESSING-UNIT.md)** | **The Ingestion Processing Unit (IPU) & The Telecom Evolutionary Transition Strategy** | 6G Edge Ingestion, Coexistence & Near-Memory Shock Absorption | Aaradhya Dev Tamrakar | Active Charter |
 
 ---
 

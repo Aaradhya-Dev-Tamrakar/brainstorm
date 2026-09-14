@@ -2,11 +2,11 @@
 
 ```text
 Artifact ID:          PROF-001-ENGINEERING-PROFILE
-Version:              2.0.0 (Evidence-Grounded Edition)
+Version:              2.1.0 (Evidence-Hardened Edition)
 Status:               CANONICAL
 Principal Architect:  Aaradhya Dev Tamrakar (ADT)
 Evidence Tier:        E1 — SPECIFICATION
-Verification Ref:     schemas/evidence-policy.md, schemas/capability-registry.yaml
+Verification Ref:     schemas/evidence-policy.md, report/quantitative-claims-audit.md
 ```
 
 ---
@@ -34,82 +34,94 @@ Rather than treating software development as rapid application scripting, ADT ap
 
 ---
 
-## 3. Demonstrated Engineering Domains vs. Research Exposure
+## 3. Four-Tier Status Classification & Technical Proficiencies
 
-To maintain epistemic honesty, technical proficiencies are categorized by demonstrated evidence level:
+Every engineering capability in this dossier is mapped to an explicit status tier defined in [`schemas/evidence-policy.md`](schemas/evidence-policy.md):
 
-### I. Demonstrated Engineering Competence (Evidence Tiers E3 – E4)
-* **Embedded Firmware & Microcontroller Inference (C / C++ / ESP-IDF):** Direct register/driver programming on ESP32-S3 and MPU-6050 with microsecond ISR threshold gating; deployment of INT8 quantized models via TensorFlow Lite Micro.
-* **Algorithmic Fairness Auditing (Python / PyTorch / Fairlearn / AIF360):** Evaluated demographic disparity metrics (DIR, EOD, EOP) across 126 intersectional bins with chi-squared significance testing and BCa bootstrap confidence intervals.
-* **Discrete-Event Systems Simulation (Python / SimPy):** Modeled multi-queue memory contention, Poisson packet bursts, and CXL pooled bus interfaces.
-* **Bare-Metal OS & Memory Tuning (C# .NET 10 / Win32 NT APIs):** Direct P/Invoke integration with Windows NT memory management APIs (`EmptyWorkingSet`, thread priority scheduling).
-* **Deterministic Repository Verification & Tooling:** Automated multi-category static verification suites enforcing link integrity, JSON schema validation, and cryptographic asset verification.
+```text
+[EXPERIMENTALLY_VERIFIED] (E4) ── Physical hardware / public benchmark execution with measured metrics
+[IMPLEMENTED]             (E2/E3)── Committed, buildable code with local unit tests / microservices
+[RESEARCH_PROTOTYPE]      (E3)   ── Algorithmic or queue-theoretic simulation (SimPy / numerical sweep)
+[PROPOSED]                (E0/E1)── Formal architectural specification or schema awaiting empirical test
+```
 
-### II. Research Exposure & Active Exploration (Evidence Tiers E1 – E2)
-* **Near-Memory Computer Architecture & Bump-in-the-Wire Accelerators:** Microarchitectural modeling of front-end Ingress Processing Units (IPUs) designed to absorb 6G burst line-rate ingest (simulated in SimPy; not physical silicon).
-* **Formal Verification & Neurosymbolic Invariants:** Exploring SMT-LIB constraints and Z3 theorem provers for automated API state machine assurance.
-* **Agentic Orchestration & Distributed Cognition:** Designing runtime task managers that decouple task state from worker sessions (`FLEET-001`).
+### I. `[EXPERIMENTALLY_VERIFIED]` Domains (Tier E4)
+* **Embedded Sensor Kinematics & INT8 Edge AI:** ESP-IDF C/C++ firmware on ESP32-S3 with continuous [200 Hz ISR threshold sampling](report/quantitative-claims-audit.md#1-fall-detection-classification-auc-roc); on-device post-training quantized INT8 neural networks.
+* **Statistical Algorithmic Fairness:** Disparity auditing across [[126 demographic bins]](report/quantitative-claims-audit.md#8-intersectional-demographic-bins-audited-biasaperture) evaluating Disparate Impact Ratio and Equalized Odds Difference with BCa bootstrap confidence intervals.
+* **Win32 OS & Memory Management:** Direct P/Invoke integration with Windows NT memory APIs (`EmptyWorkingSet`), reclaiming [[1.2 GB – 3.4 GB working-set RAM]](report/quantitative-claims-audit.md#6-working-set-ram-purge-novaoptimizer).
+* **Client-Side Cryptography:** Browser-native WebCrypto AES-256-GCM encryption with [[600,000 SHA-256 PBKDF2 rounds]](report/quantitative-claims-audit.md#7-cryptographic-key-derivation-security-parameter).
+
+### II. `[IMPLEMENTED]` Domains (Tier E3)
+* **Agentic FastMCP Microservices:** FastMCP JSON-RPC servers in Python for multi-account session aggregation and CAD parametric automation.
+* **Deterministic Repository Verification:** AST and regex-based repository auditors ([`sim/reconciliation_engine.py`](sim/reconciliation_engine.py)) enforcing zero-drift consistency across Markdown links, YAML schemas, and metadata headers.
+* **Local Web Engines:** High-speed RSVP reading HUDs in Svelte/Vite operating at [[300 – 900 WPM]](report/quantitative-claims-audit.md#9-reading-speed-cadence-rsvp-reader).
+
+### III. `[RESEARCH_PROTOTYPE]` Domains (Tier E3 — Simulation Only)
+* **Near-Memory Compute & Bump-in-the-Wire Acceleration:** SimPy discrete-event queueing simulation modeling CXL pooled bus interfaces under burst line-rate ingest.
+
+### IV. `[PROPOSED]` Domains (Tier E1 — Specification)
+* **Headless Invariant Assurance:** Neurosymbolic translation of API specifications into SMT-LIB constraints verified via Z3 solvers and Docker execution sandboxes.
 
 ---
 
 ## 4. Systems Philosophy
 
-1. **Deterministic Verification over Fragile Abstraction:** If code cannot be verified deterministically via unit tests, SMT solvers, or hardware scope captures, it remains a hypothesis, not an engineering asset.
-2. **Hardware Realism:** Abstractions must account for physical hardware limits—DRAM latency, memory bus saturation, cache line fills, and interrupt latency jitter.
-3. **Epistemic Transparency:** Explicitly state what is implemented, what is simulated, and what is hypothesized. Proving the wrong formalization with mathematical rigor is still an error.
-4. **The Three-Output Invariant:** Every architectural brainstorm or research cycle must terminate in at least one of: (1) a reproducible experiment (`INV-xxx`), (2) an executable implementation artifact, or (3) a falsifiable hypothesis card (`HYP-xxx`).
+1. **Deterministic Verification over Fragile Abstraction:** If code cannot be verified deterministically via unit tests, SMT solvers, or hardware scope captures, it remains an unverified hypothesis.
+2. **Physical Hardware Realism:** High-level abstractions must acknowledge physical silicon bounds—DRAM bus saturation, cache line fills, interrupt jitter, and network packet buffers.
+3. **Epistemic Honesty:** Never report simulation results as physical silicon measurements, and never report replacement labor reconstruction as liquid market valuation.
+4. **The Three-Output Rule:** Every architectural brainstorm must terminate in at least one of: (1) a reproducible experiment ([`research/experiments/`](research/experiments/)), (2) an executable implementation artifact, or (3) a falsifiable hypothesis card ([`research/hypotheses/`](research/hypotheses/)).
 
 ---
 
 ## 5. Selected Projects
 
 ### Project 1: SPARK (Smart Protection & Alerting Resilient Kit)
-* **Purpose:** Two-layer wearable fall detection system providing real-time local alerts and clinician-legible explainability without cloud telemetry dependency.
+* **Purpose:** Two-layer wearable fall detection architecture pairing microsecond interrupt threshold gating with quantized neural inference and clinician-legible SHAP explainability.
 * **Role:** Lead AI & Firmware Architect (BEI Major Capstone Project).
-* **Status:** `IMPLEMENTED` & `EXPERIMENTALLY VERIFIED` (Evidence Tier E4).
-* **Evidence:** 44-page thesis proposal; 56 passing CTest/Unity unit tests; functional ESP32-S3 + MPU-6050 prototype; FastAPI clinical dashboard.
-* **Benchmark:** **18.5 KB INT8 CNN**, **0.9185 AUC-ROC** on SisFall dataset (38,420 temporal windows, zero-leakage subject-grouped cross-validation).
-* **Limitations:** Tested primarily on public benchmark data; real-world motion artifacts (dropping device, running) require further ambient false-positive calibration.
+* **Status:** `[EXPERIMENTALLY_VERIFIED]` (Evidence Tier E4).
+* **Evidence:** 44-page thesis proposal; [[56 passing unit tests]](report/quantitative-claims-audit.md#3-unit-test-suite-volume-spark); functional ESP32-S3 + MPU-6050 hardware; FastAPI clinical dashboard.
+* **Audited Benchmark:** [[18.5 KB INT8 CNN]](report/quantitative-claims-audit.md#2-edge-neural-network-footprint-int8) achieving [[0.9185 AUC-ROC]](report/quantitative-claims-audit.md#1-fall-detection-classification-auc-roc) on the SisFall dataset ([[38,420 temporal windows]](report/quantitative-claims-audit.md#1-fall-detection-classification-auc-roc), zero-leakage subject-grouped cross-validation).
+* **Documented Limitations:** Evaluated primarily on laboratory dataset distributions; real-world ambient false-positive calibration requires continuous field wear testing.
 
 ### Project 2: STRANGLER-IPU / SIPU-6G
-* **Purpose:** Microarchitectural concept modeling a bump-in-the-wire Ingress Processing Unit to decouple 6G Sub-THz burst line-rate ingest from host DRAM/HBM memory controllers.
-* **Role:** Lead Researcher & Systems Modeler.
-* **Status:** `RESEARCH_PROTOTYPE` (Evidence Tier E3 — Simulation Only).
-* **Evidence:** Formal specifications (`ARCH-SPEC-001`, `ARCH-SPEC-002`); SimPy discrete-event simulation scripts (`sim/sweep_ipu_breakeven.py`, `sim/warehouse_mem_sim.py`).
-* **Benchmark:** **4.12x tail-latency reduction** (p99) and **68% host memory bus contention relief** under 1.6 Tbps synthetic Poisson burst ingest.
-* **Limitations:** Results are purely simulated using queueing models; not yet validated on physical FPGA or ASIC hardware.
+* **Purpose:** Microarchitectural discrete-event model of a bump-in-the-wire Ingress Processing Unit to decouple 6G Sub-THz burst line-rate ingest from host DRAM/HBM memory controllers.
+* **Role:** Lead Systems Modeler & Author.
+* **Status:** `[RESEARCH_PROTOTYPE]` (Evidence Tier E3 — Simulation Only; Not Physical Silicon).
+* **Evidence:** Formal specifications ([`ARCH-SPEC-001`](research/architectures/ARCH-SPEC-001-ECIE-COMPUTE-MEMORY.md), [`ARCH-SPEC-002`](research/architectures/ARCH-SPEC-002-INGESTION-PROCESSING-UNIT.md)); discrete simulation scripts ([`sim/sweep_ipu_breakeven.py`](sim/sweep_ipu_breakeven.py), [`sim/warehouse_mem_sim.py`](sim/warehouse_mem_sim.py)).
+* **Audited Benchmark:** [[4.12x tail-latency reduction]](report/quantitative-claims-audit.md#4-strangler-ipu-tail-latency-reduction) (p99) and [[68% host memory bus contention relief]](report/quantitative-claims-audit.md#5-strangler-ipu-host-memory-bus-contention-relief) under 1.6 Tbps synthetic Poisson burst ingest.
+* **Documented Limitations:** Purely simulated in SimPy queueing models; not yet validated on physical FPGA testbeds or custom ASIC tape-outs.
 
 ### Project 3: BiasAperture
-* **Purpose:** Regulatory-compliant demographic bias auditing and intersectional disparity evaluation framework for deep vision models.
+* **Purpose:** Intersectional demographic bias auditing and fairness evaluation framework for deep vision models, compiling regulator-legible PDF audit certificates.
 * **Role:** Co-Lead Engineer (Fusemachines AI Fellowship Capstone).
-* **Status:** `IMPLEMENTED` & `EXPERIMENTALLY VERIFIED` (Evidence Tier E4).
+* **Status:** `[EXPERIMENTALLY_VERIFIED]` (Evidence Tier E4).
 * **Evidence:** Python CLI; automated Jinja2 LaTeX-to-PDF audit certificate generation; test suite covering statistical boundary conditions.
-* **Benchmark:** Audited 126 demographic intersectional bins; evaluated Disparate Impact Ratio (DIR) and Equalized Odds Difference (EOD) with BCa bootstrap confidence intervals.
-* **Limitations:** Sensitive to small subgroup sample sizes ($N < 30$ bins are discarded, which can obscure sparse minority edge cases).
+* **Audited Benchmark:** Audited [[126 demographic intersectional bins]](report/quantitative-claims-audit.md#8-intersectional-demographic-bins-audited-biasaperture); evaluated Disparate Impact Ratio and Equalized Odds Difference with BCa bootstrap confidence intervals.
+* **Documented Limitations:** Statistical tests discard sparse subgroups ($N < 30$), which can mask edge-case disparities in underrepresented cohorts.
 
 ### Project 4: NovaOptimizer
-* **Purpose:** Ultra-lightweight Windows OS tuner optimizing system memory before heavy compute workloads without third-party telemetry bloat.
-* **Role:** Creator & Maintainer.
-* **Status:** `IMPLEMENTED` & `EXPERIMENTALLY VERIFIED` (Evidence Tier E4).
+* **Purpose:** Minimalist Windows OS memory management utility tuning process working sets before heavy computational tasks without telemetry bloat.
+* **Role:** Creator & Developer.
+* **Status:** `[EXPERIMENTALLY_VERIFIED]` (Evidence Tier E4).
 * **Evidence:** C# .NET 10 repository calling Win32 NT kernel APIs via P/Invoke.
-* **Benchmark:** Reclaims **1.2 GB – 3.4 GB working-set RAM** via Win32 `EmptyWorkingSet` and trims standby cache.
-* **Limitations:** Flushing working sets forces subsequent memory access to page-fault from disk/paging file, introducing transient warmup latency.
+* **Audited Benchmark:** Reclaims [[1.2 GB – 3.4 GB working-set RAM]](report/quantitative-claims-audit.md#6-working-set-ram-purge-novaoptimizer) via Win32 `EmptyWorkingSet` and trims standby file cache.
+* **Documented Limitations:** Trimming working sets forces subsequent memory access to page-fault from disk/paging file, introducing transient warmup latency.
 
 ### Project 5: Super-NLM Hub
-* **Purpose:** Multi-account Google NotebookLM aggregator providing unified research synthesis and MCP agent integration.
+* **Purpose:** Multi-account Google NotebookLM aggregator providing unified research synthesis and FastMCP agent integration.
 * **Role:** Creator & Systems Developer.
-* **Status:** `IMPLEMENTED` (Evidence Tier E3).
+* **Status:** `[IMPLEMENTED]` (Evidence Tier E3).
 * **Evidence:** FastMCP server in Python with token-ring router and session cooldown manager.
-* **Benchmark:** Unlocks 6x parallel research and synthesis quota headroom across accounts.
-* **Limitations:** Dependent on reverse-engineered web session tokens; vulnerable to upstream Google authentication changes.
+* **Audited Benchmark:** Multi-account sharding provides 6x parallel research and synthesis quota headroom across accounts.
+* **Documented Limitations:** Dependent on reverse-engineered web session tokens; vulnerable to upstream Google authentication updates.
 
 ### Project 6: GCSBR (Gesture Controlled Self-Balancing Robot)
-* **Purpose:** Inverted pendulum two-wheeled robot controlled via real-time computer vision hand gestures.
+* **Purpose:** Inverted pendulum two-wheeled robot maintaining equilibrium via real-time computer vision hand gestures.
 * **Role:** Lead Hardware & Control Developer (BEI Minor Project).
-* **Status:** `IMPLEMENTED` & `EXPERIMENTALLY VERIFIED` (Evidence Tier E4).
+* **Status:** `[EXPERIMENTALLY_VERIFIED]` (Evidence Tier E4).
 * **Evidence:** Arduino firmware, PID control loops, MATLAB dynamic modeling, MediaPipe vision bridge; rated **9.6/10** by academic examiners.
-* **Benchmark:** Maintained stable upright equilibrium with $\pm 2.5^\circ$ tilt tolerance under real-time gesture commands.
-* **Limitations:** Tuning was performed manually for smooth surfaces; stability degrades on irregular inclines.
+* **Audited Benchmark:** Upright equilibrium with $\pm 2.5^\circ$ tilt tolerance under dynamic gesture commands.
+* **Documented Limitations:** Tuned exclusively for flat indoor surfaces; dynamic stability degrades on irregular inclines.
 
 ---
 
@@ -125,16 +137,16 @@ To maintain epistemic honesty, technical proficiencies are categorized by demons
 
 ## 7. Current R&D Directions
 
-1. **Headless Invariant Assurance Engine:** Formalizing candidate software state invariants into SMT-LIB constraints and verifying them via SMT solvers (Z3) and isolated execution sandboxes.
-2. **Worker Session Runtime (WSR):** Developing an autonomous orchestrator that treats LLM worker sessions as stateless, disposable compute instances while maintaining persistent task state across quota limits.
-3. **Reproducibility Benchmarking:** Converting all simulation scripts and experimental sweeps into one-click pinned reproducible artifacts.
+1. **Headless Invariant Assurance Engine:** Formalizing candidate software state invariants into SMT-LIB constraints and verifying them via SMT solvers (Z3) and isolated execution sandboxes ([`README.md`](README.md#flagship-research-wedge-headless-invariant-assurance-engine)).
+2. **Worker Session Runtime (WSR):** Developing an autonomous orchestrator that treats LLM worker sessions as stateless, disposable compute instances while maintaining persistent task state across quota limits ([`FLEET-001`](research/experiments/FLEET-001.md)).
+3. **Composition Experiment Benchmarks:** Empirically measuring compound pipeline latency, human intervention, and reproducibility across multi-capability workflows ([`research/experiments/`](research/experiments/)).
 
 ---
 
 ## 8. Verification Philosophy
 
-Every major claim made in this dossier is backed by:
-- **A machine-readable capability manifest** (`schemas/capability-registry.yaml`).
-- **An explicit Evidence Tier ($E0$–$E5$)** (`schemas/evidence-policy.md`).
-- **An audited empirical methodology record** (`report/quantitative-claims-audit.md`).
-- **A transparent accounting model** (`report/economic-model.md`).
+Every major quantitative claim in this dossier is traceable directly to:
+- **A machine-readable capability manifest:** [`schemas/capability-registry.yaml`](schemas/capability-registry.yaml).
+- **An explicit Evidence Tier ($E0$–$E5$):** [`schemas/evidence-policy.md`](schemas/evidence-policy.md).
+- **An audited empirical methodology record:** [`report/quantitative-claims-audit.md`](report/quantitative-claims-audit.md).
+- **A defensible accounting model:** [`report/economic-model.md`](report/economic-model.md).

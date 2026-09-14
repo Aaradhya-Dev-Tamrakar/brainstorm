@@ -1,0 +1,1 @@
+{"nodes": [{"id": "youtube_transformer_cluster", "label": "YouTube Transformer Cluster", "file_type": "concept", "source_file": "research/architectures/ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md", "rationale": "Autonomous media pipeline for audience seeding and Nightcore DSP transformation."}], "edges": [], "hyperedges": []}

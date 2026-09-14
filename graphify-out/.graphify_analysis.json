@@ -1,0 +1,506 @@
+{
+  "communities": {
+    "0": [
+      "schemas_capability_contract_v1_capabilities_description",
+      "schemas_capability_contract_v1_capabilities_items",
+      "schemas_capability_contract_v1_capabilities_minitems",
+      "schemas_capability_contract_v1_capabilities_type",
+      "schemas_capability_contract_v1_items_ref",
+      "schemas_capability_contract_v1_location_description",
+      "schemas_capability_contract_v1_location_type",
+      "schemas_capability_contract_v1_metadata_type",
+      "schemas_capability_contract_v1_module_description",
+      "schemas_capability_contract_v1_module_pattern",
+      "schemas_capability_contract_v1_module_type",
+      "schemas_capability_contract_v1_properties",
+      "schemas_capability_contract_v1_properties_capabilities",
+      "schemas_capability_contract_v1_properties_location",
+      "schemas_capability_contract_v1_properties_metadata",
+      "schemas_capability_contract_v1_properties_module",
+      "schemas_capability_contract_v1_properties_runtime",
+      "schemas_capability_contract_v1_properties_schema",
+      "schemas_capability_contract_v1_properties_tracking_branch",
+      "schemas_capability_contract_v1_properties_version",
+      "schemas_capability_contract_v1_runtime_description",
+      "schemas_capability_contract_v1_runtime_type",
+      "schemas_capability_contract_v1_schema_description",
+      "schemas_capability_contract_v1_schema_format",
+      "schemas_capability_contract_v1_schema_type",
+      "schemas_capability_contract_v1_tracking_branch_description",
+      "schemas_capability_contract_v1_tracking_branch_type",
+      "schemas_capability_contract_v1_version_description",
+      "schemas_capability_contract_v1_version_pattern",
+      "schemas_capability_contract_v1_version_type"
+    ],
+    "1": [
+      "schemas_capability_contract_v1_capability_properties",
+      "schemas_capability_contract_v1_counterexample_schema_description",
+      "schemas_capability_contract_v1_counterexample_schema_type",
+      "schemas_capability_contract_v1_description_description",
+      "schemas_capability_contract_v1_description_type",
+      "schemas_capability_contract_v1_deterministic_description",
+      "schemas_capability_contract_v1_deterministic_type",
+      "schemas_capability_contract_v1_id_description",
+      "schemas_capability_contract_v1_id_pattern",
+      "schemas_capability_contract_v1_id_type",
+      "schemas_capability_contract_v1_inputs_description",
+      "schemas_capability_contract_v1_inputs_type",
+      "schemas_capability_contract_v1_outputs_description",
+      "schemas_capability_contract_v1_outputs_type",
+      "schemas_capability_contract_v1_properties_counterexample_schema",
+      "schemas_capability_contract_v1_properties_description",
+      "schemas_capability_contract_v1_properties_deterministic",
+      "schemas_capability_contract_v1_properties_id",
+      "schemas_capability_contract_v1_properties_inputs",
+      "schemas_capability_contract_v1_properties_outputs",
+      "schemas_capability_contract_v1_properties_side_effects",
+      "schemas_capability_contract_v1_properties_timeout_ms",
+      "schemas_capability_contract_v1_side_effects_description",
+      "schemas_capability_contract_v1_side_effects_type",
+      "schemas_capability_contract_v1_timeout_ms_description",
+      "schemas_capability_contract_v1_timeout_ms_minimum",
+      "schemas_capability_contract_v1_timeout_ms_type"
+    ],
+    "2": [
+      "ref_http",
+      "ref_sse",
+      "ref_stdio",
+      "ref_stream",
+      "ref_transport",
+      "schemas_capability_contract_v1_additionalproperties_type",
+      "schemas_capability_contract_v1_args_type",
+      "schemas_capability_contract_v1_command_description",
+      "schemas_capability_contract_v1_command_type",
+      "schemas_capability_contract_v1_env_additionalproperties",
+      "schemas_capability_contract_v1_env_type",
+      "schemas_capability_contract_v1_mcp_endpoint_description",
+      "schemas_capability_contract_v1_mcp_endpoint_properties",
+      "schemas_capability_contract_v1_mcp_endpoint_required",
+      "schemas_capability_contract_v1_mcp_endpoint_type",
+      "schemas_capability_contract_v1_port_maximum",
+      "schemas_capability_contract_v1_port_minimum",
+      "schemas_capability_contract_v1_port_type",
+      "schemas_capability_contract_v1_properties_args",
+      "schemas_capability_contract_v1_properties_command",
+      "schemas_capability_contract_v1_properties_env",
+      "schemas_capability_contract_v1_properties_mcp_endpoint",
+      "schemas_capability_contract_v1_properties_port",
+      "schemas_capability_contract_v1_properties_transport",
+      "schemas_capability_contract_v1_transport_enum",
+      "schemas_capability_contract_v1_transport_type"
+    ],
+    "3": [
+      "ref_m",
+      "ref_solver_mcp_server",
+      "schemas_examples_ai_constraint_solver_contract",
+      "schemas_examples_ai_constraint_solver_contract_capabilities",
+      "schemas_examples_ai_constraint_solver_contract_location",
+      "schemas_examples_ai_constraint_solver_contract_mcp_endpoint",
+      "schemas_examples_ai_constraint_solver_contract_mcp_endpoint_args",
+      "schemas_examples_ai_constraint_solver_contract_mcp_endpoint_command",
+      "schemas_examples_ai_constraint_solver_contract_mcp_endpoint_transport",
+      "schemas_examples_ai_constraint_solver_contract_metadata",
+      "schemas_examples_ai_constraint_solver_contract_metadata_author",
+      "schemas_examples_ai_constraint_solver_contract_metadata_last_updated",
+      "schemas_examples_ai_constraint_solver_contract_metadata_license",
+      "schemas_examples_ai_constraint_solver_contract_metadata_repository_url",
+      "schemas_examples_ai_constraint_solver_contract_module",
+      "schemas_examples_ai_constraint_solver_contract_runtime",
+      "schemas_examples_ai_constraint_solver_contract_schema",
+      "schemas_examples_ai_constraint_solver_contract_tracking_branch",
+      "schemas_examples_ai_constraint_solver_contract_version"
+    ],
+    "4": [
+      "schemas_ecosystem_registry",
+      "schemas_ecosystem_registry_modules",
+      "schemas_ecosystem_registry_name",
+      "schemas_ecosystem_registry_orchestration_root",
+      "schemas_ecosystem_registry_orchestration_root_branch",
+      "schemas_ecosystem_registry_orchestration_root_local_path",
+      "schemas_ecosystem_registry_orchestration_root_repository",
+      "schemas_ecosystem_registry_orchestration_root_role",
+      "schemas_ecosystem_registry_schema",
+      "schemas_ecosystem_registry_statistics",
+      "schemas_ecosystem_registry_statistics_computational_modules",
+      "schemas_ecosystem_registry_statistics_orchestration_branches",
+      "schemas_ecosystem_registry_statistics_presentation_and_educational_modules",
+      "schemas_ecosystem_registry_statistics_total_git_branches",
+      "schemas_ecosystem_registry_statistics_total_tool_modules",
+      "schemas_ecosystem_registry_version"
+    ],
+    "5": [
+      "project_strangler_ipu",
+      "research_architectures_arch_spec_001",
+      "research_architectures_arch_spec_002",
+      "research_experiments_exp_001",
+      "research_invariants_inv_epi_001",
+      "research_transcripts_2026_09_13_general_session_dialogue_conversation",
+      "research_transcripts_2026_09_13_strangler_ipu_conversation",
+      "research_transcripts_2026_09_13_strangler_ipu_peer_review_conversation",
+      "research_transcripts_2026_09_14_headless_orchestration_cli_conversation",
+      "research_transcripts_2026_09_14_operational_layer_forking_conversation",
+      "research_transcripts_2026_09_15_chatgpt_deep_audit_handoff",
+      "research_transcripts_readme",
+      "schemas_capability_ontology",
+      "schemas_evidence_policy"
+    ],
+    "6": [
+      "ref_capabilities",
+      "ref_location",
+      "ref_module",
+      "ref_runtime",
+      "ref_schema",
+      "ref_version",
+      "schemas_capability_contract_v1",
+      "schemas_capability_contract_v1_additionalproperties",
+      "schemas_capability_contract_v1_description",
+      "schemas_capability_contract_v1_id",
+      "schemas_capability_contract_v1_required",
+      "schemas_capability_contract_v1_schema",
+      "schemas_capability_contract_v1_title",
+      "schemas_capability_contract_v1_type"
+    ],
+    "7": [
+      "ref_actuation",
+      "ref_cognition",
+      "ref_compute",
+      "ref_formal_verification",
+      "ref_hardware_interop",
+      "ref_ingestion",
+      "ref_orchestration",
+      "ref_presentation",
+      "schemas_capability_contract_v1_category_description",
+      "schemas_capability_contract_v1_category_enum",
+      "schemas_capability_contract_v1_category_type",
+      "schemas_capability_contract_v1_properties_category"
+    ],
+    "8": [
+      "ref_audit",
+      "ref_execute",
+      "ref_find_counterexample",
+      "ref_maximize",
+      "ref_minimize",
+      "ref_synthesize",
+      "ref_transform",
+      "ref_verify_invariant",
+      "schemas_capability_contract_v1_objective_description",
+      "schemas_capability_contract_v1_objective_enum",
+      "schemas_capability_contract_v1_objective_type",
+      "schemas_capability_contract_v1_properties_objective"
+    ],
+    "9": [
+      "sync",
+      "sync_ensure_remoteconfigured",
+      "sync_find_stagedsecrets",
+      "sync_get_autocommitmessage",
+      "sync_provision_newtool",
+      "sync_show_repostatus",
+      "sync_switch_tobranch",
+      "sync_sync_allbranches",
+      "sync_write_fail",
+      "sync_write_notice",
+      "sync_write_status",
+      "sync_write_success"
+    ],
+    "10": [
+      "ref_category",
+      "ref_deterministic",
+      "ref_id",
+      "ref_inputs",
+      "ref_outputs",
+      "ref_side_effects",
+      "ref_verification_tier",
+      "schemas_capability_contract_v1_capability_required",
+      "schemas_capability_contract_v1_capability_type",
+      "schemas_capability_contract_v1_defs",
+      "schemas_capability_contract_v1_defs_capability"
+    ],
+    "11": [
+      "schemas_capability_contract_v1_author_type",
+      "schemas_capability_contract_v1_last_updated_format",
+      "schemas_capability_contract_v1_last_updated_type",
+      "schemas_capability_contract_v1_license_type",
+      "schemas_capability_contract_v1_metadata_properties",
+      "schemas_capability_contract_v1_properties_author",
+      "schemas_capability_contract_v1_properties_last_updated",
+      "schemas_capability_contract_v1_properties_license",
+      "schemas_capability_contract_v1_properties_repository_url",
+      "schemas_capability_contract_v1_repository_url_format",
+      "schemas_capability_contract_v1_repository_url_type"
+    ],
+    "12": [
+      "sim_warehouse_mem_sim",
+      "sim_warehouse_mem_sim_main",
+      "sim_warehouse_mem_sim_rationale_1",
+      "sim_warehouse_mem_sim_rationale_110",
+      "sim_warehouse_mem_sim_rationale_44",
+      "sim_warehouse_mem_sim_rationale_75",
+      "sim_warehouse_mem_sim_run_baseline_uncoalesced",
+      "sim_warehouse_mem_sim_run_upgrade_v1_smart_coalescer",
+      "sim_warehouse_mem_sim_run_upgrade_v2_near_memory_reduction",
+      "sim_warehouse_mem_sim_simulationstats",
+      "sim_warehouse_mem_sim_simulationstats_print_summary"
+    ],
+    "13": [
+      "ref_free_tier_api",
+      "ref_heavy_compute",
+      "ref_paid_api",
+      "ref_zero_token_local",
+      "schemas_capability_contract_v1_cost_tier_default",
+      "schemas_capability_contract_v1_cost_tier_description",
+      "schemas_capability_contract_v1_cost_tier_enum",
+      "schemas_capability_contract_v1_cost_tier_type",
+      "schemas_capability_contract_v1_properties_cost_tier"
+    ],
+    "14": [
+      "ref_empirical_sandbox",
+      "ref_formal_smt",
+      "ref_heuristic_unverified",
+      "ref_statistical_audit",
+      "schemas_capability_contract_v1_properties_verification_tier",
+      "schemas_capability_contract_v1_verification_tier_description",
+      "schemas_capability_contract_v1_verification_tier_enum",
+      "schemas_capability_contract_v1_verification_tier_type"
+    ],
+    "15": [
+      "schemas_examples_yt_dlp_live_contract",
+      "schemas_examples_yt_dlp_live_contract_capabilities",
+      "schemas_examples_yt_dlp_live_contract_location",
+      "schemas_examples_yt_dlp_live_contract_module",
+      "schemas_examples_yt_dlp_live_contract_runtime",
+      "schemas_examples_yt_dlp_live_contract_schema",
+      "schemas_examples_yt_dlp_live_contract_tracking_branch",
+      "schemas_examples_yt_dlp_live_contract_version"
+    ],
+    "16": [
+      "sim_sweep_ipu_breakeven",
+      "sim_sweep_ipu_breakeven_evaluate_conventional_pipeline",
+      "sim_sweep_ipu_breakeven_evaluate_ipu_pipeline",
+      "sim_sweep_ipu_breakeven_rationale_1",
+      "sim_sweep_ipu_breakeven_rationale_28",
+      "sim_sweep_ipu_breakeven_rationale_56",
+      "sim_sweep_ipu_breakeven_run_parameter_sweep",
+      "sim_sweep_ipu_breakeven_sweepconfig"
+    ],
+    "17": [
+      "arch_rfc_001",
+      "arch_spec_002",
+      "profile_adt",
+      "research_architectures_readme",
+      "research_experiments_gpu_ram_spec",
+      "tool_spark",
+      "tool_strangler_ipu"
+    ],
+    "18": [
+      "sim_transcript_archiver",
+      "sim_transcript_archiver_evaluate_significance",
+      "sim_transcript_archiver_export_verbatim",
+      "sim_transcript_archiver_find_latest_transcript_path",
+      "sim_transcript_archiver_main",
+      "sim_transcript_archiver_rationale_1",
+      "sim_transcript_archiver_rationale_48"
+    ],
+    "19": [
+      "readme_ecosystem",
+      "research_experiments_fleet_001",
+      "research_hypotheses_hyp_002",
+      "schemas_capability_registry",
+      "tool_claude_fleet",
+      "tool_super_nlm"
+    ],
+    "20": [
+      "schemas_capability_contract_v1_args_items",
+      "schemas_capability_contract_v1_invariants_checked_description",
+      "schemas_capability_contract_v1_invariants_checked_items",
+      "schemas_capability_contract_v1_invariants_checked_type",
+      "schemas_capability_contract_v1_items_type",
+      "schemas_capability_contract_v1_properties_invariants_checked"
+    ],
+    "21": [
+      "sim_reconciliation_engine",
+      "sim_reconciliation_engine_audit_repository",
+      "sim_reconciliation_engine_rationale_1"
+    ],
+    "22": [
+      "ecosystem_architectural_brainstorm_jarvis"
+    ],
+    "23": [
+      "headless_orchestration_substrate"
+    ],
+    "24": [
+      "report_main"
+    ],
+    "25": [
+      "research_architectures_arch_rfc_001"
+    ],
+    "26": [
+      "research_architectures_arch_rfc_002"
+    ],
+    "27": [
+      "research_architectures_arch_rfc_003"
+    ],
+    "28": [
+      "research_hypotheses_hyp_001"
+    ],
+    "29": [
+      "research_invariants_inv_mem_001"
+    ],
+    "30": [
+      "tool_bias_aperture"
+    ],
+    "31": [
+      "worker_session_runtime"
+    ],
+    "32": [
+      "youtube_transformer_cluster"
+    ]
+  },
+  "cohesion": {
+    "0": 0.06666666666666667,
+    "1": 0.07407407407407407,
+    "2": 0.07692307692307693,
+    "3": 0.10526315789473684,
+    "4": 0.125,
+    "5": 0.15384615384615385,
+    "6": 0.14285714285714285,
+    "7": 0.16666666666666666,
+    "8": 0.16666666666666666,
+    "9": 0.3181818181818182,
+    "10": 0.18181818181818182,
+    "11": 0.18181818181818182,
+    "12": 0.2909090909090909,
+    "13": 0.2222222222222222,
+    "14": 0.25,
+    "15": 0.25,
+    "16": 0.42857142857142855,
+    "17": 0.2857142857142857,
+    "18": 0.42857142857142855,
+    "19": 0.3333333333333333,
+    "20": 0.3333333333333333,
+    "21": 0.6666666666666666,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0,
+    "29": 1.0,
+    "30": 1.0,
+    "31": 1.0,
+    "32": 1.0
+  },
+  "gods": [
+    {
+      "id": "schemas_capability_contract_v1_category_enum",
+      "label": "enum",
+      "degree": 9
+    },
+    {
+      "id": "schemas_capability_contract_v1_objective_enum",
+      "label": "enum",
+      "degree": 9
+    },
+    {
+      "id": "schemas_capability_contract_v1_capability_required",
+      "label": "required",
+      "degree": 8
+    },
+    {
+      "id": "schemas_capability_contract_v1_required",
+      "label": "required",
+      "degree": 7
+    },
+    {
+      "id": "sync_write_status",
+      "label": "Write-Status()",
+      "degree": 7
+    },
+    {
+      "id": "schemas_ecosystem_registry_statistics",
+      "label": "statistics",
+      "degree": 6
+    },
+    {
+      "id": "sim_warehouse_mem_sim_simulationstats",
+      "label": "SimulationStats",
+      "degree": 5
+    },
+    {
+      "id": "schemas_capability_contract_v1_properties_capabilities",
+      "label": "capabilities",
+      "degree": 5
+    },
+    {
+      "id": "schemas_capability_contract_v1_cost_tier_enum",
+      "label": "enum",
+      "degree": 5
+    },
+    {
+      "id": "schemas_capability_contract_v1_properties_cost_tier",
+      "label": "cost_tier",
+      "degree": 5
+    }
+  ],
+  "surprises": [
+    {
+      "source": "GPU & RAM Architecture Spec",
+      "target": "STRANGLER-IPU",
+      "source_files": [
+        "research/experiments/GPU_RAM_ARCHITECTURE_SPEC.md",
+        "schemas/capability-registry.yaml"
+      ],
+      "confidence": "INFERRED",
+      "relation": "conceptually_related_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
+    },
+    {
+      "source": "STRANGLER-IPU",
+      "target": "ARCH-SPEC-002 (IPU)",
+      "source_files": [
+        "schemas/capability-registry.yaml",
+        "research/architectures/README.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "implements",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
+    },
+    {
+      "source": "Calibrated Evidence Policy",
+      "target": "2026-09-15 ChatGPT Deep Audit & Handoff Transcript",
+      "source_files": [
+        "schemas/evidence-policy.md",
+        "research/transcripts/2026-09-15_CHATGPT_DEEP_AUDIT_HANDOFF.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "Aaradhya Dev Tamrakar (ADT)",
+      "target": "SPARK Wearable Gateway",
+      "source_files": [
+        "PROFILE.md",
+        "schemas/capability-registry.yaml"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "Aaradhya Dev Tamrakar (ADT)",
+      "target": "STRANGLER-IPU",
+      "source_files": [
+        "PROFILE.md",
+        "schemas/capability-registry.yaml"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    }
+  ],
+  "tokens": {
+    "input": 16429,
+    "output": 2993
+  }
+}

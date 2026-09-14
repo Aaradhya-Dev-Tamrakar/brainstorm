@@ -40,7 +40,10 @@ In this architecture, **"Jarvis" is not a single product or monolithic app; it i
 
 ---
 
-## 2. Tool Inventory: The 13 Foundational Modules
+## 2. Tool Inventory: The 13 Foundational Computational Capabilities
+*(Authoritative Taxonomy: [`schemas/capability-ontology.md`](schemas/capability-ontology.md) | Machine-Readable Registry: [`schemas/capability-registry.yaml`](schemas/capability-registry.yaml))*
+
+The ecosystem encompasses **18 physical repositories** (1 orchestration root + 17 local tool repositories tracked via 18 Git branches). Of these, **13 represent active headless computational capabilities** (with 4 dedicated presentation/educational hubs, documented in the canonical ontology):
 
 | # | Tool / Module | Location | Tech Stack | Execution Context | Core Superpower |
 |---|---|---|---|---|---|
@@ -896,77 +899,91 @@ Before spending money on any new model, execute a 10-task benchmark across your 
 * **Diagnostic C (Information Retrieval Ceiling):** The worker hallucinates external protocol specifications $\implies$ **Enhance Super-NLM or local SQLite FTS5 RAG pipelines.**
 * **Diagnostic D (Execution Ceiling):** The worker generates correct code, but local test execution is too slow $\implies$ **Use NovaOptimizer to prioritize compiler and fuzzer threads.**
 
-#### The Systemic R&D Leverage Equation
-Every investment across the ecosystem is evaluated through a unified optimization function:
+#### The Systemic R&D Vectorized Resource Model
+To avoid combining disparate units (dollars, minutes, tokens, CPU time) into a scientifically ungrounded composite scalar, resource consumption across the ecosystem is tracked as a 4-dimensional vector (see [`report/economic-model.md`](report/economic-model.md)):
 
-$$\text{R\&D Leverage} = \frac{\text{Verified Invariant Discoveries}}{\text{Financial Spend (\$) } + \text{Human Cognitive Minutes} + \text{Inference Compute (M tokens)}}$$
+$$\vec{R}_{\text{task}} = \begin{bmatrix} C_{\text{usd}} \\ T_{\text{human}} \\ N_{\text{tokens}} \\ S_{\text{compute}} \end{bmatrix} = \begin{bmatrix} \text{Direct Cash Outlay (USD)} \\ \text{Human Active Intervention (minutes)} \\ \text{LLM Inference Tokens Consumed} \\ \text{Deterministic CPU/GPU Execution (seconds)} \end{bmatrix}$$
 
-Operating at Phase 0.8 keeps financial spend at \$5/month while driving the denominator down through automation, guaranteeing maximum research leverage.
+Discovery efficiency is measured separately along explicit operational axes:
+* **Discovery Cost Efficiency:** $E_{\text{discovery}} = \frac{C_{\text{financial}} + C_{\text{compute}}}{\text{Verified Discoveries}}$
+* **Human Intervention Ratio:** $I_{\text{human}} = \frac{\text{Human Active Minutes}}{\text{Verified Discoveries}}$
+
+Operating at Phase 0.8 keeps direct cash outlay capped at \$5.00/month while driving $I_{\text{human}}$ down through automation, maximizing net research yield without artificial scalar weighting.
 
 ---
 
-### 7.18 Economic Balance Sheet: Technical Asset Valuation & Capital Efficiency Audit
+### 7.18 Economic Balance Sheet: Capital Accounting & Resource Efficiency Audit
+*(Formal Specification: [`report/economic-model.md`](report/economic-model.md) | Epistemic Audit: [`report/repository-audit.md`](report/repository-audit.md))*
 
 > *"A conventional paid user buys capacity; you have accumulated custom infrastructure around capacity."*
 
-#### 7.18.1 The Empirical Financial Baseline: Ultra-Low Cash Outlay
-Over a 3.5+ year engineering education (late 2023 through September 2026), the cumulative fixed capital invested into this personal technical setup represents an exceptionally disciplined financial profile:
+#### 7.18.1 Empirical Productive Capital Baseline: Ultra-Low Cash Outlay
+Under strict managerial accounting standards, personal living overhead (student hostel, meals) and undergraduate university tuition are general life expenses, not capital invested into an engineering codebase. Dividing replacement labor by subsistence food or degree fees conflates survival with productive investment. 
+
+The empirical cash outlay directly invested into productive computational assets over 3.5+ years (late 2023 through September 2026) is strictly partitioned as follows:
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                        CUMULATIVE FIXED CAPITAL EXPENDITURE (3.5 YRS)                  │
+│                   PRODUCTIVE CAPITAL & OPERATING EXPENDITURE (3.5 YRS)                 │
 ├───────────────────────────────────┬───────────────────┬──────────────┬─────────────────┤
-│ Investment Category               │ Local Cost (NPR)  │ USD Equiv.   │ Nature of Asset │
+│ Asset / Expense Category          │ Local Cost (NPR)  │ USD Equiv.   │ Accounting Type │
 ├───────────────────────────────────┼───────────────────┼──────────────┼─────────────────┤
-│ College Engineering Fees          │ NRs 62,984        │ ~$470 USD    │ Foundational    │
-│ Hostel Living (48 mo @ NRs 3,500) │ NRs 168,000       │ ~$1,260 USD  │ Free Power/Water│
-│ Food Living Expense               │ NRs 9k–11k / mo   │ Dynamic      │ Baseline Living │
-│ Shared 300 Mbps Fiber (3.5 yrs)   │ NRs 1,250 / yr    │ ~$9.30 / yr  │ ~$0.78 / month  │
-│ Acer Swift Go 16 (Core Ultra 7)   │ NRs 155,000       │ ~$1,160 USD  │ Launch Savings  │
-│ Accessories & Peripherals         │ NRs 10,000        │ ~$75 USD     │ Hardware tools  │
-│ Discretionary Monthly Spending    │ <= NRs 3,000 / mo │ ~$22 / mo    │ Low overhead    │
+│ Acer Swift Go 16 (Core Ultra 7)   │ NRs 155,000       │ ~$1,160.00   │ Durable CAPEX   │
+│ Hardware Peripherals & ESP32-S3   │ NRs 10,000        │ ~$75.00      │ Durable CAPEX   │
+│ Shared 300 Mbps Fiber (3.5 yrs)   │ NRs 4,375         │ ~$32.55      │ Operating OPEX  │
 │ Paid AI (Late 2023 – Aug 2026)    │ **NRs 0.00**      │ **$0.00**    │ 100% Free Tiers │
-│ Paid AI (Sep 2026 – Present)      │ ~$5.00 / month    │ ~$5.00 / mo  │ 1 Gemini Pro Sub│
+│ Paid AI (Sep 2026 – 1 mo Gemini)  │ NRs 670           │ $5.00        │ Cognitive OPEX  │
 ├───────────────────────────────────┼───────────────────┼──────────────┼─────────────────┤
-│ **Total Fixed Capital Invested**  │ **~NRs 396,000**  │ **~$2,965**  │ **Entire Base** │
-└───────────────────────────────────┴───────────────────┴──────────────┴─────────────────┘
+│ **Total Direct Productive Outlay**│ **NRs 170,045**   │ **$1,272.55**│ **CAPEX + OPEX**│
+├───────────────────────────────────┴───────────────────┴──────────────┴─────────────────┤
+│ *Separated Living & Academic Overhead (Non-Productive Base — Tracked Independently):*  │
+│ • KEC / IOE 4-Year Tuition: NRs 62,984 (~$471.79)                                     │
+│ • Student Hostel (48 mo @ NRs 3,500): NRs 168,000 (~$1,258.43)                        │
+│ • Baseline Food Living (42 mo): ~NRs 420,000 (~$3,146.00)                             │
+│ • Discretionary Personal Spending: ~NRs 36,000 (~$269.66)                              │
+└────────────────────────────────────────────────────────────────────────────────────────┘
 ```
-* **The Dollar Card Milestone:** Prior to **September 7, 2026**, no international payment instrument existed. The entirety of the 17-project ecosystem, tool integrations, and worker orchestration architectures was developed using zero-dollar resources, free-tier quotas, and open-source tooling.
+* **The Dollar Card Milestone:** Prior to **September 7, 2026**, no international payment instrument existed. The entirety of the 14 projects, 13 computational capabilities, and orchestration tooling was bootstrapped using zero-dollar resources, free-tier quotas, and open-source tooling.
 
-#### 7.18.2 Technical Asset Base Valuation (Replacement-Equivalent)
-If an engineering team or third party were tasked with reproducing the complete working setup—the 17 tracked repositories, MCP topologies, FastAPI coordinators, SQLite WAL storage, worker state engines, and accumulated R&D workflows—the replacement-equivalent value is estimated as follows:
+#### 7.18.2 Technical Asset Base Valuation (Replacement-Labor Equivalent)
+If an engineering team or third party were tasked with reproducing the complete working setup—the 18 tracked repositories, MCP topologies, FastAPI coordinators, SQLite WAL storage, worker state engines, and accumulated R&D workflows—the bottom-up replacement labor cost is estimated as follows:
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                        REPLACEMENT-EQUIVALENT ASSET VALUATION                          │
+│                   BOTTOM-UP REPLACEMENT-EQUIVALENT RECONSTRUCTION                      │
 ├───────────────────────────────────┬───────────────────┬────────────────────────────────┤
 │ Asset Component                   │ Valuation (USD)   │ Replacement Justification      │
 ├───────────────────────────────────┼───────────────────┼────────────────────────────────┤
-│ **1. Software Infrastructure**    │ $8,000 – $18,000  │ 17 modular repos: FastAPI,     │
-│                                   │                   │ SQLite WAL, DAG decomposition, │
-│                                   │                   │ memory management, CAD MCP.    │
+│ **1. 13 Computational Engines**   │ $8,000 – $16,000  │ 450 net hours @ $25/hr:        │
+│                                   │                   │ FastAPI, SQLite WAL, ESP-IDF,  │
+│                                   │                   │ SimPy simulation, CAD MCP.     │
 ├───────────────────────────────────┼───────────────────┼────────────────────────────────┤
-│ **2. Customization & Topology**   │ $3,000 – $8,000   │ Multi-profile Claude runtime,  │
+│ **2. Customization & Topology**   │ $2,500 – $6,000   │ Multi-profile Claude runtime,  │
 │                                   │                   │ MCP configs, task contracts,   │
-│                                   │                   │ dynamic conventional git sync. │
+│                                   │                   │ sync.ps1, bat shortcuts.       │
 ├───────────────────────────────────┼───────────────────┼────────────────────────────────┤
-│ **3. Accumulated Tacit R&D**      │ $4,000 – $10,000  │ 3 years of failure modes,      │
-│                                   │                   │ constraint representations,    │
-│                                   │                   │ prompt calibrations, heuristics│
+│ **3. Formal Specs & Invariants**  │ $3,000 – $7,000   │ 11 RFCs, memory models,        │
+│                                   │                   │ hypothesis schemas, invariants.│
 ├───────────────────────────────────┼───────────────────┼────────────────────────────────┤
-│ **4. Strategic AI Access**        │ $500 – $1,000     │ 4-yr locked 75% student rate,  │
-│                                   │                   │ multi-model cognitive council. │
+│ **4. Validation & Test Fixtures** │ $2,000 – $5,000   │ SisFall pipelines, SimPy sweeps│
+│                                   │                   │ 56 passing unit tests.         │
 ├───────────────────────────────────┼───────────────────┼────────────────────────────────┤
 │ **Total Central Replacement Base**│ **$15,500–$37,000**│ **Central Estimate: ~$25,000** │
 └───────────────────────────────────┴───────────────────┴────────────────────────────────┘
 ```
 
-#### 7.18.3 Capital Efficiency Multipliers
-The ratio of accumulated technical capability to invested capital is extraordinarily asymmetric:
+> [!IMPORTANT]
+> **Defensible Valuation Bounds:**  
+> This valuation is strictly a **replacement labor reconstruction proxy** based on ~850 net rebuilding hours at a junior-to-mid contracting rate ($25.00/hour). It does NOT represent enterprise market valuation or liquid cash worth.
 
-$$\text{Capital Leverage Ratio } (L_{\text{capital}}) = \frac{\text{Central Replacement Asset Base (\$25,000)}}{\text{Total Fixed Capital Invested (\$2,965)}} \approx \mathbf{8.4\times}$$
+#### 7.18.3 Defensible Capital Ratios
+Rather than claiming an arbitrary "ROI", we establish two explicitly defined metrics:
 
-$$\text{AI Expenditure Leverage } (L_{\text{AI}}) = \frac{\text{Technical Infrastructure Generated (\$25,000)}}{\text{Cumulative Paid AI Spend (\$5.00)}} = \mathbf{5,000\times}$$
+$$\text{Replacement-Cost to Direct-Cash-Spend Ratio } (\rho_{\text{cash}}) = \frac{\text{Central Replacement Cost (\$25,000)}}{\text{Direct Productive Cash Outlay (\$1,272.55)}} \approx \mathbf{19.65\times}$$
+
+$$\text{Direct AI Spend Fraction } (\phi_{\text{AI}}) = \frac{\text{Cumulative Paid AI Spend (\$5.00)}}{\text{Central Replacement Cost (\$25,000)}} = \mathbf{0.020\%} \quad (0.0002)$$
+
+*Interpretation:* The ecosystem's software infrastructure was 99.98% self-bootstrapped through open-source tooling, free quotas, and disciplined human engineering before any international card was utilized.
 
 #### 7.18.4 Strategic Assessment of the $5/mo Gemini Student Purchase
 Purchasing the discounted Google AI Pro student plan upon acquiring the dollar card represents an optimal capital allocation:
@@ -977,7 +994,7 @@ Purchasing the discounted Google AI Pro student plan upon acquiring the dollar c
   - **Gemini AI Pro (\$5/mo):** Deep synthesis, mathematical formalization, high-context planning, and multi-notebook grounding via Super-NLM.
 * **Claude Campus Ambassador Alignment:** The September 2026 intake application provides strategic option value: direct developer network access and early telemetry into frontier agent architectures.
 
-#### 7.18.5 The Google Family 6× Multiplier & Ecosystem Arbitrage (Super-NLM Backbone)
+#### 7.18.5 The Google Family Multiplier & Capacity Expansion (Super-NLM Backbone)
 In mid-September 2026, an empirical discovery confirmed that the single \$5.00/month Google AI Pro student subscription automatically cascades across the **Google Family Group** (configured with 6 total accounts: 1 Family Manager + 1 Parent + 4 Members, all consolidated under ADT's developer profile).
 
 ##### I. Verified Feature & Service Benefits (Google One AI Pro Tier)
@@ -989,28 +1006,28 @@ As verified via `one.google.com/benefits`, the active subscription grants 5 core
 5. **Google Flow & Veo Generation:** Priority access to Google's creative AI filmmaking tools and frontier Veo generative video models.
 6. **5 TB Pooled Account Cloud Storage:** Shared high-capacity cloud tier for datasets, experimental checkpoints, and media archives.
 
-##### II. Financial Arbitrage & Rebate ROI Ledger
-Because each of the 6 accounts independently receives Pro capabilities, the effective value-to-cost ratio achieves extreme asymmetric efficiency:
+##### II. Financial Cost-Avoidance Ledger
+Because each of the 6 accounts independently receives Pro capabilities, the effective value-to-cost ratio achieves high asymmetric efficiency:
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│               GOOGLE AI PRO FAMILY ARBITRAGE LEDGER (6 DEVELOPER ACCOUNTS)             │
+│               GOOGLE AI PRO FAMILY COST-AVOIDANCE LEDGER (6 ACCOUNTS)                  │
 ├──────────────────────────────────────┬────────────────────────┬────────────────────────┤
 │ Metric                               │ Retail Standard ($20)  │ Promo Equiv. ($5/acct) │
 ├──────────────────────────────────────┼────────────────────────┼────────────────────────┤
-│ Total Service Value (6 Accounts)     │ $119.94 / month        │ $30.00 / month         │
+│ Total Retail Value (6 Accounts)      │ $119.94 / month        │ $30.00 / month         │
 │ Actual Cash Outlay Paid              │ $5.00 / month          │ $5.00 / month          │
-│ Absolute Monthly Rebate / Subsidy    │ $114.94 / month        │ $25.00 / month         │
-│ Cost Discount Factor                 │ 95.83%                 │ 83.33%                 │
+│ Absolute Monthly Cost Avoidance      │ $114.94 / month        │ $25.00 / month         │
+│ Effective Retail Discount            │ 95.83%                 │ 83.33%                 │
 ├──────────────────────────────────────┼────────────────────────┼────────────────────────┤
-│ Effective Value Multiplier           │ 24.0× Retail Multiple  │ 6.0× Capacity Multiple │
-│ Net Rebate ROI                       │ +2,298.8% (~2,300%)    │ +500.0%                │
+│ Retail Cost-Avoidance Multiplier     │ 24.0× Retail Multiple  │ 6.0× Capacity Multiple │
+│ Quota Headroom Expansion             │ 6.0× NotebookLM Quota  │ 6.0× Parallel Slots    │
 └──────────────────────────────────────┴────────────────────────┴────────────────────────┘
 ```
 
-$$\text{Effective AI Capacity Leverage } (L_{\text{capacity}}) = \frac{6 \times \text{NotebookLM Pro Tiers}}{\$5.00 \text{ Single Subscription}} = \mathbf{6\times \text{ Parallel Research Bandwidth}}$$
+$$\text{Quota Headroom Expansion } (H_{\text{quota}}) = \frac{6 \times \text{NotebookLM Pro Tiers}}{\$5.00 \text{ Single Subscription}} = \mathbf{6\times \text{ Parallel Research Bandwidth}}$$
 
-This infrastructure-level leverage directly powers the `Super-NLM` token ring router, allowing multi-account round-robin querying without hitting individual account rate-limit or context fatigue boundaries.
+*Operational Note:* While this delivers a $24.0\times$ theoretical retail discount and unlocks 6x rate-limit headroom for `Super-NLM`, it represents service cost-avoidance, not liquid financial income or ROI.
 
 ---
 

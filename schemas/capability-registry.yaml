@@ -1,0 +1,399 @@
+# Canonical Capability Registry
+# Schema standard: ONT-001 / POL-001
+# Single source of truth for all ecosystem capabilities
+
+version: "1.0.0"
+registry_type: "canonical_capability_registry"
+last_reconciled: "2026-09-15"
+maintainer: "Aaradhya Dev Tamrakar"
+
+capabilities:
+  - id: "super-nlm"
+    name: "Super-NLM Hub"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\super-nlm"
+    category: "ORCHESTRATION_COGNITION"
+    status: "IMPLEMENTED"
+    description: "Multi-account Google NotebookLM aggregator with token-ring round-robin rotation, session cooldown management, and cross-notebook synthesis."
+    inputs:
+      - "Natural language queries"
+      - "Document / URL source lists"
+    outputs:
+      - "Grounded multi-source synthesis text"
+      - "Source citations and citations map"
+    interfaces:
+      - "FastMCP (JSON-RPC over stdio)"
+      - "REST API (FastAPI)"
+    dependencies:
+      - "Python 3.11+"
+      - "FastMCP"
+      - "httpx / Playwright"
+      - "Google Family AI Pro multi-account credentials"
+    evidence: "E3"
+    benchmarks: "6x parallel NotebookLM synthesis headroom via per-account rate limits"
+    verification: "test_rotation.py, multi-account token ring mock suite"
+    maintenance_cost: "3 hours/month"
+    development_hours: 48
+    confidence: 0.90
+    last_verified: "2026-09-14"
+
+  - id: "system-optimizer"
+    name: "NovaOptimizer"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\system-optimizer"
+    category: "COMPUTATIONAL_ENGINE"
+    status: "IMPLEMENTED"
+    description: "Micro-footprint Windows OS tuning and bare-metal memory management calling Win32 NT APIs to purge file cache and boost thread priority."
+    inputs:
+      - "Target process PIDs or system-wide trigger"
+    outputs:
+      - "RAM reclaimed metrics (MB)"
+      - "Process priority confirmation"
+    interfaces:
+      - "Win32 CLI"
+      - "WPF GUI (.NET 10)"
+    dependencies:
+      - ".NET 10 Runtime"
+      - "Windows 11 NT Kernel APIs"
+    evidence: "E4"
+    benchmarks: "Reclaims 1.2–3.4 GB working-set RAM via EmptyWorkingSet before heavy compute jobs"
+    verification: "PerformanceCounter telemetry and Win32 GetProcessMemoryInfo logs"
+    maintenance_cost: "1 hour/month"
+    development_hours: 32
+    confidence: 0.95
+    last_verified: "2026-09-12"
+
+  - id: "SPARK"
+    name: "SPARK Wearable Gateway"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\SPARK"
+    category: "COMPUTATIONAL_ENGINE"
+    status: "IMPLEMENTED"
+    description: "Two-layer edge fall detection architecture pairing continuous 200 Hz microsecond interrupt gating with quantized INT8 CNN inference and clinician SHAP explainability."
+    inputs:
+      - "6-axis IMU accelerometer and gyroscope streams (MPU-6050)"
+    outputs:
+      - "Fall classification binary probability"
+      - "SHAP local surrogate feature attribution report"
+    interfaces:
+      - "ESP-IDF Firmware (C/C++)"
+      - "BLE GATT service"
+      - "FastAPI Gateway (Python)"
+    dependencies:
+      - "ESP-IDF v5.1"
+      - "TensorFlow Lite Micro"
+      - "FastAPI"
+      - "SHAP"
+    evidence: "E4"
+    benchmarks: "18.5 KB INT8 CNN, 0.9185 AUC-ROC on SisFall benchmark (38,000+ windows), 56 passing unit tests"
+    verification: "Host-compiled CTest unit tests, confusion matrix evaluation scripts, hardware logic analyzer validation"
+    maintenance_cost: "5 hours/month"
+    development_hours: 140
+    confidence: 0.96
+    last_verified: "2026-09-10"
+
+  - id: "Autodesk-Fusion-360-MCP-Server"
+    name: "Autodesk Fusion 360 MCP Bridge"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\Autodesk-Fusion-360-MCP-Server"
+    category: "ACTUATION_HARDWARE"
+    status: "IMPLEMENTED"
+    description: "Conversational 3D CAD modeling bridge exposing Fusion 360's Python API to AI agents via FastMCP for automated parametric geometry creation."
+    inputs:
+      - "Parametric dimensional specs (sketch primitives, extrusions, fillets)"
+    outputs:
+      - "3D CAD geometry generation"
+      - "STEP / STL export files"
+    interfaces:
+      - "FastMCP (stdio)"
+      - "Fusion 360 internal Python Add-In"
+    dependencies:
+      - "Autodesk Fusion 360"
+      - "Python 3.10 (Fusion bundled)"
+      - "mcp SDK"
+    evidence: "E3"
+    benchmarks: "Zero-token parametric bracket generation from natural language spec"
+    verification: "Local integration test executing script against live Fusion 360 viewport"
+    maintenance_cost: "2 hours/month"
+    development_hours: 36
+    confidence: 0.88
+    last_verified: "2026-09-08"
+
+  - id: "BiasAperture"
+    name: "BiasAperture Disparity Auditor"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\BiasAperture"
+    category: "COMPUTATIONAL_ENGINE"
+    status: "IMPLEMENTED"
+    description: "Demographic bias auditing and intersectional disparity evaluation framework for deep learning models, generating regulatory-legible LaTeX/PDF audit certificates."
+    inputs:
+      - "PyTorch model predictions"
+      - "Ground-truth demographic metadata"
+    outputs:
+      - "Disparate Impact Ratio (DIR)"
+      - "Equalized Odds Difference (EOD)"
+      - "Camera-ready LaTeX/PDF compliance dossier"
+    interfaces:
+      - "Python CLI"
+      - "Jinja2 LaTeX template renderer"
+    dependencies:
+      - "Python 3.11"
+      - "PyTorch"
+      - "Fairlearn / AIF360"
+      - "pdflatex"
+    evidence: "E4"
+    benchmarks: "Audited across 126 demographic bins with chi-squared significance tests and BCa bootstrap CIs"
+    verification: "pytest test suite covering statistical metric edge cases"
+    maintenance_cost: "2 hours/month"
+    development_hours: 64
+    confidence: 0.94
+    last_verified: "2026-09-11"
+
+  - id: "Claude-Desktop"
+    name: "Claude Worker Fleet (v2)"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\Claude-Desktop"
+    category: "ORCHESTRATION_COGNITION"
+    status: "IMPLEMENTED"
+    description: "Distributed task orchestrator decoupling task identity from worker identity, executing DAG task decomposition with SQLite WAL checkpointing."
+    inputs:
+      - "Task DAG specifications"
+      - "Sub-task prompts"
+    outputs:
+      - "Task execution artifacts"
+      - "Zero-loss worker migration telemetry"
+    interfaces:
+      - "FastAPI Coordinator"
+      - "PowerShell execution harness"
+    dependencies:
+      - "Python 3.11+"
+      - "SQLite 3 (WAL mode)"
+      - "PowerShell 7+"
+    evidence: "E3"
+    benchmarks: "State checkpointing across worker profile exhaustion boundaries"
+    verification: "Automated FLEET-001 session migration test harness"
+    maintenance_cost: "3 hours/month"
+    development_hours: 45
+    confidence: 0.90
+    last_verified: "2026-09-13"
+
+  - id: "Nexus"
+    name: "Nexus Workspace"
+    repository: "F:\\AaradhyaDT\\Nexus"
+    category: "ORCHESTRATION_COGNITION"
+    status: "IMPLEMENTED"
+    description: "Project-centric AI workspace with multi-model prompt multiplexing and SQLite FTS5 full-text indexing."
+    inputs:
+      - "Developer prompts"
+      - "Context files"
+    outputs:
+      - "Multiplexed LLM responses"
+      - "Searchable contextual history"
+    interfaces:
+      - "FastAPI"
+      - "React (Vite) UI"
+    dependencies:
+      - "FastAPI"
+      - "Node.js / Vite"
+      - "SQLite FTS5"
+    evidence: "E3"
+    benchmarks: "Sub-50ms full-text retrieval across 10,000 project notes"
+    verification: "FastAPI test client route verification"
+    maintenance_cost: "2 hours/month"
+    development_hours: 40
+    confidence: 0.91
+    last_verified: "2026-09-05"
+
+  - id: "Alpha-SuperApp"
+    name: "Alpha-SuperApp"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\Alpha-SuperApp"
+    category: "COMPUTATIONAL_ENGINE"
+    status: "EXPERIMENTAL"
+    description: "Android mobile hub integrating local computer vision, BLE wearable telemetry, and personal finance modules."
+    inputs:
+      - "Camera frames"
+      - "BLE sensor broadcasts"
+    outputs:
+      - "Mobile on-device classification"
+      - "HUD visual telemetry"
+    interfaces:
+      - "Android 16 / Jetpack Compose UI"
+    dependencies:
+      - "Kotlin 2.2"
+      - "Android SDK 36"
+    evidence: "E2"
+    benchmarks: "Pending hardware test suite integration"
+    verification: "Gradle build passes; unit test suite in development"
+    maintenance_cost: "4 hours/month"
+    development_hours: 50
+    confidence: 0.75
+    last_verified: "2026-09-02"
+
+  - id: "screen-qa-extension"
+    name: "Screen Q&A"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\screen-qa-extension"
+    category: "INGESTION_SENSOR"
+    status: "IMPLEMENTED"
+    description: "Chrome Manifest V3 ambient browser intelligence extension for DOM question extraction and zero-click overlay assistance."
+    inputs:
+      - "Browser DOM text and screen coordinates"
+    outputs:
+      - "Extracted question / context JSON"
+      - "Targeted synthesized overlay explanation"
+    interfaces:
+      - "Chrome MV3 Extension"
+    dependencies:
+      - "Vanilla JavaScript"
+      - "Chrome Extension APIs"
+      - "Gemini Flash API"
+    evidence: "E3"
+    benchmarks: "Sub-1.2s end-to-end DOM text extraction to synthesized explanation"
+    verification: "Chrome developer unpacked extension manual & headless test suite"
+    maintenance_cost: "1 hour/month"
+    development_hours: 24
+    confidence: 0.92
+    last_verified: "2026-09-01"
+
+  - id: "md2pdf-desktop"
+    name: "md2pdf-desktop"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\md2pdf-desktop"
+    category: "PRESENTATION_HUB"
+    status: "IMPLEMENTED"
+    description: "Local desktop publishing engine compiling Markdown and Pandoc syntax into publication-quality academic PDFs."
+    inputs:
+      - "Markdown (.md) files with LaTeX equations"
+    outputs:
+      - "Compiled PDF documents"
+    interfaces:
+      - "Python CLI"
+      - "Tkinter GUI"
+    dependencies:
+      - "Python 3.10+"
+      - "Pandoc"
+      - "wkhtmltopdf / WeasyPrint"
+    evidence: "E3"
+    benchmarks: "Renders 50-page complex technical dossiers in <4 seconds"
+    verification: "Automated regression rendering test script"
+    maintenance_cost: "1 hour/month"
+    development_hours: 20
+    confidence: 0.95
+    last_verified: "2026-08-28"
+
+  - id: "yt-dlp-live"
+    name: "yt-dlp-live"
+    repository: "F:\\AaradhyaDT\\yt-dlp-live"
+    category: "INGESTION_SENSOR"
+    status: "IMPLEMENTED"
+    description: "Resilient live stream ingestion daemon and automated audio DSP transform cluster with FFmpeg transcoding."
+    inputs:
+      - "Live RTMP / HLS / YouTube stream URLs"
+    outputs:
+      - "Lossless segmented video/audio chunks"
+      - "DSP-transformed Nightcore / pitch-shifted audio"
+    interfaces:
+      - "PowerShell Daemon CLI"
+      - "FFmpeg command line"
+    dependencies:
+      - "PowerShell 7+"
+      - "yt-dlp"
+      - "FFmpeg / Intel Arc QSV hardware encoder"
+    evidence: "E3"
+    benchmarks: "Zero frame-drop live capture over 12-hour continuous capture stress runs"
+    verification: "PowerShell stress testing script and stream integrity hashes"
+    maintenance_cost: "2 hours/month"
+    development_hours: 30
+    confidence: 0.93
+    last_verified: "2026-09-06"
+
+  - id: "AI"
+    name: "AI Constraint Solver"
+    repository: "F:\\AaradhyaDT\\AI"
+    category: "COMPUTATIONAL_ENGINE"
+    status: "IMPLEMENTED"
+    description: "Combinatorial and cryptarithmetic constraint satisfaction solver with JSON telemetry and automated backtracking heuristics."
+    inputs:
+      - "Cryptarithmetic / CSP constraint specs (JSON / CLI)"
+    outputs:
+      - "Satisfying assignment solution"
+      - "Search tree depth and backtracks metrics"
+    interfaces:
+      - "Python CLI"
+      - "FastAPI microservice"
+    dependencies:
+      - "Python 3.11"
+    evidence: "E3"
+    benchmarks: "Solves standard SEND+MORE=MONEY in <15ms with 24 backtracks"
+    verification: "Unit test suite with 18 mathematical puzzle fixtures"
+    maintenance_cost: "0.5 hours/month"
+    development_hours: 18
+    confidence: 0.97
+    last_verified: "2026-08-20"
+
+  - id: "rsvp-reading"
+    name: "RSVP Reader"
+    repository: "F:\\AaradhyaDT\\rsvp-reading"
+    category: "PRESENTATION_HUB"
+    status: "IMPLEMENTED"
+    description: "High-speed Rapid Serial Visual Presentation (RSVP) reader with Optimal Recognition Point (ORP) highlighting for technical EPUB/PDF reading."
+    inputs:
+      - "Text / EPUB / PDF documents"
+    outputs:
+      - "Dynamic RSVP visual stream (300–900 WPM)"
+    interfaces:
+      - "Svelte / Vite Web UI"
+    dependencies:
+      - "Svelte 4"
+      - "Vite"
+    evidence: "E3"
+    benchmarks: "Maintains smooth 60 FPS text cadence up to 1,200 WPM"
+    verification: "Vite build and Cypress visual regression checks"
+    maintenance_cost: "0.5 hours/month"
+    development_hours: 16
+    confidence: 0.94
+    last_verified: "2026-08-25"
+
+  - id: "STRANGLER-IPU"
+    name: "STRANGLER-IPU Simulation Engine"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\brainstorm"
+    category: "COMPUTATIONAL_ENGINE"
+    status: "EXPERIMENTAL"
+    description: "Microarchitectural discrete-event simulation modeling an Ingress Processing Unit (IPU) absorbing 6G Sub-THz line-rate bursts and measuring CXL pooled bus contention relief."
+    inputs:
+      - "Synthetic Poisson burst traffic specs (800 Gbps – 1.6 Tbps)"
+      - "Memory interconnect latency parameters (CXL 3.0)"
+    outputs:
+      - "Tail-latency distributions (p99/p99.9)"
+      - "Host memory controller contention relief percentage"
+    interfaces:
+      - "Python CLI (sim/sweep_ipu_breakeven.py, sim/warehouse_mem_sim.py)"
+    dependencies:
+      - "Python 3.11"
+      - "SimPy"
+      - "NumPy"
+    evidence: "E3"
+    benchmarks: "Simulated 4.12x tail-latency reduction and 68% bus contention relief under 1.6 Tbps peak ingress"
+    verification: "sweep_ipu_breakeven.py parameter sweep executing 50 iterations with seed control"
+    maintenance_cost: "2 hours/month"
+    development_hours: 55
+    confidence: 0.85
+    last_verified: "2026-09-13"
+
+  - id: "headless-invariant-assurance"
+    name: "Headless Invariant Assurance Engine"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\brainstorm"
+    category: "COMPUTATIONAL_ENGINE"
+    status: "PROPOSED"
+    description: "Autonomous neurosymbolic pipeline extracting candidate invariants from API state machines, formalizing SMT-LIB constraints, and proving them via Z3/Docker sandboxes."
+    inputs:
+      - "API specs / protocol state machines"
+      - "Candidate invariant properties"
+    outputs:
+      - "SMT proof (UNSAT) or reproducible counterexample (SAT)"
+      - "Evidence dossier (E4)"
+    interfaces:
+      - "Python CLI / FastMCP"
+    dependencies:
+      - "Python 3.11"
+      - "Z3-solver"
+      - "Docker / Anvil"
+    evidence: "E1"
+    benchmarks: "Targeting 0 false positives on planted synthetic state machine violations"
+    verification: "Formal specification in ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md Section 7.4"
+    maintenance_cost: "TBD"
+    development_hours: 12
+    confidence: 0.70
+    last_verified: "2026-09-14"

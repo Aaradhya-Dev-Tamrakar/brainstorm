@@ -1,118 +1,136 @@
-# 🧠 Personal Tool Ecosystem & Jarvis Brainstorm
+# 🧠 Personal Tool Ecosystem & Jarvis R&D Laboratory
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-![Status: Living Architecture](https://img.shields.io/badge/Status-Living%20Architecture-brightgreen)
-![Ecosystem: 17 Tools (18 Branches)](https://img.shields.io/badge/Ecosystem-17%20Tools%20(18%20Branches)-indigo)
+![Status: Evidence-Driven R&D](https://img.shields.io/badge/Status-Evidence--Driven%20R%26D-brightgreen)
+![Ontology: 18 Repos (13 Capabilities)](https://img.shields.io/badge/Ontology-18%20Repos%20%7C%2013%20Capabilities-indigo)
+![Evidence: Calibrated E0-E5](https://img.shields.io/badge/Evidence-Calibrated%20E0--E5-orange)
 ![Engine: sync.ps1](https://img.shields.io/badge/Engine-sync.ps1%20v2.0-cyan)
 
-> A unified architectural blueprint and dynamic capability mesh interconnecting tools, hardware, and AI engines across `F:\AaradhyaDT`, `F:\Aaradhya-Dev-Tamrakar`, and `F:\FuseAIF2026`.
+> An evidence-driven personal systems-R&D control repository and dynamic capability mesh interconnecting tools, hardware, and AI engines across `F:\AaradhyaDT`, `F:\Aaradhya-Dev-Tamrakar`, and `F:\FuseAIF2026`.
 
 ---
 
-## 📌 Primary Architectural Blueprint
+## 📌 Authoritative Governance & Evidence Standards
 
-The complete architectural log, module specifications, and compound workflow designs are documented in:
+To eliminate ambiguity between what is **implemented**, what is **experimentally demonstrated**, and what is **proposed research**, this repository adheres to formal governance standards:
 
-👉 **[ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md](ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md)**
+* 📖 **[Canonical Capability & Ecosystem Ontology](schemas/capability-ontology.md):** Formal definitions of Repository $\to$ Project $\to$ Capability $\to$ Interface $\to$ Workflow, resolving all historical count discrepancies.
+* 📜 **[Calibrated Evidence Policy (E0–E5)](schemas/evidence-policy.md):** Enforces evidence tiers and distinguishes formalization correctness, solver correctness, and empirical runtime correctness.
+* 🗂️ **[Machine-Readable Capability Registry (YAML)](schemas/capability-registry.yaml):** Single source of truth recording inputs, outputs, interfaces, benchmarks, maintenance overhead, and evidence tiers for every ecosystem capability.
+* 📋 **[Repository Epistemic Audit](report/repository-audit.md):** Granular audit classifying all major repository claims against traceable artifacts.
+* 🔬 **[Quantitative Claims & Methodology Audit](report/quantitative-claims-audit.md):** Detailed register of every benchmark, sample size, hardware spec, and variance figure.
+* 💰 **[Defensible Economic Model & Capital Accounting](report/economic-model.md):** Rigorous separation of productive CAPEX/OPEX from living/tuition overhead, vectorized resource tracking, and discovery cost efficiency models.
+* ⚠️ **[Known Limitations & Failure Modes](report/limitations.md):** Transparent disclosure of technical risks, formalization gaps, benchmark dependencies, and maintenance debt.
 
 ---
 
-## 🧭 Core Concept: The 4-Tier Jarvis Capability Mesh
+## 🧭 Core Architecture: Capability Mesh & Decoupled Cognition
 
-Rather than treating projects as isolated applications, this brainstorm models every tool as an **autonomous capability module** spanning **Local**, **Cloud**, and **Hybrid** execution environments.
-
-Connected through standardized protocols (**Model Context Protocol / MCP**, local HTTP endpoints, and **Semantic Capability Contracts**), these independent modules combine into an extensible **4-Tier Architecture**:
+Rather than building an isolated chatbot, this repository models tools as **autonomous, headless-callable capability modules** governed by deterministic contracts:
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────┐
-│ 1. JARVIS COGNITIVE INTERFACE (The Mind)                                       │
-│    Listen ──> Understand ──> Reason ──> Plan ──> Explain ──> Natural Telemetry │
+│ 1. JARVIS COGNITIVE INTERFACE                                                  │
+│    Vendor-Agnostic Interface │ Orchestration Root │ Verification Supervisor    │
+│    (LLM is a replaceable commodity worker, NOT the system identity)            │
 └───────────────────────────────────────┬────────────────────────────────────────┘
                                         │ High-Level Intent
 ┌───────────────────────────────────────▼────────────────────────────────────────┐
-│ 2. ORCHESTRATION LAYER (The Nervous System)                                    │
-│    Task Decomposition │ Capability Selection │ Workflow DAG │ State / Memory   │
-│    • Nexus (multiplexer/workspace) & Claude Worker Fleet (DAG coordinator)     │
+│ 2. ORCHESTRATION & STATE LAYER                                                 │
+│    Task Decomposition │ Worker Session Runtime (WSR) │ SQLite WAL Checkpointing │
+│    • Invariant: "The task belongs to the orchestrator, not the worker"         │
 └───────────────────────────────────────┬────────────────────────────────────────┘
                                         │ Typed Capability Contracts
 ┌───────────────────────────────────────▼────────────────────────────────────────┐
-│ 3. CAPABILITY MESH (The Body)                                                  │
+│ 3. CAPABILITY MESH (13 Computational Engines across 18 Repositories)          │
 │    • Ingestion : Screen Q&A (DOM), Super-NLM (Notebooks), yt-dlp-live (Media)  │
-│    • Compute   : Fusion 360 MCP (CAD), BiasAperture (Fairness), Claude Workers │
-│    • Solvers   : AI Constraint Solver (F:\AaradhyaDT\AI)                       │
-│    • Actuation : NovaOptimizer (NT Kernel Tuning), SPARK (Wearable / BLE)      │
-│    • Cognition : md2pdf (Publishing), RSVP Reader (High-Speed Reading HUD)     │
+│    • Compute   : Fusion 360 MCP (CAD), BiasAperture (Fairness), SPARK (Edge AI)│
+│    • Solvers   : AI Constraint Solver (Cryptarithmetic & CSP)                  │
+│    • Actuation : NovaOptimizer (Win32 NT Memory Tuning), BLE Sensors           │
+│    • Publishing: md2pdf (Pandoc PDF), RSVP Reader (High-Speed Reading HUD)     │
 └───────────────────────────────────────┬────────────────────────────────────────┘
                                         │ Deterministic Verification & Reality
 ┌───────────────────────────────────────▼────────────────────────────────────────┐
-│ 4. VERIFICATION / REALITY LAYER (The Ground Truth)                             │
-│    SMT / Z3 Solvers │ EVM Sandboxes │ Win32 NT APIs │ Executable Test Suites   │
+│ 4. DETERMINISTIC VERIFICATION LAYER (The Ground Truth)                         │
+│    SMT / Z3 Solvers │ Executable Sandboxes │ Win32 NT APIs │ Automated Lints   │
 └────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### ⚡ Emergent Compound Workflows
 When autonomous modules are chained via MCP and Semantic Contracts, new workflows emerge dynamically:
-- **Pipeline A (Rapid Learning):** `Screen Q&A` $\rightarrow$ `Super-NLM` $\rightarrow$ `md2pdf` $\rightarrow$ `RSVP Reader` (750 WPM synthesis).
-- **Pipeline B (Heavy Compute/Audit):** `Claude Fleet` $\rightarrow$ `NovaOptimizer` (RAM purge/priority) $\rightarrow$ `BiasAperture` $\rightarrow$ `Alpha-SuperApp`.
-- **Pipeline C (Physical Hardware Prototyping):** `SPARK` $\rightarrow$ `Fusion 360 MCP` (parametric CAD) $\rightarrow$ `md2pdf` (engineering dossier).
-- **Pipeline D (Invariant & Arbitrage Discovery):** `Screen Q&A / Super-NLM` $\rightarrow$ `Nexus` (formalizer) $\rightarrow$ `Claude Fleet / AI Solver` $\rightarrow$ `Z3 SMT Sandbox` $\rightarrow$ `md2pdf`.
-- **Pipeline E (Autonomous YouTube Media Cluster):** `Media Ingestion` $\rightarrow$ `Nightcore DSP Engine` $\rightarrow$ `WhisperX ASS Karaoke` $\rightarrow$ `Intel Arc QSV Render` $\rightarrow$ `yt-dlp-live Relay`.
-
-### 🎯 The Flagship Wedge: Adversarial Rule & Invariant Assurance
-To prevent platform sprawl across 17 heterogeneous ecosystem modules (13 active computational engines + 4 presentation/web hubs), the ecosystem anchors around a proven first wedge: **Software, API & Protocol Invariant Assurance** (validated at scale by DARPA's 2025 AI Cyber Challenge). Ground truth is enforced via deterministic execution sandboxes before expanding outward into smart contracts, platform terms, and regulatory thresholds.
-
-### 🔬 R&D Roadmap, 5-Horizon Forecast & Feasibility
-The formal R&D evaluation establishes **Adversarial Invariant Assurance** as the primary research program, moving from synthetic benchmarks to real-world software and protocol state machines:
-- **Research Director Paradigm:** Systems architecture, domain invariants, and constraint formulation driven by human judgment; implementation and combinatorial search handled by AI coding agents, SMT solvers (Z3/CVC5), and deterministic sandboxes (Anvil, Docker).
-- **$5/mo Student Baseline & Worker Decoupling:** Anchored by a single **Gemini AI Pro student plan (~$5/month)** treated strictly as `CognitiveWorker_01` (not as Jarvis itself). Jarvis remains the vendor-agnostic executive interface; models are interchangeable commodities.
-- **Zero-Cost Funnel Architecture:** Built on free/open tiers (free Gemini API, local LM Studio, Z3, Anvil) filtering 1,000 rough hypotheses down to validated discoveries before paid tokens or heavy compute are ever consumed.
-- **5 Horizons:** (1) Synthetic Invariant Rediscovery (0–3 mo) $\rightarrow$ (2) Real API State Machines (3–9 mo) $\rightarrow$ (3) EVM/Protocol Invariants (9–18 mo) $\rightarrow$ (4) Semi-Formal Rules (18–36 mo) $\rightarrow$ (5) Autonomous Systems Researcher (36+ mo).
-- **Superlinear Scaling Thresholds:** Injecting paid intelligence and compute scales reasoning access, worker throughput, simulation capacity, and agentic persistence without requiring architectural rewrites.
-- **Calibrated Evidence Tiers:** Mandatory tagging of all discoveries as `FORMALLY_PROVEN`, `EMPIRICALLY_VERIFIED`, `STATISTICALLY_OBSERVED`, or `HEURISTIC_HYPOTHESIS` to eliminate hallucinated findings.
-- **The INV Experiment Standard & Capital Discipline:** Structured telemetry tracking (`INV-xxx`) with strict rules preventing premature subscription spend until empirical bottlenecks are demonstrated.
-- **The Three-Output Rule:** To escape recursive planning ("planning a plan for a plan"), every brainstorm session must produce an Experiment (`INV-xxx`), an Implementation Artifact, or a Falsifiable Claim (`HYP-xxx`).
-- **Asymmetric Cognitive Council:** Bootstraps model plurality at $0 cost by assigning specialized roles to free models (Architect, Skeptic, Researcher, Simplifier) synthesized by Gemini Pro and grounded into repository state by Antigravity.
-- **Externalized Epistemic Memory:** Structured under [`research/`](file:///f:/Aaradhya-Dev-Tamrakar/brainstorm/research/) (`hypotheses/`, `experiments/`, `invariants/`, `results/`, `failures/`) as machine-readable research state.
-- **Worker Session Runtime (WSR):** Resolves the last-mile consumer fleet bottleneck by enforcing the invariant that *"The task belongs to the orchestrator, not the worker."* Automated 5-stage loop handles session activation, tool-limit interception, and zero-loss semantic migration across quota-exhausted profiles ([`FLEET-001`](file:///f:/Aaradhya-Dev-Tamrakar/brainstorm/research/experiments/FLEET-001.md)).
-- **Phase 0.8 to Phase 1.0 (The Walk-Away Benchmark):** Tracks maturity from human-operated distributed cognition (manual scheduler/dispatcher) to machine-operated cognition, measured by the **Autonomy Ratio** (autonomous compute time vs human intervention minutes). Crossing condition: launching a multi-step task and walking away while the machine autonomously recovers across profile limits.
-- **Capital Allocation Matrix (API Credits > Subscriptions):** Preserves the \$5/mo Gemini Pro workspace for human reasoning while prioritizing micro pay-as-you-go API credits (\$10–30/mo) over redundant \$20 consumer chatbot subscriptions for machine-facing worker sockets, governed by the **10-Task Diagnostic Benchmark** and the R&D Leverage equation.
-- **Economic Asset Base & Capital Leverage:** Establishes a **~$20,000–$35,000 USD replacement-equivalent technical asset base** (17 repositories, WSR orchestration, MCP topologies, tacit research models) built on an ultra-disciplined **~$2,965 USD total fixed capital input** over 3.5 years ($8.4\times$ capital leverage ratio, with near-infinite AI expenditure leverage prior to the Sep 2026 dollar card).
-- **Conversational Provenance & Transcripts:** Preserves foundational transcripts conducted between Aaradhya and ChatGPT Think (`chatgpt.com/share/6aa2ae31...` and `chatgpt.com/share/6aa2ae3c...`) formalizing the Jarvis cognitive paradigm, last-mile worker session runtimes, and the capital valuation models.
-- **Safeguards Against the 4 Traps:** The **Rule of Two** (preventing platform quagmire), **Closed-Loop Replay** (preventing formalization hallucinations), sandbox fidelity grading, and restriction to deterministic executable state spaces.
-- **The ECIE Systems Architect Paradigm & Clean-Slate Memory Co-Design:** Formalized under [`research/architectures/`](research/architectures/) ([`ARCH-SPEC-001`](research/architectures/ARCH-SPEC-001-ECIE-COMPUTE-MEMORY.md)). Reframes hardware bottlenecks as digital communication and queue-theoretic channel problems, separating human architectural governance from apprentice simulation synthesis. Validated via [`warehouse_mem_sim.py`](sim/warehouse_mem_sim.py) and [`INV-MEM-001`](research/invariants/INV-MEM-001.md).
-- **The Ingestion Processing Unit (IPU) & Telecom Transition Strategy:** Formalized under [`ARCH-SPEC-002`](research/architectures/ARCH-SPEC-002-INGESTION-PROCESSING-UNIT.md). Models the "Strangler Fig" coexistence strategy (analogous to 2G/3G/4G/5G transitions) introducing a smart bump-in-the-wire IPU that intercepts 6G Sub-THz line-rate bursts, absorbs channel estimation/reductions at line rate, and preserves legacy GPU/DRAM compatibility.
-- **Verbatim Epistemic History Invariant (`INV-EPI-001`):** Mandates that all foundational brainstorming conversations, architectural shifts, and strategic pivots be exported verbatim with ISO timestamps to [`research/transcripts/`](research/transcripts/) ([`INV-EPI-001`](research/invariants/INV-EPI-001.md)), eliminating lossy summaries and preserving complete human reasoning trajectories.
-
-👉 See **[Section 7 of ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md](ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md#7-rd-strategic-evaluation-5-horizon-forecast--feasibility-analysis)** for the complete evaluation, domain feasibility matrix, zero-cost funnel, initial experiments, and conversational provenance.
+- **Pipeline A (Rapid Learning):** `Screen Q&A` $\to$ `Super-NLM` $\to$ `md2pdf-desktop` $\to$ `RSVP Reader` (750 WPM synthesis).
+- **Pipeline B (Heavy Compute/Audit):** `Claude Fleet` $\to$ `NovaOptimizer` (RAM purge/priority) $\to$ `BiasAperture` $\to$ `Alpha-SuperApp`.
+- **Pipeline C (Physical Hardware Prototyping):** `SPARK` $\to$ `Fusion 360 MCP` (parametric CAD) $\to$ `md2pdf-desktop` (engineering dossier).
+- **Pipeline D (Invariant & Arbitrage Discovery):** `Screen Q&A / Super-NLM` $\to$ `Nexus` (formalizer) $\to$ `AI Solver / SMT` $\to$ `Z3 Sandbox` $\to$ `md2pdf-desktop`.
+- **Pipeline E (Autonomous YouTube Media Cluster):** `Media Ingestion` $\to$ `Nightcore DSP Engine` $\to$ `WhisperX ASS Karaoke` $\to$ `Intel Arc QSV Render` $\to$ `yt-dlp-live Relay`.
 
 ---
 
-## 🗂️ Ecosystem Branches & Module Catalog
+## 🎯 Flagship Research Wedge: Headless Invariant Assurance Engine
 
-Every tool in the ecosystem has a corresponding tracking branch in this repository for module-specific brainstorm logs, manifests, and interface prototypes. Together with the `main` orchestration root, the ecosystem maintains **18 Git branches** across **17 local tool repositories** (13 computational engines + 4 presentation/educational hubs):
+To avoid the "grand unified platform" trap, the ecosystem anchors its near-term research around a single high-leverage wedge: **Software, API & Protocol Invariant Assurance**.
 
-> 📖 **Machine-Readable Architecture Registry:** [`schemas/ecosystem.registry.json`](schemas/ecosystem.registry.json)  
-> 📜 **Semantic Capability Contract Schema:** [`schemas/capability.contract.v1.json`](schemas/capability.contract.v1.json) (Reference: [`AI-Constraint-Solver.contract.json`](schemas/examples/AI-Constraint-Solver.contract.json))
+```text
+Natural-Language Specification / API Documentation
+                    ↓
+Formalization into Typed Capability Contract (E1)
+                    ↓
+Candidate Invariant Formulation
+                    ↓
+SMT Symbolic Verification (Z3 Solver)
+                    ↓
+Executable Sandbox Verification (Docker / Anvil)
+                    ↓
+Reproducible Counterexample or Evidence Dossier (E4/E5)
+```
 
-| # | Dedicated Branch | Tool / Module | Tech Stack | Execution Context | Core Superpower |
-|---|---|---|---|---|---|
-| 1 | `super-nlm` | **Super-NLM Hub** | Python (FastAPI), React, MCP | Cloud / Hybrid | Multi-account Google NotebookLM aggregator, cross-notebook synthesis, MCP round-robin agent rotation |
-| 2 | `Autodesk-Fusion-360-MCP-Server` | **Autodesk Fusion 360 MCP** | Python, Fusion 360 API, MCP | Local Desktop | Conversational 3D CAD, parametric modeling automation via AI / MCP |
-| 3 | `system-optimizer` | **NovaOptimizer** | C# .NET 10, WPF, Win32/NT APIs | Local (Bare Metal) | Micro-footprint Windows OS tuning, deep RAM cache purge (`EmptyWorkingSet`), process priority boosting |
-| 4 | `SPARK` | **SPARK Wearable Gateway** | C/C++ (ESP32-S3), Python, SHAP, BLE | Edge Hardware / Local | Two-layer edge fall detection, sensor kinematics, SHAP clinical explainability, automated PDF reporting |
-| 5 | `Nexus` | **Nexus** | FastAPI, React (Vite), SQLite FTS5 | Local / Hybrid | Project-centric AI workspace, prompt multiplexing across parallel LLMs, contextual note memory |
-| 6 | `Claude-Desktop` | **Claude Worker Fleet (v2)** | FastAPI coordinator, SQLite WAL, PowerShell | Local / Distributed | Multi-profile session persistence, distributed DAG task worker fleet, SKU pipeline decomposition |
-| 7 | `BiasAperture` | **BiasAperture** | PyTorch, Python CLI, LaTeX | Local / Compute | Demographic bias auditing framework for vision models, disparity metrics, automated LaTeX/PDF generation |
-| 8 | `Alpha-SuperApp` | **Alpha-SuperApp** | Kotlin 2.2, Jetpack Compose, Android 16 | Mobile Device | Mobile super-app: Computer Vision, BLE hardware control, Personal Finance, AI assistants |
-| 9 | `screen-qa-extension` | **Screen Q&A** | Chrome MV3 (JS), Gemini Flash | Ambient Browser | Ambient browser intelligence, instant question extraction and zero-click overlay response |
-| 10 | `md2pdf-desktop` | **md2pdf-desktop** | Python, Tkinter, Pandoc, wkhtmltopdf | Local Desktop | Publication-quality Markdown-to-PDF rendering pipeline |
-| 11 | `yt-dlp-live` | **yt-dlp-live** | PowerShell, yt-dlp, FFmpeg | Local Daemon | Resilient live stream capture daemon, auto-cut, and lossless remuxing/relaying |
-| 12 | `AI` | **AI Constraint Solver** | Python, FastAPI, CLI | Local Microservice | Cryptarithmetic and combinatorial constraint satisfaction solver with JSON metrics reporting |
-| 13 | `rsvp-reading` | **RSVP Reader** | Svelte, Vite | Local Web | High-speed RSVP reader with Optimal Recognition Point (ORP) highlighting for EPUB/PDF |
-| 14 | `Aaradhya-Dev-Tamrakar.github.io` | **Portfolio Website** | Static Web, Vanilla JS, CSS | Web Hub | Central portfolio, interactive radar, and project presentation engine |
-| 15 | `AaradhyaDT.github.io` | **Portfolio Mirror** | Static Web | Mirror Web | Secondary public mirror and documentation host |
-| 16 | `makerspace` | **Makerspace** | CAD / Hardware Assets | Hardware Hub | Physical maker laboratory, fabrication assets, and 3D printing staging |
-| 17 | `react-workshop-ieeekecktm` | **React Workshop** | React, TypeScript, Vite | Educational | Hands-on curriculum and modern frontend architecture reference |
+* **Target Domain:** Software state machines, REST/FastAPI endpoints, and deterministic protocol rules.
+* **Core Metric:** **Discovery Cost Efficiency** ($(\text{financial} + \text{compute cost}) / \text{verified discoveries}$) with **100% recall enforced on planted synthetic violations**.
+
+---
+
+## 🗓️ Near-Term R&D Roadmap
+
+Rather than expanding the ecosystem by inventing new projects, the immediate engineering sequence focuses on **evidence, reliability, and integration**:
+
+1. **Canonical Registry & Ontological Hardening:** Maintain single source of truth across all tools (`schemas/capability-registry.yaml`). *(Completed)*
+2. **Comprehensive Epistemic Audit:** Audit all numbers, evidence tiers, and citations (`report/`). *(Completed)*
+3. **Economic Model Correction:** Decouple living expenses from productive CAPEX/OPEX and vectorize resource tracking. *(Completed)*
+4. **Invariant Assurance Engine MVP:** Build synthetic state machine invariant generator and Z3 verification loop. *(Months 0–3)*
+5. **Reproducibility Benchmark Suite:** Containerize simulation models (`sim/`) with deterministic seeds and test assertions. *(Months 1–3)*
+6. **2-Capability Composition Test:** Formally measure synergy between `Super-NLM` and `md2pdf-desktop`. *(Months 2–4)*
+7. **3-Capability Composition Test:** Chain `Screen Q&A` $\to$ `Super-NLM` $\to$ `RSVP Reader` with end-to-end telemetry. *(Months 4–6)*
+8. **Worker Session Runtime (WSR) Abstraction:** Standardize the task checkpointing harness for zero-loss profile migration. *(Months 6–9)*
+9. **Jarvis Executive Interface:** Assemble the vendor-agnostic high-level interface over the verified capability mesh. *(Months 9–12)*
+
+---
+
+## 🗂️ Authoritative Ecosystem Catalog
+
+The ecosystem encompasses **18 physical Git repositories** synchronized via **18 tracking branches** in `brainstorm` (13 active computational engines + 4 presentation/educational hubs + 1 orchestration root):
+
+> 📖 **Machine-Readable Registry:** [`schemas/capability-registry.yaml`](schemas/capability-registry.yaml)  
+> 📜 **Ontology Standard:** [`schemas/capability-ontology.md`](schemas/capability-ontology.md)
+
+| # | Dedicated Branch | Tool / Module | Category | Execution Context | Evidence Tier | Core Superpower |
+|---|---|---|---|---|:---:|---|
+| 1 | `super-nlm` | **Super-NLM Hub** | Orchestration | Cloud / Hybrid | **E3** | Multi-account Google NotebookLM aggregator, cross-notebook synthesis, token ring agent rotation |
+| 2 | `Autodesk-Fusion-360-MCP-Server` | **Autodesk Fusion 360 MCP** | Actuation | Local Desktop | **E3** | Conversational 3D CAD, parametric modeling automation via AI / MCP |
+| 3 | `system-optimizer` | **NovaOptimizer** | Computation | Local (Bare Metal) | **E4** | Micro-footprint Windows OS tuning, deep RAM purge (`EmptyWorkingSet`), thread priority boosting |
+| 4 | `SPARK` | **SPARK Wearable Gateway** | Computation | Edge Hardware | **E4** | Two-layer edge fall detection, sensor kinematics, SHAP clinical explainability, automated PDF reporting |
+| 5 | `Nexus` | **Nexus** | Orchestration | Local / Hybrid | **E3** | Project-centric AI workspace, prompt multiplexing across parallel LLMs, contextual note memory |
+| 6 | `Claude-Desktop` | **Claude Worker Fleet (v2)** | Orchestration | Local / Distributed| **E3** | Multi-profile session persistence, distributed DAG task worker fleet, SKU pipeline decomposition |
+| 7 | `BiasAperture` | **BiasAperture** | Computation | Local / Compute | **E4** | Demographic bias auditing framework for vision models, disparity metrics, automated LaTeX/PDF generation |
+| 8 | `Alpha-SuperApp` | **Alpha-SuperApp** | Computation | Mobile Device | **E2** | Mobile super-app: Computer Vision, BLE hardware control, Personal Finance, AI assistants |
+| 9 | `screen-qa-extension` | **Screen Q&A** | Ingestion | Ambient Browser | **E3** | Ambient browser intelligence, instant question extraction and zero-click overlay response |
+| 10 | `md2pdf-desktop` | **md2pdf-desktop** | Presentation | Local Desktop | **E3** | Publication-quality Markdown-to-PDF rendering pipeline |
+| 11 | `yt-dlp-live` | **yt-dlp-live** | Ingestion | Local Daemon | **E3** | Resilient live stream capture daemon, auto-cut, and lossless remuxing/relaying |
+| 12 | `AI` | **AI Constraint Solver** | Computation | Local Microservice | **E3** | Cryptarithmetic and combinatorial constraint satisfaction solver with JSON metrics reporting |
+| 13 | `rsvp-reading` | **RSVP Reader** | Presentation | Local Web | **E3** | High-speed RSVP reader with Optimal Recognition Point (ORP) highlighting for EPUB/PDF |
+| 14 | `Aaradhya-Dev-Tamrakar.github.io` | **Portfolio Website** | Presentation | Web Hub | **E4** | Central portfolio, interactive radar, and project presentation engine |
+| 15 | `AaradhyaDT.github.io` | **Portfolio Mirror** | Presentation | Mirror Web | **E4** | Secondary public mirror and documentation host |
+| 16 | `makerspace` | **Makerspace** | Presentation | Hardware Hub | **E2** | Physical maker laboratory, fabrication assets, and 3D printing staging |
+| 17 | `react-workshop-ieeekecktm` | **React Workshop** | Presentation | Educational | **E3** | Hands-on curriculum and modern frontend architecture reference |
 
 ---
 
@@ -146,20 +164,12 @@ The repository includes a PowerShell automation engine designed specifically for
 
 ### 🛠️ Zero-Token Architectural & Audit Shortcuts (`.bat`)
 
-For lightning-fast execution without opening terminal syntax or burning AI tokens:
-
 | Batch Shortcut | Underlying Engine | Purpose | Execution Cost |
 | :--- | :--- | :--- | :--- |
 | **`.\audit.bat`** | `sim/reconciliation_engine.py` | Lints entire repo for broken links, missing metadata, and taxonomy drift | **0 Tokens** (~50 ms) |
 | **`.\archive.bat`** | `sim/transcript_archiver.py` | Detects significant architectural sessions and exports verbatim logs | **0 Tokens** (~100 ms) |
 | **`.\sim.bat`** | `sim/warehouse_mem_sim.py` | Runs GPU-DRAM warehouse discrete event channel simulator | **0 Tokens** (~20 ms) |
 | **`.\build_report.bat`** | `pdflatex / bibtex` | Compiles print-ready LaTeX research technical report (`report/main.pdf`) | **0 Tokens** (~3 sec) |
-
-
-### Safety Features
-- **Staged Secret Scanner Guard**: Scans diffs for accidentally staged API keys (OpenAI, Anthropic, Google/Gemini, GitHub, AWS, Slack, private keys) and halts execution before any commit is made.
-- **Dynamic Branch-Aware Commits**: Generates scoped conventional commits automatically (e.g. `docs(spark): ...`, `feat(super-nlm): ...`, `docs(ecosystem): ...`).
-- **Autostash Rebase Recovery**: Pulls using `--rebase --autostash` and retries pushes automatically if remote history has diverged.
 
 ---
 

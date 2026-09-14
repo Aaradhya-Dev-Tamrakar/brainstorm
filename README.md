@@ -14,12 +14,14 @@
 
 To eliminate ambiguity between what is **implemented**, what is **experimentally demonstrated**, and what is **proposed research**, this repository adheres to formal governance standards:
 
-* 📖 **[Canonical Capability & Ecosystem Ontology](schemas/capability-ontology.md):** Formal definitions of Repository $\to$ Project $\to$ Capability $\to$ Interface $\to$ Workflow, resolving all historical count discrepancies.
+* 📖 **[Canonical Capability & Ecosystem Ontology](schemas/capability-ontology.md):** Formal definitions of Repository $\to$ Project $\to$ Capability $\to$ Interface $\to$ Workflow.  
+  *Canonical Inventory:* **18 Repositories** | **14 Projects** | **13 Computational Capabilities** | **4 Presentation Hubs** | **5 Compound Workflows** | **13 Research Specs & Experiments**.
 * 📜 **[Calibrated Evidence Policy (E0–E5)](schemas/evidence-policy.md):** Enforces evidence tiers and distinguishes formalization correctness, solver correctness, and empirical runtime correctness.
 * 🗂️ **[Machine-Readable Capability Registry (YAML)](schemas/capability-registry.yaml):** Single source of truth recording inputs, outputs, interfaces, benchmarks, maintenance overhead, and evidence tiers for every ecosystem capability.
 * 📋 **[Repository Epistemic Audit](report/repository-audit.md):** Granular audit classifying all major repository claims against traceable artifacts.
 * 🔬 **[Quantitative Claims & Methodology Audit](report/quantitative-claims-audit.md):** Detailed register of every benchmark, sample size, hardware spec, and variance figure.
-* 💰 **[Defensible Economic Model & Capital Accounting](report/economic-model.md):** Rigorous separation of productive CAPEX/OPEX from living/tuition overhead, vectorized resource tracking, and discovery cost efficiency models.
+* 💰 **[Defensible Economic Model & Capital Accounting](report/economic-model.md):** Tracks direct cash expenditure, compute cost, human effort, replacement cost, and integration overhead separately; no market-value claim is made without external evidence.
+* ⚙️ **Low-Cost Cognitive-Worker Baseline:** Minimizes fixed subscription commitments and measures actual marginal API/compute cost per verified task.
 * ⚠️ **[Known Limitations & Failure Modes](report/limitations.md):** Transparent disclosure of technical risks, formalization gaps, benchmark dependencies, and maintenance debt.
 
 ---

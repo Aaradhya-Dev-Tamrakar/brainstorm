@@ -82,7 +82,7 @@ To eliminate counting discrepancies across `README.md`, `PROFILE.md`, and `ECOSY
 | **Computational Capabilities** | **13** | Independent functional engines exposing programmatic APIs/CLI/MCP interfaces. |
 | **Presentation & Educational Hubs** | **4** | Non-computational repositories: Portfolio Main (`Aaradhya-Dev-Tamrakar.github.io`), Portfolio Mirror (`AaradhyaDT.github.io`), KEC Makerspace digital asset hub, and IEEE React Workshop repo. |
 | **Compound Workflows (Pipelines)** | **5** | Formal emergent pipelines (Pipelines A, B, C, D, E). |
-| **Research Experiments & RFCs** | **11** | Formal architecture specs (`ARCH-SPEC-001` to `004`), RFCs (`ARCH-RFC-001` to `003`), invariants (`INV-EPI-001`, `INV-MEM-001`), and empirical sweeps (`EXP-001`, `FLEET-001`). |
+| **Research Experiments, Specs & RFCs** | **13** | Formal architecture specs (`ARCH-SPEC-001` to `004`), RFCs (`ARCH-RFC-001` to `003`), invariants (`INV-EPI-001`, `INV-MEM-001`), empirical sweeps (`EXP-001`, `FLEET-001`), and composition benchmarks (`COMPOSE-001`, `COMPOSE-002`). |
 
 ---
 

@@ -51,7 +51,7 @@ Bridging the gap between **hardware-software co-design, near-memory computer arc
 | **STRANGLER-IPU / SIPU-6G** | Lead Researcher & Systems Architect | Python (SimPy), CXL 3.0/4.0, LaTeX, Discrete-Event Simulation | **4.12x tail-latency reduction**, 68% host memory bus contention relief under burst line-rate ingest; 3 formal RFCs. |
 | **SPARK** | Lead AI & Firmware Architect (BEI Major Capstone) | ESP32-S3, MPU-6050, TFLite Micro, INT8, SHAP, FastAPI | Two-layer edge fall detection; **18.5 KB INT8 CNN**, **0.9185 AUC-ROC** on SisFall; 44-page thesis proposal; 56 passing unit tests. |
 | **BiasAperture** | Co-Lead Engineer (Fusemachines AI Fellowship Capstone) | AIF360, Fairlearn, SHAP, Jinja2, EU AI Act / NIST RMF | Demographic disparity audit across 126 demographic bins; chi-squared significance tests & BCa bootstrap CIs. |
-| **Super-NLM** | Creator & Systems Developer | Python, FastMCP, NotebookLM, Asyncio, Token Ring Routing | Multi-account Google NotebookLM aggregator & MCP server with two-tier rate-limit cooldown management. |
+| **Super-NLM** | Creator & Systems Developer | Python, FastMCP, NotebookLM, Asyncio, Token Ring Routing | Multi-account Google NotebookLM aggregator & MCP server with two-tier rate-limit cooldown management (backed by a 6× Google Family AI Pro pool). |
 | **GCSBR** | Lead Developer (BEI Minor Project) | Arduino, MPU-6050, NEMA-17, MediaPipe, PID, MATLAB | Inverted pendulum robot with dual-hand gesture control; rated **9.6/10 (major project level)** by academic examiners. |
 | **AaradhyaDT.github.io** | Architect & Maintainer | Vanilla HTML5/CSS3/ES6+, WebCrypto, PWA, Python | Zero-framework personal platform with **24-category automated verification gate** and dual-engine search. |
 

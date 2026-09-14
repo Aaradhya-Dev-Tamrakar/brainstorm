@@ -297,25 +297,25 @@ function Switch-ToBranch {
     $localBranches = @(git branch --format="%(refname:short)")
 
     if ($localBranches -contains $TargetBranch) {
-        git switch $TargetBranch
+        git switch $TargetBranch 2>&1 | Out-Null
         if ($LASTEXITCODE -ne 0) {
             # Stash uncommitted changes and retry
             Write-Notice "Stashing local changes to switch branch safely..."
             git stash push -u -m "sync-branch-switch" | Out-Null
-            git switch $TargetBranch
+            git switch $TargetBranch 2>&1 | Out-Null
             git stash pop | Out-Null
         }
     }
     else {
         # Check if it exists on origin
-        git fetch origin --prune
+        git fetch origin --prune | Out-Null
         $remoteBranches = @(git branch -r --format="%(refname:short)")
         if ($remoteBranches -contains "origin/$TargetBranch") {
-            git switch --track "origin/$TargetBranch"
+            git switch --track "origin/$TargetBranch" 2>&1 | Out-Null
         }
         else {
             Write-Status "Creating new local branch [$TargetBranch] from current HEAD..."
-            git checkout -b $TargetBranch
+            git checkout -b $TargetBranch 2>&1 | Out-Null
         }
     }
 

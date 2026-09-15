@@ -129,7 +129,6 @@ def format_markdown(title: str, url: str, turns: list) -> str:
             md.append(f"## Turn {turn_num}\n")
             md.append("### User\n")
             md.append(t['text'] + "\n")
-            # Next turn if assistant
             if i + 1 < len(turns) and turns[i+1]['role'] == 'Assistant':
                 md.append("### Assistant\n")
                 md.append(turns[i+1]['text'] + "\n")
@@ -144,12 +143,33 @@ def format_markdown(title: str, url: str, turns: list) -> str:
 
     return "\n".join(md)
 
+def resolve_target_directory(specified_dir: str) -> str:
+    """
+    Determines the dedicated subfolder for chat histories.
+    - If user explicitly specified a custom subfolder/path, use it.
+    - If in brainstorm repo, auto-route to research/transcripts if not specified.
+    - Otherwise in any repo/CWD, auto-route to 'chat_history' subfolder.
+    """
+    if specified_dir and specified_dir != ".":
+        return specified_dir
+
+    cwd = os.getcwd()
+    # Check if inside brainstorm repo
+    if os.path.exists(os.path.join(cwd, "research", "transcripts")):
+        return os.path.join(cwd, "research", "transcripts")
+    
+    # Check if inside docs folder exists
+    if os.path.exists(os.path.join(cwd, "docs")):
+        return os.path.join(cwd, "docs", "chat_history")
+
+    # Default dedicated subfolder in any repo
+    return os.path.join(cwd, "chat_history")
+
 def main():
     parser = argparse.ArgumentParser(description="Universal Chat Archiver for AI share links (ChatGPT, etc.)")
     parser.add_argument("url", help="Share URL (e.g. https://chatgpt.com/share/...)")
-    parser.add_argument("-o", "--output", help="Output filepath. If omitted, generates from title in CWD.")
-    parser.add_argument("--dir", help="Target directory for output file", default=".")
-    parser.add_argument("--repo-name", help="Optional repo name to append or prefix", default="")
+    parser.add_argument("-o", "--output", help="Output filepath. If omitted, generates from title in dedicated subfolder.")
+    parser.add_argument("--dir", help="Target directory for output file", default="")
 
     args = parser.parse_args()
 
@@ -163,10 +183,11 @@ def main():
         if args.output:
             out_path = args.output
         else:
+            target_dir = resolve_target_directory(args.dir)
             date_prefix = datetime.now().strftime("%Y-%m-%d")
             slug = slugify(title)
             filename = f"{date_prefix}_{slug.upper()}_CONVERSATION.md" if slug else f"{date_prefix}_CHAT_CONVERSATION.md"
-            out_path = os.path.join(args.dir, filename)
+            out_path = os.path.join(target_dir, filename)
 
         os.makedirs(os.path.dirname(os.path.abspath(out_path)), exist_ok=True)
         with open(out_path, 'w', encoding='utf-8') as f:

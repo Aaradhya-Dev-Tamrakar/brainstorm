@@ -1,7 +1,7 @@
 {
   "$schema": "../capability.contract.v1.json",
   "module": "lipikaar-ai",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "location": "F:\\Aaradhya-Dev-Tamrakar\\lipikaar-ai",
   "tracking_branch": "lipikaar-ai",
   "runtime": "python3.11",
@@ -17,12 +17,12 @@
     {
       "id": "ocr_nepali_document",
       "description": "Extracts high-fidelity Devanagari text and paragraph layouts from scanned documents, photocopies, or images using multimodal vision AI.",
-      "category": "ingestion_perception",
+      "category": "ingestion",
       "deterministic": false,
       "side_effects": false,
-      "verification_tier": "empirical_benchmark",
-      "cost_tier": "low_token_cloud",
-      "objective": "extract_devanagari_text",
+      "verification_tier": "empirical_sandbox",
+      "cost_tier": "free_tier_api",
+      "objective": "synthesize",
       "timeout_ms": 15000,
       "invariants_checked": [
         "INV-NEP-003"
@@ -69,14 +69,79 @@
       }
     },
     {
+      "id": "check_nepali_grammar",
+      "description": "Context-aware Nepali grammar and orthography checker enforcing Pragya-Pratishthan Varnavinyas (ह्रस्व/दीर्घ, श/ष/स, पदयोग/पदवियोग) and honorific agreement.",
+      "category": "cognition",
+      "deterministic": false,
+      "side_effects": false,
+      "verification_tier": "statistical_audit",
+      "cost_tier": "zero_token_local",
+      "objective": "audit",
+      "timeout_ms": 8000,
+      "invariants_checked": [
+        "INV-NEP-004"
+      ],
+      "inputs": {
+        "type": "object",
+        "required": [
+          "text"
+        ],
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "strictness": {
+            "type": "string",
+            "enum": [
+              "formal_legal",
+              "standard",
+              "colloquial"
+            ]
+          }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": [
+          "corrected_text",
+          "issues_found"
+        ],
+        "properties": {
+          "corrected_text": {
+            "type": "string"
+          },
+          "issues_found": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "original": {
+                  "type": "string"
+                },
+                "replacement": {
+                  "type": "string"
+                },
+                "category": {
+                  "type": "string"
+                },
+                "explanation": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
       "id": "transcode_nepali_fonts",
       "description": "Deterministic bi-directional transcoding between Unicode Devanagari and legacy 8-bit fonts (Preeti, Kantipur) with ligature and prefix-matra preservation.",
-      "category": "computational_engine",
+      "category": "compute",
       "deterministic": true,
       "side_effects": false,
-      "verification_tier": "unit_ast_checked",
+      "verification_tier": "formal_smt",
       "cost_tier": "zero_token_local",
-      "objective": "convert_font_encoding",
+      "objective": "transform",
       "timeout_ms": 5000,
       "invariants_checked": [
         "INV-NEP-001"
@@ -129,12 +194,12 @@
     {
       "id": "repair_word_document",
       "description": "Parses Word (.docx) OpenXML runs, detects legacy Devanagari font hack runs, and transcodes them cleanly to Unicode (or vice versa) while preserving tables and formatting.",
-      "category": "presentation_publishing",
+      "category": "presentation",
       "deterministic": true,
       "side_effects": true,
-      "verification_tier": "unit_ast_checked",
+      "verification_tier": "empirical_sandbox",
       "cost_tier": "zero_token_local",
-      "objective": "repair_docx_fonts",
+      "objective": "transform",
       "timeout_ms": 10000,
       "invariants_checked": [
         "INV-NEP-002"

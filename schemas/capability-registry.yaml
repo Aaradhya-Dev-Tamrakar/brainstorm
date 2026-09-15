@@ -399,11 +399,11 @@ capabilities:
     last_verified: "2026-09-14"
 
   - id: "lipikaar-ai"
-    name: "Lipikaar-AI (Nepali Typing, OCR & Word Substrate)"
+    name: "Lipikaar-AI (Nepali Typing, OCR, Grammar & Word Substrate)"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\lipikaar-ai"
     category: "COMPUTATIONAL_ENGINE"
     status: "PROPOSED"
-    description: "Multimodal Nepali vision OCR, bi-directional Preeti-Unicode phonetic transcoder, and OpenXML Word (.docx) layout repair engine."
+    description: "Multimodal Nepali vision OCR, contextual Varnavinyas grammar checker/suggester, bi-directional Preeti-Unicode phonetic transcoder, and OpenXML Word (.docx) repair engine."
     inputs:
       - "Scanned document / PDF / image"
       - "Nepali text (Unicode or Preeti / Kantipur)"

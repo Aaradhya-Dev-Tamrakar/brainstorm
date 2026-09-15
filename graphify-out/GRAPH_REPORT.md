@@ -1,16 +1,16 @@
 # Graph Report - brainstorm  (2026-09-15)
 
 ## Corpus Check
-- 44 files · ~102,600 words
+- 52 files · ~133,709 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 400 nodes · 435 edges · 34 communities (27 shown, 6 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.88)
+- 601 nodes · 634 edges · 53 communities (39 shown, 12 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.88)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3687a25b`
+- Built from commit: `62c1f823`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -28,8 +28,8 @@
 - Experiment Log: INV-[ID]
 - properties
 - warehouse_mem_sim.py
-- enum
-- enum
+- 2026-09-15_ANALYZE-REPO-STATE_CONVERSATION.md
+- 2026-09-15_ANALYSE-BRAINSTORM-REPO_CONVERSATION.md
 - yt-dlp-live.contract.json
 - sweep_ipu_breakeven.py
 - Defensible Economic Accounting & R&D Resource Allocation Model
@@ -48,28 +48,46 @@
 - Worker Session Runtime (WSR)
 - YouTube Transformer Cluster
 - 🏛️ RESEARCH EXPERIMENT: COMPOSE-002 (Autonomous Invariant & Constraint Verification Loop)
+- github-pilot.contract.json
+- lipikaar-ai.contract.json
+- 19. My final assessment
+- save_chat.py
+- Turn 1
+- Turn 1
+- Turn 2
+- ARCH-SPEC-005: Nepali OCR & Font-Agnostic Word Automation Substrate (Lipikaar-AI)
+- Execution Protocol
+- 16. Your "Capital Discipline Rule" is also a form of experiment design
+- 15. The real R&D thesis hiding inside this repository
+- 13. What I would build next
+- 23. The one thing I would be ruthless about
+- 2. The architecture is conceptually strong
+- 4. Your "manual prototype of Jarvis" idea is stronger than I initially credited
+- 5. But there is already repository drift
+- 5. The future Jarvis doesn't need to inherit your current repo architecture
+- 7. The memory/compute research is interesting—but currently a model, not hardware research
 
 ## God Nodes (most connected - your core abstractions)
 1. `2. Granular Claims Audit Register` - 13 edges
 2. `2. Quantitative Claims Register` - 11 edges
 3. `2. Core Architectural & Systemic Limitations` - 10 edges
-4. `enum` - 9 edges
+4. `Research Architectures Hub` - 10 edges
 5. `enum` - 9 edges
-6. `Aaradhya Dev Tamrakar (ADT)` - 9 edges
-7. `ARCH-SPEC-002: Ingestion Processing Unit (IPU)` - 9 edges
-8. `Personal Tool Ecosystem` - 9 edges
-9. `ARCH-RFC-003: Capstone Defense Standard` - 9 edges
-10. `Research Architectures Hub` - 9 edges
+6. `enum` - 9 edges
+7. `Aaradhya Dev Tamrakar (ADT)` - 9 edges
+8. `ARCH-SPEC-002: Ingestion Processing Unit (IPU)` - 9 edges
+9. `Personal Tool Ecosystem` - 9 edges
+10. `ARCH-RFC-003: Capstone Defense Standard` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `STRANGLER-IPU` --implements--> `ARCH-SPEC-002 (IPU)`  [INFERRED]
   schemas/capability-registry.yaml → research/architectures/README.md
 - `Aaradhya Dev Tamrakar (ADT)` --references--> `SPARK Wearable Gateway`  [EXTRACTED]
   PROFILE.md → schemas/capability-registry.yaml
-- `Personal Tool Ecosystem` --references--> `Canonical Capability & Ecosystem Ontology`  [EXTRACTED]
-  README.md → schemas/capability-ontology.md
 - `GPU & RAM Architecture Spec` --conceptually_related_to--> `STRANGLER-IPU`  [INFERRED]
   research/experiments/GPU_RAM_ARCHITECTURE_SPEC.md → schemas/capability-registry.yaml
+- `Personal Tool Ecosystem` --references--> `Canonical Capability & Ecosystem Ontology`  [EXTRACTED]
+  README.md → schemas/capability-ontology.md
 - `Personal Tool Ecosystem` --references--> `Canonical Capability Registry`  [EXTRACTED]
   README.md → schemas/capability-registry.yaml
 
@@ -80,15 +98,15 @@
 - **4-Tier Jarvis Capability Mesh** — tool_super_nlm, tool_spark, tool_claude_fleet, tool_bias_aperture, tool_strangler_ipu [EXTRACTED 1.00]
 - **Adversarial Invariant Assurance Flow** — research_hypotheses_hyp_001, research_hypotheses_hyp_002, research_experiments_fleet_001 [INFERRED 0.80]
 
-## Communities (34 total, 6 thin omitted)
+## Communities (53 total, 12 thin omitted)
 
 ### Community 0 - "properties"
 Cohesion: 0.07
 Nodes (30): description, items, minItems, type, $ref, description, type, type (+22 more)
 
 ### Community 1 - "properties"
-Cohesion: 0.07
-Nodes (27): properties, description, type, description, type, description, type, description (+19 more)
+Cohesion: 0.05
+Nodes (44): empirical_sandbox, formal_smt, free_tier_api, heavy_compute, heuristic_unverified, paid_api, statistical_audit, zero_token_local (+36 more)
 
 ### Community 2 - "properties"
 Cohesion: 0.06
@@ -96,7 +114,7 @@ Nodes (32): http, sse, stdio, stream, transport, type, items, type (+24 more)
 
 ### Community 3 - "AI-Constraint-Solver.contract.json"
 Cohesion: 0.11
-Nodes (18): -m, solver.mcp_server, capabilities, location, mcp_endpoint, args, command, transport (+10 more)
+Nodes (18): solver.mcp_server, capabilities, -m, location, mcp_endpoint, args, command, transport (+10 more)
 
 ### Community 4 - "ecosystem.registry.json"
 Cohesion: 0.12
@@ -134,13 +152,13 @@ Nodes (11): type, format, type, type, properties, author, last_updated, license 
 Cohesion: 0.29
 Nodes (9): main(), Warehouse Logistics Memory Simulator (Lightweight GPU-to-DRAM Discrete Event…, Upgrade v+2: Near-Memory Streaming Accumulator Instead of hauling 4096 elements…, Baseline (Naive): Every thread's request is dispatched independently without…, Upgrade v+1: Smart Coalescer & Bank-Aware Schedular 1. Deduplicates memory…, run_baseline_uncoalesced(), run_upgrade_v1_smart_coalescer(), run_upgrade_v2_near_memory_reduction() (+1 more)
 
-### Community 13 - "enum"
-Cohesion: 0.22
-Nodes (9): free_tier_api, heavy_compute, paid_api, zero_token_local, default, description, enum, type (+1 more)
+### Community 13 - "2026-09-15_ANALYZE-REPO-STATE_CONVERSATION.md"
+Cohesion: 0.04
+Nodes (47): 10. The error classifier is useful—but dangerously heuristic, 11. The auto-sharing mechanism is clever, but it creates a trust boundary, 12. The second-stage synthesis is a separate intelligence layer, 13. But there is an evidence-grounding weakness, 14. The folder-sync system is surprisingly useful architecturally, 15. But Google Drive folder sync is not actually symmetric yet, 16. Your persistence architecture reveals the intended scale, 17. The lack of authentication is the biggest deployment flaw (+39 more)
 
-### Community 14 - "enum"
-Cohesion: 0.25
-Nodes (8): empirical_sandbox, formal_smt, heuristic_unverified, statistical_audit, verification_tier, description, enum, type
+### Community 14 - "2026-09-15_ANALYSE-BRAINSTORM-REPO_CONVERSATION.md"
+Cohesion: 0.06
+Nodes (31): 10. COMPOSE-001 is the most convincing real integration evidence so far, 10. The WSR research is even more important under your new framing, 11. And now there is an interesting opportunity I didn't emphasize before, 11. Your biggest architectural risk is not AI quality, 12. MCP strengthens your general architectural direction, but also changes one thing, 12. What I would NOT do next, 13. There is another important insight from the current repository: you already have a "research compiler", 14. There is still one major danger—but it is different from what I said before (+23 more)
 
 ### Community 15 - "yt-dlp-live.contract.json"
 Cohesion: 0.25
@@ -190,25 +208,73 @@ Nodes (10): 1. Input Specification, 2. Capabilities Selected, 3. Interface Contr
 Cohesion: 0.18
 Nodes (10): 1. Input Specification, 2. Capabilities Selected, 3. Interface Contract & Data Exchange, 4. Execution Trace & Empirical Telemetry, 5. Measured Resource Vector & Performance Metrics, 6. Failure Modes & Mitigations, 7. Output Artifact & Evidence Classification, Rationale for Selection (+2 more)
 
+### Community 34 - "github-pilot.contract.json"
+Cohesion: 0.10
+Nodes (19): pilot.cli, status, capabilities, -m, location, mcp_endpoint, args, command (+11 more)
+
+### Community 35 - "lipikaar-ai.contract.json"
+Cohesion: 0.11
+Nodes (18): lipikaar.mcp_server, capabilities, -m, location, mcp_endpoint, args, command, transport (+10 more)
+
+### Community 36 - "19. My final assessment"
+Cohesion: 0.22
+Nodes (9): 19. My final assessment, **A promising personal AI-systems R&D laboratory, not yet a finished Jarvis.**, Assistant, Assistant, Assistant, My score, The deeper conclusion, Turn 2 (+1 more)
+
+### Community 37 - "save_chat.py"
+Cohesion: 0.36
+Nodes (8): clean_text(), format_markdown(), main(), parse_chatgpt_share(), Normalize text and remove citation markers / artifacts., Determines the dedicated subfolder for chat histories. - If user explicitly…, resolve_target_directory(), slugify()
+
+### Community 38 - "Turn 1"
+Cohesion: 0.25
+Nodes (8): 1. What the repo actually is, Analyse brainstorm repo, Assistant, Assistant, Assistant, Assistant, Turn 1, User
+
+### Community 39 - "Turn 1"
+Cohesion: 0.25
+Nodes (8): 1. It has a real application architecture, Analyze Repo State, Assistant, Assistant, Current state, Turn 1, User, What is actually implemented
+
+### Community 40 - "Turn 2"
+Cohesion: 0.25
+Nodes (8): Assistant, Assistant, Assistant, My revised verdict, One important observation, The biggest thing I would change now, Turn 2, User
+
+### Community 41 - "ARCH-SPEC-005: Nepali OCR & Font-Agnostic Word Automation Substrate (Lipikaar-AI)"
+Cohesion: 0.29
+Nodes (6): 1. Executive Summary & Problem Space, 2. System Architecture: Lipikaar-AI Pipeline, 3. Core Functional Invariants, 4. Verification & Milestone Roadmap, ARCH-SPEC-005: Nepali OCR & Font-Agnostic Word Automation Substrate (Lipikaar-AI), Core Impediments
+
+### Community 42 - "Execution Protocol"
+Cohesion: 0.29
+Nodes (6): 1. Save to Current Working Directory / Repo, 2. Save to a Specific Folder (e.g. `docs/chat_history` or custom path), 3. Save to Brainstorm Knowledge Base, 4. Custom Filename / Output Path, Chat Archiver Skill, Execution Protocol
+
+### Community 43 - "16. Your "Capital Discipline Rule" is also a form of experiment design"
+Cohesion: 0.33
+Nodes (6): 16. Your "Capital Discipline Rule" is also a form of experiment design, bottleneck discovered, new bottleneck, Phase 1, Phase 2, Phase 3
+
+### Community 44 - "15. The real R&D thesis hiding inside this repository"
+Cohesion: 0.50
+Nodes (4): 15. The real R&D thesis hiding inside this repository, Program 1 — Persistent AI orchestration, Program 2 — AI + deterministic verification, Program 3 — compute-memory co-design
+
+### Community 45 - "13. What I would build next"
+Cohesion: 0.67
+Nodes (3): 13. What I would build next, Phase A — make the repository internally truthful, Phase B — build the actual invariant engine
+
 ## Knowledge Gaps
-- **240 isolated node(s):** `$schema`, `$id`, `title`, `description`, `type` (+235 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 263 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **395 isolated node(s):** `$schema`, `$id`, `title`, `description`, `type` (+390 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 422 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `properties` connect `properties` to `properties`, `capability.contract.v1.json`, `enum`, `enum`, `enum`, `enum`?**
-  _High betweenness centrality (0.111) - this node is a cross-community bridge._
+- **Why does `properties` connect `properties` to `enum`, `properties`, `capability.contract.v1.json`, `enum`?**
+  _High betweenness centrality (0.049) - this node is a cross-community bridge._
 - **Why does `properties` connect `properties` to `properties`, `capability.contract.v1.json`?**
-  _High betweenness centrality (0.092) - this node is a cross-community bridge._
+  _High betweenness centrality (0.041) - this node is a cross-community bridge._
 - **Why does `capability` connect `capability.contract.v1.json` to `properties`?**
-  _High betweenness centrality (0.081) - this node is a cross-community bridge._
+  _High betweenness centrality (0.036) - this node is a cross-community bridge._
 - **What connects `$schema`, `$id`, `title` to the rest of the system?**
-  _240 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _395 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `properties` be split into smaller, more focused modules?**
   _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
 - **Should `properties` be split into smaller, more focused modules?**
-  _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.045454545454545456 - nodes in this community are weakly interconnected._
 - **Should `properties` be split into smaller, more focused modules?**
   _Cohesion score 0.0625 - nodes in this community are weakly interconnected._

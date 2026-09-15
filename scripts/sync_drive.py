@@ -9,9 +9,12 @@ import argparse
 import hashlib
 import json
 import os
+import random
 import shutil
 import subprocess
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -20,6 +23,42 @@ from typing import Optional, Tuple
 TOKEN_ENDPOINT = "https://oauth2.googleapis.com/token"
 DRIVE_UPLOAD_ENDPOINT = "https://www.googleapis.com/upload/drive/v3/files"
 DRIVE_FILES_ENDPOINT = "https://www.googleapis.com/drive/v3/files"
+
+
+def request_with_retry(
+    req: urllib.request.Request,
+    max_retries: int = 5,
+    initial_delay: float = 1.0,
+    backoff_factor: float = 2.0
+) -> Tuple[int, bytes]:
+    """Executes urllib request with exponential backoff and jitter for transient HTTP errors."""
+    last_err: Optional[Exception] = None
+    for attempt in range(max_retries):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                return resp.status, resp.read()
+        except urllib.error.HTTPError as e:
+            body = e.read()
+            last_err = e
+            # Retry on 429 (rate limit) or 5xx (transient Google server errors)
+            if e.code in (429, 500, 502, 503, 504) and attempt < max_retries - 1:
+                sleep_time = initial_delay * (backoff_factor ** attempt) + random.uniform(0.1, 0.5)
+                print(f"[RETRY] HTTP {e.code}. Retrying in {sleep_time:.2f}s (attempt {attempt + 1}/{max_retries})...")
+                time.sleep(sleep_time)
+                continue
+            raise urllib.error.HTTPError(e.url, e.code, body.decode("utf-8", errors="replace"), e.hdrs, None)
+        except urllib.error.URLError as e:
+            last_err = e
+            if attempt < max_retries - 1:
+                sleep_time = initial_delay * (backoff_factor ** attempt) + random.uniform(0.1, 0.5)
+                print(f"[RETRY] Network error: {e.reason}. Retrying in {sleep_time:.2f}s (attempt {attempt + 1}/{max_retries})...")
+                time.sleep(sleep_time)
+                continue
+            raise
+
+    if last_err:
+        raise last_err
+    raise RuntimeError("Unexpected request failure without error.")
 
 
 def get_oauth_credentials() -> Tuple[Optional[str], Optional[str], Optional[str]]:
@@ -64,7 +103,7 @@ def get_oauth_credentials() -> Tuple[Optional[str], Optional[str], Optional[str]
 
 
 def obtain_access_token(client_id: str, client_secret: str, refresh_token: str) -> str:
-    """Exchanges refresh token for a fresh Google OAuth2 access token."""
+    """Exchanges refresh token for a fresh Google OAuth2 access token with retry."""
     payload = urllib.parse.urlencode({
         "client_id": client_id,
         "client_secret": client_secret,
@@ -76,9 +115,9 @@ def obtain_access_token(client_id: str, client_secret: str, refresh_token: str) 
     req.add_header("Content-Type", "application/x-www-form-urlencoded")
 
     try:
-        with urllib.request.urlopen(req) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-            return data["access_token"]
+        status, body_bytes = request_with_retry(req)
+        data = json.loads(body_bytes.decode("utf-8"))
+        return data["access_token"]
     except Exception as e:
         print(f"[ERROR] Failed to obtain access token: {e}")
         raise
@@ -86,15 +125,16 @@ def obtain_access_token(client_id: str, client_secret: str, refresh_token: str) 
 
 def find_drive_file_by_name(access_token: str, folder_id: str, file_name: str) -> Optional[str]:
     """Checks if a file with the given name already exists in the target folder."""
-    query = f"'{folder_id}' in parents and name = '{file_name}' and trashed = false"
+    safe_name = file_name.replace("'", "\\'")
+    query = f"'{folder_id}' in parents and name = '{safe_name}' and trashed = false"
     url = f"{DRIVE_FILES_ENDPOINT}?q={urllib.parse.quote(query)}&fields=files(id,name,mimeType)"
     req = urllib.request.Request(url, headers={"Authorization": f"Bearer {access_token}"})
     try:
-        with urllib.request.urlopen(req) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-            files = data.get("files", [])
-            if files:
-                return files[0]["id"]
+        status, body_bytes = request_with_retry(req)
+        data = json.loads(body_bytes.decode("utf-8"))
+        files = data.get("files", [])
+        if files:
+            return files[0]["id"]
     except Exception as e:
         print(f"[WARN] Could not query Drive files: {e}")
     return None
@@ -108,11 +148,13 @@ def update_drive_file(access_token: str, file_id: str, content_bytes: bytes, mim
     req.add_header("Content-Type", f"{mime_type}; charset=utf-8")
 
     try:
-        with urllib.request.urlopen(req) as resp:
-            return resp.status in (200, 201)
+        status, _ = request_with_retry(req)
+        return status in (200, 201)
     except urllib.error.HTTPError as e:
-        err_body = e.read().decode("utf-8", errors="replace")
-        print(f"[ERROR] Drive PATCH failed ({e.code}): {err_body}")
+        print(f"[ERROR] Drive PATCH failed ({e.code}): {e.msg}")
+        return False
+    except Exception as e:
+        print(f"[ERROR] Drive PATCH failed: {e}")
         return False
 
 
@@ -149,12 +191,14 @@ def create_drive_file(
     req.add_header("Content-Type", f"multipart/related; boundary={boundary}")
 
     try:
-        with urllib.request.urlopen(req) as resp:
-            res_data = json.loads(resp.read().decode("utf-8"))
-            return res_data["id"]
+        status, body_bytes = request_with_retry(req)
+        res_data = json.loads(body_bytes.decode("utf-8"))
+        return res_data["id"]
     except urllib.error.HTTPError as e:
-        err_body = e.read().decode("utf-8", errors="replace")
-        print(f"[ERROR] Drive POST multipart failed ({e.code}): {err_body}")
+        print(f"[ERROR] Drive POST multipart failed ({e.code}): {e.msg}")
+        raise
+    except Exception as e:
+        print(f"[ERROR] Drive POST multipart failed: {e}")
         raise
 
 
@@ -207,26 +251,47 @@ def sync_manifest(
     files_map = manifest.get("files", {})
     repo_root = manifest_path.parent
 
+    # Normalize target filter for cross-platform matching (e.g. windows backslashes)
+    target_norm = Path(target_file_filter).as_posix().lstrip("./") if target_file_filter else None
+
     print("=== Google Drive Real-Time Sync ===")
     print(f"Target Folder: {folder_id}")
     print(f"Notebook ID:   {notebook_id}")
     print(f"Tracked Files: {len(files_map)}")
     print(f"Mode:          {'DRY-RUN (Preview Only)' if dry_run else 'LIVE SYNC'}")
+    if target_norm:
+        print(f"File Filter:   {target_norm}")
     print("-----------------------------------")
 
+    matched_filter = False
     if dry_run:
         for rel_path, meta in files_map.items():
-            if target_file_filter and rel_path != target_file_filter:
+            rel_norm = Path(rel_path).as_posix().lstrip("./")
+            if target_norm and rel_norm != target_norm:
                 continue
+            matched_filter = True
             local_path = repo_root / rel_path
             status = "EXISTS" if local_path.exists() else "MISSING"
             drive_id = meta.get("drive_file_id") or "[NEW FILE NEEDED]"
             print(f"[{status}] {rel_path} -> {meta.get('drive_file_name')} (ID: {drive_id})")
+
+        if target_norm and not matched_filter:
+            print(f"[ERROR] Target file filter '{target_file_filter}' matched no tracked files in manifest.")
+            return 1
         return 0
 
     client_id, client_secret, refresh_token = get_oauth_credentials()
-    if not (client_id and client_secret and refresh_token):
-        print("[ERROR] Missing OAuth credentials! Set GDRIVE_CLIENT_ID, GDRIVE_CLIENT_SECRET, GDRIVE_REFRESH_TOKEN.")
+    missing_creds = []
+    if not client_id:
+        missing_creds.append("GDRIVE_CLIENT_ID")
+    if not client_secret:
+        missing_creds.append("GDRIVE_CLIENT_SECRET")
+    if not refresh_token:
+        missing_creds.append("GDRIVE_REFRESH_TOKEN")
+
+    if missing_creds:
+        print(f"[ERROR] Missing OAuth credentials: {', '.join(missing_creds)}")
+        print("Please configure environment variables or local credential files.")
         return 1
 
     access_token = obtain_access_token(client_id, client_secret, refresh_token)
@@ -234,19 +299,25 @@ def sync_manifest(
 
     manifest_modified = False
     success_count = 0
+    failure_count = 0
 
     for rel_path, meta in files_map.items():
-        if target_file_filter and rel_path != target_file_filter:
+        rel_norm = Path(rel_path).as_posix().lstrip("./")
+        if target_norm and rel_norm != target_norm:
             continue
 
+        matched_filter = True
         local_path = repo_root / rel_path
         if not local_path.exists():
-            print(f"[SKIP] Local file not found: {rel_path}")
+            print(f"[ERROR] Local tracked file missing: {rel_path}")
+            failure_count += 1
             continue
 
         with open(local_path, "rb") as f:
-            content_bytes = f.read()
+            raw_bytes = f.read()
 
+        # Deterministic cross-platform normalization: CRLF -> LF
+        content_bytes = raw_bytes.replace(b"\r\n", b"\n")
         content_hash = hashlib.sha256(content_bytes).hexdigest()[:16]
         last_hash = meta.get("sha256")
         file_id = meta.get("drive_file_id")
@@ -276,6 +347,7 @@ def sync_manifest(
                 success_count += 1
             else:
                 print("FAILED")
+                failure_count += 1
         else:
             print(f"[CREATE] {rel_path} -> {doc_name} in folder {folder_id}...", end=" ", flush=True)
             try:
@@ -287,6 +359,11 @@ def sync_manifest(
                 success_count += 1
             except Exception as e:
                 print(f"FAILED: {e}")
+                failure_count += 1
+
+    if target_norm and not matched_filter:
+        print(f"[ERROR] Target file filter '{target_file_filter}' matched no tracked files in manifest.")
+        return 1
 
     if manifest_modified:
         with open(manifest_path, "w", encoding="utf-8") as f:
@@ -294,10 +371,14 @@ def sync_manifest(
         print(f"[MANIFEST] Updated {manifest_path.name} with permanent Drive File IDs and hashes.")
 
     print("-----------------------------------")
-    print(f"Sync completed: {success_count} file(s) synchronized successfully.")
+    print(f"Sync completed: {success_count} file(s) successful, {failure_count} failure(s).")
 
     if sync_nlm and notebook_id:
         sync_notebooklm_sources(notebook_id)
+
+    if failure_count > 0:
+        print(f"[ERROR] Synchronization encountered {failure_count} failure(s).")
+        return 1
 
     return 0
 
@@ -323,3 +404,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

@@ -44,14 +44,16 @@ jobs:
         run: |
           python scripts/sync_drive.py
 
-      - name: Commit Manifest Updates If New File IDs Were Registered
+      - name: Commit Manifest Updates If Modified
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
           if git status --porcelain drive-manifest.json | grep -q 'drive-manifest.json'; then
             git add drive-manifest.json
-            git commit -m 'chore(drive): update permanent drive_file_ids in manifest [skip ci]'
-            git push
+            git commit -m 'chore(drive): update drive-manifest.json hashes and metadata [skip ci]'
+            git pull --rebase origin main
+            git push origin main
           else
             echo 'No manifest changes to commit.'
           fi
+

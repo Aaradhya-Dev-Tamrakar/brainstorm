@@ -7,43 +7,43 @@
       "drive_file_id": "1K4Ve8huc9KFURX3y1i9jIC9RRQmmFN_QNqQYKKAbLLg",
       "drive_file_name": "brainstorm_PROFILE.md",
       "description": "Evidence-Hardened Engineering Profile & Dossier (v2.1.0)",
-      "sha256": "6797c063f0d09a7c"
+      "sha256": "1b70b2877e78795f"
     },
     "AARADHYA_MASTER_v165.md": {
       "drive_file_id": "1PXvkqE9ZeT6-bhb20jhMRP1cCNsqcFnNp0XKm80QH7g",
       "drive_file_name": "AARADHYA_MASTER_v165.md",
       "description": "Canonical Master Profile v165",
-      "sha256": "9fec57b99f660ed4"
+      "sha256": "70ba27749777eaf8"
     },
     "README.md": {
       "drive_file_id": "1fk81kT5Y9szz5l3-jduqqNHmGTaeHx31aE9zn9eOGC8",
       "drive_file_name": "brainstorm_README.md",
       "description": "Ecosystem Architecture & Repository Overview",
-      "sha256": "827d41988e811c97"
+      "sha256": "4d22b56090d6d90a"
     },
     "AGENTS.md": {
       "drive_file_id": "1u4p1ZvjOtqDr6-zYxcTGdImVdrxQOnVRmSHoZ8_WPww",
       "drive_file_name": "brainstorm_AGENTS.md",
       "description": "Epistemic Governance & Multi-Model Cognitive Council Rules",
-      "sha256": "b7abb2bbeb74fb5d"
+      "sha256": "50ee6acd7e0e5bd2"
     },
     "ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md": {
       "drive_file_id": "1ogGFwfL6OwPAXI2I7f5NEe-ZmnIWNdrOusuOd26_eh4",
       "drive_file_name": "ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md",
       "description": "Ecosystem Architectural Brainstorm",
-      "sha256": "f7f358e2df44bb7c"
+      "sha256": "c09bd2af4a29e358"
     },
     "report/quantitative-claims-audit.md": {
       "drive_file_id": "1ZvHwSjiwR5ZI34RFCw-cQL8ZIiyxe6ec8tGMDsiNeWg",
       "drive_file_name": "quantitative-claims-audit.md",
       "description": "Quantitative Claims & Methodology Audit",
-      "sha256": "6ea318aa752ef330"
+      "sha256": "a88b759524162ee0"
     },
     "graphify-out/GRAPH_REPORT.md": {
       "drive_file_id": "1K5BBmRzLXOq6dh-7iZE1XV7u2M9B1qdE_zqymnNTfjk",
       "drive_file_name": "brainstorm_GRAPH_REPORT.md",
       "description": "Graphify Knowledge Graph Structural Report",
-      "sha256": "f8affbf7d0247a42"
+      "sha256": "5e7d797256960f81"
     }
   }
 }

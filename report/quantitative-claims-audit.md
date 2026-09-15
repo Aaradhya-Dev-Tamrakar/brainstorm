@@ -166,3 +166,10 @@ Every quantitative claim in this repository must specify:
 | **`VERIFIED_SIMULATED`** | 2 | Rigorously simulated in SimPy with seed control; must not be claimed as physical silicon. |
 | **`QUALIFIED_HEURISTIC`** | 1 | Sensible bottom-up labor estimation bounded by explicit assumptions. |
 | **`UNCALIBRATED_TARGET`** | 1 | Headless Invariant Assurance Engine (target: 0 false positives; awaiting MVP execution). |
+
+---
+
+## 4. Continuous Synchronization Verification
+* **Sync Architecture:** Drive Manifest Continuous Ingestion Engine (`scripts/sync_drive.py`).
+* **Delta Sync Verification Token:** `AUDIT-SYNC-TOKEN-2026-09-15-INPLACE-REFRESH-OK`.
+

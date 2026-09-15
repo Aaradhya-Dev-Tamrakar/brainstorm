@@ -12,7 +12,7 @@
 > **Repository:** `F:\Aaradhya-Dev-Tamrakar\brainstorm`  
 > **Execution Context:** Antigravity / Python CLI / OpenXML  
 > **Upstream Trace:** [`schemas/capability.contract.v1.json`](../../schemas/capability.contract.v1.json), [`schemas/capability-registry.yaml`](../../schemas/capability-registry.yaml)  
-> **Downstream Trace:** `lipikaar-ai` CLI, Word Automation, Grammar Linter & Document Repair Service  
+> **Downstream Trace:** `nepali-ocr-ai` CLI, Word Automation, Grammar Linter & Document Repair Service  
 
 ---
 

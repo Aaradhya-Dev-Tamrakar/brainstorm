@@ -1,16 +1,16 @@
 {
   "$schema": "../capability.contract.v1.json",
-  "module": "lipikaar-ai",
+  "module": "nepali-ocr-ai",
   "version": "1.1.0",
-  "location": "F:\\Aaradhya-Dev-Tamrakar\\lipikaar-ai",
-  "tracking_branch": "lipikaar-ai",
+  "location": "F:\\Aaradhya-Dev-Tamrakar\\nepali-ocr-ai",
+  "tracking_branch": "nepali-ocr-ai",
   "runtime": "python3.11",
   "mcp_endpoint": {
     "transport": "stdio",
     "command": "python",
     "args": [
       "-m",
-      "lipikaar.mcp_server"
+      "nepali_ocr_ai.mcp_server"
     ]
   },
   "capabilities": [
@@ -250,7 +250,7 @@
   "metadata": {
     "author": "Aaradhya Dev Tamrakar",
     "license": "MIT",
-    "repository_url": "https://github.com/Aaradhya-Dev-Tamrakar/brainstorm/tree/lipikaar-ai",
+    "repository_url": "https://github.com/Aaradhya-Dev-Tamrakar/brainstorm/tree/nepali-ocr-ai",
     "last_updated": "2026-09-15"
   }
 }

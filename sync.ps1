@@ -112,7 +112,8 @@ $KnownToolRepos = @(
     "F:\Aaradhya-Dev-Tamrakar\makerspace",
     "F:\AaradhyaDT\AaradhyaDTmr.github.io",
     "F:\AaradhyaDT\nabintmr.github.io",
-    "F:\AaradhyaDT\react-workshop-ieeekecktm"
+    "F:\AaradhyaDT\react-workshop-ieeekecktm",
+    "F:\Aaradhya-Dev-Tamrakar\github-pilot"
 )
 
 function Write-Status {

@@ -1,0 +1,121 @@
+{
+  "$schema": "../capability.contract.v1.json",
+  "module": "github-pilot",
+  "version": "1.0.0",
+  "location": "F:\\Aaradhya-Dev-Tamrakar\\github-pilot",
+  "tracking_branch": "github-pilot",
+  "runtime": "python3.11",
+  "mcp_endpoint": {
+    "transport": "stdio",
+    "command": "python",
+    "args": ["-m", "pilot.cli", "status"]
+  },
+  "capabilities": [
+    {
+      "id": "fleet_health_audit",
+      "description": "Deterministic repository hygiene, license compliance, and CI health audit across multi-account GitHub fleet.",
+      "category": "computation",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "deterministic_execution",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 30000,
+      "inputs": {
+        "type": "object",
+        "properties": {
+          "max_repos": { "type": "integer", "default": 50 }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["total_repos_scanned", "average_health_score"],
+        "properties": {
+          "total_repos_scanned": { "type": "integer" },
+          "total_stars": { "type": "integer" },
+          "average_health_score": { "type": "number" },
+          "critical_anomalies_count": { "type": "integer" }
+        }
+      }
+    },
+    {
+      "id": "profile_readme_synthesis",
+      "description": "Generates dynamic SVG radar charts and updates personal GitHub profile README with real-time fleet telemetry.",
+      "category": "computation",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "deterministic_execution",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 15000,
+      "inputs": {
+        "type": "object",
+        "properties": {
+          "output_path": { "type": "string" },
+          "svg_path": { "type": "string" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["success"],
+        "properties": {
+          "success": { "type": "boolean" },
+          "rendered_bytes": { "type": "integer" }
+        }
+      }
+    },
+    {
+      "id": "ecosystem_changelog_digest",
+      "description": "Scans local git commits across active ecosystem branches and categorizes them by conventional commit tags.",
+      "category": "computation",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "deterministic_execution",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 10000,
+      "inputs": {
+        "type": "object",
+        "properties": {
+          "days": { "type": "integer", "default": 7 }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["total_commits"],
+        "properties": {
+          "total_commits": { "type": "integer" },
+          "markdown_digest": { "type": "string" }
+        }
+      }
+    },
+    {
+      "id": "trending_topic_scrape",
+      "description": "Zero-auth web scraping of GitHub trending repositories and high-velocity topics without burning API quota.",
+      "category": "computation",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "deterministic_execution",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 20000,
+      "inputs": {
+        "type": "object",
+        "properties": {
+          "language": { "type": ["string", "null"] },
+          "since": { "type": "string", "enum": ["daily", "weekly", "monthly"] }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["count", "repositories"],
+        "properties": {
+          "count": { "type": "integer" },
+          "repositories": { "type": "array" }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "author": "Aaradhya Dev Tamrakar",
+    "license": "MIT",
+    "repository_url": "https://github.com/Aaradhya-Dev-Tamrakar/github-pilot",
+    "last_updated": "2026-09-15"
+  }
+}

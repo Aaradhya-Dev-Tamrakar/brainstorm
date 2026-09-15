@@ -113,7 +113,8 @@ $KnownToolRepos = @(
     "F:\AaradhyaDT\AaradhyaDTmr.github.io",
     "F:\AaradhyaDT\nabintmr.github.io",
     "F:\AaradhyaDT\react-workshop-ieeekecktm",
-    "F:\Aaradhya-Dev-Tamrakar\github-pilot"
+    "F:\Aaradhya-Dev-Tamrakar\github-pilot",
+    "F:\Aaradhya-Dev-Tamrakar\nepali-ocr-ai"
 )
 
 function Write-Status {

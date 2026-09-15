@@ -1,0 +1,191 @@
+{
+  "$schema": "../capability.contract.v1.json",
+  "module": "lipikaar-ai",
+  "version": "1.0.0",
+  "location": "F:\\Aaradhya-Dev-Tamrakar\\lipikaar-ai",
+  "tracking_branch": "lipikaar-ai",
+  "runtime": "python3.11",
+  "mcp_endpoint": {
+    "transport": "stdio",
+    "command": "python",
+    "args": [
+      "-m",
+      "lipikaar.mcp_server"
+    ]
+  },
+  "capabilities": [
+    {
+      "id": "ocr_nepali_document",
+      "description": "Extracts high-fidelity Devanagari text and paragraph layouts from scanned documents, photocopies, or images using multimodal vision AI.",
+      "category": "ingestion_perception",
+      "deterministic": false,
+      "side_effects": false,
+      "verification_tier": "empirical_benchmark",
+      "cost_tier": "low_token_cloud",
+      "objective": "extract_devanagari_text",
+      "timeout_ms": 15000,
+      "invariants_checked": [
+        "INV-NEP-003"
+      ],
+      "inputs": {
+        "type": "object",
+        "required": [
+          "image_path"
+        ],
+        "properties": {
+          "image_path": {
+            "type": "string"
+          },
+          "target_font_mode": {
+            "type": "string",
+            "enum": [
+              "unicode",
+              "preeti",
+              "both"
+            ]
+          }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": [
+          "extracted_unicode_text",
+          "confidence_score"
+        ],
+        "properties": {
+          "extracted_unicode_text": {
+            "type": "string"
+          },
+          "confidence_score": {
+            "type": "number"
+          },
+          "layout_blocks": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "transcode_nepali_fonts",
+      "description": "Deterministic bi-directional transcoding between Unicode Devanagari and legacy 8-bit fonts (Preeti, Kantipur) with ligature and prefix-matra preservation.",
+      "category": "computational_engine",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "unit_ast_checked",
+      "cost_tier": "zero_token_local",
+      "objective": "convert_font_encoding",
+      "timeout_ms": 5000,
+      "invariants_checked": [
+        "INV-NEP-001"
+      ],
+      "inputs": {
+        "type": "object",
+        "required": [
+          "text",
+          "source_encoding",
+          "target_encoding"
+        ],
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "source_encoding": {
+            "type": "string",
+            "enum": [
+              "unicode",
+              "preeti",
+              "kantipur"
+            ]
+          },
+          "target_encoding": {
+            "type": "string",
+            "enum": [
+              "unicode",
+              "preeti",
+              "kantipur"
+            ]
+          }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": [
+          "converted_text",
+          "character_fidelity"
+        ],
+        "properties": {
+          "converted_text": {
+            "type": "string"
+          },
+          "character_fidelity": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    {
+      "id": "repair_word_document",
+      "description": "Parses Word (.docx) OpenXML runs, detects legacy Devanagari font hack runs, and transcodes them cleanly to Unicode (or vice versa) while preserving tables and formatting.",
+      "category": "presentation_publishing",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "unit_ast_checked",
+      "cost_tier": "zero_token_local",
+      "objective": "repair_docx_fonts",
+      "timeout_ms": 10000,
+      "invariants_checked": [
+        "INV-NEP-002"
+      ],
+      "inputs": {
+        "type": "object",
+        "required": [
+          "input_docx_path",
+          "target_font_mode"
+        ],
+        "properties": {
+          "input_docx_path": {
+            "type": "string"
+          },
+          "output_docx_path": {
+            "type": "string"
+          },
+          "target_font_mode": {
+            "type": "string",
+            "enum": [
+              "unicode_kalimati",
+              "legacy_preeti"
+            ]
+          }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": [
+          "output_docx_path",
+          "runs_modified",
+          "tables_preserved"
+        ],
+        "properties": {
+          "output_docx_path": {
+            "type": "string"
+          },
+          "runs_modified": {
+            "type": "integer"
+          },
+          "tables_preserved": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "author": "Aaradhya Dev Tamrakar",
+    "license": "MIT",
+    "repository_url": "https://github.com/Aaradhya-Dev-Tamrakar/brainstorm/tree/lipikaar-ai",
+    "last_updated": "2026-09-15"
+  }
+}

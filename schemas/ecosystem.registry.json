@@ -215,6 +215,18 @@
       "local_path": "F:\\Aaradhya-Dev-Tamrakar\\github-pilot",
       "core_superpower": "Autonomous macro-plane GitHub profile, fleet health auditor, and ecosystem navigator",
       "contract_ref": "schemas/examples/github-pilot.contract.json"
+    },
+    {
+      "index": 19,
+      "id": "lipikaar-ai",
+      "branch": "lipikaar-ai",
+      "name": "Lipikaar-AI",
+      "category": "computational_engine",
+      "tech_stack": "Python 3.11, python-docx, FastMCP",
+      "execution_context": "Local / Microservice",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\lipikaar-ai",
+      "core_superpower": "Nepali vision OCR, bi-directional Preeti-Unicode phonetic transcoder, and OpenXML Word (.docx) layout repair engine",
+      "contract_ref": "schemas/examples/lipikaar-ai.contract.json"
     }
   ]
 }

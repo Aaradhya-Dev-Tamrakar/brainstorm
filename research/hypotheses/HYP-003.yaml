@@ -1,0 +1,26 @@
+id: HYP-003
+title: "Deterministic Phonetic AST Intermediate Representation Achieves Zero Ligature Loss Across Preeti-Unicode DOCX Conversions"
+author: "Aaradhya Dev Tamrakar"
+date: "2026-09-15"
+
+# Theoretical Justification
+hypothesis: >
+  Parsing Devanagari text into an explicit Phonetic Syllable AST (isolating onset consonants,
+  viramas, nuktas, medial glides, vowel signs, and rephs) before emitting target font runs guarantees
+  >= 99.8% round-trip conversion accuracy between Unicode Devanagari and legacy 8-bit Preeti/Kantipur fonts,
+  eliminating character corruption and ligature displacement in Word (.docx) documents.
+why_we_believe_it: >
+  Naive regex find-and-replace fails on compound conjuncts and prefix vowel signs ('ि') because
+  legacy fonts mandate visual typing order while Unicode enforces phonetic storage order. An intermediate
+  syllabic AST normalizes ordering deterministically.
+counterargument: >
+  Unstandardized legacy glyph variants (e.g. uncommon ligatures like 'द्द', 'द्म', 'ह्र') across non-standard
+  print houses may fall outside standard ASCII mapping tables.
+
+# Experimental Falsification Protocol
+target_experiment: "NEP-001"
+success_metric: "Zero ligature inversion or character dropping across a 10,000-word corpus of official Nepali legal and administrative texts."
+failure_condition: "Character divergence rate > 0.2% on standard Devanagari dictionaries or XML run corruption inside Word tables."
+
+# Lifecycle State: proposed | active | verified | falsified | retired
+status: proposed

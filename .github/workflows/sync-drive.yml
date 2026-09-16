@@ -52,7 +52,7 @@ jobs:
             git add drive-manifest.json
             git commit -m 'chore(drive): update drive-manifest.json hashes and metadata [skip ci]'
             git pull --rebase origin main
-            git push origin main
+            git push origin main || echo "::warning::Direct push to main was blocked by branch ruleset. Manifest changes should be committed via PR."
           else
             echo 'No manifest changes to commit.'
           fi

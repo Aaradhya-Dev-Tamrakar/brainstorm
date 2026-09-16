@@ -4,10 +4,18 @@ Warehouse Logistics Memory Simulator (Lightweight GPU-to-DRAM Discrete Event Mod
 Demonstrates the exact penalty of uncoalesced memory access and the benefit of
 Smart Dynamic Coalescing (v+1) and Near-Memory Reduction (v+2).
 
+The row-buffer hit rate is calculated over row-buffer accesses
+(`row_hits + row_misses`).  For v+2, those accesses are the internal DRAM
+stream, while `total_bursts` remains the single scalar transaction sent over
+the external bus.
+
 Zero dependencies. Zero analog headache. Pure algorithmic systems logic.
 """
 
 from dataclasses import dataclass
+import argparse
+import json
+from pathlib import Path
 from typing import List
 import random
 
@@ -31,8 +39,28 @@ class SimulationStats:
     total_latency_cycles: int
     bytes_transferred: int
 
+    @property
+    def row_buffer_accesses(self) -> int:
+        return self.row_hits + self.row_misses
+
+    @property
+    def row_buffer_hit_rate(self) -> float:
+        return self.row_hits / max(1, self.row_buffer_accesses)
+
+    def as_dict(self) -> dict:
+        return {
+            "mode": self.mode,
+            "total_bursts": self.total_bursts,
+            "row_hits": self.row_hits,
+            "row_misses": self.row_misses,
+            "row_buffer_accesses": self.row_buffer_accesses,
+            "row_buffer_hit_rate": self.row_buffer_hit_rate,
+            "total_latency_cycles": self.total_latency_cycles,
+            "bytes_transferred": self.bytes_transferred,
+        }
+
     def print_summary(self):
-        hit_rate = (self.row_hits / max(1, self.total_bursts)) * 100
+        hit_rate = self.row_buffer_hit_rate * 100
         print(f"\n[{self.mode.upper()}]")
         print(f"  |-- Bus Bursts Dispatched : {self.total_bursts} transactions")
         print(f"  |-- Data Moved Over Bus   : {self.bytes_transferred} bytes")
@@ -132,7 +160,16 @@ def run_upgrade_v2_near_memory_reduction(vector_size_elements: int) -> Simulatio
     )
 
 
-def main():
+def main(argv=None):
+    parser = argparse.ArgumentParser(description="Run the warehouse memory simulator.")
+    parser.add_argument(
+        "--json-output",
+        type=Path,
+        metavar="PATH",
+        help="also write deterministic baseline/v1/v2 metrics as JSON",
+    )
+    args = parser.parse_args(argv)
+
     print("=" * 70)
     print("WAREHOUSE LOGISTICS GPU-TO-DRAM SIMULATOR (Brainstorm Spec)")
     print("=" * 70)
@@ -163,10 +200,26 @@ def main():
     print("Simulating Attention Softmax Reduction (Vector Dimension N = 4096 elements)...")
     v2 = run_upgrade_v2_near_memory_reduction(4096)
     v2.print_summary()
-    
+
     traffic_reduction = ((4096 * 4 - v2.bytes_transferred) / (4096 * 4)) * 100
     print(f">> v+2 Bus Traffic Reclaimed: {traffic_reduction:.3f}% reduction on physical interconnect!")
     print("=" * 70)
+
+    if args.json_output:
+        results = {
+            "baseline": baseline.as_dict(),
+            "v1": v1.as_dict(),
+            "v2": v2.as_dict(),
+            "derived": {
+                "v1_speedup": speedup,
+                "v1_bus_traffic_reduction_percent": bus_saving,
+                "v2_boundary_traffic_reduction_percent": traffic_reduction,
+            },
+        }
+        args.json_output.write_text(
+            json.dumps(results, indent=2, sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
 
 
 if __name__ == "__main__":

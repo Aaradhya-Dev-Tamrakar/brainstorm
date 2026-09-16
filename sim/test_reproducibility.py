@@ -11,8 +11,6 @@ from sim.warehouse_mem_sim import main
 
 class ReproducibilityTests(unittest.TestCase):
     def test_canonical_output_matches_simulator(self):
-        # Deliberate failure to test GitHub Ruleset CI blocking gate on brainstorm
-        self.assertEqual("DELIBERATE_RULESET_FAILURE", "EXPECTED_BLOCK", "Ruleset enforcement verification: this failure must block PR merge")
         output = Path(__file__).with_name(".reproducibility.json")
         try:
             with redirect_stdout(StringIO()):

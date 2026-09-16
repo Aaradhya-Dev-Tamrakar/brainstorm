@@ -14,3 +14,29 @@ claim. The v+1 speedup is measured on the modeled workload. The v+2
 `99.976%` figure is **boundary traffic reduction for the isolated reduction
 channel**; it is not a whole-pipeline attention result or a hardware
 measurement.
+
+## STRANGLER-IPU pipeline runner
+
+`run_experiments.py` is a separate, zero-dependency FIFO queueing model for
+EXP-001. Reproduce the full controlled sweep from the repository root:
+
+```powershell
+python sim\run_experiments.py --reproduce-all
+python -m unittest sim.test_run_experiments
+```
+
+Use `--quick` for a smoke run, `--seed N` to select the deterministic workload
+seed, or `--output-dir PATH` to write elsewhere. The default artifact is
+`sim/results/experiments/results.json`. It contains the conventional host,
+naive partitioned, prefetch-only, and STRANGLER adaptive variants; raw records,
+an overload-aware summary, and a rho sensitivity/ablation table.
+
+The model explicitly queues each stage using
+`completion=max(arrival, previous_completion)+work/capacity`. It therefore does
+not treat `min(rate,bus)` as a completed transfer. Rates, payloads, DRAM,
+compute, and interconnect capacities are assumptions. Results are
+`HEURISTIC_HYPOTHESIS` evidence: useful for testing relationships and claims
+such as ~2.26x or ~99.98%, but not hardware measurements or validation of those
+figures. The canonical result hash covers only deterministic configuration and
+measurements; runtime metadata (timestamp, command, and git provenance) is
+retained separately for auditability.

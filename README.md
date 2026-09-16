@@ -24,6 +24,26 @@ To eliminate ambiguity between what is **implemented**, what is **experimentally
 * ⚙️ **Low-Cost Cognitive-Worker Baseline:** Minimizes fixed subscription commitments and measures actual marginal API/compute cost per verified task.
 * ⚠️ **[Known Limitations & Failure Modes](report/limitations.md):** Transparent disclosure of technical risks, formalization gaps, benchmark dependencies, and maintenance debt.
 
+### Required `main` branch checks
+
+The following repository-owned checks are the merge gates for the Evidence-Backed
+Ecosystem. Configure them as required status checks in GitHub branch protection or
+repository rulesets after the workflows are present on the default branch:
+
+| Repository | Required check |
+|---|---|
+| `super-nlm` | `pytest` |
+| `Claude-Desktop` | `Python tests` |
+| `Claude-Desktop` | `Lease security (adversarial)` |
+| `Claude-Desktop` | `PowerShell tests` |
+| `brainstorm` | `verify` |
+| `AaradhyaDT.github.io` | `verify` |
+
+Recommended policy: require pull requests, required checks to be up to date before
+merge, one approving review, and no force pushes to `main`. Branch protection is a
+GitHub-admin operation; the repository workflows intentionally provide the stable
+check names but do not attempt to manage account-level rulesets.
+
 ---
 
 ## 🧭 Core Architecture: Capability Mesh & Decoupled Cognition

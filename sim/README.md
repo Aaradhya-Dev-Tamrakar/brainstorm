@@ -40,3 +40,14 @@ such as ~2.26x or ~99.98%, but not hardware measurements or validation of those
 figures. The canonical result hash covers only deterministic configuration and
 measurements; runtime metadata (timestamp, command, and git provenance) is
 retained separately for auditability.
+
+The conventional and STRANGLER paths retain the same modeled two-pass host
+memory cost; STRANGLER changes the bytes per pass to `rho * payload`. This
+makes `rho=1` a valid no-reduction control rather than an unfair host-work
+advantage.
+
+The same command also generates `sim/results/experiments/REPORT.md`. The report
+is derived from the JSON artifact and includes the formal FIFO model, mechanism
+mapping, five-seed speedup distributions (mean, p50, p95, p99, min, max),
+boundary-pressure falsification probes, and explicit model limitations. It is
+an inspectability aid, not an additional evidence tier or a hardware result.

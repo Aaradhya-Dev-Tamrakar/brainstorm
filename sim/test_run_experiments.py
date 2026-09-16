@@ -29,11 +29,19 @@ class RunExperimentsTests(unittest.TestCase):
                 self.assertEqual(main(["--reproduce-all", "--quick", "--seed", "9",
                                        "--output-dir", directory]), 0)
             result = json.loads((Path(directory) / "results-quick.json").read_text())
+            self.assertTrue((Path(directory) / "REPORT-quick.md").exists())
         for key in ("schema_version", "run_timestamp_utc", "provenance",
-                    "raw_records", "summary", "limitations", "canonical_result"):
+                    "raw_records", "summary", "limitations", "canonical_result",
+                    "inspectability"):
             self.assertIn(key, result)
         self.assertEqual(set(r["variant"] for r in result["raw_records"]),
                          {"conventional", "naive_partitioned", "prefetch_only", "strangler_adaptive"})
+
+    def test_falsification_probes_are_present(self):
+        report = build_result(seed=42, quick=True)["inspectability"]
+        self.assertEqual(set(report["falsification_probes"]),
+                         {"high_interconnect", "low_ingress_pressure",
+                          "tiny_working_set", "no_reduction"})
 
     def test_qualitative_reduction_relationship(self):
         rows = run_case(ExperimentConfig(rho=0.01))["records"]

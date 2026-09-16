@@ -35,6 +35,13 @@ rate (10–1000 GB/s), rho (0.001–1), and interconnect (64/128/256 GB/s), with
 fixed payload, DRAM and compute assumptions. The output also includes a rho
 sensitivity table at 200 GB/s ingress and 64 GB/s interconnect.
 
+The runner also generates [`sim/results/experiments/REPORT.md`](../../sim/results/experiments/REPORT.md).
+That generated report is the inspectability layer for this package: it states
+the FIFO equations and assumptions, maps the controls to mechanisms, reports
+five-seed distributions, and runs high-bandwidth, low-pressure, tiny-working-set,
+and no-reduction falsification probes. It is generated from the JSON artifact;
+it does not promote the evidence tier.
+
 **Evidence tier: `HEURISTIC_HYPOTHESIS`.** This is a deterministic analytical
 model, not a hardware measurement. Every stage is a single FIFO server:
 `max(arrival, prior completion) + work/capacity`; overload therefore produces
@@ -42,6 +49,9 @@ queue delay and stall indicators. It does not claim the ~2.26x speedup or
 ~99.98% reduction. Boundary traffic reduction is not whole-model traffic,
 latency, or energy reduction. Coherence, finite buffers, packet effects,
 multi-server scheduling, and silicon implementation are limitations.
+The conventional and STRANGLER variants retain the same modeled two-pass host
+memory cost; only bytes per pass change with `rho`, so `rho=1` is a valid
+no-reduction control.
 
 ---
 

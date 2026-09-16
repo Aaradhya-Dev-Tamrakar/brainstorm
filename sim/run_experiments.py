@@ -93,7 +93,9 @@ def _run_variant(cfg: ExperimentConfig, variant: str) -> Dict[str, float]:
         # about silicon.
         transport_arrivals = [x + cfg.ipu_boundary_latency_us * 1e-6 for x in
                               _stage(ipu_done, boundary, cfg.interconnect_gb_s)]
-        host_done = _stage(transport_arrivals, [reduced] * cfg.chunks, cfg.dram_gb_s)
+        # Reduction changes payload size, not the modeled number of host-memory
+        # passes. Keeping the same two-pass cost makes rho=1 a valid control.
+        host_done = _stage(transport_arrivals, [reduced * 2.0] * cfg.chunks, cfg.dram_gb_s)
 
     compute_work = [payload if variant != "strangler_adaptive" else payload * cfg.rho] * cfg.chunks
     compute_done = _stage(host_done, compute_work, cfg.compute_gb_s)
@@ -139,6 +141,154 @@ def _summary(records: Iterable[Dict[str, object]]) -> Dict[str, object]:
     return {"by_variant": by_variant, "figures_are_model_outputs": True}
 
 
+def _percentile(values: Sequence[float], percentile: float) -> float:
+    ordered = sorted(values)
+    if not ordered:
+        raise ValueError("cannot summarize an empty sample")
+    index = (len(ordered) - 1) * percentile
+    lower = int(index)
+    upper = min(lower + 1, len(ordered) - 1)
+    return ordered[lower] + (ordered[upper] - ordered[lower]) * (index - lower)
+
+
+def _distribution(values: Sequence[float]) -> Dict[str, float]:
+    return {
+        "count": len(values),
+        "mean": sum(values) / len(values),
+        "min": min(values),
+        "p50": _percentile(values, 0.50),
+        "p95": _percentile(values, 0.95),
+        "p99": _percentile(values, 0.99),
+        "max": max(values),
+    }
+
+
+def _report_data(seed: int) -> Dict[str, object]:
+    representative = ExperimentConfig(seed=seed, ingress_gb_s=200.0, rho=0.01, interconnect_gb_s=64.0)
+    distribution = {}
+    for variant in VARIANTS:
+        values = [run_case(ExperimentConfig(seed=trial, ingress_gb_s=200.0,
+                                             rho=0.01, interconnect_gb_s=64.0))["records"]
+                  for trial in (42, 7, 13, 21, 99)]
+        speedups = [next(row["speedup_vs_conventional"] for row in rows
+                         if row["variant"] == variant) for rows in values]
+        distribution[variant] = _distribution(speedups)
+
+    falsification_configs = {
+        "high_interconnect": ExperimentConfig(seed=seed, ingress_gb_s=25.0, rho=0.01,
+                                              interconnect_gb_s=10000.0),
+        "low_ingress_pressure": ExperimentConfig(seed=seed, ingress_gb_s=1.0, rho=0.01,
+                                                 interconnect_gb_s=64.0),
+        "tiny_working_set": ExperimentConfig(seed=seed, payload_size_mb=0.01, ingress_gb_s=25.0,
+                                             rho=0.01, interconnect_gb_s=64.0),
+        "no_reduction": ExperimentConfig(seed=seed, ingress_gb_s=200.0, rho=1.0,
+                                         interconnect_gb_s=64.0),
+    }
+    falsification = {}
+    for name, cfg in falsification_configs.items():
+        rows = run_case(cfg)["records"]
+        conv = next(row for row in rows if row["variant"] == "conventional")
+        strangler = next(row for row in rows if row["variant"] == "strangler_adaptive")
+        falsification[name] = {
+            "config": asdict(cfg),
+            "speedup": strangler["speedup_vs_conventional"],
+            "traffic_reduction_percent": strangler["traffic_reduction_percent"],
+            "benefit_collapses": strangler["speedup_vs_conventional"] <= 1.05,
+            "interpretation": "falsification probe; not a claim that the mechanism must lose in all hardware",
+        }
+    return {
+        "representative_config": asdict(representative),
+        "seed_set": [42, 7, 13, 21, 99],
+        "speedup_distributions": distribution,
+        "falsification_probes": falsification,
+        "mechanism_mapping": {
+            "conventional": "baseline host movement and compute",
+            "naive_partitioned": "partitioning/staging without reduction",
+            "prefetch_only": "staging overlap without boundary traffic reduction",
+            "strangler_adaptive": "boundary reduction plus IPU staging",
+        },
+    }
+
+
+def _render_report(result: Dict[str, object]) -> str:
+    inspect = result["inspectability"]
+    lines = [
+        "# STRANGLER-IPU Experiment Report",
+        "",
+        "> Evidence tier: `HEURISTIC_HYPOTHESIS`. This is a deterministic queueing",
+        "> model and not a hardware benchmark or silicon validation.",
+        "",
+        "## What was tested",
+        "",
+        f"- Schema: `{result['schema_version']}`; raw records: **{len(result['raw_records'])}**.",
+        "- Sweep dimensions: ingress rate, semantic density (`rho`), and interconnect bandwidth.",
+        "- Variants: conventional, naive partitioned, prefetch-only, and STRANGLER adaptive.",
+        "- Reproduction: `python sim\\run_experiments.py --reproduce-all`.",
+        f"- Canonical result SHA-256: `{result['canonical_result_sha256']}`.",
+        "",
+        "## Formal model and assumptions",
+        "",
+        "For each FIFO stage, completion is `C_i = max(A_i, C_(i-1)) + W_i / mu`,",
+        "where `A` is arrival time, `W` is bytes serviced, and `mu` is capacity in",
+        "decimal GB/s. Utilization is `lambda / mu`; queue delay is the observed",
+        "completion time beyond the offered arrival and service interval. STRANGLER",
+        "changes `W` at the host boundary from `payload` to `rho * payload`, while",
+        "adding an IPU service stage and fixed insertion latency.",
+        "",
+        "The model omits coherence traffic, finite buffers, packetization, multiple",
+        "servers, dynamic policies, energy, silicon timing, and real workloads.",
+        "",
+        "## Why the mechanism should help",
+        "",
+        "When the boundary is the bottleneck, reducing host-bound bytes lowers the",
+        "boundary service demand and can reduce queue buildup. Prefetch-only is the",
+        "control for overlap without traffic reduction; naive partitioning is the",
+        "control for extra staging without semantic reduction.",
+        "",
+        "## Distributional robustness",
+        "",
+        "| Variant | n | Mean speedup | P50 | P95 | P99 | Min | Max |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|",
+    ]
+    for variant, stats in inspect["speedup_distributions"].items():
+        lines.append("| {} | {} | {:.3f}x | {:.3f}x | {:.3f}x | {:.3f}x | {:.3f}x |".format(
+            variant, stats["count"], stats["mean"], stats["p50"], stats["p95"],
+            stats["p99"], stats["min"], stats["max"]))
+    lines += [
+        "",
+        "The five-seed sample measures model-output variation from arrival jitter; it",
+        "is not a confidence interval for hardware or a population-level estimate.",
+        "",
+        "## Falsification probes",
+        "",
+        "| Probe | Speedup | Boundary reduction | Benefit collapses? |",
+        "|---|---:|---:|:---:|",
+    ]
+    for name, probe in inspect["falsification_probes"].items():
+        lines.append("| {} | {:.3f}x | {:.3f}% | {} |".format(
+            name, probe["speedup"], probe["traffic_reduction_percent"],
+            "yes" if probe["benefit_collapses"] else "no"))
+    lines += [
+        "",
+        "These probes test whether the modeled advantage weakens when the boundary is",
+        "not pressured, reduction is absent, or the working set is tiny. A failed",
+        "probe is a model diagnostic, not evidence that hardware behaves identically.",
+        "",
+        "## Causal interpretation and limits",
+        "",
+        "The current package supports a mechanistic hypothesis: boundary traffic",
+        "reduction is the primary modeled cause of the speedup under boundary pressure.",
+        "It does not isolate eviction, staging, and adaptive-policy effects beyond the",
+        "four variant controls above. A future ablation should expose those mechanisms",
+        "as independent switches before any stronger causal claim is made.",
+        "",
+        "All figures are generated from the JSON artifact; no headline number in this",
+        "report is manually transcribed. Re-run the command above to reproduce it.",
+        "",
+    ]
+    return "\n".join(lines)
+
+
 def build_result(seed: int = 42, quick: bool = False) -> Dict[str, object]:
     rates = [25.0, 100.0, 500.0] if quick else [10.0, 25.0, 50.0, 100.0, 200.0, 500.0, 1000.0]
     rhos = [0.001, 0.01, 0.1, 0.5, 1.0] if quick else [0.001, 0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 1.0]
@@ -159,7 +309,7 @@ def build_result(seed: int = 42, quick: bool = False) -> Dict[str, object]:
         ablation.append(row)
     canonical = {"cases": cases, "ablation": ablation, "seed": seed}
     canonical_json = json.dumps(canonical, sort_keys=True, separators=(",", ":"))
-    return {
+    result = {
         "schema_version": SCHEMA_VERSION,
         "run_timestamp_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         # Keep the recorded command stable across output directories. The
@@ -186,6 +336,8 @@ def build_result(seed: int = 42, quick: bool = False) -> Dict[str, object]:
         "canonical_result_sha256": hashlib.sha256(canonical_json.encode("utf-8")).hexdigest(),
         "canonical_result": canonical,
     }
+    result["inspectability"] = _report_data(seed)
+    return result
 
 
 def _git_commit() -> str | None:
@@ -209,6 +361,9 @@ def main(argv=None) -> int:
     args.output_dir.mkdir(parents=True, exist_ok=True)
     output = args.output_dir / ("results-quick.json" if args.quick else "results.json")
     output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    (args.output_dir / ("REPORT-quick.md" if args.quick else "REPORT.md")).write_text(
+        _render_report(result), encoding="utf-8"
+    )
     print(f"Wrote {output} ({len(result['raw_records'])} records)")
     return 0
 

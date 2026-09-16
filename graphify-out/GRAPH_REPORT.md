@@ -1,16 +1,16 @@
 # Graph Report - brainstorm  (2026-09-16)
 
 ## Corpus Check
-- 68 files · ~286,324 words
+- 71 files · ~314,200 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1728 nodes · 1799 edges · 164 communities (128 shown, 34 thin omitted)
+- 2018 nodes · 2095 edges · 205 communities (166 shown, 37 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.88)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `bb89842e`
+- Built from commit: `1ecdaf66`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -20,7 +20,7 @@
 - properties
 - AI-Constraint-Solver.contract.json
 - ecosystem.registry.json
-- 2. Core Architectural & Systemic Limitations
+- Research Architectures Hub
 - capability.contract.v1.json
 - enum
 - enum
@@ -73,12 +73,12 @@
 - Turn 5
 - Turn 5
 - 7. Verify the actual enforcement
-- verification
+- properties
 - Turn 8
 - Turn 8
 - Turn 8
 - nepali-ocr-ai.contract.json
-- provenance
+- properties
 - run_experiments.py
 - Recommended order for Antigravity/Copilot
 - Turn 2
@@ -174,7 +174,48 @@
 - 🤖 Antigravity (2026-09-16T08:24:58Z)
 - 👤 User (2026-09-16T08:21:18Z)
 - The practical priority order
+- 7. Verify the actual enforcement
+- 4. `brainstorm` — commit corroborates the ecosystem sync, but not the simulation itself
+- Phase F — Cross-repository consistency gate
+- Turn 3
+- Turn 5
+- Turn 8
+- The practical priority order
+- Recommended order for Antigravity/Copilot
+- 2. Core Architectural & Systemic Limitations
+- 📎 Appendix: Independent Verification Plan (ChatGPT Session Continuation)
+- properties
+- The strongest part of this round
+- Personal Tool Ecosystem
+- required
+- STRANGLER-IPU Experiment Report
+- required
+- verification
+- provenance
+- My overall technical assessment
+- Phase E — CI and branch governance
+- Phase 2 — Independent verification
+- STRANGLER-IPU Experiment Report
+- enum
+- 2. Five-Pillar Financial & Capital Decomposition
+- ARCH-SPEC-005: Nepali OCR, Grammar Checker & Font-Agnostic Word Substrate (Lipikaar-AI)
+- INV-EPI-001: Verbatim Epistemic History Invariant
+- Phase A — `super-nlm` remediation
+- capabilities
+- required
+- Quantitative Claims Audit & Empirical Methodology Registry
+- Turn 4
+- Phase C — `brainstorm` reproducibility audit
+- Phase B — `Claude-Desktop` lease security verification
+- Phase D — Portfolio evidence-chain audit
+- $schema
+- version
+- 6. Do not assume it worked — test it
+- Phase 5 — Security and reliability review
+- location
+- claimed_result
 - 2. `Claude-Desktop` — implementation looks substantially correct
+- 3. `AaradhyaDT.github.io` — synchronization is real
 - 4. `brainstorm` — commit corroborates the ecosystem sync, but not the simulation itself
 - Phase F — Cross-repository consistency gate
 
@@ -183,24 +224,24 @@
 2. `Turn 3` - 45 edges
 3. `Turn 3` - 45 edges
 4. `Turn 3` - 45 edges
-5. `Turn 5` - 24 edges
+5. `Turn 3` - 45 edges
 6. `Turn 5` - 24 edges
 7. `Turn 5` - 24 edges
-8. `7. Verify the actual enforcement` - 14 edges
-9. `2. Granular Claims Audit Register` - 13 edges
-10. `Turn 8` - 13 edges
+8. `Turn 5` - 24 edges
+9. `Turn 5` - 24 edges
+10. `7. Verify the actual enforcement` - 18 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `STRANGLER-IPU` --implements--> `ARCH-SPEC-002 (IPU)`  [INFERRED]
   schemas/capability-registry.yaml → research/architectures/README.md
+- `Aaradhya Dev Tamrakar (ADT)` --references--> `Personal Tool Ecosystem`  [EXTRACTED]
+  PROFILE.md → README.md
+- `Aaradhya Dev Tamrakar (ADT)` --references--> `Experiment FLEET-001`  [EXTRACTED]
+  PROFILE.md → research/experiments/FLEET-001.md
+- `Aaradhya Dev Tamrakar (ADT)` --references--> `Calibrated Evidence Policy`  [EXTRACTED]
+  PROFILE.md → schemas/evidence-policy.md
 - `Aaradhya Dev Tamrakar (ADT)` --references--> `SPARK Wearable Gateway`  [EXTRACTED]
   PROFILE.md → schemas/capability-registry.yaml
-- `GPU & RAM Architecture Spec` --conceptually_related_to--> `STRANGLER-IPU`  [INFERRED]
-  research/experiments/GPU_RAM_ARCHITECTURE_SPEC.md → schemas/capability-registry.yaml
-- `Personal Tool Ecosystem` --references--> `Canonical Capability & Ecosystem Ontology`  [EXTRACTED]
-  README.md → schemas/capability-ontology.md
-- `Personal Tool Ecosystem` --references--> `Canonical Capability Registry`  [EXTRACTED]
-  README.md → schemas/capability-registry.yaml
 
 ## Import Cycles
 - None detected.
@@ -209,11 +250,11 @@
 - **4-Tier Jarvis Capability Mesh** — tool_super_nlm, tool_spark, tool_claude_fleet, tool_bias_aperture, tool_strangler_ipu [EXTRACTED 1.00]
 - **Adversarial Invariant Assurance Flow** — research_hypotheses_hyp_001, research_hypotheses_hyp_002, research_experiments_fleet_001 [INFERRED 0.80]
 
-## Communities (164 total, 34 thin omitted)
+## Communities (205 total, 37 thin omitted)
 
 ### Community 0 - "properties"
-Cohesion: 0.05
-Nodes (41): type, description, items, minItems, type, $ref, format, type (+33 more)
+Cohesion: 0.15
+Nodes (13): type, description, pattern, type, properties, metadata, module, runtime (+5 more)
 
 ### Community 1 - "properties"
 Cohesion: 0.18
@@ -231,13 +272,13 @@ Nodes (18): solver.mcp_server, capabilities, -m, location, mcp_endpoint, args, c
 Cohesion: 0.12
 Nodes (15): modules, name, orchestration_root, branch, local_path, repository, role, $schema (+7 more)
 
-### Community 5 - "2. Core Architectural & Systemic Limitations"
-Cohesion: 0.06
-Nodes (48): ARCH-RFC-001, ARCH-SPEC-002 (IPU), Aaradhya Dev Tamrakar (ADT), Project STRANGLER-IPU, Personal Tool Ecosystem, 1. Motivation & Policy, 2.1 Formalization Error (The Intent-Specification Gap), 2.2 Benchmark Dependence & Distribution Shifts (+40 more)
+### Community 5 - "Research Architectures Hub"
+Cohesion: 0.20
+Nodes (17): ARCH-RFC-001, ARCH-SPEC-002 (IPU), Aaradhya Dev Tamrakar (ADT), Project STRANGLER-IPU, ARCH-RFC-001: Record Keeping Standard, ARCH-RFC-002: Multi-Model Council Protocol, ARCH-RFC-003: Capstone Defense Standard, ARCH-SPEC-001: ECIE Systems Architect Paradigm (+9 more)
 
 ### Community 6 - "capability.contract.v1.json"
-Cohesion: 0.08
-Nodes (24): capabilities, category, inputs, location, module, outputs, runtime, $schema (+16 more)
+Cohesion: 0.20
+Nodes (9): additionalProperties, type, $defs, capability, description, $id, $schema, title (+1 more)
 
 ### Community 7 - "enum"
 Cohesion: 0.17
@@ -280,8 +321,8 @@ Cohesion: 0.43
 Nodes (7): evaluate_conventional_pipeline(), evaluate_ipu_pipeline(), sweep_ipu_breakeven.py ---------------------- Implementation of EXP-001:…, Ingress -> Bus -> Host DRAM -> Host GPU -> Compute -> Result, Ingress -> IPU (In-Flight Stream Transform) -> Interconnect (rho * data) -> Host, run_parameter_sweep(), SweepConfig
 
 ### Community 17 - "Defensible Economic Accounting & R&D Resource Allocation Model"
-Cohesion: 0.10
-Nodes (21): 1. Executive Summary & Epistemic Correction, 2.1 Pillar 1: Productive Capital Expenditure (CAPEX), 2.2 Pillar 2: Productive Operating Expenditure (OPEX), 2.3 Pillar 3: Academic Tuition & Cost of Living (Separated Baseline), 2.4 Pillar 4: Human Capital (Engineering Labor Invested), 2.5 Pillar 5: Estimated Replacement-Equivalent Labor Cost, 2. Five-Pillar Financial & Capital Decomposition, 3.1 Replacement-Cost to Direct-Cash-Spend Ratio ($\rho_{\text{cash}}$) (+13 more)
+Cohesion: 0.12
+Nodes (15): 1. Executive Summary & Epistemic Correction, 3.1 Replacement-Cost to Direct-Cash-Spend Ratio ($\rho_{\text{cash}}$), 3.2 Direct AI Spend as a Fraction of Replacement Base ($\phi_{\text{AI}}$), 3.3 Google Family Theoretical Retail Cost-Avoidance Multiplier ($M_{\text{retail}}$), 3. Defensible Financial & Operational Metrics, 4. Vectorized R&D Resource Consumption, 5.1 Discovery Cost Efficiency ($E_{\text{discovery}}$), 5.2 Human Intervention Ratio ($I_{\text{human}}$) (+7 more)
 
 ### Community 18 - "transcript_archiver.py"
 Cohesion: 0.43
@@ -300,8 +341,8 @@ Cohesion: 0.50
 Nodes (4): audit_repository(), parse_simple_yaml_capabilities(), reconciliation_engine.py ------------------------ Deterministic, zero-token,…, Fallback zero-dependency YAML parser for capability-registry.yaml.
 
 ### Community 25 - "2. Quantitative Claims Register"
-Cohesion: 0.13
-Nodes (15): 10. Central Technical Asset Replacement Valuation, 1. Fall Detection Classification AUC-ROC, 1. Scope & Audit Invariant, 2. Edge Neural Network Footprint (INT8), 2. Quantitative Claims Register, 3. Summary of Status Classifications, 3. Unit Test Suite Volume (SPARK), 4. Continuous Synchronization Verification (+7 more)
+Cohesion: 0.18
+Nodes (11): 10. Central Technical Asset Replacement Valuation, 1. Fall Detection Classification AUC-ROC, 2. Edge Neural Network Footprint (INT8), 2. Quantitative Claims Register, 3. Unit Test Suite Volume (SPARK), 4. STRANGLER-IPU Tail-Latency Reduction, 5. STRANGLER-IPU Host Memory Bus Contention Relief, 6. Working-Set RAM Purge (NovaOptimizer) (+3 more)
 
 ### Community 26 - "Agent Rules & Workflow Guidelines — Brainstorm & Ecosystem Orchestration"
 Cohesion: 0.25
@@ -376,8 +417,8 @@ Cohesion: 0.04
 Nodes (45): Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+37 more)
 
 ### Community 55 - "2026-09-16_INDEPENDENT-VERIFICATION-PLAN_CONVERSATION.md"
-Cohesion: 0.06
-Nodes (35): 2. `Claude-Desktop` — implementation looks substantially correct, 2. `Claude-Desktop` — implementation looks substantially correct, 3. `AaradhyaDT.github.io` — synchronization is real, 3. `AaradhyaDT.github.io` — synchronization is real, 3. `AaradhyaDT.github.io` — synchronization is real, 4. `brainstorm` — commit corroborates the ecosystem sync, but not the simulation itself, 4. `brainstorm` — commit corroborates the ecosystem sync, but not the simulation itself, 4. What I would configure for your four repos (+27 more)
+Cohesion: 0.04
+Nodes (44): 2. `Claude-Desktop` — implementation looks substantially correct, 2. `Claude-Desktop` — implementation looks substantially correct, 2. `Claude-Desktop` — implementation looks substantially correct, 3. `AaradhyaDT.github.io` — synchronization is real, 3. `AaradhyaDT.github.io` — synchronization is real, 3. `AaradhyaDT.github.io` — synchronization is real, 4. `brainstorm` — commit corroborates the ecosystem sync, but not the simulation itself, 4. `brainstorm` — commit corroborates the ecosystem sync, but not the simulation itself (+36 more)
 
 ### Community 56 - "Turn 5"
 Cohesion: 0.06
@@ -395,9 +436,9 @@ Nodes (34): 1. `super-nlm` — the clearest defect, 2. `Claude-Desktop` — genu
 Cohesion: 0.06
 Nodes (33): 1. Final Ecosystem Governance Audit Table, 2. Empirical Verification on `brainstorm` (Test A & B), 3. Release & Freeze Invariant, 3 repositories have active enforced rulesets, 7. Verify the actual enforcement, Assistant, Assistant, Assistant (+25 more)
 
-### Community 60 - "verification"
-Cohesion: 0.09
-Nodes (22): claimed, method, verified, warn, minLength, type, verification, type (+14 more)
+### Community 60 - "properties"
+Cohesion: 0.22
+Nodes (9): minLength, type, type, minLength, type, command, deterministic, method (+1 more)
 
 ### Community 61 - "Turn 8"
 Cohesion: 0.10
@@ -415,13 +456,13 @@ Nodes (20): 1. `super-nlm` is now substantially cleaner, 2. `Claude-Desktop` now
 Cohesion: 0.11
 Nodes (18): nepali_ocr_ai.mcp_server, capabilities, -m, location, mcp_endpoint, args, command, transport (+10 more)
 
-### Community 65 - "provenance"
-Cohesion: 0.12
-Nodes (17): recorded_at, source_commit, source_path, provenance, recorded_at, source_commit, source_path, additionalProperties (+9 more)
+### Community 65 - "properties"
+Cohesion: 0.20
+Nodes (10): recorded_at, source_commit, source_path, properties, format, type, minLength, type (+2 more)
 
 ### Community 66 - "run_experiments.py"
-Cohesion: 0.27
-Nodes (11): build_result(), ExperimentConfig, _git_commit(), main(), Deterministic, zero-dependency STRANGLER-IPU pipeline experiments. This is a…, FIFO single-server completion times, in seconds., run_case(), _run_variant() (+3 more)
+Cohesion: 0.21
+Nodes (15): build_result(), _distribution(), ExperimentConfig, _git_commit(), main(), _percentile(), Deterministic, zero-dependency STRANGLER-IPU pipeline experiments. This is a…, FIFO single-server completion times, in seconds. (+7 more)
 
 ### Community 67 - "Recommended order for Antigravity/Copilot"
 Cohesion: 0.12
@@ -436,8 +477,8 @@ Cohesion: 0.14
 Nodes (14): 1. Archive yourself, 1. Introduce a universal identity model, 2. Harden the lease protocol, 3. Separate "result checkpoint" from "execution checkpoint", 4. Make Super-NLM job states more truthful, 5. Make synchronization content-addressed, 6. Fail closed for verification mode, 7. Don't build another major subsystem yet (+6 more)
 
 ### Community 70 - "properties"
-Cohesion: 0.14
-Nodes (14): minLength, type, pattern, type, properties, claimed_result, id, provenance (+6 more)
+Cohesion: 0.18
+Nodes (11): pattern, type, properties, id, provenance, repository, verification, $ref (+3 more)
 
 ### Community 71 - "Independent Verification Plan"
 Cohesion: 0.15
@@ -452,8 +493,8 @@ Cohesion: 0.15
 Nodes (13): 1. `super-nlm` — FAIL: state machine is internally inconsistent, 📎 Appendix: Independent Verification Plan (ChatGPT Session Continuation), Assistant, Audit status, Correct fix, One important observation, Overall result, Recommended next move (+5 more)
 
 ### Community 74 - "ecosystem.verification.schema.json"
-Cohesion: 0.18
-Nodes (10): generated_by, manifest_kind, projects, schema_version, additionalProperties, $id, required, $schema (+2 more)
+Cohesion: 0.33
+Nodes (5): additionalProperties, $id, $schema, title, type
 
 ### Community 75 - "My recommendations now"
 Cohesion: 0.18
@@ -723,25 +764,177 @@ Nodes (3): description, type, outputs
 Cohesion: 0.67
 Nodes (3): side_effects, description, type
 
+### Community 161 - "7. Verify the actual enforcement"
+Cohesion: 0.04
+Nodes (46): 1. Declare v1.0 finished, 1. Final Ecosystem Governance Audit Table, 2. Empirical Verification on `brainstorm` (Test A & B), 2. Move to the actual engineering/research work, 3. Release & Freeze Invariant, 3 repositories have active enforced rulesets, 3. Turn STRANGLER-IPU into a real research package, 4. Build the evidence chain for your strongest projects (+38 more)
+
+### Community 164 - "Turn 3"
+Cohesion: 0.04
+Nodes (45): Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+37 more)
+
+### Community 165 - "Turn 5"
+Cohesion: 0.06
+Nodes (34): 1. `super-nlm` — the clearest defect, 2. `Claude-Desktop` — genuinely meaningful security improvement, 3. `brainstorm` — this is becoming a proper research-control repository, 4. `AaradhyaDT.github.io` — strongest improvement in presentation integrity, Assistant, Assistant, Assistant, Assistant (+26 more)
+
+### Community 166 - "Turn 8"
+Cohesion: 0.10
+Nodes (20): 1. `super-nlm` is now substantially cleaner, 2. `Claude-Desktop` now addresses the MCP-layer gap I identified, 3. `brainstorm` made the most important correction to the simulation itself, 4. The portfolio has now moved from "claim calibration" to actual provenance enforcement, Assistant, Assistant, Assistant, Assistant (+12 more)
+
+### Community 167 - "The practical priority order"
+Cohesion: 0.11
+Nodes (18): 1. Declare v1.0 finished, 2. Move to the actual engineering/research work, 3. Turn STRANGLER-IPU into a real research package, 4. Build the evidence chain for your strongest projects, 5. Establish a v1.1 development policy, Assistant, I would structure the next branch around four deliverables, Now you stop working on governance and start extracting value from the frozen baseline. (+10 more)
+
+### Community 168 - "Recommended order for Antigravity/Copilot"
+Cohesion: 0.12
+Nodes (16): 1. Do this for each repository, 2. Turn on the important protections, 3. Add your exact CI checks, And impose one hard rule, Assistant, Assistant, Branch protections, Current state (+8 more)
+
+### Community 169 - "2. Core Architectural & Systemic Limitations"
+Cohesion: 0.15
+Nodes (12): 1. Motivation & Policy, 2.1 Formalization Error (The Intent-Specification Gap), 2.2 Benchmark Dependence & Distribution Shifts, 2.3 Model Non-Determinism in Autonomous Orchestration Loops, 2.4 Integration Complexity Debt & Maintenance Burden, 2.5 API & Upstream Vendor Dependencies, 2.6 Economic Replacement Valuation Uncertainty, 2.7 Potential Survivorship Bias & Retrospective Coherence (+4 more)
+
+### Community 170 - "📎 Appendix: Independent Verification Plan (ChatGPT Session Continuation)"
+Cohesion: 0.15
+Nodes (13): 1. `super-nlm` — FAIL: state machine is internally inconsistent, 📎 Appendix: Independent Verification Plan (ChatGPT Session Continuation), Assistant, Audit status, Correct fix, One important observation, Overall result, Recommended next move (+5 more)
+
+### Community 171 - "properties"
+Cohesion: 0.18
+Nodes (11): type, format, type, type, properties, author, last_updated, license (+3 more)
+
+### Community 172 - "The strongest part of this round"
+Cohesion: 0.20
+Nodes (10): Assistant, Current overall assessment, Next: move from **hardening** to **proof**, Phase 1 — Close the verification loop, Phase 2 — Make CI the source of truth, Phase 3 — Establish a canonical ecosystem manifest, Phase 4 — Add provenance with immutable references, The strongest part of this round (+2 more)
+
+### Community 173 - "Personal Tool Ecosystem"
+Cohesion: 0.29
+Nodes (8): Personal Tool Ecosystem, Experiment FLEET-001, Hypothesis HYP-002, Canonical Capability & Ecosystem Ontology, Canonical Capability Registry, Calibrated Evidence Policy, Claude Worker Fleet (v2), Super-NLM Hub
+
+### Community 174 - "required"
+Cohesion: 0.25
+Nodes (8): category, inputs, outputs, side_effects, verification_tier, required, deterministic, id
+
+### Community 175 - "STRANGLER-IPU Experiment Report"
+Cohesion: 0.25
+Nodes (7): Causal interpretation and limits, Distributional robustness, Falsification probes, Formal model and assumptions, STRANGLER-IPU Experiment Report, What was tested, Why the mechanism should help
+
+### Community 176 - "required"
+Cohesion: 0.29
+Nodes (7): capabilities, location, module, runtime, $schema, version, required
+
+### Community 177 - "verification"
+Cohesion: 0.29
+Nodes (7): method, verification, deterministic, status, additionalProperties, required, type
+
+### Community 178 - "provenance"
+Cohesion: 0.29
+Nodes (7): recorded_at, source_commit, source_path, provenance, additionalProperties, required, type
+
+### Community 179 - "My overall technical assessment"
+Cohesion: 0.29
+Nodes (7): Assistant, Bottom line, Handoff objective, My overall technical assessment, The three things I would fix next, Turn 7, User
+
+### Community 180 - "Phase E — CI and branch governance"
+Cohesion: 0.29
+Nodes (7): `brainstorm`, `Claude-Desktop`, Phase E — CI and branch governance, Portfolio, Priority: P1, Required work, `super-nlm`
+
+### Community 181 - "Phase 2 — Independent verification"
+Cohesion: 0.29
+Nodes (7): `Claude-Desktop`, Gate 1 — Git/repository integrity, Gate 2 — Runtime correctness, Gate 3 — Evidence integrity, Gate 4 — Cross-repository consistency, Phase 2 — Independent verification, `super-nlm`
+
+### Community 182 - "STRANGLER-IPU Experiment Report"
+Cohesion: 0.29
+Nodes (7): Causal interpretation and limits, Distributional robustness, Falsification probes, Formal model and assumptions, STRANGLER-IPU Experiment Report, What was tested, Why the mechanism should help
+
+### Community 183 - "enum"
+Cohesion: 0.33
+Nodes (6): claimed, verified, warn, status, enum, type
+
+### Community 184 - "2. Five-Pillar Financial & Capital Decomposition"
+Cohesion: 0.33
+Nodes (6): 2.1 Pillar 1: Productive Capital Expenditure (CAPEX), 2.2 Pillar 2: Productive Operating Expenditure (OPEX), 2.3 Pillar 3: Academic Tuition & Cost of Living (Separated Baseline), 2.4 Pillar 4: Human Capital (Engineering Labor Invested), 2.5 Pillar 5: Estimated Replacement-Equivalent Labor Cost, 2. Five-Pillar Financial & Capital Decomposition
+
+### Community 185 - "ARCH-SPEC-005: Nepali OCR, Grammar Checker & Font-Agnostic Word Substrate (Lipikaar-AI)"
+Cohesion: 0.33
+Nodes (5): 1. Executive Summary & Problem Space, 2. System Architecture: Lipikaar-AI Pipeline, 3. Core Functional Invariants, 4. Verification & Milestone Roadmap, ARCH-SPEC-005: Nepali OCR, Grammar Checker & Font-Agnostic Word Substrate (Lipikaar-AI)
+
+### Community 186 - "INV-EPI-001: Verbatim Epistemic History Invariant"
+Cohesion: 0.53
+Nodes (6): INV-EPI-001: Verbatim Epistemic History Invariant, 2026-09-13 STRANGLER-IPU Conversation Transcript, 2026-09-14 Headless Orchestration CLI Transcript, 2026-09-14 Operational Layer & Forking Transcript, 2026-09-15 ChatGPT Deep Audit & Handoff Transcript, Verbatim Transcripts Hub README
+
+### Community 187 - "Phase A — `super-nlm` remediation"
+Cohesion: 0.33
+Nodes (6): Additional scheduler audit, Agent tasks, Phase A — `super-nlm` remediation, Priority: P0, Required deliverable, Required work
+
+### Community 188 - "capabilities"
+Cohesion: 0.33
+Nodes (6): description, items, minItems, type, $ref, capabilities
+
+### Community 189 - "required"
+Cohesion: 0.40
+Nodes (5): generated_by, manifest_kind, projects, schema_version, required
+
+### Community 190 - "Quantitative Claims Audit & Empirical Methodology Registry"
+Cohesion: 0.40
+Nodes (4): 1. Scope & Audit Invariant, 3. Summary of Status Classifications, 4. Continuous Synchronization Verification, Quantitative Claims Audit & Empirical Methodology Registry
+
+### Community 191 - "Turn 4"
+Cohesion: 0.40
+Nodes (5): Assistant, Assistant, Assistant, Turn 4, User
+
+### Community 192 - "Phase C — `brainstorm` reproducibility audit"
+Cohesion: 0.40
+Nodes (5): Critical wording rule, Phase C — `brainstorm` reproducibility audit, Priority: P1, Required work, Verification requirements
+
+### Community 193 - "Phase B — `Claude-Desktop` lease security verification"
+Cohesion: 0.40
+Nodes (5): Important secondary audit, Phase B — `Claude-Desktop` lease security verification, Priority: P0, Required adversarial matrix, Required deliverable
+
+### Community 194 - "Phase D — Portfolio evidence-chain audit"
+Cohesion: 0.50
+Nodes (4): Particular checks, Phase D — Portfolio evidence-chain audit, Priority: P1, Required audit
+
+### Community 195 - "$schema"
+Cohesion: 0.50
+Nodes (4): $schema, description, format, type
+
+### Community 196 - "version"
+Cohesion: 0.50
+Nodes (4): version, description, pattern, type
+
+### Community 197 - "6. Do not assume it worked — test it"
+Cohesion: 0.67
+Nodes (3): 6. Do not assume it worked — test it, Test A — successful PR, Test B — deliberately failing PR
+
+### Community 198 - "Phase 5 — Security and reliability review"
+Cohesion: 0.67
+Nodes (3): `Claude-Desktop`, Phase 5 — Security and reliability review, `super-nlm`
+
+### Community 199 - "location"
+Cohesion: 0.67
+Nodes (3): description, type, location
+
+### Community 200 - "claimed_result"
+Cohesion: 0.67
+Nodes (3): minLength, type, claimed_result
+
 ## Knowledge Gaps
-- **1252 isolated node(s):** `$schema`, `$id`, `title`, `description`, `type` (+1247 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1299 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **34 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **1480 isolated node(s):** `$schema`, `$id`, `title`, `description`, `type` (+1475 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1528 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **37 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `📎 Appendix: Independent Verification Plan (ChatGPT Session Continuation)` connect `📎 Appendix: Independent Verification Plan (ChatGPT Session Continuation)` to `Phase 2 — Independent verification`, `Turn 4`, `Turn 3`, `2026-09-16_INDEPENDENT-VERIFICATION-PLAN_CONVERSATION.md`?**
+  _High betweenness centrality (0.030) - this node is a cross-community bridge._
+- **Why does `📎 Appendix: Independent Verification Plan (ChatGPT Session Continuation)` connect `📎 Appendix: Independent Verification Plan (ChatGPT Session Continuation)` to `Turn 4`, `Turn 3`, `Phase 2 — Independent verification`, `2026-09-16_INDEPENDENT-VERIFICATION-PLAN_CONVERSATION.md`?**
+  _High betweenness centrality (0.030) - this node is a cross-community bridge._
 - **Why does `📎 Appendix: Independent Verification Plan (ChatGPT Session Continuation)` connect `📎 Appendix: Independent Verification Plan (ChatGPT Session Continuation)` to `Turn 3`, `Phase 2 — Independent verification`, `Turn 4`, `2026-09-16_INDEPENDENT-VERIFICATION-PLAN_CONVERSATION.md`?**
   _High betweenness centrality (0.030) - this node is a cross-community bridge._
-- **Why does `📎 Appendix: Independent Verification Plan (ChatGPT Session Continuation)` connect `📎 Appendix: Independent Verification Plan (ChatGPT Session Continuation)` to `Phase 2 — Independent verification`, `Turn 4`, `Turn 3`, `2026-09-16_INDEPENDENT-VERIFICATION-PLAN_CONVERSATION.md`?**
-  _High betweenness centrality (0.027) - this node is a cross-community bridge._
-- **Why does `Independent Verification Plan` connect `Independent Verification Plan` to `Turn 4`, `Phase 2 — Independent verification`, `Turn 3`, `2026-09-16_INDEPENDENT-VERIFICATION-PLAN_CONVERSATION.md`?**
-  _High betweenness centrality (0.024) - this node is a cross-community bridge._
 - **What connects `$schema`, `$id`, `title` to the rest of the system?**
-  _1252 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `properties` be split into smaller, more focused modules?**
-  _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._
+  _1480 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `properties` be split into smaller, more focused modules?**
   _Cohesion score 0.0625 - nodes in this community are weakly interconnected._
 - **Should `AI-Constraint-Solver.contract.json` be split into smaller, more focused modules?**
   _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._
+- **Should `ecosystem.registry.json` be split into smaller, more focused modules?**
+  _Cohesion score 0.125 - nodes in this community are weakly interconnected._

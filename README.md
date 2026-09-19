@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Status: Evidence-Driven R&D](https://img.shields.io/badge/Status-Evidence--Driven%20R%26D-brightgreen)
-![Ontology: 18 Repos (13 Capabilities)](https://img.shields.io/badge/Ontology-18%20Repos%20%7C%2013%20Capabilities-indigo)
+![Ontology: 21 Modules | 17 Computational](https://img.shields.io/badge/Ontology-21%20Modules%20%7C%2017%20Computational-indigo)
 ![Evidence: Calibrated E0-E5](https://img.shields.io/badge/Evidence-Calibrated%20E0--E5-orange)
 ![Engine: sync.ps1](https://img.shields.io/badge/Engine-sync.ps1%20v2.0-cyan)
 
@@ -15,7 +15,7 @@
 To eliminate ambiguity between what is **implemented**, what is **experimentally demonstrated**, and what is **proposed research**, this repository adheres to formal governance standards:
 
 * 📖 **[Canonical Capability & Ecosystem Ontology](schemas/capability-ontology.md):** Formal definitions of Repository $\to$ Project $\to$ Capability $\to$ Interface $\to$ Workflow.  
-  *Canonical Inventory:* **18 Repositories** | **14 Projects** | **13 Computational Capabilities** | **4 Presentation Hubs** | **5 Compound Workflows** | **13 Research Specs & Experiments**.
+  *Canonical Inventory:* **21 Tool Modules** | **17 Computational Engines** | **4 Presentation Hubs** | **5 Compound Workflows** | **13 Research Specs & Experiments**.
 * 📜 **[Calibrated Evidence Policy (E0–E5)](schemas/evidence-policy.md):** Enforces evidence tiers and distinguishes formalization correctness, solver correctness, and empirical runtime correctness.
 * 🗂️ **[Machine-Readable Capability Registry (YAML)](schemas/capability-registry.yaml):** Single source of truth recording inputs, outputs, interfaces, benchmarks, maintenance overhead, and evidence tiers for every ecosystem capability.
 * 📋 **[Repository Epistemic Audit](report/repository-audit.md):** Granular audit classifying all major repository claims against traceable artifacts.
@@ -23,6 +23,26 @@ To eliminate ambiguity between what is **implemented**, what is **experimentally
 * 💰 **[Defensible Economic Model & Capital Accounting](report/economic-model.md):** Tracks direct cash expenditure, compute cost, human effort, replacement cost, and integration overhead separately; no market-value claim is made without external evidence.
 * ⚙️ **Low-Cost Cognitive-Worker Baseline:** Minimizes fixed subscription commitments and measures actual marginal API/compute cost per verified task.
 * ⚠️ **[Known Limitations & Failure Modes](report/limitations.md):** Transparent disclosure of technical risks, formalization gaps, benchmark dependencies, and maintenance debt.
+
+### Required `main` branch checks
+
+The following repository-owned checks are the merge gates for the Evidence-Backed
+Ecosystem. Configure them as required status checks in GitHub branch protection or
+repository rulesets after the workflows are present on the default branch:
+
+| Repository | Required check |
+|---|---|
+| `super-nlm` | `pytest` |
+| `Claude-Desktop` | `Python tests` |
+| `Claude-Desktop` | `Lease security (adversarial)` |
+| `Claude-Desktop` | `PowerShell tests` |
+| `brainstorm` | `verify` |
+| `AaradhyaDT.github.io` | `verify` |
+
+Recommended policy: require pull requests, required checks to be up to date before
+merge, one approving review, and no force pushes to `main`. Branch protection is a
+GitHub-admin operation; the repository workflows intentionally provide the stable
+check names but do not attempt to manage account-level rulesets.
 
 ---
 
@@ -44,12 +64,12 @@ Rather than building an isolated chatbot, this repository models tools as **auto
 └───────────────────────────────────────┬────────────────────────────────────────┘
                                         │ Typed Capability Contracts
 ┌───────────────────────────────────────▼────────────────────────────────────────┐
-│ 3. CAPABILITY MESH (13 Computational Engines across 18 Repositories)          │
-│    • Ingestion : Screen Q&A (DOM), Super-NLM (Notebooks), yt-dlp-live (Media)  │
+│ 3. CAPABILITY MESH (17 Computational Engines across 21 Modules)               │
+│    • Ingestion : Screen Q&A (DOM), Super-NLM (Notebooks), Google Classroom MCP │
 │    • Compute   : Fusion 360 MCP (CAD), BiasAperture (Fairness), SPARK (Edge AI)│
 │    • Solvers   : AI Constraint Solver (Cryptarithmetic & CSP)                  │
-│    • Actuation : NovaOptimizer (Win32 NT Memory Tuning), BLE Sensors           │
-│    • Publishing: md2pdf (Pandoc PDF), RSVP Reader (High-Speed Reading HUD)     │
+│    • Actuation : NovaOptimizer (Win32 NT Tuning), LocalSend MCP (mTLS P2P LAN) │
+│    • Publishing: md2pdf (LaTeX PDF), RSVP Reader (HUD), Nepali OCR AI          │
 └───────────────────────────────────────┬────────────────────────────────────────┘
                                         │ Deterministic Verification & Reality
 ┌───────────────────────────────────────▼────────────────────────────────────────┐
@@ -65,6 +85,7 @@ When autonomous modules are chained via MCP and Semantic Contracts, new workflow
 - **Pipeline C (Physical Hardware Prototyping):** `SPARK` $\to$ `Fusion 360 MCP` (parametric CAD) $\to$ `md2pdf-desktop` (engineering dossier).
 - **Pipeline D (Invariant & Arbitrage Discovery):** `Screen Q&A / Super-NLM` $\to$ `Nexus` (formalizer) $\to$ `AI Solver / SMT` $\to$ `Z3 Sandbox` $\to$ `md2pdf-desktop`.
 - **Pipeline E (Autonomous YouTube Media Cluster):** `Media Ingestion` $\to$ `Nightcore DSP Engine` $\to$ `WhisperX ASS Karaoke` $\to$ `Intel Arc QSV Render` $\to$ `yt-dlp-live Relay`.
+- **Pipeline F (Zero-Cloud Device Handoff):** `Jarvis / Claude` $\to$ `md2pdf-desktop` (compiled report) $\to$ `localsend-mcp` (mTLS Wi-Fi push to phone/tablet).
 
 ---
 
@@ -109,15 +130,15 @@ Rather than expanding the ecosystem by inventing new projects, the immediate eng
 
 ## 🗂️ Authoritative Ecosystem Catalog
 
-The ecosystem encompasses **18 physical Git repositories** synchronized via **18 tracking branches** in `brainstorm` (13 active computational engines + 4 presentation/educational hubs + 1 orchestration root):
+The ecosystem encompasses **21 tool modules** cataloged in `schemas/ecosystem.registry.json` and synchronized via tracking branches in `brainstorm` (17 active computational engines + 4 presentation/educational hubs + 1 orchestration root):
 
-> 📖 **Machine-Readable Registry:** [`schemas/capability-registry.yaml`](schemas/capability-registry.yaml)  
+> 📖 **Machine-Readable Registry:** [`schemas/capability-registry.yaml`](schemas/capability-registry.yaml) | [`schemas/ecosystem.registry.json`](schemas/ecosystem.registry.json)  
 > 📜 **Ontology Standard:** [`schemas/capability-ontology.md`](schemas/capability-ontology.md)
 
 | # | Dedicated Branch | Tool / Module | Category | Execution Context | Evidence Tier | Core Superpower |
 |---|---|---|---|---|:---:|---|
 | 1 | `super-nlm` | **Super-NLM Hub** | Orchestration | Cloud / Hybrid | **E3** | Multi-account Google NotebookLM aggregator, cross-notebook synthesis, token ring agent rotation |
-| 2 | `Autodesk-Fusion-360-MCP-Server` | **Autodesk Fusion 360 MCP** | Actuation | Local Desktop | **E3** | Conversational 3D CAD, parametric modeling automation via AI / MCP |
+| 2 | `Autodesk-Fusion-360-MCP-Server` | **Fusion 360 MCP Bridge** | Actuation | Local Desktop | **E3** | Conversational 3D CAD, zero-dependency parametric modeling automation via native Python Add-In |
 | 3 | `system-optimizer` | **NovaOptimizer** | Computation | Local (Bare Metal) | **E4** | Micro-footprint Windows OS tuning, deep RAM purge (`EmptyWorkingSet`), thread priority boosting |
 | 4 | `SPARK` | **SPARK Wearable Gateway** | Computation | Edge Hardware | **E4** | Two-layer edge fall detection, sensor kinematics, SHAP clinical explainability, automated PDF reporting |
 | 5 | `Nexus` | **Nexus** | Orchestration | Local / Hybrid | **E3** | Project-centric AI workspace, prompt multiplexing across parallel LLMs, contextual note memory |
@@ -125,7 +146,7 @@ The ecosystem encompasses **18 physical Git repositories** synchronized via **18
 | 7 | `BiasAperture` | **BiasAperture** | Computation | Local / Compute | **E4** | Demographic bias auditing framework for vision models, disparity metrics, automated LaTeX/PDF generation |
 | 8 | `Alpha-SuperApp` | **Alpha-SuperApp** | Computation | Mobile Device | **E2** | Mobile super-app: Computer Vision, BLE hardware control, Personal Finance, AI assistants |
 | 9 | `screen-qa-extension` | **Screen Q&A** | Ingestion | Ambient Browser | **E3** | Ambient browser intelligence, instant question extraction and zero-click overlay response |
-| 10 | `md2pdf-desktop` | **md2pdf-desktop** | Presentation | Local Desktop | **E3** | Publication-quality Markdown-to-PDF rendering pipeline |
+| 10 | `md2pdf-desktop` | **md2pdf-desktop & MCP** | Publishing | Local Desktop / Fleet MCP | **E3** | Publication-quality Markdown-to-PDF rendering pipeline with LaTeX math, callouts, and FastMCP server |
 | 11 | `yt-dlp-live` | **yt-dlp-live** | Ingestion | Local Daemon | **E3** | Resilient live stream capture daemon, auto-cut, and lossless remuxing/relaying |
 | 12 | `AI` | **AI Constraint Solver** | Computation | Local Microservice | **E3** | Cryptarithmetic and combinatorial constraint satisfaction solver with JSON metrics reporting |
 | 13 | `rsvp-reading` | **RSVP Reader** | Presentation | Local Web | **E3** | High-speed RSVP reader with Optimal Recognition Point (ORP) highlighting for EPUB/PDF |
@@ -133,6 +154,10 @@ The ecosystem encompasses **18 physical Git repositories** synchronized via **18
 | 15 | `AaradhyaDT.github.io` | **Portfolio Mirror** | Presentation | Mirror Web | **E4** | Secondary public mirror and documentation host |
 | 16 | `makerspace` | **Makerspace** | Presentation | Hardware Hub | **E2** | Physical maker laboratory, fabrication assets, and 3D printing staging |
 | 17 | `react-workshop-ieeekecktm` | **React Workshop** | Presentation | Educational | **E3** | Hands-on curriculum and modern frontend architecture reference |
+| 18 | `github-pilot` | **GitHub Pilot** | Computation | Local / Fleet CLI | **E3** | Autonomous macro-plane GitHub profile, fleet health auditor, and ecosystem navigator |
+| 19 | `nepali-ocr-ai` | **Nepali OCR AI** | Computation | Local / Microservice | **E3** | Nepali vision OCR, Varnavinyas grammar engine, Preeti-Unicode transcoder, and Word docx repair |
+| 20 | `google-classroom-mcp` | **Google Classroom MCP** | Ingestion / Actuation | Local Desktop / Fleet MCP | **E3** | Direct Google Classroom integration for courses, coursework, assignments, announcements, and submissions |
+| 21 | `localsend-mcp` | **LocalSend MCP Server** | Ingestion / Actuation | Local Desktop / Fleet MCP | **E3** | Zero-cloud local P2P file, text, and clipboard transfer across LAN/Wi-Fi devices with mutual TLS |
 
 ---
 
@@ -148,10 +173,10 @@ The repository includes a PowerShell automation engine designed specifically for
 .\sync.ps1 -b SPARK
 .\sync.ps1 -Branch super-nlm -m "docs(super-nlm): document multi-account session rotation"
 
-# 3. Synchronize all 18 repository branches (17 tool branches + main) with GitHub origin in a single command
+# 3. Synchronize all repository branches with GitHub origin in a single command
 .\sync.ps1 -AllBranches
 
-# 4. Audit brainstorm branch status across all 17 local tool repositories on disk
+# 4. Audit brainstorm branch status across all local tool repositories on disk
 .\sync.ps1 -SyncToolRepos
 
 # 5. Provision a new tool branch in brainstorm and configure its local repo

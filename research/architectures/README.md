@@ -14,6 +14,7 @@
 | **[`ARCH-SPEC-002`](ARCH-SPEC-002-INGESTION-PROCESSING-UNIT.md)** | **The Ingestion Processing Unit (IPU) & The Telecom Evolutionary Transition Strategy** | 6G Edge Ingestion, Coexistence & Near-Memory Shock Absorption | Aaradhya Dev Tamrakar | Active Charter |
 | **[`ARCH-SPEC-003`](ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md)** | **The Headless Orchestration Substrate: Decoupled Verification & CLI-First Lifecycle** | Autonomous Reasoning, Verification & Interface Decoupling | Aaradhya Dev Tamrakar | Active Charter |
 | **[`ARCH-SPEC-004`](ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md)** | **Autonomous YouTube Cluster & Media Transformer Engine** | Audience Seeding, Lyrical Typography, Normal-to-Nightcore DSP & Hardware Rendering | Aaradhya Dev Tamrakar | Active Specification |
+| **[`ARCH-SPEC-005`](ARCH-SPEC-005-NEPALI-OCR-DOCX-ENGINE.md)** | **Nepali OCR & Font-Agnostic Word Automation Substrate (Lipikaar-AI)** | Multimodal OCR, Unicode Normalization & OpenXML Engine | Aaradhya Dev Tamrakar | Active Specification |
 
 ---
 

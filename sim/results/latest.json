@@ -1,0 +1,37 @@
+{
+  "baseline": {
+    "bytes_transferred": 2048,
+    "mode": "Baseline (Naive / Uncoalesced)",
+    "row_buffer_accesses": 32,
+    "row_buffer_hit_rate": 0.40625,
+    "row_hits": 13,
+    "row_misses": 19,
+    "total_bursts": 32,
+    "total_latency_cycles": 980
+  },
+  "derived": {
+    "v1_bus_traffic_reduction_percent": 21.875,
+    "v1_speedup": 2.2580645161290325,
+    "v2_boundary_traffic_reduction_percent": 99.9755859375
+  },
+  "v1": {
+    "bytes_transferred": 1600,
+    "mode": "Upgrade v+1 (Smart Coalescer & Reordering)",
+    "row_buffer_accesses": 25,
+    "row_buffer_hit_rate": 0.88,
+    "row_hits": 22,
+    "row_misses": 3,
+    "total_bursts": 25,
+    "total_latency_cycles": 434
+  },
+  "v2": {
+    "bytes_transferred": 4,
+    "mode": "Upgrade v+2 (Near-Memory Reduction)",
+    "row_buffer_accesses": 256,
+    "row_buffer_hit_rate": 0.99609375,
+    "row_hits": 255,
+    "row_misses": 1,
+    "total_bursts": 1,
+    "total_latency_cycles": 3612
+  }
+}

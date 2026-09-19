@@ -11,8 +11,8 @@
   "statistics": {
     "total_git_branches": 18,
     "orchestration_branches": 1,
-    "total_tool_modules": 17,
-    "computational_modules": 13,
+    "total_tool_modules": 21,
+    "computational_modules": 17,
     "presentation_and_educational_modules": 4
   },
   "modules": [
@@ -29,14 +29,15 @@
     },
     {
       "index": 2,
-      "id": "Autodesk-Fusion-360-MCP-Server",
+      "id": "fusion360-mcp",
       "branch": "Autodesk-Fusion-360-MCP-Server",
-      "name": "Autodesk Fusion 360 MCP",
+      "name": "Fusion 360 MCP Bridge",
       "category": "computational_engine",
-      "tech_stack": "Python, Fusion 360 API, MCP",
+      "tech_stack": "Python 3.10 (Embedded), Autodesk Fusion API, CustomEvent, MCP (HTTP)",
       "execution_context": "Local Desktop",
-      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\Autodesk-Fusion-360-MCP-Server",
-      "core_superpower": "Conversational 3D CAD, parametric modeling automation via AI / MCP"
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\fusion360-mcp",
+      "core_superpower": "Conversational 3D CAD, zero-dependency parametric modeling automation and viewport rendering via native Fusion 360 Add-In",
+      "contract_ref": "schemas/examples/fusion360-mcp.contract.json"
     },
     {
       "index": 3,
@@ -119,12 +120,13 @@
       "index": 10,
       "id": "md2pdf-desktop",
       "branch": "md2pdf-desktop",
-      "name": "md2pdf-desktop",
+      "name": "md2pdf-desktop & MCP",
       "category": "computational_engine",
-      "tech_stack": "Python, Tkinter, Pandoc, wkhtmltopdf",
-      "execution_context": "Local Desktop",
+      "tech_stack": "Python 3.10+, Tkinter, Pandoc, LaTeX (pdflatex), FastMCP",
+      "execution_context": "Local Desktop / Fleet MCP",
       "local_path": "F:\\Aaradhya-Dev-Tamrakar\\md2pdf-desktop",
-      "core_superpower": "Publication-quality Markdown-to-PDF rendering pipeline"
+      "core_superpower": "Publication-quality Markdown-to-PDF rendering pipeline with native math, styled callout boxes, and FastMCP server",
+      "contract_ref": "schemas/examples/md2pdf-desktop.contract.json"
     },
     {
       "index": 11,
@@ -203,6 +205,54 @@
       "execution_context": "Educational",
       "local_path": "F:\\AaradhyaDT\\react-workshop-ieeekecktm",
       "core_superpower": "Hands-on curriculum and modern frontend architecture reference"
+    },
+    {
+      "index": 18,
+      "id": "github-pilot",
+      "branch": "github-pilot",
+      "name": "GitHub Pilot",
+      "category": "computational_engine",
+      "tech_stack": "Python (Typer), HTTP/2, selectolax, rich",
+      "execution_context": "Local / Fleet CLI",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\github-pilot",
+      "core_superpower": "Autonomous macro-plane GitHub profile, fleet health auditor, and ecosystem navigator",
+      "contract_ref": "schemas/examples/github-pilot.contract.json"
+    },
+    {
+      "index": 19,
+      "id": "nepali-ocr-ai",
+      "branch": "nepali-ocr-ai",
+      "name": "Nepali OCR AI",
+      "category": "computational_engine",
+      "tech_stack": "Python 3.11, python-docx, FastMCP",
+      "execution_context": "Local / Microservice",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\nepali-ocr-ai",
+      "core_superpower": "Nepali vision OCR, Varnavinyas grammar checker/suggester, bi-directional Preeti-Unicode transcoder, and Word (.docx) repair engine",
+      "contract_ref": "schemas/examples/nepali-ocr-ai.contract.json"
+    },
+    {
+      "index": 20,
+      "id": "google-classroom-mcp",
+      "branch": "google-classroom-mcp",
+      "name": "Google Classroom MCP Server",
+      "category": "computational_engine",
+      "tech_stack": "Node.js ESM, @modelcontextprotocol/sdk, Google Classroom API",
+      "execution_context": "Local / Fleet MCP",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\google-classroom-mcp",
+      "core_superpower": "Direct Google Classroom integration for courses, coursework, assignments, announcements, and submissions",
+      "contract_ref": "schemas/examples/google-classroom-mcp.contract.json"
+    },
+    {
+      "index": 21,
+      "id": "localsend-mcp",
+      "branch": "localsend-mcp",
+      "name": "LocalSend MCP Server",
+      "category": "computational_engine",
+      "tech_stack": "Node.js ESM, @modelcontextprotocol/sdk, LocalSend Protocol v2.1",
+      "execution_context": "Local / Fleet MCP",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\localsend-mcp",
+      "core_superpower": "Zero-cloud local P2P file, text, and clipboard transfer across LAN/Wi-Fi devices with mutual TLS and persistent favoriting listener",
+      "contract_ref": "schemas/examples/localsend-mcp.contract.json"
     }
   ]
 }

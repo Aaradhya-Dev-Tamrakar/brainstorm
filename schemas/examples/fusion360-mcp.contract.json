@@ -1,0 +1,130 @@
+{
+  "$schema": "../capability.contract.v1.json",
+  "module": "fusion360-mcp",
+  "version": "1.0.0",
+  "location": "F:\\Aaradhya-Dev-Tamrakar\\fusion360-mcp",
+  "tracking_branch": "Autodesk-Fusion-360-MCP-Server",
+  "runtime": "python3.10-embedded",
+  "mcp_endpoint": {
+    "transport": "http",
+    "port": 9876
+  },
+  "capabilities": [
+    {
+      "id": "execute_cad_script",
+      "description": "Executes dynamic Python scripts inside the live Autodesk Fusion session with direct access to adsk.core and adsk.fusion on the main UI thread.",
+      "category": "actuation",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "empirical_sandbox",
+      "cost_tier": "zero_local",
+      "timeout_ms": 60000,
+      "inputs": {
+        "type": "object",
+        "required": ["script"],
+        "properties": {
+          "script": {
+            "type": "string",
+            "description": "Python script contents to execute."
+          }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["output", "success"],
+        "properties": {
+          "output": { "type": "string" },
+          "success": { "type": "boolean" }
+        }
+      }
+    },
+    {
+      "id": "create_geometric_primitive",
+      "description": "Parametrically generates 3D geometric solid primitives (sphere, box, cylinder) in the active design coordinate space.",
+      "category": "actuation",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "empirical_sandbox",
+      "cost_tier": "zero_local",
+      "timeout_ms": 15000,
+      "inputs": {
+        "type": "object",
+        "required": ["shape"],
+        "properties": {
+          "shape": { "type": "string", "enum": ["sphere", "box", "cylinder"] },
+          "radius": { "type": "number" },
+          "length": { "type": "number" },
+          "width": { "type": "number" },
+          "height": { "type": "number" },
+          "x": { "type": "number" },
+          "y": { "type": "number" },
+          "z": { "type": "number" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["message", "feature"],
+        "properties": {
+          "message": { "type": "string" },
+          "feature": { "type": "string" }
+        }
+      }
+    },
+    {
+      "id": "inspect_model_hierarchy",
+      "description": "Extracts document status, component tree, BRep bodies, volumes, sketches, profile counts, and user parameters.",
+      "category": "ingestion",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "empirical_sandbox",
+      "cost_tier": "zero_local",
+      "timeout_ms": 10000,
+      "inputs": {
+        "type": "object",
+        "properties": {}
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["documentName", "bodies", "sketches"],
+        "properties": {
+          "documentName": { "type": "string" },
+          "isSaved": { "type": "boolean" },
+          "designType": { "type": "string" },
+          "bodies": { "type": "array" },
+          "sketches": { "type": "array" }
+        }
+      }
+    },
+    {
+      "id": "capture_canvas_screenshot",
+      "description": "Renders an anti-aliased image of the active graphics viewport and returns base64 PNG data.",
+      "category": "actuation",
+      "deterministic": false,
+      "side_effects": false,
+      "verification_tier": "empirical_sandbox",
+      "cost_tier": "zero_local",
+      "timeout_ms": 10000,
+      "inputs": {
+        "type": "object",
+        "properties": {
+          "width": { "type": "integer" },
+          "height": { "type": "integer" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["mimeType", "base64"],
+        "properties": {
+          "mimeType": { "type": "string" },
+          "base64": { "type": "string" }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "author": "Aaradhya Dev Tamrakar",
+    "license": "MIT",
+    "repository_url": "https://github.com/Aaradhya-Dev-Tamrakar/fusion360-mcp.git",
+    "last_updated": "2026-09-19"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "$schema": "https://aaradhyadt.dev/schemas/ecosystem.verification.v1.json",
+  "schema_version": "1.0.0",
+  "manifest_kind": "ecosystem_verification",
+  "generated_by": "tools/validate_ecosystem.py",
+  "projects": [
+    {
+      "id": "super-nlm",
+      "repository": "Aaradhya-Dev-Tamrakar/super-nlm",
+      "claimed_result": "17/17 regression tests",
+      "claims": [
+        {
+          "metric": "regression_tests",
+          "value": "17/17",
+          "scope": "state transitions and scheduler regression suite",
+          "evidence_tier": "E3",
+          "limitations": "Recorded as an externally reported claim until the repository test command is run."
+        }
+      ],
+      "provenance": {
+        "source_path": "research/transcripts/2026-09-16_INDEPENDENT-VERIFICATION-PLAN_CONVERSATION.md",
+        "source_commit": "reported-hardening-state",
+        "recorded_at": "2026-09-16"
+      },
+      "verification": {
+        "method": "independent repository test and state-transition audit",
+        "status": "claimed",
+        "deterministic": true,
+        "command": "pytest"
+      }
+    },
+    {
+      "id": "claude-desktop",
+      "repository": "Aaradhya-Dev-Tamrakar/Claude-Desktop",
+      "claimed_result": "66/66 tests",
+      "claims": [
+        {
+          "metric": "regression_tests",
+          "value": "66/66",
+          "scope": "lease ownership and four mutation routes",
+          "evidence_tier": "E3",
+          "limitations": "Recorded as an externally reported claim until the repository test command is run."
+        }
+      ],
+      "provenance": {
+        "source_path": "research/transcripts/2026-09-16_INDEPENDENT-VERIFICATION-PLAN_CONVERSATION.md",
+        "source_commit": "reported-hardening-state",
+        "recorded_at": "2026-09-16"
+      },
+      "verification": {
+        "method": "adversarial lease-security matrix and schema validation",
+        "status": "claimed",
+        "deterministic": true,
+        "command": "pytest"
+      }
+    },
+    {
+      "id": "aaradhyadt-github-io",
+      "repository": "AaradhyaDT/AaradhyaDT.github.io",
+      "claimed_result": "24/24 verification checks and 42/42 sanitization checks",
+      "claims": [
+        {
+          "metric": "verification_checks",
+          "value": "24/24",
+          "scope": "portfolio evidence and rendered positioning checks",
+          "evidence_tier": "E3",
+          "limitations": "A passing local check is not evidence of an external deployment or independent benchmark."
+        },
+        {
+          "metric": "sanitization_checks",
+          "value": "42/42",
+          "scope": "resume payload and public-surface sanitization",
+          "evidence_tier": "E3",
+          "limitations": "The check covers repository fixtures and does not establish correctness of third-party services."
+        }
+      ],
+      "provenance": {
+        "source_path": "research/transcripts/2026-09-16_INDEPENDENT-VERIFICATION-PLAN_CONVERSATION.md",
+        "source_commit": "reported-hardening-state",
+        "recorded_at": "2026-09-16"
+      },
+      "verification": {
+        "method": "independent evidence consistency, sanitization, and build checks",
+        "status": "claimed",
+        "deterministic": true,
+        "command": "python scripts/verify.py"
+      }
+    },
+    {
+      "id": "brainstorm",
+      "repository": "Aaradhya-Dev-Tamrakar/brainstorm",
+      "claimed_result": "0 reconciliation discrepancies and 2.26x deterministic v+1 simulation speedup",
+      "claims": [
+        {
+          "metric": "reconciliation_discrepancies",
+          "value": 0,
+          "scope": "research links, metadata, JSON/YAML, and economic constants",
+          "evidence_tier": "E4",
+          "limitations": "The audit is repository-scoped and does not prove claims made by external repositories."
+        },
+        {
+          "metric": "v1_speedup",
+          "value": 2.26,
+          "scope": "modeled warehouse memory request workload",
+          "evidence_tier": "E3",
+          "limitations": "Simulation output, not measured hardware performance."
+        },
+        {
+          "metric": "v2_boundary_traffic_reduction_percent",
+          "value": 99.976,
+          "scope": "modeled physical interconnect boundary for the isolated reduction",
+          "evidence_tier": "E3",
+          "limitations": "Not a whole-pipeline attention traffic reduction and not a hardware measurement."
+        }
+      ],
+      "provenance": {
+        "source_path": "sim/warehouse_mem_sim.py",
+        "source_commit": "cc9021a",
+        "recorded_at": "2026-09-16"
+      },
+      "verification": {
+        "method": "reconciliation engine plus deterministic simulator regression",
+        "status": "verified",
+        "deterministic": true,
+        "command": "python -m unittest sim.test_warehouse_mem_sim sim.test_reproducibility"
+      }
+    }
+  ]
+}

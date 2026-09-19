@@ -1,0 +1,24 @@
+name: Deterministic verification
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate ecosystem manifest
+        run: python tools/validate_ecosystem.py
+      - name: Reconciliation audit
+        run: python sim/reconciliation_engine.py
+      - name: Simulator regression
+        run: python -m unittest sim.test_warehouse_mem_sim sim.test_reproducibility

@@ -1,0 +1,111 @@
+{
+  "$schema": "../capability.contract.v1.json",
+  "module": "google-classroom-mcp",
+  "version": "1.0.0",
+  "location": "F:\\Aaradhya-Dev-Tamrakar\\google-classroom-mcp",
+  "tracking_branch": "google-classroom-mcp",
+  "runtime": "node26",
+  "mcp_endpoint": {
+    "transport": "stdio",
+    "command": "node",
+    "args": [
+      "F:\\Aaradhya-Dev-Tamrakar\\google-classroom-mcp\\index.mjs"
+    ],
+    "env": {
+      "CLASSROOM_CREDENTIALS_PATH": "C:\\Users\\Aaradhya\\.classroom-server-credentials.json",
+      "CLASSROOM_OAUTH_PATH": "C:\\Users\\Aaradhya\\.classroom-credentials.json"
+    }
+  },
+  "capabilities": [
+    {
+      "id": "course_query_and_discovery",
+      "description": "Deterministic enumeration, inspection, and metadata retrieval for active and archived Google Classroom courses.",
+      "category": "ingestion",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "empirical_sandbox",
+      "cost_tier": "free_tier_api",
+      "timeout_ms": 15000,
+      "inputs": {
+        "type": "object",
+        "properties": {
+          "courseStates": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "pageSize": { "type": "integer" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["courses_count", "courses"],
+        "properties": {
+          "courses_count": { "type": "integer" },
+          "courses": { "type": "array" }
+        }
+      }
+    },
+    {
+      "id": "coursework_and_assignment_sync",
+      "description": "Extracts problem sets, quizzes, rubrics, attached Google Drive files, and due dates across enrolled and instructed courses.",
+      "category": "ingestion",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "empirical_sandbox",
+      "cost_tier": "free_tier_api",
+      "timeout_ms": 20000,
+      "inputs": {
+        "type": "object",
+        "required": ["courseId"],
+        "properties": {
+          "courseId": { "type": "string" },
+          "courseWorkStates": { "type": "array", "items": { "type": "string" } }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["coursework_count", "coursework"],
+        "properties": {
+          "coursework_count": { "type": "integer" },
+          "coursework": { "type": "array" }
+        }
+      }
+    },
+    {
+      "id": "student_submission_lifecycle",
+      "description": "Audits submission states, assigned grades, late flags, and turns in or reclaims student assignments via Google Classroom API.",
+      "category": "actuation",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "empirical_sandbox",
+      "cost_tier": "free_tier_api",
+      "timeout_ms": 25000,
+      "inputs": {
+        "type": "object",
+        "required": ["courseId", "courseWorkId"],
+        "properties": {
+          "courseId": { "type": "string" },
+          "courseWorkId": { "type": "string" },
+          "action": {
+            "type": "string",
+            "enum": ["list", "get", "turn_in", "reclaim"]
+          }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["success"],
+        "properties": {
+          "success": { "type": "boolean" },
+          "submission_state": { "type": "string" }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "author": "Aaradhya Dev Tamrakar",
+    "license": "MIT",
+    "repository_url": "https://github.com/Aaradhya-Dev-Tamrakar/google-classroom-mcp",
+    "last_updated": "2026-09-19"
+  }
+}

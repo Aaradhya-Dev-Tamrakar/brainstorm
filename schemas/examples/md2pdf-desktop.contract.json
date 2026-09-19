@@ -1,0 +1,101 @@
+{
+  "$schema": "../capability.contract.v1.json",
+  "module": "md2pdf-desktop",
+  "version": "1.0.0",
+  "location": "F:\\Aaradhya-Dev-Tamrakar\\md2pdf-desktop",
+  "tracking_branch": "md2pdf-desktop",
+  "runtime": "python3.10",
+  "mcp_endpoint": {
+    "transport": "stdio",
+    "command": "python",
+    "args": [
+      "F:\\Aaradhya-Dev-Tamrakar\\md2pdf-desktop\\mcp_server\\server.py"
+    ]
+  },
+  "capabilities": [
+    {
+      "id": "convert_markdown_to_pdf",
+      "description": "Publication-quality Markdown to PDF conversion with LaTeX math typesetting, ASCII grid table reconstruction, styled callout boxes, and full UTF-8 Unicode sanitization.",
+      "category": "actuation",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "empirical_sandbox",
+      "cost_tier": "zero_local",
+      "timeout_ms": 30000,
+      "inputs": {
+        "type": "object",
+        "required": ["markdown", "output_path"],
+        "properties": {
+          "markdown": { "type": "string" },
+          "output_path": { "type": "string" },
+          "mode": { "type": "string", "enum": ["simple", "latex", "auto"] }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["success", "output_path", "mode_used"],
+        "properties": {
+          "success": { "type": "boolean" },
+          "output_path": { "type": "string" },
+          "mode_used": { "type": "string" },
+          "elapsed_seconds": { "type": "number" }
+        }
+      }
+    },
+    {
+      "id": "audit_pdf_toolchain",
+      "description": "Audits the local environment for pandoc, pdflatex (TeX Live/MiKTeX), and wkhtmltopdf binaries, reporting available modes and template status.",
+      "category": "ingestion",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "empirical_sandbox",
+      "cost_tier": "zero_local",
+      "timeout_ms": 5000,
+      "inputs": {
+        "type": "object",
+        "properties": {}
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["pandoc_available", "latex_available", "simple_available"],
+        "properties": {
+          "pandoc_available": { "type": "boolean" },
+          "latex_available": { "type": "boolean" },
+          "simple_available": { "type": "boolean" }
+        }
+      }
+    },
+    {
+      "id": "detect_optimal_rendering_mode",
+      "description": "Scans Markdown content for mathematical formulas, callout blocks, or diagrams to determine the optimal conversion mode (latex vs simple).",
+      "category": "ingestion",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "empirical_sandbox",
+      "cost_tier": "zero_local",
+      "timeout_ms": 5000,
+      "inputs": {
+        "type": "object",
+        "required": ["markdown"],
+        "properties": {
+          "markdown": { "type": "string" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["recommended_mode", "has_math", "has_callouts"],
+        "properties": {
+          "recommended_mode": { "type": "string" },
+          "has_math": { "type": "boolean" },
+          "has_callouts": { "type": "boolean" }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "author": "Aaradhya Dev Tamrakar",
+    "license": "MIT",
+    "repository_url": "https://github.com/Aaradhya-Dev-Tamrakar/md2pdf-desktop",
+    "last_updated": "2026-09-19"
+  }
+}

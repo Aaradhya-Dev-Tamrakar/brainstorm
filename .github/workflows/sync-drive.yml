@@ -1,0 +1,59 @@
+name: Continuous Google Drive Documentation Sync
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.md'
+      - 'report/**'
+      - 'research/**'
+      - 'drive-manifest.json'
+      - 'scripts/sync_drive.py'
+      - '.github/workflows/sync-drive.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: drive-sync-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sync-to-drive:
+    name: Sync Markdown to Google Drive
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Execute In-Place Google Drive Sync
+        env:
+          GDRIVE_CLIENT_ID: ${{ secrets.GDRIVE_CLIENT_ID }}
+          GDRIVE_CLIENT_SECRET: ${{ secrets.GDRIVE_CLIENT_SECRET }}
+          GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
+          GDRIVE_CLIENT_SECRET_JSON: ${{ secrets.GDRIVE_CLIENT_SECRET_JSON }}
+        run: |
+          python scripts/sync_drive.py
+
+      - name: Commit Manifest Updates If Modified
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          if git status --porcelain drive-manifest.json | grep -q 'drive-manifest.json'; then
+            git add drive-manifest.json
+            git commit -m 'chore(drive): update drive-manifest.json hashes and metadata [skip ci]'
+            git pull --rebase origin main
+            git push origin main || echo "::warning::Direct push to main was blocked by branch ruleset. Manifest changes should be committed via PR."
+          else
+            echo 'No manifest changes to commit.'
+          fi
+

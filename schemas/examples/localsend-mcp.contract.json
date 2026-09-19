@@ -1,0 +1,97 @@
+{
+  "$schema": "../capability.contract.v1.json",
+  "module": "localsend-mcp",
+  "version": "1.0.0",
+  "location": "F:\\Aaradhya-Dev-Tamrakar\\localsend-mcp",
+  "tracking_branch": "localsend-mcp",
+  "runtime": "node26",
+  "mcp_endpoint": {
+    "transport": "stdio",
+    "command": "node",
+    "args": [
+      "F:\\Aaradhya-Dev-Tamrakar\\localsend-mcp\\dist\\index.js"
+    ]
+  },
+  "capabilities": [
+    {
+      "id": "lan_device_discovery",
+      "description": "Zero-configuration discovery of active LocalSend peers across Wi-Fi/LAN via UDP multicast (224.0.0.167:53317) and HTTP ping.",
+      "category": "ingestion",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "empirical_sandbox",
+      "cost_tier": "zero_cost_local",
+      "timeout_ms": 10000,
+      "inputs": {
+        "type": "object",
+        "properties": {
+          "timeoutSeconds": { "type": "number", "default": 3 }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["devices"],
+        "properties": {
+          "devices": { "type": "array" }
+        }
+      }
+    },
+    {
+      "id": "p2p_file_and_text_transfer",
+      "description": "Direct peer-to-peer delivery of files, folders, and text snippets to target LocalSend devices using mTLS and protocol v2.1/v2.2 stream upload.",
+      "category": "actuation",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "empirical_sandbox",
+      "cost_tier": "zero_cost_local",
+      "timeout_ms": 60000,
+      "inputs": {
+        "type": "object",
+        "required": ["to"],
+        "properties": {
+          "to": { "type": "string" },
+          "files": { "type": "array", "items": { "type": "string" } },
+          "text": { "type": "string" },
+          "pin": { "type": "string" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["sessionId", "files_sent"],
+        "properties": {
+          "sessionId": { "type": "string" },
+          "files_sent": { "type": "integer" }
+        }
+      }
+    },
+    {
+      "id": "lan_inbox_and_status",
+      "description": "Provides local network interface telemetry, active listening port status (port 53318), and lists incoming files received into the local inbox.",
+      "category": "ingestion",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "empirical_sandbox",
+      "cost_tier": "zero_cost_local",
+      "timeout_ms": 5000,
+      "inputs": {
+        "type": "object",
+        "properties": {}
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["port", "alias", "addresses"],
+        "properties": {
+          "port": { "type": "integer" },
+          "alias": { "type": "string" },
+          "addresses": { "type": "array" }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "author": "Aaradhya Dev Tamrakar",
+    "license": "MIT",
+    "repository_url": "https://github.com/Aaradhya-Dev-Tamrakar/localsend-mcp",
+    "last_updated": "2026-09-19"
+  }
+}

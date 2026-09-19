@@ -35,7 +35,7 @@ A hallmark of rigorous engineering is the explicit disclosure of boundaries, fai
 * **Mitigation:** Zero-token deterministic verification gates (`reconciliation_engine.py`, SMT solvers, unit tests) serve as absolute hard barriers. No agent output is accepted without deterministic validation.
 
 ### 2.4 Integration Complexity Debt & Maintenance Burden
-* **Description:** Maintaining 18 Git branches, 14 active projects, and 13 computational capabilities across heterogeneous stacks (C/C++, C# .NET 10, Python, Kotlin, Svelte, TypeScript) imposes severe cognitive and temporal maintenance overhead.
+* **Description:** Maintaining 18 Git branches, 18 active projects, and 21 tool modules across heterogeneous stacks (C/C++, C# .NET 10, Python, Kotlin, Svelte, TypeScript, Node.js) imposes severe cognitive and temporal maintenance overhead.
 * **Failure Mode:** "Platform sprawl" where developer time is consumed maintaining bindings, updating dependencies, and reconciling schemas rather than producing net-new research findings.
 * **Mitigation:** The **Rule of Two** (prohibiting three-way composition before pairwise reliability is proven) and the **Integration-Cost equation** in `report/economic-model.md`.
 
@@ -63,3 +63,13 @@ A hallmark of rigorous engineering is the explicit disclosure of boundaries, fai
 * **Description:** The STRANGLER-IPU results (4.12x tail-latency reduction, 68% memory bus contention relief) are simulated via SimPy discrete-event queueing models.
 * **Failure Mode:** Idealized simulation assumptions (uniform packet distributions, simplified CXL 3.0 protocol transaction overhead, zero physical wire parasitics) may not translate directly to physical ASIC/FPGA performance.
 * **Mitigation:** Labeling STRANGLER-IPU strictly as an *E3 Discrete-Event Simulation Prototype* rather than physical silicon.
+
+### 2.10 Main-Thread Synchronization Boundary in CAD Actuation
+* **Description:** Autodesk Fusion 360's internal C++ object model cannot be manipulated directly from background Python worker threads without risking immediate application crashes (`INV-FUS-001`).
+* **Failure Mode:** Race conditions or thread blocking if long-running geometry calculations occur inside the `CustomEvent` handler.
+* **Mitigation:** Fast asynchronous event queuing with brief execution slices and dedicated response channels.
+
+### 2.11 LAN Peer Discovery and Multicast Broadcast Limits
+* **Description:** LocalSend protocol actuation relies on UDP multicast (224.0.0.167:53317) and local subnet TCP connectivity (port 53318).
+* **Failure Mode:** Corporate Wi-Fi client isolation, host firewalls, or multi-subnet routing prevent automatic peer discovery.
+* **Mitigation:** Static peer IP fallback configuration and persistent favorite peer caching.

@@ -1,6 +1,6 @@
 # Agent Rules & Workflow Guidelines — Brainstorm & Ecosystem Orchestration
 
-Welcome, Agent. This repository (`F:\Aaradhya-Dev-Tamrakar\brainstorm`) serves as the **central architectural brain, R&D incubator, and capability mesh root** for Aaradhya's personal tool ecosystem across 17 local tool repositories and 18 Git tracking branches.
+Welcome, Agent. This repository (`F:\Aaradhya-Dev-Tamrakar\brainstorm`) serves as the **central architectural brain, R&D incubator, and capability mesh root** for Aaradhya's personal tool ecosystem across 21 tool modules (17 computational engines, 4 presentation hubs) and 18 Git tracking branches.
 
 To preserve repository integrity, avoid merge collisions, eliminate hallucinated claims, and maintain zero-drift deterministic verification, you **MUST** strictly adhere to the following operating principles.
 
@@ -54,7 +54,7 @@ To avoid breaking multi-branch tracking and prevent wasteful multi-step Git comm
 
 ## 2. Knowledge Graph & Codebase Navigation (Graphify)
 
-This repository maintains an active **Graphify Knowledge Graph** under `graphify-out/` representing all 17 interconnected modules, RFCs, capability contracts, simulation engines, and research logs.
+This repository maintains an active **Graphify Knowledge Graph** under `graphify-out/` representing all 21 interconnected modules, RFCs, capability contracts, simulation engines, and research logs.
 
 - **Map First**: Read `graphify-out/GRAPH_REPORT.md` (and inspect God Nodes / Surprising Connections) **before** deep-diving into raw files.
 - **Relationship Queries**: Prefer graph traversal commands over blind file reads or brute-force grep:
@@ -109,7 +109,7 @@ Speculative text is never ground truth; deterministic execution is. Before final
    ```powershell
    .\audit.bat
    ```
-   _Executes `sim/reconciliation_engine.py`. Verifies schema validity, cross-branch consistency, inventory counts, and contract integrity across all 17 tools. Target: 0 errors._
+   _Executes `sim/reconciliation_engine.py`. Verifies schema validity, cross-branch consistency, inventory counts, and contract integrity across all 21 modules. Target: 0 errors._
 
 2. **Simulation Sanity Check**:
    ```powershell

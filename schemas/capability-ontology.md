@@ -66,7 +66,7 @@ Workflow (Multi-Capability Execution Pipeline)
 ### 2.5 Workflow
 * **Definition:** A compound directed acyclic graph (DAG) or execution loop that chains two or more capabilities across their respective interfaces to achieve a high-order outcome.
 * **Key Invariant:** A workflow owns no persistent state of its own; it orchestrates the outputs of predecessor capabilities into the inputs of successor capabilities.
-* **Example:** Pipeline A (`screen-qa-extension` $\to$ `super-nlm` $\to$ `md2pdf-desktop` $\to$ `rsvp-reading`).
+* **Example:** Pipeline A (`screen-qa-extension` $\to$ `super-nlm` $\to$ `md2pdf-desktop` $\to$ `rsvp-reading`) and Pipeline F (`Jarvis/Claude` $\to$ `md2pdf-desktop` $\to$ `localsend-mcp` $\to$ target device).
 
 ---
 
@@ -76,13 +76,14 @@ To eliminate counting discrepancies across `README.md`, `PROFILE.md`, and `ECOSY
 
 | Ontological Dimension | Authoritative Count | Description & Scope |
 | :--- | :---: | :--- |
-| **Physical Git Repositories** | **18** | 1 Orchestration Root (`brainstorm`) + 17 local tool repositories tracked across local storage. |
+| **Cataloged Tool Modules** | **21** | 17 Computational Engines + 4 Presentation & Educational Hubs registered in `schemas/ecosystem.registry.json`. |
+| **Physical Git Repositories** | **22** | 1 Orchestration Root (`brainstorm`) + 21 local tool repositories tracked across local storage (`F:\Aaradhya-Dev-Tamrakar` and `F:\AaradhyaDT`). |
 | **Git Tracking Branches in `brainstorm`** | **18** | `main` (orchestrator) + 17 branch mirrors synchronized via `sync.ps1`. |
-| **Active Engineering Projects** | **14** | Concrete initiatives: SPARK, STRANGLER-IPU, BiasAperture, Super-NLM, NovaOptimizer, Fusion CAD Bridge, Nexus, Claude Fleet, Alpha-SuperApp, Screen Q&A, md2pdf, yt-dlp-live, AI CSP Solver, RSVP Reader. |
-| **Computational Capabilities** | **13** | Independent functional engines exposing programmatic APIs/CLI/MCP interfaces. |
+| **Active Engineering Projects** | **18** | Concrete initiatives: SPARK, STRANGLER-IPU, BiasAperture, Super-NLM, NovaOptimizer, Fusion 360 MCP, Nexus, Claude Fleet, Alpha-SuperApp, Screen Q&A, md2pdf, yt-dlp-live, AI CSP Solver, RSVP Reader, GitHub Pilot, Nepali OCR AI, Google Classroom MCP, LocalSend MCP. |
+| **Computational Capabilities** | **17** | Independent functional engines exposing programmatic APIs/CLI/MCP interfaces. |
 | **Presentation & Educational Hubs** | **4** | Non-computational repositories: Portfolio Main (`Aaradhya-Dev-Tamrakar.github.io`), Portfolio Mirror (`AaradhyaDT.github.io`), KEC Makerspace digital asset hub, and IEEE React Workshop repo. |
-| **Compound Workflows (Pipelines)** | **5** | Formal emergent pipelines (Pipelines A, B, C, D, E). |
-| **Research Experiments, Specs & RFCs** | **13** | Formal architecture specs (`ARCH-SPEC-001` to `004`), RFCs (`ARCH-RFC-001` to `003`), invariants (`INV-EPI-001`, `INV-MEM-001`), empirical sweeps (`EXP-001`, `FLEET-001`), and composition benchmarks (`COMPOSE-001`, `COMPOSE-002`). |
+| **Compound Workflows (Pipelines)** | **6** | Formal emergent pipelines (Pipelines A, B, C, D, E, and Pipeline F: Zero-Cloud Device Handoff). |
+| **Research Experiments, Specs & RFCs** | **19** | Formal architecture specs (`ARCH-SPEC-001` to `006`), RFCs (`ARCH-RFC-001` to `004`), invariants (`INV-EPI-001`, `INV-MEM-001`), empirical sweeps (`EXP-001`, `EXP-DRIVE-SYNC-001`, `EXP-FUSION360-AUTODESK-001`, `EXP-FUSION360-BRIDGE-001`, `FLEET-001`, `GPU_RAM_ARCHITECTURE_SPEC`), and composition benchmarks (`COMPOSE-001`, `COMPOSE-002`). |
 
 ---
 

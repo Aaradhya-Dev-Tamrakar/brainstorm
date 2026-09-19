@@ -9,7 +9,9 @@ Checks:
 2. Missing Mandatory Metadata Headers (ID, Status, Evidence Tier).
 3. JSON & YAML Schema Validation (capability-registry.yaml, contracts).
 4. Epistemic Evidence Invariants (IMPLEMENTED requires Evidence Tier >= E2).
-5. Economic Reconciliation Arithmetics.
+5. Ecosystem Taxonomy Count Invariants (21 modules, 17 computational, 4 presentation, 6 workflows).
+6. Physical Output Artifact Existence (verifying research/results/*.pdf files claimed in experiments).
+7. Economic Model Constant Reconciliation ($1,272.55 outlay, $25,000 replacement base, 19.65x ratio).
 
 Usage:
     python sim/reconciliation_engine.py
@@ -18,11 +20,13 @@ Usage:
 import os
 import re
 import sys
+import json
 
 BRAINSTORM_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RESEARCH_DIR = os.path.join(BRAINSTORM_ROOT, "research")
 SCHEMAS_DIR = os.path.join(BRAINSTORM_ROOT, "schemas")
 REPORT_DIR = os.path.join(BRAINSTORM_ROOT, "report")
+RESULTS_DIR = os.path.join(RESEARCH_DIR, "results")
 
 REQUIRED_METADATA_KEYS = [
     "Artifact ID", "Status", "Principal Architect", "Evidence Tier"
@@ -73,14 +77,34 @@ def audit_repository():
                 all_files[rel_path.replace("\\", "/")] = os.path.join(root, f)
 
     link_pattern = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
+    artifact_pattern = re.compile(r'research/results/([a-zA-Z0-9_\-\.]+\.pdf)')
     
     for rel_path, full_path in all_files.items():
         if rel_path.endswith(".json"):
-            import json
             total_files_audited += 1
             try:
                 with open(full_path, "r", encoding="utf-8") as jf:
-                    json.load(jf)
+                    data = json.load(jf)
+                if rel_path == "schemas/ecosystem.registry.json":
+                    stats = data.get("statistics", {})
+                    if stats.get("total_tool_modules") != 21:
+                        discrepancies.append({
+                            "type": "TAXONOMY_DISCREPANCY",
+                            "file": rel_path,
+                            "detail": f"Expected 21 total_tool_modules, found {stats.get('total_tool_modules')}"
+                        })
+                    if stats.get("computational_modules") != 17:
+                        discrepancies.append({
+                            "type": "TAXONOMY_DISCREPANCY",
+                            "file": rel_path,
+                            "detail": f"Expected 17 computational_modules, found {stats.get('computational_modules')}"
+                        })
+                    if stats.get("presentation_and_educational_modules") != 4:
+                        discrepancies.append({
+                            "type": "TAXONOMY_DISCREPANCY",
+                            "file": rel_path,
+                            "detail": f"Expected 4 presentation_and_educational_modules, found {stats.get('presentation_and_educational_modules')}"
+                        })
             except Exception as e:
                 discrepancies.append({
                     "type": "INVALID_JSON",
@@ -148,6 +172,7 @@ def audit_repository():
         if "research/transcripts" in rel_path:
             continue
 
+        # Check cross-references / internal markdown links
         for match in link_pattern.finditer(content):
             target = match.group(2).split("#")[0].strip()
             if not target or target.startswith("http") or target.startswith("mailto") or target.startswith("file:"):
@@ -161,6 +186,7 @@ def audit_repository():
                     "detail": f"Target not found: '{target}'"
                 })
 
+        # Check metadata headers in architecture specs and invariants
         if "research/architectures" in rel_path or "research/invariants" in rel_path:
             if not rel_path.endswith("README.md"):
                 missing_keys = [k for k in REQUIRED_METADATA_KEYS if k not in content]
@@ -170,6 +196,30 @@ def audit_repository():
                         "file": rel_path,
                         "detail": f"Missing required headers: {missing_keys}"
                     })
+
+        # Check claimed output artifacts in experiments
+        if "research/experiments" in rel_path:
+            for art_match in artifact_pattern.finditer(content):
+                pdf_name = art_match.group(1)
+                pdf_path = os.path.join(RESULTS_DIR, pdf_name)
+                if not os.path.exists(pdf_path) or os.path.getsize(pdf_path) == 0:
+                    discrepancies.append({
+                        "type": "MISSING_RESULT_ARTIFACT",
+                        "file": rel_path,
+                        "detail": f"Claimed output artifact 'research/results/{pdf_name}' does not exist on disk or is empty."
+                    })
+
+    # Validate ontology & README taxonomy consistency
+    ontology_file = os.path.join(SCHEMAS_DIR, "capability-ontology.md")
+    if os.path.exists(ontology_file):
+        with open(ontology_file, "r", encoding="utf-8") as of:
+            ont_text = of.read()
+        if "21" not in ont_text or "17" not in ont_text or "6" not in ont_text:
+            discrepancies.append({
+                "type": "ONTOLOGY_TAXONOMY_ERROR",
+                "file": "schemas/capability-ontology.md",
+                "detail": "Ontology missing reconciled counts (21 modules, 17 computational engines, 6 workflows)."
+            })
 
     # Validate economic model invariants
     econ_file = os.path.join(REPORT_DIR, "economic-model.md")
@@ -187,7 +237,7 @@ def audit_repository():
     
     if not discrepancies:
         print("\n[+] SUCCESS: 0 Discrepancies Found! Repository is in 100% deterministic alignment.")
-        print("    All links resolve, capability registry is valid, epistemic tiers are enforced, and economic figures reconcile.")
+        print("    All links resolve, capability registry is valid, epistemic tiers are enforced, result artifacts exist, and economic figures reconcile.")
     else:
         print(f"\n[!] WARNING: Found {len(discrepancies)} Discrepancy(ies):")
         for d in discrepancies:

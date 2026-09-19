@@ -3,7 +3,7 @@
 ```text
 Artifact ID:          EXP-FUSION360-MCP-001
 Title:                End-to-End Parametric 3D CAD Geometry Synthesis via Universal Fusion 360 MCP Bridge
-Version:              1.0.0
+Version:              1.1.0
 Status:               EMPIRICALLY_VERIFIED
 Principal Architect:  Aaradhya Dev Tamrakar (ADT)
 Domain:               Actuation Hardware & Interactive 3D CAD Tooling
@@ -22,17 +22,18 @@ Target Tool:          F:\Aaradhya-Dev-Tamrakar\fusion360-mcp
 
 ---
 
-## 2. Capabilities & Interfaces Invoked
+## 2. Capabilities & Dual-Server Interface Architecture
 
-| Capability | Interface | Execution Runtime | Port / Protocol |
-| :--- | :--- | :--- | :--- |
-| **`FusionMCPBridge`** | JSON-RPC 2.0 (`POST /mcp`) | Embedded Python 3.10 inside Fusion 360 | `127.0.0.1:9876` |
-| **`CustomEvent` Dispatcher** | `adsk.core.CustomEvent` | Fusion Main UI Thread | C++ API Callback |
-| **Viewport Capture** | `activeViewport.saveAsImageFile` | Fusion Graphics Rendering Engine | PNG Base64 Transport |
+To maintain strict epistemic provenance (INV-EPI-001), this experiment documents both the **Autodesk Native MCP Server Adapter** baseline and the **Custom FusionMCPBridge Add-In**:
+
+| Interface Layer | Identity (`serverInfo.name`) | Port / Protocol | Thread Boundary | Role in Ecosystem |
+| :--- | :--- | :--- | :--- | :--- |
+| **Part A: Autodesk Native MCP** | `MCP Server Adapter` | `127.0.0.1:27182/mcp` | Native C++ Dispatch | Upstream OEM actuation baseline |
+| **Part B: Custom Python Bridge** | `FusionMCPBridge` | `127.0.0.1:9876/mcp` | `adsk.core.CustomEvent` | Custom lightweight zero-dependency Add-In |
 
 ---
 
-## 3. Empirical Execution Trace
+## 3. Part A: Autodesk Native MCP Baseline Trace (Port 27182)
 
 ```text
 [Step 1: Handshake & Discovery]
@@ -63,7 +64,44 @@ Result: High-resolution PNG image captured and decoded. Render verified: Centere
 
 ---
 
-## 4. Invariant Compliance Checklist
+## 4. Part B: Custom Python Add-In Bridge Protocol (Port 9876)
+
+The standalone custom bridge implementation in `F:\Aaradhya-Dev-Tamrakar\fusion360-mcp` exposes 5 dedicated tools and operates independently on port `9876`:
+
+```text
+[Step 1: Health Check & Fingerprint Identification]
+GET http://127.0.0.1:9876/health
+Response:
+{
+  "server": "FusionMCPBridge",
+  "status": "ok",
+  "port": 9876,
+  "version": "1.0.0"
+}
+
+[Step 2: Dedicated Tool Surface Verification]
+Exposed Tools via tools/list:
+  1. execute_script     - Dynamic adsk.core / adsk.fusion script execution
+  2. get_model_info     - Component hierarchy, BRep bodies, and parameter ledger
+  3. create_primitive   - Parametric box, cylinder, and sphere generator
+  4. capture_screenshot - Viewport rasterization to base64 PNG
+  5. undo_redo          - Transactional timeline rollback
+
+[Step 3: CustomEvent Thread Dispatch]
+Request: tools/call -> create_primitive(shape="box", length=7.0, width=11.0, height=13.0)
+Dispatch Flow:
+  HTTP Server (Worker Thread)
+       ↓
+  adsk.core.CustomEvent ('FusionMCPBridge_CustomEvent_v1')
+       ↓
+  Main UI Thread Event Handler (Safe BRep Extrusion)
+       ↓
+  Response payload: "Box created (7.0 x 11.0 x 13.0 cm)."
+```
+
+---
+
+## 5. Invariant Compliance Checklist
 
 - [x] **INV-FUS-001 (Main-Thread Lock)**: Zero exceptions thrown; geometry built strictly on the main UI thread via `CustomEventHandler`.
 - [x] **INV-FUS-002 (Zero External Dependencies)**: Embedded Python interpreter utilized standard libraries only (`http.server`, `threading`, `json`).
@@ -72,7 +110,7 @@ Result: High-resolution PNG image captured and decoded. Render verified: Centere
 
 ---
 
-## 5. Artifact Provenance
+## 6. Artifact Provenance
 
 * **Source Repository:** `F:\Aaradhya-Dev-Tamrakar\fusion360-mcp`
 * **Installed Add-In:** `%APPDATA%\Autodesk\Autodesk Fusion 360\API\AddIns\FusionMCPBridge\`

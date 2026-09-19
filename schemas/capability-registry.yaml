@@ -4,7 +4,7 @@
 
 version: "1.0.0"
 registry_type: "canonical_capability_registry"
-last_reconciled: "2026-09-15"
+last_reconciled: "2026-09-19"
 maintainer: "Aaradhya Dev Tamrakar"
 
 capabilities:
@@ -89,31 +89,6 @@ capabilities:
     confidence: 0.96
     last_verified: "2026-09-10"
 
-  - id: "Autodesk-Fusion-360-MCP-Server"
-    name: "Autodesk Fusion 360 MCP Bridge"
-    repository: "F:\\Aaradhya-Dev-Tamrakar\\Autodesk-Fusion-360-MCP-Server"
-    category: "ACTUATION_HARDWARE"
-    status: "IMPLEMENTED"
-    description: "Conversational 3D CAD modeling bridge exposing Fusion 360's Python API to AI agents via FastMCP for automated parametric geometry creation."
-    inputs:
-      - "Parametric dimensional specs (sketch primitives, extrusions, fillets)"
-    outputs:
-      - "3D CAD geometry generation"
-      - "STEP / STL export files"
-    interfaces:
-      - "FastMCP (stdio)"
-      - "Fusion 360 internal Python Add-In"
-    dependencies:
-      - "Autodesk Fusion 360"
-      - "Python 3.10 (Fusion bundled)"
-      - "mcp SDK"
-    evidence: "E3"
-    benchmarks: "Zero-token parametric bracket generation from natural language spec"
-    verification: "Local integration test executing script against live Fusion 360 viewport"
-    maintenance_cost: "2 hours/month"
-    development_hours: 36
-    confidence: 0.88
-    last_verified: "2026-09-08"
 
   - id: "BiasAperture"
     name: "BiasAperture Disparity Auditor"
@@ -248,30 +223,6 @@ capabilities:
     confidence: 0.92
     last_verified: "2026-09-01"
 
-  - id: "md2pdf-desktop"
-    name: "md2pdf-desktop"
-    repository: "F:\\Aaradhya-Dev-Tamrakar\\md2pdf-desktop"
-    category: "PRESENTATION_HUB"
-    status: "IMPLEMENTED"
-    description: "Local desktop publishing engine compiling Markdown and Pandoc syntax into publication-quality academic PDFs."
-    inputs:
-      - "Markdown (.md) files with LaTeX equations"
-    outputs:
-      - "Compiled PDF documents"
-    interfaces:
-      - "Python CLI"
-      - "Tkinter GUI"
-    dependencies:
-      - "Python 3.10+"
-      - "Pandoc"
-      - "wkhtmltopdf / WeasyPrint"
-    evidence: "E3"
-    benchmarks: "Renders 50-page complex technical dossiers in <4 seconds"
-    verification: "Automated regression rendering test script"
-    maintenance_cost: "1 hour/month"
-    development_hours: 20
-    confidence: 0.95
-    last_verified: "2026-08-28"
 
   - id: "yt-dlp-live"
     name: "yt-dlp-live"
@@ -543,5 +494,33 @@ capabilities:
     maintenance_cost: "1 hour/month"
     development_hours: 8
     confidence: 0.98
+    last_verified: "2026-09-19"
+
+  - id: "github-pilot"
+    name: "GitHub Pilot"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\github-pilot"
+    category: "COMPUTATIONAL_ENGINE"
+    status: "IMPLEMENTED"
+    description: "Autonomous macro-plane GitHub profile, fleet health auditor, and ecosystem navigator with Rich terminal UI and SVG radar synthesis."
+    inputs:
+      - "GitHub API credentials / public usernames"
+      - "Target repository lists"
+    outputs:
+      - "Fleet health and hygiene scorecards"
+      - "Dynamic SVG profile radar telemetry"
+    interfaces:
+      - "Python CLI (Typer)"
+      - "FastMCP (stdio JSON-RPC)"
+    dependencies:
+      - "Python 3.11+"
+      - "httpx / HTTP/2"
+      - "selectolax"
+      - "rich"
+    evidence: "E3"
+    benchmarks: "Audits 50-repository multi-account fleet in <12 seconds"
+    verification: "Automated test suite across fleet scanner and SVG generators"
+    maintenance_cost: "1 hour/month"
+    development_hours: 14
+    confidence: 0.95
     last_verified: "2026-09-19"
 

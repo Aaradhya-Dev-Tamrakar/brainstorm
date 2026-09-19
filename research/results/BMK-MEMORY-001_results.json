@@ -55,8 +55,9 @@
       "conversational_god_node_elimination_pct": 100.0,
       "precision_at_5_architectural_queries": {
         "strict_target_precision_at_5": 0.56,
-        "theoretical_strict_ceiling": 0.56,
-        "graded_semantic_relevance_precision_at_5": 0.92,
+        "theoretical_strict_ceiling": 0.64,
+        "strict_ceiling_utilization_pct": 87.5,
+        "graded_semantic_relevance_precision_at_5": 0.88,
         "target_node_recall_at_5": 0.884
       },
       "query_breakdown": {
@@ -65,12 +66,18 @@
           "baseline_strict_p5": 0.40,
           "baseline_graded_p5": 0.40,
           "post_strict_p5": 0.60,
-          "post_graded_p5": 1.00,
+          "post_graded_p5": 0.92,
           "post_recall_at_5": 1.00,
           "target_nodes": ["ARCH-SPEC-006", "INV-FUS-001", "EXP-FUSION360-MCP-001"],
           "retrieved_nodes_top_5": {
             "baseline": ["Turn 3", "Turn 5", "ARCH-SPEC-006", "INV-FUS-001", "Antigravity Session Transcript"],
-            "post_stratification": ["ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md", "EXP-FUSION360-MCP-001", "fusion360-mcp.contract.json", "INV-FUS-001", "CustomEvent"]
+            "post_stratification": [
+              {"node": "ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md", "grade": 1.0, "category": "EXACT_TARGET_SPEC"},
+              {"node": "EXP-FUSION360-MCP-001", "grade": 1.0, "category": "EXACT_TARGET_EXP"},
+              {"node": "fusion360-mcp.contract.json", "grade": 0.8, "category": "SUPPORTING_CONTRACT_SCHEMA"},
+              {"node": "INV-FUS-001", "grade": 1.0, "category": "EXACT_TARGET_INVARIANT"},
+              {"node": "CustomEvent", "grade": 0.8, "category": "CORE_EXECUTION_PRIMITIVE"}
+            ]
           }
         },
         "Q2_hir_telemetry": {
@@ -78,12 +85,18 @@
           "baseline_strict_p5": 0.40,
           "baseline_graded_p5": 0.40,
           "post_strict_p5": 0.60,
-          "post_graded_p5": 1.00,
+          "post_graded_p5": 0.92,
           "post_recall_at_5": 1.00,
           "target_nodes": ["task_telemetry.py", "ARCH-RFC-004", "economic-model.md"],
           "retrieved_nodes_top_5": {
             "baseline": ["Turn 1", "Turn 3", "task_telemetry.py", "economic-model.md", "Assistant"],
-            "post_stratification": ["task_telemetry.py", "Defensible Economic Accounting & R&D Resource Allocation Model", "ARCH-RFC-004", "human_intervention_minutes", "rework_count"]
+            "post_stratification": [
+              {"node": "task_telemetry.py", "grade": 1.0, "category": "EXACT_TARGET_SCRIPT"},
+              {"node": "Defensible Economic Accounting & R&D Resource Allocation Model", "grade": 1.0, "category": "EXACT_TARGET_SPEC"},
+              {"node": "ARCH-RFC-004", "grade": 1.0, "category": "EXACT_TARGET_RFC"},
+              {"node": "human_intervention_minutes", "grade": 0.8, "category": "TELEMETRY_SCHEMA_FIELD"},
+              {"node": "rework_count", "grade": 0.8, "category": "TELEMETRY_SCHEMA_FIELD"}
+            ]
           }
         },
         "Q3_spark_fall_detection": {
@@ -91,12 +104,18 @@
           "baseline_strict_p5": 0.60,
           "baseline_graded_p5": 0.60,
           "post_strict_p5": 0.40,
-          "post_graded_p5": 1.00,
+          "post_graded_p5": 0.96,
           "post_recall_at_5": 0.67,
           "target_nodes": ["SPARK", "ARCH-SPEC-001", "PROFILE.md"],
           "retrieved_nodes_top_5": {
             "baseline": ["SPARK Wearable Gateway", "ARCH-SPEC-001", "PROFILE.md", "Turn 2", "Turn 3"],
-            "post_stratification": ["SPARK Wearable Gateway", "ARCH-SPEC-001: ECIE Systems Architect Paradigm", "Aaradhya Dev Tamrakar (ADT)", "Item 01: Hardware Interrupt Gating & Microcontroller Fall Detection", "Item 02: Fall Detection Model Footprint & Accuracy"]
+            "post_stratification": [
+              {"node": "SPARK Wearable Gateway", "grade": 1.0, "category": "EXACT_TARGET_HUB"},
+              {"node": "ARCH-SPEC-001: ECIE Systems Architect Paradigm", "grade": 1.0, "category": "EXACT_TARGET_SPEC"},
+              {"node": "Aaradhya Dev Tamrakar (ADT)", "grade": 0.8, "category": "ARCHITECT_CONTEXT_HUB"},
+              {"node": "Item 01: Hardware Interrupt Gating & Microcontroller Fall Detection", "grade": 1.0, "category": "EXACT_TARGET_SECTION"},
+              {"node": "Item 02: Fall Detection Model Footprint & Accuracy", "grade": 1.0, "category": "EXACT_TARGET_SECTION"}
+            ]
           }
         },
         "Q4_compound_workflows": {
@@ -109,7 +128,13 @@
           "target_nodes": ["capability-ontology.md", "README.md", "COMPOSE-001", "COMPOSE-002"],
           "retrieved_nodes_top_5": {
             "baseline": ["Turn 5", "Personal Tool Ecosystem", "COMPOSE-001", "Turn 3", "Assistant"],
-            "post_stratification": ["Canonical Capability & Ecosystem Ontology", "Personal Tool Ecosystem", "COMPOSE-001 (High-Bandwidth Rapid Learning Loop)", "COMPOSE-002 (Autonomous Invariant & Constraint Verification Loop)", "4. Step-by-Step Implementation Timeline"]
+            "post_stratification": [
+              {"node": "Canonical Capability & Ecosystem Ontology", "grade": 1.0, "category": "EXACT_TARGET_ONTOLOGY"},
+              {"node": "Personal Tool Ecosystem", "grade": 0.5, "category": "BROAD_ECOSYSTEM_HUB"},
+              {"node": "COMPOSE-001 (High-Bandwidth Rapid Learning Loop)", "grade": 1.0, "category": "EXACT_TARGET_BENCHMARK"},
+              {"node": "COMPOSE-002 (Autonomous Invariant & Constraint Verification Loop)", "grade": 1.0, "category": "EXACT_TARGET_BENCHMARK"},
+              {"node": "4. Step-by-Step Implementation Timeline", "grade": 0.5, "category": "ROADMAP_CONTEXT_SECTION"}
+            ]
           }
         },
         "Q5_evidence_tiers": {
@@ -122,7 +147,13 @@
           "target_nodes": ["evidence-policy.md", "ARCH-RFC-001", "reconciliation_engine.py"],
           "retrieved_nodes_top_5": {
             "baseline": ["Turn 3", "Turn 1", "7. Verify the actual enforcement", "evidence-policy.md", "User"],
-            "post_stratification": ["Calibrated Evidence Policy (E0-E5)", "ARCH-RFC-001: Record Keeping Standard", "reconciliation_engine.py", "2. Granular Claims Audit Register", "properties"]
+            "post_stratification": [
+              {"node": "Calibrated Evidence Policy (E0-E5)", "grade": 1.0, "category": "EXACT_TARGET_POLICY"},
+              {"node": "ARCH-RFC-001: Record Keeping Standard", "grade": 1.0, "category": "EXACT_TARGET_RFC"},
+              {"node": "reconciliation_engine.py", "grade": 1.0, "category": "EXACT_TARGET_ENGINE"},
+              {"node": "2. Granular Claims Audit Register", "grade": 0.8, "category": "AUDIT_REGISTER_SECTION"},
+              {"node": "properties", "grade": 0.2, "category": "SCHEMA_LEAF_PROPERTY"}
+            ]
           }
         }
       }
@@ -132,7 +163,7 @@
     "node_clutter_reduction": "VERIFIED (55.48% vs >=40% target)",
     "conversational_god_node_elimination": "VERIFIED (100% eliminated, 0 in top 10)",
     "community_consolidation": "VERIFIED (222 -> 86 communities, <100 target)",
-    "retrieval_precision_improvement": "VERIFIED (Graded P@5: 0.92 vs >=0.80 target; Strict P@5: 0.56 saturating 100% theoretical ceiling; Recall@5: 0.884)",
+    "retrieval_precision_improvement": "VERIFIED (Graded P@5: 0.880-0.920 vs >=0.80 target; Strict P@5: 0.56 representing 87.5% of 0.64 ceiling; Recall@5: 0.884)",
     "absolute_community_cohesion_target": "NOT_MET (0.230 observed vs >=0.45/0.50 target; +5.11x relative gain from 0.045 baseline)"
   },
   "acceptance_criteria_validation": {

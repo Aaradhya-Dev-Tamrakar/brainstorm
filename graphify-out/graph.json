@@ -1413,7 +1413,7 @@
       "source_location": "L187"
     },
     {
-      "id": "schemas_capability_contract_v1_inputs_description",
+      "id": "schemas_capability_contract_v1_description_description",
       "label": "description",
       "_origin": "ast",
       "community": 1,
@@ -1421,10 +1421,10 @@
       "file_type": "code",
       "norm_label": "description",
       "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L180"
+      "source_location": "L109"
     },
     {
-      "id": "schemas_capability_contract_v1_inputs_type",
+      "id": "schemas_capability_contract_v1_description_type",
       "label": "type",
       "_origin": "ast",
       "community": 1,
@@ -1432,7 +1432,29 @@
       "file_type": "code",
       "norm_label": "type",
       "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L179"
+      "source_location": "L108"
+    },
+    {
+      "id": "schemas_capability_contract_v1_deterministic_description",
+      "label": "description",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "description",
+      "source_file": "schemas/capability.contract.v1.json",
+      "source_location": "L127"
+    },
+    {
+      "id": "schemas_capability_contract_v1_deterministic_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/capability.contract.v1.json",
+      "source_location": "L126"
     },
     {
       "id": "schemas_capability_contract_v1_properties_counterexample_schema",
@@ -1446,29 +1468,7 @@
       "source_location": "L186"
     },
     {
-      "id": "schemas_capability_contract_v1_properties_inputs",
-      "label": "inputs",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "inputs",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L178"
-    },
-    {
-      "id": "schemas_capability_contract_v1_properties_timeout_ms",
-      "label": "timeout_ms",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "timeout_ms",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L168"
-    },
-    {
-      "id": "schemas_capability_contract_v1_timeout_ms_description",
+      "id": "schemas_capability_contract_v1_properties_description",
       "label": "description",
       "_origin": "ast",
       "community": 1,
@@ -1476,29 +1476,18 @@
       "file_type": "code",
       "norm_label": "description",
       "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L171"
+      "source_location": "L107"
     },
     {
-      "id": "schemas_capability_contract_v1_timeout_ms_minimum",
-      "label": "minimum",
+      "id": "schemas_capability_contract_v1_properties_deterministic",
+      "label": "deterministic",
       "_origin": "ast",
       "community": 1,
       "community_name": "properties",
       "file_type": "code",
-      "norm_label": "minimum",
+      "norm_label": "deterministic",
       "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L170"
-    },
-    {
-      "id": "schemas_capability_contract_v1_timeout_ms_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L169"
+      "source_location": "L125"
     },
     {
       "id": "research_experiments_inv_template",
@@ -5449,14 +5438,14 @@
       "source_location": "L131"
     },
     {
-      "id": "research_experiments_bmk_memory_001_5_3_granular_retrieval_precision_breakdown_q1_q5",
-      "label": "5.3 Granular Retrieval Precision Breakdown (Q1\u2013Q5)",
+      "id": "research_experiments_bmk_memory_001_5_3_granular_retrieval_precision_per_node_relevance_register",
+      "label": "5.3 Granular Retrieval Precision & Per-Node Relevance Register",
       "_origin": "ast",
       "community": 24,
       "community_name": "\ud83e\udde0 RESEARCH BENCHMARK: BMK-MEMORY-001 (Memory Stratification & Graph Density)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "5.3 granular retrieval precision breakdown (q1\u2013q5)",
+      "norm_label": "5.3 granular retrieval precision & per-node relevance register",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
       "source_location": "L146"
     },
@@ -5482,7 +5471,7 @@
       "node_kind": "heading",
       "norm_label": "6. hypothesis decomposition & epistemic verdict",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L159"
+      "source_location": "L189"
     },
     {
       "id": "research_experiments_bmk_memory_001_7_artifacts_epistemic_provenance",
@@ -5494,7 +5483,19 @@
       "node_kind": "heading",
       "norm_label": "7. artifacts & epistemic provenance",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L176"
+      "source_location": "L206"
+    },
+    {
+      "id": "research_experiments_bmk_memory_001_granular_25_node_grounded_scoring_audit_register",
+      "label": "Granular 25-Node Grounded Scoring Audit Register",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "\ud83e\udde0 RESEARCH BENCHMARK: BMK-MEMORY-001 (Memory Stratification & Graph Density)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "granular 25-node grounded scoring audit register",
+      "source_file": "research/experiments/BMK-MEMORY-001.md",
+      "source_location": "L158"
     },
     {
       "id": "research_experiments_bmk_memory_001_research_benchmark_bmk_memory_001_memory_stratification_graph_density",
@@ -5507,6 +5508,18 @@
       "norm_label": "\ud83e\udde0 research benchmark: bmk-memory-001 (memory stratification & graph density)",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
       "source_location": "L1"
+    },
+    {
+      "id": "research_experiments_bmk_memory_001_summary_performance_table",
+      "label": "Summary Performance Table",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "\ud83e\udde0 RESEARCH BENCHMARK: BMK-MEMORY-001 (Memory Stratification & Graph Density)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "summary performance table",
+      "source_file": "research/experiments/BMK-MEMORY-001.md",
+      "source_location": "L148"
     },
     {
       "id": "report_quantitative_claims_audit_10_central_technical_asset_replacement_valuation",
@@ -8510,37 +8523,48 @@
       "source_location": "L65"
     },
     {
-      "id": "schemas_capability_contract_v1_description_description",
+      "id": "schemas_capability_contract_v1_properties_timeout_ms",
+      "label": "timeout_ms",
+      "_origin": "ast",
+      "community": 49,
+      "community_name": "timeout_ms",
+      "file_type": "code",
+      "norm_label": "timeout_ms",
+      "source_file": "schemas/capability.contract.v1.json",
+      "source_location": "L168"
+    },
+    {
+      "id": "schemas_capability_contract_v1_timeout_ms_description",
       "label": "description",
       "_origin": "ast",
       "community": 49,
-      "community_name": "description",
+      "community_name": "timeout_ms",
       "file_type": "code",
       "norm_label": "description",
       "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L109"
+      "source_location": "L171"
     },
     {
-      "id": "schemas_capability_contract_v1_description_type",
+      "id": "schemas_capability_contract_v1_timeout_ms_minimum",
+      "label": "minimum",
+      "_origin": "ast",
+      "community": 49,
+      "community_name": "timeout_ms",
+      "file_type": "code",
+      "norm_label": "minimum",
+      "source_file": "schemas/capability.contract.v1.json",
+      "source_location": "L170"
+    },
+    {
+      "id": "schemas_capability_contract_v1_timeout_ms_type",
       "label": "type",
       "_origin": "ast",
       "community": 49,
-      "community_name": "description",
+      "community_name": "timeout_ms",
       "file_type": "code",
       "norm_label": "type",
       "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L108"
-    },
-    {
-      "id": "schemas_capability_contract_v1_properties_description",
-      "label": "description",
-      "_origin": "ast",
-      "community": 49,
-      "community_name": "description",
-      "file_type": "code",
-      "norm_label": "description",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L107"
+      "source_location": "L169"
     },
     {
       "id": "research_daily_2026_09_19",
@@ -8833,6 +8857,61 @@
       "source_location": "L6"
     },
     {
+      "id": "schemas_ecosystem_verification_schema_claims_items",
+      "label": "items",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "items",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L30"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_claims_minitems",
+      "label": "minItems",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "minitems",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L29"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_claims_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L28"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_generated_by_minlength",
+      "label": "minLength",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "minlength",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L11"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_generated_by_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L11"
+    },
+    {
       "id": "schemas_ecosystem_verification_schema_id",
       "label": "$id",
       "_origin": "ast",
@@ -8844,6 +8923,17 @@
       "source_location": "L3"
     },
     {
+      "id": "schemas_ecosystem_verification_schema_items_ref",
+      "label": "$ref",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "$ref",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L15"
+    },
+    {
       "id": "schemas_ecosystem_verification_schema_json_schemas_ecosystem_verification_schema",
       "label": "ecosystem.verification.schema.json",
       "_origin": "ast",
@@ -8853,6 +8943,116 @@
       "norm_label": "ecosystem.verification.schema.json",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L1"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_manifest_kind_const",
+      "label": "const",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "const",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_projects_items",
+      "label": "items",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "items",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_projects_minitems",
+      "label": "minItems",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "minitems",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L14"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_projects_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L13"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_properties",
+      "label": "properties",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "properties",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_properties_claims",
+      "label": "claims",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "claims",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L27"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_properties_generated_by",
+      "label": "generated_by",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "generated_by",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L11"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_properties_manifest_kind",
+      "label": "manifest_kind",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "manifest_kind",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_properties_projects",
+      "label": "projects",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "projects",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L12"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_properties_schema_version",
+      "label": "schema_version",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "schema_version",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L9"
     },
     {
       "id": "schemas_ecosystem_verification_schema_required",
@@ -8875,6 +9075,17 @@
       "norm_label": "$schema",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L2"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_schema_version_const",
+      "label": "const",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "const",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L9"
     },
     {
       "id": "schemas_ecosystem_verification_schema_title",
@@ -8943,103 +9154,37 @@
       "source_location": "L7"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_claims_items",
-      "label": "items",
+      "id": "schemas_capability_contract_v1_inputs_description",
+      "label": "description",
       "_origin": "ast",
       "community": 59,
-      "community_name": "claims",
+      "community_name": "inputs",
       "file_type": "code",
-      "norm_label": "items",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L30"
+      "norm_label": "description",
+      "source_file": "schemas/capability.contract.v1.json",
+      "source_location": "L180"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_claims_minitems",
-      "label": "minItems",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "claims",
-      "file_type": "code",
-      "norm_label": "minitems",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L29"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_claims_type",
+      "id": "schemas_capability_contract_v1_inputs_type",
       "label": "type",
       "_origin": "ast",
       "community": 59,
-      "community_name": "claims",
+      "community_name": "inputs",
       "file_type": "code",
       "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L28"
+      "source_file": "schemas/capability.contract.v1.json",
+      "source_location": "L179"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_items_ref",
-      "label": "$ref",
+      "id": "schemas_capability_contract_v1_properties_inputs",
+      "label": "inputs",
       "_origin": "ast",
       "community": 59,
-      "community_name": "claims",
+      "community_name": "inputs",
       "file_type": "code",
-      "norm_label": "$ref",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L15"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_projects_items",
-      "label": "items",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "claims",
-      "file_type": "code",
-      "norm_label": "items",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L15"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_projects_minitems",
-      "label": "minItems",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "claims",
-      "file_type": "code",
-      "norm_label": "minitems",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L14"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_projects_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "claims",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L13"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_properties_claims",
-      "label": "claims",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "claims",
-      "file_type": "code",
-      "norm_label": "claims",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L27"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_properties_projects",
-      "label": "projects",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "claims",
-      "file_type": "code",
-      "norm_label": "projects",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L12"
+      "norm_label": "inputs",
+      "source_file": "schemas/capability.contract.v1.json",
+      "source_location": "L178"
     },
     {
       "id": "schemas_capability_contract_v1",
@@ -9559,248 +9704,6 @@
       "source_location": "L61"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_generated_by_minlength",
-      "label": "minLength",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "minlength",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L11"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_generated_by_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L11"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_manifest_kind_const",
-      "label": "const",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "const",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L10"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_properties",
-      "label": "properties",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "properties",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L8"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_properties_generated_by",
-      "label": "generated_by",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "generated_by",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L11"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_properties_manifest_kind",
-      "label": "manifest_kind",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "manifest_kind",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L10"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_properties_schema_version",
-      "label": "schema_version",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "schema_version",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L9"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_schema_version_const",
-      "label": "const",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "const",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L9"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_project_required",
-      "label": "required",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "required",
-      "file_type": "code",
-      "norm_label": "required",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "ref_claimed_result",
-      "label": "claimed_result",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "required",
-      "file_type": "concept",
-      "norm_label": "claimed_result",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "ref_claims",
-      "label": "claims",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "required",
-      "file_type": "concept",
-      "norm_label": "claims",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "ref_provenance",
-      "label": "provenance",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "required",
-      "file_type": "concept",
-      "norm_label": "provenance",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "ref_repository",
-      "label": "repository",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "required",
-      "file_type": "concept",
-      "norm_label": "repository",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "ref_verification",
-      "label": "verification",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "required",
-      "file_type": "concept",
-      "norm_label": "verification",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_json_ref_id",
-      "label": "id",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "required",
-      "file_type": "concept",
-      "norm_label": "id",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_claim_additionalproperties",
-      "label": "additionalProperties",
-      "_origin": "ast",
-      "community": 63,
-      "community_name": "$defs",
-      "file_type": "code",
-      "norm_label": "additionalproperties",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L38"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_claim_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 63,
-      "community_name": "$defs",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L37"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_defs",
-      "label": "$defs",
-      "_origin": "ast",
-      "community": 63,
-      "community_name": "$defs",
-      "file_type": "code",
-      "norm_label": "$defs",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L18"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_defs_claim",
-      "label": "claim",
-      "_origin": "ast",
-      "community": 63,
-      "community_name": "$defs",
-      "file_type": "code",
-      "norm_label": "claim",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L36"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_defs_project",
-      "label": "project",
-      "_origin": "ast",
-      "community": 63,
-      "community_name": "$defs",
-      "file_type": "code",
-      "norm_label": "project",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L19"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_project_additionalproperties",
-      "label": "additionalProperties",
-      "_origin": "ast",
-      "community": 63,
-      "community_name": "$defs",
-      "file_type": "code",
-      "norm_label": "additionalproperties",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L21"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_project_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 63,
-      "community_name": "$defs",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L20"
-    },
-    {
       "id": "schemas_examples_nepali_ocr_ai_contract",
       "label": "nepali-ocr-ai.contract.json",
       "_origin": "ast",
@@ -10010,193 +9913,6 @@
       "source_location": "L11"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_defs_provenance",
-      "label": "provenance",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "provenance",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L48"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_properties_recorded_at",
-      "label": "recorded_at",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "recorded_at",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L55"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_properties_source_commit",
-      "label": "source_commit",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "source_commit",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L54"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_properties_source_path",
-      "label": "source_path",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "source_path",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L53"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_provenance_additionalproperties",
-      "label": "additionalProperties",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "additionalproperties",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L50"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_provenance_properties",
-      "label": "properties",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "properties",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L52"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_provenance_required",
-      "label": "required",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "required",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L51"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_provenance_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L49"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_recorded_at_format",
-      "label": "format",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "format",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L55"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_recorded_at_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L55"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_source_commit_minlength",
-      "label": "minLength",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "minlength",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L54"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_source_commit_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L54"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_source_path_minlength",
-      "label": "minLength",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "minlength",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L53"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_source_path_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L53"
-    },
-    {
-      "id": "ref_recorded_at",
-      "label": "recorded_at",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "provenance",
-      "file_type": "concept",
-      "norm_label": "recorded_at",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L51"
-    },
-    {
-      "id": "ref_source_commit",
-      "label": "source_commit",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "provenance",
-      "file_type": "concept",
-      "norm_label": "source_commit",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L51"
-    },
-    {
-      "id": "ref_source_path",
-      "label": "source_path",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "provenance",
-      "file_type": "concept",
-      "norm_label": "source_path",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L51"
-    },
-    {
       "id": "sim_run_experiments",
       "label": "run_experiments.py",
       "_origin": "ast",
@@ -10239,61 +9955,6 @@
       "norm_label": "fifo single-server completion times, in seconds.",
       "source_file": "sim/run_experiments.py",
       "source_location": "L44"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_claim_required",
-      "label": "required",
-      "_origin": "ast",
-      "community": 67,
-      "community_name": "required",
-      "file_type": "code",
-      "norm_label": "required",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L39"
-    },
-    {
-      "id": "ref_evidence_tier",
-      "label": "evidence_tier",
-      "_origin": "ast",
-      "community": 67,
-      "community_name": "required",
-      "file_type": "concept",
-      "norm_label": "evidence_tier",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L39"
-    },
-    {
-      "id": "ref_metric",
-      "label": "metric",
-      "_origin": "ast",
-      "community": 67,
-      "community_name": "required",
-      "file_type": "concept",
-      "norm_label": "metric",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L39"
-    },
-    {
-      "id": "ref_scope",
-      "label": "scope",
-      "_origin": "ast",
-      "community": 67,
-      "community_name": "required",
-      "file_type": "concept",
-      "norm_label": "scope",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L39"
-    },
-    {
-      "id": "ref_value",
-      "label": "value",
-      "_origin": "ast",
-      "community": 67,
-      "community_name": "required",
-      "file_type": "concept",
-      "norm_label": "value",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L39"
     },
     {
       "id": "research_decisions_dec_001_memory_stratification",
@@ -10354,39 +10015,6 @@
       "norm_label": "\ud83c\udfdb\ufe0f decision record: dec-001 (memory stratification & retrieval pruning)",
       "source_file": "research/decisions/DEC-001-MEMORY-STRATIFICATION.md",
       "source_location": "L1"
-    },
-    {
-      "id": "schemas_capability_contract_v1_deterministic_description",
-      "label": "description",
-      "_origin": "ast",
-      "community": 69,
-      "community_name": "deterministic",
-      "file_type": "code",
-      "norm_label": "description",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L127"
-    },
-    {
-      "id": "schemas_capability_contract_v1_deterministic_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 69,
-      "community_name": "deterministic",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L126"
-    },
-    {
-      "id": "schemas_capability_contract_v1_properties_deterministic",
-      "label": "deterministic",
-      "_origin": "ast",
-      "community": 69,
-      "community_name": "deterministic",
-      "file_type": "code",
-      "norm_label": "deterministic",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L125"
     },
     {
       "id": "schemas_capability_contract_v1_category_description",
@@ -10543,6 +10171,17 @@
       "source_location": "L26"
     },
     {
+      "id": "schemas_ecosystem_verification_schema_defs_project",
+      "label": "project",
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "project",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L19"
+    },
+    {
       "id": "schemas_ecosystem_verification_schema_id_pattern",
       "label": "pattern",
       "_origin": "ast",
@@ -10565,6 +10204,17 @@
       "source_location": "L24"
     },
     {
+      "id": "schemas_ecosystem_verification_schema_project_additionalproperties",
+      "label": "additionalProperties",
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "additionalproperties",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L21"
+    },
+    {
       "id": "schemas_ecosystem_verification_schema_project_properties",
       "label": "properties",
       "_origin": "ast",
@@ -10574,6 +10224,28 @@
       "norm_label": "properties",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L23"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_project_required",
+      "label": "required",
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "required",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_project_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L20"
     },
     {
       "id": "schemas_ecosystem_verification_schema_properties_claimed_result",
@@ -10675,6 +10347,83 @@
       "source_location": "L33"
     },
     {
+      "id": "ref_claimed_result",
+      "label": "claimed_result",
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "properties",
+      "file_type": "concept",
+      "norm_label": "claimed_result",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "ref_claims",
+      "label": "claims",
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "properties",
+      "file_type": "concept",
+      "norm_label": "claims",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "ref_provenance",
+      "label": "provenance",
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "properties",
+      "file_type": "concept",
+      "norm_label": "provenance",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "ref_repository",
+      "label": "repository",
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "properties",
+      "file_type": "concept",
+      "norm_label": "repository",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "ref_verification",
+      "label": "verification",
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "properties",
+      "file_type": "concept",
+      "norm_label": "verification",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_json_ref_id",
+      "label": "id",
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "properties",
+      "file_type": "concept",
+      "norm_label": "id",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_claim_additionalproperties",
+      "label": "additionalProperties",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "additionalproperties",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L38"
+    },
+    {
       "id": "schemas_ecosystem_verification_schema_claim_properties",
       "label": "properties",
       "_origin": "ast",
@@ -10684,6 +10433,61 @@
       "norm_label": "properties",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L40"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_claim_required",
+      "label": "required",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "required",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L39"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_claim_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L37"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_defs",
+      "label": "$defs",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "$defs",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L18"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_defs_claim",
+      "label": "claim",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "claim",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L36"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_defs_provenance",
+      "label": "provenance",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "provenance",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L48"
     },
     {
       "id": "schemas_ecosystem_verification_schema_evidence_tier_enum",
@@ -10785,6 +10589,17 @@
       "source_location": "L41"
     },
     {
+      "id": "schemas_ecosystem_verification_schema_properties_recorded_at",
+      "label": "recorded_at",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "recorded_at",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L55"
+    },
+    {
       "id": "schemas_ecosystem_verification_schema_properties_scope",
       "label": "scope",
       "_origin": "ast",
@@ -10796,6 +10611,28 @@
       "source_location": "L43"
     },
     {
+      "id": "schemas_ecosystem_verification_schema_properties_source_commit",
+      "label": "source_commit",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "source_commit",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L54"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_properties_source_path",
+      "label": "source_path",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "source_path",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L53"
+    },
+    {
       "id": "schemas_ecosystem_verification_schema_properties_value",
       "label": "value",
       "_origin": "ast",
@@ -10805,6 +10642,72 @@
       "norm_label": "value",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L42"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_provenance_additionalproperties",
+      "label": "additionalProperties",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "additionalproperties",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L50"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_provenance_properties",
+      "label": "properties",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "properties",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L52"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_provenance_required",
+      "label": "required",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "required",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L51"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_provenance_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L49"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_recorded_at_format",
+      "label": "format",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "format",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L55"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_recorded_at_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L55"
     },
     {
       "id": "schemas_ecosystem_verification_schema_scope_minlength",
@@ -10827,6 +10730,127 @@
       "norm_label": "type",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L43"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_source_commit_minlength",
+      "label": "minLength",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "minlength",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L54"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_source_commit_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L54"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_source_path_minlength",
+      "label": "minLength",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "minlength",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L53"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_source_path_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L53"
+    },
+    {
+      "id": "ref_evidence_tier",
+      "label": "evidence_tier",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "concept",
+      "norm_label": "evidence_tier",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L39"
+    },
+    {
+      "id": "ref_metric",
+      "label": "metric",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "concept",
+      "norm_label": "metric",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L39"
+    },
+    {
+      "id": "ref_recorded_at",
+      "label": "recorded_at",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "concept",
+      "norm_label": "recorded_at",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L51"
+    },
+    {
+      "id": "ref_scope",
+      "label": "scope",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "concept",
+      "norm_label": "scope",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L39"
+    },
+    {
+      "id": "ref_source_commit",
+      "label": "source_commit",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "concept",
+      "norm_label": "source_commit",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L51"
+    },
+    {
+      "id": "ref_source_path",
+      "label": "source_path",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "concept",
+      "norm_label": "source_path",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L51"
+    },
+    {
+      "id": "ref_value",
+      "label": "value",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "concept",
+      "norm_label": "value",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L39"
     },
     {
       "id": "schemas_ecosystem_verification_schema_json_ref_e0",
@@ -16129,6 +16153,28 @@
       "weight": 1.0
     },
     {
+      "source": "research_experiments_bmk_memory_001_5_3_granular_retrieval_precision_per_node_relevance_register",
+      "target": "research_experiments_bmk_memory_001_summary_performance_table",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/experiments/BMK-MEMORY-001.md",
+      "source_location": "L148",
+      "weight": 1.0
+    },
+    {
+      "source": "research_experiments_bmk_memory_001_5_3_granular_retrieval_precision_per_node_relevance_register",
+      "target": "research_experiments_bmk_memory_001_granular_25_node_grounded_scoring_audit_register",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/experiments/BMK-MEMORY-001.md",
+      "source_location": "L158",
+      "weight": 1.0
+    },
+    {
       "source": "research_experiments_bmk_memory_001_5_empirical_results_delta_analysis_executed_2026_09_19_commit_917c0aa1",
       "target": "research_experiments_bmk_memory_001_5_1_pre_vs_post_stratification_comparison",
       "relation": "contains",
@@ -16152,7 +16198,7 @@
     },
     {
       "source": "research_experiments_bmk_memory_001_5_empirical_results_delta_analysis_executed_2026_09_19_commit_917c0aa1",
-      "target": "research_experiments_bmk_memory_001_5_3_granular_retrieval_precision_breakdown_q1_q5",
+      "target": "research_experiments_bmk_memory_001_5_3_granular_retrieval_precision_per_node_relevance_register",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -16180,18 +16226,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L159",
-      "weight": 1.0
-    },
-    {
-      "source": "research_experiments_bmk_memory_001_research_benchmark_bmk_memory_001_memory_stratification_graph_density",
-      "target": "research_experiments_bmk_memory_001_7_artifacts_epistemic_provenance",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L176",
+      "source_location": "L189",
       "weight": 1.0
     },
     {
@@ -16203,6 +16238,17 @@
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
       "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "research_experiments_bmk_memory_001_research_benchmark_bmk_memory_001_memory_stratification_graph_density",
+      "target": "research_experiments_bmk_memory_001_7_artifacts_epistemic_provenance",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/experiments/BMK-MEMORY-001.md",
+      "source_location": "L206",
       "weight": 1.0
     },
     {
@@ -24333,5 +24379,5 @@
       "source_file": "README.md"
     }
   ],
-  "built_at_commit": "4e0ccc451dc14c8e9061d3473043f5cd49e9e4be"
+  "built_at_commit": "543b756ab4513eb9d3284bb50d4163e2aade63d9"
 }

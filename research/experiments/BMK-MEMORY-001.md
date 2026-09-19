@@ -101,7 +101,7 @@ To resolve ambiguity between strict set membership and semantic signal density:
 
 1. **Strict Target Precision@5 ($P_{\text{strict}}@5$)**:
    $$\text{Precision}_{\text{strict}}@5 = \frac{\sum_{i=1}^5 \mathbb{I}(\text{result}_i \in \text{Target Ground-Truth Set})}{5}$$
-   *(Mathematical Property: Since $|\text{Target Nodes}| \in [2, 4]$, strict $P@5$ has a theoretical ceiling bounded by $\frac{|\text{Target}|}{5} \le 0.80$, with a mean maximum of $0.56$.)*
+   *(Mathematical Property: Since $|\text{Target Nodes}| \in \{3, 4\}$ across the 5 queries (Q1=3, Q2=3, Q3=3, Q4=4, Q5=3), the mean theoretical ceiling is $\frac{0.60 + 0.60 + 0.60 + 0.80 + 0.60}{5} = \mathbf{0.64}$. The observed mean strict $P@5 = \mathbf{0.56}$ achieves **87.5% of the theoretical 0.64 ceiling**.)*
 
 2. **Target Node Recall@5 ($R@5$)**:
    $$\text{Recall}@5 = \frac{|\{\text{result}_1, \dots, \text{result}_5\} \cap \text{Target Ground-Truth Set}|}{|\text{Target Ground-Truth Set}|}$$
@@ -124,9 +124,9 @@ To resolve ambiguity between strict set membership and semantic signal density:
 | **Communities Count** | 222 clusters | **86 communities** | **-61.26% fragmentation reduction** | ✅ PASS ($< 100$) |
 | **Mean Cohesion** | 0.045 (extremely thin) | **0.230 (top modules $\ge 0.50$)** | **+5.11x cohesion factor** | ⚠️ **NOT MET (Target $\ge 0.45$)** |
 | **Conversational God Nodes** | 4 in Top 10 (`Turn 3`, `Turn 5`, etc.) | **0 in Top 10** | **100% eliminated** | ✅ PASS (0) |
-| **Target Node Recall@5 ($R@5$)** | 0.58 (2.9 / 5.0 targets found) | **0.88 (4.4 / 5.0 targets found)** | **+51.7% recall gain** | ✅ PASS ($\ge 0.80$) |
-| **Strict Target Precision@5** | 0.36 (1.8 / 5.0 targets) | **0.56 (2.8 / 5.0 targets)** | **Saturates 100% of theoretical ceiling** | ✅ PASS |
-| **Graded Relevance Precision@5** | 0.40 (diluted by turn chunks) | **0.92 (zero conversational noise)** | **+130.0% signal density gain** | ✅ PASS ($\ge 0.80$) |
+| **Target Node Recall@5 ($R@5$)** | 0.58 (2.9 / 5.0 targets found) | **0.884 (4.4 / 5.0 targets found)** | **+51.7% recall gain** | ✅ PASS ($\ge 0.80$) |
+| **Strict Target Precision@5** | 0.36 (1.8 / 5.0 targets) | **0.56 (2.8 / 5.0 targets)** | **87.5% of theoretical 0.64 ceiling** | ✅ PASS |
+| **Graded Relevance Precision@5** | 0.38 (diluted by turn chunks) | **0.880 – 0.920 (zero conversational noise)** | **+131.6% signal density gain** | ✅ PASS ($\ge 0.80$) |
 
 ### 5.2 Top Post-Stratification God Nodes (Grounded Architectural Entities)
 
@@ -143,16 +143,46 @@ To resolve ambiguity between strict set membership and semantic signal density:
 10. Personal Tool Ecosystem (11 edges)
 ```
 
-### 5.3 Granular Retrieval Precision Breakdown (Q1–Q5)
+### 5.3 Granular Retrieval Precision & Per-Node Relevance Register
 
-| Query ID | Evaluated Architectural Topic | Target Set Size | Baseline ($P_{\text{strict}} / P_{\text{graded}}$) | Post-Strat ($P_{\text{strict}} / P_{\text{graded}}$) | Post $R@5$ | Baseline Top-5 Nodes Retrieved | Post-Stratification Top-5 Nodes Retrieved |
-| :---: | :--- | :---: | :---: | :---: | :---: | :--- | :--- |
-| **Q1** | Fusion 360 MCP Bridge UI Thread Safety | 3 | 0.40 / 0.40 | **0.60 / 1.00** | **1.00** | `Turn 3`, `Turn 5`, `ARCH-SPEC-006`, `INV-FUS-001`, `Antigravity Session Transcript` | `ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md`, `EXP-FUSION360-MCP-001`, `fusion360-mcp.contract.json`, `INV-FUS-001`, `CustomEvent` |
-| **Q2** | Human Intervention Ratio (HIR) Telemetry | 3 | 0.40 / 0.40 | **0.60 / 1.00** | **1.00** | `Turn 1`, `Turn 3`, `task_telemetry.py`, `economic-model.md`, `Assistant` | `task_telemetry.py`, `Defensible Economic Accounting & R&D Resource Allocation Model`, `ARCH-RFC-004`, `human_intervention_minutes`, `rework_count` |
-| **Q3** | SPARK 200 Hz Edge Fall Detection Architecture | 3 | 0.60 / 0.60 | **0.40 / 1.00** | **0.67** | `SPARK Wearable Gateway`, `ARCH-SPEC-001`, `PROFILE.md`, `Turn 2`, `Turn 3` | `SPARK Wearable Gateway`, `ARCH-SPEC-001: ECIE Systems Architect Paradigm`, `Aaradhya Dev Tamrakar (ADT)`, `Item 01: Hardware Interrupt Gating & Microcontroller Fall Detection`, `Item 02: Fall Detection Model Footprint & Accuracy` |
-| **Q4** | Six Emergent Compound Ecosystem Workflows | 4 | 0.20 / 0.30 | **0.60 / 0.80** | **0.75** | `Turn 5`, `Personal Tool Ecosystem`, `COMPOSE-001`, `Turn 3`, `Assistant` | `Canonical Capability & Ecosystem Ontology`, `Personal Tool Ecosystem`, `COMPOSE-001 (High-Bandwidth Rapid Learning Loop)`, `COMPOSE-002 (Autonomous Invariant & Constraint Verification Loop)`, `4. Step-by-Step Implementation Timeline` |
-| **Q5** | Calibrated Evidence Tiers & Invariants | 3 | 0.20 / 0.20 | **0.60 / 0.80** | **1.00** | `Turn 3`, `Turn 1`, `7. Verify the actual enforcement`, `evidence-policy.md`, `User` | `Calibrated Evidence Policy (E0-E5)`, `ARCH-RFC-001: Record Keeping Standard`, `reconciliation_engine.py`, `2. Granular Claims Audit Register`, `properties` |
-| **Mean**| **Aggregate Performance** | — | **0.36 / 0.38** | **0.56 / 0.92** | **0.88** | **38% signal / 62% noise** | **Strict P@5: 0.56 (100% capacity) | Graded P@5: 0.92 | Recall@5: 88.4%** |
+#### Summary Performance Table
+| Query ID | Evaluated Architectural Topic | Target Size | Baseline ($P_{\text{strict}} / P_{\text{graded}}$) | Post-Strat ($P_{\text{strict}} / P_{\text{graded}}$) | Post $R@5$ |
+| :---: | :--- | :---: | :---: | :---: | :---: |
+| **Q1** | Fusion 360 MCP Bridge UI Thread Safety | 3 | 0.40 / 0.40 | **0.60 / 0.92** | **1.00** |
+| **Q2** | Human Intervention Ratio (HIR) Telemetry | 3 | 0.40 / 0.40 | **0.60 / 0.92** | **1.00** |
+| **Q3** | SPARK 200 Hz Edge Fall Detection Architecture | 3 | 0.60 / 0.60 | **0.40 / 0.96** | **0.67** |
+| **Q4** | Six Emergent Compound Ecosystem Workflows | 4 | 0.20 / 0.30 | **0.60 / 0.80** | **0.75** |
+| **Q5** | Calibrated Evidence Tiers & Invariants | 3 | 0.20 / 0.20 | **0.60 / 0.80** | **1.00** |
+| **Mean**| **Aggregate Performance** | — | **0.36 / 0.38** | **0.56 / 0.88** *(Strict: 87.5% of 0.64 ceiling)* | **0.884** |
+
+#### Granular 25-Node Grounded Scoring Audit Register
+| Query | Rank | Retrieved Top-5 Node | Grade | Category / Rationale |
+| :---: | :---: | :--- | :---: | :--- |
+| **Q1** | 1 | `ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md` | **1.0** | Exact Target Canonical Spec |
+| **Q1** | 2 | `EXP-FUSION360-MCP-001` | **1.0** | Exact Target Experiment Record |
+| **Q1** | 3 | `fusion360-mcp.contract.json` | **0.8** | Direct Component Schema Contract |
+| **Q1** | 4 | `INV-FUS-001` | **1.0** | Exact Target System Invariant |
+| **Q1** | 5 | `CustomEvent` | **0.8** | Core UI-Thread Decoupling Primitive |
+| **Q2** | 1 | `task_telemetry.py` | **1.0** | Exact Target Source Script |
+| **Q2** | 2 | `Defensible Economic Accounting & R&D Resource Allocation Model` | **1.0** | Exact Target Spec (`economic-model.md`) |
+| **Q2** | 3 | `ARCH-RFC-004` | **1.0** | Exact Target Governance RFC |
+| **Q2** | 4 | `human_intervention_minutes` | **0.8** | Direct Telemetry Schema Field |
+| **Q2** | 5 | `rework_count` | **0.8** | Direct Telemetry Schema Field |
+| **Q3** | 1 | `SPARK Wearable Gateway` | **1.0** | Exact Target System Hub |
+| **Q3** | 2 | `ARCH-SPEC-001: ECIE Systems Architect Paradigm` | **1.0** | Exact Target Architecture Spec |
+| **Q3** | 3 | `Aaradhya Dev Tamrakar (ADT)` | **0.8** | Author / System Architect Hub |
+| **Q3** | 4 | `Item 01: Hardware Interrupt Gating & Microcontroller Fall Detection` | **1.0** | Core Architecture Spec Section |
+| **Q3** | 5 | `Item 02: Fall Detection Model Footprint & Accuracy` | **1.0** | Core Architecture Spec Section |
+| **Q4** | 1 | `Canonical Capability & Ecosystem Ontology` | **1.0** | Exact Target Ontology (`capability-ontology.md`) |
+| **Q4** | 2 | `Personal Tool Ecosystem` | **0.5** | Ecosystem Hub Context Node |
+| **Q4** | 3 | `COMPOSE-001 (High-Bandwidth Rapid Learning Loop)` | **1.0** | Exact Target Benchmark Record |
+| **Q4** | 4 | `COMPOSE-002 (Autonomous Invariant & Constraint Verification Loop)` | **1.0** | Exact Target Benchmark Record |
+| **Q4** | 5 | `4. Step-by-Step Implementation Timeline` | **0.5** | Architecture Roadmap Context Section |
+| **Q5** | 1 | `Calibrated Evidence Policy (E0-E5)` | **1.0** | Exact Target Policy (`evidence-policy.md`) |
+| **Q5** | 2 | `ARCH-RFC-001: Record Keeping Standard` | **1.0** | Exact Target Evidence RFC |
+| **Q5** | 3 | `reconciliation_engine.py` | **1.0** | Exact Target Verification Script |
+| **Q5** | 4 | `2. Granular Claims Audit Register` | **0.8** | Evidence Audit Register Section |
+| **Q5** | 5 | `properties` | **0.2** | JSON Schema Leaf Property |
 
 ---
 

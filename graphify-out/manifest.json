@@ -468,9 +468,9 @@
     "semantic_hash": ""
   },
   "research/experiments/BMK-MEMORY-001.md": {
-    "mtime": 1789830648.0245907,
-    "seen": 1789830784.164123,
-    "ast_hash": "0495b5036b42560383845152d1bd6391",
+    "mtime": 1789830975.2854016,
+    "seen": 1789831031.703416,
+    "ast_hash": "14f620a9abd09617e26d1af197b26337",
     "semantic_hash": ""
   },
   "research/experiments/EXP-CLASSROOM-MCP-001.md": {
@@ -510,15 +510,15 @@
     "semantic_hash": ""
   },
   "research/results/BMK-MEMORY-001_results.json": {
-    "mtime": 1789830675.7905385,
-    "seen": 1789830784.1640685,
-    "ast_hash": "e1e297dbf29b3160798b49fc17687035",
+    "mtime": 1789830989.2845585,
+    "seen": 1789831031.7033627,
+    "ast_hash": "78bc92a5114249cab73f0fc8f820c3d0",
     "semantic_hash": ""
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1789830754.2964592,
-    "seen": 1789830784.1640708,
-    "ast_hash": "6dbffb6a56119cd46a10803c378a4dd3",
+    "mtime": 1789831022.9674673,
+    "seen": 1789831031.7033653,
+    "ast_hash": "2c863011e8e75f474500fe0ed44d7221",
     "semantic_hash": ""
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {

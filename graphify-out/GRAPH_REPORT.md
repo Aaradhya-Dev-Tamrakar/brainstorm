@@ -1,16 +1,16 @@
 # Graph Report - brainstorm  (2026-09-19)
 
 ## Corpus Check
-- 78 files · ~122,224 words
+- 78 files · ~122,667 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1020 nodes · 1119 edges · 94 communities (85 shown, 8 thin omitted)
+- 1022 nodes · 1121 edges · 88 communities (79 shown, 8 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.88)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4e0ccc45`
+- Built from commit: `543b756a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -64,7 +64,7 @@
 - ARCH-RFC-006: Public/Private Information Boundary & Security Architecture
 - Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet)
 - pass_rate_percent
-- description
+- timeout_ms
 - benchmark_id
 - completion_tokens
 - evaluated_at
@@ -73,17 +73,11 @@
 - rework_count
 - tokens_total
 - ecosystem.verification.schema.json
-- claims
+- inputs
 - verification
-- properties
-- required
-- $defs
 - nepali-ocr-ai.contract.json
-- provenance
 - run_experiments.py
-- required
 - 🏛️ DECISION RECORD: DEC-001 (Memory Stratification & Retrieval Pruning)
-- deterministic
 - properties
 - enum
 - enum
@@ -140,15 +134,15 @@
 - **4-Tier Jarvis Capability Mesh** — tool_super_nlm, tool_spark, tool_claude_fleet, tool_bias_aperture, tool_strangler_ipu [EXTRACTED 1.00]
 - **Adversarial Invariant Assurance Flow** — research_hypotheses_hyp_001, research_hypotheses_hyp_002, research_experiments_fleet_001 [INFERRED 0.80]
 
-## Communities (94 total, 8 thin omitted)
+## Communities (88 total, 8 thin omitted)
 
 ### Community 0 - "properties"
 Cohesion: 0.05
 Nodes (41): type, description, items, minItems, type, $ref, format, type (+33 more)
 
 ### Community 1 - "properties"
-Cohesion: 0.18
-Nodes (11): properties, description, type, description, type, counterexample_schema, inputs, timeout_ms (+3 more)
+Cohesion: 0.20
+Nodes (10): properties, description, type, description, type, description, type, counterexample_schema (+2 more)
 
 ### Community 2 - "properties"
 Cohesion: 0.06
@@ -231,8 +225,8 @@ Cohesion: 0.31
 Nodes (8): audit_layer_1_consistency(), audit_layer_2_behavioral(), audit_repository(), parse_simple_yaml_capabilities(), reconciliation_engine.py ------------------------ Two-Layer Deterministic…, Layer 2: Behavioral verification & simulation test suite execution., Fallback zero-dependency YAML parser for capability-registry.yaml., Layer 1: Structural consistency, schemas, metadata, links, and economic…
 
 ### Community 24 - "🧠 RESEARCH BENCHMARK: BMK-MEMORY-001 (Memory Stratification & Graph Density)"
-Cohesion: 0.10
-Nodes (19): 1.1 Objective, 1.2 Core Hypothesis (HYP-MEM-001), 1. Objective & Hypothesis, 2.1 Baseline State (Recorded from `graphify-out/GRAPH_REPORT.md` @ commit `2a70bcd6`), 2.2 Top Baseline God Nodes (Pathological Clutter), 2. Experimental Topology & Baseline Snapshot (Pre-Stratification), 3.1 Layer Partitioning, 3.2 Execution Commands (+11 more)
+Cohesion: 0.09
+Nodes (21): 1.1 Objective, 1.2 Core Hypothesis (HYP-MEM-001), 1. Objective & Hypothesis, 2.1 Baseline State (Recorded from `graphify-out/GRAPH_REPORT.md` @ commit `2a70bcd6`), 2.2 Top Baseline God Nodes (Pathological Clutter), 2. Experimental Topology & Baseline Snapshot (Pre-Stratification), 3.1 Layer Partitioning, 3.2 Execution Commands (+13 more)
 
 ### Community 25 - "2. Quantitative Claims Register"
 Cohesion: 0.11
@@ -314,9 +308,9 @@ Nodes (9): 1. Problem & Architectural Rationale, 2. Multi-Tier Hybrid Fleet Topo
 Cohesion: 0.50
 Nodes (4): maximum, minimum, type, pass_rate_percent
 
-### Community 49 - "description"
-Cohesion: 0.67
-Nodes (3): description, type, description
+### Community 49 - "timeout_ms"
+Cohesion: 0.50
+Nodes (4): timeout_ms, description, minimum, type
 
 ### Community 50 - "benchmark_id"
 Cohesion: 0.67
@@ -347,60 +341,36 @@ Cohesion: 0.67
 Nodes (3): tokens_total, minimum, type
 
 ### Community 58 - "ecosystem.verification.schema.json"
-Cohesion: 0.18
-Nodes (10): generated_by, manifest_kind, projects, schema_version, additionalProperties, $id, required, $schema (+2 more)
+Cohesion: 0.07
+Nodes (27): generated_by, manifest_kind, projects, schema_version, additionalProperties, items, minItems, type (+19 more)
 
-### Community 59 - "claims"
-Cohesion: 0.22
-Nodes (9): items, minItems, type, $ref, items, minItems, type, claims (+1 more)
+### Community 59 - "inputs"
+Cohesion: 0.67
+Nodes (3): description, type, inputs
 
 ### Community 60 - "verification"
 Cohesion: 0.09
 Nodes (22): claimed, method, verified, warn, minLength, type, verification, type (+14 more)
 
-### Community 61 - "properties"
-Cohesion: 0.25
-Nodes (8): minLength, type, const, properties, generated_by, manifest_kind, schema_version, const
-
-### Community 62 - "required"
-Cohesion: 0.29
-Nodes (7): claimed_result, claims, provenance, repository, verification, id, required
-
-### Community 63 - "$defs"
-Cohesion: 0.29
-Nodes (7): additionalProperties, type, $defs, claim, project, additionalProperties, type
-
 ### Community 64 - "nepali-ocr-ai.contract.json"
 Cohesion: 0.11
 Nodes (18): nepali_ocr_ai.mcp_server, capabilities, -m, location, mcp_endpoint, args, command, transport (+10 more)
-
-### Community 65 - "provenance"
-Cohesion: 0.12
-Nodes (17): recorded_at, source_commit, source_path, provenance, recorded_at, source_commit, source_path, additionalProperties (+9 more)
 
 ### Community 66 - "run_experiments.py"
 Cohesion: 0.21
 Nodes (15): build_result(), _distribution(), ExperimentConfig, _git_commit(), main(), _percentile(), Deterministic, zero-dependency STRANGLER-IPU pipeline experiments. This is a…, FIFO single-server completion times, in seconds. (+7 more)
 
-### Community 67 - "required"
-Cohesion: 0.40
-Nodes (5): evidence_tier, metric, scope, value, required
-
 ### Community 68 - "🏛️ DECISION RECORD: DEC-001 (Memory Stratification & Retrieval Pruning)"
 Cohesion: 0.40
 Nodes (4): 1. Context & Problem, 2. Decision, 3. Consequences & Empirical Verification, 🏛️ DECISION RECORD: DEC-001 (Memory Stratification & Retrieval Pruning)
 
-### Community 69 - "deterministic"
-Cohesion: 0.67
-Nodes (3): description, type, deterministic
-
 ### Community 70 - "properties"
-Cohesion: 0.14
-Nodes (14): minLength, type, pattern, type, properties, claimed_result, id, provenance (+6 more)
+Cohesion: 0.08
+Nodes (24): claimed_result, claims, provenance, repository, verification, minLength, type, project (+16 more)
 
 ### Community 76 - "enum"
-Cohesion: 0.10
-Nodes (20): properties, enum, type, E0, E1, E2, E3, E4 (+12 more)
+Cohesion: 0.04
+Nodes (46): evidence_tier, metric, recorded_at, scope, source_commit, source_path, value, additionalProperties (+38 more)
 
 ### Community 83 - "enum"
 Cohesion: 0.22
@@ -483,21 +453,21 @@ Cohesion: 0.28
 Nodes (8): ARCH-RFC-001, ARCH-SPEC-002 (IPU), ARCH-RFC-001: Record Keeping Standard, ARCH-RFC-002: Multi-Model Council Protocol, Research Architectures Hub, GPU & RAM Architecture Spec, INV-EPI-001: Verbatim Epistemic History Invariant, STRANGLER-IPU
 
 ## Knowledge Gaps
-- **632 isolated node(s):** `$schema`, `$id`, `title`, `description`, `type` (+627 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 687 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **633 isolated node(s):** `$schema`, `$id`, `title`, `description`, `type` (+628 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 688 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `properties` connect `properties` to `id`, `properties`, `deterministic`, `capability.contract.v1.json`, `enum`, `enum`, `outputs`, `side_effects`, `description`, `enum`, `enum`?**
+- **Why does `properties` connect `properties` to `properties`, `id`, `capability.contract.v1.json`, `enum`, `enum`, `outputs`, `side_effects`, `timeout_ms`, `enum`, `enum`, `inputs`?**
   _High betweenness centrality (0.023) - this node is a cross-community bridge._
 - **Why does `properties` connect `properties` to `properties`, `capability.contract.v1.json`?**
   _High betweenness centrality (0.019) - this node is a cross-community bridge._
 - **Why does `capability` connect `capability.contract.v1.json` to `properties`?**
   _High betweenness centrality (0.017) - this node is a cross-community bridge._
 - **What connects `$schema`, `$id`, `title` to the rest of the system?**
-  _632 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _633 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `properties` be split into smaller, more focused modules?**
   _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._
 - **Should `properties` be split into smaller, more focused modules?**

@@ -73,7 +73,7 @@ The primary driver of technical asset accumulation in this ecosystem is not fina
 
 | Effort Domain | Cumulative Hours | Nature of Work |
 | :--- | :---: | :--- |
-| **Active Capability Development** | 560 hrs | Writing, debugging, and testing 13 computational modules and firmware across 14 projects. |
+| **Active Capability Development** | 560 hrs | Writing, debugging, and testing 17 computational modules and firmware across 18 projects. |
 | **Architectural RFCs & Schemas** | 160 hrs | Formalizing memory specifications, invariants, capability contracts, and ontology manifests. |
 | **Discrete-Event Simulation** | 95 hrs | Developing, running, and tuning SimPy models (`warehouse_mem_sim.py`, `sweep_ipu_breakeven.py`). |
 | **Toolchain & Pre-commit Automation** | 110 hrs | Developing `sync.ps1`, `reconciliation_engine.py`, and multi-category verification suites. |
@@ -98,7 +98,7 @@ Where:
 │ Rebuilt Component             │ Estimated Hours   │ Replacement Cost   │
 │                               │                   │ (@ $25.00 / hour)  │
 ├───────────────────────────────┼───────────────────┼────────────────────┤
-│ 13 Computational Capabilities │ 450 hrs           │ $11,250 USD        │
+│ 17 Computational Capabilities │ 450 hrs           │ $11,250 USD        │
 │ 4 Presentation & Web Hubs     │ 80 hrs            │ $2,000 USD         │
 │ Architecture RFCs & Invariants│ 140 hrs           │ $3,500 USD         │
 │ Discrete Simulation Suites    │ 90 hrs            │ $2,250 USD         │

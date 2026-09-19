@@ -185,7 +185,7 @@ This audit evaluates the truth-claims, evidence artifacts, economic models, and 
 * **Evidence Location:** `F:\Aaradhya-Dev-Tamrakar\fusion360-mcp` (`server/server.py`, `FusionMCPBridge.py`)
 * **Status:** QUALIFIED PASS (Evidence Tier E3)
 * **Risk:** High if confusing native Autodesk port 27182 with custom bridge port 9876.
-* **Recommended Action:** Disambiguate experiment into Native Autodesk execution (`EXP-FUSION360-AUTODESK-001`) and Custom Bridge execution (`EXP-FUSION360-BRIDGE-001`) with explicit `/health` fingerprinting.
+* **Resolution:** Disambiguated within a single dual-server experiment `EXP-FUSION360-MCP-001` (v1.1.0): Part A = Autodesk native (`127.0.0.1:27182`), Part B = custom bridge (`127.0.0.1:9876`, `/health` fingerprint). Remaining gap: Part B evidence is textual and its geometry (7×11×13 cm box) differs from `INV-FUS-003` (sphere, Part A).
 
 ### Item 16: LocalSend MCP Zero-Cloud Device Handoff
 * **Claim:** Zero-cloud local P2P file and text delivery across LAN/Wi-Fi devices using LocalSend protocol v2 with mutual TLS.

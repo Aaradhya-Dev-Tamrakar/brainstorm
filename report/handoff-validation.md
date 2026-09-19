@@ -35,7 +35,7 @@ Target Repository:    Aaradhya-Dev-Tamrakar/brainstorm
 
 1. **`schemas/capability-ontology.md` [NEW]:**
    - Established authoritative 5-tier taxonomy: `Repository` $\to$ `Project` $\to$ `Capability` $\to$ `Interface` $\to$ `Workflow`.
-   - Reconciled all ecosystem counting dimensions (18 repositories, 18 branches, 14 projects, 13 computational capabilities, 4 presentation hubs, 5 workflows, 11 research RFCs/specs).
+   - Reconciled all ecosystem counting dimensions (historical 2026-09-15 snapshot: 18 repositories, 18 branches, 14 projects, 13 computational capabilities, 4 presentation hubs, 5 workflows, 11 research RFCs/specs; superseded by the current canon of 22 repositories, 18 branches, 18 projects, 17 computational capabilities, 4 presentation hubs, 6 workflows, 19 research artifacts in `schemas/capability-ontology.md` §3).
 
 2. **`schemas/evidence-policy.md` [NEW]:**
    - Defined the 6 evidence tiers ($E0$ to $E5$) and 4 epistemic classifications (`FORMALLY_PROVEN`, `EMPIRICALLY_VERIFIED`, `STATISTICALLY_OBSERVED`, `HEURISTIC_HYPOTHESIS`).
@@ -93,7 +93,7 @@ Target Repository:    Aaradhya-Dev-Tamrakar/brainstorm
 
 ## 5. Known Conflicts (Resolved)
 
-* **Module Count Discrepancies (13 vs 17 vs 18):** RESOLVED. Defined canonically as 18 physical repositories, 18 branches, 14 projects, 13 computational capabilities, and 4 presentation hubs in `schemas/capability-ontology.md`.
+* **Module Count Discrepancies (13 vs 17 vs 18):** RESOLVED. Defined canonically in `schemas/capability-ontology.md` §3 (current: 22 physical repositories, 18 branches, 18 projects, 17 computational capabilities, 4 presentation hubs, 6 workflows; the 2026-09-15 baseline was 18/18/14/13/4/5).
 * **Conflation of Living Costs with Engineering Investment:** RESOLVED. Separated baseline living/tuition overhead from productive hardware/software assets in `report/economic-model.md`.
 * **Use of "ROI" for Replacement Cost:** RESOLVED. Formally retired and replaced with *Replacement-Cost to Direct-Cash-Spend Ratio* ($19.65\times$).
 

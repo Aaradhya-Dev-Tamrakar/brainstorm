@@ -130,7 +130,7 @@ Rather than expanding the ecosystem by inventing new projects, the immediate eng
 
 ## 🗂️ Authoritative Ecosystem Catalog
 
-The ecosystem encompasses **21 tool modules** cataloged in `schemas/ecosystem.registry.json` and synchronized via tracking branches in `brainstorm` (17 active computational engines + 4 presentation/educational hubs + 1 orchestration root):
+The ecosystem encompasses **21 tool modules** cataloged in `schemas/ecosystem.registry.json` and tracked as 21 tool repositories plus 1 orchestration root (`brainstorm`) = 22 physical Git repositories, mirrored via 18 tracking branches in `brainstorm` (21 modules = 17 active computational engines + 4 presentation/educational hubs):
 
 > 📖 **Machine-Readable Registry:** [`schemas/capability-registry.yaml`](schemas/capability-registry.yaml) | [`schemas/ecosystem.registry.json`](schemas/ecosystem.registry.json)  
 > 📜 **Ontology Standard:** [`schemas/capability-ontology.md`](schemas/capability-ontology.md)

@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aaradhyadt.github.io/schemas/model_benchmark.schema.v1.json",
+  "title": "ModelBenchmarkRun",
+  "description": "Schema for empirical benchmark evaluations of frontier models across cognitive tasks in the multi-model council.",
+  "type": "object",
+  "required": [
+    "benchmark_id",
+    "task_class",
+    "model_id",
+    "provider",
+    "human_intervention_minutes",
+    "pass_rate_percent",
+    "rework_count",
+    "tokens_total",
+    "evaluated_at"
+  ],
+  "properties": {
+    "benchmark_id": {
+      "type": "string",
+      "pattern": "^BMK-[0-9]{3,}$"
+    },
+    "task_class": {
+      "type": "string",
+      "enum": [
+        "ARCHITECTURAL_SYNTHESIS",
+        "ADVERSARIAL_REVIEW_SKEPTICISM",
+        "SYSTEMS_CODE_CRAFTSMANSHIP",
+        "EMPIRICAL_LITERATURE_GROUNDING",
+        "FIRST_PRINCIPLES_PROVOCATION",
+        "DETERMINISTIC_VERIFICATION"
+      ]
+    },
+    "model_id": {
+      "type": "string"
+    },
+    "provider": {
+      "type": "string",
+      "enum": ["Anthropic", "OpenAI", "Google", "Perplexity", "xAI", "Local/Ollama"]
+    },
+    "prompt_tokens": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "completion_tokens": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "tokens_total": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "latency_seconds": {
+      "type": "number",
+      "minimum": 0.0
+    },
+    "human_intervention_minutes": {
+      "type": "number",
+      "minimum": 0.0
+    },
+    "rework_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "pass_rate_percent": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 100.0
+    },
+    "epistemic_tier_achieved": {
+      "type": "string",
+      "enum": ["E0", "E1", "E2", "E3", "E4", "E5"]
+    },
+    "evaluated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

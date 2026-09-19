@@ -1,17 +1,23 @@
 """
 reconciliation_engine.py
 ------------------------
-Deterministic, zero-token, AST/regex-based consistency auditor for brainstorm.
-Enforces ARCH-RFC-001 / INV-EPI-001 / POL-001 invariants across all research files.
+Two-Layer Deterministic Reconciliation & Verification Engine for brainstorm.
+Enforces ARCH-RFC-001 / ARCH-RFC-005 / ARCH-RFC-006 / INV-EPI-001 invariants across the repository.
 
-Checks:
-1. Broken Cross-References (dangling Markdown links).
-2. Missing Mandatory Metadata Headers (ID, Status, Evidence Tier).
-3. JSON & YAML Schema Validation (capability-registry.yaml, contracts).
-4. Epistemic Evidence Invariants (IMPLEMENTED requires Evidence Tier >= E2).
-5. Ecosystem Taxonomy Count Invariants (21 modules, 17 computational, 4 presentation, 6 workflows).
-6. Physical Output Artifact Existence (verifying research/results/*.pdf files claimed in experiments).
-7. Economic Model Constant Reconciliation ($1,272.55 outlay, $25,000 replacement base, 19.65x ratio).
+Verification Layers:
+  Layer 1 (Structural Consistency Gate):
+    1. Broken Cross-References (dangling Markdown links).
+    2. Missing Mandatory Metadata Headers (ID, Status, Evidence Tier).
+    3. JSON & YAML Schema Validation (capability-registry.yaml, contracts).
+    4. Epistemic Evidence Invariants (IMPLEMENTED requires Evidence Tier >= E2).
+    5. Ecosystem Taxonomy Count Invariants (21 modules, 17 computational, 4 presentation, 6 workflows).
+    6. Physical Output Artifact Existence (verifying research/results/*.pdf files claimed in experiments).
+    7. Economic Model Constant Reconciliation ($1,272.55 outlay, $25,000 replacement base, 19.65x ratio).
+
+  Layer 2 (Behavioral Reproducibility Gate):
+    1. Warehouse Memory Simulator Deterministic Latency & Hit Rate Checks (test_warehouse_mem_sim.py).
+    2. Canonical Output Invariance Regression (test_reproducibility.py).
+    3. Parameter Sweep Reproducibility & Golden Value Assertions.
 
 Usage:
     python sim/reconciliation_engine.py
@@ -21,12 +27,16 @@ import os
 import re
 import sys
 import json
+import unittest
+from io import StringIO
+from contextlib import redirect_stdout, redirect_stderr
 
 BRAINSTORM_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RESEARCH_DIR = os.path.join(BRAINSTORM_ROOT, "research")
 SCHEMAS_DIR = os.path.join(BRAINSTORM_ROOT, "schemas")
 REPORT_DIR = os.path.join(BRAINSTORM_ROOT, "report")
 RESULTS_DIR = os.path.join(RESEARCH_DIR, "results")
+SIM_DIR = os.path.join(BRAINSTORM_ROOT, "sim")
 
 REQUIRED_METADATA_KEYS = [
     "Artifact ID", "Status", "Principal Architect", "Evidence Tier"
@@ -59,20 +69,21 @@ def parse_simple_yaml_capabilities(filepath):
     return capabilities
 
 
-def audit_repository():
+def audit_layer_1_consistency():
+    """Layer 1: Structural consistency, schemas, metadata, links, and economic constants."""
     discrepancies = []
     total_files_audited = 0
     
-    print("=" * 70)
-    print("[AUDIT] BRAINSTORM DETERMINISTIC RECONCILIATION ENGINE (Zero-Token)")
-    print("=" * 70)
+    print("\n" + "=" * 75)
+    print(" [LAYER 1: STRUCTURAL CONSISTENCY GATE] (Deterministic Zero-Token Audit)")
+    print("=" * 75)
     
     all_files = {}
     for root, dirs, files in os.walk(BRAINSTORM_ROOT):
-        if ".git" in root:
+        if ".git" in root or "node_modules" in root or "graphify-out" in root:
             continue
         for f in files:
-            if f.endswith(".md") or f.endswith(".py") or f.endswith(".json") or f.endswith(".yaml"):
+            if f.endswith((".md", ".py", ".json", ".yaml", ".yml")):
                 rel_path = os.path.relpath(os.path.join(root, f), BRAINSTORM_ROOT)
                 all_files[rel_path.replace("\\", "/")] = os.path.join(root, f)
 
@@ -113,7 +124,7 @@ def audit_repository():
                 })
             continue
 
-        if rel_path.endswith(".yaml"):
+        if rel_path.endswith((".yaml", ".yml")):
             total_files_audited += 1
             caps = []
             try:
@@ -168,14 +179,14 @@ def audit_repository():
             
         file_dir = os.path.dirname(full_path)
         
-        # Skip checking literal link strings inside raw transcripts
+        # Skip checking literal link strings inside raw transcripts (Layer 0)
         if "research/transcripts" in rel_path:
             continue
 
         # Check cross-references / internal markdown links
         for match in link_pattern.finditer(content):
             target = match.group(2).split("#")[0].strip()
-            if not target or target.startswith("http") or target.startswith("mailto") or target.startswith("file:"):
+            if not target or target.startswith(("http", "mailto", "file:", "conversation:")):
                 continue
                 
             resolved_target = os.path.normpath(os.path.join(file_dir, target))
@@ -255,18 +266,75 @@ def audit_repository():
                 "detail": "Core economic constants ($1,272.55 outlay, $25,000 replacement base, 19.65x ratio) not reconciled."
             })
 
-    print(f"\n[*] Total Documentation Files Audited: {total_files_audited}")
+    print(f"[*] Total Documentation & Schema Files Audited: {total_files_audited}")
     
     if not discrepancies:
-        print("\n[+] SUCCESS: 0 Discrepancies Found! Repository is in 100% deterministic alignment.")
-        print("    All links resolve, capability registry is valid, epistemic tiers are enforced, result artifacts exist, and economic figures reconcile.")
+        print("[+] PASS: Layer 1 (Structural Consistency) is 100% verified (0 discrepancies).")
+        print("    All links resolve, capability schemas valid, epistemic tiers enforced, economic constants reconciled.")
     else:
-        print(f"\n[!] WARNING: Found {len(discrepancies)} Discrepancy(ies):")
+        print(f"[!] FAIL: Found {len(discrepancies)} Discrepancy(ies) in Layer 1:")
         for d in discrepancies:
             print(f"    - [{d['type']}] in {d['file']}: {d['detail']}")
             
-    print("=" * 70)
     return len(discrepancies)
+
+
+def audit_layer_2_behavioral():
+    """Layer 2: Behavioral verification & simulation test suite execution."""
+    print("\n" + "=" * 75)
+    print(" [LAYER 2: BEHAVIORAL REPRODUCIBILITY GATE] (Deterministic Simulation Runner)")
+    print("=" * 75)
+    
+    loader = unittest.TestLoader()
+    suite = unittest.TestSuite()
+    
+    # Dynamically discover tests in sim/
+    test_files = [f for f in os.listdir(SIM_DIR) if f.startswith("test_") and f.endswith(".py")]
+    
+    sys.path.insert(0, BRAINSTORM_ROOT)
+    for tf in test_files:
+        mod_name = f"sim.{tf[:-3]}"
+        try:
+            mod = __import__(mod_name, fromlist=["*"])
+            suite.addTests(loader.loadTestsFromModule(mod))
+        except Exception as e:
+            print(f"[!] Error loading test module {mod_name}: {e}")
+            return 1
+            
+    runner = unittest.TextTestRunner(verbosity=2)
+    result = runner.run(suite)
+    
+    if result.wasSuccessful():
+        print(f"[+] PASS: Layer 2 (Behavioral Reproducibility) passed all {result.testsRun} regression tests.")
+        print("    Deterministic invariants, latency reductions, hit-rates, and golden outputs verified.")
+        return 0
+    else:
+        print(f"[!] FAIL: Layer 2 failed with {len(result.failures)} failure(s) and {len(result.errors)} error(s).")
+        return len(result.failures) + len(result.errors)
+
+
+def audit_repository():
+    print("=" * 75)
+    print("   BRAINSTORM DUAL-LAYER DETERMINISTIC VERIFICATION ENGINE (ARCH-RFC-001/005)")
+    print("=" * 75)
+    
+    l1_errors = audit_layer_1_consistency()
+    l2_errors = audit_layer_2_behavioral()
+    
+    print("\n" + "=" * 75)
+    print(" VERIFICATION SUMMARY & EPISTEMIC CERTIFICATION")
+    print("=" * 75)
+    print(f"  * Layer 1 (Structural Consistency): {'PASSED (Tier E3/E4)' if l1_errors == 0 else 'FAILED'}")
+    print(f"  * Layer 2 (Behavioral Tests)      : {'PASSED (Tier E4/E5)' if l2_errors == 0 else 'FAILED'}")
+    
+    total_errors = l1_errors + l2_errors
+    if total_errors == 0:
+        print("\n[+] CERTIFIED: Repository satisfies all structural consistency and behavioral ground truth invariants.")
+    else:
+        print(f"\n[!] REJECTED: Total verification failures: {total_errors}")
+        
+    print("=" * 75)
+    return total_errors
 
 
 if __name__ == "__main__":

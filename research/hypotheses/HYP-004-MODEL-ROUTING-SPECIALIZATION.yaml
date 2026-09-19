@@ -1,0 +1,27 @@
+id: HYP-004
+title: "Specialized Multi-Model Council Delegation Reduces Human Rework and Intervention by >= 40%"
+author: "Aaradhya Dev Tamrakar & Multi-Model Cognitive Council"
+date: "2026-09-19"
+
+# Theoretical Justification
+hypothesis: >
+  Routing distinct task classes to specialized model inductive biases
+  (o1/o3-mini for adversarial skepticism, Claude Sonnet/Opus for code craftsmanship,
+  Perplexity for live literature grounding, and Gemini for large-context state synthesis)
+  reduces human rework events by >= 40% and human intervention time by >= 35% compared
+  to monolithic single-model execution.
+why_we_believe_it: >
+  Frontier models exhibit pronounced differences in inductive biases, reasoning traces,
+  and hallucination profiles across specialized domains. Monolithic prompting forces models
+  outside their optimal domain, leading to subtle bugs and increased human correction overhead.
+counterargument: >
+  Context serialization overhead, prompt translation friction, and multi-window handoff latency
+  might consume more total human time than the error reduction saves, until automated WSR routing exists.
+
+# Experimental Falsification Protocol
+target_experiment: "BMK-ROUTING-001"
+success_metric: "Rework rate <= 15% and Human Intervention Ratio (HIR) <= 25% under specialized routing"
+failure_condition: "Human intervention time on multi-model tasks exceeds monolithic single-model baselines"
+
+# Lifecycle State: proposed | active | verified | falsified | retired
+status: proposed

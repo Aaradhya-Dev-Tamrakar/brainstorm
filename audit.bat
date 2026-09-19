@@ -1,5 +1,6 @@
 @echo off
 REM ============================================================================
-REM audit.bat - Zero-token deterministic repository audit & reconciliation shortcut
+REM audit.bat - Dual-Layer Deterministic Audit & Behavioral Verification Engine
+REM Enforces Layer 1 (Structural Consistency) & Layer 2 (Simulation Tests)
 REM ============================================================================
 python "%~dp0sim\reconciliation_engine.py"

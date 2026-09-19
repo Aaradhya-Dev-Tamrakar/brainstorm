@@ -318,8 +318,11 @@ function Switch-ToBranch {
             $null = & git switch --track "origin/$TargetBranch" 2>$null
         }
         else {
-            Write-Status "Creating new local branch [$TargetBranch] from current HEAD..."
-            $null = & git checkout -b $TargetBranch 2>$null
+            Write-Status "Creating new local branch [$TargetBranch] from origin/main base..."
+            $null = & git checkout -b $TargetBranch origin/main 2>$null
+            if ($LASTEXITCODE -ne 0) {
+                $null = & git checkout -b $TargetBranch 2>$null
+            }
         }
     }
 
@@ -335,6 +338,7 @@ function Sync-AllBranches {
 
     $results = @()
     $active = (git branch --show-current 2>$null)
+    if ($active) { $active = $active.Trim() }
 
     foreach ($b in $branches) {
         try {
@@ -351,9 +355,22 @@ function Sync-AllBranches {
                 git push origin $b 2>&1 | Out-Null
                 $actionTaken = if ($LASTEXITCODE -eq 0) { "Pushed ($ahead commit(s))" } else { "Push Failed" }
             }
-            elseif ($behind -gt 0 -and $b -eq $active) {
-                git pull --rebase --autostash origin $b 2>&1 | Out-Null
-                $actionTaken = if ($LASTEXITCODE -eq 0) { "Rebased ($behind remote commit(s))" } else { "Pull Failed" }
+            elseif ($behind -gt 0) {
+                if ($b -eq $active) {
+                    git pull --rebase --autostash origin $b 2>&1 | Out-Null
+                    $actionTaken = if ($LASTEXITCODE -eq 0) { "Rebased ($behind remote commit(s))" } else { "Pull Failed" }
+                }
+                else {
+                    # Fast-forward non-active local branch safely without switching
+                    $refSpec = "origin/$($b):$($b)"
+                    $ffOut = git fetch . $refSpec 2>&1
+                    if ($LASTEXITCODE -eq 0) {
+                        $actionTaken = "Fast-Forwarded ($behind commit(s))"
+                    }
+                    else {
+                        $actionTaken = "Behind remote ($behind commit(s)) [Rebase on Switch]"
+                    }
+                }
             }
 
             $results += [PSCustomObject]@{
@@ -433,8 +450,12 @@ function Provision-NewTool {
     $localBranches = @(git branch --format="%(refname:short)")
 
     if ($localBranches -notcontains $ToolName) {
-        git branch $ToolName main
-        Write-Success "Created branch [$ToolName] in brainstorm repo."
+        git fetch origin main 2>$null
+        git branch $ToolName origin/main 2>$null
+        if ($LASTEXITCODE -ne 0) {
+            git branch $ToolName main
+        }
+        Write-Success "Created branch [$ToolName] in brainstorm repo from origin/main base."
     }
     else {
         Write-Notice "Branch [$ToolName] already exists in brainstorm repo."

@@ -247,17 +247,26 @@ def audit_layer_1_consistency():
             with open(ecosystem_registry_path, "r", encoding="utf-8") as erf:
                 ereg_data = json.load(erf)
                 canonical_artifact_count = ereg_data.get("statistics", {}).get("research_artifacts")
-        except Exception:
-            pass
+        except Exception as e:
+            discrepancies.append({
+                "type": "REGISTRY_PARSE_ERROR",
+                "file": "schemas/ecosystem.registry.json",
+                "detail": f"Failed to parse ecosystem registry: {e}"
+            })
 
     if canonical_artifact_count is None:
-        canonical_artifact_count = total_physical_artifacts
+        discrepancies.append({
+            "type": "REGISTRY_SCHEMA_DRIFT",
+            "file": "schemas/ecosystem.registry.json",
+            "detail": "Missing mandatory 'statistics.research_artifacts' canonical count declaration in ecosystem.registry.json"
+        })
+        canonical_artifact_count = 0
 
     if total_physical_artifacts != canonical_artifact_count:
         discrepancies.append({
             "type": "RESEARCH_ARTIFACT_COUNT_DRIFT",
             "file": "research/",
-            "detail": f"Expected {canonical_artifact_count} physical research artifacts, but enumerated {total_physical_artifacts} on disk (Arch: {len(arch_artifacts)}, Exp: {len(exp_artifacts)}, Inv: {len(inv_artifacts)})."
+            "detail": f"Expected {canonical_artifact_count} physical research artifacts per registry, but enumerated {total_physical_artifacts} on disk (Arch: {len(arch_artifacts)}, Exp: {len(exp_artifacts)}, Inv: {len(inv_artifacts)})."
         })
 
     # Validate ontology, README, and audit research artifact count consistency

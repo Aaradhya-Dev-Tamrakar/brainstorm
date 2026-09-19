@@ -354,7 +354,7 @@ capabilities:
     repository: "F:\\Aaradhya-Dev-Tamrakar\\nepali-ocr-ai"
     category: "COMPUTATIONAL_ENGINE"
     status: "IMPLEMENTED"
-    description: "Multimodal Nepali vision OCR, contextual Varnavinyas grammar checker/suggester, bi-directional Preeti-Unicode phonetic transcoder, and OpenXML Word (.docx) repair engine."
+    description: "Multi-tier Nepali text substrate: deterministic Preeti-Unicode transcoder (E3), Varnavinyas grammar checker (E3), and OpenXML Word (.docx) repair engine (E3), with multimodal vision OCR as roadmap target (E1)."
     inputs:
       - "Scanned document / PDF / image"
       - "Nepali text (Unicode or Preeti / Kantipur)"
@@ -370,7 +370,7 @@ capabilities:
       - "python-docx"
       - "google-genai / Tesseract 5 nep.traineddata"
     evidence: "E3"
-    benchmarks: ">= 99.8% round-trip ligature fidelity across Devanagari Unicode <-> Preeti test suites; 3 passing pytest regression tests"
+    benchmarks: "Core transcoder/grammar/docx engine: >= 99.8% ligature round-trip fidelity, 3 passing pytest regression tests (E3); Multimodal Vision OCR pipeline (E1 roadmap target)"
     verification: "pytest tests/test_transcoder.py, syllabic AST transliterator and OpenXML table preservation"
     maintenance_cost: "1 hour/month"
     development_hours: 24

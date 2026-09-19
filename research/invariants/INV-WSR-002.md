@@ -3,12 +3,12 @@
 > **Artifact ID:** `INV-WSR-002`  
 > **Title:** Worker Protocol Completeness, Push/Pull Dispatch & Truthful Telemetry Invariant  
 > **Version:** `1.0.0`  
-> **Status:** `ACTIVE`  
+> **Status:** `ACTIVE_SPECIFICATION`  
 > **Principal Architect:** Aaradhya Dev Tamrakar  
 > **Discipline:** Distributed Orchestration & Multi-Agent Session Architecture  
 > **Domain:** Worker Lifecycle, Task Leasing & Epistemic Telemetry  
 > **Created Date:** 2026-09-19  
-> **Evidence Tier:** `FORMALLY_PROVEN`  
+> **Evidence Tier:** `E1` — `DESIGN SPECIFICATION`  
 > **Applies To:** `Claude-Desktop`, `brainstorm`, and all fleet worker daemons  
 > **Upstream Trace:** [`ARCH-RFC-001`](../architectures/ARCH-RFC-001-RECORD-KEEPING-STANDARD.md), [`ARCH-SPEC-003`](../architectures/ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md), [`FLEET-001`](../experiments/FLEET-001.md)  
 

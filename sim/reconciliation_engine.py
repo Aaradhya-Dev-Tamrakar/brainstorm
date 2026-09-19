@@ -28,6 +28,7 @@ import re
 import sys
 import json
 import unittest
+import datetime
 from io import StringIO
 from contextlib import redirect_stdout, redirect_stderr
 
@@ -325,18 +326,19 @@ def audit_layer_2_behavioral():
             suite.addTests(loader.loadTestsFromModule(mod))
         except Exception as e:
             print(f"[!] Error loading test module {mod_name}: {e}")
-            return 1
+            return 1, 0
             
     runner = unittest.TextTestRunner(verbosity=2)
     result = runner.run(suite)
     
+    errors = len(result.failures) + len(result.errors)
     if result.wasSuccessful():
         print(f"[+] PASS: Layer 2 (Behavioral Reproducibility) passed all {result.testsRun} regression tests.")
         print("    Deterministic invariants, latency reductions, hit-rates, and golden outputs verified.")
-        return 0
+        return 0, result.testsRun
     else:
         print(f"[!] FAIL: Layer 2 failed with {len(result.failures)} failure(s) and {len(result.errors)} error(s).")
-        return len(result.failures) + len(result.errors)
+        return errors, result.testsRun
 
 
 def audit_repository():
@@ -345,19 +347,20 @@ def audit_repository():
     print("=" * 75)
     
     l1_errors = audit_layer_1_consistency()
-    l2_errors = audit_layer_2_behavioral()
+    l2_errors, l2_tests_run = audit_layer_2_behavioral()
     
     print("\n" + "=" * 75)
     print(" VERIFICATION SUMMARY & EPISTEMIC CERTIFICATION")
     print("=" * 75)
     print(f"  * Layer 1 (Structural Consistency): {'PASSED (Tier E3/E4)' if l1_errors == 0 else 'FAILED'}")
-    print(f"  * Layer 2 (Behavioral Tests)      : {'PASSED (Tier E4/E5)' if l2_errors == 0 else 'FAILED'}")
+    print(f"  * Layer 2 (Behavioral Tests)      : {'PASSED (Tier E4)' if l2_errors == 0 else 'FAILED'}")
     
     total_errors = l1_errors + l2_errors
     ledger_path = os.path.join(RESULTS_DIR, "dual_layer_verification_ledger.json")
     try:
+        now_iso = datetime.datetime.now().astimezone().isoformat()
         ledger_data = {
-            "timestamp": "2026-09-19T20:36:00+05:45",
+            "timestamp": now_iso,
             "layer_1_structural_consistency": {
                 "status": "PASSED" if l1_errors == 0 else "FAILED",
                 "errors": l1_errors,
@@ -365,9 +368,9 @@ def audit_repository():
             },
             "layer_2_behavioral_reproducibility": {
                 "status": "PASSED" if l2_errors == 0 else "FAILED",
-                "tests_run": 9,
+                "tests_run": l2_tests_run,
                 "errors": l2_errors,
-                "tier": "E4/E5"
+                "tier": "E4"
             },
             "total_discrepancies": total_errors,
             "certified": total_errors == 0

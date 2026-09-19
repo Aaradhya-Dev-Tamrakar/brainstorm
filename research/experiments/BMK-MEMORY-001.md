@@ -132,14 +132,14 @@ $$\text{Precision@5} = \frac{\sum_{i=1}^5 \mathbb{I}(\text{result}_i \in \text{T
 
 ### 5.3 Granular Retrieval Precision Breakdown (Q1–Q5)
 
-| Query ID | Evaluated Architectural Topic | Baseline P@5 | Post-Stratification P@5 | Relative Gain | Key Ground-Truth Nodes Retrieved |
-| :---: | :--- | :---: | :---: | :---: | :--- |
-| **Q1** | Fusion 360 MCP Bridge UI Thread Safety | 0.40 | **1.00** | +150% | `ARCH-SPEC-006`, `INV-FUS-001`, `EXP-FUSION360-MCP-001` |
-| **Q2** | Human Intervention Ratio (HIR) Telemetry | 0.40 | **1.00** | +150% | `task_telemetry.py`, `ARCH-RFC-004`, `economic-model.md` |
-| **Q3** | SPARK 200 Hz Edge Fall Detection Architecture | 0.60 | **1.00** | +66.7% | `SPARK`, `ARCH-SPEC-001`, `PROFILE.md` |
-| **Q4** | Six Emergent Compound Ecosystem Workflows | 0.40 | **0.80** | +100% | `capability-ontology.md`, `README.md`, `COMPOSE-001` |
-| **Q5** | Calibrated Evidence Tiers & Invariants | 0.20 | **0.80** | +300% | `evidence-policy.md`, `ARCH-RFC-001`, `reconciliation_engine.py` |
-| **Mean**| **Aggregate Precision@5** | **0.40** | **0.92** | **+130.0%** | **4.6 / 5.0 Relevant Target Hubs in Top 5** |
+| Query ID | Evaluated Architectural Topic | Baseline P@5 | Post-Stratification P@5 | Relative Gain | Baseline Top-5 Nodes Retrieved | Post-Stratification Top-5 Nodes Retrieved |
+| :---: | :--- | :---: | :---: | :---: | :--- | :--- |
+| **Q1** | Fusion 360 MCP Bridge UI Thread Safety | 0.40 | **1.00** | +150% | `Turn 3`, `Turn 5`, `ARCH-SPEC-006`, `INV-FUS-001`, `Antigravity Session Transcript` | `ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md`, `EXP-FUSION360-MCP-001`, `fusion360-mcp.contract.json`, `INV-FUS-001`, `CustomEvent` |
+| **Q2** | Human Intervention Ratio (HIR) Telemetry | 0.40 | **1.00** | +150% | `Turn 1`, `Turn 3`, `task_telemetry.py`, `economic-model.md`, `Assistant` | `task_telemetry.py`, `Defensible Economic Accounting & R&D Resource Allocation Model`, `ARCH-RFC-004`, `human_intervention_minutes`, `rework_count` |
+| **Q3** | SPARK 200 Hz Edge Fall Detection Architecture | 0.60 | **1.00** | +66.7% | `SPARK Wearable Gateway`, `ARCH-SPEC-001`, `PROFILE.md`, `Turn 2`, `Turn 3` | `SPARK Wearable Gateway`, `ARCH-SPEC-001: ECIE Systems Architect Paradigm`, `Aaradhya Dev Tamrakar (ADT)`, `Item 01: Hardware Interrupt Gating`, `Item 02: Fall Detection Model Footprint` |
+| **Q4** | Six Emergent Compound Ecosystem Workflows | 0.40 | **0.80** | +100% | `Turn 5`, `Personal Tool Ecosystem`, `COMPOSE-001`, `Turn 3`, `Assistant` | `Canonical Capability & Ecosystem Ontology`, `Personal Tool Ecosystem`, `COMPOSE-001 (High-Bandwidth Rapid Learning Loop)`, `COMPOSE-002 (Autonomous Invariant & Constraint Verification Loop)`, `4. Step-by-Step Implementation Timeline` |
+| **Q5** | Calibrated Evidence Tiers & Invariants | 0.20 | **0.80** | +300% | `Turn 3`, `Turn 1`, `7. Verify the actual enforcement`, `evidence-policy.md`, `User` | `Calibrated Evidence Policy (E0-E5)`, `ARCH-RFC-001: Record Keeping Standard`, `reconciliation_engine.py`, `2. Granular Claims Audit Register`, `properties` |
+| **Mean**| **Aggregate Precision@5** | **0.40** | **0.92** | **+130.0%** | **40% signal / 60% conversational noise** | **92% ground-truth architectural signal (4.6 / 5.0 target hubs)** |
 
 ---
 

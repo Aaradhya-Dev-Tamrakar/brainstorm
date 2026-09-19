@@ -59,31 +59,51 @@
           "query": "How does the Fusion 360 MCP bridge execute CAD geometry without UI thread deadlocks?",
           "baseline_p5": 0.40,
           "post_p5": 1.00,
-          "target_nodes": ["ARCH-SPEC-006", "INV-FUS-001", "EXP-FUSION360-MCP-001"]
+          "target_nodes": ["ARCH-SPEC-006", "INV-FUS-001", "EXP-FUSION360-MCP-001"],
+          "retrieved_nodes_top_5": {
+            "baseline": ["Turn 3", "Turn 5", "ARCH-SPEC-006", "INV-FUS-001", "Antigravity Session Transcript"],
+            "post_stratification": ["ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md", "EXP-FUSION360-MCP-001", "fusion360-mcp.contract.json", "INV-FUS-001", "CustomEvent"]
+          }
         },
         "Q2_hir_telemetry": {
           "query": "What is the mathematical definition of Human Intervention Ratio and how is it logged?",
           "baseline_p5": 0.40,
           "post_p5": 1.00,
-          "target_nodes": ["task_telemetry.py", "ARCH-RFC-004", "economic-model.md"]
+          "target_nodes": ["task_telemetry.py", "ARCH-RFC-004", "economic-model.md"],
+          "retrieved_nodes_top_5": {
+            "baseline": ["Turn 1", "Turn 3", "task_telemetry.py", "economic-model.md", "Assistant"],
+            "post_stratification": ["task_telemetry.py", "Defensible Economic Accounting & R&D Resource Allocation Model", "ARCH-RFC-004", "human_intervention_minutes", "rework_count"]
+          }
         },
         "Q3_spark_fall_detection": {
           "query": "Explain the two-layer fall detection architecture on ESP32-S3.",
           "baseline_p5": 0.60,
           "post_p5": 1.00,
-          "target_nodes": ["SPARK", "ARCH-SPEC-001", "PROFILE.md"]
+          "target_nodes": ["SPARK", "ARCH-SPEC-001", "PROFILE.md"],
+          "retrieved_nodes_top_5": {
+            "baseline": ["SPARK Wearable Gateway", "ARCH-SPEC-001", "PROFILE.md", "Turn 2", "Turn 3"],
+            "post_stratification": ["SPARK Wearable Gateway", "ARCH-SPEC-001: ECIE Systems Architect Paradigm", "Aaradhya Dev Tamrakar (ADT)", "Item 01: Hardware Interrupt Gating & Microcontroller Fall Detection", "Item 02: Fall Detection Model Footprint & Accuracy"]
+          }
         },
         "Q4_compound_workflows": {
           "query": "What are the six emergent compound workflows in the ecosystem?",
           "baseline_p5": 0.40,
           "post_p5": 0.80,
-          "target_nodes": ["capability-ontology.md", "README.md", "COMPOSE-001", "COMPOSE-002"]
+          "target_nodes": ["capability-ontology.md", "README.md", "COMPOSE-001", "COMPOSE-002"],
+          "retrieved_nodes_top_5": {
+            "baseline": ["Turn 5", "Personal Tool Ecosystem", "COMPOSE-001", "Turn 3", "Assistant"],
+            "post_stratification": ["Canonical Capability & Ecosystem Ontology", "Personal Tool Ecosystem", "COMPOSE-001 (High-Bandwidth Rapid Learning Loop)", "COMPOSE-002 (Autonomous Invariant & Constraint Verification Loop)", "4. Step-by-Step Implementation Timeline"]
+          }
         },
         "Q5_evidence_tiers": {
           "query": "What are the calibrated evidence tiers and their solver/runtime requirements?",
           "baseline_p5": 0.20,
           "post_p5": 0.80,
-          "target_nodes": ["evidence-policy.md", "ARCH-RFC-001", "reconciliation_engine.py"]
+          "target_nodes": ["evidence-policy.md", "ARCH-RFC-001", "reconciliation_engine.py"],
+          "retrieved_nodes_top_5": {
+            "baseline": ["Turn 3", "Turn 1", "7. Verify the actual enforcement", "evidence-policy.md", "User"],
+            "post_stratification": ["Calibrated Evidence Policy (E0-E5)", "ARCH-RFC-001: Record Keeping Standard", "reconciliation_engine.py", "2. Granular Claims Audit Register", "properties"]
+          }
         }
       }
     }

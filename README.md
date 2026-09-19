@@ -157,7 +157,7 @@ The ecosystem encompasses **21 tool modules** cataloged in `schemas/ecosystem.re
 | 18 | `github-pilot` | **GitHub Pilot** | Computation | Local / Fleet CLI | **E3** | Autonomous macro-plane GitHub profile, fleet health auditor, and ecosystem navigator |
 | 19 | `nepali-ocr-ai` | **Nepali OCR AI** | Computation | Local / Microservice | **E3** | Nepali vision OCR, Varnavinyas grammar engine, Preeti-Unicode transcoder, and Word docx repair |
 | 20 | `google-classroom-mcp` | **Google Classroom MCP** | Ingestion / Actuation | Local Desktop / Fleet MCP | **E4** | Direct Google Classroom integration for courses, coursework, assignments, announcements, and submissions |
-| 21 | `localsend-mcp` | **LocalSend MCP Server** | Ingestion / Actuation | Local Desktop / Fleet MCP | **E2** | Zero-cloud local P2P file, text, and clipboard transfer across LAN/Wi-Fi devices with mutual TLS |
+| 21 | `localsend-mcp` | **LocalSend MCP Server** | Ingestion / Actuation | Local Desktop / Fleet MCP | **E4** | Zero-cloud local P2P file, text, and clipboard transfer across LAN/Wi-Fi devices with mutual TLS |
 
 ---
 

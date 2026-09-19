@@ -2,13 +2,14 @@
 
 > **Artifact ID:** `INV-WSR-002`  
 > **Title:** Worker Protocol Completeness, Push/Pull Dispatch & Truthful Telemetry Invariant  
-> **Version:** `1.0.0`  
-> **Status:** `ACTIVE_SPECIFICATION`  
+> **Version:** `1.1.0`  
+> **Status:** `IMPLEMENTED_AND_VERIFIED`  
 > **Principal Architect:** Aaradhya Dev Tamrakar  
 > **Discipline:** Distributed Orchestration & Multi-Agent Session Architecture  
 > **Domain:** Worker Lifecycle, Task Leasing & Epistemic Telemetry  
 > **Created Date:** 2026-09-19  
-> **Evidence Tier:** `E1` — `DESIGN SPECIFICATION`  
+> **Last Verified:** 2026-09-19  
+> **Evidence Tier:** `E2` — `EMPIRICAL BENCHMARK & TEST SUITE PROVEN`  
 > **Applies To:** `Claude-Desktop`, `brainstorm`, and all fleet worker daemons  
 > **Upstream Trace:** [`ARCH-RFC-001`](../architectures/ARCH-RFC-001-RECORD-KEEPING-STANDARD.md), [`ARCH-SPEC-003`](../architectures/ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md), [`FLEET-001`](../experiments/FLEET-001.md)  
 
@@ -20,10 +21,10 @@
 > **"A central scheduler SHALL NEVER mutate task lease ownership to an assigned worker without an explicit, verifiable protocol mechanism through which that worker ingests and executes the leased task."**
 
 In a distributed task state machine, task acquisition must adhere strictly to one of two valid communication contracts:
-1. **Pull-with-Scheduler-Arbitration (Recommended):** The worker explicitly calls `POST /tasks/acquire` (or `REQUEST_WORK`), and the central scheduler atomically matches, leases, and returns the assigned task directly to the requester in a single atomic database transition.
+1. **Pull-with-Scheduler-Arbitration (Enforced Standard):** The worker explicitly calls `POST /tasks/acquire` (or `acquire_task` MCP tool), and the central scheduler atomically matches, leases, and returns the assigned task directly to the requester in a single atomic database transition.
 2. **Push-with-Dedicated-Queue:** If the scheduler assigns a task asynchronously to `owner_worker_id = W`, worker `W` MUST poll `GET /tasks?owner_worker_id=W&status=claimed` rather than browsing generic pending tasks.
 
-*Failure Mode Avoided:* Scheduler claims task for Worker A while Worker A only browses pending tasks, causing tasks to freeze until lease timeout.
+*Failure Mode Avoided:* Scheduler claims task for Worker A while Worker A only browses pending tasks, causing tasks to freeze until lease timeout. Auto-scheduler push loop in background supervisor is permanently disabled to eliminate dual-mode race conditions.
 
 ---
 
@@ -41,15 +42,19 @@ In a distributed task state machine, task acquisition must adhere strictly to on
 
 Worker heartbeat payloads must decouple and report:
 - `rate_limit_headroom`: Provider-specific remaining requests/tokens per window (or explicit cooldown timer upon HTTP 429).
-- `system_resources`: Actual CPU/RAM utilization via OS performance counters.
-- `active_leases`: Count of currently executing tasks (strictly bounded by worker concurrency limits).
+- `system_resources`: Actual CPU/RAM utilization via OS performance counters (`cpu_percent`, `memory_percent`).
+- `active_leases`: Count of currently executing tasks (strictly bounded by worker concurrency limits, reported truthfully as `1` during task execution and `0` when idle).
+
+*Failure Mode Avoided:* Conflating OS RAM with provider quota usage causing spurious 5-hour cooldown triggers on high machine memory is strictly prevented. Cooldown triggers solely on explicit `trigger_cooldown` or provider `rate_limit_headroom <= 0`.
 
 ---
 
 ### 1.4 Invariant D: Atomic Checkpoint & DAG Advancement
 > **"Task state completion, checkpoint persistence, worker quota accounting, and downstream DAG stage instantiation MUST occur within a single atomic database transaction."**
 
-To prevent post-commit crash inconsistencies (where a task is marked `done` but the process crashes before the next pipeline stage task is created), the orchestrator must wrap state finalization and successor task generation in an atomic transaction or durable transactional outbox.
+To prevent post-commit crash inconsistencies (where a task is marked `done` but the process crashes before the next pipeline stage task is created), the orchestrator wraps state finalization, checkpoint insertion, and successor task generation in an atomic transaction:
+1. If any downstream DAG advancement step fails, the entire transaction rolls back cleanly (`status` remains `claimed`, checkpoint row is omitted, and successor tasks are not generated).
+2. For QA stages, passing reviews (`verdict = pass`) atomically record checkpoint deliverables and pass forward review output to subsequent DAG stages (`format`), ensuring zero semantic data loss.
 
 ---
 
@@ -75,7 +80,10 @@ $$\text{Error}(E) \to \text{State}(T) = \text{DONE} \quad (\text{VIOLATION})$$
 
 ## 3. Verification & Compliance Gate
 
-Compliance with `INV-WSR-002` is verified by:
-1. Unit and integration tests in `Claude-Desktop` testing zero-fallthrough on simulated Anthropic API failures.
-2. Adversarial concurrency suites verifying pull-based task acquisition and atomic DAG advancement.
-3. Static audit asserting zero synthetic heartbeat hardcoding in worker daemons.
+Compliance with `INV-WSR-002` is formally verified across automated test suites:
+1. **Invariant A (Closed-Loop Pull Dispatch):** `tests/test_task_acquisition.py` proves atomic pull matching and lease duration enforcement; push loop disabled in `server/main.py`.
+2. **Invariant B (Strict Separation of Real/Simulation):** `tests/test_invariants_wsr_002.py::test_invariant_b_strict_separation_of_real_and_simulation` asserts zero synthetic success fallthrough across `ClaudeDesktopProxyAdapter`, `GroqAdapter`, and `GeminiFreeAdapter`.
+3. **Invariant C (Truthful Telemetry):** `tests/test_invariants_wsr_002.py::test_invariant_c_truthful_telemetry` and `test_invariant_c_no_spurious_cooldown_on_high_memory` prove empirical OS performance counters, accurate `active_leases`, and immunity to RAM-induced quota cooldown.
+4. **Invariant D (Atomic Advancement & Rollback):** `tests/test_invariants_wsr_002.py::test_invariant_d_atomic_dag_stage_advancement` and `test_invariant_d_atomic_rollback_on_failure` prove all-or-nothing transactional guarantees.
+5. **Invariant D (QA Deliverable Preservation):** `tests/test_invariants_wsr_002.py::test_invariant_d_qa_checkpoint_preservation` verifies QA verification output persistence and successor stage inheritance.
+6. **Security (Remote MCP Auth):** `tests/test_auth_enforcement.py` verifies unauthenticated requests to `/mcp/` receive HTTP 401 via `MCPAuthMiddleware`.

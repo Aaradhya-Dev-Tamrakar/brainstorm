@@ -24,8 +24,8 @@ This audit evaluates the truth-claims, evidence artifacts, economic models, and 
 ├───────────────────────────────┬───────┬────────────────┤
 │ Claim Type                    │ Count │ Evidence Level │
 ├───────────────────────────────┼───────┼────────────────┤
-│ IMPLEMENTED                   │ 12    │ E2 / E3        │
-│ EMPIRICALLY_VERIFIED          │ 4     │ E4             │
+│ IMPLEMENTED                   │ 9     │ E2 / E3        │
+│ EMPIRICALLY_VERIFIED          │ 7     │ E4             │
 │ STATISTICALLY_OBSERVED        │ 3     │ E4             │
 │ RESEARCH_PROTOTYPE            │ 2     │ E3 (Simulation)│
 │ ARCHITECTURAL_PROPOSAL        │ 6     │ E1 (Design)    │
@@ -182,20 +182,30 @@ This audit evaluates the truth-claims, evidence artifacts, economic models, and 
 * **Source:** `research/architectures/ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md`, `research/experiments/EXP-FUSION360-MCP-001.md`
 * **Claim Type:** `EMPIRICALLY_VERIFIED`
 * **Evidence Available:** Autodesk built-in MCP server (`127.0.0.1:27182/mcp`, `"MCP Server Adapter"`) and Custom Python Add-In (`127.0.0.1:9876`, `"FusionMCPBridge"` with `CustomEvent` thread dispatch).
-* **Evidence Location:** `F:\Aaradhya-Dev-Tamrakar\fusion360-mcp` (`server/server.py`, `FusionMCPBridge.py`)
-* **Status:** QUALIFIED PASS (Evidence Tier E3)
-* **Risk:** High if confusing native Autodesk port 27182 with custom bridge port 9876.
-* **Resolution:** Disambiguated within a single dual-server experiment `EXP-FUSION360-MCP-001` (v1.1.0): Part A = Autodesk native (`127.0.0.1:27182`), Part B = custom bridge (`127.0.0.1:9876`, `/health` fingerprint). Remaining gap: Part B evidence is textual and its geometry (7×11×13 cm box) differs from `INV-FUS-003` (sphere, Part A).
+* **Evidence Location:** `F:\Aaradhya-Dev-Tamrakar\fusion360-mcp` (`server/server.py`, `FusionMCPBridge.py`), `research/results/EXP-FUSION360-MCP-001_partB_bridge_9876.png`
+* **Status:** PASS (Evidence Tier E4; Part B custom bridge 9876 live re-execution verified with viewport screenshot artifact)
+* **Risk:** Main UI thread event loop blocking if requests exceed timeout threshold.
+* **Resolution:** Disambiguated within dual-server experiment `EXP-FUSION360-MCP-001` (v1.1.0): Part A = Autodesk native (`127.0.0.1:27182`), Part B = custom bridge (`127.0.0.1:9876`, `/health` fingerprint `FusionMCPBridge` v1.0.0). Sphere-volume invariant and box generation re-verified with dedicated viewport capture.
 
 ### Item 16: LocalSend MCP Zero-Cloud Device Handoff
 * **Claim:** Zero-cloud local P2P file and text delivery across LAN/Wi-Fi devices using LocalSend protocol v2 with mutual TLS.
-* **Source:** `schemas/examples/localsend-mcp.contract.json`, `README.md:88`
-* **Claim Type:** `IMPLEMENTED`
+* **Source:** `schemas/examples/localsend-mcp.contract.json`, `README.md:88`, `research/experiments/EXP-LOCALSEND-MCP-001.md`
+* **Claim Type:** `EMPIRICALLY_VERIFIED`
 * **Evidence Available:** Node.js FastMCP server with pure ASN.1 DER X.509 certificate generation, UDP multicast listener, and HTTP/HTTPS client.
-* **Evidence Location:** `F:\Aaradhya-Dev-Tamrakar\localsend-mcp`
+* **Evidence Location:** `F:\Aaradhya-Dev-Tamrakar\localsend-mcp`, `research/experiments/EXP-LOCALSEND-MCP-001.md`
 * **Status:** PASS (Evidence Tier E4; physical-device transfer empirically verified against Vivo V2029 in EXP-LOCALSEND-MCP-001)
 * **Risk:** Windows firewall blocking UDP broadcast port 53317 or HTTPS port 53318.
 * **Recommended Action:** Document subnet requirements in operational guides.
+
+### Item 17: Google Classroom MCP Ingestion Hub
+* **Claim:** FastMCP server automating classroom coursework, announcements, and assignment retrieval via official Google Classroom REST APIs.
+* **Source:** `schemas/capability-registry.yaml`, `research/experiments/EXP-CLASSROOM-MCP-001.md`
+* **Claim Type:** `EMPIRICALLY_VERIFIED`
+* **Evidence Available:** FastMCP stdio server in Python with OAuth2 token manager, verified against live classroom endpoints across 34 coursework items and 30 announcements.
+* **Evidence Location:** `F:\Aaradhya-Dev-Tamrakar\google-classroom-mcp`, `research/experiments/EXP-CLASSROOM-MCP-001.md`
+* **Status:** PASS (Evidence Tier E4; live API query and schema verification recorded in EXP-CLASSROOM-MCP-001)
+* **Risk:** Google Classroom API quota limits and OAuth token lifecycle expiry.
+* **Recommended Action:** Document token refresh error boundaries in operational troubleshooting runbooks.
 
 ---
 

@@ -209,7 +209,18 @@ def audit_repository():
                         "detail": f"Claimed output artifact 'research/results/{pdf_name}' does not exist on disk or is empty."
                     })
 
-    # Validate ontology & README taxonomy consistency
+    # Validate ontology, README, and audit research artifact count consistency
+    readme_file = os.path.join(BRAINSTORM_ROOT, "README.md")
+    if os.path.exists(readme_file):
+        with open(readme_file, "r", encoding="utf-8") as rf:
+            readme_text = rf.read()
+        if "21 Research Specs & Experiments" not in readme_text:
+            discrepancies.append({
+                "type": "README_TAXONOMY_ERROR",
+                "file": "README.md",
+                "detail": "README.md missing canonical '21 Research Specs & Experiments' inventory declaration."
+            })
+
     ontology_file = os.path.join(SCHEMAS_DIR, "capability-ontology.md")
     if os.path.exists(ontology_file):
         with open(ontology_file, "r", encoding="utf-8") as of:
@@ -219,6 +230,17 @@ def audit_repository():
                 "type": "ONTOLOGY_TAXONOMY_ERROR",
                 "file": "schemas/capability-ontology.md",
                 "detail": "Ontology missing reconciled counts (21 modules, 17 computational engines, 6 workflows)."
+            })
+
+    audit_file = os.path.join(REPORT_DIR, "repository-audit.md")
+    if os.path.exists(audit_file):
+        with open(audit_file, "r", encoding="utf-8") as af:
+            audit_text = af.read()
+        if "21 Research Artifacts" not in audit_text:
+            discrepancies.append({
+                "type": "AUDIT_TAXONOMY_ERROR",
+                "file": "report/repository-audit.md",
+                "detail": "repository-audit.md missing canonical '21 Research Artifacts' declaration."
             })
 
     # Validate economic model invariants

@@ -193,7 +193,7 @@ This audit evaluates the truth-claims, evidence artifacts, economic models, and 
 * **Claim Type:** `IMPLEMENTED`
 * **Evidence Available:** Node.js FastMCP server with pure ASN.1 DER X.509 certificate generation, UDP multicast listener, and HTTP/HTTPS client.
 * **Evidence Location:** `F:\Aaradhya-Dev-Tamrakar\localsend-mcp`
-* **Status:** PASS (Evidence Tier E3)
+* **Status:** PASS (Evidence Tier E2; physical-device transfer claimed but unrecorded, E4 pending an experiment artifact)
 * **Risk:** Windows firewall blocking UDP broadcast port 53317 or HTTPS port 53318.
 * **Recommended Action:** Document subnet requirements in operational guides.
 

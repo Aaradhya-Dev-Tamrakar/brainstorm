@@ -398,9 +398,9 @@ capabilities:
       - "Node.js v26"
       - "@modelcontextprotocol/sdk"
       - "Google Classroom REST API v1"
-    evidence: "E2"
-    benchmarks: "Claimed (unrecorded, no committed trace): live AI Fellowship 2026 course, 34 coursework items and 29 announcements"
-    verification: "Claimed (unrecorded, no committed trace): live HTTP 200 API verification and token auto-refresh lifecycle test. Pending E4 via experiment artifact."
+    evidence: "E4"
+    benchmarks: "Measured 2026-09-19 against live course AI Fellowship 2026: 34 coursework items, 30 announcements, 12 tools (EXP-CLASSROOM-MCP-001)"
+    verification: "Live read-only MCP run (initialize, tools/list, list_courses, list_coursework, list_announcements) recorded in research/experiments/EXP-CLASSROOM-MCP-001.md; token refresh and write paths not exercised"
     maintenance_cost: "1 hour/month"
     development_hours: 8
     confidence: 0.96
@@ -426,9 +426,9 @@ capabilities:
     dependencies:
       - "Autodesk Fusion 360"
       - "Python 3.10 standard library"
-    evidence: "E3"
+    evidence: "E4"
     benchmarks: "Dispatches CAD operations to main UI thread without freezing application (INV-FUS-001)"
-    verification: "Live HTTP /health and /mcp tool execution test against Fusion 360 session"
+    verification: "Live /health, tools/list, create_primitive (box, sphere), BRep volume cross-check and screenshot on port 9876, recorded in research/experiments/EXP-FUSION360-MCP-001.md section 4.1"
     maintenance_cost: "1 hour/month"
     development_hours: 12
     confidence: 0.95

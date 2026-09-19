@@ -3,12 +3,12 @@
 ```text
 Artifact ID:          EXP-FUSION360-MCP-001
 Title:                End-to-End Parametric 3D CAD Geometry Synthesis via Universal Fusion 360 MCP Bridge
-Version:              1.1.0
+Version:              1.2.0
 Status:               EMPIRICALLY_VERIFIED
 Principal Architect:  Aaradhya Dev Tamrakar (ADT)
 Domain:               Actuation Hardware & Interactive 3D CAD Tooling
 Created Date:         2026-09-19
-Evidence Tier:        E3 — EMPIRICALLY VERIFIED
+Evidence Tier:        E4 — EXPERIMENTALLY VERIFIED
 Upstream Specs:       research/architectures/ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md
 Target Tool:          F:\Aaradhya-Dev-Tamrakar\fusion360-mcp
 ```
@@ -99,6 +99,35 @@ Dispatch Flow:
   Response payload: "Box created (7.0 x 11.0 x 13.0 cm)."
 ```
 
+### 4.1 Live Re-Execution Record (Custom Bridge, Port 9876 only) — 2026-09-19 18:5x NPT
+
+Independent re-run against the running Fusion 360 process (bridge PID shared with Fusion; both `9876` and `27182` listening). Requests issued from PowerShell via `Invoke-WebRequest` directly to `http://127.0.0.1:9876/mcp`; the native `27182` endpoint was not used in this section. Pre-state: empty `Untitled` parametric design.
+
+| # | Call | HTTP | Latency | Raw result (abridged) |
+| :-: | :--- | :-: | :-: | :--- |
+| 1 | `GET /health` | 200 | n/a | `{"server": "FusionMCPBridge", "status": "ok", "port": 9876, "version": "1.0.0"}` |
+| 2 | `initialize` | 200 | 22 ms | `serverInfo = {"name": "FusionMCPBridge", "version": "1.0.0"}` |
+| 3 | `tools/list` | 200 | 8 ms | 5 tools: `execute_script`, `get_model_info`, `create_primitive`, `capture_screenshot`, `undo_redo` |
+| 4 | `get_model_info` (pre) | 200 | 18 ms | `bodies: []`, `sketches: []` |
+| 5 | `create_primitive` box 7 x 11 x 13 | 200 | 273 ms | `"Box created (7.0 x 11.0 x 13.0 cm)."`, `feature: Extrude1` |
+| 6 | `create_primitive` sphere r = 1.0 at (20, 0, 0) | 200 | 222 ms | `"Sphere created successfully with radius 1.0 cm."`, `feature: Revolve1` |
+| 7 | `get_model_info` (post) | 200 | 33 ms | `Body1 volume_cm3 = 1001.0`; `Body2 volume_cm3 = 4.1888` |
+| 8 | `execute_script` (independent BRep query) | 200 | 52 ms | `Body1 1001.0 isSolid true`; `Body2 4.18879 isSolid true` |
+| 9 | `capture_screenshot` 800 x 600 | 200 | n/a | PNG, 85,630 bytes, magic `89 50 4E 47`, artifact below |
+| 10 | `undo_redo` (repeated until empty) | 200 | n/a | model returned to `bodies: []`, `sketches: []` |
+
+**Numeric cross-checks (expected vs. measured):**
+
+| Body | Analytic expectation | Measured (`get_model_info`) | Measured (`execute_script` BRep) |
+| :--- | :--- | :--- | :--- |
+| Box 7 x 11 x 13 cm | 7 x 11 x 13 = 1001 cm^3 | 1001.0 cm^3 | 1001.0 cm^3 |
+| Sphere r = 1 cm | (4/3) pi (1)^3 = 4.18879 cm^3 | 4.1888 cm^3 | 4.18879 cm^3 |
+
+**Screenshot artifact:** `research/results/EXP-FUSION360-MCP-001_partB_bridge_9876.png` (800 x 600 PNG returned by the bridge as `{"mimeType": "image/png", "base64": ...}`). Pixel statistics indicate a rendered viewport (about 60% background, 27% light shading, 60 quantized color bins); legibility of the two bodies has NOT been visually confirmed by the author of this record and requires manual inspection.
+
+**Provenance closure:** `INV-FUS-003` (sphere volume 4.18879 cm^3) is now reproduced through `FusionMCPBridge` on port `9876`, not only through the Autodesk native baseline in Part A. The box (1001 cm^3) additionally satisfies the Part B `create_primitive` claim in Step 3 above.
+
+**Limitations of this record:** single run, single machine, no repeated trials or variance; latencies are wall-clock from a PowerShell client and include client overhead; `execute_script` returns stdout only (a `result` variable is not surfaced); `undo_redo` required multiple invocations per created feature because each primitive contributes several timeline entries (sketch + feature). Raw responses are abridged above; screenshot base64 is stored as a file rather than inline.
 ---
 
 ## 5. Invariant Compliance Checklist
@@ -114,4 +143,4 @@ Dispatch Flow:
 
 * **Source Repository:** `F:\Aaradhya-Dev-Tamrakar\fusion360-mcp`
 * **Installed Add-In:** `%APPDATA%\Autodesk\Autodesk Fusion 360\API\AddIns\FusionMCPBridge\`
-* **Verification Status:** `EMPIRICALLY_VERIFIED` (Evidence Tier E3)
+* **Verification Status:** `EMPIRICALLY_VERIFIED` (Evidence Tier E4)

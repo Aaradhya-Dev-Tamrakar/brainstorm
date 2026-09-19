@@ -15,7 +15,7 @@
 To eliminate ambiguity between what is **implemented**, what is **experimentally demonstrated**, and what is **proposed research**, this repository adheres to formal governance standards:
 
 * 📖 **[Canonical Capability & Ecosystem Ontology](schemas/capability-ontology.md):** Formal definitions of Repository $\to$ Project $\to$ Capability $\to$ Interface $\to$ Workflow.  
-  *Canonical Inventory:* **21 Tool Modules** | **17 Computational Engines** | **4 Presentation Hubs** | **6 Compound Workflows** | **19 Research Specs & Experiments**.
+  *Canonical Inventory:* **21 Tool Modules** | **17 Computational Engines** | **4 Presentation Hubs** | **6 Compound Workflows** | **20 Research Specs & Experiments**.
 * 📜 **[Calibrated Evidence Policy (E0–E5)](schemas/evidence-policy.md):** Enforces evidence tiers and distinguishes formalization correctness, solver correctness, and empirical runtime correctness.
 * 🗂️ **[Machine-Readable Capability Registry (YAML)](schemas/capability-registry.yaml):** Single source of truth recording inputs, outputs, interfaces, benchmarks, maintenance overhead, and evidence tiers for every ecosystem capability.
 * 📋 **[Repository Epistemic Audit](report/repository-audit.md):** Granular audit classifying all major repository claims against traceable artifacts.
@@ -138,7 +138,7 @@ The ecosystem encompasses **21 tool modules** cataloged in `schemas/ecosystem.re
 | # | Dedicated Branch | Tool / Module | Category | Execution Context | Evidence Tier | Core Superpower |
 |---|---|---|---|---|:---:|---|
 | 1 | `super-nlm` | **Super-NLM Hub** | Orchestration | Cloud / Hybrid | **E3** | Multi-account Google NotebookLM aggregator, cross-notebook synthesis, token ring agent rotation |
-| 2 | `Autodesk-Fusion-360-MCP-Server` | **Fusion 360 MCP Bridge** | Actuation | Local Desktop | **E3** | Conversational 3D CAD, zero-dependency parametric modeling automation via native Python Add-In |
+| 2 | `Autodesk-Fusion-360-MCP-Server` | **Fusion 360 MCP Bridge** | Actuation | Local Desktop | **E4** | Conversational 3D CAD, zero-dependency parametric modeling automation via native Python Add-In |
 | 3 | `system-optimizer` | **NovaOptimizer** | Computation | Local (Bare Metal) | **E4** | Micro-footprint Windows OS tuning, deep RAM purge (`EmptyWorkingSet`), thread priority boosting |
 | 4 | `SPARK` | **SPARK Wearable Gateway** | Computation | Edge Hardware | **E4** | Two-layer edge fall detection, sensor kinematics, SHAP clinical explainability, automated PDF reporting |
 | 5 | `Nexus` | **Nexus** | Orchestration | Local / Hybrid | **E3** | Project-centric AI workspace, prompt multiplexing across parallel LLMs, contextual note memory |
@@ -156,7 +156,7 @@ The ecosystem encompasses **21 tool modules** cataloged in `schemas/ecosystem.re
 | 17 | `react-workshop-ieeekecktm` | **React Workshop** | Presentation | Educational | **E3** | Hands-on curriculum and modern frontend architecture reference |
 | 18 | `github-pilot` | **GitHub Pilot** | Computation | Local / Fleet CLI | **E3** | Autonomous macro-plane GitHub profile, fleet health auditor, and ecosystem navigator |
 | 19 | `nepali-ocr-ai` | **Nepali OCR AI** | Computation | Local / Microservice | **E3** | Nepali vision OCR, Varnavinyas grammar engine, Preeti-Unicode transcoder, and Word docx repair |
-| 20 | `google-classroom-mcp` | **Google Classroom MCP** | Ingestion / Actuation | Local Desktop / Fleet MCP | **E2** | Direct Google Classroom integration for courses, coursework, assignments, announcements, and submissions |
+| 20 | `google-classroom-mcp` | **Google Classroom MCP** | Ingestion / Actuation | Local Desktop / Fleet MCP | **E4** | Direct Google Classroom integration for courses, coursework, assignments, announcements, and submissions |
 | 21 | `localsend-mcp` | **LocalSend MCP Server** | Ingestion / Actuation | Local Desktop / Fleet MCP | **E2** | Zero-cloud local P2P file, text, and clipboard transfer across LAN/Wi-Fi devices with mutual TLS |
 
 ---

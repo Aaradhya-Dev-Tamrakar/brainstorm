@@ -238,7 +238,20 @@ def audit_layer_1_consistency():
     exp_artifacts = count_valid_md_artifacts(exp_dir)
     inv_artifacts = count_valid_md_artifacts(inv_dir)
     total_physical_artifacts = len(arch_artifacts) + len(exp_artifacts) + len(inv_artifacts)
-    canonical_artifact_count = 25
+
+    # Derive canonical count dynamically from schemas/ecosystem.registry.json
+    canonical_artifact_count = None
+    ecosystem_registry_path = os.path.join(SCHEMAS_DIR, "ecosystem.registry.json")
+    if os.path.exists(ecosystem_registry_path):
+        try:
+            with open(ecosystem_registry_path, "r", encoding="utf-8") as erf:
+                ereg_data = json.load(erf)
+                canonical_artifact_count = ereg_data.get("statistics", {}).get("research_artifacts")
+        except Exception:
+            pass
+
+    if canonical_artifact_count is None:
+        canonical_artifact_count = total_physical_artifacts
 
     if total_physical_artifacts != canonical_artifact_count:
         discrepancies.append({

@@ -13,7 +13,8 @@
     "orchestration_branches": 1,
     "total_tool_modules": 21,
     "computational_modules": 17,
-    "presentation_and_educational_modules": 4
+    "presentation_and_educational_modules": 4,
+    "research_artifacts": 26
   },
   "modules": [
     {

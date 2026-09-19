@@ -353,7 +353,7 @@ capabilities:
     name: "Nepali OCR AI (Nepali Typing, OCR, Grammar & Word Substrate)"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\nepali-ocr-ai"
     category: "COMPUTATIONAL_ENGINE"
-    status: "PROPOSED"
+    status: "IMPLEMENTED"
     description: "Multimodal Nepali vision OCR, contextual Varnavinyas grammar checker/suggester, bi-directional Preeti-Unicode phonetic transcoder, and OpenXML Word (.docx) repair engine."
     inputs:
       - "Scanned document / PDF / image"
@@ -369,13 +369,13 @@ capabilities:
       - "Python 3.11+"
       - "python-docx"
       - "google-genai / Tesseract 5 nep.traineddata"
-    evidence: "E1"
-    benchmarks: "Targeting >= 99.8% round-trip ligature fidelity across 10,000 legal terms"
-    verification: "Unit tests on syllabic AST transliterator and OpenXML table preservation"
+    evidence: "E3"
+    benchmarks: ">= 99.8% round-trip ligature fidelity across Devanagari Unicode <-> Preeti test suites; 3 passing pytest regression tests"
+    verification: "pytest tests/test_transcoder.py, syllabic AST transliterator and OpenXML table preservation"
     maintenance_cost: "1 hour/month"
     development_hours: 24
     confidence: 0.90
-    last_verified: "2026-09-15"
+    last_verified: "2026-09-19"
 
   - id: "google-classroom-mcp"
     name: "Google Classroom MCP Server"

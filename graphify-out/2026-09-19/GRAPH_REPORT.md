@@ -1,11 +1,11 @@
 # Graph Report - brainstorm  (2026-09-19)
 
 ## Corpus Check
-- 81 files · ~316,989 words
+- 81 files · ~317,261 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2243 nodes · 2332 edges · 222 communities (181 shown, 39 thin omitted)
+- 2246 nodes · 2335 edges · 222 communities (181 shown, 39 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.88)
 - Token cost: 0 input · 0 output
 
@@ -954,8 +954,8 @@ Cohesion: 0.20
 Nodes (8): 1.1 What Do We Call This Process?, 1. Executive Summary & Epistemic Terminology, 2. The Tripartite Ecosystem Lifecycle, 3.1 Rules of the Freeze (`GOV-FREEZE-V1`), 3. The 2026-09-16 Milestone Declaration: "The Long Pause", 4. Authoritative Ecosystem Matrix at Baseline v1.0, 5. Archival & Verification, 🏛️ ARCHITECTURAL RFC: ARCH-RFC-004 (The Workflow Externalization Freeze & Utilization Pivot)
 
 ### Community 206 - "2. Key Frameworks & Architecture Covered"
-Cohesion: 0.12
-Nodes (16): 1. Executive Summary, 2026-09-19 — Guest Lecture: Agentic AI in Industry (Ayush Kumar Shah, Meta), 2. Key Frameworks & Architecture Covered, 3. Integration into the `brainstorm` Capability Mesh, A. Karpathy's LLM-Maintained Personal Wiki (Slide 32), B. PARA Organizes Knowledge Around Action (Slide 33), C. Obsidian as the Shared Markdown Workspace (Slide 34), D. The Daily Automation Loop (Slide 35 & 36) (+8 more)
+Cohesion: 0.11
+Nodes (19): 1. Executive Summary, 2026-09-19 — Guest Lecture: Agentic AI in Industry (Ayush Kumar Shah, Meta), 2. Key Frameworks & Architecture Covered, 3. Integration into the `brainstorm` Capability Mesh, 4. Q&A Exchange: Aaradhya Dev Tamrakar & Ayush Kumar Shah, A. Karpathy's LLM-Maintained Personal Wiki (Slide 32), Aaradhya's Question:, Ayush's Ground-Truth Answer & Core Takeaways: (+11 more)
 
 ### Community 207 - "10. Where I think the project is genuinely strong"
 Cohesion: 0.29
@@ -994,21 +994,21 @@ Cohesion: 0.67
 Nodes (3): ARCH-SPEC-002 (IPU), GPU & RAM Architecture Spec, STRANGLER-IPU
 
 ## Knowledge Gaps
-- **1657 isolated node(s):** `$schema`, `$id`, `title`, `description`, `type` (+1652 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1703 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **1659 isolated node(s):** `$schema`, `$id`, `title`, `description`, `type` (+1654 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1705 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **39 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Verbatim Transcripts Hub README` connect `Verbatim Transcripts Hub README` to `2026-09-16_EVALUATE-REPOSITORIES_CONVERSATION.md`, `ARCH-RFC-003: Capstone Defense Standard`, `Turn 2`, `2026-09-15_ANALYZE-REPO-STATE_CONVERSATION.md`, `2026-09-15_ANALYSE-BRAINSTORM-REPO_CONVERSATION.md`, `2026-09-15_ANALYZE-RECENT-REPOSITORY-WORKS_CONVERSATION.md`, `2026-09-16_INDEPENDENT-VERIFICATION-PLAN_CONVERSATION.md`, `Aaradhya Dev Tamrakar (ADT)`?**
-  _High betweenness centrality (0.344) - this node is a cross-community bridge._
+  _High betweenness centrality (0.337) - this node is a cross-community bridge._
 - **Why does `Antigravity Session Transcript — Governance Rulesets & v1.0 Ecosystem Freeze` connect `Antigravity Session Transcript — Governance Rulesets & v1.0 Ecosystem Freeze` to `The practical priority order`, `🤖 Antigravity (2026-09-16T08:28:15Z)`, `🤖 Antigravity (2026-09-16T07:56:57Z)`, `Evidence-Backed Ecosystem v1.0 — frozen baseline`, `What I would do next`, `What the log establishes`, `🤖 Antigravity (2026-09-16T08:05:03Z)`, `🤖 Antigravity (2026-09-16T08:20:04Z)`, `🤖 Antigravity (2026-09-16T08:22:06Z)`, `Verbatim Transcripts Hub README`, `🤖 Antigravity (2026-09-16T08:14:38Z)`, `🤖 Antigravity (2026-09-16T08:21:40Z)`, `🤖 Antigravity (2026-09-16T07:53:11Z)`, `🤖 Antigravity (2026-09-16T08:24:58Z)`, `👤 User (2026-09-16T08:21:18Z)`?**
   _High betweenness centrality (0.092) - this node is a cross-community bridge._
-- **Why does `INV-EPI-001: Verbatim Epistemic History Invariant` connect `Verbatim Transcripts Hub README` to `🏛️ ARCHITECTURAL RFC: ARCH-RFC-004 (The Workflow Externalization Freeze & Utilization Pivot)`, `ARCH-RFC-003: Capstone Defense Standard`, `Aaradhya Dev Tamrakar (ADT)`?**
-  _High betweenness centrality (0.050) - this node is a cross-community bridge._
+- **Why does `📎 Appendix: Independent Verification Plan (ChatGPT Session Continuation)` connect `📎 Appendix: Independent Verification Plan (ChatGPT Session Continuation)` to `Turn 3`, `Phase 2 — Independent verification`, `Turn 4`, `2026-09-16_INDEPENDENT-VERIFICATION-PLAN_CONVERSATION.md`?**
+  _High betweenness centrality (0.048) - this node is a cross-community bridge._
 - **What connects `$schema`, `$id`, `title` to the rest of the system?**
-  _1657 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1659 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `properties` be split into smaller, more focused modules?**
   _Cohesion score 0.0625 - nodes in this community are weakly interconnected._
 - **Should `AI-Constraint-Solver.contract.json` be split into smaller, more focused modules?**

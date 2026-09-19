@@ -1,0 +1,23 @@
+# Graphify Ingestion Exclusion (ARCH-RFC-005 Memory Stratification)
+# Layer 0 Verbatim Epistemic Vault - Preserved on disk per INV-EPI-001, excluded from Graphify Layer 2 retrieval
+research/transcripts/
+research/transcripts/*
+*.transcript.jsonl
+*.transcript_full.jsonl
+
+# Build & LaTeX artifacts
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
+report/*.bbl
+report/*.blg
+report/*.fdb_latexmk
+report/*.fls
+report/*.synctex.gz
+
+# Cache & Scratch
+.agents/
+__pycache__/
+*.pyc
+scratch/

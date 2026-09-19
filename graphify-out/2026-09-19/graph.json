@@ -13366,6 +13366,18 @@
       "source_location": "L109"
     },
     {
+      "id": "research_notes_2026_09_19_agentic_ai_industry_ayush_shah_4_q_a_exchange_aaradhya_dev_tamrakar_ayush_kumar_shah",
+      "label": "4. Q&A Exchange: Aaradhya Dev Tamrakar & Ayush Kumar Shah",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "2. Key Frameworks & Architecture Covered",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. q&a exchange: aaradhya dev tamrakar & ayush kumar shah",
+      "source_file": "research/notes/2026-09-19_Agentic-AI-Industry-Ayush-Shah.md",
+      "source_location": "L121"
+    },
+    {
       "id": "research_notes_2026_09_19_agentic_ai_industry_ayush_shah_a_karpathy_s_llm_maintained_personal_wiki_slide_32",
       "label": "A. Karpathy's LLM-Maintained Personal Wiki (Slide 32)",
       "_origin": "ast",
@@ -13376,6 +13388,30 @@
       "norm_label": "a. karpathy's llm-maintained personal wiki (slide 32)",
       "source_file": "research/notes/2026-09-19_Agentic-AI-Industry-Ayush-Shah.md",
       "source_location": "L19"
+    },
+    {
+      "id": "research_notes_2026_09_19_agentic_ai_industry_ayush_shah_aaradhya_s_question",
+      "label": "Aaradhya's Question:",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "2. Key Frameworks & Architecture Covered",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "aaradhya's question:",
+      "source_file": "research/notes/2026-09-19_Agentic-AI-Industry-Ayush-Shah.md",
+      "source_location": "L123"
+    },
+    {
+      "id": "research_notes_2026_09_19_agentic_ai_industry_ayush_shah_ayush_s_ground_truth_answer_core_takeaways",
+      "label": "Ayush's Ground-Truth Answer & Core Takeaways:",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "2. Key Frameworks & Architecture Covered",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "ayush's ground-truth answer & core takeaways:",
+      "source_file": "research/notes/2026-09-19_Agentic-AI-Industry-Ayush-Shah.md",
+      "source_location": "L126"
     },
     {
       "id": "research_notes_2026_09_19_agentic_ai_industry_ayush_shah_b_para_organizes_knowledge_around_action_slide_33",
@@ -30629,6 +30665,17 @@
     },
     {
       "source": "research_notes_2026_09_19_agentic_ai_industry_ayush_shah_2026_09_19_guest_lecture_agentic_ai_in_industry_ayush_kumar_shah_meta",
+      "target": "research_notes_2026_09_19_agentic_ai_industry_ayush_shah_4_q_a_exchange_aaradhya_dev_tamrakar_ayush_kumar_shah",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/notes/2026-09-19_Agentic-AI-Industry-Ayush-Shah.md",
+      "source_location": "L121",
+      "weight": 1.0
+    },
+    {
+      "source": "research_notes_2026_09_19_agentic_ai_industry_ayush_shah_2026_09_19_guest_lecture_agentic_ai_in_industry_ayush_kumar_shah_meta",
       "target": "research_notes_2026_09_19_agentic_ai_industry_ayush_shah_2_key_frameworks_architecture_covered",
       "relation": "contains",
       "_origin": "ast",
@@ -30768,6 +30815,28 @@
       "confidence_score": 1.0,
       "source_file": "research/notes/2026-09-19_Agentic-AI-Industry-Ayush-Shah.md",
       "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "research_notes_2026_09_19_agentic_ai_industry_ayush_shah_4_q_a_exchange_aaradhya_dev_tamrakar_ayush_kumar_shah",
+      "target": "research_notes_2026_09_19_agentic_ai_industry_ayush_shah_aaradhya_s_question",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/notes/2026-09-19_Agentic-AI-Industry-Ayush-Shah.md",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "research_notes_2026_09_19_agentic_ai_industry_ayush_shah_4_q_a_exchange_aaradhya_dev_tamrakar_ayush_kumar_shah",
+      "target": "research_notes_2026_09_19_agentic_ai_industry_ayush_shah_ayush_s_ground_truth_answer_core_takeaways",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/notes/2026-09-19_Agentic-AI-Industry-Ayush-Shah.md",
+      "source_location": "L126",
       "weight": 1.0
     },
     {

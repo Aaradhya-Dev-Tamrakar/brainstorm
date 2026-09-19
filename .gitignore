@@ -30,3 +30,6 @@ report/*.synctex.gz
 
 # Obsidian UI state
 .obsidian/workspace*.json
+
+# Graphify AST cache
+graphify-out/cache/

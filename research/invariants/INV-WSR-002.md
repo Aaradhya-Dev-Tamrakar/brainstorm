@@ -2,7 +2,7 @@
 
 > **Artifact ID:** `INV-WSR-002`  
 > **Title:** Worker Protocol Completeness, Push/Pull Dispatch & Truthful Telemetry Invariant  
-> **Version:** `1.1.0`  
+> **Version:** `1.2.0`  
 > **Status:** `IMPLEMENTED_AND_VERIFIED`  
 > **Principal Architect:** Aaradhya Dev Tamrakar  
 > **Discipline:** Distributed Orchestration & Multi-Agent Session Architecture  
@@ -41,7 +41,7 @@ In a distributed task state machine, task acquisition must adhere strictly to on
 > **"Heartbeat metrics emitted by worker daemons MUST reflect empirical system/provider states rather than constant synthetic placeholders."**
 
 Worker heartbeat payloads must decouple and report:
-- `rate_limit_headroom`: Provider-specific remaining requests/tokens per window (or explicit cooldown timer upon HTTP 429).
+- `rate_limit_headroom`: Provider-specific remaining requests/tokens per window (or explicit cooldown timer upon HTTP 429). Persisted in `workers.rate_limit_headroom` database column.
 - `system_resources`: Actual CPU/RAM utilization via OS performance counters (`cpu_percent`, `memory_percent`).
 - `active_leases`: Count of currently executing tasks (strictly bounded by worker concurrency limits, reported truthfully as `1` during task execution and `0` when idle).
 
@@ -80,10 +80,13 @@ $$\text{Error}(E) \to \text{State}(T) = \text{DONE} \quad (\text{VIOLATION})$$
 
 ## 3. Verification & Compliance Gate
 
-Compliance with `INV-WSR-002` is formally verified across automated test suites:
+Compliance with `INV-WSR-002` is formally verified across automated test suites (**99/99 passing**):
 1. **Invariant A (Closed-Loop Pull Dispatch):** `tests/test_task_acquisition.py` proves atomic pull matching and lease duration enforcement; push loop disabled in `server/main.py`.
 2. **Invariant B (Strict Separation of Real/Simulation):** `tests/test_invariants_wsr_002.py::test_invariant_b_strict_separation_of_real_and_simulation` asserts zero synthetic success fallthrough across `ClaudeDesktopProxyAdapter`, `GroqAdapter`, and `GeminiFreeAdapter`.
 3. **Invariant C (Truthful Telemetry):** `tests/test_invariants_wsr_002.py::test_invariant_c_truthful_telemetry` and `test_invariant_c_no_spurious_cooldown_on_high_memory` prove empirical OS performance counters, accurate `active_leases`, and immunity to RAM-induced quota cooldown.
 4. **Invariant D (Atomic Advancement & Rollback):** `tests/test_invariants_wsr_002.py::test_invariant_d_atomic_dag_stage_advancement` and `test_invariant_d_atomic_rollback_on_failure` prove all-or-nothing transactional guarantees.
 5. **Invariant D (QA Deliverable Preservation):** `tests/test_invariants_wsr_002.py::test_invariant_d_qa_checkpoint_preservation` verifies QA verification output persistence and successor stage inheritance.
-6. **Security (Remote MCP Auth):** `tests/test_auth_enforcement.py` verifies unauthenticated requests to `/mcp/` receive HTTP 401 via `MCPAuthMiddleware`.
+6. **Security (Remote MCP Auth & Query Removal):** `tests/test_auth_enforcement.py` verifies unauthenticated requests receive HTTP 401, header credentials (`X-API-Key`) succeed, and URL query-string credentials are categorically rejected.
+7. **Security (Mutation Token Isolation):** `tests/test_invariants_wsr_002.py::test_claim_token_masked_on_read_endpoints` proves `claim_token` is masked (`None`) on read-only queries (`GET /tasks`, `GET /tasks/{id}`, `list_tasks`, `get_task`) and exposed only to the claiming worker.
+8. **Worker Lifecycle (Lease Renewal Parity):** `client/worker_daemon.py` and `client/fleet_supervisor.py` maintain continuous lease renewal across execution and result ingestion; verified in `tests/test_fleet_supervisor.py::test_fleet_lease_renewal_periodically`.
+9. **Cross-Worker Session Migration & Resumption:** `tests/test_invariants_wsr_002.py::test_cross_worker_session_migration_and_resumption` proves the full multi-stage lifecycle across heterogeneous worker adapters (Worker A research → checkpoint → Stage 2 rate-limit cooldown & release → Worker B acquire & resume from checkpoint findings → format completion → unbroken audit lineage).

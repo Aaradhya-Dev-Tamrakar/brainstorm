@@ -153,6 +153,7 @@ The ecosystem encompasses **18 physical Git repositories** synchronized via **18
 | 15 | `AaradhyaDT.github.io` | **Portfolio Mirror** | Presentation | Mirror Web | **E4** | Secondary public mirror and documentation host |
 | 16 | `makerspace` | **Makerspace** | Presentation | Hardware Hub | **E2** | Physical maker laboratory, fabrication assets, and 3D printing staging |
 | 17 | `react-workshop-ieeekecktm` | **React Workshop** | Presentation | Educational | **E3** | Hands-on curriculum and modern frontend architecture reference |
+| 18 | `google-classroom-mcp` | **Google Classroom MCP** | Ingestion / Actuation | Local Desktop / Fleet MCP | **E3** | Direct Google Classroom integration for courses, coursework, assignments, announcements, and submissions |
 
 ---
 

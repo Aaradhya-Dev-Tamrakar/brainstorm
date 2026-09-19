@@ -425,3 +425,33 @@ capabilities:
     development_hours: 24
     confidence: 0.90
     last_verified: "2026-09-15"
+
+  - id: "google-classroom-mcp"
+    name: "Google Classroom MCP Server"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\google-classroom-mcp"
+    category: "INGESTION_ACTUATION"
+    status: "IMPLEMENTED"
+    description: "Model Context Protocol server interfacing with Google Classroom REST API to automate course, coursework, assignment, submission, and roster querying for AI agent meshes."
+    inputs:
+      - "Google Classroom OAuth credentials & tokens"
+      - "Course ID / Coursework ID"
+      - "Student / Teacher filters"
+    outputs:
+      - "Course metadata & announcements"
+      - "Coursework problem sets & Drive materials"
+      - "Submission records, turn-in status & grades"
+    interfaces:
+      - "MCP (stdio JSON-RPC)"
+      - "Node.js ESM"
+    dependencies:
+      - "Node.js v26"
+      - "@modelcontextprotocol/sdk"
+      - "Google Classroom REST API v1"
+    evidence: "E3"
+    benchmarks: "Verified against live course AI Fellowship 2026 with 34 coursework items and 29 announcements"
+    verification: "Live HTTP 200 API verification and token auto-refresh lifecycle test"
+    maintenance_cost: "1 hour/month"
+    development_hours: 8
+    confidence: 0.96
+    last_verified: "2026-09-19"
+

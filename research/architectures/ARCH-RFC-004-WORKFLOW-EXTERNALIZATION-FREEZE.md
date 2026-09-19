@@ -1,10 +1,12 @@
 # 🏛️ ARCHITECTURAL RFC: ARCH-RFC-004 (The Workflow Externalization Freeze & Utilization Pivot)
 
+> **Artifact ID:** `ARCH-RFC-004`  
 > **Document ID:** `ARCH-RFC-004`  
 > **Title:** Formal Baseline v1.0 Milestone: The Epistemic Workflow Externalization Freeze & Active Infrastructure Utilization Pivot  
 > **Author & Principal Architect:** Aaradhya Dev Tamrakar  
 > **Engineering Discipline:** Systems Architecture, Meta-Engineering & Epistemic Governance  
 > **Status:** Active Standard (`RATIFIED_GOVERNANCE`)  
+> **Evidence Tier:** `E4` (Empirical Multi-Repository Artifact Freeze)  
 > **First Codified:** 2026-09-16  
 > **Repository:** `F:\Aaradhya-Dev-Tamrakar\brainstorm`  
 > **Term Codification:** **Workflow Externalization (Workflow -> Repo Artifacts)**  

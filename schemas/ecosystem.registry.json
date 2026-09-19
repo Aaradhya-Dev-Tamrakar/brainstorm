@@ -11,8 +11,8 @@
   "statistics": {
     "total_git_branches": 18,
     "orchestration_branches": 1,
-    "total_tool_modules": 18,
-    "computational_modules": 14,
+    "total_tool_modules": 20,
+    "computational_modules": 16,
     "presentation_and_educational_modules": 4
   },
   "modules": [
@@ -227,6 +227,18 @@
       "local_path": "F:\\Aaradhya-Dev-Tamrakar\\nepali-ocr-ai",
       "core_superpower": "Nepali vision OCR, Varnavinyas grammar checker/suggester, bi-directional Preeti-Unicode transcoder, and Word (.docx) repair engine",
       "contract_ref": "schemas/examples/nepali-ocr-ai.contract.json"
+    },
+    {
+      "index": 20,
+      "id": "google-classroom-mcp",
+      "branch": "google-classroom-mcp",
+      "name": "Google Classroom MCP Server",
+      "category": "computational_engine",
+      "tech_stack": "Node.js ESM, @modelcontextprotocol/sdk, Google Classroom API",
+      "execution_context": "Local / Fleet MCP",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\google-classroom-mcp",
+      "core_superpower": "Direct Google Classroom integration for courses, coursework, assignments, announcements, and submissions",
+      "contract_ref": "schemas/examples/google-classroom-mcp.contract.json"
     }
   ]
 }

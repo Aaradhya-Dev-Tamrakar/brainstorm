@@ -1413,7 +1413,7 @@
       "source_location": "L187"
     },
     {
-      "id": "schemas_capability_contract_v1_description_description",
+      "id": "schemas_capability_contract_v1_inputs_description",
       "label": "description",
       "_origin": "ast",
       "community": 1,
@@ -1421,10 +1421,10 @@
       "file_type": "code",
       "norm_label": "description",
       "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L109"
+      "source_location": "L180"
     },
     {
-      "id": "schemas_capability_contract_v1_description_type",
+      "id": "schemas_capability_contract_v1_inputs_type",
       "label": "type",
       "_origin": "ast",
       "community": 1,
@@ -1432,29 +1432,7 @@
       "file_type": "code",
       "norm_label": "type",
       "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L108"
-    },
-    {
-      "id": "schemas_capability_contract_v1_deterministic_description",
-      "label": "description",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "description",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L127"
-    },
-    {
-      "id": "schemas_capability_contract_v1_deterministic_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L126"
+      "source_location": "L179"
     },
     {
       "id": "schemas_capability_contract_v1_properties_counterexample_schema",
@@ -1468,7 +1446,29 @@
       "source_location": "L186"
     },
     {
-      "id": "schemas_capability_contract_v1_properties_description",
+      "id": "schemas_capability_contract_v1_properties_inputs",
+      "label": "inputs",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "inputs",
+      "source_file": "schemas/capability.contract.v1.json",
+      "source_location": "L178"
+    },
+    {
+      "id": "schemas_capability_contract_v1_properties_timeout_ms",
+      "label": "timeout_ms",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "timeout_ms",
+      "source_file": "schemas/capability.contract.v1.json",
+      "source_location": "L168"
+    },
+    {
+      "id": "schemas_capability_contract_v1_timeout_ms_description",
       "label": "description",
       "_origin": "ast",
       "community": 1,
@@ -1476,18 +1476,29 @@
       "file_type": "code",
       "norm_label": "description",
       "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L107"
+      "source_location": "L171"
     },
     {
-      "id": "schemas_capability_contract_v1_properties_deterministic",
-      "label": "deterministic",
+      "id": "schemas_capability_contract_v1_timeout_ms_minimum",
+      "label": "minimum",
       "_origin": "ast",
       "community": 1,
       "community_name": "properties",
       "file_type": "code",
-      "norm_label": "deterministic",
+      "norm_label": "minimum",
       "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L125"
+      "source_location": "L170"
+    },
+    {
+      "id": "schemas_capability_contract_v1_timeout_ms_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/capability.contract.v1.json",
+      "source_location": "L169"
     },
     {
       "id": "research_experiments_inv_template",
@@ -5378,14 +5389,38 @@
       "source_location": "L59"
     },
     {
-      "id": "research_experiments_bmk_memory_001_4_benchmark_retrieval_evaluation_precision_5",
-      "label": "4. Benchmark Retrieval Evaluation (Precision@5)",
+      "id": "research_experiments_bmk_memory_001_4_1_epistemic_relevance_taxonomy",
+      "label": "4.1 Epistemic Relevance Taxonomy",
       "_origin": "ast",
       "community": 24,
       "community_name": "\ud83e\udde0 RESEARCH BENCHMARK: BMK-MEMORY-001 (Memory Stratification & Graph Density)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "4. benchmark retrieval evaluation (precision@5)",
+      "norm_label": "4.1 epistemic relevance taxonomy",
+      "source_file": "research/experiments/BMK-MEMORY-001.md",
+      "source_location": "L90"
+    },
+    {
+      "id": "research_experiments_bmk_memory_001_4_2_dual_mathematical_metrics",
+      "label": "4.2 Dual Mathematical Metrics",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "\ud83e\udde0 RESEARCH BENCHMARK: BMK-MEMORY-001 (Memory Stratification & Graph Density)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4.2 dual mathematical metrics",
+      "source_file": "research/experiments/BMK-MEMORY-001.md",
+      "source_location": "L98"
+    },
+    {
+      "id": "research_experiments_bmk_memory_001_4_benchmark_retrieval_evaluation_taxonomy_metrics",
+      "label": "4. Benchmark Retrieval Evaluation Taxonomy & Metrics",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "\ud83e\udde0 RESEARCH BENCHMARK: BMK-MEMORY-001 (Memory Stratification & Graph Density)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. benchmark retrieval evaluation taxonomy & metrics",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
       "source_location": "L86"
     },
@@ -5399,7 +5434,7 @@
       "node_kind": "heading",
       "norm_label": "5.1 pre vs post stratification comparison",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L105"
+      "source_location": "L116"
     },
     {
       "id": "research_experiments_bmk_memory_001_5_2_top_post_stratification_god_nodes_grounded_architectural_entities",
@@ -5411,7 +5446,7 @@
       "node_kind": "heading",
       "norm_label": "5.2 top post-stratification god nodes (grounded architectural entities)",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L118"
+      "source_location": "L131"
     },
     {
       "id": "research_experiments_bmk_memory_001_5_3_granular_retrieval_precision_breakdown_q1_q5",
@@ -5423,7 +5458,7 @@
       "node_kind": "heading",
       "norm_label": "5.3 granular retrieval precision breakdown (q1\u2013q5)",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L133"
+      "source_location": "L146"
     },
     {
       "id": "research_experiments_bmk_memory_001_5_empirical_results_delta_analysis_executed_2026_09_19_commit_917c0aa1",
@@ -5435,7 +5470,7 @@
       "node_kind": "heading",
       "norm_label": "5. empirical results & delta analysis (executed: 2026-09-19 @ commit `917c0aa1`)",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L103"
+      "source_location": "L114"
     },
     {
       "id": "research_experiments_bmk_memory_001_6_hypothesis_decomposition_epistemic_verdict",
@@ -5447,7 +5482,7 @@
       "node_kind": "heading",
       "norm_label": "6. hypothesis decomposition & epistemic verdict",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L146"
+      "source_location": "L159"
     },
     {
       "id": "research_experiments_bmk_memory_001_7_artifacts_epistemic_provenance",
@@ -5459,7 +5494,7 @@
       "node_kind": "heading",
       "norm_label": "7. artifacts & epistemic provenance",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L163"
+      "source_location": "L176"
     },
     {
       "id": "research_experiments_bmk_memory_001_research_benchmark_bmk_memory_001_memory_stratification_graph_density",
@@ -5472,18 +5507,6 @@
       "norm_label": "\ud83e\udde0 research benchmark: bmk-memory-001 (memory stratification & graph density)",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
       "source_location": "L1"
-    },
-    {
-      "id": "research_experiments_bmk_memory_001_scoring_formula",
-      "label": "Scoring Formula:",
-      "_origin": "ast",
-      "community": 24,
-      "community_name": "\ud83e\udde0 RESEARCH BENCHMARK: BMK-MEMORY-001 (Memory Stratification & Graph Density)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "scoring formula:",
-      "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L98"
     },
     {
       "id": "report_quantitative_claims_audit_10_central_technical_asset_replacement_valuation",
@@ -8323,48 +8346,124 @@
       "source_location": "L1"
     },
     {
-      "id": "schemas_capability_contract_v1_properties_timeout_ms",
-      "label": "timeout_ms",
+      "id": "research_experiments_fleet_002",
+      "label": "FLEET-002.md",
       "_origin": "ast",
       "community": 47,
-      "community_name": "timeout_ms",
-      "file_type": "code",
-      "norm_label": "timeout_ms",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L168"
+      "community_name": "Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "fleet-002.md",
+      "source_file": "research/experiments/FLEET-002.md",
+      "source_location": "L1"
     },
     {
-      "id": "schemas_capability_contract_v1_timeout_ms_description",
-      "label": "description",
+      "id": "research_experiments_fleet_002_1_problem_architectural_rationale",
+      "label": "1. Problem & Architectural Rationale",
       "_origin": "ast",
       "community": 47,
-      "community_name": "timeout_ms",
-      "file_type": "code",
-      "norm_label": "description",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L171"
+      "community_name": "Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. problem & architectural rationale",
+      "source_file": "research/experiments/FLEET-002.md",
+      "source_location": "L10"
     },
     {
-      "id": "schemas_capability_contract_v1_timeout_ms_minimum",
-      "label": "minimum",
+      "id": "research_experiments_fleet_002_2_multi_tier_hybrid_fleet_topology",
+      "label": "2. Multi-Tier Hybrid Fleet Topology",
       "_origin": "ast",
       "community": 47,
-      "community_name": "timeout_ms",
-      "file_type": "code",
-      "norm_label": "minimum",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L170"
+      "community_name": "Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. multi-tier hybrid fleet topology",
+      "source_file": "research/experiments/FLEET-002.md",
+      "source_location": "L21"
     },
     {
-      "id": "schemas_capability_contract_v1_timeout_ms_type",
-      "label": "type",
+      "id": "research_experiments_fleet_002_3_1_copilotapiadapter",
+      "label": "3.1. `CopilotAPIAdapter`",
       "_origin": "ast",
       "community": 47,
-      "community_name": "timeout_ms",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L169"
+      "community_name": "Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3.1. `copilotapiadapter`",
+      "source_file": "research/experiments/FLEET-002.md",
+      "source_location": "L61"
+    },
+    {
+      "id": "research_experiments_fleet_002_3_2_sandboxed_local_tool_executor",
+      "label": "3.2. Sandboxed Local Tool Executor",
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3.2. sandboxed local tool executor",
+      "source_file": "research/experiments/FLEET-002.md",
+      "source_location": "L82"
+    },
+    {
+      "id": "research_experiments_fleet_002_3_3_memory_resource_footprint_benchmark_comparison",
+      "label": "3.3. Memory & Resource Footprint Benchmark Comparison",
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3.3. memory & resource footprint benchmark comparison",
+      "source_file": "research/experiments/FLEET-002.md",
+      "source_location": "L88"
+    },
+    {
+      "id": "research_experiments_fleet_002_3_specification_component_contracts",
+      "label": "3. Specification & Component Contracts",
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. specification & component contracts",
+      "source_file": "research/experiments/FLEET-002.md",
+      "source_location": "L59"
+    },
+    {
+      "id": "research_experiments_fleet_002_4_verification_checklist_milestones",
+      "label": "4. Verification Checklist & Milestones",
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. verification checklist & milestones",
+      "source_file": "research/experiments/FLEET-002.md",
+      "source_location": "L99"
+    },
+    {
+      "id": "research_experiments_fleet_002_experiment_architecture_log_fleet_002_headless_multi_account_github_copilot_worker_fleet",
+      "label": "Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet)",
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "experiment & architecture log: fleet-002 (headless multi-account github copilot worker fleet)",
+      "source_file": "research/experiments/FLEET-002.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "research_experiments_fleet_002_role_capability_allocation",
+      "label": "Role & Capability Allocation",
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "role & capability allocation",
+      "source_file": "research/experiments/FLEET-002.md",
+      "source_location": "L46"
     },
     {
       "id": "schemas_model_benchmark_schema_pass_rate_percent_maximum",
@@ -8411,37 +8510,37 @@
       "source_location": "L65"
     },
     {
-      "id": "schemas_capability_contract_v1_inputs_description",
+      "id": "schemas_capability_contract_v1_description_description",
       "label": "description",
       "_origin": "ast",
       "community": 49,
-      "community_name": "inputs",
+      "community_name": "description",
       "file_type": "code",
       "norm_label": "description",
       "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L180"
+      "source_location": "L109"
     },
     {
-      "id": "schemas_capability_contract_v1_inputs_type",
+      "id": "schemas_capability_contract_v1_description_type",
       "label": "type",
       "_origin": "ast",
       "community": 49,
-      "community_name": "inputs",
+      "community_name": "description",
       "file_type": "code",
       "norm_label": "type",
       "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L179"
+      "source_location": "L108"
     },
     {
-      "id": "schemas_capability_contract_v1_properties_inputs",
-      "label": "inputs",
+      "id": "schemas_capability_contract_v1_properties_description",
+      "label": "description",
       "_origin": "ast",
       "community": 49,
-      "community_name": "inputs",
+      "community_name": "description",
       "file_type": "code",
-      "norm_label": "inputs",
+      "norm_label": "description",
       "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L178"
+      "source_location": "L107"
     },
     {
       "id": "research_daily_2026_09_19",
@@ -10255,6 +10354,39 @@
       "norm_label": "\ud83c\udfdb\ufe0f decision record: dec-001 (memory stratification & retrieval pruning)",
       "source_file": "research/decisions/DEC-001-MEMORY-STRATIFICATION.md",
       "source_location": "L1"
+    },
+    {
+      "id": "schemas_capability_contract_v1_deterministic_description",
+      "label": "description",
+      "_origin": "ast",
+      "community": 69,
+      "community_name": "deterministic",
+      "file_type": "code",
+      "norm_label": "description",
+      "source_file": "schemas/capability.contract.v1.json",
+      "source_location": "L127"
+    },
+    {
+      "id": "schemas_capability_contract_v1_deterministic_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 69,
+      "community_name": "deterministic",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/capability.contract.v1.json",
+      "source_location": "L126"
+    },
+    {
+      "id": "schemas_capability_contract_v1_properties_deterministic",
+      "label": "deterministic",
+      "_origin": "ast",
+      "community": 69,
+      "community_name": "deterministic",
+      "file_type": "code",
+      "norm_label": "deterministic",
+      "source_file": "schemas/capability.contract.v1.json",
+      "source_location": "L125"
     },
     {
       "id": "schemas_capability_contract_v1_category_description",
@@ -15964,8 +16096,30 @@
       "weight": 1.0
     },
     {
-      "source": "research_experiments_bmk_memory_001_4_benchmark_retrieval_evaluation_precision_5",
-      "target": "research_experiments_bmk_memory_001_scoring_formula",
+      "source": "research_experiments_bmk_memory_001_3_stratification_protocol_arch_rfc_005_enforcement",
+      "target": "research_experiments_bmk_memory_001_4_benchmark_retrieval_evaluation_taxonomy_metrics",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/experiments/BMK-MEMORY-001.md",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "research_experiments_bmk_memory_001_3_stratification_protocol_arch_rfc_005_enforcement",
+      "target": "research_experiments_bmk_memory_001_4_1_epistemic_relevance_taxonomy",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/experiments/BMK-MEMORY-001.md",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "research_experiments_bmk_memory_001_3_stratification_protocol_arch_rfc_005_enforcement",
+      "target": "research_experiments_bmk_memory_001_4_2_dual_mathematical_metrics",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15982,7 +16136,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L105",
+      "source_location": "L116",
       "weight": 1.0
     },
     {
@@ -15993,7 +16147,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L118",
+      "source_location": "L131",
       "weight": 1.0
     },
     {
@@ -16004,7 +16158,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L133",
+      "source_location": "L146",
       "weight": 1.0
     },
     {
@@ -16015,7 +16169,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L103",
+      "source_location": "L114",
       "weight": 1.0
     },
     {
@@ -16026,7 +16180,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L146",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -16037,7 +16191,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L163",
+      "source_location": "L176",
       "weight": 1.0
     },
     {
@@ -16071,17 +16225,6 @@
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
       "source_location": "L59",
-      "weight": 1.0
-    },
-    {
-      "source": "research_experiments_bmk_memory_001_research_benchmark_bmk_memory_001_memory_stratification_graph_density",
-      "target": "research_experiments_bmk_memory_001_4_benchmark_retrieval_evaluation_precision_5",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L86",
       "weight": 1.0
     },
     {
@@ -17127,6 +17270,105 @@
       "confidence_score": 1.0,
       "source_file": "research/experiments/EXP-LOCALSEND-MCP-001.md",
       "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "research_experiments_fleet_002",
+      "target": "research_experiments_fleet_002_experiment_architecture_log_fleet_002_headless_multi_account_github_copilot_worker_fleet",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/experiments/FLEET-002.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "research_experiments_fleet_002_2_multi_tier_hybrid_fleet_topology",
+      "target": "research_experiments_fleet_002_role_capability_allocation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/experiments/FLEET-002.md",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "research_experiments_fleet_002_3_specification_component_contracts",
+      "target": "research_experiments_fleet_002_3_1_copilotapiadapter",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/experiments/FLEET-002.md",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "research_experiments_fleet_002_3_specification_component_contracts",
+      "target": "research_experiments_fleet_002_3_2_sandboxed_local_tool_executor",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/experiments/FLEET-002.md",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "research_experiments_fleet_002_3_specification_component_contracts",
+      "target": "research_experiments_fleet_002_3_3_memory_resource_footprint_benchmark_comparison",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/experiments/FLEET-002.md",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "research_experiments_fleet_002_experiment_architecture_log_fleet_002_headless_multi_account_github_copilot_worker_fleet",
+      "target": "research_experiments_fleet_002_1_problem_architectural_rationale",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/experiments/FLEET-002.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "research_experiments_fleet_002_experiment_architecture_log_fleet_002_headless_multi_account_github_copilot_worker_fleet",
+      "target": "research_experiments_fleet_002_2_multi_tier_hybrid_fleet_topology",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/experiments/FLEET-002.md",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "research_experiments_fleet_002_experiment_architecture_log_fleet_002_headless_multi_account_github_copilot_worker_fleet",
+      "target": "research_experiments_fleet_002_3_specification_component_contracts",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/experiments/FLEET-002.md",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "research_experiments_fleet_002_experiment_architecture_log_fleet_002_headless_multi_account_github_copilot_worker_fleet",
+      "target": "research_experiments_fleet_002_4_verification_checklist_milestones",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/experiments/FLEET-002.md",
+      "source_location": "L99",
       "weight": 1.0
     },
     {
@@ -24091,5 +24333,5 @@
       "source_file": "README.md"
     }
   ],
-  "built_at_commit": "8b1bf2cd1ad1afb4e42b44730babeff33768d30e"
+  "built_at_commit": "4e0ccc451dc14c8e9061d3473043f5cd49e9e4be"
 }

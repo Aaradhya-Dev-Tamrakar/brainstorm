@@ -238,7 +238,7 @@ def audit_layer_1_consistency():
     exp_artifacts = count_valid_md_artifacts(exp_dir)
     inv_artifacts = count_valid_md_artifacts(inv_dir)
     total_physical_artifacts = len(arch_artifacts) + len(exp_artifacts) + len(inv_artifacts)
-    canonical_artifact_count = 24
+    canonical_artifact_count = 25
 
     if total_physical_artifacts != canonical_artifact_count:
         discrepancies.append({

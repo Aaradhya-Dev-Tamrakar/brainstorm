@@ -482,7 +482,7 @@
       "file_type": "code",
       "norm_label": "audit_layer_1_consistency()",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L72"
+      "source_location": "L73"
     },
     {
       "id": "sim_reconciliation_engine_audit_layer_2_behavioral",
@@ -494,7 +494,7 @@
       "file_type": "code",
       "norm_label": "audit_layer_2_behavioral()",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L308"
+      "source_location": "L309"
     },
     {
       "id": "sim_reconciliation_engine_audit_repository",
@@ -506,7 +506,7 @@
       "file_type": "code",
       "norm_label": "audit_repository()",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L342"
+      "source_location": "L344"
     },
     {
       "id": "sim_reconciliation_engine_parse_simple_yaml_capabilities",
@@ -518,7 +518,7 @@
       "file_type": "code",
       "norm_label": "parse_simple_yaml_capabilities()",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L49"
+      "source_location": "L50"
     },
     {
       "id": "sim_task_telemetry_cmd_close",
@@ -4997,7 +4997,7 @@
       "source_location": "L1"
     },
     {
-      "id": "sim_reconciliation_engine_rationale_309",
+      "id": "sim_reconciliation_engine_rationale_310",
       "label": "Layer 2: Behavioral verification & simulation test suite execution.",
       "_origin": "ast",
       "community": 21,
@@ -5005,10 +5005,10 @@
       "file_type": "rationale",
       "norm_label": "layer 2: behavioral verification & simulation test suite execution.",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L309"
+      "source_location": "L310"
     },
     {
-      "id": "sim_reconciliation_engine_rationale_50",
+      "id": "sim_reconciliation_engine_rationale_51",
       "label": "Fallback zero-dependency YAML parser for capability-registry.yaml.",
       "_origin": "ast",
       "community": 21,
@@ -5016,10 +5016,10 @@
       "file_type": "rationale",
       "norm_label": "fallback zero-dependency yaml parser for capability-registry.yaml.",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L50"
+      "source_location": "L51"
     },
     {
-      "id": "sim_reconciliation_engine_rationale_73",
+      "id": "sim_reconciliation_engine_rationale_74",
       "label": "Layer 1: Structural consistency, schemas, metadata, links, and economic\u2026",
       "_origin": "ast",
       "community": 21,
@@ -5027,7 +5027,7 @@
       "file_type": "rationale",
       "norm_label": "layer 1: structural consistency, schemas, metadata, links, and economic...",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L73"
+      "source_location": "L74"
     },
     {
       "id": "research_daily_2026_09_19_1_schedule_priorities",
@@ -5279,7 +5279,7 @@
       "node_kind": "heading",
       "norm_label": "1.1 objective",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L20"
+      "source_location": "L22"
     },
     {
       "id": "research_experiments_bmk_memory_001_1_2_core_hypothesis_hyp_mem_001",
@@ -5291,7 +5291,7 @@
       "node_kind": "heading",
       "norm_label": "1.2 core hypothesis (hyp-mem-001)",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L23"
+      "source_location": "L25"
     },
     {
       "id": "research_experiments_bmk_memory_001_1_objective_hypothesis",
@@ -5303,7 +5303,7 @@
       "node_kind": "heading",
       "norm_label": "1. objective & hypothesis",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L18"
+      "source_location": "L20"
     },
     {
       "id": "research_experiments_bmk_memory_001_2_1_baseline_state_recorded_from_graphify_out_graph_report_md_commit_2a70bcd6",
@@ -5315,7 +5315,7 @@
       "node_kind": "heading",
       "norm_label": "2.1 baseline state (recorded from `graphify-out/graph_report.md` @ commit `2a70bcd6`)",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L33"
+      "source_location": "L35"
     },
     {
       "id": "research_experiments_bmk_memory_001_2_2_top_baseline_god_nodes_pathological_clutter",
@@ -5327,7 +5327,7 @@
       "node_kind": "heading",
       "norm_label": "2.2 top baseline god nodes (pathological clutter)",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L44"
+      "source_location": "L46"
     },
     {
       "id": "research_experiments_bmk_memory_001_2_experimental_topology_baseline_snapshot_pre_stratification",
@@ -5339,7 +5339,7 @@
       "node_kind": "heading",
       "norm_label": "2. experimental topology & baseline snapshot (pre-stratification)",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L31"
+      "source_location": "L33"
     },
     {
       "id": "research_experiments_bmk_memory_001_3_1_layer_partitioning",
@@ -5351,7 +5351,7 @@
       "node_kind": "heading",
       "norm_label": "3.1 layer partitioning",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L59"
+      "source_location": "L61"
     },
     {
       "id": "research_experiments_bmk_memory_001_3_2_execution_commands",
@@ -5363,7 +5363,7 @@
       "node_kind": "heading",
       "norm_label": "3.2 execution commands",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L69"
+      "source_location": "L71"
     },
     {
       "id": "research_experiments_bmk_memory_001_3_stratification_protocol_arch_rfc_005_enforcement",
@@ -5375,7 +5375,7 @@
       "node_kind": "heading",
       "norm_label": "3. stratification protocol (arch-rfc-005 enforcement)",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L57"
+      "source_location": "L59"
     },
     {
       "id": "research_experiments_bmk_memory_001_4_benchmark_retrieval_evaluation_precision_5",
@@ -5387,31 +5387,79 @@
       "node_kind": "heading",
       "norm_label": "4. benchmark retrieval evaluation (precision@5)",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L84"
+      "source_location": "L86"
     },
     {
-      "id": "research_experiments_bmk_memory_001_5_falsification_acceptance_criteria",
-      "label": "5. Falsification & Acceptance Criteria",
+      "id": "research_experiments_bmk_memory_001_5_1_pre_vs_post_stratification_comparison",
+      "label": "5.1 Pre vs Post Stratification Comparison",
       "_origin": "ast",
       "community": 24,
       "community_name": "\ud83e\udde0 RESEARCH BENCHMARK: BMK-MEMORY-001 (Memory Stratification & Graph Density)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "5. falsification & acceptance criteria",
+      "norm_label": "5.1 pre vs post stratification comparison",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L101"
+      "source_location": "L105"
     },
     {
-      "id": "research_experiments_bmk_memory_001_6_execution_status_next_steps",
-      "label": "6. Execution Status & Next Steps",
+      "id": "research_experiments_bmk_memory_001_5_2_top_post_stratification_god_nodes_grounded_architectural_entities",
+      "label": "5.2 Top Post-Stratification God Nodes (Grounded Architectural Entities)",
       "_origin": "ast",
       "community": 24,
       "community_name": "\ud83e\udde0 RESEARCH BENCHMARK: BMK-MEMORY-001 (Memory Stratification & Graph Density)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "6. execution status & next steps",
+      "norm_label": "5.2 top post-stratification god nodes (grounded architectural entities)",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L113"
+      "source_location": "L118"
+    },
+    {
+      "id": "research_experiments_bmk_memory_001_5_3_granular_retrieval_precision_breakdown_q1_q5",
+      "label": "5.3 Granular Retrieval Precision Breakdown (Q1\u2013Q5)",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "\ud83e\udde0 RESEARCH BENCHMARK: BMK-MEMORY-001 (Memory Stratification & Graph Density)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5.3 granular retrieval precision breakdown (q1\u2013q5)",
+      "source_file": "research/experiments/BMK-MEMORY-001.md",
+      "source_location": "L133"
+    },
+    {
+      "id": "research_experiments_bmk_memory_001_5_empirical_results_delta_analysis_executed_2026_09_19_commit_917c0aa1",
+      "label": "5. Empirical Results & Delta Analysis (Executed: 2026-09-19 @ commit `917c0aa1`)",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "\ud83e\udde0 RESEARCH BENCHMARK: BMK-MEMORY-001 (Memory Stratification & Graph Density)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5. empirical results & delta analysis (executed: 2026-09-19 @ commit `917c0aa1`)",
+      "source_file": "research/experiments/BMK-MEMORY-001.md",
+      "source_location": "L103"
+    },
+    {
+      "id": "research_experiments_bmk_memory_001_6_hypothesis_decomposition_epistemic_verdict",
+      "label": "6. Hypothesis Decomposition & Epistemic Verdict",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "\ud83e\udde0 RESEARCH BENCHMARK: BMK-MEMORY-001 (Memory Stratification & Graph Density)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "6. hypothesis decomposition & epistemic verdict",
+      "source_file": "research/experiments/BMK-MEMORY-001.md",
+      "source_location": "L146"
+    },
+    {
+      "id": "research_experiments_bmk_memory_001_7_artifacts_epistemic_provenance",
+      "label": "7. Artifacts & Epistemic Provenance",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "\ud83e\udde0 RESEARCH BENCHMARK: BMK-MEMORY-001 (Memory Stratification & Graph Density)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "7. artifacts & epistemic provenance",
+      "source_file": "research/experiments/BMK-MEMORY-001.md",
+      "source_location": "L163"
     },
     {
       "id": "research_experiments_bmk_memory_001_research_benchmark_bmk_memory_001_memory_stratification_graph_density",
@@ -5435,7 +5483,7 @@
       "node_kind": "heading",
       "norm_label": "scoring formula:",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L96"
+      "source_location": "L98"
     },
     {
       "id": "report_quantitative_claims_audit_10_central_technical_asset_replacement_valuation",
@@ -8675,6 +8723,226 @@
       "source_location": "L50"
     },
     {
+      "id": "schemas_ecosystem_verification_schema_additionalproperties",
+      "label": "additionalProperties",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "additionalproperties",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_id",
+      "label": "$id",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "$id",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_json_schemas_ecosystem_verification_schema",
+      "label": "ecosystem.verification.schema.json",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "ecosystem.verification.schema.json",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_required",
+      "label": "required",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "required",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_schema",
+      "label": "$schema",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "$schema",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_title",
+      "label": "title",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "title",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "ref_generated_by",
+      "label": "generated_by",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "concept",
+      "norm_label": "generated_by",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "ref_manifest_kind",
+      "label": "manifest_kind",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "concept",
+      "norm_label": "manifest_kind",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "ref_projects",
+      "label": "projects",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "concept",
+      "norm_label": "projects",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "ref_schema_version",
+      "label": "schema_version",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "concept",
+      "norm_label": "schema_version",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_claims_items",
+      "label": "items",
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "claims",
+      "file_type": "code",
+      "norm_label": "items",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L30"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_claims_minitems",
+      "label": "minItems",
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "claims",
+      "file_type": "code",
+      "norm_label": "minitems",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L29"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_claims_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "claims",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L28"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_items_ref",
+      "label": "$ref",
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "claims",
+      "file_type": "code",
+      "norm_label": "$ref",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_projects_items",
+      "label": "items",
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "claims",
+      "file_type": "code",
+      "norm_label": "items",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_projects_minitems",
+      "label": "minItems",
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "claims",
+      "file_type": "code",
+      "norm_label": "minitems",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L14"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_projects_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "claims",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L13"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_properties_claims",
+      "label": "claims",
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "claims",
+      "file_type": "code",
+      "norm_label": "claims",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L27"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_properties_projects",
+      "label": "projects",
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "claims",
+      "file_type": "code",
+      "norm_label": "projects",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L12"
+    },
+    {
       "id": "schemas_capability_contract_v1",
       "label": "capability.contract.v1.json",
       "_origin": "ast",
@@ -9192,6 +9460,248 @@
       "source_location": "L61"
     },
     {
+      "id": "schemas_ecosystem_verification_schema_generated_by_minlength",
+      "label": "minLength",
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "minlength",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L11"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_generated_by_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L11"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_manifest_kind_const",
+      "label": "const",
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "const",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_properties",
+      "label": "properties",
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "properties",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_properties_generated_by",
+      "label": "generated_by",
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "generated_by",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L11"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_properties_manifest_kind",
+      "label": "manifest_kind",
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "manifest_kind",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_properties_schema_version",
+      "label": "schema_version",
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "schema_version",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_schema_version_const",
+      "label": "const",
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "const",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_project_required",
+      "label": "required",
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "required",
+      "file_type": "code",
+      "norm_label": "required",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "ref_claimed_result",
+      "label": "claimed_result",
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "required",
+      "file_type": "concept",
+      "norm_label": "claimed_result",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "ref_claims",
+      "label": "claims",
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "required",
+      "file_type": "concept",
+      "norm_label": "claims",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "ref_provenance",
+      "label": "provenance",
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "required",
+      "file_type": "concept",
+      "norm_label": "provenance",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "ref_repository",
+      "label": "repository",
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "required",
+      "file_type": "concept",
+      "norm_label": "repository",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "ref_verification",
+      "label": "verification",
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "required",
+      "file_type": "concept",
+      "norm_label": "verification",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_json_ref_id",
+      "label": "id",
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "required",
+      "file_type": "concept",
+      "norm_label": "id",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_claim_additionalproperties",
+      "label": "additionalProperties",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": "$defs",
+      "file_type": "code",
+      "norm_label": "additionalproperties",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L38"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_claim_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": "$defs",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L37"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_defs",
+      "label": "$defs",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": "$defs",
+      "file_type": "code",
+      "norm_label": "$defs",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L18"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_defs_claim",
+      "label": "claim",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": "$defs",
+      "file_type": "code",
+      "norm_label": "claim",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L36"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_defs_project",
+      "label": "project",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": "$defs",
+      "file_type": "code",
+      "norm_label": "project",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L19"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_project_additionalproperties",
+      "label": "additionalProperties",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": "$defs",
+      "file_type": "code",
+      "norm_label": "additionalproperties",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L21"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_project_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": "$defs",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L20"
+    },
+    {
       "id": "schemas_examples_nepali_ocr_ai_contract",
       "label": "nepali-ocr-ai.contract.json",
       "_origin": "ast",
@@ -9401,110 +9911,22 @@
       "source_location": "L11"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_additionalproperties",
-      "label": "additionalProperties",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "code",
-      "norm_label": "additionalproperties",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L6"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_defs",
-      "label": "$defs",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "code",
-      "norm_label": "$defs",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L18"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_defs_project",
-      "label": "project",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "code",
-      "norm_label": "project",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L19"
-    },
-    {
       "id": "schemas_ecosystem_verification_schema_defs_provenance",
       "label": "provenance",
       "_origin": "ast",
       "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
+      "community_name": "provenance",
       "file_type": "code",
       "norm_label": "provenance",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L48"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_id",
-      "label": "$id",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "code",
-      "norm_label": "$id",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L3"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_json_schemas_ecosystem_verification_schema",
-      "label": "ecosystem.verification.schema.json",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "code",
-      "norm_label": "ecosystem.verification.schema.json",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L1"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_project_additionalproperties",
-      "label": "additionalProperties",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "code",
-      "norm_label": "additionalproperties",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L21"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_project_required",
-      "label": "required",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "code",
-      "norm_label": "required",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_project_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L20"
-    },
-    {
       "id": "schemas_ecosystem_verification_schema_properties_recorded_at",
       "label": "recorded_at",
       "_origin": "ast",
       "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
+      "community_name": "provenance",
       "file_type": "code",
       "norm_label": "recorded_at",
       "source_file": "schemas/ecosystem.verification.schema.json",
@@ -9515,7 +9937,7 @@
       "label": "source_commit",
       "_origin": "ast",
       "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
+      "community_name": "provenance",
       "file_type": "code",
       "norm_label": "source_commit",
       "source_file": "schemas/ecosystem.verification.schema.json",
@@ -9526,7 +9948,7 @@
       "label": "source_path",
       "_origin": "ast",
       "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
+      "community_name": "provenance",
       "file_type": "code",
       "norm_label": "source_path",
       "source_file": "schemas/ecosystem.verification.schema.json",
@@ -9537,7 +9959,7 @@
       "label": "additionalProperties",
       "_origin": "ast",
       "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
+      "community_name": "provenance",
       "file_type": "code",
       "norm_label": "additionalproperties",
       "source_file": "schemas/ecosystem.verification.schema.json",
@@ -9548,7 +9970,7 @@
       "label": "properties",
       "_origin": "ast",
       "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
+      "community_name": "provenance",
       "file_type": "code",
       "norm_label": "properties",
       "source_file": "schemas/ecosystem.verification.schema.json",
@@ -9559,7 +9981,7 @@
       "label": "required",
       "_origin": "ast",
       "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
+      "community_name": "provenance",
       "file_type": "code",
       "norm_label": "required",
       "source_file": "schemas/ecosystem.verification.schema.json",
@@ -9570,7 +9992,7 @@
       "label": "type",
       "_origin": "ast",
       "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
+      "community_name": "provenance",
       "file_type": "code",
       "norm_label": "type",
       "source_file": "schemas/ecosystem.verification.schema.json",
@@ -9581,7 +10003,7 @@
       "label": "format",
       "_origin": "ast",
       "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
+      "community_name": "provenance",
       "file_type": "code",
       "norm_label": "format",
       "source_file": "schemas/ecosystem.verification.schema.json",
@@ -9592,40 +10014,18 @@
       "label": "type",
       "_origin": "ast",
       "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
+      "community_name": "provenance",
       "file_type": "code",
       "norm_label": "type",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L55"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_required",
-      "label": "required",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "code",
-      "norm_label": "required",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L7"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_schema",
-      "label": "$schema",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "code",
-      "norm_label": "$schema",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L2"
-    },
-    {
       "id": "schemas_ecosystem_verification_schema_source_commit_minlength",
       "label": "minLength",
       "_origin": "ast",
       "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
+      "community_name": "provenance",
       "file_type": "code",
       "norm_label": "minlength",
       "source_file": "schemas/ecosystem.verification.schema.json",
@@ -9636,7 +10036,7 @@
       "label": "type",
       "_origin": "ast",
       "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
+      "community_name": "provenance",
       "file_type": "code",
       "norm_label": "type",
       "source_file": "schemas/ecosystem.verification.schema.json",
@@ -9647,7 +10047,7 @@
       "label": "minLength",
       "_origin": "ast",
       "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
+      "community_name": "provenance",
       "file_type": "code",
       "norm_label": "minlength",
       "source_file": "schemas/ecosystem.verification.schema.json",
@@ -9658,139 +10058,29 @@
       "label": "type",
       "_origin": "ast",
       "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
+      "community_name": "provenance",
       "file_type": "code",
       "norm_label": "type",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L53"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_title",
-      "label": "title",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "code",
-      "norm_label": "title",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L4"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L5"
-    },
-    {
-      "id": "ref_claimed_result",
-      "label": "claimed_result",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "concept",
-      "norm_label": "claimed_result",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "ref_claims",
-      "label": "claims",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "concept",
-      "norm_label": "claims",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "ref_generated_by",
-      "label": "generated_by",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "concept",
-      "norm_label": "generated_by",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L7"
-    },
-    {
-      "id": "ref_manifest_kind",
-      "label": "manifest_kind",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "concept",
-      "norm_label": "manifest_kind",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L7"
-    },
-    {
-      "id": "ref_projects",
-      "label": "projects",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "concept",
-      "norm_label": "projects",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L7"
-    },
-    {
-      "id": "ref_provenance",
-      "label": "provenance",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "concept",
-      "norm_label": "provenance",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L22"
-    },
-    {
       "id": "ref_recorded_at",
       "label": "recorded_at",
       "_origin": "ast",
       "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
+      "community_name": "provenance",
       "file_type": "concept",
       "norm_label": "recorded_at",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L51"
     },
     {
-      "id": "ref_repository",
-      "label": "repository",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "concept",
-      "norm_label": "repository",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "ref_schema_version",
-      "label": "schema_version",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "concept",
-      "norm_label": "schema_version",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L7"
-    },
-    {
       "id": "ref_source_commit",
       "label": "source_commit",
       "_origin": "ast",
       "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
+      "community_name": "provenance",
       "file_type": "concept",
       "norm_label": "source_commit",
       "source_file": "schemas/ecosystem.verification.schema.json",
@@ -9801,33 +10091,11 @@
       "label": "source_path",
       "_origin": "ast",
       "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
+      "community_name": "provenance",
       "file_type": "concept",
       "norm_label": "source_path",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L51"
-    },
-    {
-      "id": "ref_verification",
-      "label": "verification",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "concept",
-      "norm_label": "verification",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_json_ref_id",
-      "label": "id",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "ecosystem.verification.schema.json",
-      "file_type": "concept",
-      "norm_label": "id",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L22"
     },
     {
       "id": "sim_run_experiments",
@@ -9872,6 +10140,121 @@
       "norm_label": "fifo single-server completion times, in seconds.",
       "source_file": "sim/run_experiments.py",
       "source_location": "L44"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_claim_required",
+      "label": "required",
+      "_origin": "ast",
+      "community": 67,
+      "community_name": "required",
+      "file_type": "code",
+      "norm_label": "required",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L39"
+    },
+    {
+      "id": "ref_evidence_tier",
+      "label": "evidence_tier",
+      "_origin": "ast",
+      "community": 67,
+      "community_name": "required",
+      "file_type": "concept",
+      "norm_label": "evidence_tier",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L39"
+    },
+    {
+      "id": "ref_metric",
+      "label": "metric",
+      "_origin": "ast",
+      "community": 67,
+      "community_name": "required",
+      "file_type": "concept",
+      "norm_label": "metric",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L39"
+    },
+    {
+      "id": "ref_scope",
+      "label": "scope",
+      "_origin": "ast",
+      "community": 67,
+      "community_name": "required",
+      "file_type": "concept",
+      "norm_label": "scope",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L39"
+    },
+    {
+      "id": "ref_value",
+      "label": "value",
+      "_origin": "ast",
+      "community": 67,
+      "community_name": "required",
+      "file_type": "concept",
+      "norm_label": "value",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L39"
+    },
+    {
+      "id": "research_decisions_dec_001_memory_stratification",
+      "label": "DEC-001-MEMORY-STRATIFICATION.md",
+      "_origin": "ast",
+      "community": 68,
+      "community_name": "\ud83c\udfdb\ufe0f DECISION RECORD: DEC-001 (Memory Stratification & Retrieval Pruning)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "dec-001-memory-stratification.md",
+      "source_file": "research/decisions/DEC-001-MEMORY-STRATIFICATION.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "research_decisions_dec_001_memory_stratification_1_context_problem",
+      "label": "1. Context & Problem",
+      "_origin": "ast",
+      "community": 68,
+      "community_name": "\ud83c\udfdb\ufe0f DECISION RECORD: DEC-001 (Memory Stratification & Retrieval Pruning)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. context & problem",
+      "source_file": "research/decisions/DEC-001-MEMORY-STRATIFICATION.md",
+      "source_location": "L17"
+    },
+    {
+      "id": "research_decisions_dec_001_memory_stratification_2_decision",
+      "label": "2. Decision",
+      "_origin": "ast",
+      "community": 68,
+      "community_name": "\ud83c\udfdb\ufe0f DECISION RECORD: DEC-001 (Memory Stratification & Retrieval Pruning)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. decision",
+      "source_file": "research/decisions/DEC-001-MEMORY-STRATIFICATION.md",
+      "source_location": "L26"
+    },
+    {
+      "id": "research_decisions_dec_001_memory_stratification_3_consequences_empirical_verification",
+      "label": "3. Consequences & Empirical Verification",
+      "_origin": "ast",
+      "community": 68,
+      "community_name": "\ud83c\udfdb\ufe0f DECISION RECORD: DEC-001 (Memory Stratification & Retrieval Pruning)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. consequences & empirical verification",
+      "source_file": "research/decisions/DEC-001-MEMORY-STRATIFICATION.md",
+      "source_location": "L40"
+    },
+    {
+      "id": "research_decisions_dec_001_memory_stratification_decision_record_dec_001_memory_stratification_retrieval_pruning",
+      "label": "\ud83c\udfdb\ufe0f DECISION RECORD: DEC-001 (Memory Stratification & Retrieval Pruning)",
+      "_origin": "ast",
+      "community": 68,
+      "community_name": "\ud83c\udfdb\ufe0f DECISION RECORD: DEC-001 (Memory Stratification & Retrieval Pruning)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83c\udfdb\ufe0f decision record: dec-001 (memory stratification & retrieval pruning)",
+      "source_file": "research/decisions/DEC-001-MEMORY-STRATIFICATION.md",
+      "source_location": "L1"
     },
     {
       "id": "schemas_capability_contract_v1_category_description",
@@ -10028,61 +10411,6 @@
       "source_location": "L26"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_claims_items",
-      "label": "items",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "items",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L30"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_claims_minitems",
-      "label": "minItems",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "minitems",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L29"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_claims_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L28"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_generated_by_minlength",
-      "label": "minLength",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "minlength",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L11"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_generated_by_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L11"
-    },
-    {
       "id": "schemas_ecosystem_verification_schema_id_pattern",
       "label": "pattern",
       "_origin": "ast",
@@ -10105,28 +10433,6 @@
       "source_location": "L24"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_items_ref",
-      "label": "$ref",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "$ref",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L15"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_manifest_kind_const",
-      "label": "const",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "const",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L10"
-    },
-    {
       "id": "schemas_ecosystem_verification_schema_project_properties",
       "label": "properties",
       "_origin": "ast",
@@ -10136,50 +10442,6 @@
       "norm_label": "properties",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L23"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_projects_items",
-      "label": "items",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "items",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L15"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_projects_minitems",
-      "label": "minItems",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "minitems",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L14"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_projects_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L13"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_properties",
-      "label": "properties",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "properties",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L8"
     },
     {
       "id": "schemas_ecosystem_verification_schema_properties_claimed_result",
@@ -10193,28 +10455,6 @@
       "source_location": "L26"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_properties_claims",
-      "label": "claims",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "claims",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L27"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_properties_generated_by",
-      "label": "generated_by",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "generated_by",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L11"
-    },
-    {
       "id": "schemas_ecosystem_verification_schema_properties_id",
       "label": "id",
       "_origin": "ast",
@@ -10224,28 +10464,6 @@
       "norm_label": "id",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L24"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_properties_manifest_kind",
-      "label": "manifest_kind",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "manifest_kind",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L10"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_properties_projects",
-      "label": "projects",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "projects",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L12"
     },
     {
       "id": "schemas_ecosystem_verification_schema_properties_provenance",
@@ -10268,17 +10486,6 @@
       "norm_label": "repository",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L25"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_properties_schema_version",
-      "label": "schema_version",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "schema_version",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L9"
     },
     {
       "id": "schemas_ecosystem_verification_schema_properties_verification",
@@ -10325,17 +10532,6 @@
       "source_location": "L25"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_schema_version_const",
-      "label": "const",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "const",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L9"
-    },
-    {
       "id": "schemas_ecosystem_verification_schema_verification_ref",
       "label": "$ref",
       "_origin": "ast",
@@ -10347,17 +10543,6 @@
       "source_location": "L33"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_claim_additionalproperties",
-      "label": "additionalProperties",
-      "_origin": "ast",
-      "community": 76,
-      "community_name": "enum",
-      "file_type": "code",
-      "norm_label": "additionalproperties",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L38"
-    },
-    {
       "id": "schemas_ecosystem_verification_schema_claim_properties",
       "label": "properties",
       "_origin": "ast",
@@ -10367,39 +10552,6 @@
       "norm_label": "properties",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L40"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_claim_required",
-      "label": "required",
-      "_origin": "ast",
-      "community": 76,
-      "community_name": "enum",
-      "file_type": "code",
-      "norm_label": "required",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L39"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_claim_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 76,
-      "community_name": "enum",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L37"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_defs_claim",
-      "label": "claim",
-      "_origin": "ast",
-      "community": 76,
-      "community_name": "enum",
-      "file_type": "code",
-      "norm_label": "claim",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L36"
     },
     {
       "id": "schemas_ecosystem_verification_schema_evidence_tier_enum",
@@ -10543,50 +10695,6 @@
       "norm_label": "type",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L43"
-    },
-    {
-      "id": "ref_evidence_tier",
-      "label": "evidence_tier",
-      "_origin": "ast",
-      "community": 76,
-      "community_name": "enum",
-      "file_type": "concept",
-      "norm_label": "evidence_tier",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L39"
-    },
-    {
-      "id": "ref_metric",
-      "label": "metric",
-      "_origin": "ast",
-      "community": 76,
-      "community_name": "enum",
-      "file_type": "concept",
-      "norm_label": "metric",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L39"
-    },
-    {
-      "id": "ref_scope",
-      "label": "scope",
-      "_origin": "ast",
-      "community": 76,
-      "community_name": "enum",
-      "file_type": "concept",
-      "norm_label": "scope",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L39"
-    },
-    {
-      "id": "ref_value",
-      "label": "value",
-      "_origin": "ast",
-      "community": 76,
-      "community_name": "enum",
-      "file_type": "concept",
-      "norm_label": "value",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L39"
     },
     {
       "id": "schemas_ecosystem_verification_schema_json_ref_e0",
@@ -11722,7 +11830,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L138",
+      "source_location": "L139",
       "weight": 1.0
     },
     {
@@ -11734,7 +11842,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L347",
+      "source_location": "L349",
       "weight": 1.0
     },
     {
@@ -11746,7 +11854,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L348",
+      "source_location": "L350",
       "weight": 1.0
     },
     {
@@ -15735,6 +15843,50 @@
       "weight": 1.0
     },
     {
+      "source": "research_decisions_dec_001_memory_stratification",
+      "target": "research_decisions_dec_001_memory_stratification_decision_record_dec_001_memory_stratification_retrieval_pruning",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/decisions/DEC-001-MEMORY-STRATIFICATION.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "research_decisions_dec_001_memory_stratification_decision_record_dec_001_memory_stratification_retrieval_pruning",
+      "target": "research_decisions_dec_001_memory_stratification_1_context_problem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/decisions/DEC-001-MEMORY-STRATIFICATION.md",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "research_decisions_dec_001_memory_stratification_decision_record_dec_001_memory_stratification_retrieval_pruning",
+      "target": "research_decisions_dec_001_memory_stratification_2_decision",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/decisions/DEC-001-MEMORY-STRATIFICATION.md",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "research_decisions_dec_001_memory_stratification_decision_record_dec_001_memory_stratification_retrieval_pruning",
+      "target": "research_decisions_dec_001_memory_stratification_3_consequences_empirical_verification",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/decisions/DEC-001-MEMORY-STRATIFICATION.md",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
       "source": "research_experiments_bmk_memory_001",
       "target": "research_experiments_bmk_memory_001_research_benchmark_bmk_memory_001_memory_stratification_graph_density",
       "relation": "contains",
@@ -15753,7 +15905,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L20",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -15764,7 +15916,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L23",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -15775,7 +15927,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L33",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -15786,7 +15938,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L44",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -15797,7 +15949,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L59",
+      "source_location": "L61",
       "weight": 1.0
     },
     {
@@ -15808,7 +15960,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L69",
+      "source_location": "L71",
       "weight": 1.0
     },
     {
@@ -15819,29 +15971,73 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L96",
+      "source_location": "L98",
       "weight": 1.0
     },
     {
-      "source": "research_experiments_bmk_memory_001_research_benchmark_bmk_memory_001_memory_stratification_graph_density",
-      "target": "research_experiments_bmk_memory_001_5_falsification_acceptance_criteria",
+      "source": "research_experiments_bmk_memory_001_5_empirical_results_delta_analysis_executed_2026_09_19_commit_917c0aa1",
+      "target": "research_experiments_bmk_memory_001_5_1_pre_vs_post_stratification_comparison",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L101",
+      "source_location": "L105",
       "weight": 1.0
     },
     {
-      "source": "research_experiments_bmk_memory_001_research_benchmark_bmk_memory_001_memory_stratification_graph_density",
-      "target": "research_experiments_bmk_memory_001_6_execution_status_next_steps",
+      "source": "research_experiments_bmk_memory_001_5_empirical_results_delta_analysis_executed_2026_09_19_commit_917c0aa1",
+      "target": "research_experiments_bmk_memory_001_5_2_top_post_stratification_god_nodes_grounded_architectural_entities",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L113",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "research_experiments_bmk_memory_001_5_empirical_results_delta_analysis_executed_2026_09_19_commit_917c0aa1",
+      "target": "research_experiments_bmk_memory_001_5_3_granular_retrieval_precision_breakdown_q1_q5",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/experiments/BMK-MEMORY-001.md",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "research_experiments_bmk_memory_001_research_benchmark_bmk_memory_001_memory_stratification_graph_density",
+      "target": "research_experiments_bmk_memory_001_5_empirical_results_delta_analysis_executed_2026_09_19_commit_917c0aa1",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/experiments/BMK-MEMORY-001.md",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "research_experiments_bmk_memory_001_research_benchmark_bmk_memory_001_memory_stratification_graph_density",
+      "target": "research_experiments_bmk_memory_001_6_hypothesis_decomposition_epistemic_verdict",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/experiments/BMK-MEMORY-001.md",
+      "source_location": "L146",
+      "weight": 1.0
+    },
+    {
+      "source": "research_experiments_bmk_memory_001_research_benchmark_bmk_memory_001_memory_stratification_graph_density",
+      "target": "research_experiments_bmk_memory_001_7_artifacts_epistemic_provenance",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/experiments/BMK-MEMORY-001.md",
+      "source_location": "L163",
       "weight": 1.0
     },
     {
@@ -15852,7 +16048,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L18",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -15863,7 +16059,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L31",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -15874,7 +16070,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L57",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
@@ -15885,7 +16081,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L84",
+      "source_location": "L86",
       "weight": 1.0
     },
     {
@@ -21759,7 +21955,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L308",
+      "source_location": "L309",
       "weight": 1.0
     },
     {
@@ -21770,7 +21966,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L342",
+      "source_location": "L344",
       "weight": 1.0
     },
     {
@@ -21781,7 +21977,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L49",
+      "source_location": "L50",
       "weight": 1.0
     },
     {
@@ -21792,7 +21988,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L72",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -22951,36 +23147,36 @@
       "weight": 1.0
     },
     {
-      "source": "sim_reconciliation_engine_rationale_309",
+      "source": "sim_reconciliation_engine_rationale_310",
       "target": "sim_reconciliation_engine_audit_layer_2_behavioral",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L309",
+      "source_location": "L310",
       "weight": 1.0
     },
     {
-      "source": "sim_reconciliation_engine_rationale_50",
+      "source": "sim_reconciliation_engine_rationale_51",
       "target": "sim_reconciliation_engine_parse_simple_yaml_capabilities",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L50",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
-      "source": "sim_reconciliation_engine_rationale_73",
+      "source": "sim_reconciliation_engine_rationale_74",
       "target": "sim_reconciliation_engine_audit_layer_1_consistency",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L73",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -23895,5 +24091,5 @@
       "source_file": "README.md"
     }
   ],
-  "built_at_commit": "917c0aa1c0d16f07cb0b0726e02f31a9e7747554"
+  "built_at_commit": "8b1bf2cd1ad1afb4e42b44730babeff33768d30e"
 }

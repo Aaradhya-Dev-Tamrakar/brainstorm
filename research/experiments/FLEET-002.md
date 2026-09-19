@@ -98,8 +98,8 @@ Handles deterministic tool execution requested by the Copilot API:
 
 ## 4. Verification Checklist & Milestones
 
-- [ ] **M1 — API & Auth Reverse-Engineering:** Extract and validate Copilot chat streaming auth flow using isolated GitHub PATs.
-- [ ] **M2 — Headless Adapter Prototype:** Implement `CopilotAPIAdapter` and `SandboxedToolExecutor` in Python.
-- [ ] **M3 — Orchestrator Integration:** Register `copilot_headless_api` provider in `fleet_supervisor.py` and `worker_roles.json`.
-- [ ] **M4 — Dynamic Model & Telemetry Logging:** Capture and log `model_used` from Copilot headers to inform QA escalation triggers.
-- [ ] **M5 — Concurrent Stress Benchmark:** Run a 5-worker parallel extraction task and confirm memory stays under 100 MB RAM.
+- [x] **M1 — API & Auth Reverse-Engineering:** Extract and validate Copilot chat streaming auth flow using isolated GitHub PATs (`client/adapters/copilot_headless.py`).
+- [x] **M2 — Headless Adapter Prototype:** Implement `CopilotHeadlessAdapter` in Python with dynamic session token caching, 429 backoff, and full test suite (`tests/test_copilot_headless.py`).
+- [x] **M3 — Orchestrator Integration:** Register `copilot_headless` provider in `client/fleet_supervisor.py`, `active_fleet_3x3.json`, and `server/core/scheduler.py` cross-provider tier overflow.
+- [x] **M4 — Dynamic Model & Telemetry Logging:** Capture and log `model_used` and `tokens_used` from Copilot response headers.
+- [ ] **M5 — Concurrent Stress Benchmark:** Run a 6-worker (3 Claude CDP + 3 Copilot Headless) live workflow test.

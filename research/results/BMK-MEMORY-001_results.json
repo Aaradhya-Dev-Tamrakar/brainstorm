@@ -163,7 +163,7 @@
     "node_clutter_reduction": "VERIFIED (55.48% vs >=40% target)",
     "conversational_god_node_elimination": "VERIFIED (100% eliminated, 0 in top 10)",
     "community_consolidation": "VERIFIED (222 -> 86 communities, <100 target)",
-    "retrieval_precision_improvement": "VERIFIED (Graded P@5: 0.880-0.920 vs >=0.80 target; Strict P@5: 0.56 representing 87.5% of 0.64 ceiling; Recall@5: 0.884)",
+    "retrieval_precision_improvement": "VERIFIED (Graded P@5: 0.880 vs >=0.80 target, +131.6% relative gain over 0.38 baseline; Strict P@5: 0.56 representing 87.5% of 0.64 ceiling; Recall@5: 0.884)",
     "absolute_community_cohesion_target": "NOT_MET (0.230 observed vs >=0.45/0.50 target; +5.11x relative gain from 0.045 baseline)"
   },
   "acceptance_criteria_validation": {
@@ -184,7 +184,7 @@
     },
     "retrieval_precision_ge_80pct": {
       "target": ">= 0.80 (Graded Relevance)",
-      "observed": 0.92,
+      "observed": 0.88,
       "passed": true
     },
     "absolute_community_cohesion_ge_0_45": {

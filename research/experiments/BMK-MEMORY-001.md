@@ -126,7 +126,7 @@ To resolve ambiguity between strict set membership and semantic signal density:
 | **Conversational God Nodes** | 4 in Top 10 (`Turn 3`, `Turn 5`, etc.) | **0 in Top 10** | **100% eliminated** | ✅ PASS (0) |
 | **Target Node Recall@5 ($R@5$)** | 0.58 (2.9 / 5.0 targets found) | **0.884 (4.4 / 5.0 targets found)** | **+51.7% recall gain** | ✅ PASS ($\ge 0.80$) |
 | **Strict Target Precision@5** | 0.36 (1.8 / 5.0 targets) | **0.56 (2.8 / 5.0 targets)** | **87.5% of theoretical 0.64 ceiling** | ✅ PASS |
-| **Graded Relevance Precision@5** | 0.38 (diluted by turn chunks) | **0.880 – 0.920 (zero conversational noise)** | **+131.6% signal density gain** | ✅ PASS ($\ge 0.80$) |
+| **Graded Relevance Precision@5** | 0.38 (diluted by turn chunks) | **0.880 (zero conversational noise)** | **+131.6% signal density gain** | ✅ PASS ($\ge 0.80$) |
 
 ### 5.2 Top Post-Stratification God Nodes (Grounded Architectural Entities)
 
@@ -195,7 +195,7 @@ HYP-MEM-001 Sub-Hypothesis Breakdown:
 ├─ 1. Clutter & Node Reduction (>= 40%)          : VERIFIED (Observed: -55.48%)
 ├─ 2. Conversational God-Node Elimination (100%): VERIFIED (Observed: 0 in top 10)
 ├─ 3. Community Consolidation (< 100 clusters)  : VERIFIED (Observed: 222 -> 86)
-├─ 4. Retrieval Precision Gain (>= 0.80)        : VERIFIED (Observed: 0.92, +130%)
+├─ 4. Retrieval Precision Gain (>= 0.80)        : VERIFIED (Observed: Graded P@5 = 0.880, +131.6% over 0.38 baseline; Strict P@5 = 0.56, 87.5% of 0.64 ceiling; Recall@5 = 0.884)
 └─ 5. Absolute Community Cohesion Target (>= 0.45): NOT MET  (Observed: 0.230; +5.11x gain over 0.045)
 ```
 

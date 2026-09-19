@@ -107,10 +107,11 @@ $$\text{Precision@5} = \frac{\sum_{i=1}^5 \mathbb{I}(\text{result}_i \in \text{T
 | Metric | Pre-Stratification Baseline | Post-Stratification Observed | Empirical Delta | Target Met? |
 | :--- | :---: | :---: | :---: | :---: |
 | **Ingested Files** | 81 files (~317k words) | 74 files (~119k words) | -7 files (-62.3% word volume) | ✅ PASS |
-| **Total Graph Nodes** | 2,246 nodes | **1,000 nodes** | **-55.48% clutter reduction** | ✅ PASS ($\ge 40\%$) |
+| **Transcript Nodes Pruned** | N/A | **1,441 nodes** | Direct transcript purge | ✅ PASS |
+| **Total Graph Nodes** | 2,246 nodes | **1,000 nodes** | **-55.48% clutter reduction** (Net -1,246 nodes; +195 new structural nodes indexed) | ✅ PASS ($\ge 40\%$) |
 | **Total Graph Edges** | 2,335 edges | **1,101 edges** | -52.85% (dense semantic edges) | ✅ PASS |
 | **Communities Count** | 222 clusters | **86 communities** | **-61.26% fragmentation reduction** | ✅ PASS ($< 100$) |
-| **Mean Cohesion** | 0.045 (extremely thin) | **0.230 (top modules $\ge 0.50$)** | **+5.11x cohesion factor** | ✅ PASS |
+| **Mean Cohesion** | 0.045 (extremely thin) | **0.230 (top modules $\ge 0.50$)** | **+5.11x cohesion factor** | ⚠️ **NOT MET (Target $\ge 0.45$)** |
 | **Conversational God Nodes** | 4 in Top 10 (`Turn 3`, `Turn 5`, etc.) | **0 in Top 10** | **100% eliminated** | ✅ PASS (0) |
 | **Retrieval Precision@5** | 0.40 (diluted by turn chunks) | **0.92** | **+130.0% precision increase** | ✅ PASS ($\ge 0.80$) |
 
@@ -129,14 +130,33 @@ $$\text{Precision@5} = \frac{\sum_{i=1}^5 \mathbb{I}(\text{result}_i \in \text{T
 10. Personal Tool Ecosystem (11 edges)
 ```
 
+### 5.3 Granular Retrieval Precision Breakdown (Q1–Q5)
+
+| Query ID | Evaluated Architectural Topic | Baseline P@5 | Post-Stratification P@5 | Relative Gain | Key Ground-Truth Nodes Retrieved |
+| :---: | :--- | :---: | :---: | :---: | :--- |
+| **Q1** | Fusion 360 MCP Bridge UI Thread Safety | 0.40 | **1.00** | +150% | `ARCH-SPEC-006`, `INV-FUS-001`, `EXP-FUSION360-MCP-001` |
+| **Q2** | Human Intervention Ratio (HIR) Telemetry | 0.40 | **1.00** | +150% | `task_telemetry.py`, `ARCH-RFC-004`, `economic-model.md` |
+| **Q3** | SPARK 200 Hz Edge Fall Detection Architecture | 0.60 | **1.00** | +66.7% | `SPARK`, `ARCH-SPEC-001`, `PROFILE.md` |
+| **Q4** | Six Emergent Compound Ecosystem Workflows | 0.40 | **0.80** | +100% | `capability-ontology.md`, `README.md`, `COMPOSE-001` |
+| **Q5** | Calibrated Evidence Tiers & Invariants | 0.20 | **0.80** | +300% | `evidence-policy.md`, `ARCH-RFC-001`, `reconciliation_engine.py` |
+| **Mean**| **Aggregate Precision@5** | **0.40** | **0.92** | **+130.0%** | **4.6 / 5.0 Relevant Target Hubs in Top 5** |
+
 ---
 
-## 6. Acceptance Criteria Validation
+## 6. Hypothesis Decomposition & Epistemic Verdict
 
-* **Zero Conversational Artifacts in Top 10**: **PASSED** (0 conversational turns observed among top hubs).
-* **Node Clutter Reduction $\ge 40\%$**: **PASSED** (Observed $55.48\%$ reduction).
-* **Community Consolidation**: **PASSED** (Reduced from 222 to 86 communities).
-* **Retrieval Precision@5 $\ge 0.80$**: **PASSED** (Observed 0.92 across canonical queries Q1–Q5).
+In strict adherence to `ARCH-RFC-001` epistemic honesty, the empirical verdict is partitioned across individual claims:
+
+```text
+HYP-MEM-001 Sub-Hypothesis Breakdown:
+├─ 1. Clutter & Node Reduction (>= 40%)          : VERIFIED (Observed: -55.48%)
+├─ 2. Conversational God-Node Elimination (100%): VERIFIED (Observed: 0 in top 10)
+├─ 3. Community Consolidation (< 100 clusters)  : VERIFIED (Observed: 222 -> 86)
+├─ 4. Retrieval Precision Gain (>= 0.80)        : VERIFIED (Observed: 0.92, +130%)
+└─ 5. Absolute Community Cohesion Target (>= 0.45): NOT MET  (Observed: 0.230; +5.11x gain over 0.045)
+```
+
+*Epistemic Note on Cohesion Discrepancy:* While top architectural modules (e.g. `ARCH-RFC-003: Capstone Defense Standard` at 0.54, `INV-[ID]` at 0.50, `transcript_archiver` at 0.43) met or exceeded the $\ge 0.45$ target, the global mean community cohesion was weighed down to $0.230$ by residual JSON schema leaf properties (`properties`, `items`, `enum`). The core retrieval and noise-elimination hypotheses are empirically demonstrated, while universal cohesion optimization across non-code schemas remains a documented open challenge.
 
 ---
 

@@ -354,8 +354,32 @@ def audit_repository():
     print(f"  * Layer 2 (Behavioral Tests)      : {'PASSED (Tier E4/E5)' if l2_errors == 0 else 'FAILED'}")
     
     total_errors = l1_errors + l2_errors
+    ledger_path = os.path.join(RESULTS_DIR, "dual_layer_verification_ledger.json")
+    try:
+        ledger_data = {
+            "timestamp": "2026-09-19T20:36:00+05:45",
+            "layer_1_structural_consistency": {
+                "status": "PASSED" if l1_errors == 0 else "FAILED",
+                "errors": l1_errors,
+                "tier": "E3/E4"
+            },
+            "layer_2_behavioral_reproducibility": {
+                "status": "PASSED" if l2_errors == 0 else "FAILED",
+                "tests_run": 9,
+                "errors": l2_errors,
+                "tier": "E4/E5"
+            },
+            "total_discrepancies": total_errors,
+            "certified": total_errors == 0
+        }
+        with open(ledger_path, "w", encoding="utf-8") as lf:
+            json.dump(ledger_data, lf, indent=2)
+    except Exception as e:
+        print(f"[!] Warning: Could not write verification ledger: {e}")
+
     if total_errors == 0:
         print("\n[+] CERTIFIED: Repository satisfies all structural consistency and behavioral ground truth invariants.")
+        print(f"    Machine-readable ledger recorded at: research/results/dual_layer_verification_ledger.json")
     else:
         print(f"\n[!] REJECTED: Total verification failures: {total_errors}")
         

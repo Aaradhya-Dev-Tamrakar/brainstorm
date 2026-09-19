@@ -39,7 +39,8 @@ The 2026-09-19 external workflow audit rated personal R&D workflow at **8.7/10**
 
 ## 3. Consequences & Empirical Verification
 
-- **Node Count:** Reduced by **55.5%** (from 2,246 to 1,000 nodes).
+- **Transcript Nodes Pruned:** **1,441** conversational nodes purged from the live graph extraction.
+- **Net Node Count:** Reduced by **55.5%** (from 2,246 to 1,000 nodes; net reduction of 1,246 nodes, accounting for 195 newly indexed structural nodes in decision, benchmark, and schema surfaces).
 - **Edge Count:** Reduced by **52.9%** (from 2,335 to 1,101 dense semantic edges).
 - **Communities:** Consolidated by **61.3%** (from 222 fragmented clusters to 86 cohesive modules).
 - **God Nodes:** 100% of conversational markers (`Turn X`, `Assistant`, `User`) were eliminated. Top hubs are now architectural registers (`Granular Claims Audit`, `Quantitative Claims`, `ARCH-RFC-003`, `reconciliation_engine`).

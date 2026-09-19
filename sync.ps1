@@ -115,7 +115,8 @@ $KnownToolRepos = @(
     "F:\AaradhyaDT\react-workshop-ieeekecktm",
     "F:\Aaradhya-Dev-Tamrakar\github-pilot",
     "F:\Aaradhya-Dev-Tamrakar\nepali-ocr-ai",
-    "F:\Aaradhya-Dev-Tamrakar\google-classroom-mcp"
+    "F:\Aaradhya-Dev-Tamrakar\google-classroom-mcp",
+    "F:\Aaradhya-Dev-Tamrakar\fusion360-mcp"
 )
 
 function Write-Status {

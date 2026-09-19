@@ -220,38 +220,64 @@ def audit_layer_1_consistency():
                         "detail": f"Claimed output artifact 'research/results/{pdf_name}' does not exist on disk or is empty."
                     })
 
+    # Dynamic Physical Research Artifact Enumeration & Validation
+    arch_dir = os.path.join(RESEARCH_DIR, "architectures")
+    exp_dir = os.path.join(RESEARCH_DIR, "experiments")
+    inv_dir = os.path.join(RESEARCH_DIR, "invariants")
+
+    def count_valid_md_artifacts(dir_path):
+        if not os.path.exists(dir_path):
+            return []
+        return [
+            f for f in os.listdir(dir_path)
+            if f.endswith(".md") and f != "README.md" and not f.startswith("INV-template") and not f.startswith(".")
+        ]
+
+    arch_artifacts = count_valid_md_artifacts(arch_dir)
+    exp_artifacts = count_valid_md_artifacts(exp_dir)
+    inv_artifacts = count_valid_md_artifacts(inv_dir)
+    total_physical_artifacts = len(arch_artifacts) + len(exp_artifacts) + len(inv_artifacts)
+    canonical_artifact_count = 24
+
+    if total_physical_artifacts != canonical_artifact_count:
+        discrepancies.append({
+            "type": "RESEARCH_ARTIFACT_COUNT_DRIFT",
+            "file": "research/",
+            "detail": f"Expected {canonical_artifact_count} physical research artifacts, but enumerated {total_physical_artifacts} on disk (Arch: {len(arch_artifacts)}, Exp: {len(exp_artifacts)}, Inv: {len(inv_artifacts)})."
+        })
+
     # Validate ontology, README, and audit research artifact count consistency
     readme_file = os.path.join(BRAINSTORM_ROOT, "README.md")
     if os.path.exists(readme_file):
         with open(readme_file, "r", encoding="utf-8") as rf:
             readme_text = rf.read()
-        if "21 Research Specs & Experiments" not in readme_text:
+        if f"{canonical_artifact_count} Research Specs & Experiments" not in readme_text:
             discrepancies.append({
                 "type": "README_TAXONOMY_ERROR",
                 "file": "README.md",
-                "detail": "README.md missing canonical '21 Research Specs & Experiments' inventory declaration."
+                "detail": f"README.md missing canonical '{canonical_artifact_count} Research Specs & Experiments' inventory declaration."
             })
 
     ontology_file = os.path.join(SCHEMAS_DIR, "capability-ontology.md")
     if os.path.exists(ontology_file):
         with open(ontology_file, "r", encoding="utf-8") as of:
             ont_text = of.read()
-        if "21" not in ont_text or "17" not in ont_text or "6" not in ont_text:
+        if "21" not in ont_text or "17" not in ont_text or "6" not in ont_text or str(canonical_artifact_count) not in ont_text:
             discrepancies.append({
                 "type": "ONTOLOGY_TAXONOMY_ERROR",
                 "file": "schemas/capability-ontology.md",
-                "detail": "Ontology missing reconciled counts (21 modules, 17 computational engines, 6 workflows)."
+                "detail": f"Ontology missing reconciled counts (21 modules, 17 computational engines, 6 workflows, {canonical_artifact_count} research artifacts)."
             })
 
     audit_file = os.path.join(REPORT_DIR, "repository-audit.md")
     if os.path.exists(audit_file):
         with open(audit_file, "r", encoding="utf-8") as af:
             audit_text = af.read()
-        if "21 Research Artifacts" not in audit_text:
+        if f"{canonical_artifact_count} Research Artifacts" not in audit_text:
             discrepancies.append({
                 "type": "AUDIT_TAXONOMY_ERROR",
                 "file": "report/repository-audit.md",
-                "detail": "repository-audit.md missing canonical '21 Research Artifacts' declaration."
+                "detail": f"repository-audit.md missing canonical '{canonical_artifact_count} Research Artifacts' declaration."
             })
 
     # Validate economic model invariants

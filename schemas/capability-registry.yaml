@@ -455,3 +455,93 @@ capabilities:
     confidence: 0.96
     last_verified: "2026-09-19"
 
+  - id: "fusion360-mcp"
+    name: "Fusion 360 MCP Bridge"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\fusion360-mcp"
+    category: "ACTUATION_CAD"
+    status: "IMPLEMENTED"
+    description: "Zero-dependency Model Context Protocol (MCP) server built as a native Autodesk Fusion 360 Python Add-In running thread-safe programmatic CAD operations via CustomEvent."
+    inputs:
+      - "Dynamic Python CAD scripts (adsk.core, adsk.fusion)"
+      - "Geometric solid primitive parameters (sphere, box, cylinder)"
+      - "Viewport canvas dimension specifications"
+    outputs:
+      - "CAD geometry modification confirmations"
+      - "Model hierarchy and BRep body trees"
+      - "Anti-aliased base64 viewport screenshots"
+    interfaces:
+      - "MCP (HTTP JSON-RPC on port 9876)"
+      - "Python Add-In (Fusion 360 embedded runtime)"
+    dependencies:
+      - "Autodesk Fusion 360"
+      - "Python 3.10 standard library"
+    evidence: "E3"
+    benchmarks: "Dispatches CAD operations to main UI thread without freezing application (INV-FUS-001)"
+    verification: "Live HTTP /health and /mcp tool execution test against Fusion 360 session"
+    maintenance_cost: "1 hour/month"
+    development_hours: 12
+    confidence: 0.95
+    last_verified: "2026-09-19"
+
+  - id: "md2pdf-desktop"
+    name: "md2pdf-desktop & MCP"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\md2pdf-desktop"
+    category: "COMPUTATIONAL_ENGINE"
+    status: "IMPLEMENTED"
+    description: "Publication-grade Markdown to PDF rendering pipeline with LaTeX mathematical typesetting, ASCII table reconstruction, colored callout boxes, Tkinter GUI, and FastMCP server."
+    inputs:
+      - "Markdown text or .md file path"
+      - "Rendering mode: simple, latex, or auto"
+      - "Destination PDF file path"
+    outputs:
+      - "Typeset vector PDF document"
+      - "Toolchain availability audit"
+      - "Optimal rendering mode recommendation"
+    interfaces:
+      - "FastMCP (stdio JSON-RPC)"
+      - "Tkinter Desktop GUI"
+      - "Python CLI"
+    dependencies:
+      - "Python 3.10+"
+      - "pandoc"
+      - "pdflatex (TeX Live / MiKTeX)"
+      - "wkhtmltopdf"
+      - "mcp[cli]"
+    evidence: "E3"
+    benchmarks: "Zero margin overflow with fvextra, 100% Unicode math translation"
+    verification: "Automated test suite across simple and LaTeX conversion modes"
+    maintenance_cost: "1 hour/month"
+    development_hours: 16
+    confidence: 0.95
+    last_verified: "2026-09-19"
+
+  - id: "localsend-mcp"
+    name: "LocalSend MCP Server"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\localsend-mcp"
+    category: "INGESTION_ACTUATION"
+    status: "IMPLEMENTED"
+    description: "Zero-cloud local P2P file, note, and clipboard transfer across LAN/Wi-Fi devices using LocalSend v2 protocol, in-process X.509 mutual TLS, and persistent favoriting listener."
+    inputs:
+      - "Target peer alias or local IP"
+      - "File, directory, or text payload"
+      - "Optional device PIN"
+    outputs:
+      - "Mutual TLS transfer status & session ID"
+      - "Discovered LAN peer registry"
+      - "Incoming files delivered to download directory"
+    interfaces:
+      - "MCP (stdio JSON-RPC)"
+      - "LocalSend REST v2.1 (HTTP/HTTPS on port 53318)"
+      - "UDP Multicast (224.0.0.167:53317)"
+    dependencies:
+      - "Node.js v22+"
+      - "@modelcontextprotocol/sdk"
+      - "Node.js standard crypto (in-process ASN.1 DER X.509)"
+    evidence: "E3"
+    benchmarks: "Bidirectional transfer verified with mobile phone V2029 (Vivo) and desktop SFG16 over local Wi-Fi"
+    verification: "End-to-end send and receive loopback & physical device tests"
+    maintenance_cost: "1 hour/month"
+    development_hours: 8
+    confidence: 0.98
+    last_verified: "2026-09-19"
+

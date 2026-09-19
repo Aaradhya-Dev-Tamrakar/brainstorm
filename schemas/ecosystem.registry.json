@@ -29,14 +29,15 @@
     },
     {
       "index": 2,
-      "id": "Autodesk-Fusion-360-MCP-Server",
+      "id": "fusion360-mcp",
       "branch": "Autodesk-Fusion-360-MCP-Server",
-      "name": "Autodesk Fusion 360 MCP",
+      "name": "Fusion 360 MCP Bridge",
       "category": "computational_engine",
-      "tech_stack": "Python, Fusion 360 API, MCP",
+      "tech_stack": "Python 3.10 (Embedded), Autodesk Fusion API, CustomEvent, MCP (HTTP)",
       "execution_context": "Local Desktop",
-      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\Autodesk-Fusion-360-MCP-Server",
-      "core_superpower": "Conversational 3D CAD, parametric modeling automation via AI / MCP"
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\fusion360-mcp",
+      "core_superpower": "Conversational 3D CAD, zero-dependency parametric modeling automation and viewport rendering via native Fusion 360 Add-In",
+      "contract_ref": "schemas/examples/fusion360-mcp.contract.json"
     },
     {
       "index": 3,
@@ -119,12 +120,13 @@
       "index": 10,
       "id": "md2pdf-desktop",
       "branch": "md2pdf-desktop",
-      "name": "md2pdf-desktop",
+      "name": "md2pdf-desktop & MCP",
       "category": "computational_engine",
-      "tech_stack": "Python, Tkinter, Pandoc, wkhtmltopdf",
-      "execution_context": "Local Desktop",
+      "tech_stack": "Python 3.10+, Tkinter, Pandoc, LaTeX (pdflatex), FastMCP",
+      "execution_context": "Local Desktop / Fleet MCP",
       "local_path": "F:\\Aaradhya-Dev-Tamrakar\\md2pdf-desktop",
-      "core_superpower": "Publication-quality Markdown-to-PDF rendering pipeline"
+      "core_superpower": "Publication-quality Markdown-to-PDF rendering pipeline with native math, styled callout boxes, and FastMCP server",
+      "contract_ref": "schemas/examples/md2pdf-desktop.contract.json"
     },
     {
       "index": 11,

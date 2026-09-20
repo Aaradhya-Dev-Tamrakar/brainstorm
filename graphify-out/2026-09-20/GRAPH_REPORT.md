@@ -1,16 +1,16 @@
-# Graph Report - brainstorm  (2026-09-20)
+# Graph Report - brainstorm  (2026-09-19)
 
 ## Corpus Check
-- 81 files · ~127,988 words
+- 78 files · ~122,667 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1070 nodes · 1176 edges · 96 communities (87 shown, 8 thin omitted)
+- 1022 nodes · 1121 edges · 88 communities (79 shown, 8 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.88)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `98c40422`
+- Built from commit: `543b756a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -19,8 +19,8 @@
 - properties
 - properties
 - AI-Constraint-Solver.contract.json
-- statistics
-- ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap
+- ecosystem.registry.json
+- ARCH-RFC-003: Capstone Defense Standard
 - capability.contract.v1.json
 - enum
 - enum
@@ -64,29 +64,21 @@
 - ARCH-RFC-006: Public/Private Information Boundary & Security Architecture
 - Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet)
 - pass_rate_percent
-- provenance
-- Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19)
+- timeout_ms
+- benchmark_id
 - completion_tokens
 - evaluated_at
 - latency_seconds
-- 1. The Core Invariant Statements
+- prompt_tokens
 - rework_count
 - tokens_total
 - ecosystem.verification.schema.json
-- claims
+- inputs
 - verification
-- properties
-- required
-- $defs
 - nepali-ocr-ai.contract.json
-- model_benchmark.schema.json
 - run_experiments.py
-- required
 - 🏛️ DECISION RECORD: DEC-001 (Memory Stratification & Retrieval Pruning)
-- STRANGLER-IPU
 - properties
-- description
-- deterministic
 - enum
 - enum
 - enum
@@ -109,31 +101,31 @@
 - 2026-09-19 — Daily Log
 - {{date:YYYY-MM-DD}} — Daily Log
 - <% tp.date.now("YYYY-MM-DD") %> — Meeting: <% tp.file.title %>
-- ARCH-RFC-003: Capstone Defense Standard
+- Research Architectures Hub
 
 ## God Nodes (most connected - your core abstractions)
 1. `2. Granular Claims Audit Register` - 18 edges
-2. `2. Core Architectural & Systemic Limitations` - 17 edges
-3. `2. Quantitative Claims Register` - 14 edges
-4. `2. Key Frameworks & Architecture Covered` - 13 edges
+2. `2. Quantitative Claims Register` - 14 edges
+3. `2. Key Frameworks & Architecture Covered` - 13 edges
+4. `2. Core Architectural & Systemic Limitations` - 12 edges
 5. `ARCH-RFC-003: Capstone Defense Standard` - 12 edges
 6. `build_result()` - 11 edges
-7. `ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap` - 11 edges
-8. `🔄 EXPERIMENT LOG: EXP-DRIVE-SYNC-001 (GitHub → Google Drive → NotebookLM Continuous Sync Bridge)` - 11 edges
-9. `4. Step-by-Step Implementation Timeline` - 11 edges
-10. `Aaradhya Dev Tamrakar (ADT)` - 11 edges
+7. `🔄 EXPERIMENT LOG: EXP-DRIVE-SYNC-001 (GitHub → Google Drive → NotebookLM Continuous Sync Bridge)` - 11 edges
+8. `4. Step-by-Step Implementation Timeline` - 11 edges
+9. `Aaradhya Dev Tamrakar (ADT)` - 11 edges
+10. `Personal Tool Ecosystem` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Personal Tool Ecosystem` --references--> `Canonical Capability Registry`  [EXTRACTED]
-  README.md → schemas/capability-registry.yaml
 - `Aaradhya Dev Tamrakar (ADT)` --references--> `ARCH-SPEC-001: ECIE Systems Architect Paradigm`  [EXTRACTED]
   PROFILE.md → research/architectures/ARCH-SPEC-001-ECIE-COMPUTE-MEMORY.md
 - `Aaradhya Dev Tamrakar (ADT)` --references--> `ARCH-SPEC-002: Ingestion Processing Unit (IPU)`  [EXTRACTED]
   PROFILE.md → research/architectures/ARCH-SPEC-002-INGESTION-PROCESSING-UNIT.md
-- `Aaradhya Dev Tamrakar (ADT)` --references--> `Experiment FLEET-001`  [EXTRACTED]
-  PROFILE.md → research/experiments/FLEET-001.md
 - `Aaradhya Dev Tamrakar (ADT)` --references--> `SPARK Wearable Gateway`  [EXTRACTED]
   PROFILE.md → schemas/capability-registry.yaml
+- `Aaradhya Dev Tamrakar (ADT)` --references--> `STRANGLER-IPU`  [EXTRACTED]
+  PROFILE.md → schemas/capability-registry.yaml
+- `STRANGLER-IPU` --implements--> `ARCH-SPEC-002 (IPU)`  [INFERRED]
+  schemas/capability-registry.yaml → research/architectures/README.md
 
 ## Import Cycles
 - None detected.
@@ -142,15 +134,15 @@
 - **4-Tier Jarvis Capability Mesh** — tool_super_nlm, tool_spark, tool_claude_fleet, tool_bias_aperture, tool_strangler_ipu [EXTRACTED 1.00]
 - **Adversarial Invariant Assurance Flow** — research_hypotheses_hyp_001, research_hypotheses_hyp_002, research_experiments_fleet_001 [INFERRED 0.80]
 
-## Communities (96 total, 8 thin omitted)
+## Communities (88 total, 8 thin omitted)
 
 ### Community 0 - "properties"
 Cohesion: 0.05
 Nodes (41): type, description, items, minItems, type, $ref, format, type (+33 more)
 
 ### Community 1 - "properties"
-Cohesion: 0.18
-Nodes (11): properties, description, type, description, type, counterexample_schema, inputs, timeout_ms (+3 more)
+Cohesion: 0.20
+Nodes (10): properties, description, type, description, type, description, type, counterexample_schema (+2 more)
 
 ### Community 2 - "properties"
 Cohesion: 0.06
@@ -160,13 +152,13 @@ Nodes (32): http, sse, stdio, stream, transport, type, items, type (+24 more)
 Cohesion: 0.11
 Nodes (18): solver.mcp_server, capabilities, -m, location, mcp_endpoint, args, command, transport (+10 more)
 
-### Community 4 - "statistics"
+### Community 4 - "ecosystem.registry.json"
 Cohesion: 0.12
-Nodes (16): modules, name, orchestration_root, branch, local_path, repository, role, $schema (+8 more)
+Nodes (15): modules, name, orchestration_root, branch, local_path, repository, role, $schema (+7 more)
 
-### Community 5 - "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap"
-Cohesion: 0.10
-Nodes (20): 1. Executive Summary, 2.1 The Engineering Bottleneck, 2.2 Why AEC is the Perfect Beachhead, 2. Market Opportunity & Problem Statement, 3.1 Live Repository Fleet (100% Passing Tests), 3. Product Architecture & Fleet Inventory, 4. The 4 Universal Engineering Driver Patterns, 5.1 Pricing Strategy & Packages (+12 more)
+### Community 5 - "ARCH-RFC-003: Capstone Defense Standard"
+Cohesion: 0.54
+Nodes (5): ARCH-RFC-003: Capstone Defense Standard, ARCH-SPEC-001: ECIE Systems Architect Paradigm, ARCH-SPEC-002: Ingestion Processing Unit (IPU), EXP-001: IPU Breakeven Sweep Protocol, INV-MEM-001: Memory Invariants
 
 ### Community 6 - "capability.contract.v1.json"
 Cohesion: 0.08
@@ -181,8 +173,8 @@ Cohesion: 0.17
 Nodes (12): audit, execute, find_counterexample, maximize, minimize, synthesize, transform, verify_invariant (+4 more)
 
 ### Community 9 - "sync.ps1"
-Cohesion: 0.30
-Nodes (9): Ensure-RemoteConfigured(), Get-EcosystemToolRepos(), Invoke-CrossSync(), Provision-NewTool(), Switch-ToBranch(), Write-Fail(), Write-Notice(), Write-Status() (+1 more)
+Cohesion: 0.32
+Nodes (7): Ensure-RemoteConfigured(), Provision-NewTool(), Switch-ToBranch(), Write-Fail(), Write-Notice(), Write-Status(), Write-Success()
 
 ### Community 10 - "Experiment Log: INV-[ID]"
 Cohesion: 0.50
@@ -221,16 +213,16 @@ Cohesion: 0.43
 Nodes (6): evaluate_significance(), export_verbatim(), find_latest_transcript_path(), main(), transcript_archiver.py ---------------------- Deterministic utility to identify…, Evaluates whether a transcript meets the criteria for permanent archival.…
 
 ### Community 19 - "required"
-Cohesion: 0.20
-Nodes (10): benchmark_id, evaluated_at, human_intervention_minutes, model_id, pass_rate_percent, provider, rework_count, task_class (+2 more)
+Cohesion: 0.12
+Nodes (16): benchmark_id, evaluated_at, human_intervention_minutes, model_id, pass_rate_percent, provider, rework_count, task_class (+8 more)
 
 ### Community 20 - "2. Granular Claims Audit Register"
 Cohesion: 0.09
 Nodes (22): 1. Executive Summary, 2. Granular Claims Audit Register, 3. Corrective Actions Summary, Comprehensive Repository Epistemic & Claims Audit, Epistemic Claim Type Distribution, Item 01: Hardware Interrupt Gating & Microcontroller Fall Detection, Item 02: Fall Detection Model Footprint & Accuracy, Item 03: STRANGLER-IPU 4.12x Tail-Latency Reduction & 68% Contention Relief (+14 more)
 
 ### Community 21 - "reconciliation_engine.py"
-Cohesion: 0.23
-Nodes (12): audit_layer_1_consistency(), audit_layer_2_behavioral(), audit_repository(), auto_reconcile_counts(), get_physical_research_artifacts(), parse_simple_yaml_capabilities(), reconciliation_engine.py ------------------------ Two-Layer Deterministic…, Layer 1: Structural consistency, schemas, metadata, links, and economic… (+4 more)
+Cohesion: 0.31
+Nodes (8): audit_layer_1_consistency(), audit_layer_2_behavioral(), audit_repository(), parse_simple_yaml_capabilities(), reconciliation_engine.py ------------------------ Two-Layer Deterministic…, Layer 2: Behavioral verification & simulation test suite execution., Fallback zero-dependency YAML parser for capability-registry.yaml., Layer 1: Structural consistency, schemas, metadata, links, and economic…
 
 ### Community 24 - "🧠 RESEARCH BENCHMARK: BMK-MEMORY-001 (Memory Stratification & Graph Density)"
 Cohesion: 0.09
@@ -301,8 +293,8 @@ Cohesion: 0.25
 Nodes (7): 1. Objective & Hypothesis, 2. Method, 3. Results, 4. Claim Reconciliation, 5. Limitations, 6. Provenance, 🏛️ RESEARCH EXPERIMENT: EXP-CLASSROOM-MCP-001 (Live Read-Only Verification of the Google Classroom MCP Server)
 
 ### Community 45 - "properties"
-Cohesion: 0.14
-Nodes (14): pattern, type, minimum, type, type, type, minimum, type (+6 more)
+Cohesion: 0.25
+Nodes (8): minimum, type, type, type, properties, human_intervention_minutes, model_id, notes
 
 ### Community 46 - "ARCH-RFC-006: Public/Private Information Boundary & Security Architecture"
 Cohesion: 0.33
@@ -310,19 +302,19 @@ Nodes (5): 1. Executive Summary & Problem Statement, 2. The Two-Plane Security P
 
 ### Community 47 - "Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet)"
 Cohesion: 0.20
-Nodes (9): 1. Problem & Architectural Rationale, 2. Multi-Tier Hybrid Fleet Topology, 3.1. `CopilotHeadlessAdapter` (Completed Operational Scope: M1–M4), 3.2. Sandboxed Local Tool Executor (Phase 2 Target Specification: M6), 3.3. Memory & Resource Footprint Benchmark Comparison, 3. Specification & Component Contracts, 4. Verification Checklist & Milestones, Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet) (+1 more)
+Nodes (9): 1. Problem & Architectural Rationale, 2. Multi-Tier Hybrid Fleet Topology, 3.1. `CopilotAPIAdapter`, 3.2. Sandboxed Local Tool Executor, 3.3. Memory & Resource Footprint Benchmark Comparison, 3. Specification & Component Contracts, 4. Verification Checklist & Milestones, Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet) (+1 more)
 
 ### Community 48 - "pass_rate_percent"
 Cohesion: 0.50
 Nodes (4): maximum, minimum, type, pass_rate_percent
 
-### Community 49 - "provenance"
-Cohesion: 0.12
-Nodes (17): recorded_at, source_commit, source_path, provenance, recorded_at, source_commit, source_path, additionalProperties (+9 more)
+### Community 49 - "timeout_ms"
+Cohesion: 0.50
+Nodes (4): timeout_ms, description, minimum, type
 
-### Community 50 - "Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19)"
-Cohesion: 0.18
-Nodes (9): 1. Executive Summary, 2. Granular Reconciliation Matrix, 3. Epistemic Certification, Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19), Experiment FLEET-001, Hypothesis HYP-002, Canonical Capability Registry, Claude Worker Fleet (v2) (+1 more)
+### Community 50 - "benchmark_id"
+Cohesion: 0.67
+Nodes (3): pattern, type, benchmark_id
 
 ### Community 51 - "completion_tokens"
 Cohesion: 0.67
@@ -336,9 +328,9 @@ Nodes (3): format, type, evaluated_at
 Cohesion: 0.67
 Nodes (3): minimum, type, latency_seconds
 
-### Community 55 - "1. The Core Invariant Statements"
-Cohesion: 0.22
-Nodes (9): 1.1 Invariant A: Closed-Loop Worker Dispatch (No Orphaned Leases), 1.2 Invariant B: Strict Separation of Real Execution and Simulation, 1.3 Invariant C: Telemetry Truthfulness & Quota Headroom, 1.4 Invariant D: Atomic Checkpoint & DAG Advancement, 1.5 Invariant E: QA Authority & Claim-Token Isolation for State Transitions, 1. The Core Invariant Statements, 2. Mathematical Formalization, 3. Verification & Compliance Gate (+1 more)
+### Community 55 - "prompt_tokens"
+Cohesion: 0.67
+Nodes (3): minimum, type, prompt_tokens
 
 ### Community 56 - "rework_count"
 Cohesion: 0.67
@@ -349,68 +341,36 @@ Cohesion: 0.67
 Nodes (3): tokens_total, minimum, type
 
 ### Community 58 - "ecosystem.verification.schema.json"
-Cohesion: 0.18
-Nodes (10): generated_by, manifest_kind, projects, schema_version, additionalProperties, $id, required, $schema (+2 more)
+Cohesion: 0.07
+Nodes (27): generated_by, manifest_kind, projects, schema_version, additionalProperties, items, minItems, type (+19 more)
 
-### Community 59 - "claims"
-Cohesion: 0.22
-Nodes (9): items, minItems, type, $ref, items, minItems, type, claims (+1 more)
+### Community 59 - "inputs"
+Cohesion: 0.67
+Nodes (3): description, type, inputs
 
 ### Community 60 - "verification"
 Cohesion: 0.09
 Nodes (22): claimed, method, verified, warn, minLength, type, verification, type (+14 more)
 
-### Community 61 - "properties"
-Cohesion: 0.25
-Nodes (8): minLength, type, const, properties, generated_by, manifest_kind, schema_version, const
-
-### Community 62 - "required"
-Cohesion: 0.29
-Nodes (7): claimed_result, claims, provenance, repository, verification, id, required
-
-### Community 63 - "$defs"
-Cohesion: 0.29
-Nodes (7): additionalProperties, type, $defs, claim, project, additionalProperties, type
-
 ### Community 64 - "nepali-ocr-ai.contract.json"
 Cohesion: 0.11
 Nodes (18): nepali_ocr_ai.mcp_server, capabilities, -m, location, mcp_endpoint, args, command, transport (+10 more)
-
-### Community 65 - "model_benchmark.schema.json"
-Cohesion: 0.29
-Nodes (6): additionalProperties, description, $id, $schema, title, type
 
 ### Community 66 - "run_experiments.py"
 Cohesion: 0.21
 Nodes (15): build_result(), _distribution(), ExperimentConfig, _git_commit(), main(), _percentile(), Deterministic, zero-dependency STRANGLER-IPU pipeline experiments. This is a…, FIFO single-server completion times, in seconds. (+7 more)
 
-### Community 67 - "required"
-Cohesion: 0.40
-Nodes (5): evidence_tier, metric, scope, value, required
-
 ### Community 68 - "🏛️ DECISION RECORD: DEC-001 (Memory Stratification & Retrieval Pruning)"
 Cohesion: 0.40
 Nodes (4): 1. Context & Problem, 2. Decision, 3. Consequences & Empirical Verification, 🏛️ DECISION RECORD: DEC-001 (Memory Stratification & Retrieval Pruning)
 
-### Community 69 - "STRANGLER-IPU"
-Cohesion: 0.67
-Nodes (3): ARCH-SPEC-002 (IPU), GPU & RAM Architecture Spec, STRANGLER-IPU
-
 ### Community 70 - "properties"
-Cohesion: 0.14
-Nodes (14): minLength, type, pattern, type, properties, claimed_result, id, provenance (+6 more)
-
-### Community 71 - "description"
-Cohesion: 0.67
-Nodes (3): description, type, description
-
-### Community 72 - "deterministic"
-Cohesion: 0.67
-Nodes (3): description, type, deterministic
+Cohesion: 0.08
+Nodes (24): claimed_result, claims, provenance, repository, verification, minLength, type, project (+16 more)
 
 ### Community 76 - "enum"
-Cohesion: 0.10
-Nodes (20): properties, enum, type, E0, E1, E2, E3, E4 (+12 more)
+Cohesion: 0.04
+Nodes (46): evidence_tier, metric, recorded_at, scope, source_commit, source_path, value, additionalProperties (+38 more)
 
 ### Community 83 - "enum"
 Cohesion: 0.22
@@ -441,8 +401,8 @@ Cohesion: 0.67
 Nodes (3): side_effects, description, type
 
 ### Community 169 - "2. Core Architectural & Systemic Limitations"
-Cohesion: 0.10
-Nodes (19): 1. Motivation & Policy, 2.10 Main-Thread Synchronization Boundary in CAD Actuation, 2.11 LAN Peer Discovery and Multicast Broadcast Limits, 2.12 QA Authorization & Lease Mutation Boundary, 2.13 Headless Copilot API Contract Boundary vs Full Agent Tool-Calling, 2.14 Multi-Worker Fleet Authentication Header Propagation, 2.15 Telemetry Failure Semantics vs Synthetic Placeholders, 2.16 Knowledge Graph Semantic Retrieval Evaluation Boundaries (+11 more)
+Cohesion: 0.13
+Nodes (14): 1. Motivation & Policy, 2.10 Main-Thread Synchronization Boundary in CAD Actuation, 2.11 LAN Peer Discovery and Multicast Broadcast Limits, 2.1 Formalization Error (The Intent-Specification Gap), 2.2 Benchmark Dependence & Distribution Shifts, 2.3 Model Non-Determinism in Autonomous Orchestration Loops, 2.4 Integration Complexity Debt & Maintenance Burden, 2.5 API & Upstream Vendor Dependencies (+6 more)
 
 ### Community 175 - "google-classroom-mcp.contract.json"
 Cohesion: 0.10
@@ -461,8 +421,8 @@ Cohesion: 0.33
 Nodes (5): 1. Executive Summary & Problem Space, 2. System Architecture: Lipikaar-AI Pipeline, 3. Core Functional Invariants, 4. Verification & Milestone Roadmap, ARCH-SPEC-005: Nepali OCR, Grammar Checker & Font-Agnostic Word Substrate (Lipikaar-AI)
 
 ### Community 190 - "Aaradhya Dev Tamrakar (ADT)"
-Cohesion: 0.36
-Nodes (5): Aaradhya Dev Tamrakar (ADT), Personal Tool Ecosystem, Canonical Capability & Ecosystem Ontology, Calibrated Evidence Policy, SPARK Wearable Gateway
+Cohesion: 0.24
+Nodes (10): Aaradhya Dev Tamrakar (ADT), Personal Tool Ecosystem, Experiment FLEET-001, Hypothesis HYP-002, Canonical Capability & Ecosystem Ontology, Canonical Capability Registry, Calibrated Evidence Policy, Claude Worker Fleet (v2) (+2 more)
 
 ### Community 201 - "fusion360-mcp.contract.json"
 Cohesion: 0.12
@@ -488,26 +448,26 @@ Nodes (6): 1. Schedule & Priorities, 2. Active Projects Progress, 3. Meetings & 
 Cohesion: 0.33
 Nodes (5): 1. Executive Summary, 2. Core Concepts & Takeaways, 3. Action Items & Decisions, 4. Verification Check Before Finishing (Slide 37 Gate), <% tp.date.now("YYYY-MM-DD") %> — Meeting: <% tp.file.title %>
 
-### Community 221 - "ARCH-RFC-003: Capstone Defense Standard"
-Cohesion: 0.38
-Nodes (10): ARCH-RFC-001, ARCH-RFC-001: Record Keeping Standard, ARCH-RFC-002: Multi-Model Council Protocol, ARCH-RFC-003: Capstone Defense Standard, ARCH-SPEC-001: ECIE Systems Architect Paradigm, ARCH-SPEC-002: Ingestion Processing Unit (IPU), Research Architectures Hub, EXP-001: IPU Breakeven Sweep Protocol (+2 more)
+### Community 221 - "Research Architectures Hub"
+Cohesion: 0.28
+Nodes (8): ARCH-RFC-001, ARCH-SPEC-002 (IPU), ARCH-RFC-001: Record Keeping Standard, ARCH-RFC-002: Multi-Model Council Protocol, Research Architectures Hub, GPU & RAM Architecture Spec, INV-EPI-001: Verbatim Epistemic History Invariant, STRANGLER-IPU
 
 ## Knowledge Gaps
-- **663 isolated node(s):** `$schema`, `$id`, `title`, `description`, `type` (+658 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 721 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **633 isolated node(s):** `$schema`, `$id`, `title`, `description`, `type` (+628 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 688 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `properties` connect `properties` to `id`, `properties`, `capability.contract.v1.json`, `description`, `deterministic`, `enum`, `enum`, `outputs`, `side_effects`, `enum`, `enum`?**
-  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+- **Why does `properties` connect `properties` to `properties`, `id`, `capability.contract.v1.json`, `enum`, `enum`, `outputs`, `side_effects`, `timeout_ms`, `enum`, `enum`, `inputs`?**
+  _High betweenness centrality (0.023) - this node is a cross-community bridge._
+- **Why does `properties` connect `properties` to `properties`, `capability.contract.v1.json`?**
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
 - **Why does `capability` connect `capability.contract.v1.json` to `properties`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
-- **Why does `Personal Tool Ecosystem` connect `Aaradhya Dev Tamrakar (ADT)` to `2. Core Architectural & Systemic Limitations`, `Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19)`, `2. Granular Claims Audit Register`, `ARCH-RFC-003: Capstone Defense Standard`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
 - **What connects `$schema`, `$id`, `title` to the rest of the system?**
-  _663 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _633 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `properties` be split into smaller, more focused modules?**
   _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._
 - **Should `properties` be split into smaller, more focused modules?**

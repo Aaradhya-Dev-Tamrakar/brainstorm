@@ -482,7 +482,7 @@
       "file_type": "code",
       "norm_label": "audit_layer_1_consistency()",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L239"
+      "source_location": "L73"
     },
     {
       "id": "sim_reconciliation_engine_audit_layer_2_behavioral",
@@ -494,7 +494,7 @@
       "file_type": "code",
       "norm_label": "audit_layer_2_behavioral()",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L487"
+      "source_location": "L309"
     },
     {
       "id": "sim_reconciliation_engine_audit_repository",
@@ -506,31 +506,7 @@
       "file_type": "code",
       "norm_label": "audit_repository()",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L522"
-    },
-    {
-      "id": "sim_reconciliation_engine_auto_reconcile_counts",
-      "label": "auto_reconcile_counts()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "reconciliation_engine.py",
-      "file_type": "code",
-      "norm_label": "auto_reconcile_counts()",
-      "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L93"
-    },
-    {
-      "id": "sim_reconciliation_engine_get_physical_research_artifacts",
-      "label": "get_physical_research_artifacts()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "reconciliation_engine.py",
-      "file_type": "code",
-      "norm_label": "get_physical_research_artifacts()",
-      "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L73"
+      "source_location": "L344"
     },
     {
       "id": "sim_reconciliation_engine_parse_simple_yaml_capabilities",
@@ -1437,7 +1413,7 @@
       "source_location": "L187"
     },
     {
-      "id": "schemas_capability_contract_v1_inputs_description",
+      "id": "schemas_capability_contract_v1_description_description",
       "label": "description",
       "_origin": "ast",
       "community": 1,
@@ -1445,10 +1421,10 @@
       "file_type": "code",
       "norm_label": "description",
       "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L180"
+      "source_location": "L109"
     },
     {
-      "id": "schemas_capability_contract_v1_inputs_type",
+      "id": "schemas_capability_contract_v1_description_type",
       "label": "type",
       "_origin": "ast",
       "community": 1,
@@ -1456,7 +1432,29 @@
       "file_type": "code",
       "norm_label": "type",
       "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L179"
+      "source_location": "L108"
+    },
+    {
+      "id": "schemas_capability_contract_v1_deterministic_description",
+      "label": "description",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "description",
+      "source_file": "schemas/capability.contract.v1.json",
+      "source_location": "L127"
+    },
+    {
+      "id": "schemas_capability_contract_v1_deterministic_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/capability.contract.v1.json",
+      "source_location": "L126"
     },
     {
       "id": "schemas_capability_contract_v1_properties_counterexample_schema",
@@ -1470,29 +1468,7 @@
       "source_location": "L186"
     },
     {
-      "id": "schemas_capability_contract_v1_properties_inputs",
-      "label": "inputs",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "inputs",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L178"
-    },
-    {
-      "id": "schemas_capability_contract_v1_properties_timeout_ms",
-      "label": "timeout_ms",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "timeout_ms",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L168"
-    },
-    {
-      "id": "schemas_capability_contract_v1_timeout_ms_description",
+      "id": "schemas_capability_contract_v1_properties_description",
       "label": "description",
       "_origin": "ast",
       "community": 1,
@@ -1500,29 +1476,18 @@
       "file_type": "code",
       "norm_label": "description",
       "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L171"
+      "source_location": "L107"
     },
     {
-      "id": "schemas_capability_contract_v1_timeout_ms_minimum",
-      "label": "minimum",
+      "id": "schemas_capability_contract_v1_properties_deterministic",
+      "label": "deterministic",
       "_origin": "ast",
       "community": 1,
       "community_name": "properties",
       "file_type": "code",
-      "norm_label": "minimum",
+      "norm_label": "deterministic",
       "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L170"
-    },
-    {
-      "id": "schemas_capability_contract_v1_timeout_ms_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L169"
+      "source_location": "L125"
     },
     {
       "id": "research_experiments_inv_template",
@@ -2603,66 +2568,6 @@
       "source_location": "L72"
     },
     {
-      "id": "report_limitations_2_12_qa_authorization_lease_mutation_boundary",
-      "label": "2.12 QA Authorization & Lease Mutation Boundary",
-      "_origin": "ast",
-      "community": 169,
-      "community_name": "2. Core Architectural & Systemic Limitations",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2.12 qa authorization & lease mutation boundary",
-      "source_file": "report/limitations.md",
-      "source_location": "L77"
-    },
-    {
-      "id": "report_limitations_2_13_headless_copilot_api_contract_boundary_vs_full_agent_tool_calling",
-      "label": "2.13 Headless Copilot API Contract Boundary vs Full Agent Tool-Calling",
-      "_origin": "ast",
-      "community": 169,
-      "community_name": "2. Core Architectural & Systemic Limitations",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2.13 headless copilot api contract boundary vs full agent tool-calling",
-      "source_file": "report/limitations.md",
-      "source_location": "L82"
-    },
-    {
-      "id": "report_limitations_2_14_multi_worker_fleet_authentication_header_propagation",
-      "label": "2.14 Multi-Worker Fleet Authentication Header Propagation",
-      "_origin": "ast",
-      "community": 169,
-      "community_name": "2. Core Architectural & Systemic Limitations",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2.14 multi-worker fleet authentication header propagation",
-      "source_file": "report/limitations.md",
-      "source_location": "L87"
-    },
-    {
-      "id": "report_limitations_2_15_telemetry_failure_semantics_vs_synthetic_placeholders",
-      "label": "2.15 Telemetry Failure Semantics vs Synthetic Placeholders",
-      "_origin": "ast",
-      "community": 169,
-      "community_name": "2. Core Architectural & Systemic Limitations",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2.15 telemetry failure semantics vs synthetic placeholders",
-      "source_file": "report/limitations.md",
-      "source_location": "L92"
-    },
-    {
-      "id": "report_limitations_2_16_knowledge_graph_semantic_retrieval_evaluation_boundaries",
-      "label": "2.16 Knowledge Graph Semantic Retrieval Evaluation Boundaries",
-      "_origin": "ast",
-      "community": 169,
-      "community_name": "2. Core Architectural & Systemic Limitations",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2.16 knowledge graph semantic retrieval evaluation boundaries",
-      "source_file": "report/limitations.md",
-      "source_location": "L97"
-    },
-    {
       "id": "report_limitations_2_1_formalization_error_the_intent_specification_gap",
       "label": "2.1 Formalization Error (The Intent-Specification Gap)",
       "_origin": "ast",
@@ -3731,6 +3636,50 @@
       "source_location": "L1"
     },
     {
+      "id": "schemas_model_benchmark_schema",
+      "label": "model_benchmark.schema.json",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "required",
+      "file_type": "code",
+      "norm_label": "model_benchmark.schema.json",
+      "source_file": "schemas/model_benchmark.schema.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "schemas_model_benchmark_schema_additionalproperties",
+      "label": "additionalProperties",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "required",
+      "file_type": "code",
+      "norm_label": "additionalproperties",
+      "source_file": "schemas/model_benchmark.schema.json",
+      "source_location": "L82"
+    },
+    {
+      "id": "schemas_model_benchmark_schema_description",
+      "label": "description",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "required",
+      "file_type": "code",
+      "norm_label": "description",
+      "source_file": "schemas/model_benchmark.schema.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "schemas_model_benchmark_schema_id",
+      "label": "$id",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "required",
+      "file_type": "code",
+      "norm_label": "$id",
+      "source_file": "schemas/model_benchmark.schema.json",
+      "source_location": "L3"
+    },
+    {
       "id": "schemas_model_benchmark_schema_required",
       "label": "required",
       "_origin": "ast",
@@ -3740,6 +3689,39 @@
       "norm_label": "required",
       "source_file": "schemas/model_benchmark.schema.json",
       "source_location": "L7"
+    },
+    {
+      "id": "schemas_model_benchmark_schema_schema",
+      "label": "$schema",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "required",
+      "file_type": "code",
+      "norm_label": "$schema",
+      "source_file": "schemas/model_benchmark.schema.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "schemas_model_benchmark_schema_title",
+      "label": "title",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "required",
+      "file_type": "code",
+      "norm_label": "title",
+      "source_file": "schemas/model_benchmark.schema.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "schemas_model_benchmark_schema_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "required",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/model_benchmark.schema.json",
+      "source_location": "L6"
     },
     {
       "id": "ref_benchmark_id",
@@ -3862,42 +3844,6 @@
       "node_kind": "page",
       "norm_label": "quantitative-claims-audit.md",
       "source_file": "report/quantitative-claims-audit.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "research_daily_2026_09_19",
-      "label": "2026-09-19.md",
-      "_origin": "ast",
-      "community": 190,
-      "community_name": "Aaradhya Dev Tamrakar (ADT)",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "2026-09-19.md",
-      "source_file": "research/daily/2026-09-19.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "research_notes_2026_09_19_agentic_ai_industry_ayush_shah",
-      "label": "2026-09-19_Agentic-AI-Industry-Ayush-Shah.md",
-      "_origin": "ast",
-      "community": 190,
-      "community_name": "Aaradhya Dev Tamrakar (ADT)",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "2026-09-19_agentic-ai-industry-ayush-shah.md",
-      "source_file": "research/notes/2026-09-19_Agentic-AI-Industry-Ayush-Shah.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "templates_daily_note",
-      "label": "daily-note.md",
-      "_origin": "ast",
-      "community": 190,
-      "community_name": "Aaradhya Dev Tamrakar (ADT)",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "daily-note.md",
-      "source_file": "templates/daily-note.md",
       "source_location": "L1"
     },
     {
@@ -5051,18 +4997,7 @@
       "source_location": "L1"
     },
     {
-      "id": "sim_reconciliation_engine_rationale_240",
-      "label": "Layer 1: Structural consistency, schemas, metadata, links, and economic\u2026",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "reconciliation_engine.py",
-      "file_type": "rationale",
-      "norm_label": "layer 1: structural consistency, schemas, metadata, links, and economic...",
-      "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L240"
-    },
-    {
-      "id": "sim_reconciliation_engine_rationale_488",
+      "id": "sim_reconciliation_engine_rationale_310",
       "label": "Layer 2: Behavioral verification & simulation test suite execution.",
       "_origin": "ast",
       "community": 21,
@@ -5070,7 +5005,7 @@
       "file_type": "rationale",
       "norm_label": "layer 2: behavioral verification & simulation test suite execution.",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L488"
+      "source_location": "L310"
     },
     {
       "id": "sim_reconciliation_engine_rationale_51",
@@ -5085,25 +5020,14 @@
     },
     {
       "id": "sim_reconciliation_engine_rationale_74",
-      "label": "Enumerate valid physical Markdown research artifacts on disk.",
+      "label": "Layer 1: Structural consistency, schemas, metadata, links, and economic\u2026",
       "_origin": "ast",
       "community": 21,
       "community_name": "reconciliation_engine.py",
       "file_type": "rationale",
-      "norm_label": "enumerate valid physical markdown research artifacts on disk.",
+      "norm_label": "layer 1: structural consistency, schemas, metadata, links, and economic...",
       "source_file": "sim/reconciliation_engine.py",
       "source_location": "L74"
-    },
-    {
-      "id": "sim_reconciliation_engine_rationale_94",
-      "label": "Dynamically enumerates physical artifacts and synchronizes all canonical counts\u2026",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "reconciliation_engine.py",
-      "file_type": "rationale",
-      "norm_label": "dynamically enumerates physical artifacts and synchronizes all canonical counts...",
-      "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L94"
     },
     {
       "id": "research_daily_2026_09_19_1_schedule_priorities",
@@ -5326,7 +5250,7 @@
       "label": "ARCH-RFC-004-WORKFLOW-EXTERNALIZATION-FREEZE.md",
       "_origin": "ast",
       "community": 221,
-      "community_name": "ARCH-RFC-003: Capstone Defense Standard",
+      "community_name": "Research Architectures Hub",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "arch-rfc-004-workflow-externalization-freeze.md",
@@ -5559,7 +5483,7 @@
       "node_kind": "heading",
       "norm_label": "7. artifacts & epistemic provenance",
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L208"
+      "source_location": "L206"
     },
     {
       "id": "research_experiments_bmk_memory_001_granular_25_node_grounded_scoring_audit_register",
@@ -5847,7 +5771,7 @@
       "node_kind": "heading",
       "norm_label": "2. knowledge graph & codebase navigation (graphify)",
       "source_file": "AGENTS.md",
-      "source_location": "L66"
+      "source_location": "L55"
     },
     {
       "id": "agents_3_epistemic_governance_evidence_tiers_arch_rfc_001_arch_rfc_002",
@@ -5859,7 +5783,7 @@
       "node_kind": "heading",
       "norm_label": "3. epistemic governance & evidence tiers (arch-rfc-001 & arch-rfc-002)",
       "source_file": "AGENTS.md",
-      "source_location": "L85"
+      "source_location": "L74"
     },
     {
       "id": "agents_4_verification_gates_reality_layer_deterministic_ground_truth",
@@ -5871,7 +5795,7 @@
       "node_kind": "heading",
       "norm_label": "4. verification gates & reality layer (deterministic ground truth)",
       "source_file": "AGENTS.md",
-      "source_location": "L115"
+      "source_location": "L104"
     },
     {
       "id": "agents_5_operational_rules_efficiency",
@@ -5883,7 +5807,7 @@
       "node_kind": "heading",
       "norm_label": "5. operational rules & efficiency",
       "source_file": "AGENTS.md",
-      "source_location": "L140"
+      "source_location": "L128"
     },
     {
       "id": "agents_agent_rules_workflow_guidelines_brainstorm_ecosystem_orchestration",
@@ -7622,7 +7546,7 @@
       "label": "ecosystem.registry.json",
       "_origin": "ast",
       "community": 4,
-      "community_name": "statistics",
+      "community_name": "ecosystem.registry.json",
       "file_type": "code",
       "norm_label": "ecosystem.registry.json",
       "source_file": "schemas/ecosystem.registry.json",
@@ -7633,18 +7557,18 @@
       "label": "modules",
       "_origin": "ast",
       "community": 4,
-      "community_name": "statistics",
+      "community_name": "ecosystem.registry.json",
       "file_type": "code",
       "norm_label": "modules",
       "source_file": "schemas/ecosystem.registry.json",
-      "source_location": "L19"
+      "source_location": "L18"
     },
     {
       "id": "schemas_ecosystem_registry_name",
       "label": "name",
       "_origin": "ast",
       "community": 4,
-      "community_name": "statistics",
+      "community_name": "ecosystem.registry.json",
       "file_type": "code",
       "norm_label": "name",
       "source_file": "schemas/ecosystem.registry.json",
@@ -7655,7 +7579,7 @@
       "label": "orchestration_root",
       "_origin": "ast",
       "community": 4,
-      "community_name": "statistics",
+      "community_name": "ecosystem.registry.json",
       "file_type": "code",
       "norm_label": "orchestration_root",
       "source_file": "schemas/ecosystem.registry.json",
@@ -7666,7 +7590,7 @@
       "label": "branch",
       "_origin": "ast",
       "community": 4,
-      "community_name": "statistics",
+      "community_name": "ecosystem.registry.json",
       "file_type": "code",
       "norm_label": "branch",
       "source_file": "schemas/ecosystem.registry.json",
@@ -7677,7 +7601,7 @@
       "label": "local_path",
       "_origin": "ast",
       "community": 4,
-      "community_name": "statistics",
+      "community_name": "ecosystem.registry.json",
       "file_type": "code",
       "norm_label": "local_path",
       "source_file": "schemas/ecosystem.registry.json",
@@ -7688,7 +7612,7 @@
       "label": "repository",
       "_origin": "ast",
       "community": 4,
-      "community_name": "statistics",
+      "community_name": "ecosystem.registry.json",
       "file_type": "code",
       "norm_label": "repository",
       "source_file": "schemas/ecosystem.registry.json",
@@ -7699,7 +7623,7 @@
       "label": "role",
       "_origin": "ast",
       "community": 4,
-      "community_name": "statistics",
+      "community_name": "ecosystem.registry.json",
       "file_type": "code",
       "norm_label": "role",
       "source_file": "schemas/ecosystem.registry.json",
@@ -7710,7 +7634,7 @@
       "label": "$schema",
       "_origin": "ast",
       "community": 4,
-      "community_name": "statistics",
+      "community_name": "ecosystem.registry.json",
       "file_type": "code",
       "norm_label": "$schema",
       "source_file": "schemas/ecosystem.registry.json",
@@ -7721,7 +7645,7 @@
       "label": "statistics",
       "_origin": "ast",
       "community": 4,
-      "community_name": "statistics",
+      "community_name": "ecosystem.registry.json",
       "file_type": "code",
       "norm_label": "statistics",
       "source_file": "schemas/ecosystem.registry.json",
@@ -7732,7 +7656,7 @@
       "label": "computational_modules",
       "_origin": "ast",
       "community": 4,
-      "community_name": "statistics",
+      "community_name": "ecosystem.registry.json",
       "file_type": "code",
       "norm_label": "computational_modules",
       "source_file": "schemas/ecosystem.registry.json",
@@ -7743,7 +7667,7 @@
       "label": "orchestration_branches",
       "_origin": "ast",
       "community": 4,
-      "community_name": "statistics",
+      "community_name": "ecosystem.registry.json",
       "file_type": "code",
       "norm_label": "orchestration_branches",
       "source_file": "schemas/ecosystem.registry.json",
@@ -7754,29 +7678,18 @@
       "label": "presentation_and_educational_modules",
       "_origin": "ast",
       "community": 4,
-      "community_name": "statistics",
+      "community_name": "ecosystem.registry.json",
       "file_type": "code",
       "norm_label": "presentation_and_educational_modules",
       "source_file": "schemas/ecosystem.registry.json",
       "source_location": "L16"
     },
     {
-      "id": "schemas_ecosystem_registry_statistics_research_artifacts",
-      "label": "research_artifacts",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "statistics",
-      "file_type": "code",
-      "norm_label": "research_artifacts",
-      "source_file": "schemas/ecosystem.registry.json",
-      "source_location": "L17"
-    },
-    {
       "id": "schemas_ecosystem_registry_statistics_total_git_branches",
       "label": "total_git_branches",
       "_origin": "ast",
       "community": 4,
-      "community_name": "statistics",
+      "community_name": "ecosystem.registry.json",
       "file_type": "code",
       "norm_label": "total_git_branches",
       "source_file": "schemas/ecosystem.registry.json",
@@ -7787,7 +7700,7 @@
       "label": "total_tool_modules",
       "_origin": "ast",
       "community": 4,
-      "community_name": "statistics",
+      "community_name": "ecosystem.registry.json",
       "file_type": "code",
       "norm_label": "total_tool_modules",
       "source_file": "schemas/ecosystem.registry.json",
@@ -7798,7 +7711,7 @@
       "label": "version",
       "_origin": "ast",
       "community": 4,
-      "community_name": "statistics",
+      "community_name": "ecosystem.registry.json",
       "file_type": "code",
       "norm_label": "version",
       "source_file": "schemas/ecosystem.registry.json",
@@ -8286,28 +8199,6 @@
       "source_location": "L1"
     },
     {
-      "id": "schemas_model_benchmark_schema_benchmark_id_pattern",
-      "label": "pattern",
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "pattern",
-      "source_file": "schemas/model_benchmark.schema.json",
-      "source_location": "L21"
-    },
-    {
-      "id": "schemas_model_benchmark_schema_benchmark_id_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/model_benchmark.schema.json",
-      "source_location": "L20"
-    },
-    {
       "id": "schemas_model_benchmark_schema_human_intervention_minutes_minimum",
       "label": "minimum",
       "_origin": "ast",
@@ -8352,28 +8243,6 @@
       "source_location": "L79"
     },
     {
-      "id": "schemas_model_benchmark_schema_prompt_tokens_minimum",
-      "label": "minimum",
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "minimum",
-      "source_file": "schemas/model_benchmark.schema.json",
-      "source_location": "L43"
-    },
-    {
-      "id": "schemas_model_benchmark_schema_prompt_tokens_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/model_benchmark.schema.json",
-      "source_location": "L42"
-    },
-    {
       "id": "schemas_model_benchmark_schema_properties",
       "label": "properties",
       "_origin": "ast",
@@ -8383,17 +8252,6 @@
       "norm_label": "properties",
       "source_file": "schemas/model_benchmark.schema.json",
       "source_location": "L18"
-    },
-    {
-      "id": "schemas_model_benchmark_schema_properties_benchmark_id",
-      "label": "benchmark_id",
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "benchmark_id",
-      "source_file": "schemas/model_benchmark.schema.json",
-      "source_location": "L19"
     },
     {
       "id": "schemas_model_benchmark_schema_properties_human_intervention_minutes",
@@ -8427,17 +8285,6 @@
       "norm_label": "notes",
       "source_file": "schemas/model_benchmark.schema.json",
       "source_location": "L78"
-    },
-    {
-      "id": "schemas_model_benchmark_schema_properties_prompt_tokens",
-      "label": "prompt_tokens",
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "prompt_tokens",
-      "source_file": "schemas/model_benchmark.schema.json",
-      "source_location": "L41"
     },
     {
       "id": "research_architectures_arch_rfc_006_information_boundary",
@@ -8548,28 +8395,28 @@
       "source_location": "L21"
     },
     {
-      "id": "research_experiments_fleet_002_3_1_copilotheadlessadapter_completed_operational_scope_m1_m4",
-      "label": "3.1. `CopilotHeadlessAdapter` (Completed Operational Scope: M1\u2013M4)",
+      "id": "research_experiments_fleet_002_3_1_copilotapiadapter",
+      "label": "3.1. `CopilotAPIAdapter`",
       "_origin": "ast",
       "community": 47,
       "community_name": "Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "3.1. `copilotheadlessadapter` (completed operational scope: m1\u2013m4)",
+      "norm_label": "3.1. `copilotapiadapter`",
       "source_file": "research/experiments/FLEET-002.md",
       "source_location": "L61"
     },
     {
-      "id": "research_experiments_fleet_002_3_2_sandboxed_local_tool_executor_phase_2_target_specification_m6",
-      "label": "3.2. Sandboxed Local Tool Executor (Phase 2 Target Specification: M6)",
+      "id": "research_experiments_fleet_002_3_2_sandboxed_local_tool_executor",
+      "label": "3.2. Sandboxed Local Tool Executor",
       "_origin": "ast",
       "community": 47,
       "community_name": "Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "3.2. sandboxed local tool executor (phase 2 target specification: m6)",
+      "norm_label": "3.2. sandboxed local tool executor",
       "source_file": "research/experiments/FLEET-002.md",
-      "source_location": "L68"
+      "source_location": "L82"
     },
     {
       "id": "research_experiments_fleet_002_3_3_memory_resource_footprint_benchmark_comparison",
@@ -8581,7 +8428,7 @@
       "node_kind": "heading",
       "norm_label": "3.3. memory & resource footprint benchmark comparison",
       "source_file": "research/experiments/FLEET-002.md",
-      "source_location": "L75"
+      "source_location": "L88"
     },
     {
       "id": "research_experiments_fleet_002_3_specification_component_contracts",
@@ -8605,7 +8452,7 @@
       "node_kind": "heading",
       "norm_label": "4. verification checklist & milestones",
       "source_file": "research/experiments/FLEET-002.md",
-      "source_location": "L86"
+      "source_location": "L99"
     },
     {
       "id": "research_experiments_fleet_002_experiment_architecture_log_fleet_002_headless_multi_account_github_copilot_worker_fleet",
@@ -8676,515 +8523,117 @@
       "source_location": "L65"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_defs_provenance",
-      "label": "provenance",
+      "id": "schemas_capability_contract_v1_properties_timeout_ms",
+      "label": "timeout_ms",
       "_origin": "ast",
       "community": 49,
-      "community_name": "provenance",
+      "community_name": "timeout_ms",
       "file_type": "code",
-      "norm_label": "provenance",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L48"
+      "norm_label": "timeout_ms",
+      "source_file": "schemas/capability.contract.v1.json",
+      "source_location": "L168"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_properties_recorded_at",
-      "label": "recorded_at",
+      "id": "schemas_capability_contract_v1_timeout_ms_description",
+      "label": "description",
       "_origin": "ast",
       "community": 49,
-      "community_name": "provenance",
+      "community_name": "timeout_ms",
       "file_type": "code",
-      "norm_label": "recorded_at",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L55"
+      "norm_label": "description",
+      "source_file": "schemas/capability.contract.v1.json",
+      "source_location": "L171"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_properties_source_commit",
-      "label": "source_commit",
+      "id": "schemas_capability_contract_v1_timeout_ms_minimum",
+      "label": "minimum",
       "_origin": "ast",
       "community": 49,
-      "community_name": "provenance",
+      "community_name": "timeout_ms",
       "file_type": "code",
-      "norm_label": "source_commit",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L54"
+      "norm_label": "minimum",
+      "source_file": "schemas/capability.contract.v1.json",
+      "source_location": "L170"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_properties_source_path",
-      "label": "source_path",
-      "_origin": "ast",
-      "community": 49,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "source_path",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L53"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_provenance_additionalproperties",
-      "label": "additionalProperties",
-      "_origin": "ast",
-      "community": 49,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "additionalproperties",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L50"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_provenance_properties",
-      "label": "properties",
-      "_origin": "ast",
-      "community": 49,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "properties",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L52"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_provenance_required",
-      "label": "required",
-      "_origin": "ast",
-      "community": 49,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "required",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L51"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_provenance_type",
+      "id": "schemas_capability_contract_v1_timeout_ms_type",
       "label": "type",
       "_origin": "ast",
       "community": 49,
-      "community_name": "provenance",
+      "community_name": "timeout_ms",
       "file_type": "code",
       "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L49"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_recorded_at_format",
-      "label": "format",
-      "_origin": "ast",
-      "community": 49,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "format",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L55"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_recorded_at_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 49,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L55"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_source_commit_minlength",
-      "label": "minLength",
-      "_origin": "ast",
-      "community": 49,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "minlength",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L54"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_source_commit_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 49,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L54"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_source_path_minlength",
-      "label": "minLength",
-      "_origin": "ast",
-      "community": 49,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "minlength",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L53"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_source_path_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 49,
-      "community_name": "provenance",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L53"
-    },
-    {
-      "id": "ref_recorded_at",
-      "label": "recorded_at",
-      "_origin": "ast",
-      "community": 49,
-      "community_name": "provenance",
-      "file_type": "concept",
-      "norm_label": "recorded_at",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L51"
-    },
-    {
-      "id": "ref_source_commit",
-      "label": "source_commit",
-      "_origin": "ast",
-      "community": 49,
-      "community_name": "provenance",
-      "file_type": "concept",
-      "norm_label": "source_commit",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L51"
-    },
-    {
-      "id": "ref_source_path",
-      "label": "source_path",
-      "_origin": "ast",
-      "community": 49,
-      "community_name": "provenance",
-      "file_type": "concept",
-      "norm_label": "source_path",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L51"
-    },
-    {
-      "id": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan",
-      "label": "ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "arch-plan-001-aec-eng-mcp-commercial-business-plan.md",
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_1_executive_summary",
-      "label": "1. Executive Summary",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1. executive summary",
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L14"
-    },
-    {
-      "id": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_2_1_the_engineering_bottleneck",
-      "label": "2.1 The Engineering Bottleneck",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2.1 the engineering bottleneck",
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L28"
-    },
-    {
-      "id": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_2_2_why_aec_is_the_perfect_beachhead",
-      "label": "2.2 Why AEC is the Perfect Beachhead",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2.2 why aec is the perfect beachhead",
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L33"
-    },
-    {
-      "id": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_2_market_opportunity_problem_statement",
-      "label": "2. Market Opportunity & Problem Statement",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2. market opportunity & problem statement",
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L26"
-    },
-    {
-      "id": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_3_1_live_repository_fleet_100_passing_tests",
-      "label": "3.1 Live Repository Fleet (100% Passing Tests)",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3.1 live repository fleet (100% passing tests)",
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L67"
-    },
-    {
-      "id": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_3_product_architecture_fleet_inventory",
-      "label": "3. Product Architecture & Fleet Inventory",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3. product architecture & fleet inventory",
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L40"
-    },
-    {
-      "id": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_4_the_4_universal_engineering_driver_patterns",
-      "label": "4. The 4 Universal Engineering Driver Patterns",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "4. the 4 universal engineering driver patterns",
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L87"
-    },
-    {
-      "id": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_5_1_pricing_strategy_packages",
-      "label": "5.1 Pricing Strategy & Packages",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "5.1 pricing strategy & packages",
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L102"
-    },
-    {
-      "id": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_5_2_payment_rails_architecture",
-      "label": "5.2 Payment Rails Architecture",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "5.2 payment rails architecture",
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L112"
-    },
-    {
-      "id": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_5_monetization_pricing_payment_rails",
-      "label": "5. Monetization, Pricing & Payment Rails",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "5. monetization, pricing & payment rails",
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L100"
-    },
-    {
-      "id": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_6_zero_server_licensing_engine",
-      "label": "6. Zero-Server Licensing Engine",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "6. zero-server licensing engine",
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L121"
-    },
-    {
-      "id": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_7_1_nepal_specialized_engineering_verticals",
-      "label": "7.1 Nepal Specialized Engineering Verticals",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "7.1 nepal specialized engineering verticals",
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
+      "source_file": "schemas/capability.contract.v1.json",
       "source_location": "L169"
     },
     {
-      "id": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_7_multi_disciplinary_expansion_roadmap_eng_mcp",
-      "label": "7. Multi-Disciplinary Expansion Roadmap (Eng-MCP)",
+      "id": "research_daily_2026_09_19",
+      "label": "2026-09-19.md",
       "_origin": "ast",
       "community": 5,
-      "community_name": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "7. multi-disciplinary expansion roadmap (eng-mcp)",
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L152"
-    },
-    {
-      "id": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_8_strategic_execution_milestones",
-      "label": "8. Strategic Execution Milestones",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "8. strategic execution milestones",
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L177"
-    },
-    {
-      "id": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_9_1_the_problem",
-      "label": "9.1 The Problem",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "9.1 the problem",
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L190"
-    },
-    {
-      "id": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_9_2_the_technical_decoupling_why_mcp_still_works",
-      "label": "9.2 The Technical Decoupling (Why MCP Still Works)",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "9.2 the technical decoupling (why mcp still works)",
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L195"
-    },
-    {
-      "id": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_9_3_the_strategic_technical_resolution",
-      "label": "9.3 The Strategic & Technical Resolution",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "9.3 the strategic & technical resolution",
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L200"
-    },
-    {
-      "id": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_9_developing_market_software_licensing_realities_air_gapped_workarounds",
-      "label": "9. Developing Market Software Licensing Realities & Air-Gapped Workarounds",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "9. developing market software licensing realities & air-gapped workarounds",
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L186"
-    },
-    {
-      "id": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_arch_plan_001_commercial_business_plan_technical_roadmap",
-      "label": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "arch-plan-001: commercial business plan & technical roadmap",
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_universal_engineering_protocol_aec_mcp_multi_disciplinary_engineering_fleet",
-      "label": "Universal Engineering Protocol: AEC-MCP & Multi-Disciplinary Engineering Fleet",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "universal engineering protocol: aec-mcp & multi-disciplinary engineering fleet",
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L2"
-    },
-    {
-      "id": "report_reconciliation_2026_09_19",
-      "label": "reconciliation-2026-09-19.md",
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19)",
+      "community_name": "ARCH-RFC-003: Capstone Defense Standard",
       "file_type": "document",
       "node_kind": "page",
-      "norm_label": "reconciliation-2026-09-19.md",
-      "source_file": "report/reconciliation-2026-09-19.md",
+      "norm_label": "2026-09-19.md",
+      "source_file": "research/daily/2026-09-19.md",
       "source_location": "L1"
     },
     {
-      "id": "report_reconciliation_2026_09_19_1_executive_summary",
-      "label": "1. Executive Summary",
+      "id": "research_notes_2026_09_19_agentic_ai_industry_ayush_shah",
+      "label": "2026-09-19_Agentic-AI-Industry-Ayush-Shah.md",
       "_origin": "ast",
-      "community": 50,
-      "community_name": "Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19)",
+      "community": 5,
+      "community_name": "ARCH-RFC-003: Capstone Defense Standard",
       "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1. executive summary",
-      "source_file": "report/reconciliation-2026-09-19.md",
-      "source_location": "L15"
+      "node_kind": "page",
+      "norm_label": "2026-09-19_agentic-ai-industry-ayush-shah.md",
+      "source_file": "research/notes/2026-09-19_Agentic-AI-Industry-Ayush-Shah.md",
+      "source_location": "L1"
     },
     {
-      "id": "report_reconciliation_2026_09_19_2_granular_reconciliation_matrix",
-      "label": "2. Granular Reconciliation Matrix",
+      "id": "templates_daily_note",
+      "label": "daily-note.md",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "ARCH-RFC-003: Capstone Defense Standard",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "daily-note.md",
+      "source_file": "templates/daily-note.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "schemas_model_benchmark_schema_benchmark_id_pattern",
+      "label": "pattern",
       "_origin": "ast",
       "community": 50,
-      "community_name": "Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2. granular reconciliation matrix",
-      "source_file": "report/reconciliation-2026-09-19.md",
+      "community_name": "benchmark_id",
+      "file_type": "code",
+      "norm_label": "pattern",
+      "source_file": "schemas/model_benchmark.schema.json",
       "source_location": "L21"
     },
     {
-      "id": "report_reconciliation_2026_09_19_3_epistemic_certification",
-      "label": "3. Epistemic Certification",
+      "id": "schemas_model_benchmark_schema_benchmark_id_type",
+      "label": "type",
       "_origin": "ast",
       "community": 50,
-      "community_name": "Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3. epistemic certification",
-      "source_file": "report/reconciliation-2026-09-19.md",
-      "source_location": "L37"
+      "community_name": "benchmark_id",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/model_benchmark.schema.json",
+      "source_location": "L20"
     },
     {
-      "id": "report_reconciliation_2026_09_19_comprehensive_multi_model_ecosystem_reconciliation_report_2026_09_19",
-      "label": "Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19)",
+      "id": "schemas_model_benchmark_schema_properties_benchmark_id",
+      "label": "benchmark_id",
       "_origin": "ast",
       "community": 50,
-      "community_name": "Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "comprehensive multi-model ecosystem reconciliation report (2026-09-19)",
-      "source_file": "report/reconciliation-2026-09-19.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "research_invariants_inv_wsr_002",
-      "label": "INV-WSR-002.md",
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19)",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "inv-wsr-002.md",
-      "source_file": "research/invariants/INV-WSR-002.md",
-      "source_location": "L1"
+      "community_name": "benchmark_id",
+      "file_type": "code",
+      "norm_label": "benchmark_id",
+      "source_file": "schemas/model_benchmark.schema.json",
+      "source_location": "L19"
     },
     {
       "id": "schemas_model_benchmark_schema_completion_tokens_minimum",
@@ -9298,112 +8747,37 @@
       "source_location": "L53"
     },
     {
-      "id": "research_invariants_inv_wsr_002_1_1_invariant_a_closed_loop_worker_dispatch_no_orphaned_leases",
-      "label": "1.1 Invariant A: Closed-Loop Worker Dispatch (No Orphaned Leases)",
+      "id": "schemas_model_benchmark_schema_prompt_tokens_minimum",
+      "label": "minimum",
       "_origin": "ast",
       "community": 55,
-      "community_name": "1. The Core Invariant Statements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1.1 invariant a: closed-loop worker dispatch (no orphaned leases)",
-      "source_file": "research/invariants/INV-WSR-002.md",
-      "source_location": "L21"
+      "community_name": "prompt_tokens",
+      "file_type": "code",
+      "norm_label": "minimum",
+      "source_file": "schemas/model_benchmark.schema.json",
+      "source_location": "L43"
     },
     {
-      "id": "research_invariants_inv_wsr_002_1_2_invariant_b_strict_separation_of_real_execution_and_simulation",
-      "label": "1.2 Invariant B: Strict Separation of Real Execution and Simulation",
+      "id": "schemas_model_benchmark_schema_prompt_tokens_type",
+      "label": "type",
       "_origin": "ast",
       "community": 55,
-      "community_name": "1. The Core Invariant Statements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1.2 invariant b: strict separation of real execution and simulation",
-      "source_file": "research/invariants/INV-WSR-002.md",
-      "source_location": "L32"
+      "community_name": "prompt_tokens",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/model_benchmark.schema.json",
+      "source_location": "L42"
     },
     {
-      "id": "research_invariants_inv_wsr_002_1_3_invariant_c_telemetry_truthfulness_quota_headroom",
-      "label": "1.3 Invariant C: Telemetry Truthfulness & Quota Headroom",
+      "id": "schemas_model_benchmark_schema_properties_prompt_tokens",
+      "label": "prompt_tokens",
       "_origin": "ast",
       "community": 55,
-      "community_name": "1. The Core Invariant Statements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1.3 invariant c: telemetry truthfulness & quota headroom",
-      "source_file": "research/invariants/INV-WSR-002.md",
+      "community_name": "prompt_tokens",
+      "file_type": "code",
+      "norm_label": "prompt_tokens",
+      "source_file": "schemas/model_benchmark.schema.json",
       "source_location": "L41"
-    },
-    {
-      "id": "research_invariants_inv_wsr_002_1_4_invariant_d_atomic_checkpoint_dag_advancement",
-      "label": "1.4 Invariant D: Atomic Checkpoint & DAG Advancement",
-      "_origin": "ast",
-      "community": 55,
-      "community_name": "1. The Core Invariant Statements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1.4 invariant d: atomic checkpoint & dag advancement",
-      "source_file": "research/invariants/INV-WSR-002.md",
-      "source_location": "L53"
-    },
-    {
-      "id": "research_invariants_inv_wsr_002_1_5_invariant_e_qa_authority_claim_token_isolation_for_state_transitions",
-      "label": "1.5 Invariant E: QA Authority & Claim-Token Isolation for State Transitions",
-      "_origin": "ast",
-      "community": 55,
-      "community_name": "1. The Core Invariant Statements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1.5 invariant e: qa authority & claim-token isolation for state transitions",
-      "source_file": "research/invariants/INV-WSR-002.md",
-      "source_location": "L62"
-    },
-    {
-      "id": "research_invariants_inv_wsr_002_1_the_core_invariant_statements",
-      "label": "1. The Core Invariant Statements",
-      "_origin": "ast",
-      "community": 55,
-      "community_name": "1. The Core Invariant Statements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1. the core invariant statements",
-      "source_file": "research/invariants/INV-WSR-002.md",
-      "source_location": "L19"
-    },
-    {
-      "id": "research_invariants_inv_wsr_002_2_mathematical_formalization",
-      "label": "2. Mathematical Formalization",
-      "_origin": "ast",
-      "community": 55,
-      "community_name": "1. The Core Invariant Statements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2. mathematical formalization",
-      "source_file": "research/invariants/INV-WSR-002.md",
-      "source_location": "L72"
-    },
-    {
-      "id": "research_invariants_inv_wsr_002_3_verification_compliance_gate",
-      "label": "3. Verification & Compliance Gate",
-      "_origin": "ast",
-      "community": 55,
-      "community_name": "1. The Core Invariant Statements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3. verification & compliance gate",
-      "source_file": "research/invariants/INV-WSR-002.md",
-      "source_location": "L92"
-    },
-    {
-      "id": "research_invariants_inv_wsr_002_architectural_invariant_inv_wsr_002_worker_protocol_completeness_truthful_telemetry",
-      "label": "\ud83d\udcdc Architectural Invariant: INV-WSR-002 (Worker Protocol Completeness & Truthful Telemetry)",
-      "_origin": "ast",
-      "community": 55,
-      "community_name": "1. The Core Invariant Statements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\ud83d\udcdc architectural invariant: inv-wsr-002 (worker protocol completeness & truthful telemetry)",
-      "source_file": "research/invariants/INV-WSR-002.md",
-      "source_location": "L1"
     },
     {
       "id": "schemas_model_benchmark_schema_properties_rework_count",
@@ -9483,6 +8857,61 @@
       "source_location": "L6"
     },
     {
+      "id": "schemas_ecosystem_verification_schema_claims_items",
+      "label": "items",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "items",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L30"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_claims_minitems",
+      "label": "minItems",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "minitems",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L29"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_claims_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L28"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_generated_by_minlength",
+      "label": "minLength",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "minlength",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L11"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_generated_by_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L11"
+    },
+    {
       "id": "schemas_ecosystem_verification_schema_id",
       "label": "$id",
       "_origin": "ast",
@@ -9494,6 +8923,17 @@
       "source_location": "L3"
     },
     {
+      "id": "schemas_ecosystem_verification_schema_items_ref",
+      "label": "$ref",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "$ref",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L15"
+    },
+    {
       "id": "schemas_ecosystem_verification_schema_json_schemas_ecosystem_verification_schema",
       "label": "ecosystem.verification.schema.json",
       "_origin": "ast",
@@ -9503,6 +8943,116 @@
       "norm_label": "ecosystem.verification.schema.json",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L1"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_manifest_kind_const",
+      "label": "const",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "const",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_projects_items",
+      "label": "items",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "items",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_projects_minitems",
+      "label": "minItems",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "minitems",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L14"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_projects_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L13"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_properties",
+      "label": "properties",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "properties",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_properties_claims",
+      "label": "claims",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "claims",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L27"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_properties_generated_by",
+      "label": "generated_by",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "generated_by",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L11"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_properties_manifest_kind",
+      "label": "manifest_kind",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "manifest_kind",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_properties_projects",
+      "label": "projects",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "projects",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L12"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_properties_schema_version",
+      "label": "schema_version",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "schema_version",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L9"
     },
     {
       "id": "schemas_ecosystem_verification_schema_required",
@@ -9525,6 +9075,17 @@
       "norm_label": "$schema",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L2"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_schema_version_const",
+      "label": "const",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "ecosystem.verification.schema.json",
+      "file_type": "code",
+      "norm_label": "const",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L9"
     },
     {
       "id": "schemas_ecosystem_verification_schema_title",
@@ -9593,103 +9154,37 @@
       "source_location": "L7"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_claims_items",
-      "label": "items",
+      "id": "schemas_capability_contract_v1_inputs_description",
+      "label": "description",
       "_origin": "ast",
       "community": 59,
-      "community_name": "claims",
+      "community_name": "inputs",
       "file_type": "code",
-      "norm_label": "items",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L30"
+      "norm_label": "description",
+      "source_file": "schemas/capability.contract.v1.json",
+      "source_location": "L180"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_claims_minitems",
-      "label": "minItems",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "claims",
-      "file_type": "code",
-      "norm_label": "minitems",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L29"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_claims_type",
+      "id": "schemas_capability_contract_v1_inputs_type",
       "label": "type",
       "_origin": "ast",
       "community": 59,
-      "community_name": "claims",
+      "community_name": "inputs",
       "file_type": "code",
       "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L28"
+      "source_file": "schemas/capability.contract.v1.json",
+      "source_location": "L179"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_items_ref",
-      "label": "$ref",
+      "id": "schemas_capability_contract_v1_properties_inputs",
+      "label": "inputs",
       "_origin": "ast",
       "community": 59,
-      "community_name": "claims",
+      "community_name": "inputs",
       "file_type": "code",
-      "norm_label": "$ref",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L15"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_projects_items",
-      "label": "items",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "claims",
-      "file_type": "code",
-      "norm_label": "items",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L15"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_projects_minitems",
-      "label": "minItems",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "claims",
-      "file_type": "code",
-      "norm_label": "minitems",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L14"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_projects_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "claims",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L13"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_properties_claims",
-      "label": "claims",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "claims",
-      "file_type": "code",
-      "norm_label": "claims",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L27"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_properties_projects",
-      "label": "projects",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "claims",
-      "file_type": "code",
-      "norm_label": "projects",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L12"
+      "norm_label": "inputs",
+      "source_file": "schemas/capability.contract.v1.json",
+      "source_location": "L178"
     },
     {
       "id": "schemas_capability_contract_v1",
@@ -10209,248 +9704,6 @@
       "source_location": "L61"
     },
     {
-      "id": "schemas_ecosystem_verification_schema_generated_by_minlength",
-      "label": "minLength",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "minlength",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L11"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_generated_by_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L11"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_manifest_kind_const",
-      "label": "const",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "const",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L10"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_properties",
-      "label": "properties",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "properties",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L8"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_properties_generated_by",
-      "label": "generated_by",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "generated_by",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L11"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_properties_manifest_kind",
-      "label": "manifest_kind",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "manifest_kind",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L10"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_properties_schema_version",
-      "label": "schema_version",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "schema_version",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L9"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_schema_version_const",
-      "label": "const",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "properties",
-      "file_type": "code",
-      "norm_label": "const",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L9"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_project_required",
-      "label": "required",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "required",
-      "file_type": "code",
-      "norm_label": "required",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "ref_claimed_result",
-      "label": "claimed_result",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "required",
-      "file_type": "concept",
-      "norm_label": "claimed_result",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "ref_claims",
-      "label": "claims",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "required",
-      "file_type": "concept",
-      "norm_label": "claims",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "ref_provenance",
-      "label": "provenance",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "required",
-      "file_type": "concept",
-      "norm_label": "provenance",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "ref_repository",
-      "label": "repository",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "required",
-      "file_type": "concept",
-      "norm_label": "repository",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "ref_verification",
-      "label": "verification",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "required",
-      "file_type": "concept",
-      "norm_label": "verification",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_json_ref_id",
-      "label": "id",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "required",
-      "file_type": "concept",
-      "norm_label": "id",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_claim_additionalproperties",
-      "label": "additionalProperties",
-      "_origin": "ast",
-      "community": 63,
-      "community_name": "$defs",
-      "file_type": "code",
-      "norm_label": "additionalproperties",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L38"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_claim_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 63,
-      "community_name": "$defs",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L37"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_defs",
-      "label": "$defs",
-      "_origin": "ast",
-      "community": 63,
-      "community_name": "$defs",
-      "file_type": "code",
-      "norm_label": "$defs",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L18"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_defs_claim",
-      "label": "claim",
-      "_origin": "ast",
-      "community": 63,
-      "community_name": "$defs",
-      "file_type": "code",
-      "norm_label": "claim",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L36"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_defs_project",
-      "label": "project",
-      "_origin": "ast",
-      "community": 63,
-      "community_name": "$defs",
-      "file_type": "code",
-      "norm_label": "project",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L19"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_project_additionalproperties",
-      "label": "additionalProperties",
-      "_origin": "ast",
-      "community": 63,
-      "community_name": "$defs",
-      "file_type": "code",
-      "norm_label": "additionalproperties",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L21"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_project_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 63,
-      "community_name": "$defs",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L20"
-    },
-    {
       "id": "schemas_examples_nepali_ocr_ai_contract",
       "label": "nepali-ocr-ai.contract.json",
       "_origin": "ast",
@@ -10660,83 +9913,6 @@
       "source_location": "L11"
     },
     {
-      "id": "schemas_model_benchmark_schema",
-      "label": "model_benchmark.schema.json",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "model_benchmark.schema.json",
-      "file_type": "code",
-      "norm_label": "model_benchmark.schema.json",
-      "source_file": "schemas/model_benchmark.schema.json",
-      "source_location": "L1"
-    },
-    {
-      "id": "schemas_model_benchmark_schema_additionalproperties",
-      "label": "additionalProperties",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "model_benchmark.schema.json",
-      "file_type": "code",
-      "norm_label": "additionalproperties",
-      "source_file": "schemas/model_benchmark.schema.json",
-      "source_location": "L82"
-    },
-    {
-      "id": "schemas_model_benchmark_schema_description",
-      "label": "description",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "model_benchmark.schema.json",
-      "file_type": "code",
-      "norm_label": "description",
-      "source_file": "schemas/model_benchmark.schema.json",
-      "source_location": "L5"
-    },
-    {
-      "id": "schemas_model_benchmark_schema_id",
-      "label": "$id",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "model_benchmark.schema.json",
-      "file_type": "code",
-      "norm_label": "$id",
-      "source_file": "schemas/model_benchmark.schema.json",
-      "source_location": "L3"
-    },
-    {
-      "id": "schemas_model_benchmark_schema_schema",
-      "label": "$schema",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "model_benchmark.schema.json",
-      "file_type": "code",
-      "norm_label": "$schema",
-      "source_file": "schemas/model_benchmark.schema.json",
-      "source_location": "L2"
-    },
-    {
-      "id": "schemas_model_benchmark_schema_title",
-      "label": "title",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "model_benchmark.schema.json",
-      "file_type": "code",
-      "norm_label": "title",
-      "source_file": "schemas/model_benchmark.schema.json",
-      "source_location": "L4"
-    },
-    {
-      "id": "schemas_model_benchmark_schema_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 65,
-      "community_name": "model_benchmark.schema.json",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/model_benchmark.schema.json",
-      "source_location": "L6"
-    },
-    {
       "id": "sim_run_experiments",
       "label": "run_experiments.py",
       "_origin": "ast",
@@ -10779,61 +9955,6 @@
       "norm_label": "fifo single-server completion times, in seconds.",
       "source_file": "sim/run_experiments.py",
       "source_location": "L44"
-    },
-    {
-      "id": "schemas_ecosystem_verification_schema_claim_required",
-      "label": "required",
-      "_origin": "ast",
-      "community": 67,
-      "community_name": "required",
-      "file_type": "code",
-      "norm_label": "required",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L39"
-    },
-    {
-      "id": "ref_evidence_tier",
-      "label": "evidence_tier",
-      "_origin": "ast",
-      "community": 67,
-      "community_name": "required",
-      "file_type": "concept",
-      "norm_label": "evidence_tier",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L39"
-    },
-    {
-      "id": "ref_metric",
-      "label": "metric",
-      "_origin": "ast",
-      "community": 67,
-      "community_name": "required",
-      "file_type": "concept",
-      "norm_label": "metric",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L39"
-    },
-    {
-      "id": "ref_scope",
-      "label": "scope",
-      "_origin": "ast",
-      "community": 67,
-      "community_name": "required",
-      "file_type": "concept",
-      "norm_label": "scope",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L39"
-    },
-    {
-      "id": "ref_value",
-      "label": "value",
-      "_origin": "ast",
-      "community": 67,
-      "community_name": "required",
-      "file_type": "concept",
-      "norm_label": "value",
-      "source_file": "schemas/ecosystem.verification.schema.json",
-      "source_location": "L39"
     },
     {
       "id": "research_decisions_dec_001_memory_stratification",
@@ -11050,6 +10171,17 @@
       "source_location": "L26"
     },
     {
+      "id": "schemas_ecosystem_verification_schema_defs_project",
+      "label": "project",
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "project",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L19"
+    },
+    {
       "id": "schemas_ecosystem_verification_schema_id_pattern",
       "label": "pattern",
       "_origin": "ast",
@@ -11072,6 +10204,17 @@
       "source_location": "L24"
     },
     {
+      "id": "schemas_ecosystem_verification_schema_project_additionalproperties",
+      "label": "additionalProperties",
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "additionalproperties",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L21"
+    },
+    {
       "id": "schemas_ecosystem_verification_schema_project_properties",
       "label": "properties",
       "_origin": "ast",
@@ -11081,6 +10224,28 @@
       "norm_label": "properties",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L23"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_project_required",
+      "label": "required",
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "required",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_project_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "properties",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L20"
     },
     {
       "id": "schemas_ecosystem_verification_schema_properties_claimed_result",
@@ -11182,70 +10347,81 @@
       "source_location": "L33"
     },
     {
-      "id": "schemas_capability_contract_v1_description_description",
-      "label": "description",
+      "id": "ref_claimed_result",
+      "label": "claimed_result",
       "_origin": "ast",
-      "community": 71,
-      "community_name": "description",
-      "file_type": "code",
-      "norm_label": "description",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L109"
+      "community": 70,
+      "community_name": "properties",
+      "file_type": "concept",
+      "norm_label": "claimed_result",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L22"
     },
     {
-      "id": "schemas_capability_contract_v1_description_type",
-      "label": "type",
+      "id": "ref_claims",
+      "label": "claims",
       "_origin": "ast",
-      "community": 71,
-      "community_name": "description",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L108"
+      "community": 70,
+      "community_name": "properties",
+      "file_type": "concept",
+      "norm_label": "claims",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L22"
     },
     {
-      "id": "schemas_capability_contract_v1_properties_description",
-      "label": "description",
+      "id": "ref_provenance",
+      "label": "provenance",
       "_origin": "ast",
-      "community": 71,
-      "community_name": "description",
-      "file_type": "code",
-      "norm_label": "description",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L107"
+      "community": 70,
+      "community_name": "properties",
+      "file_type": "concept",
+      "norm_label": "provenance",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L22"
     },
     {
-      "id": "schemas_capability_contract_v1_deterministic_description",
-      "label": "description",
+      "id": "ref_repository",
+      "label": "repository",
       "_origin": "ast",
-      "community": 72,
-      "community_name": "deterministic",
-      "file_type": "code",
-      "norm_label": "description",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L127"
+      "community": 70,
+      "community_name": "properties",
+      "file_type": "concept",
+      "norm_label": "repository",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L22"
     },
     {
-      "id": "schemas_capability_contract_v1_deterministic_type",
-      "label": "type",
+      "id": "ref_verification",
+      "label": "verification",
       "_origin": "ast",
-      "community": 72,
-      "community_name": "deterministic",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L126"
+      "community": 70,
+      "community_name": "properties",
+      "file_type": "concept",
+      "norm_label": "verification",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L22"
     },
     {
-      "id": "schemas_capability_contract_v1_properties_deterministic",
-      "label": "deterministic",
+      "id": "schemas_ecosystem_verification_schema_json_ref_id",
+      "label": "id",
       "_origin": "ast",
-      "community": 72,
-      "community_name": "deterministic",
+      "community": 70,
+      "community_name": "properties",
+      "file_type": "concept",
+      "norm_label": "id",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_claim_additionalproperties",
+      "label": "additionalProperties",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
       "file_type": "code",
-      "norm_label": "deterministic",
-      "source_file": "schemas/capability.contract.v1.json",
-      "source_location": "L125"
+      "norm_label": "additionalproperties",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L38"
     },
     {
       "id": "schemas_ecosystem_verification_schema_claim_properties",
@@ -11257,6 +10433,61 @@
       "norm_label": "properties",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L40"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_claim_required",
+      "label": "required",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "required",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L39"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_claim_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L37"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_defs",
+      "label": "$defs",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "$defs",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L18"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_defs_claim",
+      "label": "claim",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "claim",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L36"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_defs_provenance",
+      "label": "provenance",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "provenance",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L48"
     },
     {
       "id": "schemas_ecosystem_verification_schema_evidence_tier_enum",
@@ -11358,6 +10589,17 @@
       "source_location": "L41"
     },
     {
+      "id": "schemas_ecosystem_verification_schema_properties_recorded_at",
+      "label": "recorded_at",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "recorded_at",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L55"
+    },
+    {
       "id": "schemas_ecosystem_verification_schema_properties_scope",
       "label": "scope",
       "_origin": "ast",
@@ -11369,6 +10611,28 @@
       "source_location": "L43"
     },
     {
+      "id": "schemas_ecosystem_verification_schema_properties_source_commit",
+      "label": "source_commit",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "source_commit",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L54"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_properties_source_path",
+      "label": "source_path",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "source_path",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L53"
+    },
+    {
       "id": "schemas_ecosystem_verification_schema_properties_value",
       "label": "value",
       "_origin": "ast",
@@ -11378,6 +10642,72 @@
       "norm_label": "value",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L42"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_provenance_additionalproperties",
+      "label": "additionalProperties",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "additionalproperties",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L50"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_provenance_properties",
+      "label": "properties",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "properties",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L52"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_provenance_required",
+      "label": "required",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "required",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L51"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_provenance_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L49"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_recorded_at_format",
+      "label": "format",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "format",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L55"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_recorded_at_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L55"
     },
     {
       "id": "schemas_ecosystem_verification_schema_scope_minlength",
@@ -11400,6 +10730,127 @@
       "norm_label": "type",
       "source_file": "schemas/ecosystem.verification.schema.json",
       "source_location": "L43"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_source_commit_minlength",
+      "label": "minLength",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "minlength",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L54"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_source_commit_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L54"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_source_path_minlength",
+      "label": "minLength",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "minlength",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L53"
+    },
+    {
+      "id": "schemas_ecosystem_verification_schema_source_path_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L53"
+    },
+    {
+      "id": "ref_evidence_tier",
+      "label": "evidence_tier",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "concept",
+      "norm_label": "evidence_tier",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L39"
+    },
+    {
+      "id": "ref_metric",
+      "label": "metric",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "concept",
+      "norm_label": "metric",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L39"
+    },
+    {
+      "id": "ref_recorded_at",
+      "label": "recorded_at",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "concept",
+      "norm_label": "recorded_at",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L51"
+    },
+    {
+      "id": "ref_scope",
+      "label": "scope",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "concept",
+      "norm_label": "scope",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L39"
+    },
+    {
+      "id": "ref_source_commit",
+      "label": "source_commit",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "concept",
+      "norm_label": "source_commit",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L51"
+    },
+    {
+      "id": "ref_source_path",
+      "label": "source_path",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "concept",
+      "norm_label": "source_path",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L51"
+    },
+    {
+      "id": "ref_value",
+      "label": "value",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "enum",
+      "file_type": "concept",
+      "norm_label": "value",
+      "source_file": "schemas/ecosystem.verification.schema.json",
+      "source_location": "L39"
     },
     {
       "id": "schemas_ecosystem_verification_schema_json_ref_e0",
@@ -11806,7 +11257,7 @@
       "file_type": "code",
       "norm_label": "ensure-remoteconfigured()",
       "source_file": "sync.ps1",
-      "source_location": "L196"
+      "source_location": "L145"
     },
     {
       "id": "sync_find_stagedsecrets",
@@ -11817,7 +11268,7 @@
       "file_type": "code",
       "norm_label": "find-stagedsecrets()",
       "source_file": "sync.ps1",
-      "source_location": "L214"
+      "source_location": "L163"
     },
     {
       "id": "sync_get_autocommitmessage",
@@ -11828,29 +11279,7 @@
       "file_type": "code",
       "norm_label": "get-autocommitmessage()",
       "source_file": "sync.ps1",
-      "source_location": "L250"
-    },
-    {
-      "id": "sync_get_ecosystemtoolrepos",
-      "label": "Get-EcosystemToolRepos()",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "sync.ps1",
-      "file_type": "code",
-      "norm_label": "get-ecosystemtoolrepos()",
-      "source_file": "sync.ps1",
-      "source_location": "L106"
-    },
-    {
-      "id": "sync_invoke_crosssync",
-      "label": "Invoke-CrossSync()",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "sync.ps1",
-      "file_type": "code",
-      "norm_label": "invoke-crosssync()",
-      "source_file": "sync.ps1",
-      "source_location": "L498"
+      "source_location": "L199"
     },
     {
       "id": "sync_provision_newtool",
@@ -11861,7 +11290,7 @@
       "file_type": "code",
       "norm_label": "provision-newtool()",
       "source_file": "sync.ps1",
-      "source_location": "L603"
+      "source_location": "L446"
     },
     {
       "id": "sync_show_repostatus",
@@ -11872,7 +11301,7 @@
       "file_type": "code",
       "norm_label": "show-repostatus()",
       "source_file": "sync.ps1",
-      "source_location": "L643"
+      "source_location": "L486"
     },
     {
       "id": "sync_switch_tobranch",
@@ -11883,7 +11312,7 @@
       "file_type": "code",
       "norm_label": "switch-tobranch()",
       "source_file": "sync.ps1",
-      "source_location": "L344"
+      "source_location": "L293"
     },
     {
       "id": "sync_sync_allbranches",
@@ -11894,7 +11323,7 @@
       "file_type": "code",
       "norm_label": "sync-allbranches()",
       "source_file": "sync.ps1",
-      "source_location": "L383"
+      "source_location": "L332"
     },
     {
       "id": "sync_write_fail",
@@ -11905,7 +11334,7 @@
       "file_type": "code",
       "norm_label": "write-fail()",
       "source_file": "sync.ps1",
-      "source_location": "L191"
+      "source_location": "L140"
     },
     {
       "id": "sync_write_notice",
@@ -11916,7 +11345,7 @@
       "file_type": "code",
       "norm_label": "write-notice()",
       "source_file": "sync.ps1",
-      "source_location": "L181"
+      "source_location": "L130"
     },
     {
       "id": "sync_write_status",
@@ -11927,7 +11356,7 @@
       "file_type": "code",
       "norm_label": "write-status()",
       "source_file": "sync.ps1",
-      "source_location": "L173"
+      "source_location": "L122"
     },
     {
       "id": "sync_write_success",
@@ -11938,7 +11367,39 @@
       "file_type": "code",
       "norm_label": "write-success()",
       "source_file": "sync.ps1",
-      "source_location": "L186"
+      "source_location": "L135"
+    },
+    {
+      "id": "research_hypotheses_hyp_002",
+      "label": "Hypothesis HYP-002",
+      "_origin": "semantic",
+      "author": "Aaradhya Dev Tamrakar",
+      "captured_at": null,
+      "community": 190,
+      "community_name": "Aaradhya Dev Tamrakar (ADT)",
+      "contributor": null,
+      "file_type": "code",
+      "norm_label": "hypothesis hyp-002",
+      "rationale": "Proposes semantic state checkpointing for task migration.",
+      "source_file": "research/hypotheses/HYP-002.yaml",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "schemas_capability_registry",
+      "label": "Canonical Capability Registry",
+      "_origin": "semantic",
+      "author": "Aaradhya Dev Tamrakar",
+      "captured_at": null,
+      "community": 190,
+      "community_name": "Aaradhya Dev Tamrakar (ADT)",
+      "contributor": null,
+      "file_type": "code",
+      "norm_label": "canonical capability registry",
+      "rationale": "Single source of truth for all ecosystem capabilities and tool metadata.",
+      "source_file": "schemas/capability-registry.yaml",
+      "source_location": null,
+      "source_url": null
     },
     {
       "id": "profile_adt",
@@ -11963,11 +11424,27 @@
       "author": "Aaradhya Dev Tamrakar",
       "captured_at": null,
       "community": 221,
-      "community_name": "ARCH-RFC-003: Capstone Defense Standard",
+      "community_name": "Research Architectures Hub",
       "contributor": null,
       "file_type": "document",
       "norm_label": "arch-rfc-001",
       "rationale": "Epistemic Taxonomy & Provenance Standard.",
+      "source_file": "research/architectures/README.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "arch_spec_002",
+      "label": "ARCH-SPEC-002 (IPU)",
+      "_origin": "semantic",
+      "author": "Aaradhya Dev Tamrakar",
+      "captured_at": null,
+      "community": 221,
+      "community_name": "Research Architectures Hub",
+      "contributor": null,
+      "file_type": "document",
+      "norm_label": "arch-spec-002 (ipu)",
+      "rationale": "Ingestion Processing Unit & Telecom Transition Strategy.",
       "source_file": "research/architectures/README.md",
       "source_location": null,
       "source_url": null
@@ -11989,60 +11466,12 @@
       "source_url": null
     },
     {
-      "id": "research_hypotheses_hyp_002",
-      "label": "Hypothesis HYP-002",
-      "_origin": "semantic",
-      "author": "Aaradhya Dev Tamrakar",
-      "captured_at": null,
-      "community": 50,
-      "community_name": "Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19)",
-      "contributor": null,
-      "file_type": "code",
-      "norm_label": "hypothesis hyp-002",
-      "rationale": "Proposes semantic state checkpointing for task migration.",
-      "source_file": "research/hypotheses/HYP-002.yaml",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "schemas_capability_registry",
-      "label": "Canonical Capability Registry",
-      "_origin": "semantic",
-      "author": "Aaradhya Dev Tamrakar",
-      "captured_at": null,
-      "community": 50,
-      "community_name": "Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19)",
-      "contributor": null,
-      "file_type": "code",
-      "norm_label": "canonical capability registry",
-      "rationale": "Single source of truth for all ecosystem capabilities and tool metadata.",
-      "source_file": "schemas/capability-registry.yaml",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "arch_spec_002",
-      "label": "ARCH-SPEC-002 (IPU)",
-      "_origin": "semantic",
-      "author": "Aaradhya Dev Tamrakar",
-      "captured_at": null,
-      "community": 69,
-      "community_name": "STRANGLER-IPU",
-      "contributor": null,
-      "file_type": "document",
-      "norm_label": "arch-spec-002 (ipu)",
-      "rationale": "Ingestion Processing Unit & Telecom Transition Strategy.",
-      "source_file": "research/architectures/README.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
       "id": "research_architectures_arch_spec_001",
       "label": "ARCH-SPEC-001: ECIE Systems Architect Paradigm",
       "_origin": "semantic",
       "author": "Aaradhya",
       "captured_at": null,
-      "community": 221,
+      "community": 5,
       "community_name": "ARCH-RFC-003: Capstone Defense Standard",
       "contributor": null,
       "file_type": "document",
@@ -12058,7 +11487,7 @@
       "_origin": "semantic",
       "author": "Aaradhya",
       "captured_at": null,
-      "community": 221,
+      "community": 5,
       "community_name": "ARCH-RFC-003: Capstone Defense Standard",
       "contributor": null,
       "file_type": "document",
@@ -12085,6 +11514,22 @@
       "source_url": null
     },
     {
+      "id": "tool_claude_fleet",
+      "label": "Claude Worker Fleet (v2)",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 190,
+      "community_name": "Aaradhya Dev Tamrakar (ADT)",
+      "contributor": null,
+      "file_type": "code",
+      "norm_label": "claude worker fleet (v2)",
+      "rationale": "Distributed task orchestrator for worker migration.",
+      "source_file": "schemas/capability-registry.yaml",
+      "source_location": null,
+      "source_url": null
+    },
+    {
       "id": "tool_spark",
       "label": "SPARK Wearable Gateway",
       "_origin": "semantic",
@@ -12096,6 +11541,22 @@
       "file_type": "code",
       "norm_label": "spark wearable gateway",
       "rationale": "Edge fall detection with SHAP explainability.",
+      "source_file": "schemas/capability-registry.yaml",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "tool_super_nlm",
+      "label": "Super-NLM Hub",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 190,
+      "community_name": "Aaradhya Dev Tamrakar (ADT)",
+      "contributor": null,
+      "file_type": "code",
+      "norm_label": "super-nlm hub",
+      "rationale": "Multi-account Google NotebookLM aggregator.",
       "source_file": "schemas/capability-registry.yaml",
       "source_location": null,
       "source_url": null
@@ -12117,13 +11578,45 @@
       "source_url": null
     },
     {
+      "id": "research_experiments_fleet_001",
+      "label": "Experiment FLEET-001",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 190,
+      "community_name": "Aaradhya Dev Tamrakar (ADT)",
+      "contributor": null,
+      "file_type": "document",
+      "norm_label": "experiment fleet-001",
+      "rationale": "Validates state migration across worker profiles.",
+      "source_file": "research/experiments/FLEET-001.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "tool_strangler_ipu",
+      "label": "STRANGLER-IPU",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 221,
+      "community_name": "Research Architectures Hub",
+      "contributor": null,
+      "file_type": "code",
+      "norm_label": "strangler-ipu",
+      "rationale": "6G Ingress Processing Unit microarchitectural simulation.",
+      "source_file": "schemas/capability-registry.yaml",
+      "source_location": null,
+      "source_url": null
+    },
+    {
       "id": "research_architectures_arch_rfc_001",
       "label": "ARCH-RFC-001: Record Keeping Standard",
       "_origin": "semantic",
       "author": null,
       "captured_at": null,
       "community": 221,
-      "community_name": "ARCH-RFC-003: Capstone Defense Standard",
+      "community_name": "Research Architectures Hub",
       "contributor": null,
       "file_type": "document",
       "norm_label": "arch-rfc-001: record keeping standard",
@@ -12139,28 +11632,12 @@
       "author": null,
       "captured_at": null,
       "community": 221,
-      "community_name": "ARCH-RFC-003: Capstone Defense Standard",
+      "community_name": "Research Architectures Hub",
       "contributor": null,
       "file_type": "document",
       "norm_label": "arch-rfc-002: multi-model council protocol",
       "rationale": "Formalizes cross-reviewing outputs from multiple AI models (ChatGPT, Claude, etc.) to minimize discrepancies.",
       "source_file": "research/architectures/ARCH-RFC-002-MULTI-MODEL-COUNCIL.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "research_architectures_arch_rfc_003",
-      "label": "ARCH-RFC-003: Capstone Defense Standard",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 221,
-      "community_name": "ARCH-RFC-003: Capstone Defense Standard",
-      "contributor": null,
-      "file_type": "document",
-      "norm_label": "arch-rfc-003: capstone defense standard",
-      "rationale": "Optimizes the repository for undergraduate engineering project defense and academic audits.",
-      "source_file": "research/architectures/ARCH-RFC-003-CAPSTONE-DEFENSE-STANDARD.md",
       "source_location": null,
       "source_url": null
     },
@@ -12171,7 +11648,7 @@
       "author": null,
       "captured_at": null,
       "community": 221,
-      "community_name": "ARCH-RFC-003: Capstone Defense Standard",
+      "community_name": "Research Architectures Hub",
       "contributor": null,
       "file_type": "document",
       "norm_label": "research architectures hub",
@@ -12181,18 +11658,18 @@
       "source_url": null
     },
     {
-      "id": "research_experiments_exp_001",
-      "label": "EXP-001: IPU Breakeven Sweep Protocol",
+      "id": "research_experiments_gpu_ram_spec",
+      "label": "GPU & RAM Architecture Spec",
       "_origin": "semantic",
       "author": null,
       "captured_at": null,
       "community": 221,
-      "community_name": "ARCH-RFC-003: Capstone Defense Standard",
+      "community_name": "Research Architectures Hub",
       "contributor": null,
       "file_type": "document",
-      "norm_label": "exp-001: ipu breakeven sweep protocol",
-      "rationale": "Formal experiment protocol for the IPU parameter sweep.",
-      "source_file": "research/experiments/EXP-001-IPU-BREAKEVEN-SWEEP.md",
+      "norm_label": "gpu & ram architecture spec",
+      "rationale": "Foundational research on near-memory compute and architectural bottlenecks.",
+      "source_file": "research/experiments/GPU_RAM_ARCHITECTURE_SPEC.md",
       "source_location": null,
       "source_url": null
     },
@@ -12203,28 +11680,12 @@
       "author": null,
       "captured_at": null,
       "community": 221,
-      "community_name": "ARCH-RFC-003: Capstone Defense Standard",
+      "community_name": "Research Architectures Hub",
       "contributor": null,
       "file_type": "document",
       "norm_label": "inv-epi-001: verbatim epistemic history invariant",
       "rationale": "Mandates verbatim logging of significant architectural brainstorming sessions.",
       "source_file": "research/invariants/INV-EPI-001.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "research_invariants_inv_mem_001",
-      "label": "INV-MEM-001: Memory Invariants",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 221,
-      "community_name": "ARCH-RFC-003: Capstone Defense Standard",
-      "contributor": null,
-      "file_type": "document",
-      "norm_label": "inv-mem-001: memory invariants",
-      "rationale": "Codifies physical/mathematical limits like the Energy Chasm and Near-Memory Reduction efficiency.",
-      "source_file": "research/invariants/INV-MEM-001.md",
       "source_location": null,
       "source_url": null
     },
@@ -12245,82 +11706,50 @@
       "source_url": null
     },
     {
-      "id": "tool_claude_fleet",
-      "label": "Claude Worker Fleet (v2)",
+      "id": "research_architectures_arch_rfc_003",
+      "label": "ARCH-RFC-003: Capstone Defense Standard",
       "_origin": "semantic",
       "author": null,
       "captured_at": null,
-      "community": 50,
-      "community_name": "Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19)",
-      "contributor": null,
-      "file_type": "code",
-      "norm_label": "claude worker fleet (v2)",
-      "rationale": "Distributed task orchestrator for worker migration.",
-      "source_file": "schemas/capability-registry.yaml",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "tool_super_nlm",
-      "label": "Super-NLM Hub",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 50,
-      "community_name": "Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19)",
-      "contributor": null,
-      "file_type": "code",
-      "norm_label": "super-nlm hub",
-      "rationale": "Multi-account Google NotebookLM aggregator.",
-      "source_file": "schemas/capability-registry.yaml",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "research_experiments_fleet_001",
-      "label": "Experiment FLEET-001",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 50,
-      "community_name": "Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19)",
+      "community": 5,
+      "community_name": "ARCH-RFC-003: Capstone Defense Standard",
       "contributor": null,
       "file_type": "document",
-      "norm_label": "experiment fleet-001",
-      "rationale": "Validates state migration across worker profiles.",
-      "source_file": "research/experiments/FLEET-001.md",
+      "norm_label": "arch-rfc-003: capstone defense standard",
+      "rationale": "Optimizes the repository for undergraduate engineering project defense and academic audits.",
+      "source_file": "research/architectures/ARCH-RFC-003-CAPSTONE-DEFENSE-STANDARD.md",
       "source_location": null,
       "source_url": null
     },
     {
-      "id": "tool_strangler_ipu",
-      "label": "STRANGLER-IPU",
+      "id": "research_experiments_exp_001",
+      "label": "EXP-001: IPU Breakeven Sweep Protocol",
       "_origin": "semantic",
       "author": null,
       "captured_at": null,
-      "community": 69,
-      "community_name": "STRANGLER-IPU",
-      "contributor": null,
-      "file_type": "code",
-      "norm_label": "strangler-ipu",
-      "rationale": "6G Ingress Processing Unit microarchitectural simulation.",
-      "source_file": "schemas/capability-registry.yaml",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "research_experiments_gpu_ram_spec",
-      "label": "GPU & RAM Architecture Spec",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 69,
-      "community_name": "STRANGLER-IPU",
+      "community": 5,
+      "community_name": "ARCH-RFC-003: Capstone Defense Standard",
       "contributor": null,
       "file_type": "document",
-      "norm_label": "gpu & ram architecture spec",
-      "rationale": "Foundational research on near-memory compute and architectural bottlenecks.",
-      "source_file": "research/experiments/GPU_RAM_ARCHITECTURE_SPEC.md",
+      "norm_label": "exp-001: ipu breakeven sweep protocol",
+      "rationale": "Formal experiment protocol for the IPU parameter sweep.",
+      "source_file": "research/experiments/EXP-001-IPU-BREAKEVEN-SWEEP.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "research_invariants_inv_mem_001",
+      "label": "INV-MEM-001: Memory Invariants",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 5,
+      "community_name": "ARCH-RFC-003: Capstone Defense Standard",
+      "contributor": null,
+      "file_type": "document",
+      "norm_label": "inv-mem-001: memory invariants",
+      "rationale": "Codifies physical/mathematical limits like the Energy Chasm and Near-Memory Reduction efficiency.",
+      "source_file": "research/invariants/INV-MEM-001.md",
       "source_location": null,
       "source_url": null
     },
@@ -12557,31 +11986,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L310",
-      "weight": 1.0
-    },
-    {
-      "source": "sim_reconciliation_engine_audit_layer_1_consistency",
-      "target": "sim_reconciliation_engine_get_physical_research_artifacts",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L396",
-      "weight": 1.0
-    },
-    {
-      "source": "sim_reconciliation_engine_audit_repository",
-      "target": "sim_reconciliation_engine_auto_reconcile_counts",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L529",
+      "source_location": "L139",
       "weight": 1.0
     },
     {
@@ -12593,7 +11998,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L531",
+      "source_location": "L349",
       "weight": 1.0
     },
     {
@@ -12605,19 +12010,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L532",
-      "weight": 1.0
-    },
-    {
-      "source": "sim_reconciliation_engine_auto_reconcile_counts",
-      "target": "sim_reconciliation_engine_get_physical_research_artifacts",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L99",
+      "source_location": "L350",
       "weight": 1.0
     },
     {
@@ -15040,7 +14433,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L199",
+      "source_location": "L148",
       "weight": 1.0
     },
     {
@@ -15051,51 +14444,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L208",
-      "weight": 1.0
-    },
-    {
-      "source": "sync_get_ecosystemtoolrepos",
-      "target": "sync_write_notice",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "sync.ps1",
-      "source_location": "L123",
-      "weight": 1.0
-    },
-    {
-      "source": "sync_invoke_crosssync",
-      "target": "sync_write_status",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "sync.ps1",
-      "source_location": "L502",
-      "weight": 1.0
-    },
-    {
-      "source": "sync_invoke_crosssync",
-      "target": "sync_get_ecosystemtoolrepos",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "sync.ps1",
-      "source_location": "L503",
-      "weight": 1.0
-    },
-    {
-      "source": "sync_invoke_crosssync",
-      "target": "sync_write_success",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "sync.ps1",
-      "source_location": "L600",
+      "source_location": "L157",
       "weight": 1.0
     },
     {
@@ -15106,7 +14455,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L615",
+      "source_location": "L458",
       "weight": 1.0
     },
     {
@@ -15117,7 +14466,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L618",
+      "source_location": "L461",
       "weight": 1.0
     },
     {
@@ -15128,7 +14477,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L621",
+      "source_location": "L464",
       "weight": 1.0
     },
     {
@@ -15139,7 +14488,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L358",
+      "source_location": "L307",
       "weight": 1.0
     },
     {
@@ -15150,7 +14499,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L372",
+      "source_location": "L321",
       "weight": 1.0
     },
     {
@@ -15161,7 +14510,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L193",
+      "source_location": "L142",
       "weight": 1.0
     },
     {
@@ -15172,7 +14521,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L183",
+      "source_location": "L132",
       "weight": 1.0
     },
     {
@@ -15183,7 +14532,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L188",
+      "source_location": "L137",
       "weight": 1.0
     },
     {
@@ -15216,7 +14565,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L115",
+      "source_location": "L104",
       "weight": 1.0
     },
     {
@@ -15227,7 +14576,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L140",
+      "source_location": "L128",
       "weight": 1.0
     },
     {
@@ -15238,7 +14587,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L66",
+      "source_location": "L55",
       "weight": 1.0
     },
     {
@@ -15249,7 +14598,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L85",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -15704,61 +15053,6 @@
       "weight": 1.0
     },
     {
-      "source": "report_limitations_2_core_architectural_systemic_limitations",
-      "target": "report_limitations_2_12_qa_authorization_lease_mutation_boundary",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "report/limitations.md",
-      "source_location": "L77",
-      "weight": 1.0
-    },
-    {
-      "source": "report_limitations_2_core_architectural_systemic_limitations",
-      "target": "report_limitations_2_13_headless_copilot_api_contract_boundary_vs_full_agent_tool_calling",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "report/limitations.md",
-      "source_location": "L82",
-      "weight": 1.0
-    },
-    {
-      "source": "report_limitations_2_core_architectural_systemic_limitations",
-      "target": "report_limitations_2_14_multi_worker_fleet_authentication_header_propagation",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "report/limitations.md",
-      "source_location": "L87",
-      "weight": 1.0
-    },
-    {
-      "source": "report_limitations_2_core_architectural_systemic_limitations",
-      "target": "report_limitations_2_15_telemetry_failure_semantics_vs_synthetic_placeholders",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "report/limitations.md",
-      "source_location": "L92",
-      "weight": 1.0
-    },
-    {
-      "source": "report_limitations_2_core_architectural_systemic_limitations",
-      "target": "report_limitations_2_16_knowledge_graph_semantic_retrieval_evaluation_boundaries",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "report/limitations.md",
-      "source_location": "L97",
-      "weight": 1.0
-    },
-    {
       "source": "report_limitations_known_limitations_failure_modes_epistemic_risks",
       "target": "report_limitations_1_motivation_policy",
       "relation": "contains",
@@ -15976,50 +15270,6 @@
       "confidence_score": 1.0,
       "source_file": "report/quantitative-claims-audit.md",
       "source_location": "L27",
-      "weight": 1.0
-    },
-    {
-      "source": "report_reconciliation_2026_09_19",
-      "target": "report_reconciliation_2026_09_19_comprehensive_multi_model_ecosystem_reconciliation_report_2026_09_19",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "report/reconciliation-2026-09-19.md",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "report_reconciliation_2026_09_19_comprehensive_multi_model_ecosystem_reconciliation_report_2026_09_19",
-      "target": "report_reconciliation_2026_09_19_1_executive_summary",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "report/reconciliation-2026-09-19.md",
-      "source_location": "L15",
-      "weight": 1.0
-    },
-    {
-      "source": "report_reconciliation_2026_09_19_comprehensive_multi_model_ecosystem_reconciliation_report_2026_09_19",
-      "target": "report_reconciliation_2026_09_19_2_granular_reconciliation_matrix",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "report/reconciliation-2026-09-19.md",
-      "source_location": "L21",
-      "weight": 1.0
-    },
-    {
-      "source": "report_reconciliation_2026_09_19_comprehensive_multi_model_ecosystem_reconciliation_report_2026_09_19",
-      "target": "report_reconciliation_2026_09_19_3_epistemic_certification",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "report/reconciliation-2026-09-19.md",
-      "source_location": "L37",
       "weight": 1.0
     },
     {
@@ -16262,226 +15512,6 @@
       "confidence_score": 1.0,
       "source_file": "report/repository-audit.md",
       "source_location": "L39",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan",
-      "target": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_arch_plan_001_commercial_business_plan_technical_roadmap",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_2_market_opportunity_problem_statement",
-      "target": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_2_1_the_engineering_bottleneck",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L28",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_2_market_opportunity_problem_statement",
-      "target": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_2_2_why_aec_is_the_perfect_beachhead",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L33",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_3_product_architecture_fleet_inventory",
-      "target": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_3_1_live_repository_fleet_100_passing_tests",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L67",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_5_monetization_pricing_payment_rails",
-      "target": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_5_1_pricing_strategy_packages",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L102",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_5_monetization_pricing_payment_rails",
-      "target": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_5_2_payment_rails_architecture",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L112",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_7_multi_disciplinary_expansion_roadmap_eng_mcp",
-      "target": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_7_1_nepal_specialized_engineering_verticals",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L169",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_9_developing_market_software_licensing_realities_air_gapped_workarounds",
-      "target": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_9_1_the_problem",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L190",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_9_developing_market_software_licensing_realities_air_gapped_workarounds",
-      "target": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_9_2_the_technical_decoupling_why_mcp_still_works",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L195",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_9_developing_market_software_licensing_realities_air_gapped_workarounds",
-      "target": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_9_3_the_strategic_technical_resolution",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L200",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_arch_plan_001_commercial_business_plan_technical_roadmap",
-      "target": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_5_monetization_pricing_payment_rails",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L100",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_arch_plan_001_commercial_business_plan_technical_roadmap",
-      "target": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_6_zero_server_licensing_engine",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L121",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_arch_plan_001_commercial_business_plan_technical_roadmap",
-      "target": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_1_executive_summary",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L14",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_arch_plan_001_commercial_business_plan_technical_roadmap",
-      "target": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_7_multi_disciplinary_expansion_roadmap_eng_mcp",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L152",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_arch_plan_001_commercial_business_plan_technical_roadmap",
-      "target": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_8_strategic_execution_milestones",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L177",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_arch_plan_001_commercial_business_plan_technical_roadmap",
-      "target": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_9_developing_market_software_licensing_realities_air_gapped_workarounds",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L186",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_arch_plan_001_commercial_business_plan_technical_roadmap",
-      "target": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_universal_engineering_protocol_aec_mcp_multi_disciplinary_engineering_fleet",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_arch_plan_001_commercial_business_plan_technical_roadmap",
-      "target": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_2_market_opportunity_problem_statement",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L26",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_arch_plan_001_commercial_business_plan_technical_roadmap",
-      "target": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_3_product_architecture_fleet_inventory",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L40",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_arch_plan_001_commercial_business_plan_technical_roadmap",
-      "target": "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_4_the_4_universal_engineering_driver_patterns",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
-      "source_location": "L87",
       "weight": 1.0
     },
     {
@@ -17218,7 +16248,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/BMK-MEMORY-001.md",
-      "source_location": "L208",
+      "source_location": "L206",
       "weight": 1.0
     },
     {
@@ -18312,7 +17342,7 @@
     },
     {
       "source": "research_experiments_fleet_002_3_specification_component_contracts",
-      "target": "research_experiments_fleet_002_3_1_copilotheadlessadapter_completed_operational_scope_m1_m4",
+      "target": "research_experiments_fleet_002_3_1_copilotapiadapter",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -18323,13 +17353,13 @@
     },
     {
       "source": "research_experiments_fleet_002_3_specification_component_contracts",
-      "target": "research_experiments_fleet_002_3_2_sandboxed_local_tool_executor_phase_2_target_specification_m6",
+      "target": "research_experiments_fleet_002_3_2_sandboxed_local_tool_executor",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/FLEET-002.md",
-      "source_location": "L68",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -18340,7 +17370,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/FLEET-002.md",
-      "source_location": "L75",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -18384,7 +17414,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/FLEET-002.md",
-      "source_location": "L86",
+      "source_location": "L99",
       "weight": 1.0
     },
     {
@@ -18418,105 +17448,6 @@
       "confidence_score": 1.0,
       "source_file": "research/experiments/INV-template.md",
       "source_location": "L23",
-      "weight": 1.0
-    },
-    {
-      "source": "research_invariants_inv_wsr_002",
-      "target": "research_invariants_inv_wsr_002_architectural_invariant_inv_wsr_002_worker_protocol_completeness_truthful_telemetry",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/invariants/INV-WSR-002.md",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "research_invariants_inv_wsr_002_1_the_core_invariant_statements",
-      "target": "research_invariants_inv_wsr_002_1_1_invariant_a_closed_loop_worker_dispatch_no_orphaned_leases",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/invariants/INV-WSR-002.md",
-      "source_location": "L21",
-      "weight": 1.0
-    },
-    {
-      "source": "research_invariants_inv_wsr_002_1_the_core_invariant_statements",
-      "target": "research_invariants_inv_wsr_002_1_2_invariant_b_strict_separation_of_real_execution_and_simulation",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/invariants/INV-WSR-002.md",
-      "source_location": "L32",
-      "weight": 1.0
-    },
-    {
-      "source": "research_invariants_inv_wsr_002_1_the_core_invariant_statements",
-      "target": "research_invariants_inv_wsr_002_1_3_invariant_c_telemetry_truthfulness_quota_headroom",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/invariants/INV-WSR-002.md",
-      "source_location": "L41",
-      "weight": 1.0
-    },
-    {
-      "source": "research_invariants_inv_wsr_002_1_the_core_invariant_statements",
-      "target": "research_invariants_inv_wsr_002_1_4_invariant_d_atomic_checkpoint_dag_advancement",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/invariants/INV-WSR-002.md",
-      "source_location": "L53",
-      "weight": 1.0
-    },
-    {
-      "source": "research_invariants_inv_wsr_002_1_the_core_invariant_statements",
-      "target": "research_invariants_inv_wsr_002_1_5_invariant_e_qa_authority_claim_token_isolation_for_state_transitions",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/invariants/INV-WSR-002.md",
-      "source_location": "L62",
-      "weight": 1.0
-    },
-    {
-      "source": "research_invariants_inv_wsr_002_architectural_invariant_inv_wsr_002_worker_protocol_completeness_truthful_telemetry",
-      "target": "research_invariants_inv_wsr_002_1_the_core_invariant_statements",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/invariants/INV-WSR-002.md",
-      "source_location": "L19",
-      "weight": 1.0
-    },
-    {
-      "source": "research_invariants_inv_wsr_002_architectural_invariant_inv_wsr_002_worker_protocol_completeness_truthful_telemetry",
-      "target": "research_invariants_inv_wsr_002_2_mathematical_formalization",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/invariants/INV-WSR-002.md",
-      "source_location": "L72",
-      "weight": 1.0
-    },
-    {
-      "source": "research_invariants_inv_wsr_002_architectural_invariant_inv_wsr_002_worker_protocol_completeness_truthful_telemetry",
-      "target": "research_invariants_inv_wsr_002_3_verification_compliance_gate",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/invariants/INV-WSR-002.md",
-      "source_location": "L92",
       "weight": 1.0
     },
     {
@@ -20111,7 +19042,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "schemas/ecosystem.registry.json",
-      "source_location": "L19",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -20255,17 +19186,6 @@
       "confidence_score": 1.0,
       "source_file": "schemas/ecosystem.registry.json",
       "source_location": "L16",
-      "weight": 1.0
-    },
-    {
-      "source": "schemas_ecosystem_registry_statistics",
-      "target": "schemas_ecosystem_registry_statistics_research_artifacts",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "schemas/ecosystem.registry.json",
-      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -23317,24 +22237,24 @@
     },
     {
       "source": "sim_reconciliation_engine",
-      "target": "sim_reconciliation_engine_audit_layer_1_consistency",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L239",
-      "weight": 1.0
-    },
-    {
-      "source": "sim_reconciliation_engine",
       "target": "sim_reconciliation_engine_audit_layer_2_behavioral",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L487",
+      "source_location": "L309",
+      "weight": 1.0
+    },
+    {
+      "source": "sim_reconciliation_engine",
+      "target": "sim_reconciliation_engine_audit_repository",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "sim/reconciliation_engine.py",
+      "source_location": "L344",
       "weight": 1.0
     },
     {
@@ -23350,35 +22270,13 @@
     },
     {
       "source": "sim_reconciliation_engine",
-      "target": "sim_reconciliation_engine_audit_repository",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L522",
-      "weight": 1.0
-    },
-    {
-      "source": "sim_reconciliation_engine",
-      "target": "sim_reconciliation_engine_get_physical_research_artifacts",
+      "target": "sim_reconciliation_engine_audit_layer_1_consistency",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
       "source_location": "L73",
-      "weight": 1.0
-    },
-    {
-      "source": "sim_reconciliation_engine",
-      "target": "sim_reconciliation_engine_auto_reconcile_counts",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -23900,24 +22798,13 @@
     },
     {
       "source": "sync",
-      "target": "sync_get_ecosystemtoolrepos",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "sync.ps1",
-      "source_location": "L106",
-      "weight": 1.0
-    },
-    {
-      "source": "sync",
       "target": "sync_write_status",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L173",
+      "source_location": "L122",
       "weight": 1.0
     },
     {
@@ -23928,7 +22815,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L181",
+      "source_location": "L130",
       "weight": 1.0
     },
     {
@@ -23939,7 +22826,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L186",
+      "source_location": "L135",
       "weight": 1.0
     },
     {
@@ -23950,7 +22837,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L191",
+      "source_location": "L140",
       "weight": 1.0
     },
     {
@@ -23961,7 +22848,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L196",
+      "source_location": "L145",
       "weight": 1.0
     },
     {
@@ -23972,7 +22859,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L214",
+      "source_location": "L163",
       "weight": 1.0
     },
     {
@@ -23983,7 +22870,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L250",
+      "source_location": "L199",
       "weight": 1.0
     },
     {
@@ -23994,7 +22881,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L344",
+      "source_location": "L293",
       "weight": 1.0
     },
     {
@@ -24005,18 +22892,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L383",
-      "weight": 1.0
-    },
-    {
-      "source": "sync",
-      "target": "sync_invoke_crosssync",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "sync.ps1",
-      "source_location": "L498",
+      "source_location": "L332",
       "weight": 1.0
     },
     {
@@ -24027,7 +22903,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L603",
+      "source_location": "L446",
       "weight": 1.0
     },
     {
@@ -24038,7 +22914,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L643",
+      "source_location": "L486",
       "weight": 1.0
     },
     {
@@ -24559,25 +23435,14 @@
       "weight": 1.0
     },
     {
-      "source": "sim_reconciliation_engine_rationale_240",
-      "target": "sim_reconciliation_engine_audit_layer_1_consistency",
-      "relation": "rationale_for",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L240",
-      "weight": 1.0
-    },
-    {
-      "source": "sim_reconciliation_engine_rationale_488",
+      "source": "sim_reconciliation_engine_rationale_310",
       "target": "sim_reconciliation_engine_audit_layer_2_behavioral",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L488",
+      "source_location": "L310",
       "weight": 1.0
     },
     {
@@ -24593,24 +23458,13 @@
     },
     {
       "source": "sim_reconciliation_engine_rationale_74",
-      "target": "sim_reconciliation_engine_get_physical_research_artifacts",
+      "target": "sim_reconciliation_engine_audit_layer_1_consistency",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
       "source_location": "L74",
-      "weight": 1.0
-    },
-    {
-      "source": "sim_reconciliation_engine_rationale_94",
-      "target": "sim_reconciliation_engine_auto_reconcile_counts",
-      "relation": "rationale_for",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -24944,17 +23798,6 @@
       "weight": 1.0
     },
     {
-      "source": "report_reconciliation_2026_09_19",
-      "target": "research_invariants_inv_wsr_002",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "report/reconciliation-2026-09-19.md",
-      "source_location": "L29",
-      "weight": 1.0
-    },
-    {
       "source": "research_architectures_arch_rfc_002",
       "target": "research_architectures_arch_rfc_001",
       "relation": "references",
@@ -25274,28 +24117,6 @@
       "weight": 1.0
     },
     {
-      "source": "research_invariants_inv_wsr_002",
-      "target": "research_architectures_arch_rfc_001",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/invariants/INV-WSR-002.md",
-      "source_location": "L15",
-      "weight": 1.0
-    },
-    {
-      "source": "research_invariants_inv_wsr_002",
-      "target": "research_experiments_fleet_001",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/invariants/INV-WSR-002.md",
-      "source_location": "L15",
-      "weight": 1.0
-    },
-    {
       "source": "research_notes_2026_09_19_agentic_ai_industry_ayush_shah",
       "target": "templates_daily_note",
       "relation": "references",
@@ -25558,5 +24379,5 @@
       "source_file": "README.md"
     }
   ],
-  "built_at_commit": "98c40422641fc48abae00e15efae72971ff10fe2"
+  "built_at_commit": "543b756ab4513eb9d3284bb50d4163e2aade63d9"
 }

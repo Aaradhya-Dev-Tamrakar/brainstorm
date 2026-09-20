@@ -85,6 +85,14 @@ param (
 
     [switch]$NoPush,
 
+    [switch]$CrossSync,
+
+    [switch]$CrossPull,
+
+    [switch]$Reconcile,
+
+    [switch]$NoReconcile,
+
     [switch]$WhatIf,
 
     [switch]$Status
@@ -95,29 +103,72 @@ $ErrorActionPreference = "Stop"
 $TargetRemoteName = "origin"
 $TargetRemoteUrl  = "https://github.com/Aaradhya-Dev-Tamrakar/brainstorm.git"
 
-$KnownToolRepos = @(
-    "F:\Aaradhya-Dev-Tamrakar\super-nlm",
-    "F:\Aaradhya-Dev-Tamrakar\Autodesk-Fusion-360-MCP-Server",
-    "F:\Aaradhya-Dev-Tamrakar\system-optimizer",
-    "F:\Aaradhya-Dev-Tamrakar\SPARK",
-    "F:\AaradhyaDT\Nexus",
-    "F:\Aaradhya-Dev-Tamrakar\Claude-Desktop",
-    "F:\Aaradhya-Dev-Tamrakar\BiasAperture",
-    "F:\Aaradhya-Dev-Tamrakar\Alpha-SuperApp",
-    "F:\Aaradhya-Dev-Tamrakar\md2pdf-desktop",
-    "F:\AaradhyaDT\AI",
-    "F:\AaradhyaDT\rsvp-reading",
-    "F:\Aaradhya-Dev-Tamrakar\Aaradhya-Dev-Tamrakar.github.io",
-    "F:\Aaradhya-Dev-Tamrakar\AaradhyaDT.github.io",
-    "F:\Aaradhya-Dev-Tamrakar\makerspace",
-    "F:\AaradhyaDT\AaradhyaDTmr.github.io",
-    "F:\AaradhyaDT\nabintmr.github.io",
-    "F:\AaradhyaDT\react-workshop-ieeekecktm",
-    "F:\Aaradhya-Dev-Tamrakar\github-pilot",
-    "F:\Aaradhya-Dev-Tamrakar\nepali-ocr-ai",
-    "F:\Aaradhya-Dev-Tamrakar\google-classroom-mcp",
-    "F:\Aaradhya-Dev-Tamrakar\fusion360-mcp"
-)
+function Get-EcosystemToolRepos {
+    $repos = [System.Collections.Generic.List[string]]::new()
+
+    # 1. Primary Source of Truth: schemas/ecosystem.registry.json
+    $registryPath = Join-Path $PSScriptRoot "schemas\ecosystem.registry.json"
+    if (Test-Path $registryPath) {
+        try {
+            $regData = Get-Content $registryPath -Raw -Encoding UTF8 | ConvertFrom-Json
+            if ($regData -and $regData.modules) {
+                foreach ($mod in $regData.modules) {
+                    if ($mod.local_path -and -not $repos.Contains($mod.local_path)) {
+                        $repos.Add($mod.local_path)
+                    }
+                }
+            }
+        }
+        catch {
+            Write-Notice "Notice: Could not parse ecosystem.registry.json for tool paths: $_"
+        }
+    }
+
+    # 2. Dynamic Filesystem Discovery across active development roots
+    $scanRoots = @("F:\Aaradhya-Dev-Tamrakar", "F:\AaradhyaDT")
+    foreach ($root in $scanRoots) {
+        if (Test-Path $root) {
+            $dirs = Get-ChildItem -Path $root -Directory -ErrorAction SilentlyContinue
+            foreach ($d in $dirs) {
+                $gitDir = Join-Path $d.FullName ".git"
+                if (Test-Path $gitDir) {
+                    if (-not $repos.Contains($d.FullName)) {
+                        $repos.Add($d.FullName)
+                    }
+                }
+            }
+        }
+    }
+
+    # Fallback to known default paths if empty
+    if ($repos.Count -eq 0) {
+        $defaults = @(
+            "F:\Aaradhya-Dev-Tamrakar\super-nlm",
+            "F:\Aaradhya-Dev-Tamrakar\Autodesk-Fusion-360-MCP-Server",
+            "F:\Aaradhya-Dev-Tamrakar\system-optimizer",
+            "F:\Aaradhya-Dev-Tamrakar\SPARK",
+            "F:\AaradhyaDT\Nexus",
+            "F:\Aaradhya-Dev-Tamrakar\Claude-Desktop",
+            "F:\Aaradhya-Dev-Tamrakar\BiasAperture",
+            "F:\Aaradhya-Dev-Tamrakar\Alpha-SuperApp",
+            "F:\Aaradhya-Dev-Tamrakar\md2pdf-desktop",
+            "F:\AaradhyaDT\AI",
+            "F:\AaradhyaDT\rsvp-reading",
+            "F:\Aaradhya-Dev-Tamrakar\Aaradhya-Dev-Tamrakar.github.io",
+            "F:\Aaradhya-Dev-Tamrakar\AaradhyaDT.github.io",
+            "F:\Aaradhya-Dev-Tamrakar\makerspace",
+            "F:\AaradhyaDT\react-workshop-ieeekecktm",
+            "F:\Aaradhya-Dev-Tamrakar\github-pilot",
+            "F:\Aaradhya-Dev-Tamrakar\nepali-ocr-ai",
+            "F:\Aaradhya-Dev-Tamrakar\google-classroom-mcp",
+            "F:\Aaradhya-Dev-Tamrakar\fusion360-mcp"
+        )
+        foreach ($def in $defaults) { $repos.Add($def) }
+    }
+
+    return @($repos)
+}
+
 
 function Write-Status {
     param(
@@ -398,8 +449,9 @@ function Sync-AllBranches {
 }
 
 function Audit-ToolRepositories {
-    Write-Status "Auditing brainstorm branch status across known tool repos..." -Color ([System.ConsoleColor]::Cyan)
-    $report = foreach ($dir in $KnownToolRepos) {
+    Write-Status "Auditing brainstorm branch status across dynamic ecosystem tool repos..." -Color ([System.ConsoleColor]::Cyan)
+    $toolRepos = Get-EcosystemToolRepos
+    $report = foreach ($dir in $toolRepos) {
         if (-not (Test-Path $dir)) {
             [PSCustomObject]@{
                 Repository    = Split-Path $dir -Leaf
@@ -441,6 +493,111 @@ function Audit-ToolRepositories {
     Write-Host " ECOSYSTEM TOOL REPOSITORIES AUDIT" -ForegroundColor Cyan
     Write-Host "========================================================" -ForegroundColor DarkCyan
     $report | Format-Table -AutoSize
+}
+
+function Invoke-CrossSync {
+    [CmdletBinding()]
+    param([switch]$Pull)
+
+    Write-Status "Initiating Dynamic Ecosystem Cross-Synchronization..." -Color ([System.ConsoleColor]::Cyan)
+    $toolRepos = Get-EcosystemToolRepos
+    Write-Status "Discovered $($toolRepos.Count) ecosystem repositories dynamically." -Color ([System.ConsoleColor]::DarkCyan)
+
+    $results = @()
+    foreach ($dir in $toolRepos) {
+        $repoName = Split-Path $dir -Leaf
+        if (-not (Test-Path $dir)) {
+            $results += [PSCustomObject]@{
+                Repository = $repoName
+                Branch     = "-"
+                CleanTree  = "-"
+                Ahead      = "-"
+                Behind     = "-"
+                SyncAction = "Missing on disk"
+            }
+            continue
+        }
+
+        if (-not (Test-Path (Join-Path $dir ".git"))) {
+            $results += [PSCustomObject]@{
+                Repository = $repoName
+                Branch     = "Non-git"
+                CleanTree  = "-"
+                Ahead      = "-"
+                Behind     = "-"
+                SyncAction = "Skipped"
+            }
+            continue
+        }
+
+        try {
+            $active = (git -C $dir branch --show-current 2>$null)
+            if ($active) { $active = $active.Trim() } else { $active = "detached" }
+
+            $status = git -C $dir status --porcelain 2>$null
+            $isClean = [bool](-not $status -or $status.Trim().Length -eq 0)
+
+            $remotes = @(git -C $dir remote 2>$null)
+            $hasOrigin = $remotes -contains "origin"
+
+            $ahead = 0; $behind = 0
+            $action = "In Sync"
+
+            if ($hasOrigin -and $active -ne "detached") {
+                $null = & git -C $dir fetch origin --prune 2>$null
+                $aheadBehind = git -C $dir rev-list --left-right --count "origin/$active...$active" 2>$null
+                if ($aheadBehind) {
+                    $parts = $aheadBehind.Trim() -split '\s+'
+                    $behind = [int]$parts[0]
+                    $ahead  = [int]$parts[1]
+                }
+
+                if ($ahead -gt 0) {
+                    $action = "Ahead ($ahead commit(s) unpushed)"
+                }
+                elseif ($behind -gt 0) {
+                    if ($Pull -and $isClean) {
+                        $null = & git -C $dir pull --rebase --autostash origin $active 2>$null
+                        $action = if ($LASTEXITCODE -eq 0) { "Rebased ($behind remote commit(s))" } else { "Pull Failed" }
+                    }
+                    else {
+                        $action = "Behind ($behind commit(s))"
+                    }
+                }
+                elseif (-not $isClean) {
+                    $action = "Uncommitted Changes"
+                }
+            }
+            else {
+                $action = if (-not $hasOrigin) { "No Remote Origin" } else { "Detached HEAD" }
+            }
+
+            $results += [PSCustomObject]@{
+                Repository = $repoName
+                Branch     = $active
+                CleanTree  = if ($isClean) { "Clean" } else { "Dirty" }
+                Ahead      = $ahead
+                Behind     = $behind
+                SyncAction = $action
+            }
+        }
+        catch {
+            $results += [PSCustomObject]@{
+                Repository = $repoName
+                Branch     = "?"
+                CleanTree  = "?"
+                Ahead      = "?"
+                Behind     = "?"
+                SyncAction = "Error: $_"
+            }
+        }
+    }
+
+    Write-Host "`n================================================================================" -ForegroundColor DarkCyan
+    Write-Host " DYNAMIC CROSS-ECOSYSTEM SYNCHRONIZATION STATUS" -ForegroundColor Cyan
+    Write-Host "================================================================================" -ForegroundColor DarkCyan
+    $results | Format-Table -AutoSize
+    Write-Success "Dynamic cross-sync evaluation complete across $($toolRepos.Count) ecosystem repositories."
 }
 
 function Provision-NewTool {
@@ -541,6 +698,18 @@ if (-not (Test-Path (Join-Path $RepoPath '.git'))) {
 Push-Location $RepoPath
 try {
     Ensure-RemoteConfigured
+
+    if ($CrossSync -or $CrossPull) {
+        Invoke-CrossSync -Pull:$CrossPull
+        exit 0
+    }
+
+    if ($Reconcile) {
+        Write-Status "Executing dynamic documentation & invariant auto-reconciliation..." -Color ([System.ConsoleColor]::Cyan)
+        $reconPy = Join-Path $RepoPath "sim\reconciliation_engine.py"
+        python $reconPy --fix
+        exit $LASTEXITCODE
+    }
 
     if ($SyncToolRepos) {
         Audit-ToolRepositories
@@ -643,6 +812,19 @@ try {
         git reset --quiet
         Write-Success "[WhatIf] Dry run completed. No changes committed or pushed."
         exit 0
+    }
+
+    # 3.5 Dynamic Documentation & Invariant Auto-Reconciliation Gate
+    if (-not $NoReconcile -and (Test-Path (Join-Path $RepoPath "sim\reconciliation_engine.py"))) {
+        Write-Status "Executing dynamic documentation & invariant auto-reconciliation..." -Color ([System.ConsoleColor]::Cyan)
+        $reconPy = Join-Path $RepoPath "sim\reconciliation_engine.py"
+        python $reconPy --fix
+        if ($LASTEXITCODE -ne 0) {
+            Write-Notice "Warning: Dynamic reconciliation reported discrepancies. Proceeding with staging..."
+        }
+        else {
+            Write-Success "All documentation counts and invariant ledgers dynamically reconciled."
+        }
     }
 
     # 4. Stage and verify secrets

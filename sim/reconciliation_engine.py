@@ -70,6 +70,172 @@ def parse_simple_yaml_capabilities(filepath):
     return capabilities
 
 
+def get_physical_research_artifacts():
+    """Enumerate valid physical Markdown research artifacts on disk."""
+    arch_dir = os.path.join(RESEARCH_DIR, "architectures")
+    exp_dir = os.path.join(RESEARCH_DIR, "experiments")
+    inv_dir = os.path.join(RESEARCH_DIR, "invariants")
+
+    def count_valid(dir_path):
+        if not os.path.exists(dir_path):
+            return []
+        return sorted([
+            f for f in os.listdir(dir_path)
+            if f.endswith(".md") and f != "README.md" and not f.startswith("INV-template") and not f.startswith(".")
+        ])
+
+    arch = count_valid(arch_dir)
+    exp = count_valid(exp_dir)
+    inv = count_valid(inv_dir)
+    return arch, exp, inv, len(arch) + len(exp) + len(inv)
+
+
+def auto_reconcile_counts():
+    """
+    Dynamically enumerates physical artifacts and synchronizes all canonical
+    counts across ecosystem.registry.json, README.md, capability-ontology.md,
+    and report/repository-audit.md.
+    """
+    arch_artifacts, exp_artifacts, inv_artifacts, total_physical = get_physical_research_artifacts()
+    reconciled_actions = []
+
+    # 1. Update schemas/ecosystem.registry.json
+    ecosystem_registry_path = os.path.join(SCHEMAS_DIR, "ecosystem.registry.json")
+    total_modules = 21
+    comp_modules = 17
+    pres_modules = 4
+    if os.path.exists(ecosystem_registry_path):
+        try:
+            with open(ecosystem_registry_path, "r", encoding="utf-8") as erf:
+                ereg_data = json.load(erf)
+            modules = ereg_data.get("modules", [])
+            if modules:
+                total_modules = len(modules)
+                comp_modules = sum(1 for m in modules if m.get("category") == "computational_engine")
+                pres_modules = sum(1 for m in modules if m.get("category") == "presentation_and_educational")
+
+            stats = ereg_data.setdefault("statistics", {})
+            changed = False
+            if stats.get("research_artifacts") != total_physical:
+                stats["research_artifacts"] = total_physical
+                changed = True
+            if stats.get("total_tool_modules") != total_modules:
+                stats["total_tool_modules"] = total_modules
+                changed = True
+            if stats.get("computational_modules") != comp_modules:
+                stats["computational_modules"] = comp_modules
+                changed = True
+            if stats.get("presentation_and_educational_modules") != pres_modules:
+                stats["presentation_and_educational_modules"] = pres_modules
+                changed = True
+
+            if changed:
+                with open(ecosystem_registry_path, "w", encoding="utf-8") as erf:
+                    json.dump(ereg_data, erf, indent=2)
+                    erf.write("\n")
+                reconciled_actions.append(f"schemas/ecosystem.registry.json -> research_artifacts={total_physical}, total_tool_modules={total_modules}")
+        except Exception as e:
+            print(f"[!] Warning during ecosystem.registry.json reconciliation: {e}")
+
+    # 2. Update README.md
+    readme_file = os.path.join(BRAINSTORM_ROOT, "README.md")
+    if os.path.exists(readme_file):
+        try:
+            with open(readme_file, "r", encoding="utf-8") as rf:
+                content = rf.read()
+            new_content = re.sub(
+                r'\b\d+\s+Research Specs & Experiments\b',
+                f"{total_physical} Research Specs & Experiments",
+                content
+            )
+            new_content = re.sub(
+                r'\b\d+\s+Tool Modules\b',
+                f"{total_modules} Tool Modules",
+                new_content
+            )
+            new_content = re.sub(
+                r'\b\d+\s+Computational Engines\b',
+                f"{comp_modules} Computational Engines",
+                new_content
+            )
+            new_content = re.sub(
+                r'\b\d+\s+Presentation Hubs\b',
+                f"{pres_modules} Presentation Hubs",
+                new_content
+            )
+            if new_content != content:
+                with open(readme_file, "w", encoding="utf-8") as rf:
+                    rf.write(new_content)
+                reconciled_actions.append(f"README.md -> {total_physical} Research Specs & Experiments")
+        except Exception as e:
+            print(f"[!] Warning during README.md reconciliation: {e}")
+
+    # 3. Update schemas/capability-ontology.md
+    ontology_file = os.path.join(SCHEMAS_DIR, "capability-ontology.md")
+    if os.path.exists(ontology_file):
+        try:
+            with open(ontology_file, "r", encoding="utf-8") as of:
+                ont_text = of.read()
+            new_ont = re.sub(
+                r'(\|\s*\*\*Research Experiments, Specs & RFCs\*\*\s*\|\s*\*\*)\d+(\*\*\s*\|)',
+                rf"\g<1>{total_physical}\g<2>",
+                ont_text
+            )
+            new_ont = re.sub(
+                r'(\|\s*\*\*Cataloged Tool Modules\*\*\s*\|\s*\*\*)\d+(\*\*\s*\|)',
+                rf"\g<1>{total_modules}\g<2>",
+                new_ont
+            )
+            new_ont = re.sub(
+                r'(\|\s*\*\*Computational Capabilities\*\*\s*\|\s*\*\*)\d+(\*\*\s*\|)',
+                rf"\g<1>{comp_modules}\g<2>",
+                new_ont
+            )
+            new_ont = re.sub(
+                r'(\|\s*\*\*Presentation & Educational Hubs\*\*\s*\|\s*\*\*)\d+(\*\*\s*\|)',
+                rf"\g<1>{pres_modules}\g<2>",
+                new_ont
+            )
+            if new_ont != ont_text:
+                with open(ontology_file, "w", encoding="utf-8") as of:
+                    of.write(new_ont)
+                reconciled_actions.append(f"schemas/capability-ontology.md -> {total_physical} Research Artifacts")
+        except Exception as e:
+            print(f"[!] Warning during capability-ontology.md reconciliation: {e}")
+
+    # 4. Update report/repository-audit.md
+    audit_file = os.path.join(REPORT_DIR, "repository-audit.md")
+    if os.path.exists(audit_file):
+        try:
+            with open(audit_file, "r", encoding="utf-8") as af:
+                audit_text = af.read()
+            new_audit = re.sub(
+                r'\b\d+\s+Research Artifacts\b',
+                f"{total_physical} Research Artifacts",
+                audit_text
+            )
+            new_audit = re.sub(
+                r'\b\d+\s+Cataloged Modules\b',
+                f"{total_modules} Cataloged Modules",
+                new_audit
+            )
+            if new_audit != audit_text:
+                with open(audit_file, "w", encoding="utf-8") as af:
+                    af.write(new_audit)
+                reconciled_actions.append(f"report/repository-audit.md -> {total_physical} Research Artifacts")
+        except Exception as e:
+            print(f"[!] Warning during repository-audit.md reconciliation: {e}")
+
+    if reconciled_actions:
+        print("[*] Dynamic Reconciliation Engine synchronized declarations:")
+        for act in reconciled_actions:
+            print(f"    -> {act}")
+    else:
+        print(f"[*] Dynamic Reconciliation Engine: Declarations synchronized ({total_physical} artifacts, {total_modules} modules).")
+
+    return total_physical
+
+
 def audit_layer_1_consistency():
     """Layer 1: Structural consistency, schemas, metadata, links, and economic constants."""
     discrepancies = []
@@ -99,23 +265,28 @@ def audit_layer_1_consistency():
                     data = json.load(jf)
                 if rel_path == "schemas/ecosystem.registry.json":
                     stats = data.get("statistics", {})
-                    if stats.get("total_tool_modules") != 21:
+                    modules_list = data.get("modules", [])
+                    expected_total = len(modules_list) if modules_list else 21
+                    expected_comp = sum(1 for m in modules_list if m.get("category") == "computational_engine") if modules_list else 17
+                    expected_pres = sum(1 for m in modules_list if m.get("category") == "presentation_and_educational") if modules_list else 4
+
+                    if stats.get("total_tool_modules") != expected_total:
                         discrepancies.append({
                             "type": "TAXONOMY_DISCREPANCY",
                             "file": rel_path,
-                            "detail": f"Expected 21 total_tool_modules, found {stats.get('total_tool_modules')}"
+                            "detail": f"Expected {expected_total} total_tool_modules (from modules list), found {stats.get('total_tool_modules')}"
                         })
-                    if stats.get("computational_modules") != 17:
+                    if stats.get("computational_modules") != expected_comp:
                         discrepancies.append({
                             "type": "TAXONOMY_DISCREPANCY",
                             "file": rel_path,
-                            "detail": f"Expected 17 computational_modules, found {stats.get('computational_modules')}"
+                            "detail": f"Expected {expected_comp} computational_modules (from modules list), found {stats.get('computational_modules')}"
                         })
-                    if stats.get("presentation_and_educational_modules") != 4:
+                    if stats.get("presentation_and_educational_modules") != expected_pres:
                         discrepancies.append({
                             "type": "TAXONOMY_DISCREPANCY",
                             "file": rel_path,
-                            "detail": f"Expected 4 presentation_and_educational_modules, found {stats.get('presentation_and_educational_modules')}"
+                            "detail": f"Expected {expected_pres} presentation_and_educational_modules (from modules list), found {stats.get('presentation_and_educational_modules')}"
                         })
             except Exception as e:
                 discrepancies.append({
@@ -222,22 +393,7 @@ def audit_layer_1_consistency():
                     })
 
     # Dynamic Physical Research Artifact Enumeration & Validation
-    arch_dir = os.path.join(RESEARCH_DIR, "architectures")
-    exp_dir = os.path.join(RESEARCH_DIR, "experiments")
-    inv_dir = os.path.join(RESEARCH_DIR, "invariants")
-
-    def count_valid_md_artifacts(dir_path):
-        if not os.path.exists(dir_path):
-            return []
-        return [
-            f for f in os.listdir(dir_path)
-            if f.endswith(".md") and f != "README.md" and not f.startswith("INV-template") and not f.startswith(".")
-        ]
-
-    arch_artifacts = count_valid_md_artifacts(arch_dir)
-    exp_artifacts = count_valid_md_artifacts(exp_dir)
-    inv_artifacts = count_valid_md_artifacts(inv_dir)
-    total_physical_artifacts = len(arch_artifacts) + len(exp_artifacts) + len(inv_artifacts)
+    arch_artifacts, exp_artifacts, inv_artifacts, total_physical_artifacts = get_physical_research_artifacts()
 
     # Derive canonical count dynamically from schemas/ecosystem.registry.json
     canonical_artifact_count = None
@@ -363,11 +519,15 @@ def audit_layer_2_behavioral():
         return errors, result.testsRun
 
 
-def audit_repository():
+def audit_repository(auto_fix=False):
     print("=" * 75)
     print("   BRAINSTORM DUAL-LAYER DETERMINISTIC VERIFICATION ENGINE (ARCH-RFC-001/005)")
     print("=" * 75)
     
+    if auto_fix:
+        print("[*] Running dynamic count and inventory auto-reconciliation before audit...")
+        auto_reconcile_counts()
+
     l1_errors = audit_layer_1_consistency()
     l2_errors, l2_tests_run = audit_layer_2_behavioral()
     
@@ -413,5 +573,6 @@ def audit_repository():
 
 
 if __name__ == "__main__":
-    exit_code = audit_repository()
+    auto_fix = any(arg in sys.argv for arg in ["--fix", "-f", "--reconcile", "-r"])
+    exit_code = audit_repository(auto_fix=auto_fix)
     sys.exit(0 if exit_code == 0 else 1)

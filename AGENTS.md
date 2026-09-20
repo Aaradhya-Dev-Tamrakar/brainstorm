@@ -40,6 +40,17 @@ To avoid breaking multi-branch tracking and prevent wasteful multi-step Git comm
   .\sync.ps1 -SyncToolRepos
   ```
 
+- **Dynamic Ecosystem Cross-Sync (Status & Pull)**:
+  ```powershell
+  .\sync.ps1 -CrossSync                   # Audit cross-repo synchronization across all discovered tools
+  .\sync.ps1 -CrossPull                   # Safely rebase and pull updates across clean tool repos
+  ```
+
+- **Dynamic Invariant & Documentation Auto-Reconciliation**:
+  ```powershell
+  .\sync.ps1 -Reconcile                   # Dynamically reconcile counts across registry, ontology, audit & README
+  ```
+
 - **Safe Pull Only**:
   ```powershell
   .\sync.ps1 -PullOnly
@@ -107,7 +118,8 @@ Speculative text is never ground truth; deterministic execution is. Before final
 
 1. **Zero-Discrepancy Audit Gate**:
    ```powershell
-   .\audit.bat
+   .\audit.bat                             # Verify structural consistency and simulation tests (Target: 0 errors)
+   .\audit.bat --fix                       # Automatically reconcile physical research counts across docs
    ```
    _Executes `sim/reconciliation_engine.py`. Verifies schema validity, cross-branch consistency, inventory counts, and contract integrity across all 21 modules. Target: 0 errors._
 

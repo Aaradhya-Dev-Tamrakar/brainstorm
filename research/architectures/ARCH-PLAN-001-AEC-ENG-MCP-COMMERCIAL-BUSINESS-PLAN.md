@@ -1,11 +1,12 @@
 # ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap
 ## Universal Engineering Protocol: AEC-MCP & Multi-Disciplinary Engineering Fleet
 
-**Document ID:** `ARCH-PLAN-001`  
+**Artifact ID:** `ARCH-PLAN-001`  
 **Classification:** Strategic Business Plan & Commercial Architecture  
-**Author / Founder:** Aaradhya Dev Tamrakar  
+**Principal Architect:** Aaradhya Dev Tamrakar  
 **Date:** September 20, 2026  
-**Status:** APPROVED / INITIATED  
+**Status:** IMPLEMENTED  
+**Evidence Tier:** `E1` — Design Specification (Approved business plan and product architecture)  
 **Target Markets:** Nepal (TU-IOE & KU Ecosystems, B2B Consultancies) & Global International Engineers  
 
 ---

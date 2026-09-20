@@ -44,6 +44,18 @@
       "drive_file_name": "brainstorm_GRAPH_REPORT.md",
       "description": "Graphify Knowledge Graph Structural Report",
       "sha256": "5e7d797256960f81"
+    },
+    "research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md": {
+      "drive_file_id": "1-8wRY5vt5o0OTMx7d9ufRlXMsKmxnsbO",
+      "drive_file_name": "ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md",
+      "description": "Commercial Business Plan & Technical Roadmap for AEC & Engineering MCP Fleet",
+      "sha256": "90b029216c53b383"
+    },
+    "research/transcripts/2026-09-20_AEC-Eng-MCP-Business-Strategy-Dialogue.md": {
+      "drive_file_id": "1JSoYfiCxo3VktGVFpM8JV0ApzzkaV990",
+      "drive_file_name": "2026-09-20_AEC-Eng-MCP-Business-Strategy-Dialogue.md",
+      "description": "Epistemic Record of AEC & Engineering MCP Business Strategy Dialogue",
+      "sha256": "113b0855441e2787"
     }
   }
 }

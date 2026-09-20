@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Aaradhya Dev Tamrakar//AEC-MCP Business Plan//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:aec-mcp-launch-20260920T114000@brainstorm.local
+DTSTAMP:20260920T055500Z
+DTSTART:20260920T061500Z
+DTEND:20260920T081500Z
+SUMMARY:🔥 [HIGH PRIORITY] AEC-MCP Suite Launch & Master Gateway Execution
+DESCRIPTION:Commercial Business Plan (ARCH-PLAN-001) Execution:\n\n1. Initialize Aaradhya-Dev-Tamrakar/aec-mcp master gateway.\n2. Unify the 13 local bridges under %LOCALAPPDATA%\\AEC_MCP\\registry.json.\n3. Implement Ed25519 offline licensing & BETA-BYPASS token.\n4. Deploy protect-cad.ps1 firewall isolation for safe offline CAD testing.\n5. Configure dual-rail onboarding: Fonepay/eSewa (NPR) & Lemon Squeezy (USD).\n\nDocumentation: file:///F:/Aaradhya-Dev-Tamrakar/brainstorm/research/architectures/ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md
+LOCATION:Workstation (Local Host) / Kupondole & Pulchowk Target Market
+STATUS:CONFIRMED
+PRIORITY:1
+CLASS:PUBLIC
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder: High-Priority AEC-MCP Execution Block
+END:VALARM
+END:VEVENT
+END:VCALENDAR

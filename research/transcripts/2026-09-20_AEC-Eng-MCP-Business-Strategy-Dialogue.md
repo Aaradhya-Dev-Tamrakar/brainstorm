@@ -39,3 +39,14 @@
 * **Market Fit:**
   * Over 12,000 engineering students in Nepal (TU-IOE Pulchowk/Thapathali/WRC/ERC, KU Dhulikhel, and 30+ private colleges) require software aligned with syllabus modules: EPANET (Water Supply), SAP2000/ETABS (Structural), QGIS (Geomatics), and AutoCAD.
   * Hundreds of engineering consultancies require automated structural checking complying with **NBC 105:2020** and **IS 456:2000**.
+
+### E. Developing Market Licensing Realities & The Air-Gapped CAD Solution
+* **Discovery:** In emerging markets like Nepal, many students and small studios rely on patched/cracked installations of AutoCAD, Revit, SAP2000, and ETABS. Connecting to the internet while working causes vendor licensing services (Autodesk Genuine Service, Sentinel RMS) to flag the software and terminate service.
+* **Technical Reality:**
+  * MCP bridges operate via local Windows COM/OAPI/IPC memory on `127.0.0.1` and never phone home or connect the CAD software to the internet.
+  * Only the AI client (Claude/Cursor) requires internet connectivity.
+* **Mitigation & Strategy:**
+  1. *Windows Firewall Outbound Blocking (`protect-cad.ps1`):* Block outbound internet access specifically for `acad.exe`, `revit.exe`, `ETABS.exe`, and `Sap2000.exe`. The workstation stays online for Claude/Cursor, but CAD software remains air-gapped while maintaining local COM interop.
+  2. *Educational Licensing Drive:* Promote official free 1-year Autodesk Educational licenses for `@ioe.edu.np` and `@ku.edu.np` students.
+  3. *Open-Source Stability:* Anchor workflows around EPANET and QGIS, which possess zero licensing risk.
+

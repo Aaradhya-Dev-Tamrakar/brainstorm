@@ -179,3 +179,32 @@ No complex server infrastructure is required. The licensing system runs on **Off
 * **Milestone 2 (Week 3–4):** Onboard 5–10 senior civil/architecture beta testers from IOE Pulchowk / Thapathali and local consultancies.
 * **Milestone 3 (Month 2):** Launch Fonepay/eSewa QR onboarding for Nepal and Lemon Squeezy for international users.
 * **Milestone 4 (Month 3–6):** Accumulate initial annuity bootstrap fund; begin prototyping `mech-mcp` (SolidWorks) and `eda-mcp` (KiCad/LTspice).
+
+---
+
+## 9. Developing Market Software Licensing Realities & Air-Gapped Workarounds
+
+In emerging markets like Nepal, a substantial portion of university students, independent draftspersons, and boutique engineering consultancies utilize legacy or patched/cracked installations of enterprise CAD and FEA suites (AutoCAD, Revit, ETABS, SAP2000).
+
+### 9.1 The Problem
+When workstations connect to the internet to run frontier AI models (Claude Desktop, Cursor, Antigravity):
+* **Autodesk Genuine Service (`AdskLicensingService`)** and **CSI Sentinel RMS License Managers** attempt outbound telemetry pings.
+* If unlicensed, the host software flags the installation, displays warnings, or terminates process execution.
+
+### 9.2 The Technical Decoupling (Why MCP Still Works)
+* **Local Kernel-Level IPC:** All 13 MCP bridges interact with desktop applications exclusively via **in-memory Windows COM (`win32com.client`)**, **C# .NET ExternalEvents**, or **Localhost (`127.0.0.1`) sockets**.
+* **Zero Outbound Exposure:** The MCP bridges never transmit CAD project data, serial numbers, or license states to external servers.
+* **The Only Internet Requirement:** Internet connectivity is strictly required by the **AI Client** (Claude/Cursor) to perform LLM inference over HTTPS.
+
+### 9.3 The Strategic & Technical Resolution
+
+1. **Firewall Outbound Isolation (`protect-cad.ps1`):**
+   * Provide an optional, automated Windows Defender Firewall helper script that creates outbound block rules specifically for CAD executables (`acad.exe`, `revit.exe`, `Sap2000.exe`, `ETABS.exe`).
+   * **Result:** The workstation remains 100% online for AI LLM streaming, while the CAD software remains entirely air-gapped from vendor telemetry servers. Local COM interop continues functioning uninterrupted.
+2. **Official Student License Pipeline:**
+   * Educational promotion for IOE and KU engineering students (`@ioe.edu.np`, `@ku.edu.np`) to obtain official, 100% free 1-year renewable Autodesk Educational licenses, eliminating fear of vendor lockouts.
+3. **Open-Source Core Anchors:**
+   * Tools like **EPANET** (US EPA Public Domain) and **QGIS** (OSGeo Open Source) are fully open-source with zero licensing friction or internet deactivation risk.
+4. **B2B Consultancy Focus:**
+   * Institutional consultancies operating with legitimate licenses experience zero disruption and represent the primary high-ticket annuity target.
+

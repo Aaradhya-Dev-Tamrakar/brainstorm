@@ -4,7 +4,7 @@
   "execution_timestamp": "2026-09-19T20:21:24+05:45",
   "evaluator": "Antigravity AI (Dual-Layer Engine)",
   "governance_standard": "ARCH-RFC-005",
-  "status": "PASS",
+  "status": "PARTIAL_PASS",
   "evidence_tier": "E4",
   "metrics": {
     "baseline_pre_stratification": {

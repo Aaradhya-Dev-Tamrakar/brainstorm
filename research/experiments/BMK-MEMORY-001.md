@@ -4,7 +4,7 @@
 Artifact ID:          BMK-MEMORY-001
 Title:                Graphify Knowledge Graph Signal Density Benchmark Before and After Memory Stratification
 Version:              1.1.0
-Status:               EMPIRICALLY_VERIFIED
+Status:               EMPIRICALLY_VERIFIED (QUALIFIED_PARTIAL_PASS)
 Principal Architect:  Aaradhya Dev Tamrakar (ADT) & Multi-Model Cognitive Council
 Domain:               Knowledge Representation, Graph Modularity & Retrieval Precision
 Created Date:         2026-09-19
@@ -200,6 +200,8 @@ HYP-MEM-001 Sub-Hypothesis Breakdown:
 ```
 
 *Epistemic Note on Cohesion Discrepancy:* While top architectural modules (e.g. `ARCH-RFC-003: Capstone Defense Standard` at 0.54, `INV-[ID]` at 0.50, `transcript_archiver` at 0.43) met or exceeded the $\ge 0.45$ target, the global mean community cohesion was weighed down to $0.230$ by residual JSON schema leaf properties (`properties`, `items`, `enum`). The core retrieval and noise-elimination hypotheses are empirically demonstrated, while universal cohesion optimization across non-code schemas remains a documented open challenge.
+
+*Evaluator Scope Boundary:* This benchmark was conducted against a curated 5-query architectural evaluation suite within the `brainstorm` ecosystem. While it establishes internal diagnostic validity for stratification within this knowledge graph, external generalization to arbitrary multi-repo corpora or independent double-blind evaluation remains an explicit future research phase.
 
 ---
 

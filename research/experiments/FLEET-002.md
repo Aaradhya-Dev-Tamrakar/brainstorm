@@ -58,32 +58,19 @@ flowchart TD
 
 ## 3. Specification & Component Contracts
 
-### 3.1. `CopilotAPIAdapter`
-A lightweight adapter implementing the standard fleet execution interface:
-```python
-class CopilotAPIAdapter:
-    def __init__(self, worker_id: str, github_token: str, workdir: Path):
-        self.worker_id = worker_id
-        self.github_token = github_token
-        self.workdir = workdir
-        self.session = httpx.AsyncClient(timeout=60.0)
+### 3.1. `CopilotHeadlessAdapter` (Completed Operational Scope: M1–M4)
+The current operational implementation (`client/adapters/copilot_headless.py`) provides an asynchronous REST completion adapter:
+- Exchanges user GitHub token for temporary internal Copilot session tokens with dynamic caching.
+- Emits prompt requests to `https://api.githubcopilot.com/chat/completions` (or regional endpoint).
+- Captures and logs `model_used` and `tokens_used` telemetry from response payload.
+- Returns structured text completion results (`summary`, `result_text`, `success`, `error`).
 
-    async def execute_task(self, task_id: str, spec: str, stage: str, context: dict) -> dict:
-        """
-        1. Ingest task spec and system prompt from worker-prompts/<role>.md
-        2. Stream response from GitHub Copilot API endpoint
-        3. Execute tool calls locally (read_file, write_file, run_command)
-        4. Loop until completion or error
-        5. Return structured TaskResult including model_used and tokens_used
-        """
-        ...
-```
-
-### 3.2. Sandboxed Local Tool Executor
-Handles deterministic tool execution requested by the Copilot API:
+### 3.2. Sandboxed Local Tool Executor (Phase 2 Target Specification: M6)
+*Epistemic Note:* The current codebase operates in **REST Text-Completion Mode** (extraction, drafting, formatting, summarization). The following tool-calling interface is the formal architectural target for Phase 2 / M6:
 - `read_file(path, offset, limit)`
 - `write_file(path, content)`
 - `run_command(command, cwd, timeout)`
+- Multi-turn tool execution loop driven by Copilot streaming response tool calls.
 
 ### 3.3. Memory & Resource Footprint Benchmark Comparison
 
@@ -98,8 +85,10 @@ Handles deterministic tool execution requested by the Copilot API:
 
 ## 4. Verification Checklist & Milestones
 
-- [x] **M1 — API & Auth Reverse-Engineering:** Extract and validate Copilot chat streaming auth flow using isolated GitHub PATs (`client/adapters/copilot_headless.py`).
-- [x] **M2 — Headless Adapter Prototype:** Implement `CopilotHeadlessAdapter` in Python with dynamic session token caching, 429 backoff, and full test suite (`tests/test_copilot_headless.py`).
+- [x] **M1 — API & Auth Reverse-Engineering:** Extract and validate Copilot auth flow using isolated GitHub PATs (`client/adapters/copilot_headless.py`).
+- [x] **M2 — Headless Adapter Prototype:** Implement `CopilotHeadlessAdapter` in Python with dynamic session token caching, 429 backoff, and unit test suite (`tests/test_copilot_headless.py`).
 - [x] **M3 — Orchestrator Integration:** Register `copilot_headless` provider in `client/fleet_supervisor.py`, `active_fleet_3x3.json`, and `server/core/scheduler.py` cross-provider tier overflow.
 - [x] **M4 — Dynamic Model & Telemetry Logging:** Capture and log `model_used` and `tokens_used` from Copilot response headers.
-- [ ] **M5 — Concurrent Stress Benchmark:** Run a 6-worker (3 Claude CDP + 3 Copilot Headless) live workflow test.
+- [ ] **M5 — Concurrent Stress Benchmark:** Run a 6-worker (3 Claude CDP + 3 Copilot Headless) live workflow test with empirical latency/throughput metrics.
+- [ ] **M6 — Autonomous Agent Mode with Local Sandbox Tools:** Implement iterative tool execution loop (`read_file`, `write_file`, `run_command`) on top of streaming Copilot directives.
+

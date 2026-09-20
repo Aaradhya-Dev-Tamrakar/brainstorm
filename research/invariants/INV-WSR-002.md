@@ -9,7 +9,8 @@
 > **Domain:** Worker Lifecycle, Task Leasing & Epistemic Telemetry  
 > **Created Date:** 2026-09-19  
 > **Last Verified:** 2026-09-19  
-> **Evidence Tier:** `E2` — `EMPIRICAL BENCHMARK & TEST SUITE PROVEN`  
+> **Evidence Tier:** `E3` — `LOCALLY VERIFIED (Automated Invariant Test Suite)`  
+> **Epistemic Classification:** `EMPIRICALLY_VERIFIED`  
 > **Applies To:** `Claude-Desktop`, `brainstorm`, and all fleet worker daemons  
 > **Upstream Trace:** [`ARCH-RFC-001`](../architectures/ARCH-RFC-001-RECORD-KEEPING-STANDARD.md), [`ARCH-SPEC-003`](../architectures/ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md), [`FLEET-001`](../experiments/FLEET-001.md)  
 
@@ -42,7 +43,7 @@ In a distributed task state machine, task acquisition must adhere strictly to on
 
 Worker heartbeat payloads must decouple and report:
 - `rate_limit_headroom`: Provider-specific remaining requests/tokens per window (or explicit cooldown timer upon HTTP 429). Persisted in `workers.rate_limit_headroom` database column.
-- `system_resources`: Actual CPU/RAM utilization via OS performance counters (`cpu_percent`, `memory_percent`).
+- `system_resources`: Actual CPU/RAM utilization via OS performance counters (`cpu_percent`, `memory_percent`). If performance telemetry cannot be sampled, fields must be reported as `null` (`None`), never substituted with fake `0.0%` synthetic numbers.
 - `active_leases`: Count of currently executing tasks (strictly bounded by worker concurrency limits, reported truthfully as `1` during task execution and `0` when idle).
 
 *Failure Mode Avoided:* Conflating OS RAM with provider quota usage causing spurious 5-hour cooldown triggers on high machine memory is strictly prevented. Cooldown triggers solely on explicit `trigger_cooldown` or provider `rate_limit_headroom <= 0`.
@@ -55,6 +56,16 @@ Worker heartbeat payloads must decouple and report:
 To prevent post-commit crash inconsistencies (where a task is marked `done` but the process crashes before the next pipeline stage task is created), the orchestrator wraps state finalization, checkpoint insertion, and successor task generation in an atomic transaction:
 1. If any downstream DAG advancement step fails, the entire transaction rolls back cleanly (`status` remains `claimed`, checkpoint row is omitted, and successor tasks are not generated).
 2. For QA stages, passing reviews (`verdict = pass`) atomically record checkpoint deliverables and pass forward review output to subsequent DAG stages (`format`), ensuring zero semantic data loss.
+
+---
+
+### 1.5 Invariant E: QA Authority & Claim-Token Isolation for State Transitions
+> **"A quality assurance verdict (`POST /tasks/{task_id}/qa-review`) that mutates task state (`merged` / `pending`) or advances downstream DAG execution MUST require verified lease ownership and a valid, unexpired `claim_token`."**
+
+QA review is not merely an advisory comment; it is an authoritative state-transition operator capable of marking tasks completed and generating downstream stages. To preserve security and lease invariants:
+1. The reviewer worker MUST acquire the QA task lease through the standard Closed-Loop Protocol (`POST /tasks/acquire`) and provide the corresponding `claim_token`.
+2. Requests attempting to submit a QA review on an unowned task, with a mismatched `worker_id`, or with an invalid `claim_token` are categorically rejected with HTTP 403 Forbidden.
+3. Upon review finalization, attempt status is recorded (`succeeded` for pass, `failed` for revision) and the worker lease is released back to `idle`.
 
 ---
 
@@ -80,13 +91,14 @@ $$\text{Error}(E) \to \text{State}(T) = \text{DONE} \quad (\text{VIOLATION})$$
 
 ## 3. Verification & Compliance Gate
 
-Compliance with `INV-WSR-002` is formally verified across automated test suites (**99/99 passing**):
+Compliance with `INV-WSR-002` is formally verified across automated test suites:
 1. **Invariant A (Closed-Loop Pull Dispatch):** `tests/test_task_acquisition.py` proves atomic pull matching and lease duration enforcement; push loop disabled in `server/main.py`.
 2. **Invariant B (Strict Separation of Real/Simulation):** `tests/test_invariants_wsr_002.py::test_invariant_b_strict_separation_of_real_and_simulation` asserts zero synthetic success fallthrough across `ClaudeDesktopProxyAdapter`, `GroqAdapter`, and `GeminiFreeAdapter`.
-3. **Invariant C (Truthful Telemetry):** `tests/test_invariants_wsr_002.py::test_invariant_c_truthful_telemetry` and `test_invariant_c_no_spurious_cooldown_on_high_memory` prove empirical OS performance counters, accurate `active_leases`, and immunity to RAM-induced quota cooldown.
+3. **Invariant C (Truthful Telemetry):** `tests/test_invariants_wsr_002.py::test_invariant_c_truthful_telemetry` and `test_invariant_c_no_spurious_cooldown_on_high_memory` prove empirical OS performance counters, accurate `active_leases`, and immunity to RAM-induced quota cooldown. `test_telemetry_truthfulness_on_exception` proves exceptions yield `None` rather than fake `0.0%` numbers.
 4. **Invariant D (Atomic Advancement & Rollback):** `tests/test_invariants_wsr_002.py::test_invariant_d_atomic_dag_stage_advancement` and `test_invariant_d_atomic_rollback_on_failure` prove all-or-nothing transactional guarantees.
 5. **Invariant D (QA Deliverable Preservation):** `tests/test_invariants_wsr_002.py::test_invariant_d_qa_checkpoint_preservation` verifies QA verification output persistence and successor stage inheritance.
-6. **Security (Remote MCP Auth & Query Removal):** `tests/test_auth_enforcement.py` verifies unauthenticated requests receive HTTP 401, header credentials (`X-API-Key`) succeed, and URL query-string credentials are categorically rejected.
-7. **Security (Mutation Token Isolation):** `tests/test_invariants_wsr_002.py::test_claim_token_masked_on_read_endpoints` proves `claim_token` is masked (`None`) on read-only queries (`GET /tasks`, `GET /tasks/{id}`, `list_tasks`, `get_task`) and exposed only to the claiming worker.
-8. **Worker Lifecycle (Lease Renewal Parity):** `client/worker_daemon.py` and `client/fleet_supervisor.py` maintain continuous lease renewal across execution and result ingestion; verified in `tests/test_fleet_supervisor.py::test_fleet_lease_renewal_periodically`.
-9. **Cross-Worker Session Migration & Resumption:** `tests/test_invariants_wsr_002.py::test_cross_worker_session_migration_and_resumption` proves the full multi-stage lifecycle across heterogeneous worker adapters (Worker A research → checkpoint → Stage 2 rate-limit cooldown & release → Worker B acquire & resume from checkpoint findings → format completion → unbroken audit lineage).
+6. **Invariant E (QA Authority & Claim-Token Isolation):** `tests/test_invariants_wsr_002.py::test_qa_review_enforces_lease_and_claim_token` proves QA review rejects unowned tasks, wrong workers, and invalid claim tokens with HTTP 403, and strictly requires valid lease ownership to trigger task merges or DAG advancements.
+7. **Security (Remote MCP Auth & Query Removal):** `tests/test_auth_enforcement.py` verifies unauthenticated requests receive HTTP 401, header credentials (`X-API-Key`) succeed, and URL query-string credentials are categorically rejected.
+8. **Security (Mutation Token Isolation):** `tests/test_invariants_wsr_002.py::test_claim_token_masked_on_read_endpoints` proves `claim_token` is masked (`None`) on read-only queries (`GET /tasks`, `GET /tasks/{id}`, `list_tasks`, `get_task`) and exposed only to the claiming worker.
+9. **Worker Lifecycle (Lease Renewal Parity):** `client/worker_daemon.py` and `client/fleet_supervisor.py` maintain continuous lease renewal across execution and result ingestion; verified in `tests/test_fleet_supervisor.py::test_fleet_lease_renewal_periodically`.
+10. **Cross-Worker Session Migration & Resumption:** `tests/test_invariants_wsr_002.py::test_cross_worker_session_migration_and_resumption` proves the full multi-stage lifecycle across heterogeneous worker adapters (Worker A research → checkpoint → Stage 2 rate-limit cooldown & release → Worker B acquire & resume from checkpoint findings → format completion → unbroken audit lineage).

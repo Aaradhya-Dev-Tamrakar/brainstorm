@@ -73,3 +73,29 @@ A hallmark of rigorous engineering is the explicit disclosure of boundaries, fai
 * **Description:** LocalSend protocol actuation relies on UDP multicast (224.0.0.167:53317) and local subnet TCP connectivity (port 53318).
 * **Failure Mode:** Corporate Wi-Fi client isolation, host firewalls, or multi-subnet routing prevent automatic peer discovery.
 * **Mitigation:** Static peer IP fallback configuration and persistent favorite peer caching.
+
+### 2.12 QA Authorization & Lease Mutation Boundary
+* **Description:** In distributed DAG runtimes, QA reviews trigger state transitions (advancing tasks from QA to merge/formatting and unblocking dependent DAG stages).
+* **Failure Mode:** If `/tasks/{task_id}/qa-review` does not enforce caller lease ownership and claim-token verification, any client holding an API key could prematurely finalize or reject tasks without owning the execution lease.
+* **Mitigation:** Enforcing strict worker lease binding (`INV-WSR-002 Invariant E`): QA review submission requires the reviewer to hold the active lease and submit the cryptographically unique `claim_token`.
+
+### 2.13 Headless Copilot API Contract Boundary vs Full Agent Tool-Calling
+* **Description:** The headless GitHub Copilot worker adapter (`FLEET-002`) automates session token exchange and non-GUI REST completions (`POST /chat/completions`) for text generation and formatting.
+* **Failure Mode:** Conflating the current REST text completion adapter (M1–M4) with fully autonomous agent mode that executes local sandboxed tools (`read_file`, `write_file`, `run_command`).
+* **Mitigation:** Explicitly bounding M1–M4 to REST Text-Completion and scheduling multi-turn tool-calling loop as Phase 2 / M6 target capability.
+
+### 2.14 Multi-Worker Fleet Authentication Header Propagation
+* **Description:** In multi-provider fleet setups (`fleet_supervisor.py`), multiple worker loops run concurrently across different backends.
+* **Failure Mode:** When orchestrator security requires API tokens (`X-API-Key`), worker launch daemons that instantiate HTTP clients without global credentials receive HTTP 401 Unauthorized responses on all task polling attempts.
+* **Mitigation:** Standardizing credential ingestion via `API_AUTH_KEY` / `ORCHESTRATOR_API_KEY` across all client daemons and passing unified headers in `httpx.AsyncClient`.
+
+### 2.15 Telemetry Failure Semantics vs Synthetic Placeholders
+* **Description:** Distributed worker supervisors sample host CPU and RAM utilization for load-aware task arbitration.
+* **Failure Mode:** Masking telemetry exceptions by returning synthetic `{"cpu_percent": 0.0, "memory_percent": 0.0}` placeholders, which tricks the orchestrator into treating an uninstrumented machine as having 100% free capacity.
+* **Mitigation:** Strictly enforcing `null` (`None`) reporting and typed telemetry error states when OS performance counters are unreachable (`INV-WSR-002 Invariant C`).
+
+### 2.16 Knowledge Graph Semantic Retrieval Evaluation Boundaries
+* **Description:** BMK-MEMORY-001 measures signal density and precision@5 before and after memory stratification across Graphify communities.
+* **Failure Mode:** Over-generalizing internal benchmark results (0.880 graded P@5 on a curated 5-query architectural suite) as a universal claim for arbitrary external knowledge graphs or independent corpora.
+* **Mitigation:** Explicitly labeling the benchmark as a within-system diagnostic evaluation, preserving failed cohesion criteria (0.230 vs 0.45 target), and marking overall status as `QUALIFIED_PARTIAL_PASS`.
+

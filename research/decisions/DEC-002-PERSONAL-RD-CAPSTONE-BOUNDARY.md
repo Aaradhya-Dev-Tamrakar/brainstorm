@@ -20,7 +20,7 @@ The 2026-09-21 evaluation transcript ([`2026-09-21_EVALUATE-FOUR-PROJECTS_CONVER
 
 Two governance questions were left open by that dialogue and must be fixed before they generate drift:
 
-1. **Ownership/dependency ambiguity:** nothing currently states whether the four personal repositories are *inputs* to the capstone or *runtime dependencies* of it. Silent absorption of the capstone into personal R&D would compromise academic ownership and the defensibility trail required by [`ARCH-RFC-003`](../architectures/ARCH-RFC-003-CAPSTONE-DEFENSE-STANDARD.md).
+1. **Ownership/dependency ambiguity:** nothing currently states whether the four personal repositories are _inputs_ to the capstone or _runtime dependencies_ of it. Silent absorption of the capstone into personal R&D would compromise academic ownership and the defensibility trail required by [`ARCH-RFC-003`](../architectures/ARCH-RFC-003-CAPSTONE-DEFENSE-STANDARD.md).
 2. **Evidentiary status of the audit stack:** the transcript records that BiasAperture runs **FairFace** as its empirical dataset, **Fairlearn** as its primary backend, and retains an **implemented** AIF360 adapter. Presenting both backends as co-equal empirical evidence is an epistemic inflation of the kind prohibited by [`POL-001`](../../schemas/evidence-policy.md).
 
 Additionally, the transcript proposed a research extension (audit self-calibration) that had no falsifiable card in this repository, leaving the Three-Output Rule of [`AGENTS.md`](../../AGENTS.md) unmet for that session.
@@ -30,7 +30,8 @@ Additionally, the transcript proposed a research extension (audit self-calibrati
 ## 2. Decisions
 
 **D1 — Capstone boundary (non-dependency).**
-`BiasAperture` remains a duo-owned academic artifact. The personal ecosystem performs *support* roles only and MUST NOT appear in the capstone's core dependency graph:
+`BiasAperture` remains a duo-owned academic artifact. The personal ecosystem performs _support_ roles only and MUST NOT appear in the capstone's core dependency graph:
+
 - `super-nlm` → research memory / literature oracle (knowledge retrieval, not numerical evidence).
 - `Claude-Desktop` → private experiment fleet for running and QA-ing audit sweeps.
 - `brainstorm` → methodology and evidence-governance framework (evidence tiers, evidence chains).
@@ -46,7 +47,7 @@ UTKFace is **not** part of the empirical evaluation (labels are embedded in file
 "Evidence-Calibrated Fairness Auditing": Stage A = audit calibration via controlled prediction-layer bias injection; Stage B (stretch) = evidence-adaptive sampling to reach a target precision with fewer evaluations. Roadmap extension above a frozen core: `M5 Integration & Case Studies` → `M6 Audit Calibration` → `M7 Evidence Sufficiency` → `M8 Adaptive Audit [stretch]` → `M9 Final Evaluation` → `M10 Final Demonstrator`. **M1–M5 are unchanged.** The falsifiable form of Stage A is recorded as [`HYP-005`](../hypotheses/HYP-005-EVIDENCE-CALIBRATED-FAIRNESS-AUDIT.yaml).
 
 **D5 — Claim language and evidence discipline.**
-Every fairness claim carries an evidence chain (injection configuration, seed, sample size, predictions artifact, audit command, reported metric, confidence interval, p-value, trial count). Findings report an **evidence profile** (observed disparity, CI, p, support, backend agreement, calibration sensitivity, reproducibility) — never a single composite "fairness score" — and are worded as conditional: *"statistically supported disparity under this audit specification."* Calibration results may never be reported as "the model is biased".
+Every fairness claim carries an evidence chain (injection configuration, seed, sample size, predictions artifact, audit command, reported metric, confidence interval, p-value, trial count). Findings report an **evidence profile** (observed disparity, CI, p, support, backend agreement, calibration sensitivity, reproducibility) — never a single composite "fairness score" — and are worded as conditional: _"statistically supported disparity under this audit specification."_ Calibration results may never be reported as "the model is biased".
 
 ---
 

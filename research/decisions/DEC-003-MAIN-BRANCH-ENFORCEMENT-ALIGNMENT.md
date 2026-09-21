@@ -148,12 +148,22 @@ on the ruleset object.
 The `sync.ps1` push at 11:16:53 local time produced the `Bypassed rule violations` block
 quoted in §1. That is the direct observable of the defect.
 
-**3.4 Observed push behaviour — after alignment**
+**3.4 Observed push behaviour — after alignment (probe passed)**
 
-The commit that introduces this record doubles as the intentional probe: it is a real
-content change to `main` pushed by `sync.ps1`, with no bypass notice expected. Its
-verbatim push output is appended to this record in the immediately following commit, so
-that post-state evidence is an observed log rather than a prediction.
+The commit that introduced this record (`8291149`) was pushed by `sync.ps1` as the
+intentional probe. Verbatim output:
+
+```text
+[11:21:22] Pushing to origin/main...
+To https://github.com/Aaradhya-Dev-Tamrakar/brainstorm
+   312bcc1..8291149  main -> main
+[11:21:25] Repository synchronized successfully with origin/main.
+```
+
+Pre-alignment (§3.3) the same operation emitted two `Bypassed rule violations` lines;
+post-alignment it emits none and is accepted natively. The local gate for the same commit
+reported Layer 1 = 0 discrepancies (113 files audited) and Layer 2 = 9/9 tests PASS, with
+the ledger recording `certified: true`.
 
 ---
 

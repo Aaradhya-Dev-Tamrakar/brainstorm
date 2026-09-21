@@ -516,9 +516,9 @@
     "semantic_hash": ""
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1789898145.340492,
-    "seen": 1789898156.9794476,
-    "ast_hash": "988b2d5e626428b5a90cdb8fdafb2ff2",
+    "mtime": 1789963701.393831,
+    "seen": 1789963712.5770257,
+    "ast_hash": "199d1eb920fffa69e9fce93ce9e7d05e",
     "semantic_hash": ""
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {

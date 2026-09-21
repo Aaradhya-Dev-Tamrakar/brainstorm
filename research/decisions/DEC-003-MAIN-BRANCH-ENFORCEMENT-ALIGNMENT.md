@@ -29,12 +29,12 @@ remote: - Required status check "verify" is expected.
 The repository ruleset `Evidence-Backed-Ecosystem-main` (id `23533023`, created
 2026-09-16 as part of the v1.0 governance freeze) enforced four rules on `refs/heads/main`:
 
-| Rule | Parameters at the time | Effect on the actual workflow |
-| :--- | :--- | :--- |
-| `deletion` | — | Protects the branch from deletion. |
-| `non_fast_forward` | — | Protects history from force pushes. |
-| `pull_request` | `required_approving_review_count: 0`, strict base-branch policy, thread resolution | **Structurally unsatisfiable** by a direct push. |
-| `required_status_checks` | `strict_required_status_checks_policy: true`, context `verify` | **Structurally unsatisfiable** before pushing: the check runs *on* the pushed commit. |
+| Rule                     | Parameters at the time                                                             | Effect on the actual workflow                                                         |
+| :----------------------- | :--------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |
+| `deletion`               | —                                                                                  | Protects the branch from deletion.                                                    |
+| `non_fast_forward`       | —                                                                                  | Protects history from force pushes.                                                   |
+| `pull_request`           | `required_approving_review_count: 0`, strict base-branch policy, thread resolution | **Structurally unsatisfiable** by a direct push.                                      |
+| `required_status_checks` | `strict_required_status_checks_policy: true`, context `verify`                     | **Structurally unsatisfiable** before pushing: the check runs _on_ the pushed commit. |
 
 The ecosystem's actual, documented maintenance workflow for this repository is a
 **local deterministic gate followed by a direct push** — `audit.bat` →
@@ -53,7 +53,7 @@ Two problems follow, and both are governance defects rather than security defect
    administrative bypass. Under [`POL-001`](../../schemas/evidence-policy.md) this is an
    unearned claim about the enforcement tier, which is precisely the failure mode the
    Calibrated Evidence Policy exists to prevent.
-2. **Document/reality drift.** `README.md` stated a *recommended policy* (require pull
+2. **Document/reality drift.** `README.md` stated a _recommended policy_ (require pull
    requests, checks up to date, one approving review, no force pushes) that no longer
    described the enforced state once the bypass became the normal path.
 
@@ -72,13 +72,13 @@ Verification is not weakened; it is relocated to where it can actually execute:
 
 - **Blocking gate (local, pre-commit):** [`sync.ps1`](../../sync.ps1) runs the dynamic
   reconciliation engine — Layer 1 structural consistency and Layer 2 behavioral
-  reproducibility (`sim/test_*.py`) — *before* staging a commit.
+  reproducibility (`sim/test_*.py`) — _before_ staging a commit.
 - **Post-hoc evidence (remote, post-push):**
   [`.github/workflows/verification.yml`](../../.github/workflows/verification.yml)
   (job `verify`) runs `tools/validate_ecosystem.py` and `sim/reconciliation_engine.py` on
   every push to any branch.
 
-Only the *blocking* semantics changed; the deterministic evidence chain is unchanged and
+Only the _blocking_ semantics changed; the deterministic evidence chain is unchanged and
 remains independently inspectable.
 
 **D3 — Documentation MUST match enforcement.**
@@ -187,7 +187,7 @@ the ledger recording `certified: true`.
 - This record does **not** weaken structural or behavioral verification, does not change
   the reconciliation engine, and does not alter any evidence tier elsewhere in the repo.
 - This record does **not** assert that PR-based gating is bad practice; it asserts that
-  *advertising* a gate which is bypassed on every push is worse than an honestly scoped
+  _advertising_ a gate which is bypassed on every push is worse than an honestly scoped
   one.
 
 ---
@@ -198,3 +198,46 @@ the ledger recording `certified: true`.
 - Related decisions: [`DEC-001`](DEC-001-MEMORY-STRATIFICATION.md), [`DEC-002`](DEC-002-PERSONAL-RD-CAPSTONE-BOUNDARY.md)
 - Governing standards: [`ARCH-RFC-001`](../architectures/ARCH-RFC-001-RECORD-KEEPING-STANDARD.md), [`ARCH-RFC-004`](../architectures/ARCH-RFC-004-WORKFLOW-EXTERNALIZATION-FREEZE.md), [`POL-001`](../../schemas/evidence-policy.md)
 - Deterministic gates: [`sync.ps1`](../../sync.ps1), [`audit.bat`](../../audit.bat), [`sim/reconciliation_engine.py`](../../sim/reconciliation_engine.py)
+
+---
+
+## 6. Observed Side-Effect: Recovery of a Silently Failing Automation Path
+
+While verifying this change, an independent consequence was discovered and is recorded
+here because the failure had been invisible.
+
+**Mechanism.**
+[`.github/workflows/sync-drive.yml`](../../.github/workflows/sync-drive.yml) recomputes
+`drive-manifest.json` hashes and pushes the result to `main` using the workflow's own
+`GITHUB_TOKEN`. That actor is not listed in the ruleset's `bypass_actors` (only the
+repository-role actor is), so the pre-alignment `pull_request` and
+`required_status_checks` rules rejected the push outright — and the step's
+`|| echo "::warning::..."` fallback converted the rejection into a *passing* job. The
+automation therefore failed silently rather than visibly.
+
+**Evidence A — blocked push (Drive-sync run `35564869652`, 2026-09-21T05:32:19Z, minutes before alignment):**
+
+```text
+remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote: - Changes must be made through a pull request.
+remote: - Required status check "verify" is expected.
+##[warning]Direct push to main was blocked by branch ruleset. Manifest changes should be committed via PR.
+```
+
+**Evidence B — `drive-manifest.json` bot-commit timeline (the causal fingerprint):**
+
+| Commit | Timestamp (UTC) | Author | Relation to the ruleset |
+| :--- | :--- | :--- | :--- |
+| `dde12a4` | 2026-09-16 08:14:32 | `github-actions[bot]` | Last successful bot commit — ~2 min **before** the ruleset was created (2026-09-16 08:16:29Z) |
+| — | 2026-09-16 → 2026-09-21 | — | **No bot commits for 5 days**, while tracked transcripts and hashes kept changing |
+| `f11bfc8` | 2026-09-21 05:36:45 | `github-actions[bot]` | First bot commit **after** alignment, written by the Drive-sync run triggered by the alignment push (~25 s later) |
+
+The alignment therefore did not merely remove a ceremonial gate for human pushes; it also
+restored an automation path that the gate had been silently breaking since the day the
+ruleset was created.
+
+**Follow-up recommendation (not implemented here).**
+The `|| echo "::warning::"` fallback should not mask a rejected push: the step should fail
+loudly, or open a pull request, so that automation regressions surface instead of
+accumulating as stale state. This recommendation is independent of which rules are
+enforced and remains valid under any future ruleset configuration.

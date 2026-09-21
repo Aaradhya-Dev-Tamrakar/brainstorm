@@ -33,3 +33,9 @@ report/*.synctex.gz
 
 # Graphify AST cache
 graphify-out/cache/
+
+# Secrets & Environment variables
+.env
+.env.*
+*.env
+!.env.example

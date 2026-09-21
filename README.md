@@ -24,13 +24,12 @@ To eliminate ambiguity between what is **implemented**, what is **experimentally
 * ⚙️ **Low-Cost Cognitive-Worker Baseline:** Minimizes fixed subscription commitments and measures actual marginal API/compute cost per verified task.
 * ⚠️ **[Known Limitations & Failure Modes](report/limitations.md):** Transparent disclosure of technical risks, formalization gaps, benchmark dependencies, and maintenance debt.
 
-### Required `main` branch checks
+### `main` branch checks & verified enforcement
 
-The following repository-owned checks are the merge gates for the Evidence-Backed
-Ecosystem. Configure them as required status checks in GitHub branch protection or
-repository rulesets after the workflows are present on the default branch:
+The following repository-owned checks are the ecosystem's CI verification gates. They
+run on every push and pull request as inspectable, post-hoc evidence:
 
-| Repository | Required check |
+| Repository | CI check |
 |---|---|
 | `super-nlm` | `pytest` |
 | `Claude-Desktop` | `Python tests` |
@@ -39,10 +38,20 @@ repository rulesets after the workflows are present on the default branch:
 | `brainstorm` | `verify` |
 | `AaradhyaDT.github.io` | `verify` |
 
-Recommended policy: require pull requests, required checks to be up to date before
-merge, one approving review, and no force pushes to `main`. Branch protection is a
-GitHub-admin operation; the repository workflows intentionally provide the stable
-check names but do not attempt to manage account-level rulesets.
+**Enforced on `main` here** (ruleset `Evidence-Backed-Ecosystem-main`): branch-deletion
+and force-push prevention, only. The pull-request requirement and the required status
+check (`verify`) are deliberately **not** enforced: this repository is maintained by
+direct pushes from the local deterministic gate ([`sync.ps1`](sync.ps1) →
+[`audit.bat`](audit.bat)), and a pre-push gate is structurally unsatisfiable by that
+workflow — so it was being bypassed on every push, which made the enforcement claim
+ceremonial rather than real. Verification substance is unchanged
+([`sim/reconciliation_engine.py`](sim/reconciliation_engine.py) runs locally before every
+commit and [`.github/workflows/verification.yml`](.github/workflows/verification.yml)
+after every push); only its blocking semantics were removed. Rationale, live evidence
+and the falsification probe are recorded in
+[`DEC-003`](research/decisions/DEC-003-MAIN-BRANCH-ENFORCEMENT-ALIGNMENT.md).
+PR-based gating may still be configured per repository — GitHub rulesets are an
+account/admin-level operation and are not managed by these workflows.
 
 ---
 

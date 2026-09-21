@@ -10,6 +10,14 @@
 
 | Date | Codename / Subject | Transcript File | Evaluation Status | Implementation Status | Implemented Artifacts & Target Repos |
 | :--- | :--- | :--- | :---: | :---: | :--- |
+| **2026-09-21** | **`EVALUATE FOUR PROJECTS (4-REPO SYSTEM + CAPSTONE BRIDGE)`** | [`2026-09-21_EVALUATE-FOUR-PROJECTS_CONVERSATION.md`](2026-09-21_EVALUATE-FOUR-PROJECTS_CONVERSATION.md) | ✅ **Evaluated** | 🔄 **In Progress** | Extracted into [`HYP-005`](../hypotheses/HYP-005-EVIDENCE-CALIBRATED-FAIRNESS-AUDIT.yaml) (audit self-calibration) and [`DEC-002`](../decisions/DEC-002-PERSONAL-RD-CAPSTONE-BOUNDARY.md) (capstone boundary, Fairlearn authority, M6–M10 wedge). BiasAperture-side implementation pending. |
+| **2026-09-20** | **`AEC ENGINEERING MCP BUSINESS STRATEGY`** | [`2026-09-20_AEC-Eng-MCP-Business-Strategy-Dialogue.md`](2026-09-20_AEC-Eng-MCP-Business-Strategy-Dialogue.md) | ⏳ **Pending** | ⏳ **Not Started** | No in-repo provenance reference located as of 2026-09-21 (topical candidate overlap: `ARCH-PLAN-001`); evaluation pass outstanding. |
+| **2026-09-20** | **`EVALUATE LATEST UPDATES`** | [`2026-09-20_EVALUATE-LATEST-UPDATES_CONVERSATION.md`](2026-09-20_EVALUATE-LATEST-UPDATES_CONVERSATION.md) | ⏳ **Pending** | ⏳ **Not Started** | No in-repo provenance reference located as of 2026-09-21; evaluation pass outstanding. |
+| **2026-09-19** | **`COPILOT FLEET & WINPILOT ORCHESTRATION`** | [`2026-09-19_COPILOT-FLEET-WINPILOT-ORCHESTRATION_CONVERSATION.md`](2026-09-19_COPILOT-FLEET-WINPILOT-ORCHESTRATION_CONVERSATION.md) | ⏳ **Pending** | ⏳ **Not Started** | No in-repo provenance reference located as of 2026-09-21; evaluation pass outstanding. |
+| **2026-09-19** | **`EVALUATE TODAY'S WORK`** | [`2026-09-19_EVALUATE-TODAYS-WORK_CONVERSATION.md`](2026-09-19_EVALUATE-TODAYS-WORK_CONVERSATION.md) | ⏳ **Pending** | ⏳ **Not Started** | No in-repo provenance reference located as of 2026-09-21; evaluation pass outstanding. |
+| **2026-09-19** | **`GITHUB UPDATE SUMMARY`** | [`2026-09-19_GITHUB-UPDATE-SUMMARY_CONVERSATION.md`](2026-09-19_GITHUB-UPDATE-SUMMARY_CONVERSATION.md) | ✅ **Evaluated** | ✅ **Implemented** | Named source transcript in [`DEC-001`](../decisions/DEC-001-MEMORY-STRATIFICATION.md); contributed to Layer 0/1 memory stratification and the Graphify transcript exclusion. |
+| **2026-09-19** | **`RATE WORKFLOW (EXTERNAL AUDIT)`** | [`2026-09-19_RATE-WORKFLOW_CONVERSATION.md`](2026-09-19_RATE-WORKFLOW_CONVERSATION.md) | ✅ **Evaluated** | ✅ **Implemented** | Consumed by [`ARCH-RFC-005`](../architectures/ARCH-RFC-005-MEMORY-STRATIFICATION.md) and [`ARCH-RFC-006`](../architectures/ARCH-RFC-006-INFORMATION-BOUNDARY.md) (information-boundary rating 6.4/10), [`DEC-001`](../decisions/DEC-001-MEMORY-STRATIFICATION.md), benchmark [`BMK-MEMORY-001`](../experiments/BMK-MEMORY-001.md). |
+| **2026-09-16** | **`PROJECT PORTFOLIO ANALYSIS`** | [`2026-09-16_PROJECT-PORTFOLIO-ANALYSIS_CONVERSATION.md`](2026-09-16_PROJECT-PORTFOLIO-ANALYSIS_CONVERSATION.md) | ✅ **Evaluated** | ✅ **Implemented** | Recorded upstream trace of [`ARCH-RFC-004`](../architectures/ARCH-RFC-004-WORKFLOW-EXTERNALIZATION-FREEZE.md) (workflow externalization freeze). |
 | **2026-09-16** | **`EVALUATE REPOSITORIES (4-REPO SYSTEM)`** | [`2026-09-16_EVALUATE-REPOSITORIES_CONVERSATION.md`](2026-09-16_EVALUATE-REPOSITORIES_CONVERSATION.md) | ✅ **Evaluated** | 🔄 **In Progress** | Whole-system role definitions for `brainstorm` (control plane), `super-nlm` (ingestion/research), `Claude-Desktop` (execution fleet), and `AaradhyaDT.github.io` (observability). |
 | **2026-09-16** | **`INSPECTABLE RESEARCH ARTIFACT`** | [`2026-09-16_INSPECTABLE-RESEARCH-ARTIFACT_CONVERSATION.md`](2026-09-16_INSPECTABLE-RESEARCH-ARTIFACT_CONVERSATION.md) | ✅ **Evaluated** | ✅ **Implemented** | `strangler-ipu-research`: Generated `sim/results/experiments/REPORT.md`, 5-seed distributions, 4 falsification probes (`rho=1`, tiny working set, low ingress, high interconnect BW). |
 | **2026-09-16** | **`INDEPENDENT VERIFICATION PLAN`** | [`2026-09-16_INDEPENDENT-VERIFICATION-PLAN_CONVERSATION.md`](2026-09-16_INDEPENDENT-VERIFICATION-PLAN_CONVERSATION.md) | ✅ **Evaluated** | ✅ **Implemented** | `super-nlm` (atomic save, state machine), `Claude-Desktop` (3-tuple claim tokens), `AaradhyaDT.github.io` (E0–E5 tiers), `brainstorm` (audit/sim gates). |
@@ -42,4 +50,12 @@
 - No session with new conceptual models or architecture specs may conclude without a verbatim transcript snapshot.
 - Format: Full text of both User and Assistant with ISO timestamps.
 - Zero Loss: Preserves exact reasoning trajectories, code discussions, and philosophical pivots.
+
+---
+
+## 🧾 Ledger Maintenance & Backfill Protocol
+
+- **Directory is ground truth:** the ledger MUST list every `*.md` file physically present in `research/transcripts/`. A transcript present on disk but absent from the table is an `INV-EPI-001` tracking defect.
+- **Backfill pass (2026-09-21):** 8 previously unlogged sessions were added — `2026-09-16_PROJECT-PORTFOLIO-ANALYSIS`, four 2026-09-19 sessions, two 2026-09-20 sessions, and `2026-09-21_EVALUATE-FOUR-PROJECTS`. Statuses were assigned **only** from in-repo documentary evidence (RFC upstream traces, decision-record source lists); sessions with no located provenance reference are marked ⏳ **Pending** rather than assumed evaluated.
+- **Status honesty rule:** a row may be marked ✅ **Evaluated** only if an evaluation artifact exists (RFC, decision record, hypothesis card, experiment log, or commit); otherwise it stays ⏳ **Pending** until an evaluation pass is performed.
 

@@ -516,9 +516,9 @@
     "semantic_hash": ""
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1789967638.1003144,
-    "seen": 1789967651.7414887,
-    "ast_hash": "3f65c21ab45ab2eeec6dfd3a9c344665",
+    "mtime": 1789963701.393831,
+    "seen": 1789963712.5770257,
+    "ast_hash": "199d1eb920fffa69e9fce93ce9e7d05e",
     "semantic_hash": ""
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
@@ -549,18 +549,6 @@
     "mtime": 1789878246.9322917,
     "seen": 1789898156.9795172,
     "ast_hash": "15eaf910d9dbff05293bb6c661b7ee88",
-    "semantic_hash": ""
-  },
-  "research/decisions/DEC-002-PERSONAL-RD-CAPSTONE-BOUNDARY.md": {
-    "mtime": 1789967596.0168605,
-    "seen": 1789967651.7415488,
-    "ast_hash": "3e14ce48f31c688e32cfa77619acffcc",
-    "semantic_hash": ""
-  },
-  "research/hypotheses/HYP-005-EVIDENCE-CALIBRATED-FAIRNESS-AUDIT.yaml": {
-    "mtime": 1789967579.2910051,
-    "seen": 1789967651.7415638,
-    "ast_hash": "6d724b873c81213279207a4ed19a8412",
     "semantic_hash": ""
   }
 }

@@ -1,16 +1,16 @@
-# Graph Report - brainstorm  (2026-09-21)
+# Graph Report - brainstorm  (2026-09-20)
 
 ## Corpus Check
-- 82 files · ~129,122 words
+- 81 files · ~127,988 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1076 nodes · 1185 edges · 91 communities (82 shown, 8 thin omitted)
+- 1070 nodes · 1176 edges · 96 communities (87 shown, 8 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.88)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e6ba4fd1`
+- Built from commit: `98c40422`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -64,7 +64,7 @@
 - ARCH-RFC-006: Public/Private Information Boundary & Security Architecture
 - Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet)
 - pass_rate_percent
-- required
+- provenance
 - Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19)
 - completion_tokens
 - evaluated_at
@@ -72,16 +72,21 @@
 - 1. The Core Invariant Statements
 - rework_count
 - tokens_total
-- 🏛️ DECISION RECORD: DEC-002 (Personal R&D ⇄ Duo-Capstone Boundary & Audit Evidence Discipline)
-- timeout_ms
+- ecosystem.verification.schema.json
+- claims
 - verification
-- inputs
+- properties
+- required
+- $defs
 - nepali-ocr-ai.contract.json
 - model_benchmark.schema.json
 - run_experiments.py
+- required
 - 🏛️ DECISION RECORD: DEC-001 (Memory Stratification & Retrieval Pruning)
 - STRANGLER-IPU
-- ecosystem.verification.schema.json
+- properties
+- description
+- deterministic
 - enum
 - enum
 - enum
@@ -111,7 +116,7 @@
 2. `2. Core Architectural & Systemic Limitations` - 17 edges
 3. `2. Quantitative Claims Register` - 14 edges
 4. `2. Key Frameworks & Architecture Covered` - 13 edges
-5. `ARCH-RFC-003: Capstone Defense Standard` - 13 edges
+5. `ARCH-RFC-003: Capstone Defense Standard` - 12 edges
 6. `build_result()` - 11 edges
 7. `ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap` - 11 edges
 8. `🔄 EXPERIMENT LOG: EXP-DRIVE-SYNC-001 (GitHub → Google Drive → NotebookLM Continuous Sync Bridge)` - 11 edges
@@ -119,6 +124,8 @@
 10. `Aaradhya Dev Tamrakar (ADT)` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `Personal Tool Ecosystem` --references--> `Canonical Capability Registry`  [EXTRACTED]
+  README.md → schemas/capability-registry.yaml
 - `Aaradhya Dev Tamrakar (ADT)` --references--> `ARCH-SPEC-001: ECIE Systems Architect Paradigm`  [EXTRACTED]
   PROFILE.md → research/architectures/ARCH-SPEC-001-ECIE-COMPUTE-MEMORY.md
 - `Aaradhya Dev Tamrakar (ADT)` --references--> `ARCH-SPEC-002: Ingestion Processing Unit (IPU)`  [EXTRACTED]
@@ -126,8 +133,6 @@
 - `Aaradhya Dev Tamrakar (ADT)` --references--> `Experiment FLEET-001`  [EXTRACTED]
   PROFILE.md → research/experiments/FLEET-001.md
 - `Aaradhya Dev Tamrakar (ADT)` --references--> `SPARK Wearable Gateway`  [EXTRACTED]
-  PROFILE.md → schemas/capability-registry.yaml
-- `Aaradhya Dev Tamrakar (ADT)` --references--> `STRANGLER-IPU`  [EXTRACTED]
   PROFILE.md → schemas/capability-registry.yaml
 
 ## Import Cycles
@@ -137,15 +142,15 @@
 - **4-Tier Jarvis Capability Mesh** — tool_super_nlm, tool_spark, tool_claude_fleet, tool_bias_aperture, tool_strangler_ipu [EXTRACTED 1.00]
 - **Adversarial Invariant Assurance Flow** — research_hypotheses_hyp_001, research_hypotheses_hyp_002, research_experiments_fleet_001 [INFERRED 0.80]
 
-## Communities (91 total, 8 thin omitted)
+## Communities (96 total, 8 thin omitted)
 
 ### Community 0 - "properties"
 Cohesion: 0.05
 Nodes (41): type, description, items, minItems, type, $ref, format, type (+33 more)
 
 ### Community 1 - "properties"
-Cohesion: 0.20
-Nodes (10): properties, description, type, description, type, description, type, counterexample_schema (+2 more)
+Cohesion: 0.18
+Nodes (11): properties, description, type, description, type, counterexample_schema, inputs, timeout_ms (+3 more)
 
 ### Community 2 - "properties"
 Cohesion: 0.06
@@ -311,9 +316,9 @@ Nodes (9): 1. Problem & Architectural Rationale, 2. Multi-Tier Hybrid Fleet Topo
 Cohesion: 0.50
 Nodes (4): maximum, minimum, type, pass_rate_percent
 
-### Community 49 - "required"
-Cohesion: 0.06
-Nodes (36): claimed_result, claims, evidence_tier, metric, provenance, recorded_at, repository, scope (+28 more)
+### Community 49 - "provenance"
+Cohesion: 0.12
+Nodes (17): recorded_at, source_commit, source_path, provenance, recorded_at, source_commit, source_path, additionalProperties (+9 more)
 
 ### Community 50 - "Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19)"
 Cohesion: 0.18
@@ -343,21 +348,29 @@ Nodes (3): rework_count, minimum, type
 Cohesion: 0.67
 Nodes (3): tokens_total, minimum, type
 
-### Community 58 - "🏛️ DECISION RECORD: DEC-002 (Personal R&D ⇄ Duo-Capstone Boundary & Audit Evidence Discipline)"
-Cohesion: 0.40
-Nodes (5): 1. Context & Problem, 2. Decisions, 3. Consequences & Downstream Actions (Not Yet Implemented), 4. Verification Anchors, 🏛️ DECISION RECORD: DEC-002 (Personal R&D ⇄ Duo-Capstone Boundary & Audit Evidence Discipline)
+### Community 58 - "ecosystem.verification.schema.json"
+Cohesion: 0.18
+Nodes (10): generated_by, manifest_kind, projects, schema_version, additionalProperties, $id, required, $schema (+2 more)
 
-### Community 59 - "timeout_ms"
-Cohesion: 0.50
-Nodes (4): timeout_ms, description, minimum, type
+### Community 59 - "claims"
+Cohesion: 0.22
+Nodes (9): items, minItems, type, $ref, items, minItems, type, claims (+1 more)
 
 ### Community 60 - "verification"
 Cohesion: 0.09
 Nodes (22): claimed, method, verified, warn, minLength, type, verification, type (+14 more)
 
-### Community 61 - "inputs"
-Cohesion: 0.67
-Nodes (3): description, type, inputs
+### Community 61 - "properties"
+Cohesion: 0.25
+Nodes (8): minLength, type, const, properties, generated_by, manifest_kind, schema_version, const
+
+### Community 62 - "required"
+Cohesion: 0.29
+Nodes (7): claimed_result, claims, provenance, repository, verification, id, required
+
+### Community 63 - "$defs"
+Cohesion: 0.29
+Nodes (7): additionalProperties, type, $defs, claim, project, additionalProperties, type
 
 ### Community 64 - "nepali-ocr-ai.contract.json"
 Cohesion: 0.11
@@ -371,6 +384,10 @@ Nodes (6): additionalProperties, description, $id, $schema, title, type
 Cohesion: 0.21
 Nodes (15): build_result(), _distribution(), ExperimentConfig, _git_commit(), main(), _percentile(), Deterministic, zero-dependency STRANGLER-IPU pipeline experiments. This is a…, FIFO single-server completion times, in seconds. (+7 more)
 
+### Community 67 - "required"
+Cohesion: 0.40
+Nodes (5): evidence_tier, metric, scope, value, required
+
 ### Community 68 - "🏛️ DECISION RECORD: DEC-001 (Memory Stratification & Retrieval Pruning)"
 Cohesion: 0.40
 Nodes (4): 1. Context & Problem, 2. Decision, 3. Consequences & Empirical Verification, 🏛️ DECISION RECORD: DEC-001 (Memory Stratification & Retrieval Pruning)
@@ -379,9 +396,17 @@ Nodes (4): 1. Context & Problem, 2. Decision, 3. Consequences & Empirical Verifi
 Cohesion: 0.67
 Nodes (3): ARCH-SPEC-002 (IPU), GPU & RAM Architecture Spec, STRANGLER-IPU
 
-### Community 70 - "ecosystem.verification.schema.json"
-Cohesion: 0.05
-Nodes (41): generated_by, manifest_kind, projects, schema_version, additionalProperties, minLength, type, items (+33 more)
+### Community 70 - "properties"
+Cohesion: 0.14
+Nodes (14): minLength, type, pattern, type, properties, claimed_result, id, provenance (+6 more)
+
+### Community 71 - "description"
+Cohesion: 0.67
+Nodes (3): description, type, description
+
+### Community 72 - "deterministic"
+Cohesion: 0.67
+Nodes (3): description, type, deterministic
 
 ### Community 76 - "enum"
 Cohesion: 0.10
@@ -436,7 +461,7 @@ Cohesion: 0.33
 Nodes (5): 1. Executive Summary & Problem Space, 2. System Architecture: Lipikaar-AI Pipeline, 3. Core Functional Invariants, 4. Verification & Milestone Roadmap, ARCH-SPEC-005: Nepali OCR, Grammar Checker & Font-Agnostic Word Substrate (Lipikaar-AI)
 
 ### Community 190 - "Aaradhya Dev Tamrakar (ADT)"
-Cohesion: 0.31
+Cohesion: 0.36
 Nodes (5): Aaradhya Dev Tamrakar (ADT), Personal Tool Ecosystem, Canonical Capability & Ecosystem Ontology, Calibrated Evidence Policy, SPARK Wearable Gateway
 
 ### Community 201 - "fusion360-mcp.contract.json"
@@ -468,21 +493,21 @@ Cohesion: 0.38
 Nodes (10): ARCH-RFC-001, ARCH-RFC-001: Record Keeping Standard, ARCH-RFC-002: Multi-Model Council Protocol, ARCH-RFC-003: Capstone Defense Standard, ARCH-SPEC-001: ECIE Systems Architect Paradigm, ARCH-SPEC-002: Ingestion Processing Unit (IPU), Research Architectures Hub, EXP-001: IPU Breakeven Sweep Protocol (+2 more)
 
 ## Knowledge Gaps
-- **667 isolated node(s):** `$schema`, `$id`, `title`, `description`, `type` (+662 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 724 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **663 isolated node(s):** `$schema`, `$id`, `title`, `description`, `type` (+658 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 721 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `properties` connect `properties` to `properties`, `id`, `capability.contract.v1.json`, `enum`, `enum`, `outputs`, `side_effects`, `enum`, `enum`, `timeout_ms`, `inputs`?**
+- **Why does `properties` connect `properties` to `id`, `properties`, `capability.contract.v1.json`, `description`, `deterministic`, `enum`, `enum`, `outputs`, `side_effects`, `enum`, `enum`?**
   _High betweenness centrality (0.017) - this node is a cross-community bridge._
-- **Why does `Personal Tool Ecosystem` connect `Aaradhya Dev Tamrakar (ADT)` to `2. Core Architectural & Systemic Limitations`, `Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19)`, `2. Granular Claims Audit Register`, `ARCH-RFC-003: Capstone Defense Standard`?**
-  _High betweenness centrality (0.013) - this node is a cross-community bridge._
 - **Why does `capability` connect `capability.contract.v1.json` to `properties`?**
   _High betweenness centrality (0.011) - this node is a cross-community bridge._
+- **Why does `Personal Tool Ecosystem` connect `Aaradhya Dev Tamrakar (ADT)` to `2. Core Architectural & Systemic Limitations`, `Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19)`, `2. Granular Claims Audit Register`, `ARCH-RFC-003: Capstone Defense Standard`?**
+  _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **What connects `$schema`, `$id`, `title` to the rest of the system?**
-  _667 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _663 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `properties` be split into smaller, more focused modules?**
   _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._
 - **Should `properties` be split into smaller, more focused modules?**

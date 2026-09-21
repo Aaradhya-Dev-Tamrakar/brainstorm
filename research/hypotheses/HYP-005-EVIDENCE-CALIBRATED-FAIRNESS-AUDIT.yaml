@@ -1,0 +1,33 @@
+id: HYP-005
+title: "Controlled Prediction-Layer Bias Injection Empirically Calibrates a Facial-Analysis Fairness Auditor's Detection Power and Evidence Sufficiency"
+author: "Aaradhya Dev Tamrakar"
+date: "2026-09-21"
+
+# Theoretical Justification
+hypothesis: >
+  A post-hoc facial-analysis fairness auditor whose operating characteristics are characterized by
+  controlled prediction-layer bias injection (known injected disparity magnitudes delta in
+  {0.02, 0.05, 0.10, 0.15, 0.20}, swept across race, gender and race x gender x age subgroup
+  supports, with repeated seeded trials) will exhibit: (a) a null-mutation false-flag rate <= 0.05,
+  (b) detection power >= 0.80 at delta = 0.10 for subgroups with n >= 30, and (c) empirical coverage
+  of the nominal 95% confidence interval within [0.92, 0.98] of the known injected effect.
+why_we_believe_it: >
+  Given fixed inputs, deterministic seeds and a frozen audit specification, the audit pipeline is a
+  measurable instrument rather than an oracle: mutating only the prediction layer preserves the
+  dataset, labels and model while isolating the metric/statistics pathway, which converts an
+  otherwise unfalsifiable "did the tool find the bias?" question into a standard
+  power-and-coverage characterization against known ground truth.
+counterargument: >
+  Prediction-layer mutations may not resemble the error geometry of real models, so calibration
+  transferability is unproven; FairFace subgroup supports may be too small for stable power,
+  bootstrap confidence-interval coverage is known to degrade at small n or extreme base rates, and
+  all characterized behaviour is conditional on the audit specification (metric choice, grouping,
+  backend), so the instrument can be calibrated yet still mis-specified for the original question.
+
+# Experimental Falsification Protocol
+target_experiment: "BA-CAL-001"
+success_metric: "Null-mutation false-flag rate <= 0.05; power >= 0.80 at delta = 0.10 for n >= 30 subgroups; empirical 95% CI coverage within [0.92, 0.98]; effect recovery consistent with injected delta within expected sampling variation"
+failure_condition: "Null mutation exceeds a 0.05 false-flag rate, or power at delta = 0.10 falls below 0.80 at reported subgroup support, or observed CI coverage departs beyond [0.92, 0.98]"
+
+# Lifecycle State: proposed | active | verified | falsified | retired
+status: proposed

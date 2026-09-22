@@ -18,9 +18,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: "pip"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Validate ecosystem manifest
         run: python tools/validate_ecosystem.py
       - name: Reconciliation audit
         run: python sim/reconciliation_engine.py
-      - name: Simulator regression
-        run: python -m unittest sim.test_warehouse_mem_sim sim.test_reproducibility
+      - name: Dynamic simulation test suite regression
+        run: python -m unittest discover -s sim -p "test_*.py"
+      - name: Task telemetry regression
+        run: python sim/task_telemetry.py --test

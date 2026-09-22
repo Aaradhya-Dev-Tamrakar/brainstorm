@@ -37,6 +37,18 @@
 .PARAMETER NewTool
     Provisions a new tool branch in brainstorm and sets up the matching local repo branch.
 
+.PARAMETER CrossSync
+    Audits and displays brainstorm branch states across all dynamically discovered tool repositories.
+
+.PARAMETER CrossPull
+    Performs dynamic ecosystem cross-sync and safely rebases/pulls updates for clean tool repos.
+
+.PARAMETER Reconcile
+    Executes dynamic documentation and invariant auto-reconciliation (sim\reconciliation_engine.py --fix).
+
+.PARAMETER NoReconcile
+    Bypasses the automatic reconciliation step during routine commit and push synchronization.
+
 .PARAMETER PullOnly
     Safely pull remote updates with --rebase --autostash without committing or pushing.
 
@@ -59,6 +71,9 @@
     .\sync.ps1 -b SPARK                      # Switch to SPARK branch and sync
     .\sync.ps1 -AllBranches                  # Synchronize all tool branches with origin
     .\sync.ps1 -SyncToolRepos                # Audit brainstorm branch across all tool repos
+    .\sync.ps1 -CrossSync                    # Audit cross-repo synchronization across tools
+    .\sync.ps1 -CrossPull                    # Rebase and pull clean tool repos behind origin
+    .\sync.ps1 -Reconcile                    # Reconcile docs, schemas, counts without commit
     .\sync.ps1 -NewTool "NovaVision"         # Provision a new tool branch across ecosystem
     .\sync.ps1 -m "docs: architecture notes" # Sync with custom commit message
     .\sync.ps1 -WhatIf                       # Dry-run preview
@@ -211,12 +226,65 @@ function Ensure-RemoteConfigured {
     }
 }
 
+function Resolve-PythonInterpreter {
+    if ($env:VIRTUAL_ENV) {
+        $venvPy = Join-Path $env:VIRTUAL_ENV "Scripts\python.exe"
+        if (Test-Path $venvPy) { return $venvPy }
+        $venvPyUnix = Join-Path $env:VIRTUAL_ENV "bin\python"
+        if (Test-Path $venvPyUnix) { return $venvPyUnix }
+    }
+    $localVenv = Join-Path $PSScriptRoot ".venv\Scripts\python.exe"
+    if (Test-Path $localVenv) { return $localVenv }
+
+    # Query Python launcher for concrete sys.executable path
+    $pyLauncher = Get-Command "py" -ErrorAction SilentlyContinue
+    if ($pyLauncher) {
+        $pyPath = (& py -3 -c "import sys; print(sys.executable)" 2>$null)
+        if ($LASTEXITCODE -eq 0 -and $pyPath) {
+            $cleanPath = $pyPath.Trim()
+            if (Test-Path $cleanPath) {
+                return $cleanPath
+            }
+        }
+    }
+    $sysPy = Get-Command "python" -ErrorAction SilentlyContinue
+    if ($sysPy) {
+        if ($sysPy.Source -and (Test-Path $sysPy.Source)) {
+            return $sysPy.Source
+        }
+        return "python"
+    }
+
+    return "python3"
+}
+
+function Invoke-PythonScript {
+    param(
+        [string]$ScriptPath,
+        [string[]]$ScriptArgs = @()
+    )
+    $py = Resolve-PythonInterpreter
+    & $py $ScriptPath @ScriptArgs
+}
+
 function Find-StagedSecrets {
     $stagedDiff = git diff --cached -U0 2>$null
     if (-not $stagedDiff) { return @() }
 
     $addedLines = @($stagedDiff | Where-Object { $_ -match '^\+[^+]' } | ForEach-Object { $_.Substring(1) })
     if ($addedLines.Count -eq 0) { return @() }
+
+    $ignoreList = @()
+    $ignoreFile = Join-Path $PSScriptRoot ".syncignore-secrets"
+    if (Test-Path $ignoreFile) {
+        $rawLines = Get-Content $ignoreFile -Encoding UTF8 -ErrorAction SilentlyContinue
+        foreach ($il in $rawLines) {
+            $trimmed = $il.Trim()
+            if ($trimmed -and -not $trimmed.StartsWith("#")) {
+                $ignoreList += $trimmed
+            }
+        }
+    }
 
     $secretPatterns = @(
         'AKIA[0-9A-Z]{16}',                                              # AWS Access Key
@@ -232,6 +300,24 @@ function Find-StagedSecrets {
 
     $hits = @()
     foreach ($line in $addedLines) {
+        $trimmedLine = $line.Trim()
+        $isIgnored = $false
+        foreach ($ig in $ignoreList) {
+            try {
+                if ($trimmedLine -match [regex]::Escape($ig) -or ($ig -match '^\^|[\*\+\?]' -and $trimmedLine -match $ig)) {
+                    $isIgnored = $true
+                    break
+                }
+            }
+            catch {
+                if ($trimmedLine.Contains($ig)) {
+                    $isIgnored = $true
+                    break
+                }
+            }
+        }
+        if ($isIgnored) { continue }
+
         foreach ($pattern in $secretPatterns) {
             if ($line -match $pattern) {
                 $snippet = $line.Trim()
@@ -293,24 +379,83 @@ function Get-AutoCommitMessage {
     $hasDocs = $false
     $hasScripts = $false
     $hasWorkflows = $false
+    $hasTests = $false
+    $hasCode = $false
+    $hasBuild = $false
 
     foreach ($f in $allChanged) {
         if ($f -match '\.md$') { $hasDocs = $true }
-        elseif ($f -match '\.(ps1|sh|bat|cmd)$') { $hasScripts = $true }
+        elseif ($f -match 'test_[^/]+\.py$' -or $f -match '\.test\.') { $hasTests = $true }
+        elseif ($f -match '\.(py|ts|tsx|js|jsx|cs|kt|cpp|c|rs|go)$') { $hasCode = $true }
+        elseif ($f -match '\.(bat|cmd|dockerfile|requirements\.txt|package\.json)$' -or $f -match 'build_') { $hasBuild = $true }
+        elseif ($f -match '\.(ps1|sh)$') { $hasScripts = $true }
         elseif ($f -match '(\.github|\.gitignore|\.yaml|\.yml|\.json)') { $hasWorkflows = $true }
     }
 
-    if ($hasScripts) {
+    if ($hasTests -and -not $hasCode) {
+        $type = "test"
+    }
+    elseif ($hasCode) {
+        # Check if all changed code files are brand new
+        $codeFiles = @($allChanged | Where-Object { $_ -match '\.(py|ts|tsx|js|jsx|cs|kt|cpp|c|rs|go)$' })
+        $allNewCode = $true
+        foreach ($cf in $codeFiles) {
+            if ($addedFiles -notcontains $cf) { $allNewCode = $false; break }
+        }
+        if ($allNewCode -and $codeFiles.Count -gt 0) {
+            $type = "feat"
+        }
+        else {
+            # Check diff for fix indicators
+            $diffSummary = git diff --cached 2>$null
+            if ($diffSummary -match '(?i)(fix|bug|patch|error|issue)') {
+                $type = "fix"
+            }
+            else {
+                $type = "refactor"
+            }
+        }
+    }
+    elseif ($hasBuild) {
+        $type = "build"
+    }
+    elseif ($hasScripts) {
         $type = "chore"
-        if ($ActiveBranch -eq "main") { $scope = "automation" }
     }
     elseif ($hasWorkflows) {
         $type = "ci"
-        if ($ActiveBranch -eq "main") { $scope = "repo" }
     }
     elseif ($hasDocs) {
         $type = "docs"
-        if ($ActiveBranch -eq "main") {
+    }
+
+    # Main branch scope refinement
+    if ($ActiveBranch -eq "main") {
+        if ($allChanged | Where-Object { $_ -match '^sim/' }) {
+            $scope = "sim"
+        }
+        elseif ($allChanged | Where-Object { $_ -match '^tools/' }) {
+            $scope = "tools"
+        }
+        elseif ($allChanged | Where-Object { $_ -match '^scripts/' }) {
+            $scope = "scripts"
+        }
+        elseif ($allChanged | Where-Object { $_ -match '^schemas/' }) {
+            $scope = "schemas"
+        }
+        elseif ($allChanged | Where-Object { $_ -match '^research/' }) {
+            $scope = "research"
+        }
+        elseif ($allChanged | Where-Object { $_ -match '^\.github/' }) {
+            $scope = "ci"
+        }
+        elseif ($hasScripts) {
+            $scope = "automation"
+        }
+        elseif ($hasWorkflows) {
+            $scope = "repo"
+        }
+        elseif ($hasDocs) {
             if ($allChanged | Where-Object { $_ -match 'ECOSYSTEM' }) {
                 $scope = "ecosystem"
             } else {
@@ -707,7 +852,7 @@ try {
     if ($Reconcile) {
         Write-Status "Executing dynamic documentation & invariant auto-reconciliation..." -Color ([System.ConsoleColor]::Cyan)
         $reconPy = Join-Path $RepoPath "sim\reconciliation_engine.py"
-        python $reconPy --fix
+        Invoke-PythonScript -ScriptPath $reconPy -ScriptArgs @("--fix")
         exit $LASTEXITCODE
     }
 
@@ -818,9 +963,12 @@ try {
     if (-not $NoReconcile -and (Test-Path (Join-Path $RepoPath "sim\reconciliation_engine.py"))) {
         Write-Status "Executing dynamic documentation & invariant auto-reconciliation..." -Color ([System.ConsoleColor]::Cyan)
         $reconPy = Join-Path $RepoPath "sim\reconciliation_engine.py"
-        python $reconPy --fix
-        if ($LASTEXITCODE -ne 0) {
-            Write-Notice "Warning: Dynamic reconciliation reported discrepancies. Proceeding with staging..."
+        Invoke-PythonScript -ScriptPath $reconPy -ScriptArgs @("--fix")
+        $rc = $LASTEXITCODE
+        if ($rc -ne 0) {
+            Write-Fail "Zero-Discrepancy Audit Gate Failed: Dynamic reconciliation reported discrepancies (exit code $rc)."
+            Write-Notice "Halted sync to prevent unverified commits. Run '.\audit.bat --fix' or inspect discrepancies before committing."
+            exit $rc
         }
         else {
             Write-Success "All documentation counts and invariant ledgers dynamically reconciled."
@@ -879,6 +1027,15 @@ try {
     }
 
     Write-Success "Repository synchronized successfully with origin/$currentBranch."
+
+    # Ecosystem Pulse
+    try {
+        $branches = @(git branch --format="%(refname:short)" 2>$null)
+        $cleanStatus = git status --porcelain 2>$null
+        $treeState = if (-not $cleanStatus -or $cleanStatus.Trim().Length -eq 0) { "Clean" } else { "Dirty" }
+        Write-Host "`n[Pulse] Ecosystem Branches: $($branches.Count) | Active: [$currentBranch] | Working Tree: $treeState | Remote: origin" -ForegroundColor Green
+    }
+    catch {}
 }
 catch {
     Write-Fail "Sync error: $_"

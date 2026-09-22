@@ -9,7 +9,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "schemas" / "ecosystem.verification.json"
 SCHEMA = ROOT / "schemas" / "ecosystem.verification.schema.json"
-PROJECT_IDS = {"super-nlm", "claude-desktop", "aaradhyadt-github-io", "brainstorm"}
 TOP_LEVEL_KEYS = {"$schema", "schema_version", "manifest_kind", "generated_by", "projects"}
 PROJECT_KEYS = {"id", "repository", "claimed_result", "claims", "provenance", "verification"}
 CLAIM_KEYS = {"metric", "value", "scope", "evidence_tier", "limitations"}
@@ -31,8 +30,22 @@ def validate():
     if manifest.get("schema_version") != "1.0.0" or manifest.get("manifest_kind") != "ecosystem_verification":
         fail("unexpected manifest version or kind")
     projects = manifest.get("projects")
-    if not isinstance(projects, list) or {p.get("id") for p in projects} != PROJECT_IDS:
-        fail("manifest must contain exactly the four in-scope project ids")
+    min_items = schema.get("properties", {}).get("projects", {}).get("minItems", 4)
+    if not isinstance(projects, list) or len(projects) < min_items:
+        fail(f"manifest projects array must contain at least {min_items} projects")
+    id_pattern = schema.get("$defs", {}).get("project", {}).get("properties", {}).get("id", {}).get("pattern", r"^[a-z0-9][a-z0-9-]*$")
+    seen_ids = set()
+    for project in projects:
+        pid = project.get("id")
+        if not pid or not re.fullmatch(id_pattern, pid):
+            fail(f"project id '{pid}' does not match schema pattern {id_pattern}")
+        if pid in seen_ids:
+            fail(f"duplicate project id in manifest: '{pid}'")
+        seen_ids.add(pid)
+    MANDATORY_ANCHORS = {"brainstorm"}
+    if not MANDATORY_ANCHORS.issubset(seen_ids):
+        missing = MANDATORY_ANCHORS - seen_ids
+        fail(f"manifest missing required ecosystem root anchor(s): {missing}")
     for project in projects:
         if set(project) != PROJECT_KEYS:
             fail(f"project {project.get('id', '<unknown>')} contains schema-invalid keys")

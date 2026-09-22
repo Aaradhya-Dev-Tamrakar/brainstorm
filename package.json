@@ -1,0 +1,37 @@
+{
+  "name": "localsend-mcp",
+  "version": "1.0.0",
+  "description": "Model Context Protocol (MCP) server for LocalSend p2p file and text transfer over local Wi-Fi / LAN",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "localsend-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts"
+  },
+  "keywords": [
+    "localsend",
+    "mcp",
+    "model-context-protocol",
+    "file-transfer",
+    "lan",
+    "p2p",
+    "antigravity",
+    "claude"
+  ],
+  "author": "Aaradhya Dev Tamrakar",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "@sinclair/typebox": "^0.34.48"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}

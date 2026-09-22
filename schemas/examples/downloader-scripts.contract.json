@@ -1,0 +1,36 @@
+{
+  "$schema": "../capability.contract.v1.json",
+  "module": "downloader-scripts",
+  "version": "1.0.0",
+  "location": "F:\\Aaradhya-Dev-Tamrakar\\Downloader scripts",
+  "tracking_branch": "downloader-scripts",
+  "runtime": "powershell7",
+  "capabilities": [
+    {
+      "id": "media_download_automation",
+      "description": "Deterministic batch audio extraction and high-definition video downloading via yt-dlp automation with dedicated destination routing to C:\\Users\\Aaradhya\\Music.",
+      "category": "ingestion",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "deterministic_execution",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 120000,
+      "inputs": {
+        "type": "object",
+        "required": ["url"],
+        "properties": {
+          "url": { "type": "string", "description": "YouTube/YouTube Music URL" },
+          "mode": { "type": "string", "enum": ["mp3", "480p", "720p"], "default": "mp3" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["success", "output_directory"],
+        "properties": {
+          "success": { "type": "boolean" },
+          "output_directory": { "type": "string", "default": "C:\\Users\\Aaradhya\\Music" }
+        }
+      }
+    }
+  ]
+}

@@ -11,8 +11,8 @@
   "statistics": {
     "total_git_branches": 18,
     "orchestration_branches": 1,
-    "total_tool_modules": 21,
-    "computational_modules": 17,
+    "total_tool_modules": 22,
+    "computational_modules": 18,
     "presentation_and_educational_modules": 4,
     "research_artifacts": 27
   },
@@ -254,6 +254,18 @@
       "local_path": "F:\\Aaradhya-Dev-Tamrakar\\localsend-mcp",
       "core_superpower": "Zero-cloud local P2P file, text, and clipboard transfer across LAN/Wi-Fi devices with mutual TLS and persistent favoriting listener",
       "contract_ref": "schemas/examples/localsend-mcp.contract.json"
+    },
+    {
+      "index": 22,
+      "id": "downloader-scripts",
+      "branch": "downloader-scripts",
+      "name": "Downloader Scripts",
+      "category": "computational_engine",
+      "tech_stack": "PowerShell 7, Batch, yt-dlp",
+      "execution_context": "Local Desktop",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\Downloader scripts",
+      "core_superpower": "Automated batch YouTube & YouTube Music audio/video extraction, tag embedding, and direct routing to Music directory",
+      "contract_ref": "schemas/examples/downloader-scripts.contract.json"
     }
   ]
 }

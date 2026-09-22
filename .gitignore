@@ -1,0 +1,21 @@
+# Dependencies & Node
+node_modules/
+package-lock.json
+
+# Environment & API keys
+.env
+.env.local
+*.key
+*.pem
+
+# Operating System & IDE artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Extension package builds
+*.zip
+*.crx
+dist/
+build/

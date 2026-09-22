@@ -1,21 +1,62 @@
-# Personal Tool Ecosystem & Jarvis Brainstorm
+# Screen Q&A — Brainstorm Ecosystem Branch
 
-> A unified architectural exploration on interconnecting tools, hardware, and AI engines across `F:\AaradhyaDT`, `F:\Aaradhya-Dev-Tamrakar`, and `F:\FuseAIF2026`.
-
----
-
-## 📌 Active Architecture Document
-
-Read the complete architectural log and catalog:
-👉 **[ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md](ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md)**
+> **Ecosystem Branch**: `screen-qa-extension`
+> **Canonical Repo**: [Aaradhya-Dev-Tamrakar/screen-qa-extension](https://github.com/Aaradhya-Dev-Tamrakar/screen-qa-extension)
+> **Archetype**: Sensory Organ — Ambient Browser Intelligence
+> **Role in Jarvis**: Real-time DOM question extraction and zero-click Gemini Flash overlay responses
 
 ---
 
-## 🧭 Core Concept: The Composable Capability Mesh
+## Tool Summary
 
-Rather than treating projects as isolated applications, this brainstorm models every tool as an **autonomous capability module** spanning **Local**, **Cloud**, and **Hybrid** execution environments.
+Screen Q&A is a Manifest V3 Chrome Extension that monitors every web page for question-like text via `MutationObserver`, queries the Google Gemini Flash API, and renders non-intrusive floating answer overlays anchored precisely to the question source element. Runs continuously in the content script context — immune to MV3 service worker idle termination.
 
-Connected through a shared protocol (like **Model Context Protocol / MCP** or an internal event bus), these modules transform into a **Personal Jarvis** with:
-- **Sensory Organs**: Browser vision ([Screen Q&A](file:///F:/Aaradhya-Dev-Tamrakar/screen-qa-extension)), hardware telemetry ([SPARK](file:///F:/Aaradhya-Dev-Tamrakar/SPARK)), stream capture ([yt-dlp-live](file:///F:/AaradhyaDT/yt-dlp-live)).
-- **Executive Actuators**: OS tuning ([NovaOptimizer](file:///F:/Aaradhya-Dev-Tamrakar/system-optimizer)), 3D CAD modeling ([Autodesk Fusion 360 MCP](file:///F:/Aaradhya-Dev-Tamrakar/Autodesk-Fusion-360-MCP-Server)), publication rendering ([md2pdf](file:///F:/Aaradhya-Dev-Tamrakar/md2pdf-desktop)), and distributed worker fleets ([Claude-Desktop](file:///F:/Aaradhya-Dev-Tamrakar/Claude-Desktop)).
-- **Deep Memory**: Cloud research ([Super-NLM Hub](file:///F:/Aaradhya-Dev-Tamrakar/super-nlm)), project knowledge ([Nexus](file:///F:/AaradhyaDT/Nexus)), and cognitive speed reading ([RSVP Reader](file:///F:/AaradhyaDT/rsvp-reading)).
+| Field | Value |
+|---|---|
+| **Registry Index** | 9 |
+| **Branch ID** | `screen-qa-extension` |
+| **Tech Stack** | Chrome MV3 (JS), Gemini Flash |
+| **Execution Context** | Ambient Browser |
+| **Core Superpower** | Ambient browser intelligence, instant question extraction and zero-click overlay response |
+| **Local Path** | `F:\Aaradhya-Dev-Tamrakar\screen-qa-extension` |
+
+---
+
+## Ecosystem Position
+
+```
+[Jarvis Architecture]
+  ┌─────────────────────────────┐
+  │      SENSORY ORGANS         │
+  │                             │
+  │  ● Screen Q&A  ◄── THIS     │  DOM scanning, question detection, Gemini overlay
+  │  ● SPARK                    │  Hardware telemetry & BLE fall detection
+  │  ● yt-dlp-live              │  Live stream capture & RTMP relay
+  └─────────────────────────────┘
+```
+
+**Compound Pipeline A — Rapid Learning Loop**:
+```
+Screen Q&A (extract) ──► Super-NLM (synthesize) ──► md2pdf (render) ──► RSVP Reader (flash)
+```
+
+---
+
+## Files in This Branch
+
+| File | Purpose |
+|---|---|
+| `manifest.json` | Manifest V3 extension config (background, content scripts, options) |
+| `background.js` | Stateless MV3 service worker — Gemini Flash API relay |
+| `content.js` | MutationObserver DOM watcher + TreeWalker anchor + overlay injector |
+| `overlay.css` | Dark-theme ambient floating UI styles |
+| `options.html` / `options.js` | User API key configuration via `chrome.storage.local` |
+| `icons/` | Extension icon set (16×16, 48×48, 128×128) |
+| `AGENTS.md` | Agent operating rules (MV3 constraints, secret hygiene) |
+| `sync.ps1` | Ecosystem sync engine with Gemini key secret guard |
+
+---
+
+## 📌 Ecosystem Architecture
+
+See [`ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md`](ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md) for the full Jarvis capability mesh.

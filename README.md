@@ -15,7 +15,7 @@
 To eliminate ambiguity between what is **implemented**, what is **experimentally demonstrated**, and what is **proposed research**, this repository adheres to formal governance standards:
 
 - 📖 **[Canonical Capability & Ecosystem Ontology](schemas/capability-ontology.md):** Formal definitions of Repository $\to$ Project $\to$ Capability $\to$ Interface $\to$ Workflow.  
-  _Canonical Inventory:_ **22 Tool Modules** | **18 Computational Engines** | **4 Presentation Hubs** | **6 Compound Workflows** | **27 Research Specs & Experiments**.
+  _Canonical Inventory:_ **22 Tool Modules** | **18 Computational Engines** | **4 Presentation Hubs** | **6 Compound Workflows** | **28 Research Specs & Experiments**.
 - 📜 **[Calibrated Evidence Policy (E0–E5)](schemas/evidence-policy.md):** Enforces evidence tiers and distinguishes formalization correctness, solver correctness, and empirical runtime correctness.
 - 🗂️ **[Machine-Readable Capability Registry (YAML)](schemas/capability-registry.yaml):** Single source of truth recording inputs, outputs, interfaces, benchmarks, maintenance overhead, and evidence tiers for every ecosystem capability.
 - 📋 **[Repository Epistemic Audit](report/repository-audit.md):** Granular audit classifying all major repository claims against traceable artifacts.

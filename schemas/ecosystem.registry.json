@@ -9,7 +9,7 @@
     "role": "Central Architecture Registry, Verification Engine, and Orchestration Blueprint"
   },
   "statistics": {
-    "total_git_branches": 20,
+    "total_git_branches": 21,
     "orchestration_branches": 1,
     "total_tool_modules": 22,
     "computational_modules": 18,
@@ -264,7 +264,7 @@
       "category": "computational_engine",
       "tech_stack": "PowerShell 7, WPF XAML, Windows Shell APIs, yt-dlp, Batch",
       "execution_context": "Local Desktop",
-      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\Downloader scripts",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\downloader-scripts",
       "core_superpower": "Zero-click clipboard auto-paste downloader, 1-click WPF Audio vs Video selector dialog, dedicated routing to Music and Videos\\yt-dlp, and Windows Toast notifications",
       "contract_ref": "schemas/examples/downloader-scripts.contract.json"
     }

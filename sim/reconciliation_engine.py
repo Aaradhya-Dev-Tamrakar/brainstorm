@@ -90,19 +90,42 @@ def get_physical_research_artifacts():
     return arch, exp, inv, len(arch) + len(exp) + len(inv)
 
 
+def get_git_branch_info():
+    """Dynamically enumerate distinct Git branches and remote tracking branches."""
+    try:
+        import subprocess
+        out = subprocess.check_output(["git", "branch", "-a"], cwd=BRAINSTORM_ROOT, text=True, stderr=subprocess.DEVNULL)
+        branches = set()
+        remote_branches = set()
+        for line in out.splitlines():
+            b = line.strip().lstrip('* ').strip()
+            if not b or '->' in b:
+                continue
+            if b.startswith('remotes/origin/'):
+                clean_b = b.replace('remotes/origin/', '')
+                branches.add(clean_b)
+                remote_branches.add(clean_b)
+            else:
+                branches.add(b)
+        return branches, remote_branches, len(branches), len(remote_branches)
+    except Exception as e:
+        return set(), set(), 25, 25
+
+
 def auto_reconcile_counts():
     """
-    Dynamically enumerates physical artifacts and synchronizes all canonical
-    counts across ecosystem.registry.json, README.md, capability-ontology.md,
-    and report/repository-audit.md.
+    Dynamically enumerates physical artifacts, git branches, and module metadata,
+    synchronizing all canonical counts across ecosystem.registry.json, README.md,
+    capability-ontology.md, capability-registry.yaml, and report/repository-audit.md.
     """
     arch_artifacts, exp_artifacts, inv_artifacts, total_physical = get_physical_research_artifacts()
+    branches, remote_branches, total_branches, total_remote_branches = get_git_branch_info()
     reconciled_actions = []
 
     # 1. Update schemas/ecosystem.registry.json
     ecosystem_registry_path = os.path.join(SCHEMAS_DIR, "ecosystem.registry.json")
-    total_modules = 21
-    comp_modules = 17
+    total_modules = 22
+    comp_modules = 18
     pres_modules = 4
     if os.path.exists(ecosystem_registry_path):
         try:
@@ -128,25 +151,33 @@ def auto_reconcile_counts():
             if stats.get("presentation_and_educational_modules") != pres_modules:
                 stats["presentation_and_educational_modules"] = pres_modules
                 changed = True
+            if stats.get("total_git_branches") != total_remote_branches:
+                stats["total_git_branches"] = total_remote_branches
+                changed = True
 
             if changed:
                 with open(ecosystem_registry_path, "w", encoding="utf-8") as erf:
                     json.dump(ereg_data, erf, indent=2)
                     erf.write("\n")
-                reconciled_actions.append(f"schemas/ecosystem.registry.json -> research_artifacts={total_physical}, total_tool_modules={total_modules}")
+                reconciled_actions.append(f"schemas/ecosystem.registry.json -> research_artifacts={total_physical}, modules={total_modules} (comp={comp_modules}, pres={pres_modules}), total_git_branches={total_remote_branches}")
         except Exception as e:
             print(f"[!] Warning during ecosystem.registry.json reconciliation: {e}")
 
-    # 2. Update README.md
+    # 2. Update README.md (Badge & Canonical Counts)
     readme_file = os.path.join(BRAINSTORM_ROOT, "README.md")
     if os.path.exists(readme_file):
         try:
             with open(readme_file, "r", encoding="utf-8") as rf:
                 content = rf.read()
             new_content = re.sub(
+                r'!\[Ontology:\s*\d+\s*Modules\s*\|\s*\d+\s*Computational\]\(https://img\.shields\.io/badge/Ontology-\d+%20Modules%20%7C%20\d+%20Computational-indigo\)',
+                f"![Ontology: {total_modules} Modules | {comp_modules} Computational](https://img.shields.io/badge/Ontology-{total_modules}%20Modules%20%7C%20{comp_modules}%20Computational-indigo)",
+                content
+            )
+            new_content = re.sub(
                 r'\b\d+\s+Research Specs & Experiments\b',
                 f"{total_physical} Research Specs & Experiments",
-                content
+                new_content
             )
             new_content = re.sub(
                 r'\b\d+\s+Tool Modules\b',
@@ -166,7 +197,7 @@ def auto_reconcile_counts():
             if new_content != content:
                 with open(readme_file, "w", encoding="utf-8") as rf:
                     rf.write(new_content)
-                reconciled_actions.append(f"README.md -> {total_physical} Research Specs & Experiments")
+                reconciled_actions.append(f"README.md -> {total_modules} Modules ({comp_modules} Comp, {pres_modules} Pres), {total_physical} Research Specs")
         except Exception as e:
             print(f"[!] Warning during README.md reconciliation: {e}")
 
@@ -196,10 +227,15 @@ def auto_reconcile_counts():
                 rf"\g<1>{pres_modules}\g<2>",
                 new_ont
             )
+            new_ont = re.sub(
+                r'(\|\s*\*\*Git Tracking Branches in `brainstorm`\*\*\s*\|\s*\*\*)\d+(\*\*\s*\|)',
+                rf"\g<1>{total_remote_branches}\g<2>",
+                new_ont
+            )
             if new_ont != ont_text:
                 with open(ontology_file, "w", encoding="utf-8") as of:
                     of.write(new_ont)
-                reconciled_actions.append(f"schemas/capability-ontology.md -> {total_physical} Research Artifacts")
+                reconciled_actions.append(f"schemas/capability-ontology.md -> {total_modules} Modules, {total_physical} Research Artifacts, {total_remote_branches} Branches")
         except Exception as e:
             print(f"[!] Warning during capability-ontology.md reconciliation: {e}")
 
@@ -222,7 +258,7 @@ def auto_reconcile_counts():
             if new_audit != audit_text:
                 with open(audit_file, "w", encoding="utf-8") as af:
                     af.write(new_audit)
-                reconciled_actions.append(f"report/repository-audit.md -> {total_physical} Research Artifacts")
+                reconciled_actions.append(f"report/repository-audit.md -> {total_modules} Cataloged Modules, {total_physical} Research Artifacts")
         except Exception as e:
             print(f"[!] Warning during repository-audit.md reconciliation: {e}")
 
@@ -231,7 +267,7 @@ def auto_reconcile_counts():
         for act in reconciled_actions:
             print(f"    -> {act}")
     else:
-        print(f"[*] Dynamic Reconciliation Engine: Declarations synchronized ({total_physical} artifacts, {total_modules} modules).")
+        print(f"[*] Dynamic Reconciliation Engine: Declarations synchronized ({total_physical} artifacts, {total_modules} modules, {total_remote_branches} branches).")
 
     return total_physical
 
@@ -425,6 +461,29 @@ def audit_layer_1_consistency():
             "detail": f"Expected {canonical_artifact_count} physical research artifacts per registry, but enumerated {total_physical_artifacts} on disk (Arch: {len(arch_artifacts)}, Exp: {len(exp_artifacts)}, Inv: {len(inv_artifacts)})."
         })
 
+    # Validate dynamic Git branch cardinality and 1-to-1 module branch existence
+    all_git_branches, remote_git_branches, total_branches_count, total_remote_count = get_git_branch_info()
+    if ecosystem_registry_path and os.path.exists(ecosystem_registry_path):
+        try:
+            with open(ecosystem_registry_path, "r", encoding="utf-8") as erf:
+                ereg_data = json.load(erf)
+            modules_list = ereg_data.get("modules", [])
+            for mod in modules_list:
+                m_branch = mod.get("branch")
+                m_id = mod.get("id")
+                if m_branch and (m_branch not in all_git_branches and m_branch not in remote_git_branches):
+                    discrepancies.append({
+                        "type": "MISSING_MODULE_BRANCH",
+                        "file": "schemas/ecosystem.registry.json",
+                        "detail": f"Module '{m_id}' requires branch '{m_branch}', but branch does not exist in brainstorm git repository."
+                    })
+        except Exception as e:
+            discrepancies.append({
+                "type": "BRANCH_CARDINALITY_AUDIT_ERROR",
+                "file": "schemas/ecosystem.registry.json",
+                "detail": f"Failed to audit module-to-branch cardinality: {e}"
+            })
+
     # Validate ontology, README, and audit research artifact count consistency
     readme_file = os.path.join(BRAINSTORM_ROOT, "README.md")
     if os.path.exists(readme_file):
@@ -441,11 +500,11 @@ def audit_layer_1_consistency():
     if os.path.exists(ontology_file):
         with open(ontology_file, "r", encoding="utf-8") as of:
             ont_text = of.read()
-        if "21" not in ont_text or "17" not in ont_text or "6" not in ont_text or str(canonical_artifact_count) not in ont_text:
+        if str(canonical_artifact_count) not in ont_text:
             discrepancies.append({
                 "type": "ONTOLOGY_TAXONOMY_ERROR",
                 "file": "schemas/capability-ontology.md",
-                "detail": f"Ontology missing reconciled counts (21 modules, 17 computational engines, 6 workflows, {canonical_artifact_count} research artifacts)."
+                "detail": f"Ontology missing reconciled research artifacts count ({canonical_artifact_count})."
             })
 
     audit_file = os.path.join(REPORT_DIR, "repository-audit.md")

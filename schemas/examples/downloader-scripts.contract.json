@@ -1,14 +1,14 @@
 {
   "$schema": "../capability.contract.v1.json",
   "module": "downloader-scripts",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "location": "F:\\Aaradhya-Dev-Tamrakar\\Downloader scripts",
   "tracking_branch": "downloader-scripts",
   "runtime": "powershell7",
   "capabilities": [
     {
       "id": "zero_click_clipboard_download",
-      "description": "Auto-pastes YouTube/YouTube Music URL from Windows clipboard into a native 1-click Audio (MP3 + tags + artwork to Music) vs Video (1080p MP4 to Videos\\yt-dlp) selector dialog with Windows Toast notifications.",
+      "description": "Auto-pastes YouTube/YouTube Music URL from Windows clipboard into a native 1-click Audio vs Video selector dialog with smart playlist scoping, throttled nightly auto-updates, browser cookie fallbacks (Edge/Brave/Chrome), and Windows Toast notifications.",
       "category": "ingestion",
       "deterministic": true,
       "side_effects": true,

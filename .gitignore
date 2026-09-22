@@ -1,0 +1,25 @@
+# Private credentials & sensitive files
+stream_key.txt
+cookies.txt
+*.cookie
+*.cookies
+*.env
+.env*
+
+# Binaries
+yt-dlp.exe
+*.exe
+
+# Media & recording outputs
+downloads/
+*.mp4
+*.ts
+*.mkv
+*.part
+*.ytdl
+--Frag*
+
+# Temporary cache and logs
+*.log
+.DS_Store
+Thumbs.db

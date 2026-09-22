@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Status: Evidence-Driven R&D](https://img.shields.io/badge/Status-Evidence--Driven%20R%26D-brightgreen)
-![Ontology: 21 Modules | 17 Computational](https://img.shields.io/badge/Ontology-21%20Modules%20%7C%2017%20Computational-indigo)
+![Ontology: 22 Modules | 18 Computational](https://img.shields.io/badge/Ontology-22%20Modules%20%7C%2018%20Computational-indigo)
 ![Evidence: Calibrated E0-E5](https://img.shields.io/badge/Evidence-Calibrated%20E0--E5-orange)
 ![Engine: sync.ps1](https://img.shields.io/badge/Engine-sync.ps1%20v2.0-cyan)
 

@@ -4,7 +4,7 @@
 
 version: "1.0.0"
 registry_type: "canonical_capability_registry"
-last_reconciled: "2026-09-19"
+last_reconciled: "2026-09-22"
 maintainer: "Aaradhya Dev Tamrakar"
 
 capabilities:

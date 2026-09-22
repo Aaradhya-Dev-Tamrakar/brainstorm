@@ -112,6 +112,23 @@ def get_git_branch_info():
         return set(), set(), 25, 25
 
 
+def get_ecosystem_module_counts():
+    """Dynamically enumerate modules from schemas/ecosystem.registry.json."""
+    ecosystem_registry_path = os.path.join(SCHEMAS_DIR, "ecosystem.registry.json")
+    if os.path.exists(ecosystem_registry_path):
+        try:
+            with open(ecosystem_registry_path, "r", encoding="utf-8") as erf:
+                ereg_data = json.load(erf)
+            modules = ereg_data.get("modules", [])
+            total = len(modules)
+            comp = sum(1 for m in modules if m.get("category") == "computational_engine")
+            pres = sum(1 for m in modules if m.get("category") == "presentation_and_educational")
+            return ereg_data, modules, total, comp, pres
+        except Exception as e:
+            print(f"[!] Warning reading ecosystem registry: {e}")
+    return {}, [], 0, 0, 0
+
+
 def auto_reconcile_counts():
     """
     Dynamically enumerates physical artifacts, git branches, and module metadata,
@@ -120,23 +137,13 @@ def auto_reconcile_counts():
     """
     arch_artifacts, exp_artifacts, inv_artifacts, total_physical = get_physical_research_artifacts()
     branches, remote_branches, total_branches, total_remote_branches = get_git_branch_info()
+    ereg_data, modules, total_modules, comp_modules, pres_modules = get_ecosystem_module_counts()
     reconciled_actions = []
 
     # 1. Update schemas/ecosystem.registry.json
     ecosystem_registry_path = os.path.join(SCHEMAS_DIR, "ecosystem.registry.json")
-    total_modules = 22
-    comp_modules = 18
-    pres_modules = 4
-    if os.path.exists(ecosystem_registry_path):
+    if ereg_data and os.path.exists(ecosystem_registry_path):
         try:
-            with open(ecosystem_registry_path, "r", encoding="utf-8") as erf:
-                ereg_data = json.load(erf)
-            modules = ereg_data.get("modules", [])
-            if modules:
-                total_modules = len(modules)
-                comp_modules = sum(1 for m in modules if m.get("category") == "computational_engine")
-                pres_modules = sum(1 for m in modules if m.get("category") == "presentation_and_educational")
-
             stats = ereg_data.setdefault("statistics", {})
             changed = False
             if stats.get("research_artifacts") != total_physical:
@@ -302,9 +309,9 @@ def audit_layer_1_consistency():
                 if rel_path == "schemas/ecosystem.registry.json":
                     stats = data.get("statistics", {})
                     modules_list = data.get("modules", [])
-                    expected_total = len(modules_list) if modules_list else 21
-                    expected_comp = sum(1 for m in modules_list if m.get("category") == "computational_engine") if modules_list else 17
-                    expected_pres = sum(1 for m in modules_list if m.get("category") == "presentation_and_educational") if modules_list else 4
+                    expected_total = len(modules_list)
+                    expected_comp = sum(1 for m in modules_list if m.get("category") == "computational_engine")
+                    expected_pres = sum(1 for m in modules_list if m.get("category") == "presentation_and_educational")
 
                     if stats.get("total_tool_modules") != expected_total:
                         discrepancies.append({

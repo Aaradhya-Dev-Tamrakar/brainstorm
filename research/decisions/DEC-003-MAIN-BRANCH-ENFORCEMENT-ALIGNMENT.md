@@ -212,7 +212,7 @@ here because the failure had been invisible.
 `GITHUB_TOKEN`. That actor is not listed in the ruleset's `bypass_actors` (only the
 repository-role actor is), so the pre-alignment `pull_request` and
 `required_status_checks` rules rejected the push outright — and the step's
-`|| echo "::warning::..."` fallback converted the rejection into a *passing* job. The
+`|| echo "::warning::..."` fallback converted the rejection into a _passing_ job. The
 automation therefore failed silently rather than visibly.
 
 **Evidence A — blocked push (Drive-sync run `35564869652`, 2026-09-21T05:32:19Z, minutes before alignment):**
@@ -226,11 +226,11 @@ remote: - Required status check "verify" is expected.
 
 **Evidence B — `drive-manifest.json` bot-commit timeline (the causal fingerprint):**
 
-| Commit | Timestamp (UTC) | Author | Relation to the ruleset |
-| :--- | :--- | :--- | :--- |
-| `dde12a4` | 2026-09-16 08:14:32 | `github-actions[bot]` | Last successful bot commit — ~2 min **before** the ruleset was created (2026-09-16 08:16:29Z) |
-| — | 2026-09-16 → 2026-09-21 | — | **No bot commits for 5 days**, while tracked transcripts and hashes kept changing |
-| `f11bfc8` | 2026-09-21 05:36:45 | `github-actions[bot]` | First bot commit **after** alignment, written by the Drive-sync run triggered by the alignment push (~25 s later) |
+| Commit    | Timestamp (UTC)         | Author                | Relation to the ruleset                                                                                           |
+| :-------- | :---------------------- | :-------------------- | :---------------------------------------------------------------------------------------------------------------- |
+| `dde12a4` | 2026-09-16 08:14:32     | `github-actions[bot]` | Last successful bot commit — ~2 min **before** the ruleset was created (2026-09-16 08:16:29Z)                     |
+| —         | 2026-09-16 → 2026-09-21 | —                     | **No bot commits for 5 days**, while tracked transcripts and hashes kept changing                                 |
+| `f11bfc8` | 2026-09-21 05:36:45     | `github-actions[bot]` | First bot commit **after** alignment, written by the Drive-sync run triggered by the alignment push (~25 s later) |
 
 The alignment therefore did not merely remove a ceremonial gate for human pushes; it also
 restored an automation path that the gate had been silently breaking since the day the

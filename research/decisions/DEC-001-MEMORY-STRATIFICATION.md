@@ -17,6 +17,7 @@ Source Transcripts:   research/transcripts/2026-09-19_RATE-WORKFLOW_CONVERSATION
 ## 1. Context & Problem
 
 The 2026-09-19 external workflow audit rated personal R&D workflow at **8.7/10** with memory externalization at **9.7/10**, but identified acute retrieval noise in Graphify:
+
 - `graphify-out/GRAPH_REPORT.md` revealed 2,246 nodes, 222 communities, and mean cohesion of only 0.03–0.06.
 - Top God nodes were dominated by dialogue turns (`Turn 3` @ 45 edges, `Turn 5` @ 24 edges, `Antigravity Session Transcript`).
 - 1,659 isolated schema symbols were fragmenting modularity.

@@ -1,41 +1,24 @@
-# Ephemeral agent orchestration artifacts
-.agents/
+# Binaries & Executables
+*.exe
 
-# Python
-__pycache__/
-*.pyc
-*.pyo
-.venv/
-venv/
+# Sensitive & Personal Data
+cookies.txt
+*.cookie
+*.cookies
 
-# OS artifacts
-.DS_Store
-Thumbs.db
-desktop.ini
+# Download history & state files
+downloads.txt
+*.xspf
 
-# IDE
-.vscode/
-.idea/
-
-# LaTeX build artifacts
-report/*.aux
-report/*.log
-report/*.out
-report/*.toc
-report/*.bbl
-report/*.blg
-report/*.fdb_latexmk
-report/*.fls
-report/*.synctex.gz
-
-# Obsidian UI state
-.obsidian/workspace*.json
-
-# Graphify AST cache
-graphify-out/cache/
-
-# Secrets & Environment variables
-.env
-.env.*
-*.env
-!.env.example
+# Downloaded media formats
+*.mp3
+*.mp4
+*.m4a
+*.webm
+*.opus
+*.flac
+*.mkv
+*.wav
+*.ogg
+*.avi
+*.mov

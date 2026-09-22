@@ -1,4 +1,4 @@
-# 🧠 Personal Tool Ecosystem & Jarvis R&D Laboratory
+# 🧠 Personal Engineering Ecosystem & R&D Infrastructure
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Status: Evidence-Driven R&D](https://img.shields.io/badge/Status-Evidence--Driven%20R%26D-brightgreen)
@@ -6,7 +6,7 @@
 ![Evidence: Calibrated E0-E5](https://img.shields.io/badge/Evidence-Calibrated%20E0--E5-orange)
 ![Engine: sync.ps1](https://img.shields.io/badge/Engine-sync.ps1%20v2.0-cyan)
 
-> An evidence-driven personal systems-R&D control repository and dynamic capability mesh interconnecting tools, hardware, and AI engines across `F:\AaradhyaDT`, `F:\Aaradhya-Dev-Tamrakar`, and `F:\FuseAIF2026`.
+> Evidence-backed infrastructure for orchestrating, synchronizing, verifying, and experimentally evaluating a multi-tool engineering ecosystem — **a machine-readable capability mesh for AI, software, embedded systems, automation, and reproducible R&D**.
 
 ---
 
@@ -61,9 +61,9 @@ Rather than building an isolated chatbot, this repository models tools as **auto
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────┐
-│ 1. JARVIS COGNITIVE INTERFACE                                                  │
+│ 1. EXECUTIVE ORCHESTRATION INTERFACE                                         │
 │    Vendor-Agnostic Interface │ Orchestration Root │ Verification Supervisor    │
-│    (LLM is a replaceable commodity worker, NOT the system identity)            │
+│    Jarvis: intended executive interface over the verified capability mesh     │
 └───────────────────────────────────────┬────────────────────────────────────────┘
                                         │ High-Level Intent
 ┌───────────────────────────────────────▼────────────────────────────────────────┐

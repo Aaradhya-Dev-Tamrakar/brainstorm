@@ -1,41 +1,61 @@
-# Ephemeral agent orchestration artifacts
-.agents/
-
-# Python
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
 .venv/
+env/
 venv/
+ENV/
+env.bak/
+venv.bak/
 
-# OS artifacts
-.DS_Store
-Thumbs.db
-desktop.ini
+# Environment Variables & Secrets
+.env
+.env.local
+*.secret
+*.key
+*.pat
 
-# IDE
+# Local Cache & Scraper storage
+.cache/
+data/cache/
+*.sqlite3
+*.db
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE & OS files
 .vscode/
 .idea/
-
-# LaTeX build artifacts
-report/*.aux
-report/*.log
-report/*.out
-report/*.toc
-report/*.bbl
-report/*.blg
-report/*.fdb_latexmk
-report/*.fls
-report/*.synctex.gz
-
-# Obsidian UI state
-.obsidian/workspace*.json
-
-# Graphify AST cache
-graphify-out/cache/
-
-# Secrets & Environment variables
-.env
-.env.*
-*.env
-!.env.example
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

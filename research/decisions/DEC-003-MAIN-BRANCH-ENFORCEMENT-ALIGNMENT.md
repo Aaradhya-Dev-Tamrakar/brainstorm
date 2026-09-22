@@ -105,7 +105,7 @@ per-repository admin operation and are not managed by these workflows.
 
 ## 3. Empirical Verification (E4)
 
-**3.1 Pre-state (live read-back, 2026-09-21 16:16 +05:45)**
+### 3.1 Pre-state (live read-back, 2026-09-21 16:16 +05:45)
 
 ```text
 gh api repos/Aaradhya-Dev-Tamrakar/brainstorm/rulesets/23533023
@@ -125,7 +125,7 @@ gh api repos/Aaradhya-Dev-Tamrakar/brainstorm/branches/main/protection
 Classic branch protection was confirmed absent, so the ruleset was the only enforcement
 surface: removing its two unsatisfiable rules is both sufficient and necessary.
 
-**3.2 Post-state (live read-back after the alignment `PUT`)**
+### 3.2 Post-state (live read-back after the alignment `PUT`)
 
 ```text
 gh api repos/Aaradhya-Dev-Tamrakar/brainstorm/rulesets/23533023
@@ -143,12 +143,12 @@ gh api repos/Aaradhya-Dev-Tamrakar/brainstorm/rules/branches/main
 The effective-rules endpoint confirms the change is live on the branch, not merely stored
 on the ruleset object.
 
-**3.3 Observed push behaviour — before alignment**
+### 3.3 Observed push behaviour — before alignment
 
 The `sync.ps1` push at 11:16:53 local time produced the `Bypassed rule violations` block
 quoted in §1. That is the direct observable of the defect.
 
-**3.4 Observed push behaviour — after alignment (probe passed)**
+### 3.4 Observed push behaviour — after alignment (probe passed)
 
 The commit that introduced this record (`8291149`) was pushed by `sync.ps1` as the
 intentional probe. Verbatim output:
@@ -169,7 +169,7 @@ the ledger recording `certified: true`.
 
 ## 4. Consequences & Non-Goals
 
-**Consequences**
+### Consequences
 
 - Direct pushes to `main` are now permitted by policy _and_ by the platform, so the
   documented workflow and the enforced workflow agree.
@@ -182,7 +182,7 @@ the ledger recording `certified: true`.
   [`.github/workflows/sync-drive.yml`](../../.github/workflows/sync-drive.yml) remains
   correct as a fallback for a re-tightened ruleset.
 
-**Non-Goals**
+### Non-Goals
 
 - This record does **not** weaken structural or behavioral verification, does not change
   the reconciliation engine, and does not alter any evidence tier elsewhere in the repo.
@@ -206,7 +206,8 @@ the ledger recording `certified: true`.
 While verifying this change, an independent consequence was discovered and is recorded
 here because the failure had been invisible.
 
-**Mechanism.**
+### Mechanism
+
 [`.github/workflows/sync-drive.yml`](../../.github/workflows/sync-drive.yml) recomputes
 `drive-manifest.json` hashes and pushes the result to `main` using the workflow's own
 `GITHUB_TOKEN`. That actor is not listed in the ruleset's `bypass_actors` (only the
@@ -215,7 +216,7 @@ repository-role actor is), so the pre-alignment `pull_request` and
 `|| echo "::warning::..."` fallback converted the rejection into a _passing_ job. The
 automation therefore failed silently rather than visibly.
 
-**Evidence A — blocked push (Drive-sync run `35564869652`, 2026-09-21T05:32:19Z, minutes before alignment):**
+### Evidence A — Blocked push (Drive-sync run `35564869652`, 2026-09-21T05:32:19Z, minutes before alignment)
 
 ```text
 remote: error: GH013: Repository rule violations found for refs/heads/main.
@@ -224,7 +225,7 @@ remote: - Required status check "verify" is expected.
 ##[warning]Direct push to main was blocked by branch ruleset. Manifest changes should be committed via PR.
 ```
 
-**Evidence B — `drive-manifest.json` bot-commit timeline (the causal fingerprint):**
+### Evidence B — `drive-manifest.json` bot-commit timeline (the causal fingerprint)
 
 | Commit    | Timestamp (UTC)         | Author                | Relation to the ruleset                                                                                           |
 | :-------- | :---------------------- | :-------------------- | :---------------------------------------------------------------------------------------------------------------- |
@@ -236,7 +237,8 @@ The alignment therefore did not merely remove a ceremonial gate for human pushes
 restored an automation path that the gate had been silently breaking since the day the
 ruleset was created.
 
-**Follow-up recommendation (not implemented here).**
+### Follow-up recommendation (not implemented here)
+
 The `|| echo "::warning::"` fallback should not mask a rejected push: the step should fail
 loudly, or open a pull request, so that automation regressions surface instead of
 accumulating as stale state. This recommendation is independent of which rules are

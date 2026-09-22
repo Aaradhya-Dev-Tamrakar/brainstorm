@@ -107,6 +107,20 @@ def get_git_branch_info():
                 remote_branches.add(clean_b)
             else:
                 branches.add(b)
+
+        # In shallow/CI checkouts where only 1 ref was fetched, query ls-remote as fallback
+        if len(branches) < 20:
+            try:
+                ls_out = subprocess.check_output(["git", "ls-remote", "--heads", "origin"], cwd=BRAINSTORM_ROOT, text=True, stderr=subprocess.DEVNULL)
+                for line in ls_out.splitlines():
+                    parts = line.strip().split()
+                    if len(parts) >= 2 and parts[1].startswith('refs/heads/'):
+                        rb = parts[1].replace('refs/heads/', '')
+                        branches.add(rb)
+                        remote_branches.add(rb)
+            except Exception:
+                pass
+
         return branches, remote_branches, len(branches), len(remote_branches)
     except Exception as e:
         return set(), set(), 25, 25

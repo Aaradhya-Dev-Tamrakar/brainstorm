@@ -259,12 +259,12 @@
       "index": 22,
       "id": "downloader-scripts",
       "branch": "downloader-scripts",
-      "name": "Downloader Scripts",
+      "name": "Downloader Scripts Hub",
       "category": "computational_engine",
-      "tech_stack": "PowerShell 7, Batch, yt-dlp",
+      "tech_stack": "PowerShell 7, WPF XAML, Windows Shell APIs, yt-dlp, Batch",
       "execution_context": "Local Desktop",
       "local_path": "F:\\Aaradhya-Dev-Tamrakar\\Downloader scripts",
-      "core_superpower": "Automated batch YouTube & YouTube Music audio/video extraction, tag embedding, and direct routing to Music directory",
+      "core_superpower": "Zero-click clipboard auto-paste downloader, 1-click WPF Audio vs Video selector dialog, dedicated routing to Music and Videos\\yt-dlp, and Windows Toast notifications",
       "contract_ref": "schemas/examples/downloader-scripts.contract.json"
     }
   ]

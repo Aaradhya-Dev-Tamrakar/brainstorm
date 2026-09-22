@@ -525,31 +525,36 @@ capabilities:
     last_verified: "2026-09-19"
 
   - id: "downloader-scripts"
-    name: "Downloader Scripts"
+    name: "Downloader Scripts Hub"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\Downloader scripts"
     category: "INGESTION_ACTUATION"
     status: "IMPLEMENTED"
-    description: "Automated YouTube & YouTube Music audio extraction, tag/thumbnail embedding, and batch video downloading with dedicated destination routing to C:\\Users\\Aaradhya\\Music."
+    description: "Zero-click Windows clipboard auto-paste YouTube & YouTube Music downloader featuring 1-click WPF format selection dialog (Audio MP3 vs Video 1080p MP4), automated tag/thumbnail embedding, Windows Toast notifications, and dual routing to Music and Videos\\yt-dlp."
     inputs:
-      - "YouTube / YouTube Music URL"
-      - "Target download format (mp3 / 480p / 720p)"
+      - "YouTube / YouTube Music URL (auto-read from Windows clipboard)"
+      - "Target download format (Audio MP3 / Video 1080p MP4)"
     outputs:
-      - "Extracted MP3 files with embedded ID3 tags and album art"
-      - "Merged MP4 video files"
+      - "Extracted MP3 files with embedded ID3 tags and album art in C:\\Users\\Aaradhya\\Music"
+      - "Merged 1080p/720p MP4 video files in C:\\Users\\Aaradhya\\Videos\\yt-dlp"
+      - "Windows Toast notification with click-to-open directory action"
       - "Download state records in downloads.txt"
     interfaces:
-      - "PowerShell CLI (yt.ps1, yt-music.ps1)"
+      - "WPF GUI Dialog (clipboard-downloader.ps1)"
+      - "Global Hotkey ([Ctrl + Alt + D])"
+      - "Windows Desktop Launcher (download.bat)"
+      - "PowerShell CLI Profile Alias (dl, dlm, dlv)"
       - "Windows Batch CLI (yt-video480.bat, yt-video720.bat)"
     dependencies:
       - "PowerShell 7 / Windows PowerShell"
+      - "WPF / Windows Presentation Foundation"
       - "yt-dlp nightly"
       - "ffmpeg"
     evidence: "E4"
-    benchmarks: "Automated batch download, archive deduplication, and ID3 tag injection into Music root"
-    verification: "PowerShell execution tests with destination verification and sync.ps1 validation"
+    benchmarks: "Zero-click launch under 200ms, auto-clipboard capture, 1-click dual-stream routing, and native toast feedback"
+    verification: "Interactive WPF modal validation, dual destination tests (Music & Videos\\yt-dlp), and sync.ps1 validation"
     maintenance_cost: "1 hour/month"
-    development_hours: 8
-    confidence: 0.98
+    development_hours: 10
+    confidence: 0.99
     last_verified: "2026-09-22"
 
 

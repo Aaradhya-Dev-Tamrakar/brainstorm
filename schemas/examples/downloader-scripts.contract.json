@@ -1,26 +1,25 @@
 {
   "$schema": "../capability.contract.v1.json",
   "module": "downloader-scripts",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "location": "F:\\Aaradhya-Dev-Tamrakar\\Downloader scripts",
   "tracking_branch": "downloader-scripts",
   "runtime": "powershell7",
   "capabilities": [
     {
-      "id": "media_download_automation",
-      "description": "Deterministic batch audio extraction and high-definition video downloading via yt-dlp automation with dedicated destination routing to C:\\Users\\Aaradhya\\Music.",
+      "id": "zero_click_clipboard_download",
+      "description": "Auto-pastes YouTube/YouTube Music URL from Windows clipboard into a native 1-click Audio (MP3 + tags + artwork to Music) vs Video (1080p MP4 to Videos\\yt-dlp) selector dialog with Windows Toast notifications.",
       "category": "ingestion",
       "deterministic": true,
       "side_effects": true,
       "verification_tier": "deterministic_execution",
       "cost_tier": "zero_token_local",
-      "timeout_ms": 120000,
+      "timeout_ms": 180000,
       "inputs": {
         "type": "object",
-        "required": ["url"],
         "properties": {
-          "url": { "type": "string", "description": "YouTube/YouTube Music URL" },
-          "mode": { "type": "string", "enum": ["mp3", "480p", "720p"], "default": "mp3" }
+          "url": { "type": "string", "description": "Optional explicit URL; defaults to Windows clipboard" },
+          "mode": { "type": "string", "enum": ["prompt", "audio", "video", "mp3", "720p", "1080p"], "default": "prompt" }
         }
       },
       "outputs": {
@@ -28,7 +27,32 @@
         "required": ["success", "output_directory"],
         "properties": {
           "success": { "type": "boolean" },
-          "output_directory": { "type": "string", "default": "C:\\Users\\Aaradhya\\Music" }
+          "output_directory": { "type": "string", "enum": ["C:\\Users\\Aaradhya\\Music", "C:\\Users\\Aaradhya\\Videos\\yt-dlp"] }
+        }
+      }
+    },
+    {
+      "id": "batch_media_download_automation",
+      "description": "Deterministic CLI batch audio extraction and high-definition video downloading via yt-dlp presets with deduplication archive tracking.",
+      "category": "ingestion",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "deterministic_execution",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 300000,
+      "inputs": {
+        "type": "object",
+        "required": ["url"],
+        "properties": {
+          "url": { "type": "string", "description": "YouTube/YouTube Music playlist or track URL" },
+          "mode": { "type": "string", "enum": ["mp3", "480p", "720p"], "default": "mp3" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["success"],
+        "properties": {
+          "success": { "type": "boolean" }
         }
       }
     }

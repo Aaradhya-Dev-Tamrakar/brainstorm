@@ -4,7 +4,7 @@
 
 version: "1.0.0"
 registry_type: "canonical_capability_registry"
-last_reconciled: "2026-09-22"
+last_reconciled: "2026-09-23"
 maintainer: "Aaradhya Dev Tamrakar"
 
 capabilities:
@@ -101,8 +101,10 @@ capabilities:
       - "Ground-truth demographic metadata"
     outputs:
       - "Disparate Impact Ratio (DIR)"
+      - "Demographic Parity Difference (DPD)"
+      - "Equal Opportunity Difference (EOP)"
       - "Equalized Odds Difference (EOD)"
-      - "Camera-ready LaTeX/PDF compliance dossier"
+      - "Camera-ready Jinja2 HTML & LaTeX/PDF compliance dossier"
     interfaces:
       - "Python CLI"
       - "Jinja2 LaTeX template renderer"
@@ -112,12 +114,12 @@ capabilities:
       - "Fairlearn / AIF360"
       - "pdflatex"
     evidence: "E4"
-    benchmarks: "Audited across 126 demographic bins with chi-squared significance tests and BCa bootstrap CIs"
-    verification: "pytest test suite covering statistical metric edge cases"
+    benchmarks: "Audited across 126 demographic bins with metric-specific chi-squared significance tests, Holm-Bonferroni FWER step-down correction, and delete-d block jackknife variance estimation"
+    verification: "85 passing pytest unit tests covering metric-specific chi-squared, BCa stratified bootstrap CIs, delete-d block jackknife, and AIF360 fault isolation"
     maintenance_cost: "2 hours/month"
-    development_hours: 64
-    confidence: 0.94
-    last_verified: "2026-09-11"
+    development_hours: 72
+    confidence: 0.96
+    last_verified: "2026-09-23"
 
   - id: "Claude-Desktop"
     name: "Claude Worker Fleet (v2)"

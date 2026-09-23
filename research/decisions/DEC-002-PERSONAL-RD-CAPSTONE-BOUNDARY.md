@@ -37,8 +37,10 @@ Additionally, the transcript proposed a research extension (audit self-calibrati
 - `brainstorm` → methodology and evidence-governance framework (evidence tiers, evidence chains).
 - `AaradhyaDT.github.io` → public demonstration surface.
 
-**D2 — Backend authority.**
+**D2 — Backend authority & metric harmonization.**
 Fairlearn is the **authoritative runtime backend** for the FairFace empirical path. AIF360 is retained as an **implemented secondary adapter** for framework validation on structured/synthetic inputs and for interoperability — not as co-equal empirical evidence. Both remain behind the common fairness abstraction.
+- **Metric Formulation Divergence:** As verified on 2026-09-23, Fairlearn defines Equalized Odds Difference as the Chebyshev bound $\max(|\Delta\text{TPR}|, |\Delta\text{FPR}|)$, whereas AIF360 computes the mean gap $\frac{1}{2}(|\Delta\text{TPR}| + |\Delta\text{FPR}|)$. Direct quantitative comparison between backends emits a `DivergenceAlert` with `difference=NaN` rather than a misleading numerical delta; silent fallback is strictly forbidden.
+- **Statistical Rigor Foundation:** Invariant statistical safeguards established on 2026-09-23 mandate metric-specific hypothesis testing ($\chi^2$ selection rate for DPD/DIR, conditional TPR for EOP, joint odds test for EOD), stratified subgroup bootstrap percentile CIs ($B \ge 1,000$), delete-$d$ block jackknife variance estimation ($n > 300, d = \max(1, n // 100)$), and Holm-Bonferroni FWER step-down correction.
 
 **D3 — Dataset provenance correction.**
 UTKFace is **not** part of the empirical evaluation (labels are embedded in filenames and estimated by DEX then human-checked). FairFace is the evaluation dataset, and its annotation provenance must be described precisely: crowd-sourced human annotation with a subsequent model-assisted disagreement re-verification stage — not merely "manually labelled".
@@ -51,9 +53,10 @@ Every fairness claim carries an evidence chain (injection configuration, seed, s
 
 ---
 
-## 3. Consequences & Downstream Actions (Not Yet Implemented)
+## 3. Consequences & Downstream Actions (Status as of 2026-09-23)
 
-- **Pending (BiasAperture repo, out of scope here):** a `calibration/` module (prediction-layer bias injectors, calibration runner, operating-characteristic reporting), a `calibrate` CLI surface, audit-run artifact capture, and an evidence-profile section in the audit report. Nothing in this record asserts these exist today.
+- **Completed (BiasAperture repo):** 10-finding statistical integrity remediation merged (commit `cc152da`, 85/85 tests passing). Implemented metric-specific $\chi^2$ tests, stratified subgroup bootstrap percentile CIs, delete-$d$ block jackknife, Holm-Bonferroni FWER correction, AIF360 backend fault isolation, intersectional compound axis (`race_gender`), and surrogate tree explainability scoping (spatial SHAP deferred).
+- **Pending (BiasAperture repo, research wedge M6+):** a `calibration/` module (prediction-layer bias injectors, calibration runner, operating-characteristic reporting), a `calibrate` CLI surface, audit-run artifact capture, and an evidence-profile section in the audit report.
 - **Pending (this repository):** a second falsifiable card for Stage B (adaptive/stratified sampling reaching a target confidence-interval width with fewer evaluations than uniform sampling).
 - **Pending (novelty due diligence):** the transcript itself warns that query-efficient active fairness auditing predates this work (Yan & Zhang, 2022) and that 2026 black-box auditing work overlaps the idea. The novelty claim is therefore recorded as a **strong candidate, not established**; a systematic literature pass is required before any novelty assertion enters the capstone report or a publication draft.
 - **Explicitly rejected by the transcript (recorded to prevent re-proposal):** a new composite "fairness score", spatial SHAP as the novelty claim, "more fairness metrics" as novelty, and "we added AI/LLM to fairness auditing" framing.

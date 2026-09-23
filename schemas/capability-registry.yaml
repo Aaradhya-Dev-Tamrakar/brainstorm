@@ -489,12 +489,12 @@ capabilities:
       - "@modelcontextprotocol/sdk"
       - "Node.js standard crypto (in-process ASN.1 DER X.509)"
     evidence: "E4"
-    benchmarks: "Measured 2026-09-19: LAN discovery of SFG16 (192.168.1.11) and V2029 (192.168.1.4); bidirectional mTLS file & text delivery verified (EXP-LOCALSEND-MCP-001)"
-    verification: "Live P2P MCP run against physical mobile hardware (Vivo V2029) and local desktop with text and file payloads recorded in research/experiments/EXP-LOCALSEND-MCP-001.md"
+    benchmarks: "Measured 2026-09-23: LAN discovery of SFG16 (192.168.1.5) and V2029 (192.168.1.6); bidirectional mTLS file, text, and recursive directory transfer (275 MB, EX752 Exam/) verified (EXP-LOCALSEND-MCP-001 v1.1.0)"
+    verification: "Live P2P MCP run against physical mobile hardware (Vivo V2029) with recursive folder hierarchy preservation and multi-file video delivery recorded in research/experiments/EXP-LOCALSEND-MCP-001.md"
     maintenance_cost: "1 hour/month"
     development_hours: 8
     confidence: 0.98
-    last_verified: "2026-09-19"
+    last_verified: "2026-09-23"
 
   - id: "github-pilot"
     name: "GitHub Pilot"

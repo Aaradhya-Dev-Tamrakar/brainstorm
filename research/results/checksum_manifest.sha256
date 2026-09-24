@@ -1,0 +1,6 @@
+# Brainstorm Canonical Cryptographic Checksum Manifest (E5 Tier)
+# Hash: SHA-256 (Canonical golden results and verified certificates)
+766813ff60a54100af73ffc8e3a47838d0025cf0cf1f7bf695a935252c43536e  sim/results/latest.json
+5e3bc6760d85b88cf39d1f7e6f07e7893ddf485db10b7ef62702c7d79583d900  research/results/BMK-MEMORY-001_results.json
+bb5d1eea53092c755adbff9874c8e08c714c38134decf750fbb7b29ec2793f00  research/results/cxl_3_0_executive_synthesis.pdf
+9b46f7fa34c90b65e8079672474c8bcbb5f3c8c35395a8c5a9ac66cc2f1cec6b  research/results/send_more_money_audit_certificate.pdf

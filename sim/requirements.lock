@@ -1,0 +1,3 @@
+# Clean-room reproducible environment lockfile for brainstorm simulation & invariant engine
+# Target: Python 3.11+
+z3-solver==5.1.0.0

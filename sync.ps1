@@ -139,8 +139,8 @@ function Get-EcosystemToolRepos {
         }
     }
 
-    # 2. Dynamic Filesystem Discovery across active development roots
-    $scanRoots = @("F:\Aaradhya-Dev-Tamrakar", "F:\AaradhyaDT")
+    # 2. Dynamic Filesystem Discovery across active development roots (including Suites/Utilities)
+    $scanRoots = @("F:\Aaradhya-Dev-Tamrakar", "F:\AaradhyaDT", "F:\Aaradhya-Dev-Tamrakar\AEC-MCP Suite", "F:\Aaradhya-Dev-Tamrakar\Utility", "F:\Aaradhya-Dev-Tamrakar\Utility-MCPs")
     foreach ($root in $scanRoots) {
         if (Test-Path $root) {
             $dirs = Get-ChildItem -Path $root -Directory -ErrorAction SilentlyContinue
@@ -159,24 +159,24 @@ function Get-EcosystemToolRepos {
     if ($repos.Count -eq 0) {
         $defaults = @(
             "F:\Aaradhya-Dev-Tamrakar\super-nlm",
-            "F:\Aaradhya-Dev-Tamrakar\Autodesk-Fusion-360-MCP-Server",
+            "F:\Aaradhya-Dev-Tamrakar\AEC-MCP Suite\Autodesk-Fusion-360-MCP-Server",
             "F:\Aaradhya-Dev-Tamrakar\system-optimizer",
             "F:\Aaradhya-Dev-Tamrakar\SPARK",
             "F:\AaradhyaDT\Nexus",
             "F:\Aaradhya-Dev-Tamrakar\Claude-Desktop",
             "F:\Aaradhya-Dev-Tamrakar\BiasAperture",
             "F:\Aaradhya-Dev-Tamrakar\Alpha-SuperApp",
-            "F:\Aaradhya-Dev-Tamrakar\md2pdf-desktop",
+            "F:\Aaradhya-Dev-Tamrakar\Utility\md2pdf-desktop",
             "F:\AaradhyaDT\AI",
             "F:\AaradhyaDT\rsvp-reading",
             "F:\Aaradhya-Dev-Tamrakar\Aaradhya-Dev-Tamrakar.github.io",
             "F:\Aaradhya-Dev-Tamrakar\AaradhyaDT.github.io",
             "F:\Aaradhya-Dev-Tamrakar\makerspace",
             "F:\AaradhyaDT\react-workshop-ieeekecktm",
-            "F:\Aaradhya-Dev-Tamrakar\github-pilot",
-            "F:\Aaradhya-Dev-Tamrakar\nepali-ocr-ai",
-            "F:\Aaradhya-Dev-Tamrakar\google-classroom-mcp",
-            "F:\Aaradhya-Dev-Tamrakar\fusion360-mcp"
+            "F:\Aaradhya-Dev-Tamrakar\Utility\github-pilot",
+            "F:\Aaradhya-Dev-Tamrakar\Utility\nepali-ocr-ai",
+            "F:\Aaradhya-Dev-Tamrakar\Utility-MCPs\google-classroom-mcp",
+            "F:\Aaradhya-Dev-Tamrakar\AEC-MCP Suite\fusion360-mcp"
         )
         foreach ($def in $defaults) { $repos.Add($def) }
     }
@@ -772,7 +772,10 @@ function Provision-NewTool {
     # Check if a matching directory exists on disk
     $candidates = @(
         "F:\Aaradhya-Dev-Tamrakar\$ToolName",
-        "F:\AaradhyaDT\$ToolName"
+        "F:\AaradhyaDT\$ToolName",
+        "F:\Aaradhya-Dev-Tamrakar\AEC-MCP Suite\$ToolName",
+        "F:\Aaradhya-Dev-Tamrakar\Utility\$ToolName",
+        "F:\Aaradhya-Dev-Tamrakar\Utility-MCPs\$ToolName"
     )
     foreach ($c in $candidates) {
         if (Test-Path (Join-Path $c ".git")) {

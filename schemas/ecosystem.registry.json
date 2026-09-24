@@ -38,7 +38,7 @@
       "category": "computational_engine",
       "tech_stack": "Python 3.10 (Embedded), Autodesk Fusion API, CustomEvent, MCP (HTTP)",
       "execution_context": "Local Desktop",
-      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\fusion360-mcp",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\AEC-MCP Suite\\fusion360-mcp",
       "core_superpower": "Conversational 3D CAD, zero-dependency parametric modeling automation and viewport rendering via native Fusion 360 Add-In",
       "contract_ref": "schemas/examples/fusion360-mcp.contract.json"
     },
@@ -116,7 +116,7 @@
       "category": "computational_engine",
       "tech_stack": "Chrome MV3 (JS), Gemini Flash",
       "execution_context": "Ambient Browser",
-      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\screen-qa-extension",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\Utility\\screen-qa-extension",
       "core_superpower": "Ambient browser intelligence, instant question extraction and zero-click overlay response"
     },
     {
@@ -127,7 +127,7 @@
       "category": "computational_engine",
       "tech_stack": "Python 3.10+, Tkinter, Pandoc, LaTeX (pdflatex), FastMCP",
       "execution_context": "Local Desktop / Fleet MCP",
-      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\md2pdf-desktop",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\Utility\\md2pdf-desktop",
       "core_superpower": "Publication-quality Markdown-to-PDF rendering pipeline with native math, styled callout boxes, and FastMCP server",
       "contract_ref": "schemas/examples/md2pdf-desktop.contract.json"
     },
@@ -139,7 +139,7 @@
       "category": "computational_engine",
       "tech_stack": "PowerShell, yt-dlp, FFmpeg",
       "execution_context": "Local Daemon",
-      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\yt-dlp-live",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\Utility\\yt-dlp-live",
       "core_superpower": "Resilient live stream capture daemon, RTMP relay, and autonomous media transformer cluster (Normal-to-Nightcore DSP, QSV render)"
     },
     {
@@ -217,7 +217,7 @@
       "category": "computational_engine",
       "tech_stack": "Python (Typer), HTTP/2, selectolax, rich",
       "execution_context": "Local / Fleet CLI",
-      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\github-pilot",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\Utility\\github-pilot",
       "core_superpower": "Autonomous macro-plane GitHub profile, fleet health auditor, and ecosystem navigator",
       "contract_ref": "schemas/examples/github-pilot.contract.json"
     },
@@ -229,7 +229,7 @@
       "category": "computational_engine",
       "tech_stack": "Python 3.11, python-docx, FastMCP",
       "execution_context": "Local / Microservice",
-      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\nepali-ocr-ai",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\Utility\\nepali-ocr-ai",
       "core_superpower": "Nepali vision OCR, Varnavinyas grammar checker/suggester, bi-directional Preeti-Unicode transcoder, and Word (.docx) repair engine",
       "contract_ref": "schemas/examples/nepali-ocr-ai.contract.json"
     },
@@ -241,7 +241,7 @@
       "category": "computational_engine",
       "tech_stack": "Node.js ESM, @modelcontextprotocol/sdk, Google Classroom API",
       "execution_context": "Local / Fleet MCP",
-      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\google-classroom-mcp",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\Utility-MCPs\\google-classroom-mcp",
       "core_superpower": "Direct Google Classroom integration for courses, coursework, assignments, announcements, and submissions",
       "contract_ref": "schemas/examples/google-classroom-mcp.contract.json"
     },
@@ -253,7 +253,7 @@
       "category": "computational_engine",
       "tech_stack": "Node.js ESM, @modelcontextprotocol/sdk, LocalSend Protocol v2.1",
       "execution_context": "Local / Fleet MCP",
-      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\localsend-mcp",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\Utility-MCPs\\localsend-mcp",
       "core_superpower": "Zero-cloud local P2P file, text, and clipboard transfer across LAN/Wi-Fi devices with mutual TLS and persistent favoriting listener",
       "contract_ref": "schemas/examples/localsend-mcp.contract.json"
     },
@@ -265,7 +265,7 @@
       "category": "computational_engine",
       "tech_stack": "PowerShell 7, WPF XAML, Windows Shell APIs, yt-dlp, Batch",
       "execution_context": "Local Desktop",
-      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\downloader-scripts",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\Utility\\downloader-scripts",
       "core_superpower": "Zero-click clipboard auto-paste downloader, 1-click WPF Audio vs Video selector dialog, dedicated routing to Music and Videos\\yt-dlp, and Windows Toast notifications",
       "contract_ref": "schemas/examples/downloader-scripts.contract.json"
     },
@@ -277,7 +277,7 @@
       "category": "computational_engine",
       "tech_stack": "Node.js ESM, @modelcontextprotocol/sdk, TypeScript",
       "execution_context": "Local / Fleet MCP",
-      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\typora-mcp",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\Utility-MCPs\\typora-mcp",
       "core_superpower": "Programmatic Typora automation, live editor process & open document tracking, hex-encoded history & crash recovery parsing, custom CSS theme management, and pixel-perfect HTML compilation",
       "contract_ref": "schemas/examples/typora-mcp.contract.json"
     }

@@ -2,14 +2,14 @@
   "$schema": "../capability.contract.v1.json",
   "module": "google-classroom-mcp",
   "version": "1.0.0",
-  "location": "F:\\Aaradhya-Dev-Tamrakar\\google-classroom-mcp",
+  "location": "F:\\Aaradhya-Dev-Tamrakar\\Utility-MCPs\\google-classroom-mcp",
   "tracking_branch": "google-classroom-mcp",
   "runtime": "node26",
   "mcp_endpoint": {
     "transport": "stdio",
     "command": "node",
     "args": [
-      "F:\\Aaradhya-Dev-Tamrakar\\google-classroom-mcp\\index.mjs"
+      "F:\\Aaradhya-Dev-Tamrakar\\Utility-MCPs\\google-classroom-mcp\\index.mjs"
     ],
     "env": {
       "CLASSROOM_CREDENTIALS_PATH": "C:\\Users\\Aaradhya\\.classroom-server-credentials.json",

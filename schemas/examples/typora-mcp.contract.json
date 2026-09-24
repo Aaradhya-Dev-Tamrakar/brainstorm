@@ -2,14 +2,14 @@
   "$schema": "../capability.contract.v1.json",
   "module": "typora-mcp",
   "version": "1.0.0",
-  "location": "F:\\Aaradhya-Dev-Tamrakar\\typora-mcp",
+  "location": "F:\\Aaradhya-Dev-Tamrakar\\Utility-MCPs\\typora-mcp",
   "tracking_branch": "typora-mcp",
   "runtime": "node26",
   "mcp_endpoint": {
     "transport": "stdio",
     "command": "node",
     "args": [
-      "F:\\Aaradhya-Dev-Tamrakar\\typora-mcp\\dist\\index.js"
+      "F:\\Aaradhya-Dev-Tamrakar\\Utility-MCPs\\typora-mcp\\dist\\index.js"
     ]
   },
   "capabilities": [

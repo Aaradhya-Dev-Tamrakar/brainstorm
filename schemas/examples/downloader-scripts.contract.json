@@ -2,7 +2,7 @@
   "$schema": "../capability.contract.v1.json",
   "module": "downloader-scripts",
   "version": "1.2.0",
-  "location": "F:\\Aaradhya-Dev-Tamrakar\\Downloader scripts",
+  "location": "F:\\Aaradhya-Dev-Tamrakar\\Utility\\downloader-scripts",
   "tracking_branch": "downloader-scripts",
   "runtime": "powershell7",
   "capabilities": [

@@ -2,14 +2,14 @@
   "$schema": "../capability.contract.v1.json",
   "module": "md2pdf-desktop",
   "version": "1.0.0",
-  "location": "F:\\Aaradhya-Dev-Tamrakar\\md2pdf-desktop",
+  "location": "F:\\Aaradhya-Dev-Tamrakar\\Utility\\md2pdf-desktop",
   "tracking_branch": "md2pdf-desktop",
   "runtime": "python3.10",
   "mcp_endpoint": {
     "transport": "stdio",
     "command": "python",
     "args": [
-      "F:\\Aaradhya-Dev-Tamrakar\\md2pdf-desktop\\mcp_server\\server.py"
+      "F:\\Aaradhya-Dev-Tamrakar\\Utility\\md2pdf-desktop\\mcp_server\\server.py"
     ]
   },
   "capabilities": [

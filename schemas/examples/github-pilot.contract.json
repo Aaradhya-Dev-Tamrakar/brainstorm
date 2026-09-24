@@ -2,7 +2,7 @@
   "$schema": "../capability.contract.v1.json",
   "module": "github-pilot",
   "version": "1.0.0",
-  "location": "F:\\Aaradhya-Dev-Tamrakar\\github-pilot",
+  "location": "F:\\Aaradhya-Dev-Tamrakar\\Utility\\github-pilot",
   "tracking_branch": "github-pilot",
   "runtime": "python3.11",
   "mcp_endpoint": {

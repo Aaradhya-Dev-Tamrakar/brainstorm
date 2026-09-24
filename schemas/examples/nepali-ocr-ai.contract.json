@@ -2,7 +2,7 @@
   "$schema": "../capability.contract.v1.json",
   "module": "nepali-ocr-ai",
   "version": "1.1.0",
-  "location": "F:\\Aaradhya-Dev-Tamrakar\\nepali-ocr-ai",
+  "location": "F:\\Aaradhya-Dev-Tamrakar\\Utility\\nepali-ocr-ai",
   "tracking_branch": "nepali-ocr-ai",
   "runtime": "python3.11",
   "mcp_endpoint": {

@@ -2,7 +2,7 @@
   "$schema": "../capability.contract.v1.json",
   "module": "fusion360-mcp",
   "version": "1.0.0",
-  "location": "F:\\Aaradhya-Dev-Tamrakar\\fusion360-mcp",
+  "location": "F:\\Aaradhya-Dev-Tamrakar\\AEC-MCP Suite\\fusion360-mcp",
   "tracking_branch": "Autodesk-Fusion-360-MCP-Server",
   "runtime": "python3.10-embedded",
   "mcp_endpoint": {

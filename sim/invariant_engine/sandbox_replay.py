@@ -7,6 +7,7 @@ confirm that mathematical counterexamples produce true runtime contract violatio
 """
 
 import time
+from typing import Dict, Any, Callable
 try:
     from .contract_types import ReplayResult, VerificationResult
     from .state_machine import BaseStateMachine

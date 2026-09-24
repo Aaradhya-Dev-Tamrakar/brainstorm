@@ -35,7 +35,7 @@ A hallmark of rigorous engineering is the explicit disclosure of boundaries, fai
 * **Mitigation:** Zero-token deterministic verification gates (`reconciliation_engine.py`, SMT solvers, unit tests) serve as absolute hard barriers. No agent output is accepted without deterministic validation.
 
 ### 2.4 Integration Complexity Debt & Maintenance Burden
-* **Description:** Maintaining 18 Git branches, 18 active projects, and 21 tool modules across heterogeneous stacks (C/C++, C# .NET 10, Python, Kotlin, Svelte, TypeScript, Node.js) imposes severe cognitive and temporal maintenance overhead.
+* **Description:** Maintaining 26 Git branches, 18 active projects, and 23 tool modules across heterogeneous stacks (C/C++, C# .NET 10, Python, Kotlin, Svelte, TypeScript, Node.js) imposes severe cognitive and temporal maintenance overhead.
 * **Failure Mode:** "Platform sprawl" where developer time is consumed maintaining bindings, updating dependencies, and reconciling schemas rather than producing net-new research findings.
 * **Mitigation:** The **Rule of Two** (prohibiting three-way composition before pairwise reliability is proven) and the **Integration-Cost equation** in `report/economic-model.md`.
 

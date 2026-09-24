@@ -213,7 +213,7 @@ This audit evaluates the truth-claims, evidence artifacts, economic models, and 
 
 1. **Economic Model:** Cleanly split CAPEX ($1,235), OPEX ($37.55), Cost of Living, and Human Capital in `report/economic-model.md` (COMPLETED).
 2. **Quantitative Registry:** Document sample sizes, baselines, and simulation parameters for all numbers in `report/quantitative-claims-audit.md`, updated with composition benchmarks (COMPLETED).
-3. **Evidence Leveling:** Verified across all 21 modules in `schemas/ecosystem.registry.json` and `schemas/capability-registry.yaml` (COMPLETED).
-4. **Canonical Counts:** Reconciled to the authoritative **23 Cataloged Modules** (17 Computational Engines + 4 Presentation Hubs), **18 Git Tracking Branches**, **6 Compound Workflows** (Pipelines A–F), and **29 Research Artifacts** (COMPLETED).
+3. **Evidence Leveling:** Verified across all 23 modules in `schemas/ecosystem.registry.json` and `schemas/capability-registry.yaml` (COMPLETED).
+4. **Canonical Counts:** Reconciled to the authoritative **23 Cataloged Modules** (19 Computational Engines + 4 Presentation Hubs), **26 Git Tracking Branches**, **6 Compound Workflows** (Pipelines A–F), and **29 Research Artifacts** (COMPLETED).
 5. **Dangling Result Artifacts:** Generated and committed physical PDF results in `research/results/` for `COMPOSE-001` and `COMPOSE-002` (COMPLETED).
 6. **Deterministic Verification Hardening:** Extended `sim/reconciliation_engine.py` to continuously assert taxonomy counts and physical result artifact existence (COMPLETED).

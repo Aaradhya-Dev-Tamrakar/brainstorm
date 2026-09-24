@@ -112,10 +112,10 @@ flowchart LR
 To eliminate the **4.0/10 External Calibration void**, self-directed projects must yield an **external transfer of trust**: *"An external researcher, engineer, lab or company has evaluated my work closely enough to grant responsibility for a real problem."*
 
 ### 5.1 Local Research Lab Targets (Kathmandu Valley)
-Approach local research groups with a **Research Proposition** rather than a generic internship inquiry:
-- **Kathmandu University — RAVI Lab:** Focuses on robotics, autonomous systems, visual intelligence, sensor fusion, and real-time decision systems. (100% overlap with SBR, CV, and embedded control).
-- **KU — Data Science & AI Lab:** Welcomes student researchers for applied ML and intelligent system pipelines.
-- **KU — AI & Smart Systems Research Lab:** Practical on-device deployments (healthcare, sensors). Direct match for SPARK.
+Approach local research groups with a **Research Proposition** rather than a generic internship inquiry (Active Tracker: [`research/notes/KU_LAB_OUTREACH_TRACKER.md`](../notes/KU_LAB_OUTREACH_TRACKER.md)):
+- **Kathmandu University — RAVI Lab:** Focuses on robotics, autonomous systems, visual intelligence, sensor fusion, and real-time decision systems. (100% overlap with SBR, CV, and embedded control). *Dispatched: 2026-09-24; Follow-up Due: 2026-10-01*.
+- **KU — Data Science & AI Lab:** Welcomes student researchers for applied ML and intelligent system pipelines. *Dispatched: 2026-09-24; Follow-up Due: 2026-10-02*.
+- **KU — AI & Smart Systems Research Lab:** Practical on-device deployments (healthcare, sensors). Direct match for SPARK. *Dispatched: 2026-09-24; Follow-up Due: 2026-10-02*.
 - **Approach Hierarchy:** Research Assistant $\to$ Research Trainee $\to$ Lab Volunteer $\to$ Collaborator $\to$ Intern.
 
 ### 5.2 The International Research Pipeline
@@ -131,9 +131,10 @@ Approach local research groups with a **Research Proposition** rather than a gen
 ### 5.3 Reusable Research Application Pack (`/Aaradhya-Research-Pack`)
 Maintain a standardized, single-source dossier:
 1. `CV.pdf` (1 page, systems/engineering focused).
-2. `Research_Profile.pdf` (1 page: *What do I know? What have I built? What am I researching? What can I contribute?*).
-3. `Project_SPARK.pdf` & `Project_Brainstorm.pdf` (2-page empirical briefs with AUC metrics and benchmark charts).
-4. `Transcript.pdf` (Official university grades).
+2. **One-Page Research Profile** ([`RESEARCH_PROFILE.md`](../../RESEARCH_PROFILE.md)): Answers *"What concrete engineering/research value does Aaradhya contribute on Day 1?"*
+3. **SPARK 1-Pager** ([`research/notes/SPARK_1PAGE.md`](../notes/SPARK_1PAGE.md)): 1-page empirical brief with AUC metrics and benchmark charts.
+4. **Brainstorm Ecosystem 1-Pager** ([`research/notes/BRAINSTORM_1PAGE.md`](../notes/BRAINSTORM_1PAGE.md)): 1-page formal grounding of capability mesh and invariant verification.
+5. `Transcript.pdf` (Official university grades).
 
 ### 5.4 DataCamp Assessed Certification Engine
 Utilize existing DataCamp access for **assessed skill tests** rather than vanity course completion:
@@ -169,17 +170,18 @@ Utilize existing DataCamp access for **assessed skill tests** rather than vanity
   1. **Zero Architecture Churn:** Complete freeze on new repository tools, refactors, and research charters.
   2. **AIF Minimal Maintenance:** Efficiently complete and submit Fuse AIF Week 17 (MLOps, due Sept 26) and Week 16 backlog to maintain standing without encroaching on exam revision hours.
   3. **Cognitive Focus:** 100% mental bandwidth dedicated to syllabus mastery and board exam papers.
+  4. **Outreach Status:** First wave to 3 KU Labs (RAVI, DSAI, AISSR) dispatched on Sept 24. Follow-up dates windowed for Oct 1–2. *Do not stress over inbox latency during exam hours.*
 
-### Phase 0A: Research Pack & Local Lab Outreach (Oct 5 – Oct 15, 2026) [PRIORITY: P1]
+### Phase 0A: Research Pack & Response Management (Oct 5 – Oct 15, 2026) [PRIORITY: P1]
 * **Milestones:**
-  1. Compile the 1-page CV and 1-page Research Profile into `/Aaradhya-Research-Pack`.
-  2. Send structured Research Propositions to 10 Nepal labs (prioritizing KU RAVI and Data Science & AI Lab).
+  1. Finalize PDF rendering of the prepared 1-page Research Profile ([`RESEARCH_PROFILE.md`](../../RESEARCH_PROFILE.md)) and briefs ([`research/notes/SPARK_1PAGE.md`](../notes/SPARK_1PAGE.md), [`research/notes/BRAINSTORM_1PAGE.md`](../notes/BRAINSTORM_1PAGE.md)).
+  2. Handle KU lab follow-ups and inquiries per [`research/notes/KU_LAB_OUTREACH_TRACKER.md`](../notes/KU_LAB_OUTREACH_TRACKER.md).
   3. Complete the DataCamp AI Engineer for Developers Associate assessed exam.
 
-### Phase 0B: EPFL E3 Submission & Benchmark Sprint (Oct 16 – Nov 1, 2026) [PRIORITY: P1]
+### Phase 0B: EPFL E3 Submission & Systems Rebuild Sprint (Oct 16 – Nov 1, 2026) [PRIORITY: P1]
 * **Milestones:**
   1. Finalize and submit the **EPFL E3 Fellowship Application** prior to the **November 1, 2026 deadline**.
-  2. Execute the discrete-event and SMT invariant benchmark (`INV-BMK-001`), compiling results into `research/results/INV-BMK-001_results.json`.
+  2. Package existing certified benchmark results (`research/results/INV-BMK-001_results.json`) into the formal research report (`report/main.pdf`).
   3. Hand-derive and write the Project 1 SBR white-box complementary filter and PID loop in C/C++.
 
 ### Phase 1: Post-Holiday Semester Launch (Nov 2026 Onward) [PRIORITY: P1]

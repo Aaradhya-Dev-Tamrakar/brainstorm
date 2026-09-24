@@ -1,9 +1,23 @@
 <#
 .SYNOPSIS
-    Applies and restores Windows User Shell Folders configuration.
+    Applies and restores Windows User Shell Folders configuration (Selective OneDrive Bypass).
 .DESCRIPTION
-    Configures customized user shell paths (such as Images, Screenshots, OneDrive documents, Desktop, Downloads, etc.)
-    under HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders.
+    Configures customized user shell paths under HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders.
+    
+    Design Architecture & Rationale:
+    - Decoupled Local Media:
+      * Pictures / Images -> %USERPROFILE%\Images
+      * Screenshots       -> %USERPROFILE%\Images\Screenshots
+      * Downloads         -> %USERPROFILE%\Downloads
+      * Videos / Music    -> %USERPROFILE%\Videos, %USERPROFILE%\Music
+      Reason: Bypasses OneDrive defaults for screenshots and media to eliminate latency, prevent cloud sync
+      throttling, and avoid dependency on OneDrive network availability for rapid capture workflows.
+      
+    - Retained Cloud Backups:
+      * Desktop   -> C:\Users\Aaradhya\OneDrive\Desktop
+      * Documents -> C:\Users\Aaradhya\OneDrive\Documents
+      Reason: Documents and desktop items remain lightweight; keeping them on OneDrive handles continuous
+      cloud availability without manual backup overhead.
 #>
 
 [CmdletBinding()]

@@ -91,11 +91,11 @@ To eliminate counting discrepancies across `README.md`, `PROFILE.md`, and `ECOSY
 | **Active Engineering Projects** | **18** | Engineering Initiative | Concrete initiatives: SPARK, STRANGLER-IPU, BiasAperture, Super-NLM, NovaOptimizer, Fusion 360 MCP, Nexus, Claude Fleet, Alpha-SuperApp, Screen Q&A, md2pdf, yt-dlp-live, AI CSP Solver, RSVP Reader, GitHub Pilot, Nepali OCR AI, Google Classroom MCP, LocalSend MCP. |
 | **Computational Capabilities** | **19** | `ecosystem_module` | Independent functional engines exposing programmatic APIs/CLI/MCP interfaces. |
 | **Presentation & Educational Hubs** | **4** | `presentation_hub` | Non-computational repositories: Portfolio Main (`Aaradhya-Dev-Tamrakar.github.io`), Portfolio Mirror (`AaradhyaDT.github.io`), KEC Makerspace digital asset hub, and IEEE React Workshop repo. |
-| **In-Tree Research Engines** | **1** | `research_engine` | In-tree discrete-event simulations hosted in `brainstorm` (`STRANGLER-IPU`). |
-| **In-Tree Research Proposals** | **1** | `research_proposal` | Formal architectural wedges targeted for implementation (`headless-invariant-assurance`). |
-| **Total Capabilities in Registry** | **25** | All Capability Classes | 19 ecosystem modules + 4 presentation hubs + 1 in-tree engine + 1 proposal in `schemas/capability-registry.yaml`. |
+| **In-Tree Research Engines** | **2** | `research_engine` | In-tree computational & formalization engines hosted in `brainstorm` (`STRANGLER-IPU`, `headless-invariant-assurance`). |
+| **In-Tree Research Proposals** | **0** | `research_proposal` | Active formal proposals awaiting initial prototype execution. |
+| **Total Capabilities in Registry** | **25** | All Capability Classes | 19 ecosystem modules + 4 presentation hubs + 2 in-tree engines in `schemas/capability-registry.yaml`. |
 | **Compound Workflows (Pipelines)** | **6** | `workflow` | Formal emergent pipelines (Pipelines A, B, C, D, E, and Pipeline F: Zero-Cloud Device Handoff). |
-| **Research Experiments, Specs & RFCs** | **29** | `artifact` | Formal architecture specs (`ARCH-SPEC-001` to `007`), RFCs (`ARCH-RFC-001` to `006`), business plans (`ARCH-PLAN-001`, `ARCH-PLAN-002`), invariants (`INV-EPI-001`, `INV-MEM-001`, `INV-WSR-002`), empirical sweeps & benchmarks (`EXP-001`, `EXP-DRIVE-SYNC-001`, `EXP-FUSION360-MCP-001` (dual-server: Autodesk native + custom bridge), `EXP-CLASSROOM-MCP-001`, `EXP-LOCALSEND-MCP-001`, `FLEET-001`, `FLEET-002`, `GPU_RAM_ARCHITECTURE_SPEC`, `BMK-MEMORY-001`), and composition benchmarks (`COMPOSE-001`, `COMPOSE-002`). |
+| **Research Experiments, Specs & RFCs** | **30** | `artifact` | Formal architecture specs (`ARCH-SPEC-001` to `007`), RFCs (`ARCH-RFC-001` to `006`), business plans (`ARCH-PLAN-001`, `ARCH-PLAN-002`), invariants (`INV-EPI-001`, `INV-MEM-001`, `INV-WSR-002`), empirical sweeps & benchmarks (`EXP-001`, `EXP-DRIVE-SYNC-001`, `EXP-FUSION360-MCP-001`, `EXP-CLASSROOM-MCP-001`, `EXP-LOCALSEND-MCP-001`, `FLEET-001`, `FLEET-002`, `GPU_RAM_ARCHITECTURE_SPEC`, `BMK-MEMORY-001`, `INV-BMK-001`), and composition benchmarks (`COMPOSE-001`, `COMPOSE-002`). |
 
 ---
 

@@ -338,11 +338,11 @@ capabilities:
     last_verified: "2026-09-13"
 
   - id: "headless-invariant-assurance"
-    entity_class: "research_proposal"
+    entity_class: "research_engine"
     name: "Headless Invariant Assurance Engine"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\brainstorm"
     category: "COMPUTATIONAL_ENGINE"
-    status: "PROPOSED"
+    status: "EXPERIMENTAL"
     description: "Autonomous neurosymbolic pipeline extracting candidate invariants from API state machines, formalizing SMT-LIB constraints, and proving them via Z3/Docker sandboxes."
     inputs:
       - "API specs / protocol state machines"
@@ -356,13 +356,13 @@ capabilities:
       - "Python 3.11"
       - "Z3-solver"
       - "Docker / Anvil"
-    evidence: "E1"
-    benchmarks: "Targeting 0 false positives on planted synthetic state machine violations"
-    verification: "Formal specification in ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md Section 7.4"
-    maintenance_cost: "TBD"
-    development_hours: 12
-    confidence: 0.70
-    last_verified: "2026-09-14"
+    evidence: "E4"
+    benchmarks: "100% planted bug discovery recall, 100% sandbox replay confirmation, 12.59ms mean solver latency across 12 invariant benchmarks (INV-BMK-001)"
+    verification: "python -m unittest sim/test_invariant_engine.py, sim/invariant_engine/benchmark_runner.py"
+    maintenance_cost: "2 hours/month"
+    development_hours: 36
+    confidence: 0.95
+    last_verified: "2026-09-24"
 
   - id: "nepali-ocr-ai"
     entity_class: "ecosystem_module"

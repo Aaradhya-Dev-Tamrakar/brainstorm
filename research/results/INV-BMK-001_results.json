@@ -1,0 +1,222 @@
+{
+  "timestamp": "2026-09-24T07:59:03.847725+00:00",
+  "benchmark_id": "INV-BMK-001",
+  "total_properties_evaluated": 12,
+  "planted_violations_tested": 4,
+  "planted_violations_discovered": 4,
+  "discovery_recall_pct": 100.0,
+  "counterexamples_generated": 4,
+  "counterexamples_replay_confirmed": 4,
+  "counterexample_validity_pct": 100.0,
+  "false_discovery_rate_pct": 0.0,
+  "vacuous_controls_tested": 1,
+  "vacuous_controls_flagged": 1,
+  "contradictory_specs_tested": 1,
+  "contradictory_specs_flagged": 1,
+  "mean_solver_latency_ms": 17.826,
+  "mean_replay_latency_ms": 0.008,
+  "results_ledger": [
+    {
+      "property_id": "INV-CXL-01",
+      "name": "CXL Exact Credit Conservation",
+      "state_machine": "CXL_ALLOCATOR",
+      "classification": "VALID_INVARIANT",
+      "prover_status": "PROVED_INVARIANT",
+      "replay_status": "SKIPPED_HOLDS",
+      "solver_latency_ms": 10.755,
+      "replay_latency_ms": 0.001,
+      "violation_observed": false,
+      "counterexample": null
+    },
+    {
+      "property_id": "INV-CXL-02",
+      "name": "CXL Non-Negative Balance",
+      "state_machine": "CXL_ALLOCATOR",
+      "classification": "VALID_INVARIANT",
+      "prover_status": "PROVED_INVARIANT",
+      "replay_status": "SKIPPED_HOLDS",
+      "solver_latency_ms": 14.399,
+      "replay_latency_ms": 0.001,
+      "violation_observed": false,
+      "counterexample": null
+    },
+    {
+      "property_id": "INV-CXL-03",
+      "name": "CXL Double-Free Bounds Check (Planted Bug)",
+      "state_machine": "CXL_ALLOCATOR",
+      "classification": "PLANTED_VIOLATION",
+      "prover_status": "COUNTEREXAMPLE_FOUND",
+      "replay_status": "REPLAY_CONFIRMED",
+      "solver_latency_ms": 14.351,
+      "replay_latency_ms": 0.018,
+      "violation_observed": true,
+      "counterexample": {
+        "stage": "INDUCTIVE_STEP",
+        "action": "release",
+        "initial_state": {
+          "credits_total": -1,
+          "credits_free": -1,
+          "credits_allocated": 0,
+          "req": 1
+        },
+        "final_state": {
+          "credits_total": -1,
+          "credits_free": 0,
+          "credits_allocated": -1,
+          "req": 0
+        }
+      }
+    },
+    {
+      "property_id": "INV-CXL-04",
+      "name": "CXL Tautological Free Bound (Negative Control)",
+      "state_machine": "CXL_ALLOCATOR",
+      "classification": "VACUOUS_TAUTOLOGY",
+      "prover_status": "VACUOUS_REJECTED",
+      "replay_status": "SKIPPED_HOLDS",
+      "solver_latency_ms": 4.228,
+      "replay_latency_ms": 0.0,
+      "violation_observed": false,
+      "counterexample": null
+    },
+    {
+      "property_id": "INV-TB-01",
+      "name": "Token Capacity Confinement",
+      "state_machine": "TOKEN_BUCKET",
+      "classification": "VALID_INVARIANT",
+      "prover_status": "PROVED_INVARIANT",
+      "replay_status": "SKIPPED_HOLDS",
+      "solver_latency_ms": 16.507,
+      "replay_latency_ms": 0.001,
+      "violation_observed": false,
+      "counterexample": null
+    },
+    {
+      "property_id": "INV-TB-02",
+      "name": "Unbounded Refill Leak (Planted Bug)",
+      "state_machine": "TOKEN_BUCKET",
+      "classification": "PLANTED_VIOLATION",
+      "prover_status": "COUNTEREXAMPLE_FOUND",
+      "replay_status": "REPLAY_CONFIRMED",
+      "solver_latency_ms": 10.8,
+      "replay_latency_ms": 0.024,
+      "violation_observed": true,
+      "counterexample": {
+        "stage": "INDUCTIVE_STEP",
+        "action": "refill",
+        "initial_state": {
+          "tokens": 100,
+          "consumed": 0,
+          "amount": 0,
+          "dt": 1
+        },
+        "final_state": {
+          "tokens": 110,
+          "consumed": 0,
+          "amount": 0,
+          "dt": 0
+        }
+      }
+    },
+    {
+      "property_id": "INV-TB-03",
+      "name": "Token Contradictory Constraint (Negative Control)",
+      "state_machine": "TOKEN_BUCKET",
+      "classification": "CONTRADICTORY_SPEC",
+      "prover_status": "CONTRADICTION_REJECTED",
+      "replay_status": "SKIPPED_HOLDS",
+      "solver_latency_ms": 3.706,
+      "replay_latency_ms": 0.001,
+      "violation_observed": false,
+      "counterexample": null
+    },
+    {
+      "property_id": "INV-WSR-01",
+      "name": "WSR Task Cardinality Invariance",
+      "state_machine": "WORKER_SESSION_RUNTIME",
+      "classification": "VALID_INVARIANT",
+      "prover_status": "PROVED_INVARIANT",
+      "replay_status": "SKIPPED_HOLDS",
+      "solver_latency_ms": 43.746,
+      "replay_latency_ms": 0.001,
+      "violation_observed": false,
+      "counterexample": null
+    },
+    {
+      "property_id": "INV-WSR-02",
+      "name": "WSR Non-Negative Task Partitions",
+      "state_machine": "WORKER_SESSION_RUNTIME",
+      "classification": "VALID_INVARIANT",
+      "prover_status": "PROVED_INVARIANT",
+      "replay_status": "SKIPPED_HOLDS",
+      "solver_latency_ms": 32.328,
+      "replay_latency_ms": 0.001,
+      "violation_observed": false,
+      "counterexample": null
+    },
+    {
+      "property_id": "INV-WSR-03",
+      "name": "WSR Phantom Task Duplication (Planted Bug)",
+      "state_machine": "WORKER_SESSION_RUNTIME",
+      "classification": "PLANTED_VIOLATION",
+      "prover_status": "COUNTEREXAMPLE_FOUND",
+      "replay_status": "REPLAY_CONFIRMED",
+      "solver_latency_ms": 34.907,
+      "replay_latency_ms": 0.03,
+      "violation_observed": true,
+      "counterexample": {
+        "stage": "INDUCTIVE_STEP",
+        "action": "fail",
+        "initial_state": {
+          "pending": 19,
+          "running": 1,
+          "completed": 0,
+          "failed": 0
+        },
+        "final_state": {
+          "pending": 19,
+          "running": 0,
+          "completed": 0,
+          "failed": 2
+        }
+      }
+    },
+    {
+      "property_id": "INV-NONCE-01",
+      "name": "Nonce Monotonic Bounds",
+      "state_machine": "SEQUENCE_NONCE_TRACKER",
+      "classification": "VALID_INVARIANT",
+      "prover_status": "PROVED_INVARIANT",
+      "replay_status": "SKIPPED_HOLDS",
+      "solver_latency_ms": 18.736,
+      "replay_latency_ms": 0.001,
+      "violation_observed": false,
+      "counterexample": null
+    },
+    {
+      "property_id": "INV-NONCE-02",
+      "name": "Nonce Anti-Replay Monotonicity (Planted Bug)",
+      "state_machine": "SEQUENCE_NONCE_TRACKER",
+      "classification": "PLANTED_VIOLATION",
+      "prover_status": "COUNTEREXAMPLE_FOUND",
+      "replay_status": "REPLAY_CONFIRMED",
+      "solver_latency_ms": 9.446,
+      "replay_latency_ms": 0.016,
+      "violation_observed": true,
+      "counterexample": {
+        "stage": "BASE_CASE",
+        "action": "INIT",
+        "initial_state": {
+          "current_nonce": 0,
+          "replays_detected": 0,
+          "incoming_nonce": 0
+        },
+        "final_state": {
+          "current_nonce": 0,
+          "replays_detected": 0,
+          "incoming_nonce": 0
+        }
+      }
+    }
+  ]
+}

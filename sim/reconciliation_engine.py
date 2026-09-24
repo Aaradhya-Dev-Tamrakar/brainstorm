@@ -187,8 +187,8 @@ def auto_reconcile_counts():
             expected_entity_classes = {
                 "ecosystem_modules": comp_modules,
                 "presentation_hubs": pres_modules,
-                "in_tree_research_engines": 1,
-                "in_tree_research_proposals": 1
+                "in_tree_research_engines": 2,
+                "in_tree_research_proposals": 0
             }
             if stats.get("entity_classes") != expected_entity_classes:
                 stats["entity_classes"] = expected_entity_classes
@@ -474,17 +474,17 @@ def audit_layer_1_consistency():
                         "file": rel_path,
                         "detail": f"Expected 4 'presentation_hub' entries in capability-registry.yaml, found {count_pres}"
                     })
-                if count_eng != 1:
+                if count_eng != 2:
                     discrepancies.append({
                         "type": "ENTITY_CLASS_COUNT_DRIFT",
                         "file": rel_path,
-                        "detail": f"Expected 1 'research_engine' entry in capability-registry.yaml, found {count_eng}"
+                        "detail": f"Expected 2 'research_engine' entries in capability-registry.yaml, found {count_eng}"
                     })
-                if count_prop != 1:
+                if count_prop != 0:
                     discrepancies.append({
                         "type": "ENTITY_CLASS_COUNT_DRIFT",
                         "file": rel_path,
-                        "detail": f"Expected 1 'research_proposal' entry in capability-registry.yaml, found {count_prop}"
+                        "detail": f"Expected 0 'research_proposal' entries in capability-registry.yaml, found {count_prop}"
                     })
                 if len(caps) != 25:
                     discrepancies.append({

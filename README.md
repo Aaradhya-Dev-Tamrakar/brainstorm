@@ -73,12 +73,12 @@ Rather than building an isolated chatbot, this repository models tools as **auto
 └───────────────────────────────────────┬────────────────────────────────────────┘
                                         │ Typed Capability Contracts
 ┌───────────────────────────────────────▼────────────────────────────────────────┐
-│ 3. CAPABILITY MESH (19 Computational Engines across 22 Modules)               │
+│ 3. CAPABILITY MESH (19 Computational Engines across 23 Modules)               │
 │    • Ingestion : Screen Q&A (DOM), Super-NLM (Notebooks), Google Classroom MCP │
 │    • Compute   : Fusion 360 MCP (CAD), BiasAperture (Fairness), SPARK (Edge AI)│
 │    • Solvers   : AI Constraint Solver (Cryptarithmetic & CSP)                  │
 │    • Actuation : NovaOptimizer (Win32 NT Tuning), LocalSend MCP (mTLS P2P LAN) │
-│    • Publishing: md2pdf (LaTeX PDF), RSVP Reader (HUD), Nepali OCR AI          │
+│    • Publishing: md2pdf (LaTeX PDF), Typora MCP (HTML/CSS), RSVP Reader (HUD)   │
 └───────────────────────────────────────┬────────────────────────────────────────┘
                                         │ Deterministic Verification & Reality
 ┌───────────────────────────────────────▼────────────────────────────────────────┐
@@ -141,7 +141,7 @@ Rather than expanding the ecosystem by inventing new projects, the immediate eng
 
 ## 🗂️ Authoritative Ecosystem Catalog
 
-The ecosystem encompasses **22 tool modules** cataloged in `schemas/ecosystem.registry.json` and tracked across local tool repositories plus 1 orchestration root (`brainstorm`), with machine-readable contracts and interfaces (22 modules = 18 active computational engines + 4 presentation/educational hubs):
+The ecosystem encompasses **23 tool modules** cataloged in `schemas/ecosystem.registry.json` and tracked across local tool repositories plus 1 orchestration root (`brainstorm`), with machine-readable contracts and interfaces (23 modules = 19 active computational engines + 4 presentation/educational hubs):
 
 > 📖 **Machine-Readable Registry:** [`schemas/capability-registry.yaml`](schemas/capability-registry.yaml) | [`schemas/ecosystem.registry.json`](schemas/ecosystem.registry.json)  
 > 📜 **Ontology Standard:** [`schemas/capability-ontology.md`](schemas/capability-ontology.md)
@@ -170,6 +170,7 @@ The ecosystem encompasses **22 tool modules** cataloged in `schemas/ecosystem.re
 | 20  | `google-classroom-mcp`            | **Google Classroom MCP**     | Ingestion / Actuation | Local Desktop / Fleet MCP |    **E4**     | Direct Google Classroom integration for courses, coursework, assignments, announcements, and submissions |
 | 21  | `localsend-mcp`                   | **LocalSend MCP Server**     | Ingestion / Actuation | Local Desktop / Fleet MCP |    **E4**     | Zero-cloud local P2P file, text, and clipboard transfer across LAN/Wi-Fi devices with mutual TLS         |
 | 22  | `downloader-scripts`              | **Downloader Scripts Hub**   | Ingestion / Actuation | Local Desktop             |    **E4**     | Zero-click clipboard auto-paste downloader, 1-click WPF Audio vs Video selector, and dual-routing        |
+| 23  | `typora-mcp`                      | **Typora MCP Server**        | Publishing / Actuation| Local Desktop / Fleet MCP |    **E4**     | Programmatic Typora automation, process telemetry, hex history/draft recovery, CSS theme governance & HTML|
 
 ---
 

@@ -4,7 +4,7 @@
 
 version: "1.0.0"
 registry_type: "canonical_capability_registry"
-last_reconciled: "2026-09-23"
+last_reconciled: "2026-09-24"
 maintainer: "Aaradhya Dev Tamrakar"
 
 capabilities:
@@ -558,5 +558,131 @@ capabilities:
     development_hours: 10
     confidence: 0.99
     last_verified: "2026-09-22"
+
+  - id: "typora-mcp"
+    name: "Typora MCP Server"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\Utility-MCPs\\typora-mcp"
+    category: "COMPUTATIONAL_ENGINE"
+    status: "IMPLEMENTED"
+    description: "Programmatic Typora automation, live editor process & open document tracking, hex-encoded history & crash recovery parsing, custom CSS theme management, and pixel-perfect HTML compilation."
+    inputs:
+      - "Markdown document paths / raw markdown content"
+      - "CSS theme files and styling properties"
+      - "Hex history buffers and unsaved draft files"
+    outputs:
+      - "Compiled standalone HTML documents"
+      - "Editor process and active file telemetry"
+      - "Decoded document history and recovered drafts"
+      - "Theme installation and profile updates"
+    interfaces:
+      - "FastMCP (stdio JSON-RPC)"
+      - "Node.js TypeScript CLI"
+    dependencies:
+      - "Node.js 20+ / ESM"
+      - "@modelcontextprotocol/sdk"
+      - "Typora Desktop (Win32)"
+    evidence: "E4"
+    benchmarks: "Zero-latency local Win32 process inspection, robust hex history extraction, and deterministic HTML rendering"
+    verification: "schemas/examples/typora-mcp.contract.json, Jest test suites, and ecosystem verification"
+    maintenance_cost: "1 hour/month"
+    development_hours: 12
+    confidence: 0.95
+    last_verified: "2026-09-24"
+
+  - id: "Aaradhya-Dev-Tamrakar.github.io"
+    name: "Portfolio Website"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\Aaradhya-Dev-Tamrakar.github.io"
+    category: "PRESENTATION_HUB"
+    status: "IMPLEMENTED"
+    description: "Central portfolio, interactive radar, and project presentation engine."
+    inputs:
+      - "Project manifests and metadata"
+      - "Access keys and navigation events"
+    outputs:
+      - "Interactive Web UI & Radar Visualization"
+      - "Decrypted project access links"
+    interfaces:
+      - "Static Web (HTTPS)"
+      - "Browser DOM / Vanilla JS"
+    dependencies:
+      - "HTML5 / Vanilla CSS / ES6 JavaScript"
+      - "GitHub Pages"
+    evidence: "E4"
+    benchmarks: "Lighthouse 100/100/100/100 performance and zero-dependency runtime"
+    verification: "Live deployment, zero-token audit validation, and integrity diff checks"
+    maintenance_cost: "2 hours/month"
+    development_hours: 80
+    confidence: 0.98
+    last_verified: "2026-09-24"
+
+  - id: "AaradhyaDT.github.io"
+    name: "Portfolio Mirror"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\AaradhyaDT.github.io"
+    category: "PRESENTATION_HUB"
+    status: "IMPLEMENTED"
+    description: "Secondary public mirror and documentation host."
+    inputs:
+      - "Synchronized website assets"
+    outputs:
+      - "Mirrored web documentation and project pages"
+    interfaces:
+      - "Static Web (HTTPS)"
+    dependencies:
+      - "GitHub Pages"
+    evidence: "E4"
+    benchmarks: "Automated mirror synchronization and failover hosting"
+    verification: "HTTP 200 health check and content parity check against primary portfolio"
+    maintenance_cost: "0.5 hours/month"
+    development_hours: 10
+    confidence: 0.98
+    last_verified: "2026-09-24"
+
+  - id: "makerspace"
+    name: "Makerspace"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\makerspace"
+    category: "PRESENTATION_HUB"
+    status: "IMPLEMENTED"
+    description: "Physical maker laboratory, fabrication assets, and 3D printing staging."
+    inputs:
+      - "CAD schematics and STL models"
+      - "Lab inventory requests"
+    outputs:
+      - "Physical prototypes and fabrication asset catalog"
+    interfaces:
+      - "Documentation / 3D Asset Files"
+    dependencies:
+      - "Autodesk Fusion / Bambu Studio"
+    evidence: "E2"
+    benchmarks: "Physical fabrication repository and lab asset staging"
+    verification: "Asset file integrity and git tree verification"
+    maintenance_cost: "1 hour/month"
+    development_hours: 30
+    confidence: 0.85
+    last_verified: "2026-09-24"
+
+  - id: "react-workshop-ieeekecktm"
+    name: "React Workshop"
+    repository: "F:\\AaradhyaDT\\react-workshop-ieeekecktm"
+    category: "PRESENTATION_HUB"
+    status: "IMPLEMENTED"
+    description: "Hands-on curriculum and modern frontend architecture reference."
+    inputs:
+      - "Student workshop prompts and exercises"
+    outputs:
+      - "Interactive React components and pedagogical code demos"
+    interfaces:
+      - "Vite Dev Server / Web App"
+    dependencies:
+      - "Node.js 18+"
+      - "React 18 / TypeScript / Vite"
+    evidence: "E3"
+    benchmarks: "Live workshop execution and reproducible curriculum walkthrough"
+    verification: "Vite build and Jest test assertions"
+    maintenance_cost: "0.5 hours/month"
+    development_hours: 24
+    confidence: 0.92
+    last_verified: "2026-09-24"
+
+
 
 

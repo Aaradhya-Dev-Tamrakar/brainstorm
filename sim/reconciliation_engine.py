@@ -381,8 +381,10 @@ def audit_layer_1_consistency():
             
             # Verify capability registry invariants
             if rel_path == "schemas/capability-registry.yaml":
+                cap_ids = set()
                 for cap in caps:
                     cid = cap.get("id", "UNKNOWN")
+                    cap_ids.add(cid)
                     cstatus = cap.get("status")
                     cevidence = cap.get("evidence")
                     if cstatus not in VALID_STATUSES:
@@ -403,6 +405,17 @@ def audit_layer_1_consistency():
                             "type": "EPISTEMIC_VIOLATION",
                             "file": rel_path,
                             "detail": f"Capability '{cid}' is marked IMPLEMENTED but only has tier {cevidence}"
+                        })
+
+                # Cross-registry synchronization check: All modules in ecosystem.registry.json must exist in capability-registry.yaml
+                _, eco_modules, _, _, _ = get_ecosystem_module_counts()
+                for em in eco_modules:
+                    em_id = em.get("id")
+                    if em_id and em_id not in cap_ids:
+                        discrepancies.append({
+                            "type": "CROSS_REGISTRY_GAP",
+                            "file": rel_path,
+                            "detail": f"Module '{em_id}' is defined in ecosystem.registry.json but missing from capability-registry.yaml"
                         })
             continue
 

@@ -111,34 +111,39 @@ flowchart LR
 
 ---
 
-## 6. Phased Timeline: The 1-Month Holiday Runway & Semester Launch
+## 6. Phased Timeline: Board Exam Defense, Holiday Runway & Semester Launch
 
-The upcoming festival holiday season (Dashain / Tihar / Chhath) introduces a **one-month protected incubation runway** prior to the formal start of the new academic semester and major project submissions.
+The operational timeline is divided into three distinct phases:
 
 ```text
-  NOW (Late Sept 2026)                      1 MONTH LATER (Late Oct / Nov 2026)
-┌───────────────────────────────────────┐   ┌────────────────────────────────────────┐
-│ PHASE 0: HOLIDAY INCUBATION RUNWAY    │   │ PHASE 1: FORMAL SEMESTER CONVERSION    │
-│ • Clear Fuse AIF Backlog (W16 + W17)  │──►│ • Launch BEIE Major Project Part A     │
-│ • White-Box SBR Rebuild (Project 1)   │   │ • Full 3-Layer Budget Allocation       │
-│ • Deepen Python/C++ Concurrency       │   │ • External Calibration & Internships   │
-│ • Distraction-free, zero-lecture zone │   │ • Formal Invariant Benchmark Dossier   │
-└───────────────────────────────────────┘   └────────────────────────────────────────┘
+  NOW — OCT 4                              OCT 5 — LATE OCT                         LATE OCT / NOV ONWARD
+┌──────────────────────────────────────┐   ┌────────────────────────────────────┐   ┌────────────────────────────────────┐
+│ PHASE -1: BOARD EXAM LOCKDOWN (P0)   │   │ PHASE 0: POST-EXAM HOLIDAY RUNWAY  │   │ PHASE 1: FORMAL SEMESTER LAUNCH    │
+│ • 100% Academic GPA & Exam Defense   │──►│ • 3-Week Protected Incubation Zone │──►│ • BEIE Major Project Part A Launch │
+│ • Minimal AIF Maintenance (W17 Sept 26)│ │ • White-Box SBR Rebuild (Project 1)│   │ • Full 3-Layer Budget Allocation   │
+│ • Zero Heavy Research Context-Switch │   │ • Concurrency & SMT Grounding      │   │ • External Calibration & Pipeline  │
+└──────────────────────────────────────┘   └────────────────────────────────────┘   └────────────────────────────────────┘
 ```
 
-### Phase 0: The 1-Month Holiday Incubation Runway (Late Sept – Late Oct 2026)
-* **Objective:** Exploit the total absence of academic lectures and institutional deadlines to build first-principles depth.
-* **Key Milestones:**
-  1. **AIF Clearance:** Complete Fuse AIF Week 16 (Agentic Harness) and Week 17 (MLOps, due Sept 26).
-  2. **Project 1 Rebuild:** Implement the Self-Balancing Robot core loop without AI generation. Derive complementary filter equations on paper; write the discrete PID in C/C++; audit sampling latency with hardware timers.
-  3. **Concurrency & Memory Dissection:** Master Python `asyncio` lifecycle (task cancellation, exception bubbling) and POSIX/Windows IPC buffer mechanics without prompting.
+### Phase -1: The Board Exam Defense & Lockdown (Sept 24 – Oct 4, 2026) [PRIORITY: P0]
+* **Objective:** Academic transcript and GPA protection. University board exams represent a hard, unrecoverable constraint for future graduate admissions, fellowships, and degree completion.
+* **Operating Rules:**
+  1. **Zero Architecture Churn:** Complete freeze on new repository tools, refactors, and research charters.
+  2. **AIF Minimal Maintenance:** Efficiently complete and submit Fuse AIF Week 17 (MLOps, due Sept 26) and Week 16 backlog to maintain standing without encroaching on exam revision hours.
+  3. **Cognitive Focus:** 100% mental bandwidth dedicated to syllabus mastery and board exam papers.
 
-### Phase 1: Post-Holiday Semester Launch (Late Oct / Nov 2026 Onward)
+### Phase 0: The Post-Exam Holiday Incubation Runway (Oct 5 – Late Oct / Nov 2026) [PRIORITY: P1]
+* **Objective:** Exploit the 3+ week festival holiday pause (Dashain / Tihar / Chhath) following board exams for distraction-free first-principles depth.
+* **Key Milestones:**
+  1. **Project 1 Rebuild:** White-box derivation and C/C++ implementation of the Self-Balancing Robot complementary filter and discrete PID with latency profiling.
+  2. **Deep Systems Dissection:** Handcraft Python asynchronous lifecycles and IPC queues from first principles.
+  3. **Formal Invariant Benchmark:** Package the `INV-BMK-001` Z3 benchmark suite into a standalone empirical artifact.
+
+### Phase 1: Post-Holiday Semester Launch (Nov 2026 Onward) [PRIORITY: P1]
 * **Objective:** Deploy the 3-Layer attention budget under active academic semester constraints.
 * **Key Milestones:**
-  1. **BEIE Major Project Part A:** Submit the Project 2 architecture (Perception $\to$ Edge Inference $\to$ MCU Control) as the official capstone proposal.
-  2. **Layer 1 Benchmark Publication:** Finalize the headless Invariant Assurance Benchmark (`INV-BMK-001`) into a standalone, reproducible dossier.
-  3. **Targeted External Pipeline:** Selectively interview for high-signal embedded/AI systems internships.
+  1. **BEIE Major Project Part A:** Submit the pre-validated Perception $\to$ Inference $\to$ Actuation $\to$ Invariant Verification architecture as the official capstone proposal.
+  2. **External Calibration:** Engage high-signal research internships and build the international lab opportunity pipeline.
 
 ---
 

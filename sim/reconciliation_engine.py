@@ -641,8 +641,16 @@ def audit_repository(auto_fix=False):
     ledger_path = os.path.join(RESULTS_DIR, "dual_layer_verification_ledger.json")
     try:
         now_iso = datetime.datetime.now().astimezone().isoformat()
+        git_sha = None
+        try:
+            import subprocess
+            git_sha = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=BRAINSTORM_ROOT, text=True, stderr=subprocess.DEVNULL).strip()
+        except Exception:
+            pass
+
         ledger_data = {
             "timestamp": now_iso,
+            "evaluated_commit": git_sha,
             "layer_1_structural_consistency": {
                 "status": "PASSED" if l1_errors == 0 else "FAILED",
                 "errors": l1_errors,
@@ -659,6 +667,7 @@ def audit_repository(auto_fix=False):
         }
         with open(ledger_path, "w", encoding="utf-8") as lf:
             json.dump(ledger_data, lf, indent=2)
+            lf.write("\n")
     except Exception as e:
         print(f"[!] Warning: Could not write verification ledger: {e}")
 

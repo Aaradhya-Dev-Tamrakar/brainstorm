@@ -1,0 +1,154 @@
+{
+  "$schema": "../capability.contract.v1.json",
+  "module": "typora-mcp",
+  "version": "1.0.0",
+  "location": "F:\\Aaradhya-Dev-Tamrakar\\typora-mcp",
+  "tracking_branch": "typora-mcp",
+  "runtime": "node26",
+  "mcp_endpoint": {
+    "transport": "stdio",
+    "command": "node",
+    "args": [
+      "F:\\Aaradhya-Dev-Tamrakar\\typora-mcp\\dist\\index.js"
+    ]
+  },
+  "capabilities": [
+    {
+      "id": "editor_process_telemetry",
+      "description": "Inspects running Typora instances, PIDs, active file arguments, memory usage, and installation state on Windows via Win32 CIM.",
+      "category": "ingestion",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "empirical_sandbox",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 5000,
+      "inputs": {
+        "type": "object",
+        "properties": {}
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["installed", "isRunning", "processCount", "openFiles"],
+        "properties": {
+          "installed": { "type": "boolean" },
+          "isRunning": { "type": "boolean" },
+          "processCount": { "type": "integer" },
+          "openFiles": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    {
+      "id": "document_and_workspace_launch",
+      "description": "Asynchronously launches Typora to view, create, or edit Markdown documents and folder workspaces.",
+      "category": "actuation",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "empirical_sandbox",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 10000,
+      "inputs": {
+        "type": "object",
+        "required": ["path"],
+        "properties": {
+          "path": { "type": "string" },
+          "content": { "type": "string" },
+          "title": { "type": "string" },
+          "frontmatter": { "type": "object" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["success", "message"],
+        "properties": {
+          "success": { "type": "boolean" },
+          "message": { "type": "string" }
+        }
+      }
+    },
+    {
+      "id": "history_and_recovery_engine",
+      "description": "Decodes hex-encoded history.data and scans Typora draftsRecover vault to list recent files and recover unsaved document drafts.",
+      "category": "ingestion",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "empirical_sandbox",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 5000,
+      "inputs": {
+        "type": "object",
+        "properties": {
+          "limit": { "type": "integer" },
+          "query": { "type": "string" },
+          "verify_exists": { "type": "boolean" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["count"],
+        "properties": {
+          "count": { "type": "integer" }
+        }
+      }
+    },
+    {
+      "id": "theme_and_styling_governance",
+      "description": "Enumerates installed and built-in Typora themes, reads CSS stylesheets, installs new themes, and updates profile.data.",
+      "category": "actuation",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "empirical_sandbox",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 5000,
+      "inputs": {
+        "type": "object",
+        "properties": {
+          "theme": { "type": "string" },
+          "dark_theme": { "type": "string" },
+          "name": { "type": "string" },
+          "css": { "type": "string" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["success"],
+        "properties": {
+          "success": { "type": "boolean" }
+        }
+      }
+    },
+    {
+      "id": "markdown_to_html_rendering",
+      "description": "Compiles Markdown content into standalone portable HTML with inlined Typora base and theme CSS styling within an authentic #write container.",
+      "category": "presentation",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "empirical_sandbox",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 10000,
+      "inputs": {
+        "type": "object",
+        "properties": {
+          "content": { "type": "string" },
+          "input_path": { "type": "string" },
+          "output_path": { "type": "string" },
+          "theme": { "type": "string" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["html", "themeUsed", "charCount"],
+        "properties": {
+          "html": { "type": "string" },
+          "themeUsed": { "type": "string" },
+          "charCount": { "type": "integer" }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "author": "Aaradhya Dev Tamrakar",
+    "license": "MIT",
+    "repository_url": "https://github.com/AaradhyaDT/typora-mcp",
+    "last_updated": "2026-09-24"
+  }
+}

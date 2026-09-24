@@ -76,11 +76,11 @@ To eliminate counting discrepancies across `README.md`, `PROFILE.md`, and `ECOSY
 
 | Ontological Dimension | Authoritative Count | Description & Scope |
 | :--- | :---: | :--- |
-| **Cataloged Tool Modules** | **22** | 18 Computational Engines + 4 Presentation & Educational Hubs registered in `schemas/ecosystem.registry.json`. |
+| **Cataloged Tool Modules** | **23** | 18 Computational Engines + 4 Presentation & Educational Hubs registered in `schemas/ecosystem.registry.json`. |
 | **Physical Git Repositories** | **22** | 1 Orchestration Root (`brainstorm`) + 21 local tool repositories tracked across local storage (`F:\Aaradhya-Dev-Tamrakar` and `F:\AaradhyaDT`). |
-| **Git Tracking Branches in `brainstorm`** | **25** | `main` (orchestrator) + 17 branch mirrors synchronized via `sync.ps1`. |
+| **Git Tracking Branches in `brainstorm`** | **26** | `main` (orchestrator) + 17 branch mirrors synchronized via `sync.ps1`. |
 | **Active Engineering Projects** | **18** | Concrete initiatives: SPARK, STRANGLER-IPU, BiasAperture, Super-NLM, NovaOptimizer, Fusion 360 MCP, Nexus, Claude Fleet, Alpha-SuperApp, Screen Q&A, md2pdf, yt-dlp-live, AI CSP Solver, RSVP Reader, GitHub Pilot, Nepali OCR AI, Google Classroom MCP, LocalSend MCP. |
-| **Computational Capabilities** | **18** | Independent functional engines exposing programmatic APIs/CLI/MCP interfaces. |
+| **Computational Capabilities** | **19** | Independent functional engines exposing programmatic APIs/CLI/MCP interfaces. |
 | **Presentation & Educational Hubs** | **4** | Non-computational repositories: Portfolio Main (`Aaradhya-Dev-Tamrakar.github.io`), Portfolio Mirror (`AaradhyaDT.github.io`), KEC Makerspace digital asset hub, and IEEE React Workshop repo. |
 | **Compound Workflows (Pipelines)** | **6** | Formal emergent pipelines (Pipelines A, B, C, D, E, and Pipeline F: Zero-Cloud Device Handoff). |
 | **Research Experiments, Specs & RFCs** | **28** | Formal architecture specs (`ARCH-SPEC-001` to `006`), RFCs (`ARCH-RFC-001` to `006`), business plans (`ARCH-PLAN-001`), invariants (`INV-EPI-001`, `INV-MEM-001`, `INV-WSR-002`), empirical sweeps & benchmarks (`EXP-001`, `EXP-DRIVE-SYNC-001`, `EXP-FUSION360-MCP-001` (dual-server: Autodesk native + custom bridge), `EXP-CLASSROOM-MCP-001`, `EXP-LOCALSEND-MCP-001`, `FLEET-001`, `FLEET-002`, `GPU_RAM_ARCHITECTURE_SPEC`, `BMK-MEMORY-001`), and composition benchmarks (`COMPOSE-001`, `COMPOSE-002`). |

@@ -428,14 +428,16 @@ def audit_layer_1_consistency():
             
         file_dir = os.path.dirname(full_path)
         
-        # Skip checking literal link strings inside raw transcripts (Layer 0) and tool/skill prompt code
-        if "research/transcripts" in rel_path or "tools/" in rel_path:
+        # Skip checking literal link strings inside raw transcripts (Layer 0)
+        if "research/transcripts" in rel_path:
             continue
 
-        # Check cross-references / internal markdown links
-        for match in link_pattern.finditer(content):
+        # Check cross-references / internal markdown links (stripping code blocks to prevent syntax false-positives)
+        cleaned_content = re.sub(r"`{3,}.*?`{3,}", "", content, flags=re.DOTALL)
+        cleaned_content = re.sub(r"`[^`\n]+`", "", cleaned_content)
+        for match in link_pattern.finditer(cleaned_content):
             target = match.group(2).split("#")[0].strip()
-            if not target or target.startswith(("http", "mailto", "file:", "conversation:")):
+            if not target or target.startswith(("http", "mailto", "file:", "conversation:", "(?:", "?:")):
                 continue
                 
             resolved_target = os.path.normpath(os.path.join(file_dir, target))
@@ -468,6 +470,65 @@ def audit_layer_1_consistency():
                         "file": rel_path,
                         "detail": f"Claimed output artifact 'research/results/{pdf_name}' does not exist on disk or is empty."
                     })
+
+    # Dedicated Skill & Customization Layer Verification (ARCH-SPEC-007)
+    tools_dir = os.path.join(BRAINSTORM_ROOT, "tools")
+    skills_dir = os.path.join(tools_dir, "skills")
+    scripts_dir = os.path.join(BRAINSTORM_ROOT, "scripts")
+
+    if os.path.exists(skills_dir):
+        skill_dirs = sorted([
+            d for d in os.listdir(skills_dir)
+            if os.path.isdir(os.path.join(skills_dir, d)) and not d.startswith(".")
+        ])
+        expected_skill_count = 19
+        if len(skill_dirs) != expected_skill_count:
+            discrepancies.append({
+                "type": "SKILL_COUNT_DRIFT",
+                "file": "tools/skills/",
+                "detail": f"Expected {expected_skill_count} mirrored skills, found {len(skill_dirs)} in tools/skills/."
+            })
+        for sd in skill_dirs:
+            skill_path = os.path.join(skills_dir, sd)
+            skill_md = os.path.join(skill_path, "SKILL.md")
+            if not os.path.exists(skill_md):
+                discrepancies.append({
+                    "type": "MISSING_SKILL_MANIFEST",
+                    "file": f"tools/skills/{sd}",
+                    "detail": f"Skill package '{sd}' missing mandatory SKILL.md file."
+                })
+            else:
+                with open(skill_md, "r", encoding="utf-8", errors="ignore") as f:
+                    sm_content = f.read().lstrip("\ufeff")
+                if not sm_content.startswith("---") or "name:" not in sm_content or "description:" not in sm_content:
+                    discrepancies.append({
+                        "type": "INVALID_SKILL_FRONTMATTER",
+                        "file": f"tools/skills/{sd}/SKILL.md",
+                        "detail": f"Skill '{sd}' SKILL.md missing valid YAML frontmatter (name, description)."
+                    })
+
+    for tool_name, script_name in [("chat_archiver", "save_chat.py"), ("doc_archiver", "save_doc.py")]:
+        t_dir = os.path.join(tools_dir, tool_name)
+        if not os.path.exists(os.path.join(t_dir, script_name)):
+            discrepancies.append({
+                "type": "MISSING_TOOL_SCRIPT",
+                "file": f"tools/{tool_name}",
+                "detail": f"Tool '{tool_name}' missing core script '{script_name}'."
+            })
+        if not os.path.exists(os.path.join(t_dir, "SKILL.md")):
+            discrepancies.append({
+                "type": "MISSING_TOOL_SKILL_MANIFEST",
+                "file": f"tools/{tool_name}",
+                "detail": f"Tool '{tool_name}' missing SKILL.md manifest."
+            })
+
+    bootstrap_ps1 = os.path.join(scripts_dir, "bootstrap-environment.ps1")
+    if not os.path.exists(bootstrap_ps1) or os.path.getsize(bootstrap_ps1) == 0:
+        discrepancies.append({
+            "type": "MISSING_BOOTSTRAP_ENGINE",
+            "file": "scripts/bootstrap-environment.ps1",
+            "detail": "Missing environment bootstrap engine script."
+        })
 
     # Dynamic Physical Research Artifact Enumeration & Validation
     arch_artifacts, exp_artifacts, inv_artifacts, total_physical_artifacts = get_physical_research_artifacts()

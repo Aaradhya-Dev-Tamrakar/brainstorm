@@ -42,11 +42,11 @@ I am a systems and applied machine learning engineer specializing in the interfa
 
 ---
 
-### Direct Research Lab Integration
+### Target Research Domains & Capabilities
 
-* **Autonomous & Robotic Systems (e.g. RAVI Lab):** Immediate contribution to multi-sensor fusion (LiDAR, radar, IMU, camera feeds), edge inference deployment on robotic/drone payloads, and real-time state estimation.
-* **Applied AI & Cultural Preservation (e.g. DSAI Lab):** Practical experience in deep learning vision pipelines, OCR text recognition for low-resource scripts (e.g., Ranjana Lipi), and data preprocessing pipelines.
-* **Smart Systems & Edge Automation (e.g. AISSR Lab):** End-to-end sensor-to-model integration, model quantization for low-power edge nodes, and automated field data telemetry.
+* **Autonomous & Robotic Systems:** Multi-sensor fusion (LiDAR, radar, IMU, camera feeds), edge inference deployment on robotic/drone payloads, and real-time state estimation.
+* **Applied AI & Computer Vision:** Deep learning vision pipelines, OCR text recognition for low-resource scripts and historical documents, and robust data preprocessing pipelines.
+* **Smart Systems & Edge Intelligence:** End-to-end sensor-to-model integration, INT8 post-training model quantization for low-power edge microcontrollers, and automated telemetry pipelines.
 
 ---
 

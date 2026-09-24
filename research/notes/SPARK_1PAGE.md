@@ -43,6 +43,6 @@ SPARK decouples microsecond kinematic event triggering from compute-intensive ne
 
 ---
 
-### 4. Direct Transferability to Research Labs
-* **Robotics / Drones (RAVI Lab):** High-frequency IMU/kinematics handling, interrupt-driven real-time embedded C++ firmware, and edge model optimization on constrained platforms.
-* **Applied AI / Smart Systems (AISSR / DSAI):** Model quantization, embedded runtime deployment, and full-stack sensor-to-dashboard telemetry pipelines.
+### 4. Technical Transferability to Research Environments
+* **Robotics & Autonomous Platforms:** High-frequency IMU/kinematics handling, interrupt-driven real-time embedded C++ firmware, and edge model optimization on constrained platforms.
+* **Applied AI & Edge Intelligence:** Post-training model quantization, embedded runtime deployment, and full-stack sensor-to-dashboard telemetry pipelines.

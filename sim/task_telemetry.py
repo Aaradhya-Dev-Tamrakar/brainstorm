@@ -3,13 +3,14 @@ task_telemetry.py
 -----------------
 Continuous deterministic task telemetry engine and Workflow Scorecard for brainstorm.
 Implements the multi-dimensional economic vector (C_direct, T_human, T_model, T_compute)
-and calculates Human Intervention Ratio (HIR) and Discovery Cost Efficiency (DCE).
+and calculates empirical Human Intervention Ratio (HIR) and Discovery Cost Efficiency (DCE)
+using discrete measured interval durations rather than static heuristic assumptions.
 
 Usage:
     python sim/task_telemetry.py start <task_id> --goal "Goal text" [--tier E3]
-    python sim/task_telemetry.py log-intervention <task_id> --minutes 15.0 [--reason "debugging"]
-    python sim/task_telemetry.py log-dispatch <task_id> --model "claude-3-7-sonnet" --tokens-in 5000 --tokens-out 1200 --compute-sec 2.5
-    python sim/task_telemetry.py log-rework <task_id> --reason "schema mismatch"
+    python sim/task_telemetry.py log-intervention <task_id> --minutes 15.0 [--reason "debugging"] [--start ISO] [--end ISO]
+    python sim/task_telemetry.py log-dispatch <task_id> --model "claude-3-7-sonnet" --tokens-in 5000 --tokens-out 1200 --compute-sec 2.5 [--duration-sec 30.0]
+    python sim/task_telemetry.py log-rework <task_id> --reason "schema mismatch" [--minutes 5.0]
     python sim/task_telemetry.py close <task_id> --status COMPLETED --artifact "sim/reconciliation_engine.py"
     python sim/task_telemetry.py scorecard
     python sim/task_telemetry.py --test
@@ -72,11 +73,13 @@ def cmd_start(args):
     tasks[tid] = {
         "task_id": tid,
         "goal": args.goal,
-        "target_evidence_tier": args.tier or "E3",
+        "target_evidence_tier": getattr(args, "tier", None) or "E3",
         "status": "IN_PROGRESS",
         "start_time": get_utc_now(),
         "end_time": None,
         "human_active_minutes": 0.0,
+        "agent_active_seconds": 0.0,
+        "agent_active_minutes": 0.0,
         "interventions": [],
         "worker_dispatches": 0,
         "tokens_input": 0,
@@ -84,6 +87,7 @@ def cmd_start(args):
         "compute_seconds": 0.0,
         "handoffs": 0,
         "rework_events": 0,
+        "rework_log": [],
         "output_artifact": None,
         "dispatches_log": []
     }
@@ -100,15 +104,35 @@ def cmd_log_intervention(args):
         return 1
 
     t = tasks[tid]
-    mins = float(args.minutes)
-    t["human_active_minutes"] += mins
-    t["interventions"].append({
-        "timestamp": get_utc_now(),
-        "minutes": mins,
-        "reason": args.reason or "manual intervention"
+    start_ts = getattr(args, "start", None)
+    end_ts = getattr(args, "end", None)
+
+    if start_ts and end_ts:
+        try:
+            t0 = datetime.fromisoformat(start_ts)
+            t1 = datetime.fromisoformat(end_ts)
+            mins = max(0.0, (t1 - t0).total_seconds() / 60.0)
+        except Exception:
+            mins = float(getattr(args, "minutes", 0.0) or 0.0)
+    else:
+        mins = float(getattr(args, "minutes", 0.0) or 0.0)
+
+    now = get_utc_now()
+    if not start_ts:
+        start_ts = now
+    if not end_ts:
+        end_ts = now
+
+    t["human_active_minutes"] = round(t.get("human_active_minutes", 0.0) + mins, 2)
+    t.setdefault("interventions", []).append({
+        "timestamp": now,
+        "started_at": start_ts,
+        "ended_at": end_ts,
+        "minutes": round(mins, 2),
+        "reason": getattr(args, "reason", None) or "manual intervention"
     })
     save_all_tasks(tasks)
-    print(f"[+] Logged {mins}m intervention to '{tid}' (Total: {t['human_active_minutes']}m).")
+    print(f"[+] Logged {mins:.2f}m intervention to '{tid}' (Total human time: {t['human_active_minutes']:.2f}m).")
     return 0
 
 
@@ -120,22 +144,58 @@ def cmd_log_dispatch(args):
         return 1
 
     t = tasks[tid]
-    t["worker_dispatches"] += 1
-    t["tokens_input"] += args.tokens_in or 0
-    t["tokens_output"] += args.tokens_out or 0
-    t["compute_seconds"] += args.compute_sec or 0.0
-    if args.handoff:
-        t["handoffs"] += 1
+    start_ts = getattr(args, "start", None)
+    end_ts = getattr(args, "end", None)
 
-    t["dispatches_log"].append({
-        "timestamp": get_utc_now(),
-        "model": args.model or "unknown",
-        "tokens_in": args.tokens_in or 0,
-        "tokens_out": args.tokens_out or 0,
-        "compute_sec": args.compute_sec or 0.0
+    dur_sec = getattr(args, "duration_sec", None)
+    comp_sec = float(getattr(args, "compute_sec", 0.0) or 0.0)
+
+    if start_ts and end_ts:
+        try:
+            t0 = datetime.fromisoformat(start_ts)
+            t1 = datetime.fromisoformat(end_ts)
+            measured_sec = max(0.0, (t1 - t0).total_seconds())
+        except Exception:
+            measured_sec = float(dur_sec if dur_sec is not None else comp_sec)
+    elif dur_sec is not None:
+        measured_sec = float(dur_sec)
+    elif comp_sec > 0.0:
+        measured_sec = comp_sec
+    else:
+        measured_sec = 0.0
+
+    now = get_utc_now()
+    if not start_ts:
+        start_ts = now
+    if not end_ts:
+        end_ts = now
+
+    tokens_in = int(getattr(args, "tokens_in", 0) or 0)
+    tokens_out = int(getattr(args, "tokens_out", 0) or 0)
+
+    t["worker_dispatches"] = t.get("worker_dispatches", 0) + 1
+    t["tokens_input"] = t.get("tokens_input", 0) + tokens_in
+    t["tokens_output"] = t.get("tokens_output", 0) + tokens_out
+    t["compute_seconds"] = round(t.get("compute_seconds", 0.0) + comp_sec, 2)
+    t["agent_active_seconds"] = round(t.get("agent_active_seconds", 0.0) + measured_sec, 2)
+    t["agent_active_minutes"] = round(t["agent_active_seconds"] / 60.0, 2)
+
+    if getattr(args, "handoff", False):
+        t["handoffs"] = t.get("handoffs", 0) + 1
+
+    t.setdefault("dispatches_log", []).append({
+        "timestamp": now,
+        "started_at": start_ts,
+        "ended_at": end_ts,
+        "duration_seconds": round(measured_sec, 2),
+        "model": getattr(args, "model", "agent") or "agent",
+        "tokens_in": tokens_in,
+        "tokens_out": tokens_out,
+        "compute_sec": comp_sec,
+        "handoff": bool(getattr(args, "handoff", False))
     })
     save_all_tasks(tasks)
-    print(f"[+] Logged dispatch for '{tid}': {args.model or 'agent'} (Dispatches: {t['worker_dispatches']}).")
+    print(f"[+] Logged dispatch for '{tid}': {getattr(args, 'model', 'agent')} (Duration: {measured_sec:.1f}s, Total Agent Active: {t['agent_active_minutes']:.2f}m).")
     return 0
 
 
@@ -147,7 +207,16 @@ def cmd_log_rework(args):
         return 1
 
     t = tasks[tid]
-    t["rework_events"] += 1
+    t["rework_events"] = t.get("rework_events", 0) + 1
+    rework_mins = float(getattr(args, "minutes", 0.0) or 0.0)
+    if rework_mins > 0:
+        t["human_active_minutes"] = round(t.get("human_active_minutes", 0.0) + rework_mins, 2)
+
+    t.setdefault("rework_log", []).append({
+        "timestamp": get_utc_now(),
+        "reason": getattr(args, "reason", None) or "unspecified rework",
+        "minutes": rework_mins
+    })
     save_all_tasks(tasks)
     print(f"[+] Logged rework event for '{tid}' (Total rework count: {t['rework_events']}).")
     return 0
@@ -161,9 +230,9 @@ def cmd_close(args):
         return 1
 
     t = tasks[tid]
-    t["status"] = args.status or "COMPLETED"
+    t["status"] = getattr(args, "status", None) or "COMPLETED"
     t["end_time"] = get_utc_now()
-    if args.artifact:
+    if getattr(args, "artifact", None):
         t["output_artifact"] = args.artifact
 
     save_all_tasks(tasks)
@@ -173,13 +242,13 @@ def cmd_close(args):
 
 def cmd_scorecard(args=None):
     tasks = load_tasks()
-    print("=" * 80)
-    print("   BRAINSTORM CONTINUOUS WORKFLOW SCORECARD (Scorecard v1)")
-    print("=" * 80)
+    print("=" * 85)
+    print("   BRAINSTORM CONTINUOUS WORKFLOW SCORECARD (Scorecard v2 - Measured Intervals)")
+    print("=" * 85)
 
     if not tasks:
         print("  No tasks recorded in task ledger yet.")
-        print("=" * 80)
+        print("=" * 85)
         return 0
 
     total_tasks = len(tasks)
@@ -187,41 +256,56 @@ def cmd_scorecard(args=None):
     in_progress = sum(1 for t in tasks.values() if t.get("status") == "IN_PROGRESS")
     rework_total = sum(t.get("rework_events", 0) for t in tasks.values())
     total_human_mins = sum(t.get("human_active_minutes", 0.0) for t in tasks.values())
+    total_agent_mins = sum(t.get("agent_active_minutes", 0.0) for t in tasks.values())
     total_tokens_in = sum(t.get("tokens_input", 0) for t in tasks.values())
     total_tokens_out = sum(t.get("tokens_output", 0) for t in tasks.values())
     total_dispatches = sum(t.get("worker_dispatches", 0) for t in tasks.values())
     total_handoffs = sum(t.get("handoffs", 0) for t in tasks.values())
 
     # Task Table
-    header = f"{'Task ID':<20} | {'Status':<11} | {'Tier':<4} | {'Human(m)':<8} | {'Dispatches':<10} | {'Tokens':<10} | {'Rework':<6}"
+    header = f"{'Task ID':<26} | {'Status':<11} | {'Tier':<4} | {'Human(m)':<8} | {'Agent(m)':<8} | {'Dispatches':<10} | {'Tokens':<8} | {'Rework':<6}"
     print(header)
     print("-" * len(header))
 
     for t in tasks.values():
         tokens_k = f"{(t.get('tokens_input', 0) + t.get('tokens_output', 0)) / 1000:.1f}k"
-        row = f"{t.get('task_id', ''):<20} | {t.get('status', ''):<11} | {t.get('target_evidence_tier', 'E3'):<4} | {t.get('human_active_minutes', 0.0):<8.1f} | {t.get('worker_dispatches', 0):<10} | {tokens_k:<10} | {t.get('rework_events', 0):<6}"
+        row = (
+            f"{t.get('task_id', ''):<26} | "
+            f"{t.get('status', ''):<11} | "
+            f"{t.get('target_evidence_tier', 'E3'):<4} | "
+            f"{t.get('human_active_minutes', 0.0):<8.1f} | "
+            f"{t.get('agent_active_minutes', 0.0):<8.1f} | "
+            f"{t.get('worker_dispatches', 0):<10} | "
+            f"{tokens_k:<8} | "
+            f"{t.get('rework_events', 0):<6}"
+        )
         print(row)
 
-    print("=" * 80)
-    print(" ECOSYSTEM MACRO TELEMETRY METRICS")
-    print("=" * 80)
+    print("=" * 85)
+    print(" ECOSYSTEM MACRO TELEMETRY METRICS (Empirically Measured Intervals)")
+    print("=" * 85)
     print(f"  * Total Tasks Logged      : {total_tasks} ({completed} completed, {in_progress} active)")
-    print(f"  * Total Human Intervention: {total_human_mins:.1f} minutes ({total_human_mins / 60:.2f} hours)")
+    print(f"  * Measured Human Time     : {total_human_mins:.1f} minutes ({total_human_mins / 60:.2f} hours)")
+    print(f"  * Measured Agent Time     : {total_agent_mins:.1f} minutes ({total_agent_mins / 60:.2f} hours)")
+    total_engineering_mins = total_human_mins + total_agent_mins
+    print(f"  * Total Active Eng. Time  : {total_engineering_mins:.1f} minutes ({total_engineering_mins / 60:.2f} hours)")
     print(f"  * Total Worker Dispatches : {total_dispatches} dispatches, {total_handoffs} context handoffs")
     print(f"  * Total LLM Tokens        : {total_tokens_in + total_tokens_out:,} (In: {total_tokens_in:,}, Out: {total_tokens_out:,})")
     print(f"  * Total Rework Events     : {rework_total} (Rework Rate: {(rework_total / max(1, total_dispatches)) * 100:.1f}%)")
     
-    # Calculate Human Intervention Ratio (HIR)
-    # Estimated agent active time ~ 0.5 min per dispatch
-    est_agent_mins = total_dispatches * 0.5
-    hir = (total_human_mins / max(0.01, total_human_mins + est_agent_mins)) * 100
-    print(f"  * Human Intervention (HIR): {hir:.1f}% human time share (Target: < 30%)")
-    print("=" * 80)
+    # Calculate Human Intervention Ratio (HIR) empirically:
+    # HIR = T_human / (T_human + T_agent_active)
+    if total_engineering_mins > 0:
+        hir = (total_human_mins / total_engineering_mins) * 100
+    else:
+        hir = 0.0
+    print(f"  * Empirical HIR           : {hir:.1f}% human time share (Target: < 30%) [Zero-heuristic derivation]")
+    print("=" * 85)
     return 0
 
 
 def run_self_test():
-    print("[*] Running Task Telemetry Engine self-test...")
+    print("[*] Running Task Telemetry Engine self-test (Measured Intervals)...")
     test_tid = "TEST-TASK-001"
     
     # Mock args
@@ -231,15 +315,25 @@ def run_self_test():
 
     cmd_start(MockArgs(task_id=test_tid, goal="Verify telemetry logger", tier="E4"))
     cmd_log_intervention(MockArgs(task_id=test_tid, minutes=2.5, reason="Testing intervention hook"))
-    cmd_log_dispatch(MockArgs(task_id=test_tid, model="test-agent", tokens_in=1000, tokens_out=500, compute_sec=0.1, handoff=True))
-    cmd_log_rework(MockArgs(task_id=test_tid, reason="Test rework"))
+    cmd_log_dispatch(MockArgs(
+        task_id=test_tid,
+        model="test-agent",
+        tokens_in=1000,
+        tokens_out=500,
+        compute_sec=0.1,
+        duration_sec=30.0,
+        handoff=True
+    ))
+    cmd_log_rework(MockArgs(task_id=test_tid, reason="Test rework", minutes=0.5))
     cmd_close(MockArgs(task_id=test_tid, status="COMPLETED", artifact="sim/task_telemetry.py"))
     
     tasks = load_tasks()
     assert test_tid in tasks, "Task not saved to ledger"
-    assert tasks[test_tid]["human_active_minutes"] == 2.5
+    assert tasks[test_tid]["human_active_minutes"] == 3.0, f"Expected 3.0, got {tasks[test_tid]['human_active_minutes']}"
     assert tasks[test_tid]["tokens_input"] == 1000
     assert tasks[test_tid]["worker_dispatches"] == 1
+    assert tasks[test_tid]["agent_active_seconds"] == 30.0
+    assert tasks[test_tid]["agent_active_minutes"] == 0.5
     assert tasks[test_tid]["status"] == "COMPLETED"
     
     print("[+] Self-test passed! Displaying test scorecard:")
@@ -267,7 +361,9 @@ def main():
     # log-intervention
     p_int = subparsers.add_parser("log-intervention", help="Log active human intervention time")
     p_int.add_argument("task_id", help="Task ID")
-    p_int.add_argument("--minutes", type=float, required=True, help="Active human minutes")
+    p_int.add_argument("--minutes", type=float, default=None, help="Active human minutes")
+    p_int.add_argument("--start", type=str, default=None, help="ISO start timestamp")
+    p_int.add_argument("--end", type=str, default=None, help="ISO end timestamp")
     p_int.add_argument("--reason", help="Reason for intervention")
 
     # log-dispatch
@@ -277,12 +373,16 @@ def main():
     p_disp.add_argument("--tokens-in", type=int, default=0, help="Input prompt tokens")
     p_disp.add_argument("--tokens-out", type=int, default=0, help="Output completion tokens")
     p_disp.add_argument("--compute-sec", type=float, default=0.0, help="Compute seconds")
+    p_disp.add_argument("--duration-sec", type=float, default=None, help="Total measured dispatch duration seconds")
+    p_disp.add_argument("--start", type=str, default=None, help="ISO start timestamp")
+    p_disp.add_argument("--end", type=str, default=None, help="ISO end timestamp")
     p_disp.add_argument("--handoff", action="store_true", help="Flag if this dispatch was a manual context handoff")
 
     # log-rework
     p_rew = subparsers.add_parser("log-rework", help="Log rework / correction event")
     p_rew.add_argument("task_id", help="Task ID")
     p_rew.add_argument("--reason", help="Reason for rework")
+    p_rew.add_argument("--minutes", type=float, default=0.0, help="Rework minutes incurred")
 
     # close
     p_close = subparsers.add_parser("close", help="Close a completed or abandoned task")

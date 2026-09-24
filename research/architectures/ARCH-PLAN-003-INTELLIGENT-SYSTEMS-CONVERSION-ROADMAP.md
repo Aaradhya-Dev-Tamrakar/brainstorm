@@ -27,6 +27,11 @@ The foundation rests on three synchronized pillars:
 - **The Generation/Verification Asymmetry:** The marginal cost of code generation is zero; the cost of error detection is unbounded without formal invariants.
 - **The Non-Negotiable Rule:** *Never leave an AI-created black box permanently black.* Every AI-generated subsystem must eventually pass through personal comprehension, debugging, and structural validation.
 
+### 1.2 The "Option Value vs. Realized Value" Paradox
+A 3.5-year retrospective reveals strong accumulation of **option value** (broad capability to enter embedded AI, robotics, agentic systems, or formal verification). However, marginal returns on accumulating additional breadth are now falling. 
+Option value converts into **realized career and research capital** only through:
+$$\text{Existing Baseline} \longrightarrow \text{One Deep Project} \longrightarrow \text{One Strong Result} \longrightarrow \text{External Evaluation} \longrightarrow \text{High-Signal Opportunity}$$
+
 ---
 
 ## 2. The 3-Layer Semester Attention Budget
@@ -49,7 +54,7 @@ The semester is defined as a **Conversion Semester**: transforming architectural
  ┌──────────────────────────────────▼─────────────────────────────────────┐
  │ LAYER 3: EXTERNALIZATION & REAL-WORLD CONVERGENCE (30% Attention)      │
  │ • 10%: BEIE Final Year Project Part A (Integrate with Layer 1)         │
- │ • 15%: High-Signal Internship (Only if real deployment / hardware)     │
+ │ • 15%: High-Signal Internship / Lab RA (Only real hardware/deployment) │
  │ •  5%: Abroad Lab Pipeline (Build evidence first; seek audience later) │
  └────────────────────────────────────────────────────────────────────────┘
 ```
@@ -102,7 +107,42 @@ flowchart LR
 
 ---
 
-## 5. Strict Negative Constraints (The "Do-Not-Do" List)
+## 5. Layer 3 Execution: External Calibration & Opportunity Pipeline
+
+To eliminate the **4.0/10 External Calibration void**, self-directed projects must yield an **external transfer of trust**: *"An external researcher, engineer, lab or company has evaluated my work closely enough to grant responsibility for a real problem."*
+
+### 5.1 Local Research Lab Targets (Kathmandu Valley)
+Approach local research groups with a **Research Proposition** rather than a generic internship inquiry:
+- **Kathmandu University — RAVI Lab:** Focuses on robotics, autonomous systems, visual intelligence, sensor fusion, and real-time decision systems. (100% overlap with SBR, CV, and embedded control).
+- **KU — Data Science & AI Lab:** Welcomes student researchers for applied ML and intelligent system pipelines.
+- **KU — AI & Smart Systems Research Lab:** Practical on-device deployments (healthcare, sensors). Direct match for SPARK.
+- **Approach Hierarchy:** Research Assistant $\to$ Research Trainee $\to$ Lab Volunteer $\to$ Collaborator $\to$ Intern.
+
+### 5.2 The International Research Pipeline
+- **EPFL E3 Fellowship (Switzerland) [URGENT]:**
+  - Excellence in Engineering Early Research Program for Bachelor/Master engineering students ($\ge 2$nd year).
+  - Portal Opens: October 2026. **HARD APPLICATION DEADLINE: NOVEMBER 1, 2026**.
+  - Package: CV, Statement of Purpose, Transcript, References, 3 Lab Choices.
+- **Structural Ineligibility Filter (Zero-Waste Constraint):**
+  - ❌ *Mitacs Globalink 2027:* Ineligible (Nepal not a partner country).
+  - ❌ *DAAD RISE Germany:* Ineligible (Restricted to students enrolled in US/Canada/UK/Ireland).
+- **Direct PI Cold-Outreach Funnel:** Maintain an experimental contact set of 20 researchers (10 Nepal, 10 International) tracking responses, feedback, and project intersections.
+
+### 5.3 Reusable Research Application Pack (`/Aaradhya-Research-Pack`)
+Maintain a standardized, single-source dossier:
+1. `CV.pdf` (1 page, systems/engineering focused).
+2. `Research_Profile.pdf` (1 page: *What do I know? What have I built? What am I researching? What can I contribute?*).
+3. `Project_SPARK.pdf` & `Project_Brainstorm.pdf` (2-page empirical briefs with AUC metrics and benchmark charts).
+4. `Transcript.pdf` (Official university grades).
+
+### 5.4 DataCamp Assessed Certification Engine
+Utilize existing DataCamp access for **assessed skill tests** rather than vanity course completion:
+- Primary Target: **AI Engineer for Developers Associate** (assessed on programming for AI, model development, AI governance, production systems).
+- Secondary Target: **Machine Learning Engineer** (Docker, MLflow, CI/CD, MLOps) or **Python Developer Associate**.
+
+---
+
+## 6. Strict Negative Constraints (The "Do-Not-Do" List)
 
 1. ❌ **No Speculative Architecture Bloat:** Freeze new module charters in `brainstorm` (maintain 23 modules) until current systems achieve Level 4 reproducibility.
 2. ❌ **No Course / Certificate Collecting:** Zero generic online course enrollments. Academic depth is bounded by BEIE; applied ML is bounded by Fuse AIF.
@@ -111,18 +151,16 @@ flowchart LR
 
 ---
 
-## 6. Phased Timeline: Board Exam Defense, Holiday Runway & Semester Launch
-
-The operational timeline is divided into three distinct phases:
+## 7. Phased Timeline: Board Exam Defense, Holiday Runway & Semester Launch
 
 ```text
-  NOW — OCT 4                              OCT 5 — LATE OCT                         LATE OCT / NOV ONWARD
-┌──────────────────────────────────────┐   ┌────────────────────────────────────┐   ┌────────────────────────────────────┐
-│ PHASE -1: BOARD EXAM LOCKDOWN (P0)   │   │ PHASE 0: POST-EXAM HOLIDAY RUNWAY  │   │ PHASE 1: FORMAL SEMESTER LAUNCH    │
-│ • 100% Academic GPA & Exam Defense   │──►│ • 3-Week Protected Incubation Zone │──►│ • BEIE Major Project Part A Launch │
-│ • Minimal AIF Maintenance (W17 Sept 26)│ │ • White-Box SBR Rebuild (Project 1)│   │ • Full 3-Layer Budget Allocation   │
-│ • Zero Heavy Research Context-Switch │   │ • Concurrency & SMT Grounding      │   │ • External Calibration & Pipeline  │
-└──────────────────────────────────────┘   └────────────────────────────────────┘   └────────────────────────────────────┘
+  NOW — OCT 4 (10 Days)                   OCT 5 — OCT 15 (Holiday Buffer)                 OCT 16 — NOV 1 (Sprint)                         NOV 2026 ONWARD
+┌──────────────────────────────────────┐  ┌──────────────────────────────────────────┐   ┌───────────────────────────────────────────┐   ┌───────────────────────────────┐
+│ PHASE -1: BOARD EXAM LOCKDOWN (P0)   │  │ PHASE 0A: RESEARCH PACK & NEPAL LABS (P1)│   │ PHASE 0B: EPFL E3 & BENCHMARK SPRINT (P1) │   │ PHASE 1: FORMAL SEMESTER (P1) │
+│ • 100% Academic GPA & Exam Defense   │─►│ • Assemble /Aaradhya-Research-Pack       │──►│ • Submit EPFL E3 Application (Due Nov 1)  │──►│ • Launch BEIE Major Project A │
+│ • Minimal AIF Maintenance (W17 Sept 26)││ • Pitch 10 Nepal Labs (KU RAVI/DataSci)  │   │ • Execute INV-BMK-001 Benchmark Suite     │   │ • Full 3-Layer Budget Rollout │
+│ • ZERO Research Context-Switching    │  │ • DataCamp AI Engineer Assessment        │   │ • White-Box SBR Rebuild (Project 1)       │   │ • Second External Outreach    │
+└──────────────────────────────────────┘  └──────────────────────────────────────────┘   └───────────────────────────────────────────┘   └───────────────────────────────┘
 ```
 
 ### Phase -1: The Board Exam Defense & Lockdown (Sept 24 – Oct 4, 2026) [PRIORITY: P0]
@@ -132,21 +170,26 @@ The operational timeline is divided into three distinct phases:
   2. **AIF Minimal Maintenance:** Efficiently complete and submit Fuse AIF Week 17 (MLOps, due Sept 26) and Week 16 backlog to maintain standing without encroaching on exam revision hours.
   3. **Cognitive Focus:** 100% mental bandwidth dedicated to syllabus mastery and board exam papers.
 
-### Phase 0: The Post-Exam Holiday Incubation Runway (Oct 5 – Late Oct / Nov 2026) [PRIORITY: P1]
-* **Objective:** Exploit the 3+ week festival holiday pause (Dashain / Tihar / Chhath) following board exams for distraction-free first-principles depth.
-* **Key Milestones:**
-  1. **Project 1 Rebuild:** White-box derivation and C/C++ implementation of the Self-Balancing Robot complementary filter and discrete PID with latency profiling.
-  2. **Deep Systems Dissection:** Handcraft Python asynchronous lifecycles and IPC queues from first principles.
-  3. **Formal Invariant Benchmark:** Package the `INV-BMK-001` Z3 benchmark suite into a standalone empirical artifact.
+### Phase 0A: Research Pack & Local Lab Outreach (Oct 5 – Oct 15, 2026) [PRIORITY: P1]
+* **Milestones:**
+  1. Compile the 1-page CV and 1-page Research Profile into `/Aaradhya-Research-Pack`.
+  2. Send structured Research Propositions to 10 Nepal labs (prioritizing KU RAVI and Data Science & AI Lab).
+  3. Complete the DataCamp AI Engineer for Developers Associate assessed exam.
+
+### Phase 0B: EPFL E3 Submission & Benchmark Sprint (Oct 16 – Nov 1, 2026) [PRIORITY: P1]
+* **Milestones:**
+  1. Finalize and submit the **EPFL E3 Fellowship Application** prior to the **November 1, 2026 deadline**.
+  2. Execute the discrete-event and SMT invariant benchmark (`INV-BMK-001`), compiling results into `research/results/INV-BMK-001_results.json`.
+  3. Hand-derive and write the Project 1 SBR white-box complementary filter and PID loop in C/C++.
 
 ### Phase 1: Post-Holiday Semester Launch (Nov 2026 Onward) [PRIORITY: P1]
-* **Objective:** Deploy the 3-Layer attention budget under active academic semester constraints.
-* **Key Milestones:**
-  1. **BEIE Major Project Part A:** Submit the pre-validated Perception $\to$ Inference $\to$ Actuation $\to$ Invariant Verification architecture as the official capstone proposal.
-  2. **External Calibration:** Engage high-signal research internships and build the international lab opportunity pipeline.
+* **Milestones:**
+  1. Submit the Perception $\to$ Inference $\to$ Actuation $\to$ Invariant Verification architecture as the official BEIE Major Project Part A capstone proposal.
+  2. Initiate the second outreach wave to international PIs with the published empirical benchmark dossier.
 
 ---
 
-## 7. Epistemic Certification
+## 8. Epistemic Certification
 
 This plan is formally recorded under `ARCH-PLAN-003` and linked into `brainstorm`'s dual-layer verification substrate. Any deviation or major milestone completion must be recorded in `research/decisions/` and verified via `.\sync.ps1`.
+

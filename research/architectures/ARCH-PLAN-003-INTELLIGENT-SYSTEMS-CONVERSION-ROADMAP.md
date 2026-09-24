@@ -111,13 +111,34 @@ flowchart LR
 
 ---
 
-## 6. Immediate 72-Hour Sprints (Urgent Execution)
+## 6. Phased Timeline: The 1-Month Holiday Runway & Semester Launch
 
-| Task | Domain | Deadline | Target State |
-| :--- | :--- | :--- | :--- |
-| **Fuse AIF W17 MLOps Quiz & Assignment** | Applied Systems | **2026-09-26 18:14 UTC** | Complete pipeline & submit |
-| **Fuse AIF W16 Agentic AI Assignment** | Agent Runtimes | Immediate | Submit agentic harness deliverable |
-| **BEIE Project Part A Alignment** | Academic | Next 14 Days | Draft project proposal mapping to Project 2 |
+The upcoming festival holiday season (Dashain / Tihar / Chhath) introduces a **one-month protected incubation runway** prior to the formal start of the new academic semester and major project submissions.
+
+```text
+  NOW (Late Sept 2026)                      1 MONTH LATER (Late Oct / Nov 2026)
+┌───────────────────────────────────────┐   ┌────────────────────────────────────────┐
+│ PHASE 0: HOLIDAY INCUBATION RUNWAY    │   │ PHASE 1: FORMAL SEMESTER CONVERSION    │
+│ • Clear Fuse AIF Backlog (W16 + W17)  │──►│ • Launch BEIE Major Project Part A     │
+│ • White-Box SBR Rebuild (Project 1)   │   │ • Full 3-Layer Budget Allocation       │
+│ • Deepen Python/C++ Concurrency       │   │ • External Calibration & Internships   │
+│ • Distraction-free, zero-lecture zone │   │ • Formal Invariant Benchmark Dossier   │
+└───────────────────────────────────────┘   └────────────────────────────────────────┘
+```
+
+### Phase 0: The 1-Month Holiday Incubation Runway (Late Sept – Late Oct 2026)
+* **Objective:** Exploit the total absence of academic lectures and institutional deadlines to build first-principles depth.
+* **Key Milestones:**
+  1. **AIF Clearance:** Complete Fuse AIF Week 16 (Agentic Harness) and Week 17 (MLOps, due Sept 26).
+  2. **Project 1 Rebuild:** Implement the Self-Balancing Robot core loop without AI generation. Derive complementary filter equations on paper; write the discrete PID in C/C++; audit sampling latency with hardware timers.
+  3. **Concurrency & Memory Dissection:** Master Python `asyncio` lifecycle (task cancellation, exception bubbling) and POSIX/Windows IPC buffer mechanics without prompting.
+
+### Phase 1: Post-Holiday Semester Launch (Late Oct / Nov 2026 Onward)
+* **Objective:** Deploy the 3-Layer attention budget under active academic semester constraints.
+* **Key Milestones:**
+  1. **BEIE Major Project Part A:** Submit the Project 2 architecture (Perception $\to$ Edge Inference $\to$ MCU Control) as the official capstone proposal.
+  2. **Layer 1 Benchmark Publication:** Finalize the headless Invariant Assurance Benchmark (`INV-BMK-001`) into a standalone, reproducible dossier.
+  3. **Targeted External Pipeline:** Selectively interview for high-signal embedded/AI systems internships.
 
 ---
 

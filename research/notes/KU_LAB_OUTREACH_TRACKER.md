@@ -20,9 +20,9 @@
 ## 2. Preparedness Packet (Collateral Ready for Replies)
 
 - [x] **CV / Resume:** Updated PDF with projects and live links.
-- [ ] **One-Page Research Profile (`Research_Profile.pdf`):** Concise 60-second summary answering *"What concrete engineering/research value does Aaradhya contribute on Day 1?"*
-- [ ] **SPARK 1-Pager (`SPARK_1page.pdf`):** High-level architectural executive summary of spatial-temporal knowledge/sensor engine.
-- [ ] **Brainstorm Ecosystem 1-Pager (`brainstorm_1page.pdf`):** Formal grounding of the 23-module tool capability mesh and invariant verification harness.
+- [x] **One-Page Research Profile ([`RESEARCH_PROFILE.md`](../../RESEARCH_PROFILE.md)):** Concise 60-second summary answering *"What concrete engineering/research value does Aaradhya contribute on Day 1?"*
+- [x] **SPARK 1-Pager ([`research/notes/SPARK_1PAGE.md`](SPARK_1PAGE.md)):** High-level architectural executive summary of spatial-temporal knowledge/sensor engine.
+- [x] **Brainstorm Ecosystem 1-Pager ([`research/notes/BRAINSTORM_1PAGE.md`](BRAINSTORM_1PAGE.md)):** Formal grounding of the 23-module tool capability mesh and invariant verification harness.
 - [x] **Live Portfolio:** `https://aaradhyadt.github.io`
 - [x] **GitHub Repositories:** Cleaned and documented (`github.com/AaradhyaDT`)
 - [ ] **DataCamp Milestone Digest:** Verification of statistical / ML track progression.

@@ -15,7 +15,7 @@
     "computational_modules": 19,
     "presentation_and_educational_modules": 4,
     "special_and_research_branches": 2,
-    "research_artifacts": 28,
+    "research_artifacts": 29,
     "notes": "Achieved 100% 1-to-1 module-to-branch cardinality across all 23 ecosystem tools on 2026-09-24 (1 main + 23 tool branches + 2 special/research branches = 26 total remote branches)."
   },
   "modules": [

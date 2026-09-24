@@ -6,6 +6,16 @@ This directory contains standalone PowerShell, Python, and Batch utilities that 
 
 ## 📂 Catalog of Scripts
 
+### 0. Deterministic Environment Bootstrap & Antigravity Setup
+- **File:** [`bootstrap-environment.ps1`](bootstrap-environment.ps1) — Single-command reproducible setup script for new machines or clean OS installations.
+- **Actions Executed:**
+  1. Validates Python runtime (3.10+) and installs core dependencies (`requirements.txt`, `beautifulsoup4`, `pyyaml`, `simpy`).
+  2. Deploys global CLI tools (`save-chat`, `save-doc`) to Python Scripts / User `PATH`.
+  3. Synchronizes all 19 Antigravity custom skills from `tools/skills/` into `$HOME/.gemini/config/skills/`.
+  4. Runs deterministic verification audit (`audit.bat`) to guarantee zero-discrepancy operational readiness.
+
+---
+
 ### 1. Windows Environment & User Shell Folders (Selective OneDrive Bypass)
 - **Files:**
   - [`setup-user-shell-folders.ps1`](setup-user-shell-folders.ps1) — Idempotent PowerShell script to verify folder structures, expand variables, and set registry keys.

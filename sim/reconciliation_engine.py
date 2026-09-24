@@ -428,8 +428,8 @@ def audit_layer_1_consistency():
             
         file_dir = os.path.dirname(full_path)
         
-        # Skip checking literal link strings inside raw transcripts (Layer 0)
-        if "research/transcripts" in rel_path:
+        # Skip checking literal link strings inside raw transcripts (Layer 0) and tool/skill prompt code
+        if "research/transcripts" in rel_path or "tools/" in rel_path:
             continue
 
         # Check cross-references / internal markdown links

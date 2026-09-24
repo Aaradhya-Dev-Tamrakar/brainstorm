@@ -143,6 +143,53 @@ def format_markdown(title: str, url: str, turns: list) -> str:
 
     return "\n".join(md)
 
+def find_last_transcript_doc(target_dir: str) -> str:
+    """Finds the most recently modified or committed markdown transcript in target_dir."""
+    if not os.path.exists(target_dir):
+        return None
+    md_files = [
+        os.path.join(target_dir, f)
+        for f in os.listdir(target_dir)
+        if f.endswith(".md") and f != "README.md"
+    ]
+    if not md_files:
+        return None
+    # Sort by modification time descending
+    md_files.sort(key=lambda x: os.path.getmtime(x), reverse=True)
+    return md_files[0]
+
+def format_appendix(title: str, url: str, turns: list) -> str:
+    date_str = datetime.now().strftime("%Y-%m-%d")
+    appendix = [
+        "\n\n---\n",
+        f"# 📎 Appendix: {title} (ChatGPT Session Continuation)\n",
+        f"> **Source URL:** [{url}]({url})",
+        f"> **Appended:** {date_str}",
+        f"> **Total Turns:** {len(turns)}\n",
+        "---\n"
+    ]
+    turn_num = 1
+    i = 0
+    while i < len(turns):
+        t = turns[i]
+        if t['role'] == 'User':
+            appendix.append(f"## Turn {turn_num}\n")
+            appendix.append("### User\n")
+            appendix.append(t['text'] + "\n")
+            if i + 1 < len(turns) and turns[i+1]['role'] == 'Assistant':
+                appendix.append("### Assistant\n")
+                appendix.append(turns[i+1]['text'] + "\n")
+                i += 1
+            appendix.append("---\n")
+            turn_num += 1
+        else:
+            appendix.append(f"### {t['role']}\n")
+            appendix.append(t['text'] + "\n")
+            appendix.append("---\n")
+        i += 1
+
+    return "\n".join(appendix)
+
 def resolve_target_directory(specified_dir: str) -> str:
     """
     Determines the dedicated subfolder for chat histories.
@@ -170,6 +217,13 @@ def main():
     parser.add_argument("url", help="Share URL (e.g. https://chatgpt.com/share/...)")
     parser.add_argument("-o", "--output", help="Output filepath. If omitted, generates from title in dedicated subfolder.")
     parser.add_argument("--dir", help="Target directory for output file", default="")
+    parser.add_argument(
+        "-a", "--append",
+        nargs="?",
+        const="__LATEST__",
+        default=None,
+        help="Append conversation to an existing document. If no path is given, appends to the last/most recent transcript."
+    )
 
     args = parser.parse_args()
 
@@ -178,12 +232,29 @@ def main():
         title, turns = parse_chatgpt_share(args.url)
         print(f"Parsed '{title}' ({len(turns)} message turns)")
         
+        target_dir = resolve_target_directory(args.dir)
+
+        # Handle append mode
+        if args.append is not None:
+            if args.append == "__LATEST__":
+                target_file = find_last_transcript_doc(target_dir)
+                if not target_file:
+                    raise FileNotFoundError(f"No existing transcript found in {target_dir} to append to.")
+            else:
+                target_file = args.append
+
+            appendix_content = format_appendix(title, args.url, turns)
+            with open(target_file, 'a', encoding='utf-8') as f:
+                f.write(appendix_content)
+
+            print(f"Successfully appended chat as Appendix to: {os.path.abspath(target_file)}")
+            return
+
         md_content = format_markdown(title, args.url, turns)
         
         if args.output:
             out_path = args.output
         else:
-            target_dir = resolve_target_directory(args.dir)
             date_prefix = datetime.now().strftime("%Y-%m-%d")
             slug = slugify(title)
             filename = f"{date_prefix}_{slug.upper()}_CONVERSATION.md" if slug else f"{date_prefix}_CHAT_CONVERSATION.md"

@@ -35,5 +35,18 @@ save-chat "<URL>" --dir "f:/Aaradhya-Dev-Tamrakar/brainstorm/research/transcript
 save-chat "<URL>" -o "path/to/custom_name.md"
 ```
 
+### 5. Append Mode (Continuation of Last / Specified Transcript)
+To append a shared continuation session directly to the most recent transcript doc:
+```bash
+save-chat "<URL>" --append
+# or short form:
+save-chat "<URL>" -a
+```
+
+To append to a specific file:
+```bash
+save-chat "<URL>" --append "path/to/existing_transcript.md"
+```
+
 The `save-chat` command runs in under 1 second, automatically parses the conversation data, strips citation noise, cleans formatting, and writes the structured markdown file directly to disk with zero manual token overhead.
 

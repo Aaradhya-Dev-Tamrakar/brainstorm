@@ -9,6 +9,7 @@ maintainer: "Aaradhya Dev Tamrakar"
 
 capabilities:
   - id: "super-nlm"
+    entity_class: "ecosystem_module"
     name: "Super-NLM Hub"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\super-nlm"
     category: "ORCHESTRATION_COGNITION"
@@ -37,6 +38,7 @@ capabilities:
     last_verified: "2026-09-14"
 
   - id: "system-optimizer"
+    entity_class: "ecosystem_module"
     name: "NovaOptimizer"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\system-optimizer"
     category: "COMPUTATIONAL_ENGINE"
@@ -62,6 +64,7 @@ capabilities:
     last_verified: "2026-09-12"
 
   - id: "SPARK"
+    entity_class: "ecosystem_module"
     name: "SPARK Wearable Gateway"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\SPARK"
     category: "COMPUTATIONAL_ENGINE"
@@ -91,6 +94,7 @@ capabilities:
 
 
   - id: "BiasAperture"
+    entity_class: "ecosystem_module"
     name: "BiasAperture Disparity Auditor"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\BiasAperture"
     category: "COMPUTATIONAL_ENGINE"
@@ -122,6 +126,7 @@ capabilities:
     last_verified: "2026-09-23"
 
   - id: "Claude-Desktop"
+    entity_class: "ecosystem_module"
     name: "Claude Worker Fleet (v2)"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\Claude-Desktop"
     category: "ORCHESTRATION_COGNITION"
@@ -149,6 +154,7 @@ capabilities:
     last_verified: "2026-09-13"
 
   - id: "Nexus"
+    entity_class: "ecosystem_module"
     name: "Nexus Workspace"
     repository: "F:\\AaradhyaDT\\Nexus"
     category: "ORCHESTRATION_COGNITION"
@@ -176,6 +182,7 @@ capabilities:
     last_verified: "2026-09-05"
 
   - id: "Alpha-SuperApp"
+    entity_class: "ecosystem_module"
     name: "Alpha-SuperApp"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\Alpha-SuperApp"
     category: "COMPUTATIONAL_ENGINE"
@@ -201,6 +208,7 @@ capabilities:
     last_verified: "2026-09-02"
 
   - id: "screen-qa-extension"
+    entity_class: "ecosystem_module"
     name: "Screen Q&A"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\Utility\\screen-qa-extension"
     category: "INGESTION_SENSOR"
@@ -227,6 +235,7 @@ capabilities:
 
 
   - id: "yt-dlp-live"
+    entity_class: "ecosystem_module"
     name: "yt-dlp-live"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\Utility\\yt-dlp-live"
     category: "INGESTION_SENSOR"
@@ -253,6 +262,7 @@ capabilities:
     last_verified: "2026-09-06"
 
   - id: "AI"
+    entity_class: "ecosystem_module"
     name: "AI Constraint Solver"
     repository: "F:\\AaradhyaDT\\AI"
     category: "COMPUTATIONAL_ENGINE"
@@ -277,9 +287,10 @@ capabilities:
     last_verified: "2026-08-20"
 
   - id: "rsvp-reading"
+    entity_class: "ecosystem_module"
     name: "RSVP Reader"
     repository: "F:\\AaradhyaDT\\rsvp-reading"
-    category: "PRESENTATION_HUB"
+    category: "COMPUTATIONAL_ENGINE"
     status: "IMPLEMENTED"
     description: "High-speed Rapid Serial Visual Presentation (RSVP) reader with Optimal Recognition Point (ORP) highlighting for technical EPUB/PDF reading."
     inputs:
@@ -300,6 +311,7 @@ capabilities:
     last_verified: "2026-08-25"
 
   - id: "STRANGLER-IPU"
+    entity_class: "research_engine"
     name: "STRANGLER-IPU Simulation Engine"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\brainstorm"
     category: "COMPUTATIONAL_ENGINE"
@@ -326,6 +338,7 @@ capabilities:
     last_verified: "2026-09-13"
 
   - id: "headless-invariant-assurance"
+    entity_class: "research_proposal"
     name: "Headless Invariant Assurance Engine"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\brainstorm"
     category: "COMPUTATIONAL_ENGINE"
@@ -352,6 +365,7 @@ capabilities:
     last_verified: "2026-09-14"
 
   - id: "nepali-ocr-ai"
+    entity_class: "ecosystem_module"
     name: "Nepali OCR AI (Nepali Typing, OCR, Grammar & Word Substrate)"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\Utility\\nepali-ocr-ai"
     category: "COMPUTATIONAL_ENGINE"
@@ -380,6 +394,7 @@ capabilities:
     last_verified: "2026-09-19"
 
   - id: "google-classroom-mcp"
+    entity_class: "ecosystem_module"
     name: "Google Classroom MCP Server"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\Utility-MCPs\\google-classroom-mcp"
     category: "INGESTION_ACTUATION"
@@ -409,6 +424,7 @@ capabilities:
     last_verified: "2026-09-19"
 
   - id: "fusion360-mcp"
+    entity_class: "ecosystem_module"
     name: "Fusion 360 MCP Bridge"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\AEC-MCP Suite\\fusion360-mcp"
     category: "ACTUATION_CAD"
@@ -437,6 +453,7 @@ capabilities:
     last_verified: "2026-09-19"
 
   - id: "md2pdf-desktop"
+    entity_class: "ecosystem_module"
     name: "md2pdf-desktop & MCP"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\Utility\\md2pdf-desktop"
     category: "COMPUTATIONAL_ENGINE"
@@ -469,6 +486,7 @@ capabilities:
     last_verified: "2026-09-19"
 
   - id: "localsend-mcp"
+    entity_class: "ecosystem_module"
     name: "LocalSend MCP Server"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\Utility-MCPs\\localsend-mcp"
     category: "INGESTION_ACTUATION"
@@ -499,6 +517,7 @@ capabilities:
     last_verified: "2026-09-23"
 
   - id: "github-pilot"
+    entity_class: "ecosystem_module"
     name: "GitHub Pilot"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\Utility\\github-pilot"
     category: "COMPUTATIONAL_ENGINE"
@@ -527,6 +546,7 @@ capabilities:
     last_verified: "2026-09-19"
 
   - id: "downloader-scripts"
+    entity_class: "ecosystem_module"
     name: "Downloader Scripts Hub"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\Utility\\downloader-scripts"
     category: "INGESTION_ACTUATION"
@@ -560,6 +580,7 @@ capabilities:
     last_verified: "2026-09-22"
 
   - id: "typora-mcp"
+    entity_class: "ecosystem_module"
     name: "Typora MCP Server"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\Utility-MCPs\\typora-mcp"
     category: "COMPUTATIONAL_ENGINE"
@@ -590,6 +611,7 @@ capabilities:
     last_verified: "2026-09-24"
 
   - id: "Aaradhya-Dev-Tamrakar.github.io"
+    entity_class: "presentation_hub"
     name: "Portfolio Website"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\Aaradhya-Dev-Tamrakar.github.io"
     category: "PRESENTATION_HUB"
@@ -616,6 +638,7 @@ capabilities:
     last_verified: "2026-09-24"
 
   - id: "AaradhyaDT.github.io"
+    entity_class: "presentation_hub"
     name: "Portfolio Mirror"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\AaradhyaDT.github.io"
     category: "PRESENTATION_HUB"
@@ -638,6 +661,7 @@ capabilities:
     last_verified: "2026-09-24"
 
   - id: "makerspace"
+    entity_class: "presentation_hub"
     name: "Makerspace"
     repository: "F:\\Aaradhya-Dev-Tamrakar\\makerspace"
     category: "PRESENTATION_HUB"
@@ -661,6 +685,7 @@ capabilities:
     last_verified: "2026-09-24"
 
   - id: "react-workshop-ieeekecktm"
+    entity_class: "presentation_hub"
     name: "React Workshop"
     repository: "F:\\AaradhyaDT\\react-workshop-ieeekecktm"
     category: "PRESENTATION_HUB"

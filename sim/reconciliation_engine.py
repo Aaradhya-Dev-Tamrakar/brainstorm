@@ -45,6 +45,14 @@ REQUIRED_METADATA_KEYS = [
 
 VALID_STATUSES = {"IMPLEMENTED", "EXPERIMENTAL", "PROPOSED", "ASPIRATIONAL", "RETIRED"}
 VALID_EVIDENCE_TIERS = {"E0", "E1", "E2", "E3", "E4", "E5"}
+VALID_ENTITY_CLASSES = {
+    "ecosystem_module",
+    "research_engine",
+    "research_proposal",
+    "presentation_hub",
+    "workflow",
+    "artifact"
+}
 
 
 def parse_simple_yaml_capabilities(filepath):
@@ -63,7 +71,7 @@ def parse_simple_yaml_capabilities(filepath):
                 k, v = stripped.split(":", 1)
                 k = k.strip().strip("- ")
                 v = v.strip().strip('"').strip("'")
-                if k in ["name", "repository", "category", "status", "evidence", "confidence", "last_verified"]:
+                if k in ["name", "repository", "category", "status", "evidence", "confidence", "last_verified", "entity_class"]:
                     current_cap[k] = v
         if current_cap:
             capabilities.append(current_cap)
@@ -175,6 +183,23 @@ def auto_reconcile_counts():
             if stats.get("total_git_branches") != total_remote_branches:
                 stats["total_git_branches"] = total_remote_branches
                 changed = True
+
+            expected_entity_classes = {
+                "ecosystem_modules": comp_modules,
+                "presentation_hubs": pres_modules,
+                "in_tree_research_engines": 1,
+                "in_tree_research_proposals": 1
+            }
+            if stats.get("entity_classes") != expected_entity_classes:
+                stats["entity_classes"] = expected_entity_classes
+                changed = True
+
+            for m in ereg_data.get("modules", []):
+                cat = m.get("category")
+                target_ec = "ecosystem_module" if cat == "computational_engine" else "presentation_hub"
+                if m.get("entity_class") != target_ec:
+                    m["entity_class"] = target_ec
+                    changed = True
 
             today_iso = datetime.date.today().isoformat()
             special_count = stats.get("special_and_research_branches", 2)
@@ -352,6 +377,23 @@ def audit_layer_1_consistency():
                             "file": rel_path,
                             "detail": f"Expected {expected_pres} presentation_and_educational_modules (from modules list), found {stats.get('presentation_and_educational_modules')}"
                         })
+
+                    for m in modules_list:
+                        m_id = m.get("id")
+                        m_ec = m.get("entity_class")
+                        if not m_ec or m_ec not in VALID_ENTITY_CLASSES:
+                            discrepancies.append({
+                                "type": "INVALID_ENTITY_CLASS",
+                                "file": rel_path,
+                                "detail": f"Module '{m_id}' in ecosystem.registry.json has missing or invalid entity_class '{m_ec}'"
+                            })
+                        expected_ec = "ecosystem_module" if m.get("category") == "computational_engine" else "presentation_hub"
+                        if m_ec != expected_ec:
+                            discrepancies.append({
+                                "type": "ENTITY_CLASS_CATEGORY_MISMATCH",
+                                "file": rel_path,
+                                "detail": f"Module '{m_id}' has entity_class '{m_ec}' but category '{m.get('category')}' (expected '{expected_ec}')"
+                            })
             except Exception as e:
                 discrepancies.append({
                     "type": "INVALID_JSON",
@@ -387,6 +429,13 @@ def audit_layer_1_consistency():
                     cap_ids.add(cid)
                     cstatus = cap.get("status")
                     cevidence = cap.get("evidence")
+                    centity = cap.get("entity_class")
+                    if not centity or centity not in VALID_ENTITY_CLASSES:
+                        discrepancies.append({
+                            "type": "INVALID_ENTITY_CLASS",
+                            "file": rel_path,
+                            "detail": f"Capability '{cid}' in capability-registry.yaml has missing or invalid entity_class: '{centity}'"
+                        })
                     if cstatus not in VALID_STATUSES:
                         discrepancies.append({
                             "type": "INVALID_STATUS",
@@ -406,6 +455,43 @@ def audit_layer_1_consistency():
                             "file": rel_path,
                             "detail": f"Capability '{cid}' is marked IMPLEMENTED but only has tier {cevidence}"
                         })
+
+                # Validate entity class partition counts
+                count_eco = sum(1 for c in caps if c.get("entity_class") == "ecosystem_module")
+                count_pres = sum(1 for c in caps if c.get("entity_class") == "presentation_hub")
+                count_eng = sum(1 for c in caps if c.get("entity_class") == "research_engine")
+                count_prop = sum(1 for c in caps if c.get("entity_class") == "research_proposal")
+                
+                if count_eco != 19:
+                    discrepancies.append({
+                        "type": "ENTITY_CLASS_COUNT_DRIFT",
+                        "file": rel_path,
+                        "detail": f"Expected 19 'ecosystem_module' entries in capability-registry.yaml, found {count_eco}"
+                    })
+                if count_pres != 4:
+                    discrepancies.append({
+                        "type": "ENTITY_CLASS_COUNT_DRIFT",
+                        "file": rel_path,
+                        "detail": f"Expected 4 'presentation_hub' entries in capability-registry.yaml, found {count_pres}"
+                    })
+                if count_eng != 1:
+                    discrepancies.append({
+                        "type": "ENTITY_CLASS_COUNT_DRIFT",
+                        "file": rel_path,
+                        "detail": f"Expected 1 'research_engine' entry in capability-registry.yaml, found {count_eng}"
+                    })
+                if count_prop != 1:
+                    discrepancies.append({
+                        "type": "ENTITY_CLASS_COUNT_DRIFT",
+                        "file": rel_path,
+                        "detail": f"Expected 1 'research_proposal' entry in capability-registry.yaml, found {count_prop}"
+                    })
+                if len(caps) != 25:
+                    discrepancies.append({
+                        "type": "TOTAL_CAPABILITIES_COUNT_DRIFT",
+                        "file": rel_path,
+                        "detail": f"Expected 25 total capabilities in capability-registry.yaml, found {len(caps)}"
+                    })
 
                 # Cross-registry synchronization check: All modules in ecosystem.registry.json must exist in capability-registry.yaml
                 _, eco_modules, _, _, _ = get_ecosystem_module_counts()
@@ -680,14 +766,18 @@ def audit_layer_2_behavioral():
         return errors, result.testsRun
 
 
-def audit_repository(auto_fix=False):
+def audit_repository(auto_fix=False, write_ledger=False):
     print("=" * 75)
     print("   BRAINSTORM DUAL-LAYER DETERMINISTIC VERIFICATION ENGINE (ARCH-RFC-001/005)")
     print("=" * 75)
     
     if auto_fix:
-        print("[*] Running dynamic count and inventory auto-reconciliation before audit...")
+        print("[*] MODE: Dynamic Documentation & Invariant Auto-Reconciliation...")
         auto_reconcile_counts()
+    elif write_ledger:
+        print("[*] MODE: Deterministic Verification & Certification Ledger Write...")
+    else:
+        print("[*] MODE: Pure Read-Only Audit Gate (Zero File Mutations)...")
 
     l1_errors = audit_layer_1_consistency()
     l2_errors, l2_tests_run = audit_layer_2_behavioral()
@@ -700,41 +790,47 @@ def audit_repository(auto_fix=False):
     
     total_errors = l1_errors + l2_errors
     ledger_path = os.path.join(RESULTS_DIR, "dual_layer_verification_ledger.json")
-    try:
-        now_iso = datetime.datetime.now().astimezone().isoformat()
-        git_sha = None
-        try:
-            import subprocess
-            git_sha = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=BRAINSTORM_ROOT, text=True, stderr=subprocess.DEVNULL).strip()
-        except Exception:
-            pass
 
-        ledger_data = {
-            "timestamp": now_iso,
-            "evaluated_commit": git_sha,
-            "layer_1_structural_consistency": {
-                "status": "PASSED" if l1_errors == 0 else "FAILED",
-                "errors": l1_errors,
-                "tier": "E3/E4"
-            },
-            "layer_2_behavioral_reproducibility": {
-                "status": "PASSED" if l2_errors == 0 else "FAILED",
-                "tests_run": l2_tests_run,
-                "errors": l2_errors,
-                "tier": "E4"
-            },
-            "total_discrepancies": total_errors,
-            "certified": total_errors == 0
-        }
-        with open(ledger_path, "w", encoding="utf-8") as lf:
-            json.dump(ledger_data, lf, indent=2)
-            lf.write("\n")
-    except Exception as e:
-        print(f"[!] Warning: Could not write verification ledger: {e}")
+    if write_ledger:
+        try:
+            now_iso = datetime.datetime.now().astimezone().isoformat()
+            git_sha = None
+            try:
+                import subprocess
+                git_sha = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=BRAINSTORM_ROOT, text=True, stderr=subprocess.DEVNULL).strip()
+            except Exception:
+                pass
+
+            ledger_data = {
+                "timestamp": now_iso,
+                "evaluated_commit": git_sha,
+                "layer_1_structural_consistency": {
+                    "status": "PASSED" if l1_errors == 0 else "FAILED",
+                    "errors": l1_errors,
+                    "tier": "E3/E4"
+                },
+                "layer_2_behavioral_reproducibility": {
+                    "status": "PASSED" if l2_errors == 0 else "FAILED",
+                    "tests_run": l2_tests_run,
+                    "errors": l2_errors,
+                    "tier": "E4"
+                },
+                "total_discrepancies": total_errors,
+                "certified": total_errors == 0
+            }
+            with open(ledger_path, "w", encoding="utf-8") as lf:
+                json.dump(ledger_data, lf, indent=2)
+                lf.write("\n")
+            print(f"[*] Ledger recorded: research/results/dual_layer_verification_ledger.json")
+        except Exception as e:
+            print(f"[!] Warning: Could not write verification ledger: {e}")
+    else:
+        print("[i] Audit Purity: Verified repository state without modifying verification ledger.")
 
     if total_errors == 0:
         print("\n[+] CERTIFIED: Repository satisfies all structural consistency and behavioral ground truth invariants.")
-        print(f"    Machine-readable ledger recorded at: research/results/dual_layer_verification_ledger.json")
+        if os.path.exists(ledger_path):
+            print(f"    Active ledger reference: research/results/dual_layer_verification_ledger.json")
     else:
         print(f"\n[!] REJECTED: Total verification failures: {total_errors}")
         
@@ -744,5 +840,6 @@ def audit_repository(auto_fix=False):
 
 if __name__ == "__main__":
     auto_fix = any(arg in sys.argv for arg in ["--fix", "-f", "--reconcile", "-r"])
-    exit_code = audit_repository(auto_fix=auto_fix)
+    write_ledger = auto_fix or any(arg in sys.argv for arg in ["--ledger", "-l", "--write-ledger"])
+    exit_code = audit_repository(auto_fix=auto_fix, write_ledger=write_ledger)
     sys.exit(0 if exit_code == 0 else 1)

@@ -19,6 +19,7 @@
 | **[`ARCH-SPEC-007`](ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md)** | **Deterministic Environment Reproducibility, Toolchain Bootstrapping & Antigravity Mirror Standard** | 1-Click Bootstrap, CLI Deploy & Custom Skills Mirror | Aaradhya Dev Tamrakar | Active Standard |
 | **[`ARCH-PLAN-001`](ARCH-PLAN-001-AEC-ENG-MCP-COMMERCIAL-BUSINESS-PLAN.md)** | **Commercial Business Plan & Technical Roadmap (AEC-MCP Fleet)** | Local-First Engineering Suite, Monetization & Execution | Aaradhya Dev Tamrakar | Active Baseline |
 | **[`ARCH-PLAN-002`](ARCH-PLAN-002-SYSTEMS-ENGINEERING-MASTERY-PLAN.md)** | **Dual-Track Systems Engineering & Software Mastery Roadmap** | 70/30 Internal System Dissection vs. Real-World Production Hardening | Aaradhya Dev Tamrakar | Active Baseline |
+| **[`ARCH-PLAN-003`](ARCH-PLAN-003-INTELLIGENT-SYSTEMS-CONVERSION-ROADMAP.md)** | **Intelligent Systems Engineering & Research Conversion Roadmap** | 3-Layer Semester Budget: Invariant Assurance, Skill Engine & Academic Convergence | Aaradhya Dev Tamrakar | High Priority (P1) |
 
 ---
 

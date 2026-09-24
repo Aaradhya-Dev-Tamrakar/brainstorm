@@ -95,7 +95,7 @@ To eliminate counting discrepancies across `README.md`, `PROFILE.md`, and `ECOSY
 | **In-Tree Research Proposals** | **0** | `research_proposal` | Active formal proposals awaiting initial prototype execution. |
 | **Total Capabilities in Registry** | **25** | All Capability Classes | 19 ecosystem modules + 4 presentation hubs + 2 in-tree engines in `schemas/capability-registry.yaml`. |
 | **Compound Workflows (Pipelines)** | **6** | `workflow` | Formal emergent pipelines (Pipelines A, B, C, D, E, and Pipeline F: Zero-Cloud Device Handoff). |
-| **Research Experiments, Specs & RFCs** | **30** | `artifact` | Formal architecture specs (`ARCH-SPEC-001` to `007`), RFCs (`ARCH-RFC-001` to `006`), business plans (`ARCH-PLAN-001`, `ARCH-PLAN-002`), invariants (`INV-EPI-001`, `INV-MEM-001`, `INV-WSR-002`), empirical sweeps & benchmarks (`EXP-001`, `EXP-DRIVE-SYNC-001`, `EXP-FUSION360-MCP-001`, `EXP-CLASSROOM-MCP-001`, `EXP-LOCALSEND-MCP-001`, `FLEET-001`, `FLEET-002`, `GPU_RAM_ARCHITECTURE_SPEC`, `BMK-MEMORY-001`, `INV-BMK-001`), and composition benchmarks (`COMPOSE-001`, `COMPOSE-002`). |
+| **Research Experiments, Specs & RFCs** | **31** | `artifact` | Formal architecture specs (`ARCH-SPEC-001` to `007`), RFCs (`ARCH-RFC-001` to `006`), business plans (`ARCH-PLAN-001`, `ARCH-PLAN-002`), invariants (`INV-EPI-001`, `INV-MEM-001`, `INV-WSR-002`), empirical sweeps & benchmarks (`EXP-001`, `EXP-DRIVE-SYNC-001`, `EXP-FUSION360-MCP-001`, `EXP-CLASSROOM-MCP-001`, `EXP-LOCALSEND-MCP-001`, `FLEET-001`, `FLEET-002`, `GPU_RAM_ARCHITECTURE_SPEC`, `BMK-MEMORY-001`, `INV-BMK-001`), and composition benchmarks (`COMPOSE-001`, `COMPOSE-002`). |
 
 ---
 

@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Aaradhya Dev Tamrakar//ARCH-PLAN-003 Intelligent Systems Roadmap//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:intelligent-systems-conversion-20260924T150000@brainstorm.local
+DTSTAMP:20260924T084500Z
+DTSTART:20260924T090000Z
+DTEND:20260926T181400Z
+SUMMARY:🔥 [HIGH PRIORITY] Intelligent Systems Conversion: Fuse AIF MLOps & Agentic Harness Sprint
+DESCRIPTION:ARCH-PLAN-003 Execution Block:\n\n1. Immediate: Finalize Fuse AIF W16 Agentic AI Assignment.\n2. Critical: Complete Fuse AIF W17 MLOps Quiz & Assignment (Due Sept 26, 18:14 UTC).\n3. Layer 1: Anchor Invariant Assurance Benchmark (INV-BMK-001) into formal empirical dossier.\n4. Layer 2: White-box rebuild of SBR sensor filtering & discrete PID loop.\n5. Layer 3: Align BEIE Final Year Project Part A with the perception-to-actuation verification loop.\n\nCharter: file:///F:/Aaradhya-Dev-Tamrakar/brainstorm/research/architectures/ARCH-PLAN-003-INTELLIGENT-SYSTEMS-CONVERSION-ROADMAP.md
+LOCATION:Workstation / Research Incubation Root
+STATUS:CONFIRMED
+PRIORITY:1
+CLASS:PUBLIC
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Reminder: High-Priority Intelligent Systems Conversion Sprint
+END:VALARM
+END:VEVENT
+END:VCALENDAR

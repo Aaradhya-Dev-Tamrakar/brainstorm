@@ -1,0 +1,27 @@
+id: HYP-006
+title: "Hybrid BLE + Wi-Fi Direct L2 Link Negotiation Achieves AirDrop-Equivalent Offline Transfer Speeds on Android/Windows"
+author: "Aaradhya Dev Tamrakar"
+date: "2026-09-27"
+
+# Theoretical Justification
+hypothesis: >
+  Augmenting LocalSend's L7 REST transfer engine with a native Layer-2 orchestration layer
+  (BLE beacon discovery + programmatic Wi-Fi Direct / Local-Only Hotspot negotiation)
+  will achieve sustained zero-router offline transfer speeds of >= 50 MB/s (400 Mbps) with
+  connection establishment latency <= 3.5 seconds across mixed Android and Windows environments.
+why_we_believe_it: >
+  Modern Android and Windows chipsets support 802.11ac/ax Wi-Fi Direct and SoftAP concurrent mode.
+  Decoupling out-of-band BLE discovery from high-bandwidth Wi-Fi data channels eliminates
+  router dependency while maximizing physical radio throughput.
+counterargument: >
+  Varying OEM Wi-Fi Direct driver implementations on Windows (Intel vs. Realtek vs. MediaTek)
+  and aggressive background battery throttling on Android may introduce P2P Group Owner
+  negotiation timeouts, requiring fallback to Local-Only Hotspots.
+
+# Experimental Falsification Protocol
+target_experiment: "PLAN-P2P-001"
+success_metric: "Connection handshake <= 3.5s; sustained payload transfer >= 50 MB/s across Android-Windows pairs"
+failure_condition: "Connection establishment exceeds 8.0s or fails to restore initial Wi-Fi state post-transfer"
+
+# Lifecycle State: proposed | active | verified | falsified | retired
+status: proposed

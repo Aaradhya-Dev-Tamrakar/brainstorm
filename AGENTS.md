@@ -10,19 +10,20 @@ To preserve repository integrity, avoid merge collisions, eliminate hallucinated
 
 To avoid breaking multi-branch tracking and prevent wasteful multi-step Git commands, **NEVER run individual `git add`, `git commit`, `git push`, or `git pull` commands directly.**
 
-**ALWAYS execute `.\sync.ps1` for repository synchronization and version control.**
+**ALWAYS execute `.\sync.bat` (or `.\sync.ps1`) for repository synchronization and version control.**
+*(Note: `.\sync.bat` is the zero-friction execution wrapper that automatically bypasses PowerShell ExecutionPolicy restrictions on freshly cloned devices).*
 
 ### Core Commands
 
 - **Routine / Active Branch Sync**:
   ```powershell
-  .\sync.ps1
+  .\sync.bat                              # or .\sync.ps1
   ```
   _Automatically runs pre-commit secret scans, checks branch health, detects uncommitted changes, formats branch-scoped conventional commits (e.g., `docs(spark):`, `feat(super-nlm):`), and pushes with `--rebase --autostash` safety._
 
 - **Major Features / Architectural Changes**:
   ```powershell
-  .\sync.ps1 -m "feat(arch): detailed architectural commit summary"
+  .\sync.bat -m "feat(arch): detailed architectural commit summary"
   ```
 
 - **Switch & Sync Tool Branch**:

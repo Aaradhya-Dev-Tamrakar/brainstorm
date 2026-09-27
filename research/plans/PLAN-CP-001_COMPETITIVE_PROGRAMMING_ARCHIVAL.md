@@ -37,18 +37,27 @@ flowchart TD
 ```
 
 ### Components:
-* **UIA Text Traversal:** Traverses Chromium accessibility tree (`Document` -> `Text`, `ListItem`, `DataItem`) to extract pure problem text, time/memory limits, constraints, and sample cases even when raw HTTP scrapers receive only empty bundles (`bundle.js`).
-* **Silent Screen Capture:** Native GDI `BitBlt` capture (`Screen.capture_to_file` and MCP `capture_screenshot` with `output_path`) saves high-resolution visual evidence of rendered KaTeX equations and geometric figures without OS popups.
+* **UIA & DOM Traversal:** Traverses Chromium accessibility tree (`Document` -> `Text`, `ListItem`, `DataItem`, `Table`, `Row`, `Custom`) to extract:
+  * **Problem View (`/contest/archive/task/<slug>/`):** Problem description, LaTeX/KaTeX math, input/output specifications, time/memory limits, subtasks, and sample cases.
+  * **Submissions Index (`/contest/archive/submissions/`):** Filter jobs by status (`Accepted` / `Done`), contest task, score (`100 points`), extracting Job ID (`Job #7549997`, `#7550065`), timestamp, user handle (`CoreShift`, `smith`), and task references (`Task id #128`, `Contest #136`).
+  * **Submission Result Detail (`/submission/<job_id>`):** Full source code (Python, C++, Java), language runtime metadata, summary metrics (Verdict points, CPU time usage, Memory usage, Source code byte size), compilation logs, and detailed per-testcase execution table (Test Number, CPU usage, Memory usage, Result verdict).
+* **Silent Screen Capture:** Native GDI `BitBlt` capture (`Screen.capture_to_file` and MCP `capture_screenshot` with `output_path`) saves high-resolution visual evidence of rendered KaTeX equations, geometry figures, and submission test breakdowns without OS popups.
 * **Corpus Storage Schema:**
   ```text
   research/datasets/competitive-programming/
-  └── <platform>/
+  └── csacademy/
       └── <task_slug>/
-          ├── problem.json      # Structured metadata (title, limits, constraints, subtasks)
-          ├── statement.md      # Markdown problem statement with KaTeX math
-          ├── viewport.png      # Raw screenshot captured via WinPilot
-          ├── solution.cpp      # 100-point accepted solution
-          └── analysis.md       # Algorithmic paradigm, time/space complexity, proof invariant
+          ├── problem.json               # Structured metadata (title, limits, constraints, subtasks)
+          ├── statement.md               # Markdown problem statement with KaTeX math
+          ├── viewport_problem.png       # Raw screenshot of problem statement captured via WinPilot
+          ├── analysis.md                # Algorithmic paradigm, time/space complexity, proof invariant
+          └── submissions/
+              ├── index.json             # List of archived jobs (Job IDs, users, scores, runtimes)
+              └── <job_id>/
+                  ├── metadata.json      # User, timestamp, verdict points, CPU ms, Memory MB, source bytes
+                  ├── solution.<ext>     # Clean source code extracted from editor/viewer (py, cpp, etc.)
+                  ├── results.json       # Per-test-case execution breakdown (Test #, CPU ms, Mem KB, Result)
+                  └── viewport_run.png   # Screenshot of submission verdict & test table
   ```
 
 ---

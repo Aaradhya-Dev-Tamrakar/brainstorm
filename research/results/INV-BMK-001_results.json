@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-27T06:17:08.773687+00:00",
+  "timestamp": "2026-09-27T06:25:03.373964+00:00",
   "benchmark_id": "INV-BMK-001",
   "total_properties_evaluated": 12,
   "planted_violations_tested": 4,
@@ -13,7 +13,7 @@
   "vacuous_controls_flagged": 1,
   "contradictory_specs_tested": 1,
   "contradictory_specs_flagged": 1,
-  "mean_solver_latency_ms": 9.544,
+  "mean_solver_latency_ms": 12.618,
   "mean_replay_latency_ms": 0.005,
   "results_ledger": [
     {
@@ -23,8 +23,8 @@
       "classification": "VALID_INVARIANT",
       "prover_status": "PROVED_INVARIANT",
       "replay_status": "SKIPPED_HOLDS",
-      "solver_latency_ms": 12.885,
-      "replay_latency_ms": 0.001,
+      "solver_latency_ms": 15.695,
+      "replay_latency_ms": 0.002,
       "violation_observed": false,
       "counterexample": null
     },
@@ -35,7 +35,7 @@
       "classification": "VALID_INVARIANT",
       "prover_status": "PROVED_INVARIANT",
       "replay_status": "SKIPPED_HOLDS",
-      "solver_latency_ms": 10.324,
+      "solver_latency_ms": 16.006,
       "replay_latency_ms": 0.001,
       "violation_observed": false,
       "counterexample": null
@@ -47,8 +47,8 @@
       "classification": "PLANTED_VIOLATION",
       "prover_status": "COUNTEREXAMPLE_FOUND",
       "replay_status": "REPLAY_CONFIRMED",
-      "solver_latency_ms": 10.174,
-      "replay_latency_ms": 0.013,
+      "solver_latency_ms": 17.003,
+      "replay_latency_ms": 0.019,
       "violation_observed": true,
       "counterexample": {
         "stage": "INDUCTIVE_STEP",
@@ -74,8 +74,8 @@
       "classification": "VACUOUS_TAUTOLOGY",
       "prover_status": "VACUOUS_REJECTED",
       "replay_status": "SKIPPED_HOLDS",
-      "solver_latency_ms": 2.716,
-      "replay_latency_ms": 0.0,
+      "solver_latency_ms": 5.301,
+      "replay_latency_ms": 0.001,
       "violation_observed": false,
       "counterexample": null
     },
@@ -86,7 +86,7 @@
       "classification": "VALID_INVARIANT",
       "prover_status": "PROVED_INVARIANT",
       "replay_status": "SKIPPED_HOLDS",
-      "solver_latency_ms": 13.264,
+      "solver_latency_ms": 25.838,
       "replay_latency_ms": 0.001,
       "violation_observed": false,
       "counterexample": null
@@ -98,8 +98,8 @@
       "classification": "PLANTED_VIOLATION",
       "prover_status": "COUNTEREXAMPLE_FOUND",
       "replay_status": "REPLAY_CONFIRMED",
-      "solver_latency_ms": 7.238,
-      "replay_latency_ms": 0.017,
+      "solver_latency_ms": 10.876,
+      "replay_latency_ms": 0.013,
       "violation_observed": true,
       "counterexample": {
         "stage": "INDUCTIVE_STEP",
@@ -125,7 +125,7 @@
       "classification": "CONTRADICTORY_SPEC",
       "prover_status": "CONTRADICTION_REJECTED",
       "replay_status": "SKIPPED_HOLDS",
-      "solver_latency_ms": 2.098,
+      "solver_latency_ms": 2.198,
       "replay_latency_ms": 0.0,
       "violation_observed": false,
       "counterexample": null
@@ -137,7 +137,7 @@
       "classification": "VALID_INVARIANT",
       "prover_status": "PROVED_INVARIANT",
       "replay_status": "SKIPPED_HOLDS",
-      "solver_latency_ms": 13.879,
+      "solver_latency_ms": 13.901,
       "replay_latency_ms": 0.001,
       "violation_observed": false,
       "counterexample": null
@@ -149,8 +149,8 @@
       "classification": "VALID_INVARIANT",
       "prover_status": "PROVED_INVARIANT",
       "replay_status": "SKIPPED_HOLDS",
-      "solver_latency_ms": 14.005,
-      "replay_latency_ms": 0.0,
+      "solver_latency_ms": 16.055,
+      "replay_latency_ms": 0.001,
       "violation_observed": false,
       "counterexample": null
     },
@@ -161,8 +161,8 @@
       "classification": "PLANTED_VIOLATION",
       "prover_status": "COUNTEREXAMPLE_FOUND",
       "replay_status": "REPLAY_CONFIRMED",
-      "solver_latency_ms": 14.268,
-      "replay_latency_ms": 0.011,
+      "solver_latency_ms": 15.365,
+      "replay_latency_ms": 0.014,
       "violation_observed": true,
       "counterexample": {
         "stage": "INDUCTIVE_STEP",
@@ -188,7 +188,7 @@
       "classification": "VALID_INVARIANT",
       "prover_status": "PROVED_INVARIANT",
       "replay_status": "SKIPPED_HOLDS",
-      "solver_latency_ms": 7.502,
+      "solver_latency_ms": 7.936,
       "replay_latency_ms": 0.0,
       "violation_observed": false,
       "counterexample": null
@@ -200,8 +200,8 @@
       "classification": "PLANTED_VIOLATION",
       "prover_status": "COUNTEREXAMPLE_FOUND",
       "replay_status": "REPLAY_CONFIRMED",
-      "solver_latency_ms": 6.174,
-      "replay_latency_ms": 0.01,
+      "solver_latency_ms": 5.239,
+      "replay_latency_ms": 0.011,
       "violation_observed": true,
       "counterexample": {
         "stage": "BASE_CASE",

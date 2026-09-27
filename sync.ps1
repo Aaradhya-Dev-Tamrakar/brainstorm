@@ -907,7 +907,7 @@ try {
     }
 
     # 2. Check uncommitted changes
-    $statusPorcelain = git status --porcelain 2>$null
+    $statusPorcelain = git status --porcelain -uall 2>$null
     $hasUncommitted = [bool]($statusPorcelain -and $statusPorcelain.Trim().Length -gt 0)
 
     # Check unpushed commits

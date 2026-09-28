@@ -1,0 +1,31 @@
+id: HYP-007
+title: "Nepal Public Web Modality Heterogeneity Violates Uniform Breadth-First Crawl Assumptions"
+author: "Aaradhya Dev Tamrakar"
+date: "2026-09-28"
+
+# Theoretical Justification
+hypothesis: >
+  Public information architecture across Nepal's governmental, judicial, and regulatory institutions
+  exhibits severe structural heterogeneity: over 30% of key information endpoints utilize dynamic
+  client-side rendering (React/Vue SPAs) or parameter-driven database portals that fail under static
+  depth-first/breadth-first HTML link discovery, and over 25% of digital document assets utilize
+  legacy 8-bit Latin-1 mapped glyph encodings (Preeti, Kantipur) that produce corrupted text
+  under standard Unicode extraction. Consequently, an adaptive multi-modal router will achieve >= 3x
+  higher document discovery yield and >= 90% reduction in OCR compute cost compared to a uniform crawler.
+why_we_believe_it: >
+  Government websites in Nepal were commissioned across three distinct eras (early 2000s static PHP/ASP,
+  2010s WordPress/Drupal CMS, and post-2020 React/Vue portals) without unified web standards. Legacy Devanagari
+  typists commonly used Preeti/Kantipur TrueType fonts in Word, which were subsequently exported directly to
+  vector PDFs without Unicode re-encoding.
+counterargument: >
+  Recent government digitization directives (GIDC standardization) may have consolidated a majority of
+  federal ministerial web properties onto standardized WordPress or Laravel templates with native Unicode
+  text rendering, rendering specialized SPA headless browsers or AST font transcoders unnecessary for core statutory data.
+
+# Experimental Falsification Protocol
+target_experiment: "EXP-NISR-001"
+success_metric: "Identification of >= 3 distinct access archetypes across 10 sample authorities, with font-table inspection demonstrating >= 10x throughput advantage over visual OCR on legacy PDFs"
+failure_condition: "All 10 surveyed institutions utilize uniform static HTML with native Unicode PDFs, demonstrating that standard BFS crawlers incur zero traversal degradation"
+
+# Lifecycle State: proposed | active | verified | falsified | retired
+status: proposed

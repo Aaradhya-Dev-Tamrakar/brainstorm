@@ -2,10 +2,11 @@
 
 **ID:** `PLAN-NEP-DATA-001`  
 **Date:** 2026-09-28  
-**Status:** In Progress / Active Execution  
+**Status:** Active Ingestion Specification / Evolved to Master Charter [`PLAN-NISR-001`](PLAN-NISR-001_PROGRAM_CHARTER.md)  
 **Principal Architect:** Aaradhya Dev Tamrakar, Antigravity Agent  
 **Context:** Sovereign Intelligence, Legal AI Ingestion, OCR Training Flywheel & Economic Self-Sufficiency  
-**Ecosystem Modules Referenced:** `nepali-ocr-ai` (Module #19), `super-nlm` (Module #1), `brainstorm` (Orchestration Root)
+**Ecosystem Modules Referenced:** `nepali-ocr-ai` (Module #19), `super-nlm` (Module #1), `brainstorm` (Orchestration Root)  
+**Evolution Note:** Following the 65-turn adversarial peer review audit ([`2026-09-28_REVIEW-NEPAL-DATA-WORK_CONVERSATION.md`](../transcripts/2026-09-28_REVIEW-NEPAL-DATA-WORK_CONVERSATION.md)), this document's high-level research vision has been formalized into the **Nepal Information Systems Research (NISR)** master program charter ([`PLAN-NISR-001`](PLAN-NISR-001_PROGRAM_CHARTER.md)), which establishes 6 contribution tracks, strict TLS quarantine (`INV-SEC-TLS-001`), single-node execution bounds (`INV-FLEET-001`), and Step 0 landscape reconnaissance (`EXP-NISR-001`). This file remains the primary reference specification for the legal ingestion database schema, IDBFS state machine, and synthetic Colab training loop.
 
 ---
 

@@ -49,9 +49,6 @@
 .PARAMETER NoReconcile
     Bypasses the automatic reconciliation step during routine commit and push synchronization.
 
-.PARAMETER NoGraphify
-    Bypasses the automatic Graphify knowledge graph update and stale artifact cleanup.
-
 .PARAMETER PullOnly
     Safely pull remote updates with --rebase --autostash without committing or pushing.
 
@@ -121,7 +118,7 @@ param (
 $ErrorActionPreference = "Stop"
 
 $TargetRemoteName = "origin"
-$TargetRemoteUrl  = "https://github.com/Aaradhya-Dev-Tamrakar/brainstorm.git"
+$TargetRemoteUrl = "https://github.com/Aaradhya-Dev-Tamrakar/brainstorm.git"
 
 function Get-EcosystemToolRepos {
     $repos = [System.Collections.Generic.List[string]]::new()
@@ -174,7 +171,7 @@ function Get-EcosystemToolRepos {
             "F:\Aaradhya-Dev-Tamrakar\Utility\md2pdf-desktop",
             "F:\AaradhyaDT\AI",
             "F:\AaradhyaDT\rsvp-reading",
-            "F:\Aaradhya-Dev-Tamrakar\Aaradhya-Dev-Tamrakar.github.io",
+            "F:\AaradhyaDT\AaradhyaDT.github.io",
             "F:\Aaradhya-Dev-Tamrakar\AaradhyaDT.github.io",
             "F:\Aaradhya-Dev-Tamrakar\makerspace",
             "F:\AaradhyaDT\react-workshop-ieeekecktm",
@@ -213,7 +210,7 @@ function Write-Fail {
     Write-Status -Message $Message -Color ([System.ConsoleColor]::Red)
 }
 
-function Ensure-RemoteConfigured {
+function Confirm-RemoteConfigured {
     $existingRemotes = @(git remote)
     if ($existingRemotes -notcontains $TargetRemoteName) {
         Write-Status "Adding remote '$TargetRemoteName' ($TargetRemoteUrl)..."
@@ -223,7 +220,7 @@ function Ensure-RemoteConfigured {
         $currentUrl = (git remote get-url $TargetRemoteName 2>$null)
         if ($currentUrl) { $currentUrl = $currentUrl.Trim() }
         $cleanCurrent = $currentUrl -replace '\.git$', ''
-        $cleanTarget  = $TargetRemoteUrl -replace '\.git$', ''
+        $cleanTarget = $TargetRemoteUrl -replace '\.git$', ''
         if ($cleanCurrent -ne $cleanTarget) {
             Write-Notice "Updating remote '$TargetRemoteName' URL to $TargetRemoteUrl..."
             git remote set-url $TargetRemoteName $TargetRemoteUrl
@@ -463,7 +460,8 @@ function Get-AutoCommitMessage {
         elseif ($hasDocs) {
             if ($allChanged | Where-Object { $_ -match 'ECOSYSTEM' }) {
                 $scope = "ecosystem"
-            } else {
+            }
+            else {
                 $scope = "notes"
             }
         }
@@ -548,7 +546,7 @@ function Sync-AllBranches {
             if ($aheadBehind) {
                 $parts = $aheadBehind.Trim() -split '\s+'
                 $behind = [int]$parts[0]
-                $ahead  = [int]$parts[1]
+                $ahead = [int]$parts[1]
             }
 
             $actionTaken = "In Sync"
@@ -564,7 +562,7 @@ function Sync-AllBranches {
                 else {
                     # Fast-forward non-active local branch safely without switching
                     $refSpec = "origin/$($b):$($b)"
-                    $ffOut = git fetch . $refSpec 2>&1
+                    $null = git fetch . $refSpec 2>&1
                     if ($LASTEXITCODE -eq 0) {
                         $actionTaken = "Fast-Forwarded ($behind commit(s))"
                     }
@@ -598,28 +596,28 @@ function Sync-AllBranches {
     Write-Success "All local branches evaluated and synchronized."
 }
 
-function Audit-ToolRepositories {
+function Test-ToolRepositories {
     Write-Status "Auditing brainstorm branch status across dynamic ecosystem tool repos..." -Color ([System.ConsoleColor]::Cyan)
     $toolRepos = Get-EcosystemToolRepos
     $report = foreach ($dir in $toolRepos) {
         if (-not (Test-Path $dir)) {
             [PSCustomObject]@{
-                Repository    = Split-Path $dir -Leaf
-                ExistsOnDisk  = $false
-                ActiveBranch  = "-"
-                BrainstormBr  = "-"
-                CleanTree     = "-"
+                Repository   = Split-Path $dir -Leaf
+                ExistsOnDisk = $false
+                ActiveBranch = "-"
+                BrainstormBr = "-"
+                CleanTree    = "-"
             }
             continue
         }
 
         if (-not (Test-Path (Join-Path $dir ".git"))) {
             [PSCustomObject]@{
-                Repository    = Split-Path $dir -Leaf
-                ExistsOnDisk  = $true
-                ActiveBranch  = "Non-git directory"
-                BrainstormBr  = "-"
-                CleanTree     = "-"
+                Repository   = Split-Path $dir -Leaf
+                ExistsOnDisk = $true
+                ActiveBranch = "Non-git directory"
+                BrainstormBr = "-"
+                CleanTree    = "-"
             }
             continue
         }
@@ -631,11 +629,11 @@ function Audit-ToolRepositories {
         $isClean = [bool](-not $status -or $status.Trim().Length -eq 0)
 
         [PSCustomObject]@{
-            Repository    = Split-Path $dir -Leaf
-            ExistsOnDisk  = $true
-            ActiveBranch  = $active
-            BrainstormBr  = if ($hasBrainstorm) { "Present" } else { "Missing" }
-            CleanTree     = if ($isClean) { "Clean" } else { "Uncommitted Changes" }
+            Repository   = Split-Path $dir -Leaf
+            ExistsOnDisk = $true
+            ActiveBranch = $active
+            BrainstormBr = if ($hasBrainstorm) { "Present" } else { "Missing" }
+            CleanTree    = if ($isClean) { "Clean" } else { "Uncommitted Changes" }
         }
     }
 
@@ -699,7 +697,7 @@ function Invoke-CrossSync {
                 if ($aheadBehind) {
                     $parts = $aheadBehind.Trim() -split '\s+'
                     $behind = [int]$parts[0]
-                    $ahead  = [int]$parts[1]
+                    $ahead = [int]$parts[1]
                 }
 
                 if ($ahead -gt 0) {
@@ -750,7 +748,7 @@ function Invoke-CrossSync {
     Write-Success "Dynamic cross-sync evaluation complete across $($toolRepos.Count) ecosystem repositories."
 }
 
-function Provision-NewTool {
+function New-EcosystemTool {
     param([string]$ToolName)
 
     Write-Status "Provisioning new ecosystem tool branch: [$ToolName]..."
@@ -807,7 +805,7 @@ function Show-RepoStatus {
     if ($aheadBehind) {
         $parts = $aheadBehind.Trim() -split '\s+'
         $behind = $parts[0]
-        $ahead  = $parts[1]
+        $ahead = $parts[1]
         Write-Host "Active Ahead  : $ahead commit(s)" -ForegroundColor $(if ($ahead -gt 0) { [System.ConsoleColor]::Yellow } else { [System.ConsoleColor]::Green })
         Write-Host "Active Behind : $behind commit(s)" -ForegroundColor $(if ($behind -gt 0) { [System.ConsoleColor]::Red } else { [System.ConsoleColor]::Green })
     }
@@ -850,7 +848,7 @@ if (-not (Test-Path (Join-Path $RepoPath '.git'))) {
 
 Push-Location $RepoPath
 try {
-    Ensure-RemoteConfigured
+    Confirm-RemoteConfigured
 
     if ($CrossSync -or $CrossPull) {
         Invoke-CrossSync -Pull:$CrossPull
@@ -865,12 +863,12 @@ try {
     }
 
     if ($SyncToolRepos) {
-        Audit-ToolRepositories
+        Test-ToolRepositories
         exit 0
     }
 
     if ($NewTool) {
-        Provision-NewTool -ToolName $NewTool
+        New-EcosystemTool -ToolName $NewTool
         exit 0
     }
 
@@ -1017,51 +1015,51 @@ try {
         exit 1
     }
 
-    # 5. Determine commit message
+# 5. Determine commit message
+if (-not $Message) {
+    $Message = Get-AutoCommitMessage -ActiveBranch $currentBranch
     if (-not $Message) {
-        $Message = Get-AutoCommitMessage -ActiveBranch $currentBranch
-        if (-not $Message) {
-            $Message = "docs($currentBranch): update workspace files"
-        }
-        Write-Notice "Auto-generated commit message: '$Message'"
+        $Message = "docs($currentBranch): update workspace files"
     }
+    Write-Notice "Auto-generated commit message: '$Message'"
+}
 
-    # 6. Commit changes
-    Write-Status "Committing changes on [$currentBranch]..."
-    git commit -m "$Message"
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "git commit failed."
-        exit $LASTEXITCODE
-    }
+# 6. Commit changes
+Write-Status "Committing changes on [$currentBranch]..."
+git commit -m "$Message"
+if ($LASTEXITCODE -ne 0) {
+    Write-Fail "git commit failed."
+    exit $LASTEXITCODE
+}
 
-    # 7. Push to remote
-    if ($NoPush) {
-        Write-Success "Changes committed locally on [$currentBranch]. Push skipped (-NoPush flag active)."
-        exit 0
-    }
+# 7. Push to remote
+if ($NoPush) {
+    Write-Success "Changes committed locally on [$currentBranch]. Push skipped (-NoPush flag active)."
+    exit 0
+}
 
-    Write-Status "Pushing to origin/$currentBranch..."
+Write-Status "Pushing to origin/$currentBranch..."
+git push origin $currentBranch
+if ($LASTEXITCODE -ne 0) {
+    Write-Notice "Push was rejected (remote may have new changes). Pulling with rebase and retrying..."
+    git pull --rebase --autostash origin $currentBranch
     git push origin $currentBranch
     if ($LASTEXITCODE -ne 0) {
-        Write-Notice "Push was rejected (remote may have new changes). Pulling with rebase and retrying..."
-        git pull --rebase --autostash origin $currentBranch
-        git push origin $currentBranch
-        if ($LASTEXITCODE -ne 0) {
-            Write-Fail "Push failed after retry. Please inspect conflicts manually."
-            exit $LASTEXITCODE
-        }
+        Write-Fail "Push failed after retry. Please inspect conflicts manually."
+        exit $LASTEXITCODE
     }
+}
 
-    Write-Success "Repository synchronized successfully with origin/$currentBranch."
+Write-Success "Repository synchronized successfully with origin/$currentBranch."
 
-    # Ecosystem Pulse
-    try {
-        $branches = @(git branch --format="%(refname:short)" 2>$null)
-        $cleanStatus = git status --porcelain 2>$null
-        $treeState = if (-not $cleanStatus -or $cleanStatus.Trim().Length -eq 0) { "Clean" } else { "Dirty" }
-        Write-Host "`n[Pulse] Ecosystem Branches: $($branches.Count) | Active: [$currentBranch] | Working Tree: $treeState | Remote: origin" -ForegroundColor Green
-    }
-    catch {}
+# Ecosystem Pulse
+try {
+    $branches = @(git branch --format="%(refname:short)" 2>$null)
+    $cleanStatus = git status --porcelain 2>$null
+    $treeState = if (-not $cleanStatus -or $cleanStatus.Trim().Length -eq 0) { "Clean" } else { "Dirty" }
+    Write-Host "`n[Pulse] Ecosystem Branches: $($branches.Count) | Active: [$currentBranch] | Working Tree: $treeState | Remote: origin" -ForegroundColor Green
+}
+catch {}
 }
 catch {
     Write-Fail "Sync error: $_"

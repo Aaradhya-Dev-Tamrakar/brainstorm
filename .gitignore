@@ -39,3 +39,11 @@ graphify-out/cache/
 .env.*
 *.env
 !.env.example
+
+# Local SQLite databases & corpus harvest cache
+*.db
+*.db-wal
+*.db-shm
+sim/results/corpus_harvest/
+sim/results/*.db
+

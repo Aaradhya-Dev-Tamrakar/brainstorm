@@ -101,3 +101,50 @@ To guarantee sustainable progress without speculative burn:
 - **Phase 1 Monetization:** B2C study products for SEE/NEB students and Lok Sewa aspirants (NPR 199–499) + B2B legal search subscription for law firms.
 - **Phase 2 Monetization:** Corporate compliance, credit risk intelligence, and public tender alert subscriptions for commercial banks, contractors, and investment firms.
 - **Phase 3 Monetization:** Enterprise spatial, economic, and infrastructure data for development agencies, insurers, and urban planners.
+
+---
+
+## 6. Safety-First Harvester Invariants
+
+To prevent server disruption on `.gov.np` infrastructure and ensure legal compliance under ETA 2063:
+
+1. **Jittered Domain Politeness:** Enforces a minimum 1.5s – 2.5s randomized delay per domain.
+2. **Transparent Identity:** Emits an explicit academic User-Agent header: `KEC-Academic-Research-Bot/1.0 (+http://kec.edu.np; contact: aaradhyadevtmr@gmail.com)`.
+3. **Automated Circuit Breaker:** Implements zero-overhead socket liveness checks (`1.1.1.1:53`) and backs off 300s on 429/503 responses or router drops.
+4. **Atomic Swapping:** Downloads to `.tmp`, verifies length > 128 bytes and SHA-256 integrity, then performs an atomic OS replace.
+5. **Status Detection:** Automatically detects repeal keywords (*“खारेज गरिएको”, “द्वारा खारेज”*) to tag active vs. repealed statutes.
+6. **Reference Implementation:** Executable prototype verified in [`sim/nepal_law_harvester.py`](../../sim/nepal_law_harvester.py) and [`sim/test_nepal_law_harvester.py`](../../sim/test_nepal_law_harvester.py) (7/7 tests passing).
+
+---
+
+## 7. 125-Year Bikram Sambat Temporal Engine
+
+Extracted and ported directly from Aaradhya's portfolio engine (`AaradhyaDT.github.io` `assets/js/modules/core.js`):
+- **Span:** BS 1975 to 2099 (~AD 1918 to 2043) — 125 continuous years.
+- **Zero-Dependency Implementation:** [`sim/nepali_calendar.py`](../../sim/nepali_calendar.py) provides deterministic, $O(1)$ bi-directional conversion between A.D. and B.S. with English and Nepali month names.
+- **Validation:** Verified across key milestones (Constitution promulgation `2015-09-20 AD` $\leftrightarrow$ `2072-06-03 BS` and live execution date `2026-09-28 AD` $\leftrightarrow$ `2083-06-12 BS`).
+
+---
+
+## 8. Multi-Node Cluster Topology & 1-Click Worker UX
+
+### Hardware Fleet Roles:
+- **Jetson Nano (ARM64 + 512GB SSD):** 5W–10W always-on central data lake, SQLite WAL queue, and Tailscale mesh node.
+- **Makerspace Rig 1 (i7-12700K + RTX 3060 12GB):** Heavy CUDA vision OCR training (`nepali-ocr-ai`).
+- **Makerspace Rig 2 (i5-12600K + RTX 3050 8GB):** Synthetic dataset rendering and OpenVINO PDF layout analysis.
+- **Mac mini (10-Core Apple Silicon):** 15W–35W continuous NLP de-jargonizing via Apple MLX and vector search.
+- **Client Fleet (Laptops):** Review, evaluation, and opportunistic domain-sharded scraping.
+
+### 1-Click Autonomous Worker (`worker.bat`):
+- Zero-configuration auto-discovery via LAN/UDP beacon.
+- Hardware self-profiling (CPU thread count, CUDA availability) for intelligent batch assignment.
+- Graceful shutdown with heartbeat expiration and automatic task reclamation.
+
+---
+
+## 9. Self-Healing & Hardware Preservation Protocol
+
+1. **Hardware Longevity:** Enforces a 70% GPU power cap (`nvidia-smi -pl 115`), a 45m/15m compute-rest duty cycle, and max 75°C thermal safety throttling.
+2. **Power Outage Resilience:** Desktops set to BIOS `Restore on AC Power Loss = Power On`; Jetson Nano backed by micro-UPS power bank.
+3. **Database WAL Checkpointing:** SQLite operating with `journal_mode=WAL` and `synchronous=NORMAL` to guarantee zero database corruption across abrupt power cuts.
+

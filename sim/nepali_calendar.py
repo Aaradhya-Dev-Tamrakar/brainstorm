@@ -215,3 +215,31 @@ def format_dual_date(year_ad: int, month_ad: int, day_ad: int) -> Optional[Dict[
         "bs_formatted_nep": f"{bd} {m_nep} {by} वि.सं.",
         "epoch_timestamp": int(dt.timestamp())
     }
+
+
+def format_dual_from_bs(by: int, bm: int, bd: int) -> Optional[Dict[str, Any]]:
+    """
+    Generates dual-calendar metadata given Bikram Sambat (B.S.) date components.
+    """
+    ad_res = bs_to_ad(by, bm, bd)
+    if not ad_res:
+        return None
+    ay, am, ad = ad_res
+    return format_dual_date(ay, am, ad)
+
+
+def parse_date_string(date_str: str) -> Optional[Tuple[int, int, int]]:
+    """
+    Parses a YYYY-MM-DD or YYYY/MM/DD date string into integer tuple (year, month, day).
+    """
+    if not date_str or not isinstance(date_str, str):
+        return None
+    cleaned = date_str.strip().replace("/", "-")
+    parts = cleaned.split("-")
+    if len(parts) == 3:
+        try:
+            return (int(parts[0]), int(parts[1]), int(parts[2]))
+        except ValueError:
+            return None
+    return None
+

@@ -1,11 +1,11 @@
 # Graph Report - brainstorm  (2026-09-28)
 
 ## Corpus Check
-- 182 files · ~252,962 words
+- 182 files · ~253,063 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 3010 nodes · 3399 edges · 297 communities (231 shown, 58 thin omitted)
+- 2820 nodes · 3314 edges · 235 communities (213 shown, 14 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 19 edges (avg confidence: 0.95)
 - Token cost: 0 input · 0 output
 
@@ -97,7 +97,6 @@
 - Community 84
 - Community 85
 - Community 86
-- Community 87
 - Community 88
 - Community 89
 - Community 90
@@ -163,10 +162,11 @@
 - Community 150
 - Community 151
 - Community 152
+- Community 153
 - Community 154
 - Community 155
 - Community 156
-- Community 158
+- Community 157
 - Community 159
 - Community 160
 - Community 161
@@ -189,7 +189,6 @@
 - Community 178
 - Community 179
 - Community 180
-- Community 181
 - Community 182
 - Community 183
 - Community 184
@@ -198,6 +197,7 @@
 - Community 187
 - Community 188
 - Community 189
+- Community 190
 - Community 191
 - Community 192
 - Community 193
@@ -237,84 +237,20 @@
 - Community 227
 - Community 228
 - Community 229
-- Community 230
-- Community 231
-- Community 232
-- Community 233
-- Community 234
-- Community 235
-- Community 236
-- Community 237
-- Community 238
-- Community 239
-- Community 240
-- Community 241
-- Community 242
-- Community 243
-- Community 244
-- Community 245
-- Community 246
-- Community 247
-- Community 248
-- Community 249
-- Community 250
-- Community 251
-- Community 252
-- Community 253
-- Community 254
-- Community 255
-- Community 256
-- Community 257
-- Community 258
-- Community 259
-- Community 260
-- Community 261
-- Community 262
-- Community 263
-- Community 264
-- Community 265
-- Community 266
-- Community 267
-- Community 268
-- Community 269
-- Community 270
-- Community 271
-- Community 272
-- Community 273
-- Community 274
-- Community 275
-- Community 276
-- Community 277
-- Community 278
-- Community 279
-- Community 280
-- Community 281
-- Community 282
-- Community 283
-- Community 284
-- Community 285
-- Community 286
-- Community 287
-- Community 288
-- Community 289
-- Community 290
-- Community 291
 
 ## God Nodes (most connected - your core abstractions)
-1. `BE ECIE / BEIE — Complete Study Syllabus (Year I–IV)` - 470 edges
-2. `2. Granular Module Specifications` - 23 edges
-3. `LegalHarvesterDatabase` - 22 edges
-4. `BaseStateMachine` - 21 edges
-5. `NepalLawHarvesterTests` - 20 edges
-6. `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` - 20 edges
-7. `2. Granular Claims Audit Register` - 18 edges
-8. `2. Core Architectural & Systemic Limitations` - 17 edges
-9. `MCP Integration for Claude Code Plugins` - 17 edges
-10. `Specialized Reviewer Perspectives` - 16 edges
+1. `BE ECIE / BEIE — Complete Study Syllabus (Year I–IV)` - 388 edges
+2. `References` - 63 edges
+3. `2. Granular Module Specifications` - 23 edges
+4. `LegalHarvesterDatabase` - 22 edges
+5. `BaseStateMachine` - 21 edges
+6. `NepalLawHarvesterTests` - 20 edges
+7. `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` - 20 edges
+8. `Syllabus` - 19 edges
+9. `2. Granular Claims Audit Register` - 18 edges
+10. `2. Core Architectural & Systemic Limitations` - 17 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `run_benchmark()` --uses--> `BaseStateMachine`  [INFERRED]
-  sim/invariant_engine/benchmark_runner.py → sim/invariant_engine/state_machine.py
 - `InvariantAssuranceEngineTests` --uses--> `InvariantClassification`  [INFERRED]
   sim/test_invariant_engine.py → sim/invariant_engine/contract_types.py
 - `SMTInvariantProver` --uses--> `InvariantProperty`  [INFERRED]
@@ -323,15 +259,17 @@
   sim/invariant_engine/smt_encoder.py → sim/invariant_engine/contract_types.py
 - `SandboxReplayEngine` --uses--> `BaseStateMachine`  [INFERRED]
   sim/invariant_engine/sandbox_replay.py → sim/invariant_engine/state_machine.py
+- `InvariantAssuranceEngineTests` --uses--> `SandboxReplayEngine`  [INFERRED]
+  sim/test_invariant_engine.py → sim/invariant_engine/sandbox_replay.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (297 total, 58 thin omitted)
+## Communities (235 total, 14 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.01
-Nodes (383): 10. Circuit Design (3 hours), 10. Data Files (5 hours), 10. Digital Devices Applications (2 hours), 10. Exception Handling (4 hours), 10. Graphs (6 hours), 10. Metal Joining (2 hours), 10. Photon and Matter Waves (5 hours), 10. Project Quality Management (3 hours) (+375 more)
+Nodes (325): 10. Circuit Design (3 hours), 10. Data Files (5 hours), 10. Digital Devices Applications (2 hours), 10. Exception Handling (4 hours), 10. Graphs (6 hours), 10. Metal Joining (2 hours), 10. Photon and Matter Waves (5 hours), 10. Project Quality Management (3 hours) (+317 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.06
@@ -343,67 +281,67 @@ Nodes (48): 10. Key Lessons Learned, 1. Problem Statement & Motivation, 2. Archi
 
 ### Community 3 - "Community 3"
 Cohesion: 0.04
-Nodes (48): Additional Resources, Authentication Patterns, Batching, Best Practices, Common Issues, Configuration Checklist, Configuration Errors, Connection Failures (+40 more)
+Nodes (47): Additional Resources, Authentication Patterns, Batching, Best Practices, Common Issues, Configuration Checklist, Configuration Errors, Connection Failures (+39 more)
 
 ### Community 4 - "Community 4"
 Cohesion: 0.06
-Nodes (32): http, sse, stdio, stream, transport, type, items, type (+24 more)
+Nodes (36): 2. CT 551 — Discrete Structure, 2. CT 610 (CT 652) — Database Management Systems, 2. CT 710 (CT 653) — Artificial Intelligence, 2. EX 452 (EX 551) — Microprocessors, 2. EX 501 — Electronic Devices and Circuits, 2. ME 401 — Engineering Drawing I, 3. CT 552 — Data Structure and Algorithms, 3. CT 613 (CT 657) — Computer Networks (+28 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.11
-Nodes (24): analyze_statute_status(), detect_statute_status(), is_internet_available(), LegalStatusEvidence, normalize_devanagari(), nepal_law_harvester.py ---------------------- Safety-First Iterative Deepening…, Evidence-backed statutory status classification. Distinguishes confirmed…, Normalizes Devanagari text into canonical Unicode NFC form, cleaning invisible… (+16 more)
+Cohesion: 0.06
+Nodes (32): http, sse, stdio, stream, transport, type, items, type (+24 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.11
-Nodes (13): LegalHarvesterDatabase, Any, SQLite WAL-backed local task ledger, provenance registry, and statutory entity-…, Enqueues a newly discovered URL into the task pool., Atomically claims the highest-priority pending task following IDBFS ordering…, Extends worker lease for long-running extractions (e.g. large PDF OCR)., Marks a claimed task as completed or skipped., Handles failure with bounded retry backoff. If retry_count < max_retries,… (+5 more)
+Nodes (24): analyze_statute_status(), detect_statute_status(), is_internet_available(), LegalStatusEvidence, normalize_devanagari(), nepal_law_harvester.py ---------------------- Safety-First Iterative Deepening…, Evidence-backed statutory status classification. Distinguishes confirmed…, Normalizes Devanagari text into canonical Unicode NFC form, cleaning invisible… (+16 more)
 
 ### Community 7 - "Community 7"
-Cohesion: 0.07
-Nodes (28): 1. Identify All Error Handling Code, 2. Scrutinize Each Error Handler, 3. Examine Error Messages, 4. Check for Hidden Failures, 5. Validate Against Project Standards, Agent Descriptions:, Comprehensive PR Review, Core Principles (+20 more)
+Cohesion: 0.11
+Nodes (13): LegalHarvesterDatabase, Any, SQLite WAL-backed local task ledger, provenance registry, and statutory entity-…, Enqueues a newly discovered URL into the task pool., Atomically claims the highest-priority pending task following IDBFS ordering…, Extends worker lease for long-running extractions (e.g. large PDF OCR)., Marks a claimed task as completed or skipped., Handles failure with bounded retry backoff. If retry_count < max_retries,… (+5 more)
 
 ### Community 8 - "Community 8"
 Cohesion: 0.07
-Nodes (26): For /graphify add and --watch, For /graphify query, For the commit hook and native CLAUDE.md integration, For --update and --cluster-only, /graphify, Honesty Rules, Interpreter guard for subcommands, Part A - Structural extraction for code files (+18 more)
+Nodes (28): 1. Identify All Error Handling Code, 2. Scrutinize Each Error Handler, 3. Examine Error Messages, 4. Check for Hidden Failures, 5. Validate Against Project Standards, Agent Descriptions:, Comprehensive PR Review, Core Principles (+20 more)
 
 ### Community 9 - "Community 9"
+Cohesion: 0.07
+Nodes (26): For /graphify add and --watch, For /graphify query, For the commit hook and native CLAUDE.md integration, For --update and --cluster-only, /graphify, Honesty Rules, Interpreter guard for subcommands, Part A - Structural extraction for code files (+18 more)
+
+### Community 10 - "Community 10"
 Cohesion: 0.08
 Nodes (25): 10. `md2pdf-desktop` (md2pdf-desktop & FastMCP Server), 11. `yt-dlp-live` (yt-dlp-live Capture & DSP Cluster), 12. `AI` (AI Constraint Solver), 13. `rsvp-reading` (RSVP Reader), 14. `Aaradhya-Dev-Tamrakar.github.io` & 15. `AaradhyaDT.github.io`, 16. `makerspace` (Makerspace Fabrication Hub), 17. `react-workshop-ieeekecktm` (React Workshop Reference), 18. `github-pilot` (GitHub Pilot Fleet Auditor) (+17 more)
 
-### Community 10 - "Community 10"
+### Community 11 - "Community 11"
 Cohesion: 0.18
 Nodes (18): extract_code_snippet(), find_graph_path(), format_node_badge(), GraphIndex, main(), parse_line_number(), print_search_results(), Any (+10 more)
 
-### Community 11 - "Community 11"
+### Community 12 - "Community 12"
 Cohesion: 0.21
 Nodes (17): Enum, build_benchmark_testbed(), benchmark_runner.py ------------------- Synthetic Invariant Discovery, SMT…, Defines 12 comprehensive benchmark scenarios across 4 formal state machines., run_benchmark(), BenchmarkEvaluationRecord, InvariantClassification, InvariantProperty (+9 more)
 
-### Community 12 - "Community 12"
+### Community 13 - "Community 13"
 Cohesion: 0.13
 Nodes (7): CXLMemoryAllocatorMachine, BoolRef, ExprRef, Z3 initial state predicate I(s)., Z3 transition relation T(s, action, s_prime)., SequenceNonceTrackerMachine, WorkerSessionRuntimeMachine
 
-### Community 13 - "Community 13"
+### Community 14 - "Community 14"
 Cohesion: 0.08
 Nodes (23): ecosystem_modules, in_tree_research_engines, in_tree_research_proposals, presentation_hubs, modules, name, orchestration_root, branch (+15 more)
 
-### Community 14 - "Community 14"
-Cohesion: 0.09
-Nodes (22): claimed, method, verified, warn, minLength, type, verification, type (+14 more)
-
 ### Community 15 - "Community 15"
 Cohesion: 0.09
-Nodes (22): 1. Executive Summary, 2. Granular Claims Audit Register, 3. Corrective Actions Summary, Comprehensive Repository Epistemic & Claims Audit, Epistemic Claim Type Distribution, Item 01: Hardware Interrupt Gating & Microcontroller Fall Detection, Item 02: Fall Detection Model Footprint & Accuracy, Item 03: STRANGLER-IPU 4.12x Tail-Latency Reduction & 68% Contention Relief (+14 more)
+Nodes (23): 1.1 The Core Operating Principle: "High AI Leverage + High Personal Comprehension", 1.2 The "Option Value vs. Realized Value" Paradox, 1. Executive Context & Identity Anchor, 2. The 3-Layer Semester Attention Budget, 3. Five-Level Competence Benchmark, 4. The Three-Project Sequential Execution Roadmap, 5.1 Local Research Lab Targets (Kathmandu Valley), 5.2 The International Research Pipeline (+15 more)
 
 ### Community 16 - "Community 16"
 Cohesion: 0.09
-Nodes (21): 1.1 Objective, 1.2 Core Hypothesis (HYP-MEM-001), 1. Objective & Hypothesis, 2.1 Baseline State (Recorded from `graphify-out/GRAPH_REPORT.md` @ commit `2a70bcd6`), 2.2 Top Baseline God Nodes (Pathological Clutter), 2. Experimental Topology & Baseline Snapshot (Pre-Stratification), 3.1 Layer Partitioning, 3.2 Execution Commands (+13 more)
+Nodes (22): 1. Executive Summary, 2. Granular Claims Audit Register, 3. Corrective Actions Summary, Comprehensive Repository Epistemic & Claims Audit, Epistemic Claim Type Distribution, Item 01: Hardware Interrupt Gating & Microcontroller Fall Detection, Item 02: Fall Detection Model Footprint & Accuracy, Item 03: STRANGLER-IPU 4.12x Tail-Latency Reduction & 68% Contention Relief (+14 more)
 
 ### Community 17 - "Community 17"
-Cohesion: 0.12
-Nodes (8): ABC, BaseStateMachine, Any, state_machine.py ---------------- Formal state machine implementations and…, Reset state to canonical initial state., Execute a state transition. Returns (new_state, transition_successful)., Generate Z3 symbolic variables for state., TokenBucketRateLimiterMachine
+Cohesion: 0.09
+Nodes (21): 1.1 Objective, 1.2 Core Hypothesis (HYP-MEM-001), 1. Objective & Hypothesis, 2.1 Baseline State (Recorded from `graphify-out/GRAPH_REPORT.md` @ commit `2a70bcd6`), 2.2 Top Baseline God Nodes (Pathological Clutter), 2. Experimental Topology & Baseline Snapshot (Pre-Stratification), 3.1 Layer Partitioning, 3.2 Execution Commands (+13 more)
 
 ### Community 18 - "Community 18"
-Cohesion: 0.20
-Nodes (4): 2. IPU System Topology & Channel Decomposition, 3. High-Velocity Ingress Stress Scenarios: Telecom & AI Workloads, 4. Hardware Realization & Open Predecessors, 5. Architectural Invariants for the IPU
+Cohesion: 0.12
+Nodes (8): ABC, BaseStateMachine, Any, state_machine.py ---------------- Formal state machine implementations and…, Reset state to canonical initial state., Execute a state transition. Returns (new_state, transition_successful)., Generate Z3 symbolic variables for state., TokenBucketRateLimiterMachine
 
 ### Community 19 - "Community 19"
 Cohesion: 0.10
@@ -438,144 +376,144 @@ Cohesion: 0.16
 Nodes (19): Request, create_drive_file(), find_drive_file_by_name(), get_oauth_credentials(), main(), obtain_access_token(), Path, Exchanges refresh token for a fresh Google OAuth2 access token with retry. (+11 more)
 
 ### Community 27 - "Community 27"
-Cohesion: 0.11
-Nodes (19): 1. Engineering Identity, 2. Current Academic & Professional Snapshot, 3. Four-Tier Status Classification & Technical Proficiencies, 4. Systems Philosophy, 5. Selected Projects, 6. Technical Toolchain, 7. Current R&D Directions, 8. Verification Philosophy (+11 more)
+Cohesion: 0.12
+Nodes (14): 1. Architectural Mission, 2. Dual-Layer Deterministic Verification Gate, 3. Quantitative Verification Benchmark (`INV-BMK-001`), 4. What This Demonstrates to Research Labs, Brainstorm Research Ecosystem: Capability Mesh & Verification Engine, 1. Active Outreach Pipeline, 2. Preparedness Packet (Collateral Ready for Replies), 3. Protocol for Responses (+6 more)
 
 ### Community 28 - "Community 28"
-Cohesion: 0.11
-Nodes (18): nepali_ocr_ai.mcp_server, capabilities, -m, location, mcp_endpoint, args, command, transport (+10 more)
+Cohesion: 0.22
+Nodes (20): 1. TELECOMMUNICATION — EX 703, 2. ENGINEERING PROFESSIONAL PRACTICE — CE 752, 5A. AGILE SOFTWARE DEVELOPMENT — CT 765.02, 5B. NETWORKING WITH IPv6 — CT 765.03, 5C. ADVANCED COMPUTER ARCHITECTURE — CT 765.04, 5E. BIG DATA TECHNOLOGIES — CT 765.07, 6B. BROADCAST ENGINEERING — EX 765.03, 6C. DATABASE MANAGEMENT SYSTEMS — EX 765.06 (+12 more)
 
 ### Community 29 - "Community 29"
 Cohesion: 0.11
-Nodes (18): solver.mcp_server, capabilities, -m, location, mcp_endpoint, args, command, transport (+10 more)
+Nodes (19): 1. Engineering Identity, 2. Current Academic & Professional Snapshot, 3. Four-Tier Status Classification & Technical Proficiencies, 4. Systems Philosophy, 5. Selected Projects, 6. Technical Toolchain, 7. Current R&D Directions, 8. Verification Philosophy (+11 more)
 
 ### Community 30 - "Community 30"
 Cohesion: 0.11
-Nodes (19): 1. Executive Summary, 2026-09-19 — Guest Lecture: Agentic AI in Industry (Ayush Kumar Shah, Meta), 2. Key Frameworks & Architecture Covered, 3. Integration into the `brainstorm` Capability Mesh, 4. Q&A Exchange: Aaradhya Dev Tamrakar & Ayush Kumar Shah, A. Karpathy's LLM-Maintained Personal Wiki (Slide 32), Aaradhya's Question:, Ayush's Ground-Truth Answer & Core Takeaways: (+11 more)
+Nodes (18): nepali_ocr_ai.mcp_server, capabilities, -m, location, mcp_endpoint, args, command, transport (+10 more)
 
 ### Community 31 - "Community 31"
 Cohesion: 0.11
-Nodes (17): 1. Problem Statement & Motivation, 2.1 Scope Decision: Excluding Apple iOS Native AWDL, 2.2 Scope Decision: Android $\leftrightarrow$ Windows $\leftrightarrow$ Linux Focus, 2. Technical Feasibility & Platform Scope, 3.1 Next Actions, 3. Core Architectural Strategy, Research Note: LocalSend Zero-Router Direct Transport & AirDrop Parity Architecture, 1. Executive Summary & Objective (+9 more)
+Nodes (18): solver.mcp_server, capabilities, -m, location, mcp_endpoint, args, command, transport (+10 more)
 
 ### Community 32 - "Community 32"
-Cohesion: 0.13
-Nodes (8): atomic_write_file(), LegalChronology, Writes data to a temporary file (.tmp), flushes and fsyncs to physical disk,…, Multidimensional statutory temporal grounding. Distinguishes ingestion…, Polite, safety-guarded crawler and ingestion engine for Nepal's statutory legal…, Executes atomic storage with post-write disk read verification, normalizes…, SafeLegalCrawler, NepalLawHarvesterTests
+Cohesion: 0.11
+Nodes (19): 1. Executive Summary, 2026-09-19 — Guest Lecture: Agentic AI in Industry (Ayush Kumar Shah, Meta), 2. Key Frameworks & Architecture Covered, 3. Integration into the `brainstorm` Capability Mesh, 4. Q&A Exchange: Aaradhya Dev Tamrakar & Ayush Kumar Shah, A. Karpathy's LLM-Maintained Personal Wiki (Slide 32), Aaradhya's Question:, Ayush's Ground-Truth Answer & Core Takeaways: (+11 more)
 
 ### Community 33 - "Community 33"
 Cohesion: 0.11
-Nodes (17): F:\\Aaradhya-Dev-Tamrakar\\Utility-MCPs\\localsend-mcp\\dist\\index.js, capabilities, location, mcp_endpoint, args, command, transport, metadata (+9 more)
+Nodes (17): 1. Problem Statement & Motivation, 2.1 Scope Decision: Excluding Apple iOS Native AWDL, 2.2 Scope Decision: Android $\leftrightarrow$ Windows $\leftrightarrow$ Linux Focus, 2. Technical Feasibility & Platform Scope, 3.1 Next Actions, 3. Core Architectural Strategy, Research Note: LocalSend Zero-Router Direct Transport & AirDrop Parity Architecture, 1. Executive Summary & Objective (+9 more)
 
 ### Community 34 - "Community 34"
-Cohesion: 0.11
-Nodes (17): F:\\Aaradhya-Dev-Tamrakar\\Utility-MCPs\\typora-mcp\\dist\\index.js, capabilities, location, mcp_endpoint, args, command, transport, metadata (+9 more)
+Cohesion: 0.13
+Nodes (8): atomic_write_file(), LegalChronology, Writes data to a temporary file (.tmp), flushes and fsyncs to physical disk,…, Multidimensional statutory temporal grounding. Distinguishes ingestion…, Polite, safety-guarded crawler and ingestion engine for Nepal's statutory legal…, Executes atomic storage with post-write disk read verification, normalizes…, SafeLegalCrawler, NepalLawHarvesterTests
 
 ### Community 35 - "Community 35"
 Cohesion: 0.11
-Nodes (17): F:\\Aaradhya-Dev-Tamrakar\\Utility\\md2pdf-desktop\\mcp_server\\server.py, capabilities, location, mcp_endpoint, args, command, transport, metadata (+9 more)
+Nodes (17): F:\\Aaradhya-Dev-Tamrakar\\Utility-MCPs\\localsend-mcp\\dist\\index.js, capabilities, location, mcp_endpoint, args, command, transport, metadata (+9 more)
 
 ### Community 36 - "Community 36"
 Cohesion: 0.11
-Nodes (18): 10. Central Technical Asset Replacement Valuation, 11. COMPOSE-001 Cross-Document Synthesis to LaTeX PDF, 12. COMPOSE-002 Combinatorial CSP Solving & Verification Loop, 13. LocalSend MCP Peer Discovery & LAN Transfer, 1. Fall Detection Classification AUC-ROC, 1. Scope & Audit Invariant, 2. Edge Neural Network Footprint (INT8), 2. Quantitative Claims Register (+10 more)
+Nodes (17): F:\\Aaradhya-Dev-Tamrakar\\Utility-MCPs\\typora-mcp\\dist\\index.js, capabilities, location, mcp_endpoint, args, command, transport, metadata (+9 more)
 
 ### Community 37 - "Community 37"
 Cohesion: 0.11
-Nodes (16): 1.1 The Front-End Trap in Autonomous Systems, 1.2 The Architectural Invariant: Substrate Decoupling, 1. Executive Philosophy: "Headless Engine First, Interface Second", 2.1 The CLI as the First Jarvis Prototype, 2. The Deterministic Loop: Compose → Execute → Verify, 3. Core Contract & Data Boundaries, 4. Key Advantages for the R&D Strategic Wedge, 5. Architectural Invariants Enforced (+8 more)
+Nodes (17): F:\\Aaradhya-Dev-Tamrakar\\Utility\\md2pdf-desktop\\mcp_server\\server.py, capabilities, location, mcp_endpoint, args, command, transport, metadata (+9 more)
 
 ### Community 38 - "Community 38"
+Cohesion: 0.11
+Nodes (18): 10. Central Technical Asset Replacement Valuation, 11. COMPOSE-001 Cross-Document Synthesis to LaTeX PDF, 12. COMPOSE-002 Combinatorial CSP Solving & Verification Loop, 13. LocalSend MCP Peer Discovery & LAN Transfer, 1. Fall Detection Classification AUC-ROC, 1. Scope & Audit Invariant, 2. Edge Neural Network Footprint (INT8), 2. Quantitative Claims Register (+10 more)
+
+### Community 39 - "Community 39"
+Cohesion: 0.18
+Nodes (7): 1.1 The Revolutionary Fallacy vs. The Evolutionary Invariant, 1.2 The Core Thesis: Ingress Boundary Reduction, 1. Executive Philosophy: The "Strangler Fig" Evolutionary Transition, 2. IPU System Topology & Channel Decomposition, 3. High-Velocity Ingress Stress Scenarios: Telecom & AI Workloads, 4. Hardware Realization & Open Predecessors, 5. Architectural Invariants for the IPU
+
+### Community 40 - "Community 40"
+Cohesion: 0.11
+Nodes (16): 1.1 The Front-End Trap in Autonomous Systems, 1.2 The Architectural Invariant: Substrate Decoupling, 1. Executive Philosophy: "Headless Engine First, Interface Second", 2.1 The CLI as the First Jarvis Prototype, 2. The Deterministic Loop: Compose → Execute → Verify, 3. Core Contract & Data Boundaries, 4. Key Advantages for the R&D Strategic Wedge, 5. Architectural Invariants Enforced (+8 more)
+
+### Community 41 - "Community 41"
 Cohesion: 0.16
 Nodes (9): 1. Context & Problem, 2. Decision, 3. Consequences & Empirical Verification, 🏛️ DECISION RECORD: DEC-001 (Memory Stratification & Retrieval Pruning), 1. Context & Problem, 2. Decisions, 3. Consequences & Downstream Actions (Status as of 2026-09-23), 4. Verification Anchors (+1 more)
 
-### Community 39 - "Community 39"
+### Community 42 - "Community 42"
 Cohesion: 0.12
 Nodes (16): 1.1 Cognitive Profile Evaluation, 1.2 The Semantic Gap & Strategic Risk, 1. Executive Context & Verified Baseline, 2. Strategic Strategy: The 70 / 30 Hybrid Learning Model, 3. Detailed Execution Tracks, 4. Verification & Milestone Scorecard, 5. Epistemic Governance & Invariants, ARCH-PLAN-002: Dual-Track Systems Engineering & Software Mastery Roadmap (+8 more)
 
-### Community 40 - "Community 40"
-Cohesion: 0.12
-Nodes (14): 1. Executive Philosophy: The Multi-Perspective Cognitive Council, 2. Specialized Model Roles & Comparative Advantages, 3. The 4-Stage Council Consensus Protocol, 4. Discrepancy Prevention Rules, 🏛️ ARCHITECTURAL RFC: ARCH-RFC-002 (The Model Plurality & Multi-Perspective Council Protocol), 1. Executive Summary & Problem Space, 2. System Architecture: Lipikaar-AI Pipeline, 3. Core Functional Invariants (+6 more)
-
-### Community 41 - "Community 41"
+### Community 43 - "Community 43"
 Cohesion: 0.12
 Nodes (17): 1. Context & Problem, 2. Decisions, 3.1 Pre-state (live read-back, 2026-09-21 16:16 +05:45), 3.2 Post-state (live read-back after the alignment `PUT`), 3.3 Observed push behaviour — before alignment, 3.4 Observed push behaviour — after alignment (probe passed), 3. Empirical Verification (E4), 4. Consequences & Non-Goals (+9 more)
 
-### Community 42 - "Community 42"
+### Community 44 - "Community 44"
 Cohesion: 0.12
 Nodes (5): CircuitBreaker, PoliteFetcher, Three-state Circuit Breaker (CLOSED, OPEN, HALF_OPEN) for polite web…, Polite HTTP Fetcher with per-domain jittered rate limiting and circuit breaker…, Applies randomized jitter delay between manual requests.
 
-### Community 43 - "Community 43"
+### Community 45 - "Community 45"
 Cohesion: 0.12
 Nodes (16): Configuration, Enabling/disabling layers, Fail loudly at import time if a pattern is added without a RuleId., Higher-recall mode, Install, Limitations, Org-specific policies, Prerequisites (+8 more)
 
-### Community 44 - "Community 44"
+### Community 46 - "Community 46"
 Cohesion: 0.12
 Nodes (16): 7.10 The $5/mo Operating Baseline & Cognitive Worker Decoupling, 7.11 The Formal Experiment Protocol & INV Telemetry Specification, 7.12 Meta-Engineering: Escaping Recursive Planning via The Three-Output Rule, 7.13 The Multi-Agent Bootstrap Protocol ($0 Cognitive Council), 7.19 Foundational Brainstorming Transcripts & Conversational Provenance, 7.1 The Research Thesis: Why Continue as an R&D Direction, 7.2 The Research Director Paradigm: Neutralizing Non-Pro Coding, 7.3 The 5 Compounding Personal & Technical Benefits (+8 more)
 
-### Community 45 - "Community 45"
-Cohesion: 0.12
-Nodes (14): 1. Research Questions Addressed, 2. Parameter Sweep Matrix, 3. Measured Metrics, Evaluated Architectural Topologies, Independent Variables, Reproducible pipeline package, 🏛️ RESEARCH PROTOCOL: EXP-001 (Ingress-Boundary Reduction Break-Even Parameter Sweep), Causal interpretation and limits (+6 more)
-
-### Community 46 - "Community 46"
+### Community 47 - "Community 47"
 Cohesion: 0.12
 Nodes (15): capabilities, location, mcp_endpoint, port, transport, metadata, author, last_updated (+7 more)
 
-### Community 47 - "Community 47"
+### Community 48 - "Community 48"
 Cohesion: 0.25
 Nodes (11): Ensure-RemoteConfigured(), Get-EcosystemToolRepos(), Invoke-CrossSync(), Invoke-PythonScript(), Provision-NewTool(), Resolve-PythonInterpreter(), Switch-ToBranch(), Write-Fail() (+3 more)
 
-### Community 48 - "Community 48"
+### Community 49 - "Community 49"
 Cohesion: 0.12
 Nodes (15): 1. Purpose & Core Advantage, 2. Quick Command Reference, 3. Standard Agent Workflow for Coding Tasks, 4. Graph Availability & Freshness Gate, 5. Additional Documentation, Explain Component Context, Graphify Code Search: Implementation Discovery Engine, Machine-Readable JSON Output (For Agents & Automation) (+7 more)
 
-### Community 49 - "Community 49"
+### Community 50 - "Community 50"
 Cohesion: 0.15
 Nodes (6): callable, RobotFileParser, CrawlPolicy, Centralized decision and governance layer for web ingestion: - Domain…, Allows injecting or pre-caching robots.txt for testing or offline environments., Executes one complete IDBFS task lifecycle step: 1. Reclaims expired worker…
 
-### Community 50 - "Community 50"
+### Community 51 - "Community 51"
+Cohesion: 0.13
+Nodes (15): claimed, verified, warn, minLength, type, type, minLength, type (+7 more)
+
+### Community 52 - "Community 52"
 Cohesion: 0.13
 Nodes (15): 1-Click Autonomous Worker (`worker.bat`):, 1. Executive Summary & Master Vision, 2. Ingestion Engine Architecture (IDBFS), 3. The `nepali-ocr-ai` Synthetic Training Flywheel, 4. Entity Resolution: The Core Defensible Moat, 5. Economic Self-Sufficiency Invariant, 6. Safety-First Harvester Architecture & Calibrated Invariants, 7. 125-Year Bikram Sambat Temporal Engine (+7 more)
 
-### Community 51 - "Community 51"
+### Community 53 - "Community 53"
 Cohesion: 0.21
 Nodes (14): extract_gdoc_id(), fetch_gdoc_html(), fetch_generic_html(), find_last_doc(), format_document(), main(), parse_html_to_markdown(), Extract Google Doc / Drive file ID from various URL patterns. (+6 more)
 
-### Community 52 - "Community 52"
+### Community 54 - "Community 54"
 Cohesion: 0.14
 Nodes (13): 1. Objective & Hypothesis, 2. Experimental Setup & Environment, 3.1 Server Status (`localsend_status`), 3.2 LAN Peer Discovery (`localsend_devices`), 3.3 Text Payload Transfer (`localsend_send`), 3.4 File Payload Transfer (`localsend_send`), 3.5 Inbox & History Query (`localsend_history`), 3.6 Multi-File Recursive Directory Hierarchy Verification (`localsend_send`) (+5 more)
 
-### Community 53 - "Community 53"
+### Community 55 - "Community 55"
 Cohesion: 0.14
 Nodes (13): 1. Overview of Autonomous Compound Pipelines, 2. The 6 Flagship Compound Pipelines, 3. Unified Repository Synchronization Engine (`sync.ps1`), 4. Zero-Token Deterministic Verification Batch Gates, 5. Autonomous Multi-Agent Teamwork Orchestration (`/teamwork-preview`), Core Automation Commands, Document 2: Operational Workflows & Autonomous Compound Pipelines, Pipeline A: Rapid Learning & Cognitive Absorption (+5 more)
 
-### Community 54 - "Community 54"
-Cohesion: 0.14
-Nodes (14): 10. Java Beans Components (6 hours), 11. Miscellaneous (4 hours), 1. Introduction (2 hours), 2. GUI Programming and Components (4 hours), 3. Applets and Application Deployment (4 hours), 4. Streams and File Handling (4 hours), 5. XML Programming (3 hours), 6.1 CT 725 01 — Advanced Java Programming (+6 more)
-
-### Community 55 - "Community 55"
+### Community 56 - "Community 56"
 Cohesion: 0.14
 Nodes (14): minLength, type, pattern, type, properties, claimed_result, id, provenance (+6 more)
 
-### Community 56 - "Community 56"
+### Community 57 - "Community 57"
 Cohesion: 0.14
 Nodes (14): pattern, type, minimum, type, type, type, minimum, type (+6 more)
 
-### Community 57 - "Community 57"
+### Community 58 - "Community 58"
 Cohesion: 0.51
 Nodes (13): cmd_close(), cmd_log_dispatch(), cmd_log_intervention(), cmd_log_rework(), cmd_scorecard(), cmd_start(), ensure_telemetry_dir(), get_utc_now() (+5 more)
 
-### Community 58 - "Community 58"
+### Community 59 - "Community 59"
 Cohesion: 0.15
 Nodes (12): 1. Executive Summary, 2. Empirical Overhead Breakdown, 3. Financial & AI Credit Impact, 4. Operational Degradation (The Hidden Tax), 5. Standard Operating Procedure (SOP) for Setup, Before vs. After Optimization, Estimated Waste per 100 Turns (Overhead Only), Rule 1: On-Demand Plugin Installation (+4 more)
 
-### Community 59 - "Community 59"
-Cohesion: 0.15
-Nodes (13): 10. Advanced Topics (4 hours), 1. Introduction to Digital Image Processing (4 hours), 2. Two-Dimensional Systems (5 hours), 3. Image Enhancement and Restoration (8 hours), 4. Image Coding and Compression (4 hours), 5. Introduction to Pattern Recognition in Images (3 hours), 6.4 CT 725 04 — Image Processing and Pattern Recognition, 6. Recognition and Classification (5 hours) (+5 more)
-
 ### Community 60 - "Community 60"
 Cohesion: 0.15
-Nodes (13): 10. Signal Processing and Communication Application using ARM Cortex Processors (5 hours), 1. ARM Embedded Systems (3 hours), 2. ARM Processor Fundamentals (3 hours), 3. ARM Organization and Peripherals (6 hours), 4. Efficient C Programming for ARM (3 hours), 5. ARM Assembly Language Programming (3 hours), 6.3 CT 725 03 — Embedded Systems Design using ARM Technology, 6. ARM Instruction Set (6 hours) (+5 more)
+Nodes (13): 1. Introduction (5 hours), 2. Process Management (6 hours), 3. Process Communication and Synchronization (5 hours), 4. Memory Management (6 hours), 5. File Systems (6 hours), 6.6 CT 725 06 — Operating System, 6. EX 605 (EX 704) — Filter Design, 6. I/O Management & Disk Scheduling (4 hours) (+5 more)
 
 ### Community 61 - "Community 61"
 Cohesion: 0.15
-Nodes (13): type, description, pattern, type, properties, metadata, module, runtime (+5 more)
+Nodes (13): description, type, type, properties, location, metadata, $schema, tracking_branch (+5 more)
 
 ### Community 62 - "Community 62"
 Cohesion: 0.17
@@ -595,91 +533,87 @@ Nodes (11): 1.1 The YouTube Cold-Start Dilemma, 1.2 The Two-Pronged Audience See
 
 ### Community 66 - "Community 66"
 Cohesion: 0.17
-Nodes (12): 1. Introduction (3 hours), 2. Web Basics (5 hours), 3. Server-side Programming (7 hours), 4. Client-side Scripting (4 hours), 5. Web Applications (6 hours), 6.5 CT 725 05 — Web Technologies and Applications, 6. Web 2.0 (6 hours), 7. Information Representation and Sharing – XML (5 hours) (+4 more)
+Nodes (12): 1. Fundamentals of Medical Instrumentation (4 hours), 2. Bioelectric Signals and Electrodes (4 hours), 3. Physiological Transducers (4 hours), 4. Bioelectric Signals Measurement and Recording System (10 hours), 4. INFORMATION SYSTEMS — CT 751, 5. Non-Invasive Diagnostic Instruments (12 hours), 6.9 EX 725 03 — Biomedical Instrumentation, 6. Therapeutic Instruments (4 hours) (+4 more)
 
 ### Community 67 - "Community 67"
-Cohesion: 0.17
-Nodes (12): 1. Introduction (5 hours), 2. Process Management (6 hours), 3. Process Communication and Synchronization (5 hours), 4. Memory Management (6 hours), 5. File Systems (6 hours), 6.6 CT 725 06 — Operating System, 6. I/O Management & Disk Scheduling (4 hours), 7. Deadlock (5 hours) (+4 more)
-
-### Community 68 - "Community 68"
-Cohesion: 0.17
-Nodes (12): 1. Overview of Satellite Communication (2 hours), 2. Orbital Mechanics and Launchers (10 hours), 3. Satellite Link Design (9 hours), 4. Multiple Access Techniques for Satellite Links (4 hours), 5. Propagation Effects and their Impact on Satellite-Earth Link (3 hours), 6.8 EX 725 02 — Satellite Communication, 6. VSAT Systems (4 hours), 7. Low Earth Orbit and Non-Geostationary Satellite Systems (4 hours) (+4 more)
-
-### Community 69 - "Community 69"
 Cohesion: 0.27
 Nodes (11): clean_text(), find_last_transcript_doc(), format_appendix(), format_markdown(), main(), parse_chatgpt_share(), Normalize text and remove citation markers / artifacts., Finds the most recently modified or committed markdown transcript in target_dir. (+3 more)
 
-### Community 70 - "Community 70"
-Cohesion: 0.17
-Nodes (8): 1. Spatial Layouts & 3D CSS Transforms, 2. Advanced Multi-Layer Glassmorphism, 3. Ambient Lighting & Mesh Gradients, 4. Motion Curves & Micro-Interactions, Antigravity UI & Motion Design Expert, 🧠 Antigravity Custom Skills Registry & Local Mirror, 📊 Skills Matrix & Functional Taxonomy, 🔄 Synchronization Protocol
-
-### Community 71 - "Community 71"
+### Community 68 - "Community 68"
 Cohesion: 0.17
 Nodes (11): 1. ACTIVE BASELINE CONFIGURATION, 2. DEFAULT ARCHITECTURE & CONVENTIONS, 3. DESIGN ENGINEERING DIRECTIVES (Bias Correction), 4. CREATIVE PROACTIVITY (Anti-Slop Implementation), High-Agency Frontend Design Skill, Rule 1: Deterministic Typography, Rule 2: Color Calibration, Rule 3: Layout Diversification & Spatial Asymmetry (+3 more)
 
-### Community 72 - "Community 72"
-Cohesion: 0.17
-Nodes (11): Developer Workflows: Fast Implementation Search with Graphify, Procedure:, Procedure:, Procedure:, Procedure:, Procedure:, Workflow 1: "Before Writing New Code" (Zero-Duplicate Rule), Workflow 2: "Understanding How to Call an API" (Usage Pattern Discovery) (+3 more)
-
-### Community 73 - "Community 73"
+### Community 69 - "Community 69"
 Cohesion: 0.18
 Nodes (11): 🗂️ Authoritative Ecosystem Catalog, 📌 Authoritative Governance & Evidence Standards, 🧭 Core Architecture: Capability Mesh & Decoupled Cognition, ⚡ Emergent Compound Workflows, 🎯 Flagship Research Wedge: Headless Invariant Assurance Engine, 📄 License, `main` branch checks & verified enforcement, 🗓️ Near-Term R&D Roadmap (+3 more)
 
-### Community 74 - "Community 74"
+### Community 70 - "Community 70"
+Cohesion: 0.18
+Nodes (11): category, inputs, method, outputs, side_effects, verification_tier, required, deterministic (+3 more)
+
+### Community 71 - "Community 71"
 Cohesion: 0.18
 Nodes (10): generated_by, manifest_kind, projects, schema_version, additionalProperties, $id, required, $schema (+2 more)
 
-### Community 75 - "Community 75"
+### Community 72 - "Community 72"
+Cohesion: 0.18
+Nodes (11): recorded_at, source_commit, source_path, $defs, provenance, verification, additionalProperties, required (+3 more)
+
+### Community 73 - "Community 73"
 Cohesion: 0.18
 Nodes (8): 1. Executive Summary, 2. Granular Reconciliation Matrix, 3. Epistemic Certification, Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19), Experiment Log: FLEET-001 (Single-Task Interruption & State Migration Benchmark), Metrics Logged, Task Specification, Verification Checklist
 
+### Community 74 - "Community 74"
+Cohesion: 0.18
+Nodes (10): 1. Input Specification, 2. Capabilities Selected, 3. Interface Contract & Data Exchange, 4. Execution Trace & Empirical Telemetry, 5. Measured Resource Vector & Performance Metrics, 6. Failure Modes & Mitigations, 7. Output Artifact & Evidence Classification, Rationale for Selection (+2 more)
+
+### Community 75 - "Community 75"
+Cohesion: 0.18
+Nodes (10): 1. Input Specification, 2. Capabilities Selected, 3. Interface Contract & Data Exchange, 4. Execution Trace & Empirical Telemetry, 5. Measured Resource Vector & Performance Metrics, 6. Failure Modes & Mitigations, 7. Output Artifact & Evidence Classification, Rationale for Selection (+2 more)
+
 ### Community 76 - "Community 76"
-Cohesion: 0.18
-Nodes (10): 1. Input Specification, 2. Capabilities Selected, 3. Interface Contract & Data Exchange, 4. Execution Trace & Empirical Telemetry, 5. Measured Resource Vector & Performance Metrics, 6. Failure Modes & Mitigations, 7. Output Artifact & Evidence Classification, Rationale for Selection (+2 more)
-
-### Community 77 - "Community 77"
-Cohesion: 0.18
-Nodes (10): 1. Input Specification, 2. Capabilities Selected, 3. Interface Contract & Data Exchange, 4. Execution Trace & Empirical Telemetry, 5. Measured Resource Vector & Performance Metrics, 6. Failure Modes & Mitigations, 7. Output Artifact & Evidence Classification, Rationale for Selection (+2 more)
-
-### Community 78 - "Community 78"
 Cohesion: 0.18
 Nodes (10): 1. Executive Summary & Foundational Vision, 2. 4-Tier Decoupled Architectural Model, 3. Epistemic Governance & Evidence Standards, Document 1: Master Ecosystem Architecture & Capability Mesh, The Multi-Model Cognitive Council (`ARCH-RFC-002`), Tier 1: Executive Orchestration Interface, Tier 2: Orchestration & State Layer (Worker Session Runtime - WSR), Tier 3: Capability Mesh (18 Computational Engines) (+2 more)
 
+### Community 77 - "Community 77"
+Cohesion: 0.18
+Nodes (11): 10. Advanced Topics (4 hours), 1. Introduction to Digital Image Processing (4 hours), 2. Two-Dimensional Systems (5 hours), 3. Image Enhancement and Restoration (8 hours), 4. Image Coding and Compression (4 hours), 5. Introduction to Pattern Recognition in Images (3 hours), 6.4 CT 725 04 — Image Processing and Pattern Recognition, 6. Recognition and Classification (5 hours) (+3 more)
+
+### Community 78 - "Community 78"
+Cohesion: 0.18
+Nodes (11): 10. Java Beans Components (6 hours), 11. Miscellaneous (4 hours), 2. GUI Programming and Components (4 hours), 3. Applets and Application Deployment (4 hours), 4. Streams and File Handling (4 hours), 5. XML Programming (3 hours), 6.1 CT 725 01 — Advanced Java Programming, 6. Network Programming (4 hours) (+3 more)
+
 ### Community 79 - "Community 79"
 Cohesion: 0.18
-Nodes (11): 1. Fundamentals of Medical Instrumentation (4 hours), 2. Bioelectric Signals and Electrodes (4 hours), 3. Physiological Transducers (4 hours), 4. Bioelectric Signals Measurement and Recording System (10 hours), 5. Non-Invasive Diagnostic Instruments (12 hours), 6.9 EX 725 03 — Biomedical Instrumentation, 6. Therapeutic Instruments (4 hours), 7. Biomedical Telemetry and Telemedicine (3 hours) (+3 more)
+Nodes (11): 10. Signal Processing and Communication Application using ARM Cortex Processors (5 hours), 1. ARM Embedded Systems (3 hours), 2. ARM Processor Fundamentals (3 hours), 3. ARM Organization and Peripherals (6 hours), 4. Efficient C Programming for ARM (3 hours), 5. ARM Assembly Language Programming (3 hours), 6.3 CT 725 03 — Embedded Systems Design using ARM Technology, 6. ARM Instruction Set (6 hours) (+3 more)
 
 ### Community 80 - "Community 80"
 Cohesion: 0.18
-Nodes (11): 1. Introduction to Aviation (4 hours), 2. Aeronautical Communication (5 hours), 3. Aeronautical Navigation (9 hours), 4. Aeronautical Equipment (9 hours), 5. Aeronautical Surveillance (8 hours), 6.10 EX 725 04 — Aeronautical Telecommunication, 6. Aeronautical Mobile Satellite System (AMSS) and Global Navigation Satellite System (GNSS) (4 hours), 7. Basics of Aircraft Avionics Equipment (5 hours) (+3 more)
+Nodes (11): 1. Overview of Satellite Communication (2 hours), 2. Orbital Mechanics and Launchers (10 hours), 3. Satellite Link Design (9 hours), 4. Multiple Access Techniques for Satellite Links (4 hours), 5. Propagation Effects and their Impact on Satellite-Earth Link (3 hours), 6.8 EX 725 02 — Satellite Communication, 6. VSAT Systems (4 hours), 7. Low Earth Orbit and Non-Geostationary Satellite Systems (4 hours) (+3 more)
 
 ### Community 81 - "Community 81"
 Cohesion: 0.18
-Nodes (11): 1. Introduction to Radar (2 hours), 2. The Radar Equation (8 hours), 3. CW and Frequency Modulated Radar (4 hours), 4. MTI and Pulse Doppler Radar (8 hours), 5. Tracking Radar (5 hours), 6.7 EX 725 01 — Radar Technology, 6. Radar Transmitters, Receivers, Duplexers, Displays and Antennas (10 hours), 7. Detection of Radar Signals in Noise (5 hours) (+3 more)
+Nodes (11): type, format, type, type, properties, author, last_updated, license (+3 more)
 
 ### Community 82 - "Community 82"
 Cohesion: 0.18
-Nodes (11): type, format, type, type, properties, author, last_updated, license (+3 more)
+Nodes (11): properties, description, type, description, type, counterexample_schema, inputs, timeout_ms (+3 more)
 
 ### Community 83 - "Community 83"
 Cohesion: 0.18
-Nodes (11): properties, description, type, description, type, counterexample_schema, inputs, timeout_ms (+3 more)
+Nodes (11): 1. Motivation & Purpose, 2.1 Repository, 2.2 Project, 2.3.1 Explicit Entity Classes (ONT-002 Machine-Derived Partition), 2.3 Capability, 2.4 Interface, 2.5 Workflow, 2. The Canonical Hierarchy (+3 more)
 
 ### Community 84 - "Community 84"
 Cohesion: 0.18
-Nodes (11): 1. Motivation & Purpose, 2.1 Repository, 2.2 Project, 2.3.1 Explicit Entity Classes (ONT-002 Machine-Derived Partition), 2.3 Capability, 2.4 Interface, 2.5 Workflow, 2. The Canonical Hierarchy (+3 more)
+Nodes (11): properties, minLength, type, minLength, type, limitations, metric, scope (+3 more)
 
 ### Community 85 - "Community 85"
 Cohesion: 0.18
-Nodes (11): properties, minLength, type, minLength, type, limitations, metric, scope (+3 more)
+Nodes (6): InvariantAssuranceEngineTests, Verifies that 100% of planted violations in synthetic state machines produce…, Verifies that SMT counterexamples trigger actual runtime contract violations…, Verifies that all true invariants hold inductively with 0% false discovery rate., Verifies that vacuous tautologies and contradictory specifications are flagged…, Executes full benchmark suite and asserts deterministic record metrics.
 
 ### Community 86 - "Community 86"
 Cohesion: 0.18
-Nodes (6): InvariantAssuranceEngineTests, Verifies that 100% of planted violations in synthetic state machines produce…, Verifies that SMT counterexamples trigger actual runtime contract violations…, Verifies that all true invariants hold inductively with 0% false discovery rate., Verifies that vacuous tautologies and contradictory specifications are flagged…, Executes full benchmark suite and asserts deterministic record metrics.
-
-### Community 87 - "Community 87"
-Cohesion: 0.18
-Nodes (11): 1. Creating Git Commits, 2. Commit, Push, and Open PR, 3. Prune Stale Branches (Clean Gone), Commands to Execute, Commit & Git Automation Guide, Context, Context, Expected Behavior (+3 more)
+Nodes (8): 1. Spatial Layouts & 3D CSS Transforms, 2. Advanced Multi-Layer Glassmorphism, 3. Ambient Lighting & Mesh Gradients, 4. Motion Curves & Micro-Interactions, Antigravity UI & Motion Design Expert, 🧠 Antigravity Custom Skills Registry & Local Mirror, 📊 Skills Matrix & Functional Taxonomy, 🔄 Synchronization Protocol
 
 ### Community 88 - "Community 88"
 Cohesion: 0.20
@@ -707,7 +641,7 @@ Nodes (9): 1. Executive Summary & Problem Formulation, 2. Multi-Tier Cognitive A
 
 ### Community 94 - "Community 94"
 Cohesion: 0.20
-Nodes (10): 1. Introduction (2 hours), 2. Data Preprocessing (6 hours), 3. Classification (12 hours), 4. Association Analysis (10 hours), 5. Cluster Analysis (9 hours), 6.2 CT 725 02 — Data Mining, 6. Anomaly / Fraud Detection (3 hours), 7. Advanced Applications (3 hours) (+2 more)
+Nodes (10): 1. Introduction (3 hours), 2. Web Basics (5 hours), 3. Server-side Programming (7 hours), 4. Client-side Scripting (4 hours), 5. Web Applications (6 hours), 6.5 CT 725 05 — Web Technologies and Applications, 6. Web 2.0 (6 hours), 7. Information Representation and Sharing – XML (5 hours) (+2 more)
 
 ### Community 95 - "Community 95"
 Cohesion: 0.20
@@ -739,43 +673,43 @@ Nodes (9): Anthropic, Google, Local/Ollama, OpenAI, Perplexity, xAI, provider, e
 
 ### Community 102 - "Community 102"
 Cohesion: 0.22
-Nodes (9): evidence_tier, metric, scope, value, additionalProperties, required, type, $defs (+1 more)
-
-### Community 103 - "Community 103"
-Cohesion: 0.22
 Nodes (9): free_tier_api, heavy_compute, paid_api, zero_token_local, default, description, enum, type (+1 more)
 
-### Community 104 - "Community 104"
-Cohesion: 0.22
-Nodes (9): 1.1 The Core Operating Principle: "High AI Leverage + High Personal Comprehension", 1.2 The "Option Value vs. Realized Value" Paradox, 1. Executive Context & Identity Anchor, 2. The 3-Layer Semester Attention Budget, 3. Five-Level Competence Benchmark, 6. Strict Negative Constraints (The "Do-Not-Do" List), 8. Epistemic Certification, ARCH-PLAN-003: Intelligent Systems Engineering & Research Conversion Roadmap (+1 more)
-
-### Community 105 - "Community 105"
+### Community 103 - "Community 103"
 Cohesion: 0.28
 Nodes (5): 1. Schedule & Priorities, 2026-09-28 — Daily Log, 2. Active Projects Progress, 3. Daily Learnings & Conceptual Nodes, 4. Tomorrow's Context (Agent Primer)
 
-### Community 106 - "Community 106"
+### Community 104 - "Community 104"
 Cohesion: 0.22
 Nodes (9): 1. Problem & Architectural Rationale, 2. Multi-Tier Hybrid Fleet Topology, 3.1. `CopilotHeadlessAdapter` (Completed Operational Scope: M1–M4), 3.2. Sandboxed Local Tool Executor (Phase 2 Target Specification: M6), 3.3. Memory & Resource Footprint Benchmark Comparison, 3. Specification & Component Contracts, 4. Verification Checklist & Milestones, Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet) (+1 more)
 
-### Community 107 - "Community 107"
+### Community 105 - "Community 105"
 Cohesion: 0.22
 Nodes (9): 1. Executive Summary & Objective, 2.1 Inductive Invariant Property, 2.2 Replay Ground Truth Invariant, 2. Formal Architecture & Mathematical Formulation, 3. Benchmark Testbed Composition, 4. Empirical Evaluation Results, 5. Falsification & Key Findings, 6. Epistemic Certification (+1 more)
 
-### Community 108 - "Community 108"
+### Community 106 - "Community 106"
 Cohesion: 0.22
 Nodes (9): 1.1 Invariant A: Closed-Loop Worker Dispatch (No Orphaned Leases), 1.2 Invariant B: Strict Separation of Real Execution and Simulation, 1.3 Invariant C: Telemetry Truthfulness & Quota Headroom, 1.4 Invariant D: Atomic Checkpoint & DAG Advancement, 1.5 Invariant E: QA Authority & Claim-Token Isolation for State Transitions, 1. The Core Invariant Statements, 2. Mathematical Formalization, 3. Verification & Compliance Gate (+1 more)
 
-### Community 109 - "Community 109"
+### Community 107 - "Community 107"
 Cohesion: 0.22
 Nodes (8): 1. IOE Pulchowk / TU Engineering Coursework Integration, 2. Fusemachines AI Fellowship 2026, 3. Physical Fabrication & Embedded Edge Hardware, Automated Academic Pipeline via Super-NLM & Classroom MCP, Core Mapped Coursework & Synergies, Document 5: Academic, Fellowship & Edge Hardware Synergies, Makerspace Prototyping Laboratory, SPARK Hardware Architecture
 
-### Community 110 - "Community 110"
+### Community 108 - "Community 108"
 Cohesion: 0.22
 Nodes (9): 1. SPARK — Wearable Edge AI Kinematics & Fall Detection Architecture, 2. Headless Invariant Assurance Engine (`INV-BMK-001`), 3. BiasAperture — Algorithmic Fairness & Model Auditing Engine, Academic & Fellowship Background, Core Technical Competencies, Executive Summary: What I Deliver on Day 1, Flagship Technical Artifacts, Research Profile & Technical Capability Summary (+1 more)
 
-### Community 111 - "Community 111"
+### Community 109 - "Community 109"
+Cohesion: 0.22
+Nodes (9): 1. Introduction to Radar (2 hours), 2. The Radar Equation (8 hours), 3. CW and Frequency Modulated Radar (4 hours), 4. MTI and Pulse Doppler Radar (8 hours), 5. Tracking Radar (5 hours), 6.7 EX 725 01 — Radar Technology, 6. Radar Transmitters, Receivers, Duplexers, Displays and Antennas (10 hours), 7. Detection of Radar Signals in Noise (5 hours) (+1 more)
+
+### Community 110 - "Community 110"
 Cohesion: 0.22
 Nodes (9): items, minItems, type, $ref, items, minItems, type, claims (+1 more)
+
+### Community 111 - "Community 111"
+Cohesion: 0.22
+Nodes (9): enum, type, E0, E1, E2, E3, E4, E5 (+1 more)
 
 ### Community 112 - "Community 112"
 Cohesion: 0.22
@@ -783,15 +717,15 @@ Nodes (9): enum, type, E0, E1, E2, E3, E4, E5 (+1 more)
 
 ### Community 113 - "Community 113"
 Cohesion: 0.22
-Nodes (9): enum, type, E0, E1, E2, E3, E4, E5 (+1 more)
-
-### Community 114 - "Community 114"
-Cohesion: 0.22
 Nodes (8): 0. Deterministic Environment Bootstrap & Antigravity Setup, 1. Windows Environment & User Shell Folders (Selective OneDrive Bypass), 2. Media Ingestion & YouTube Automation, 3. Local Cloud & Device Sync, Applying Shell Folders Setup, 📂 Catalog of Scripts, 🛠️ Ecosystem Scripts & Local Automation Suite, 🚀 Usage
 
-### Community 115 - "Community 115"
+### Community 114 - "Community 114"
 Cohesion: 0.36
 Nodes (8): evaluate_significance(), export_verbatim(), find_latest_transcript_path(), get_most_recent_conversation(), main(), transcript_archiver.py ---------------------- Deterministic utility to identify…, Auto-discover the latest active or completed conversation in APPDATA_DIR., Evaluates whether a transcript meets the criteria for permanent archival.…
+
+### Community 115 - "Community 115"
+Cohesion: 0.22
+Nodes (8): 1. Creating Git Commits, 2. Commit, Push, and Open PR, 3. Prune Stale Branches (Clean Gone), Commands to Execute, Commit & Git Automation Guide, Context, Expected Behavior, Your task
 
 ### Community 116 - "Community 116"
 Cohesion: 0.22
@@ -831,11 +765,11 @@ Nodes (8): 7.18.1 Empirical Productive Capital Baseline: Ultra-Low Cash Outlay, 
 
 ### Community 125 - "Community 125"
 Cohesion: 0.25
-Nodes (8): category, inputs, outputs, side_effects, verification_tier, required, deterministic, id
+Nodes (8): empirical_sandbox, formal_smt, heuristic_unverified, statistical_audit, verification_tier, description, enum, type
 
 ### Community 126 - "Community 126"
 Cohesion: 0.25
-Nodes (8): empirical_sandbox, formal_smt, heuristic_unverified, statistical_audit, verification_tier, description, enum, type
+Nodes (8): evidence_tier, metric, scope, value, additionalProperties, required, type, claim
 
 ### Community 127 - "Community 127"
 Cohesion: 0.25
@@ -871,27 +805,27 @@ Nodes (8): 1. Executive Summary & Authorship, 2. Core Architectural & Methodolog
 
 ### Community 135 - "Community 135"
 Cohesion: 0.25
-Nodes (8): minLength, type, const, properties, generated_by, manifest_kind, schema_version, const
+Nodes (8): 1. Introduction (2 hours), 2. Data Preprocessing (6 hours), 3. Classification (12 hours), 4. Association Analysis (10 hours), 5. Cluster Analysis (9 hours), 6.2 CT 725 02 — Data Mining, 6. Anomaly / Fraud Detection (3 hours), 7. Advanced Applications (3 hours)
 
 ### Community 136 - "Community 136"
 Cohesion: 0.25
-Nodes (7): capabilities, location, module, runtime, $schema, tracking_branch, version
+Nodes (8): 1. Introduction to Aviation (4 hours), 2. Aeronautical Communication (5 hours), 3. Aeronautical Navigation (9 hours), 4. Aeronautical Equipment (9 hours), 5. Aeronautical Surveillance (8 hours), 6.10 EX 725 04 — Aeronautical Telecommunication, 6. Aeronautical Mobile Satellite System (AMSS) and Global Navigation Satellite System (GNSS) (4 hours), 7. Basics of Aircraft Avionics Equipment (5 hours)
 
 ### Community 137 - "Community 137"
 Cohesion: 0.25
-Nodes (7): capabilities, location, module, runtime, $schema, tracking_branch, version
+Nodes (8): minLength, type, const, properties, generated_by, manifest_kind, schema_version, const
 
 ### Community 138 - "Community 138"
-Cohesion: 0.43
-Nodes (7): evaluate_conventional_pipeline(), evaluate_ipu_pipeline(), sweep_ipu_breakeven.py ---------------------- Implementation of EXP-001:…, Ingress -> Bus -> Host DRAM -> Host GPU -> Compute -> Result, Ingress -> IPU (In-Flight Stream Transform) -> Interconnect (rho * data) -> Host, run_parameter_sweep(), SweepConfig
+Cohesion: 0.25
+Nodes (7): capabilities, location, module, runtime, $schema, tracking_branch, version
 
 ### Community 139 - "Community 139"
 Cohesion: 0.25
-Nodes (7): 1. Save to Current Working Directory / Repo, 2. Save to a Specific Folder (e.g. `docs/chat_history` or custom path), 3. Save to Brainstorm Knowledge Base, 4. Custom Filename / Output Path, 5. Append Mode (Continuation of Last / Specified Transcript), Chat Archiver Skill, Execution Protocol
+Nodes (7): capabilities, location, module, runtime, $schema, tracking_branch, version
 
 ### Community 140 - "Community 140"
-Cohesion: 0.25
-Nodes (7): 1. Save to Current Working Directory / Repo, 2. Save to a Specific Folder (e.g. `docs` or `research/transcripts`), 3. Save to Brainstorm Knowledge Base, 4. Custom Filename / Output Path, 5. Append Mode (Continuation of Last / Specified Document), Document Archiver Skill, Execution Protocol
+Cohesion: 0.43
+Nodes (7): evaluate_conventional_pipeline(), evaluate_ipu_pipeline(), sweep_ipu_breakeven.py ---------------------- Implementation of EXP-001:…, Ingress -> Bus -> Host DRAM -> Host GPU -> Compute -> Result, Ingress -> IPU (In-Flight Stream Transform) -> Interconnect (rho * data) -> Host, run_parameter_sweep(), SweepConfig
 
 ### Community 141 - "Community 141"
 Cohesion: 0.25
@@ -903,375 +837,307 @@ Nodes (7): 1. Save to Current Working Directory / Repo, 2. Save to a Specific Fo
 
 ### Community 143 - "Community 143"
 Cohesion: 0.25
-Nodes (7): 1. Quick Ingestion Workflow (Zero-Token Manifest Mode), 2. CLI Single-Command Mode, 3. What the Engine Executes Automatically, 4. Finalizing Deployment, Apply Live:, Portfolio Project Manager Skill, Preview with Dry Run (Recommended first):
+Nodes (7): 1. Save to Current Working Directory / Repo, 2. Save to a Specific Folder (e.g. `docs/chat_history` or custom path), 3. Save to Brainstorm Knowledge Base, 4. Custom Filename / Output Path, 5. Append Mode (Continuation of Last / Specified Transcript), Chat Archiver Skill, Execution Protocol
 
 ### Community 144 - "Community 144"
-Cohesion: 0.29
-Nodes (7): 1. Git Workflow & Ecosystem Automation (CRITICAL — STRICT ENFORCEMENT), 2. Knowledge Graph & Codebase Navigation (Graphify), 3. Epistemic Governance & Evidence Tiers (ARCH-RFC-001 & ARCH-RFC-002), 4. Verification Gates & Reality Layer (Deterministic Ground Truth), 5. Operational Rules & Efficiency, Agent Rules & Workflow Guidelines — Brainstorm & Ecosystem Orchestration, Core Commands
+Cohesion: 0.25
+Nodes (7): 1. Save to Current Working Directory / Repo, 2. Save to a Specific Folder (e.g. `docs` or `research/transcripts`), 3. Save to Brainstorm Knowledge Base, 4. Custom Filename / Output Path, 5. Append Mode (Continuation of Last / Specified Document), Document Archiver Skill, Execution Protocol
 
 ### Community 145 - "Community 145"
-Cohesion: 0.57
-Nodes (5): Remove-StaleGraphifyArtifacts(), Write-Fail(), Write-Notice(), Write-Status(), Write-Success()
+Cohesion: 0.39
+Nodes (7): Developer Workflows: Fast Implementation Search with Graphify, Procedure:, Workflow 1: "Before Writing New Code" (Zero-Duplicate Rule), Workflow 2: "Understanding How to Call an API" (Usage Pattern Discovery), Workflow 3: "Safe Refactoring & Signature Modification" (Impact Analysis), Workflow 4: "Tracing Control / Data Flow Between Two Points", Workflow 5: "Deep Component Analysis"
 
 ### Community 146 - "Community 146"
-Cohesion: 0.29
-Nodes (7): capabilities, location, module, runtime, $schema, version, required
+Cohesion: 0.25
+Nodes (7): 1. Quick Ingestion Workflow (Zero-Token Manifest Mode), 2. CLI Single-Command Mode, 3. What the Engine Executes Automatically, 4. Finalizing Deployment, Apply Live:, Portfolio Project Manager Skill, Preview with Dry Run (Recommended first):
 
 ### Community 147 - "Community 147"
 Cohesion: 0.29
-Nodes (7): recorded_at, source_commit, source_path, provenance, additionalProperties, required, type
+Nodes (7): 1. Git Workflow & Ecosystem Automation (CRITICAL — STRICT ENFORCEMENT), 2. Knowledge Graph & Codebase Navigation (Graphify), 3. Epistemic Governance & Evidence Tiers (ARCH-RFC-001 & ARCH-RFC-002), 4. Verification Gates & Reality Layer (Deterministic Ground Truth), 5. Operational Rules & Efficiency, Agent Rules & Workflow Guidelines — Brainstorm & Ecosystem Orchestration, Core Commands
 
 ### Community 148 - "Community 148"
-Cohesion: 0.29
-Nodes (7): 1. Executive Philosophy: "Inferior to None", 2. Universal Artifact Taxonomy & Addressing Matrix, 3. Mandatory Frontmatter Metadata Standard, 4. The Calibrated Evidence Hierarchy (Preventing Pseudo-Science), 5. The Invariant of Negative Results (`FAIL-xxx`), 🏛️ ARCHITECTURAL RFC: ARCH-RFC-001 (Gold-Standard Epistemic Record-Keeping & Taxonomy), Identifier Classification Schema
+Cohesion: 0.57
+Nodes (5): Remove-StaleGraphifyArtifacts(), Write-Fail(), Write-Notice(), Write-Status(), Write-Success()
 
 ### Community 149 - "Community 149"
 Cohesion: 0.29
-Nodes (7): 1.1 The Tragedy of the Typical College Project Repo, 1.2 The "Dual-Track" Defense Strategy, 1. Executive Philosophy: The College Capstone Reality vs. The Industrial Standard, 2. University Standards & Curricular Mapping (ABET & IEEE), 3. The "Anti-Plagiarism / Defensibility" Shield, 4. Dual-Track Academic Deliverables, 🏛️ ARCHITECTURAL RFC: ARCH-RFC-003 (Capstone Defense & Academic Repository Standard)
+Nodes (7): capabilities, location, module, runtime, $schema, version, required
 
 ### Community 150 - "Community 150"
 Cohesion: 0.29
-Nodes (6): additionalProperties, description, $id, $schema, title, type
+Nodes (7): 1. Executive Philosophy: "Inferior to None", 2. Universal Artifact Taxonomy & Addressing Matrix, 3. Mandatory Frontmatter Metadata Standard, 4. The Calibrated Evidence Hierarchy (Preventing Pseudo-Science), 5. The Invariant of Negative Results (`FAIL-xxx`), 🏛️ ARCHITECTURAL RFC: ARCH-RFC-001 (Gold-Standard Epistemic Record-Keeping & Taxonomy), Identifier Classification Schema
 
 ### Community 151 - "Community 151"
 Cohesion: 0.29
-Nodes (7): 1. The Core Agent Team Architecture, 2. Concurrency & Isolation Invariants (CRITICAL), 3. Bounded Execution Safeguards ("I sleep, the machine stays awake"), 4. Grounding & Obsidian Knowledge Graph Integration, 5. Automatic Hook into `/teamwork-preview` Slash Command, Agent Teams Orchestration Skill, Role Invariants:
+Nodes (7): 1.1 The Tragedy of the Typical College Project Repo, 1.2 The "Dual-Track" Defense Strategy, 1. Executive Philosophy: The College Capstone Reality vs. The Industrial Standard, 2. University Standards & Curricular Mapping (ABET & IEEE), 3. The "Anti-Plagiarism / Defensibility" Shield, 4. Dual-Track Academic Deliverables, 🏛️ ARCHITECTURAL RFC: ARCH-RFC-003 (Capstone Defense & Academic Repository Standard)
 
 ### Community 152 - "Community 152"
 Cohesion: 0.29
-Nodes (6): Design principles, Frontend Design, Ground your designs in the subject matter, More on writing in design, Process: plan, review against the brief, build, critique, Restraint and self-critique
+Nodes (7): 1. Research Questions Addressed, 2. Parameter Sweep Matrix, 3. Measured Metrics, Evaluated Architectural Topologies, Independent Variables, Reproducible pipeline package, 🏛️ RESEARCH PROTOCOL: EXP-001 (Ingress-Boundary Reduction Break-Even Parameter Sweep)
+
+### Community 153 - "Community 153"
+Cohesion: 0.29
+Nodes (7): 1. CE 615 (CE 655) — Engineering Economics, 1. SH 401 — Engineering Mathematics I, 1. SH 451 — Engineering Mathematics II, 1. SH 501 — Engineering Mathematics III, 1. SH 551 — Applied Mathematics, 1. SH 655 (SH 601) — Communication English, Teaching Schedule & Examination Scheme
 
 ### Community 154 - "Community 154"
-Cohesion: 0.33
-Nodes (6): 4. Emergent Compound Workflows (The "Why"), Pipeline A: The High-Bandwidth Rapid Learning Loop, Pipeline B: The Autonomous Heavy Compute & Auditing Loop, Pipeline C: The Physical Prototype Design Loop, Pipeline D: The Autonomous Invariant & Arbitrage Discovery Loop, Pipeline E: The Autonomous YouTube Content & Transformer Cluster
+Cohesion: 0.29
+Nodes (6): additionalProperties, description, $id, $schema, title, type
 
 ### Community 155 - "Community 155"
-Cohesion: 0.33
-Nodes (6): 5.1 The 4-Tier Architectural Stack, 5.2 The Non-Invasive Tool Manifest Pattern (`tool.manifest.json`), 5.3 Upgrading to Semantic Capability Contracts (`capability.contract.v1.json`), 5.4 The Strategic Wedge vs. Platform Vision, 5.5 Domain Feasibility Matrix & Commercial Framing, 5. Architectural Blueprint: The 4-Tier Jarvis Engine
+Cohesion: 0.29
+Nodes (7): Causal interpretation and limits, Distributional robustness, Falsification probes, Formal model and assumptions, STRANGLER-IPU Experiment Report, What was tested, Why the mechanism should help
 
 ### Community 156 - "Community 156"
-Cohesion: 0.33
-Nodes (6): 7.4 Five-Horizon Result Forecast (0 to 36+ Months), Horizon 1: The Synthetic Invariant Rediscovery Benchmark (Months 0–3), Horizon 2: Real-World API & State Machine Assurance (Months 3–9), Horizon 3: Multi-Contract & Protocol Invariant Auditing (Months 9–18), Horizon 4: Cross-Domain Regulatory & Terms Arbitrage (Months 18–36), Horizon 5: The Autonomous Systems Researcher (Months 36+)
+Cohesion: 0.29
+Nodes (7): 1. The Core Agent Team Architecture, 2. Concurrency & Isolation Invariants (CRITICAL), 3. Bounded Execution Safeguards ("I sleep, the machine stays awake"), 4. Grounding & Obsidian Knowledge Graph Integration, 5. Automatic Hook into `/teamwork-preview` Slash Command, Agent Teams Orchestration Skill, Role Invariants:
 
-### Community 158 - "Community 158"
-Cohesion: 0.33
-Nodes (5): 1. Executive Summary & Problem Statement, 2. The Two-Plane Security Partition, 3. Implementation Rules, 4. Verification & Conformance, ARCH-RFC-006: Public/Private Information Boundary & Security Architecture
+### Community 157 - "Community 157"
+Cohesion: 0.29
+Nodes (6): Design principles, Frontend Design, Ground your designs in the subject matter, More on writing in design, Process: plan, review against the brief, build, critique, Restraint and self-critique
 
 ### Community 159 - "Community 159"
 Cohesion: 0.33
-Nodes (6): 1. Schedule & Priorities, 2026-09-19 — Daily Log, 2. Active Projects Progress, 3. Meetings & Transcripts, 4. Daily Learnings & Conceptual Nodes, 5. Tomorrow's Context (Agent Primer)
+Nodes (6): 4. Emergent Compound Workflows (The "Why"), Pipeline A: The High-Bandwidth Rapid Learning Loop, Pipeline B: The Autonomous Heavy Compute & Auditing Loop, Pipeline C: The Physical Prototype Design Loop, Pipeline D: The Autonomous Invariant & Arbitrage Discovery Loop, Pipeline E: The Autonomous YouTube Content & Transformer Cluster
 
 ### Community 160 - "Community 160"
 Cohesion: 0.33
-Nodes (5): 1. Flagship Research Wedge: Headless Invariant Assurance Engine, 2. The 9-Stage Engineering & R&D Sequence, 3. Defensible Economic Model & Capital Accounting, 4. Transparent Limitations & Known Failure Modes, Document 4: Strategic Future Roadmap & Architectural Invariants
+Nodes (6): 5.1 The 4-Tier Architectural Stack, 5.2 The Non-Invasive Tool Manifest Pattern (`tool.manifest.json`), 5.3 Upgrading to Semantic Capability Contracts (`capability.contract.v1.json`), 5.4 The Strategic Wedge vs. Platform Vision, 5.5 Domain Feasibility Matrix & Commercial Framing, 5. Architectural Blueprint: The 4-Tier Jarvis Engine
 
 ### Community 161 - "Community 161"
 Cohesion: 0.33
-Nodes (6): description, items, minItems, type, $ref, capabilities
+Nodes (6): 7.4 Five-Horizon Result Forecast (0 to 36+ Months), Horizon 1: The Synthetic Invariant Rediscovery Benchmark (Months 0–3), Horizon 2: Real-World API & State Machine Assurance (Months 3–9), Horizon 3: Multi-Contract & Protocol Invariant Auditing (Months 9–18), Horizon 4: Cross-Domain Regulatory & Terms Arbitrage (Months 18–36), Horizon 5: The Autonomous Systems Researcher (Months 36+)
 
 ### Community 162 - "Community 162"
 Cohesion: 0.33
-Nodes (5): generated_by, $schema, manifest_kind, projects, schema_version
+Nodes (5): 1. Executive Summary & Problem Statement, 2. The Two-Plane Security Partition, 3. Implementation Rules, 4. Verification & Conformance, ARCH-RFC-006: Public/Private Information Boundary & Security Architecture
 
 ### Community 163 - "Community 163"
 Cohesion: 0.33
-Nodes (6): 1. Schedule & Priorities, 2. Active Projects Progress, 3. Meetings & Transcripts, 4. Daily Learnings & Conceptual Nodes, 5. Tomorrow's Context (Agent Primer), {{date:YYYY-MM-DD}} — Daily Log
+Nodes (5): 1. Executive Summary & Problem Space, 2. System Architecture: Lipikaar-AI Pipeline, 3. Core Functional Invariants, 4. Verification & Milestone Roadmap, ARCH-SPEC-005: Nepali OCR, Grammar Checker & Font-Agnostic Word Substrate (Lipikaar-AI)
 
 ### Community 164 - "Community 164"
 Cohesion: 0.33
-Nodes (5): 1. Executive Summary, 2. Core Concepts & Takeaways, 3. Action Items & Decisions, 4. Verification Check Before Finishing (Slide 37 Gate), <% tp.date.now("YYYY-MM-DD") %> — Meeting: <% tp.file.title %>
+Nodes (6): 1. Schedule & Priorities, 2026-09-19 — Daily Log, 2. Active Projects Progress, 3. Meetings & Transcripts, 4. Daily Learnings & Conceptual Nodes, 5. Tomorrow's Context (Agent Primer)
 
 ### Community 165 - "Community 165"
 Cohesion: 0.33
-Nodes (5): 1. Finding God Nodes (Architectural Hubs), 2. Finding Isolated or Dead Implementations, 3. Extracting All Functions in a Specific Community / Module, 4. Exporting Subgraph as Markdown Documentation, Advanced Graph Query Recipes
+Nodes (5): 1. Flagship Research Wedge: Headless Invariant Assurance Engine, 2. The 9-Stage Engineering & R&D Sequence, 3. Defensible Economic Model & Capital Accounting, 4. Transparent Limitations & Known Failure Modes, Document 4: Strategic Future Roadmap & Architectural Invariants
 
 ### Community 166 - "Community 166"
 Cohesion: 0.33
-Nodes (5): For /graphify explain, For /graphify path, graphify reference: query, path, explain, Step 0 — Constrained query expansion (REQUIRED before traversal), Step 1 — Traversal
+Nodes (6): description, items, minItems, type, $ref, capabilities
 
 ### Community 167 - "Community 167"
-Cohesion: 0.40
-Nodes (5): 7.16 Current State Audit: Phase 0.8 (Human-in-the-Loop) to Phase 1.0 (Autonomous Walk-Away), Phase 0.8: Human-Operated Distributed Cognition (Where You Are Today), Phase 1.0: Machine-Operated Distributed Cognition (The Immediate Target), The Crossing Condition: The "Walk-Away" Benchmark, The North Star Metric: The Autonomy Ratio
+Cohesion: 0.33
+Nodes (5): generated_by, $schema, manifest_kind, projects, schema_version
 
 ### Community 168 - "Community 168"
-Cohesion: 0.40
-Nodes (5): 7.17 Capital Allocation Matrix: Subscriptions vs. Machine-Facing API Credits, The 10-Task Diagnostic Benchmark, The Fundamental Dichotomy: Consumer Web UIs vs. Programmatic API Sockets, The "Headstart Powerup" Evaluation: Where to Invest First, The Systemic R&D Vectorized Resource Model
+Cohesion: 0.33
+Nodes (6): 1. Schedule & Priorities, 2. Active Projects Progress, 3. Meetings & Transcripts, 4. Daily Learnings & Conceptual Nodes, 5. Tomorrow's Context (Agent Primer), {{date:YYYY-MM-DD}} — Daily Log
 
 ### Community 169 - "Community 169"
-Cohesion: 0.40
-Nodes (5): 7.5 Deviation Safeguards & The 4 Critical Traps, Trap 1: The "Grand Unified Platform" Quagmire, Trap 2: The "Formalization Hallucination" Trap, Trap 3: The "Mock Fidelity Mirage", Trap 4: The Legal & "Universal" Open-Texture Fallacy
+Cohesion: 0.33
+Nodes (5): 1. Executive Summary, 2. Core Concepts & Takeaways, 3. Action Items & Decisions, 4. Verification Check Before Finishing (Slide 37 Gate), <% tp.date.now("YYYY-MM-DD") %> — Meeting: <% tp.file.title %>
 
 ### Community 170 - "Community 170"
-Cohesion: 0.40
-Nodes (5): 5.1 Local Research Lab Targets (Kathmandu Valley), 5.2 The International Research Pipeline, 5.3 Reusable Research Application Pack (`/Aaradhya-Research-Pack`), 5.4 DataCamp Assessed Certification Engine, 5. Layer 3 Execution: External Calibration & Opportunity Pipeline
+Cohesion: 0.33
+Nodes (5): 1. Finding God Nodes (Architectural Hubs), 2. Finding Isolated or Dead Implementations, 3. Extracting All Functions in a Specific Community / Module, 4. Exporting Subgraph as Markdown Documentation, Advanced Graph Query Recipes
 
 ### Community 171 - "Community 171"
-Cohesion: 0.40
-Nodes (5): 7. Phased Timeline: Board Exam Defense, Holiday Runway & Semester Launch, Phase 0A: Research Pack & Response Management (Oct 5 – Oct 15, 2026) [PRIORITY: P1], Phase 0B: EPFL E3 Submission & Systems Rebuild Sprint (Oct 16 – Nov 1, 2026) [PRIORITY: P1], Phase 1: Post-Holiday Semester Launch (Nov 2026 Onward) [PRIORITY: P1], Phase -1: The Board Exam Defense & Lockdown (Sept 24 – Oct 4, 2026) [PRIORITY: P0]
+Cohesion: 0.33
+Nodes (5): For /graphify explain, For /graphify path, graphify reference: query, path, explain, Step 0 — Constrained query expansion (REQUIRED before traversal), Step 1 — Traversal
 
 ### Community 172 - "Community 172"
 Cohesion: 0.40
-Nodes (5): 1. Schedule & Priorities, 2026-09-23 — Daily Log, 2. Active Projects Progress, 3. Daily Learnings & Conceptual Nodes, 4. Tomorrow's Context (Agent Primer)
+Nodes (5): 7.16 Current State Audit: Phase 0.8 (Human-in-the-Loop) to Phase 1.0 (Autonomous Walk-Away), Phase 0.8: Human-Operated Distributed Cognition (Where You Are Today), Phase 1.0: Machine-Operated Distributed Cognition (The Immediate Target), The Crossing Condition: The "Walk-Away" Benchmark, The North Star Metric: The Autonomy Ratio
 
 ### Community 173 - "Community 173"
 Cohesion: 0.40
-Nodes (5): 1. Schedule & Priorities, 2026-09-24 — Daily Log, 2. Active Projects Progress, 3. Daily Learnings & Conceptual Nodes, 4. Tomorrow's Context (Agent Primer)
+Nodes (5): 7.17 Capital Allocation Matrix: Subscriptions vs. Machine-Facing API Credits, The 10-Task Diagnostic Benchmark, The Fundamental Dichotomy: Consumer Web UIs vs. Programmatic API Sockets, The "Headstart Powerup" Evaluation: Where to Invest First, The Systemic R&D Vectorized Resource Model
 
 ### Community 174 - "Community 174"
 Cohesion: 0.40
-Nodes (4): 1. Description of the Incident, 2. Root Cause Analysis, 3. Corrective Actions & Resolution, Incident / Failure Report: Headless PDF Rendering Race Condition & 404 Capture
+Nodes (5): 7.5 Deviation Safeguards & The 4 Critical Traps, Trap 1: The "Grand Unified Platform" Quagmire, Trap 2: The "Formalization Hallucination" Trap, Trap 3: The "Mock Fidelity Mirage", Trap 4: The Legal & "Universal" Open-Texture Fallacy
 
 ### Community 175 - "Community 175"
 Cohesion: 0.40
-Nodes (5): 1. The Core Invariant Statement, 2. Rationale & Epistemic Grounding, 4. Operational Recognition & Automation Criteria, 📜 Architectural Invariant: INV-EPI-001 (Verbatim Conversational Logging), Automated Archival Utility
+Nodes (5): 1. Executive Philosophy: The Multi-Perspective Cognitive Council, 2. Specialized Model Roles & Comparative Advantages, 3. The 4-Stage Council Consensus Protocol, 4. Discrepancy Prevention Rules, 🏛️ ARCHITECTURAL RFC: ARCH-RFC-002 (The Model Plurality & Multi-Perspective Council Protocol)
 
 ### Community 176 - "Community 176"
 Cohesion: 0.40
-Nodes (5): 1. Architectural Mission, 2. Dual-Layer Deterministic Verification Gate, 3. Quantitative Verification Benchmark (`INV-BMK-001`), 4. What This Demonstrates to Research Labs, Brainstorm Research Ecosystem: Capability Mesh & Verification Engine
+Nodes (5): 1. Schedule & Priorities, 2026-09-23 — Daily Log, 2. Active Projects Progress, 3. Daily Learnings & Conceptual Nodes, 4. Tomorrow's Context (Agent Primer)
 
 ### Community 177 - "Community 177"
 Cohesion: 0.40
-Nodes (5): 1. Problem Statement & Challenge, 2. Architectural Innovation: Two-Layer Hierarchical Gating, 3. Quantitative Benchmarks & Empirical Proof, 4. Technical Transferability to Research Environments, SPARK: Smart Protection & Alerting Resilient Kit
+Nodes (5): 1. Schedule & Priorities, 2026-09-24 — Daily Log, 2. Active Projects Progress, 3. Daily Learnings & Conceptual Nodes, 4. Tomorrow's Context (Agent Primer)
 
 ### Community 178 - "Community 178"
 Cohesion: 0.40
-Nodes (5): 3. ENERGY, ENVIRONMENT AND SOCIETY — EX 758, Evaluation Scheme, Objective, References, Syllabus
+Nodes (4): 1. Description of the Incident, 2. Root Cause Analysis, 3. Corrective Actions & Resolution, Incident / Failure Report: Headless PDF Rendering Race Condition & 404 Capture
 
 ### Community 179 - "Community 179"
 Cohesion: 0.40
-Nodes (5): 4. INFORMATION SYSTEMS — CT 751, Course Objectives, Practicals, References, Syllabus
+Nodes (5): 1. The Core Invariant Statement, 2. Rationale & Epistemic Grounding, 4. Operational Recognition & Automation Criteria, 📜 Architectural Invariant: INV-EPI-001 (Verbatim Conversational Logging), Automated Archival Utility
 
 ### Community 180 - "Community 180"
 Cohesion: 0.40
-Nodes (5): 5B. NETWORKING WITH IPv6 — CT 765.03, Course Objective, Practical, References, Syllabus
-
-### Community 181 - "Community 181"
-Cohesion: 0.40
-Nodes (5): 5E. BIG DATA TECHNOLOGIES — CT 765.07, Course Objectives, Practical, References, Syllabus
+Nodes (5): 3. ENERGY, ENVIRONMENT AND SOCIETY — EX 758, Components, Evaluation Scheme, Objective, PROJECT-II — EX 755
 
 ### Community 182 - "Community 182"
 Cohesion: 0.40
-Nodes (5): 6A. OPTICAL FIBER COMMUNICATION SYSTEM — EX 765.01, Course Objective, Practicals, References, Syllabus
+Nodes (5): Auto-Discovery, No Packaging Needed, Plugin-Specific Considerations, Skill Location in Plugins, Testing in Plugins
 
 ### Community 183 - "Community 183"
 Cohesion: 0.40
-Nodes (5): 6B. BROADCAST ENGINEERING — EX 765.03, Course Objectives, Practical, References, Syllabus
+Nodes (5): Common Mistakes to Avoid, Mistake 1: Weak Trigger Description, Mistake 2: Too Much in SKILL.md, Mistake 3: Second Person Writing, Mistake 4: Missing Resource References
 
 ### Community 184 - "Community 184"
 Cohesion: 0.40
-Nodes (5): 6C. DATABASE MANAGEMENT SYSTEMS — EX 765.06, Course Objectives, Practical, References, Syllabus
-
-### Community 185 - "Community 185"
-Cohesion: 0.40
-Nodes (5): 6F. GEOGRAPHICAL INFORMATION SYSTEM — CT 785.07, Course Objective, Practical, References, Syllabus
-
-### Community 186 - "Community 186"
-Cohesion: 0.40
-Nodes (5): 6G. POWER ELECTRONICS — EE 785.07, Course Objectives, Practical, References, Syllabus
-
-### Community 187 - "Community 187"
-Cohesion: 0.40
-Nodes (5): 6H. REMOTE SENSING — CT 785.01, Course Objective, Practical, References, Syllabus
-
-### Community 188 - "Community 188"
-Cohesion: 0.40
-Nodes (5): 6I. XML: FOUNDATIONS, TECHNIQUES AND APPLICATIONS — CT 785.05, Course Objectives, Practical, References, Syllabus
-
-### Community 189 - "Community 189"
-Cohesion: 0.40
-Nodes (5): 6J. ARTIFICIAL INTELLIGENCE — CT 785.06, Course Objectives, Practical, References, Syllabus
-
-### Community 191 - "Community 191"
-Cohesion: 0.40
-Nodes (5): Auto-Discovery, No Packaging Needed, Plugin-Specific Considerations, Skill Location in Plugins, Testing in Plugins
-
-### Community 192 - "Community 192"
-Cohesion: 0.40
-Nodes (5): Common Mistakes to Avoid, Mistake 1: Weak Trigger Description, Mistake 2: Too Much in SKILL.md, Mistake 3: Second Person Writing, Mistake 4: Missing Resource References
-
-### Community 193 - "Community 193"
-Cohesion: 0.40
 Nodes (5): Progressive Disclosure in Practice, What Goes in examples/, What Goes in references/, What Goes in scripts/, What Goes in SKILL.md
 
-### Community 194 - "Community 194"
+### Community 185 - "Community 185"
 Cohesion: 0.50
 Nodes (4): 7.14 Externalized Epistemic Memory & Falsifiable Hypothesis Card Schema, Epistemic Repository Architecture, The Hypothesis Card Standard (`research/hypotheses/HYP-template.yaml`), The LLM Consensus Trap
 
-### Community 195 - "Community 195"
+### Community 186 - "Community 186"
 Cohesion: 0.50
 Nodes (4): 7.15 The Worker Session Runtime: Resolving the Last-Mile Consumer Fleet Bottleneck, The 3-Stage Implementation Sequencing, The 5-Part Control Loop of the Worker Session Runtime (WSR), The Core Invariant: "The Task Belongs to the Orchestrator, Not the Worker"
 
-### Community 196 - "Community 196"
+### Community 187 - "Community 187"
 Cohesion: 0.50
 Nodes (4): 7.9 Economic Strategy: Zero-Cost Bootstrapping & The Superlinear Compute Threshold, Economic Telemetry Metrics, The 4 Scaling Thresholds, The Capital Asymmetry: Why Constraints Breed Superior Architecture
 
-### Community 197 - "Community 197"
+### Community 188 - "Community 188"
 Cohesion: 0.50
-Nodes (4): 4. The Three-Project Sequential Execution Roadmap, Project 1: Rebuild — SBR White-Box Audit (Hardware / Control Layer), Project 2: Integrate — Perception to Embedded Control (Systems Layer), Project 3: Research — Invariant Assurance Benchmark (Research Layer)
+Nodes (4): Active Architectural Charters, Methodological Invariants, 🏛️ Research Architectures Hub, 🎙️ Verbatim Provenance Logs
 
-### Community 198 - "Community 198"
+### Community 189 - "Community 189"
 Cohesion: 0.50
 Nodes (3): Experiment Log: INV-[ID], Findings & Epistemic Classification, Quantitative Metrics
 
-### Community 199 - "Community 199"
+### Community 190 - "Community 190"
 Cohesion: 0.50
 Nodes (4): 1. The Energy Chasm Invariant, 2. The Uncoalesced Burst Penalty Invariant, 3. The Isolated Scalar-Reduction Boundary Bound, 🔬 Invariant Spec: INV-MEM-001 (The Von Neumann Chasm & Coalescing Bounds)
 
-### Community 200 - "Community 200"
-Cohesion: 0.50
-Nodes (4): 1. Active Outreach Pipeline, 2. Preparedness Packet (Collateral Ready for Replies), 3. Protocol for Responses, Kathmandu University Research Lab Outreach Tracker
-
-### Community 201 - "Community 201"
+### Community 191 - "Community 191"
 Cohesion: 0.50
 Nodes (4): 1. Informal Reports (6 hours), 2. Project/Field Report (3 hours), 3. Formal Report (9 hours), Unit IV: Reports (18 hours)
 
-### Community 202 - "Community 202"
+### Community 192 - "Community 192"
 Cohesion: 0.50
 Nodes (4): 1. Intensive Reading (8 hours), 2. Extensive Reading (5 hours), 3. Contextual Grammar (2 hours), Unit I: Reading (15 hours)
 
-### Community 203 - "Community 203"
-Cohesion: 0.50
-Nodes (4): 1. TELECOMMUNICATION — EX 703, Course Objectives, References, Syllabus
-
-### Community 204 - "Community 204"
-Cohesion: 0.50
-Nodes (4): 2. ENGINEERING PROFESSIONAL PRACTICE — CE 752, Course Objective, References, Syllabus
-
-### Community 205 - "Community 205"
-Cohesion: 0.50
-Nodes (4): 5A. AGILE SOFTWARE DEVELOPMENT — CT 765.02, Course Objectives, References, Syllabus
-
-### Community 206 - "Community 206"
-Cohesion: 0.50
-Nodes (4): 5C. ADVANCED COMPUTER ARCHITECTURE — CT 765.04, Course Objectives, References, Syllabus
-
-### Community 207 - "Community 207"
-Cohesion: 0.50
-Nodes (4): 6D. MULTIMEDIA SYSTEM — CT 785.03, Course Objectives, References, Syllabus
-
-### Community 208 - "Community 208"
-Cohesion: 0.50
-Nodes (4): 6E. ENTERPRISE APPLICATION DESIGN AND DEVELOPMENT — CT 785.04, Course Objectives, References, Syllabus
-
-### Community 209 - "Community 209"
-Cohesion: 0.50
-Nodes (4): Components, Course Objectives, Evaluation Scheme, PROJECT-II — EX 755
-
-### Community 210 - "Community 210"
+### Community 193 - "Community 193"
 Cohesion: 0.50
 Nodes (4): description, pattern, type, id
 
-### Community 211 - "Community 211"
+### Community 194 - "Community 194"
 Cohesion: 0.50
-Nodes (4): $schema, description, format, type
+Nodes (4): description, pattern, type, module
 
-### Community 212 - "Community 212"
+### Community 195 - "Community 195"
 Cohesion: 0.50
 Nodes (4): version, description, pattern, type
 
-### Community 213 - "Community 213"
+### Community 196 - "Community 196"
 Cohesion: 0.50
 Nodes (4): maximum, minimum, type, pass_rate_percent
 
-### Community 214 - "Community 214"
+### Community 197 - "Community 197"
 Cohesion: 0.50
 Nodes (3): For /graphify add, For --watch, graphify reference: add a URL and watch a folder
 
-### Community 215 - "Community 215"
+### Community 198 - "Community 198"
 Cohesion: 0.50
 Nodes (3): For git commit hook, For native CLAUDE.md integration, graphify reference: commit hook and native CLAUDE.md integration
 
-### Community 216 - "Community 216"
+### Community 199 - "Community 199"
 Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
-### Community 217 - "Community 217"
+### Community 200 - "Community 200"
 Cohesion: 0.50
 Nodes (4): Complete Skill, Minimal Skill, Quick Reference, Standard Skill (Recommended)
 
-### Community 218 - "Community 218"
+### Community 201 - "Community 201"
 Cohesion: 0.50
 Nodes (4): Imperative/Infinitive Form, Objective, Instructional Language, Third-Person in Description, Writing Style Requirements
 
-### Community 219 - "Community 219"
+### Community 202 - "Community 202"
 Cohesion: 0.67
 Nodes (3): fail(), Dependency-free validation for the canonical ecosystem verification manifest., validate()
 
-### Community 220 - "Community 220"
-Cohesion: 0.67
-Nodes (3): 1.1 The Revolutionary Fallacy vs. The Evolutionary Invariant, 1.2 The Core Thesis: Ingress Boundary Reduction, 1. Executive Philosophy: The "Strangler Fig" Evolutionary Transition
-
-### Community 221 - "Community 221"
+### Community 203 - "Community 203"
 Cohesion: 0.67
 Nodes (3): 1. Editing, MLA/APA (2 hours), 2. Writing Notices with Agenda and Minutes (2 hours), Unit II: Introduction to Technical Writing Process and Meeting (4 hours)
 
-### Community 222 - "Community 222"
+### Community 204 - "Community 204"
 Cohesion: 0.67
-Nodes (3): 6K. SPEECH PROCESSING — CT 785.08, Course Objectives, Syllabus
+Nodes (3): BE ECIE — Year II / Part I Syllabus, Year II / Part I, Year IV / Part I
 
-### Community 223 - "Community 223"
+### Community 205 - "Community 205"
 Cohesion: 0.67
 Nodes (3): Language Lab (30 hours), Unit I: Listening (12 hours), Unit II: Speaking (18 hours)
 
-### Community 224 - "Community 224"
+### Community 206 - "Community 206"
 Cohesion: 0.67
 Nodes (3): description, type, description
 
-### Community 225 - "Community 225"
+### Community 207 - "Community 207"
 Cohesion: 0.67
 Nodes (3): description, type, deterministic
 
-### Community 226 - "Community 226"
-Cohesion: 0.67
-Nodes (3): description, type, location
-
-### Community 227 - "Community 227"
+### Community 208 - "Community 208"
 Cohesion: 0.67
 Nodes (3): description, type, outputs
 
-### Community 228 - "Community 228"
+### Community 209 - "Community 209"
+Cohesion: 0.67
+Nodes (3): runtime, description, type
+
+### Community 210 - "Community 210"
 Cohesion: 0.67
 Nodes (3): side_effects, description, type
 
-### Community 229 - "Community 229"
+### Community 211 - "Community 211"
 Cohesion: 0.67
 Nodes (3): minimum, type, completion_tokens
 
-### Community 230 - "Community 230"
+### Community 212 - "Community 212"
 Cohesion: 0.67
 Nodes (3): format, type, evaluated_at
 
-### Community 231 - "Community 231"
+### Community 213 - "Community 213"
 Cohesion: 0.67
 Nodes (3): minimum, type, latency_seconds
 
-### Community 232 - "Community 232"
+### Community 214 - "Community 214"
 Cohesion: 0.67
 Nodes (3): rework_count, minimum, type
 
-### Community 233 - "Community 233"
+### Community 215 - "Community 215"
 Cohesion: 0.67
 Nodes (3): tokens_total, minimum, type
 
 ## Knowledge Gaps
-- **1960 isolated node(s):** `$schema`, `$id`, `title`, `description`, `type` (+1955 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2132 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **58 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **1789 isolated node(s):** `10. Circuit Design (3 hours)`, `10. Data Files (5 hours)`, `10. Digital Devices Applications (2 hours)`, `10. Exception Handling (4 hours)`, `10. Graphs (6 hours)` (+1784 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1961 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **14 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `BE ECIE / BEIE — Complete Study Syllabus (Year I–IV)` connect `Community 0` to `Community 54`, `Community 59`, `Community 60`, `Community 66`, `Community 67`, `Community 68`, `Community 79`, `Community 80`, `Community 81`, `Community 94`, `Community 157`, `Community 178`, `Community 179`, `Community 180`, `Community 181`, `Community 182`, `Community 183`, `Community 184`, `Community 185`, `Community 186`, `Community 187`, `Community 188`, `Community 189`, `Community 201`, `Community 202`, `Community 203`, `Community 204`, `Community 205`, `Community 206`, `Community 207`, `Community 208`, `Community 209`, `Community 221`, `Community 222`, `Community 223`, `Community 238`, `Community 239`, `Community 240`, `Community 241`, `Community 242`, `Community 243`, `Community 244`, `Community 245`, `Community 246`, `Community 247`, `Community 248`, `Community 249`, `Community 250`, `Community 251`, `Community 252`, `Community 253`, `Community 254`, `Community 255`, `Community 256`, `Community 257`, `Community 258`, `Community 259`, `Community 260`, `Community 261`, `Community 262`, `Community 263`, `Community 264`, `Community 265`, `Community 266`, `Community 267`, `Community 268`, `Community 269`, `Community 270`, `Community 271`, `Community 272`, `Community 273`, `Community 274`, `Community 275`, `Community 276`, `Community 277`, `Community 278`, `Community 279`, `Community 280`, `Community 281`, `Community 282`, `Community 283`, `Community 284`, `Community 285`, `Community 286`, `Community 287`, `Community 288`, `Community 289`, `Community 290`?**
-  _High betweenness centrality (0.185) - this node is a cross-community bridge._
-- **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 62` to `Community 18`, `Community 155`, `Community 44`, `Community 154`?**
-  _High betweenness centrality (0.025) - this node is a cross-community bridge._
+- **Why does `BE ECIE / BEIE — Complete Study Syllabus (Year I–IV)` connect `Community 0` to `Community 4`, `Community 135`, `Community 136`, `Community 153`, `Community 27`, `Community 28`, `Community 180`, `Community 60`, `Community 191`, `Community 192`, `Community 66`, `Community 203`, `Community 204`, `Community 77`, `Community 78`, `Community 79`, `Community 80`, `Community 205`, `Community 220`, `Community 221`, `Community 222`, `Community 94`, `Community 223`, `Community 224`, `Community 225`, `Community 226`, `Community 227`, `Community 228`, `Community 109`?**
+  _High betweenness centrality (0.182) - this node is a cross-community bridge._
+- **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 62` to `Community 159`, `Community 46`, `Community 160`, `Community 87`?**
+  _High betweenness centrality (0.036) - this node is a cross-community bridge._
+- **Why does `Comprehensive Repository Epistemic & Claims Audit` connect `Community 16` to `Community 87`?**
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 5 inferred relationships involving `NepalLawHarvesterTests` (e.g. with `CircuitBreaker` and `CrawlPolicy`) actually correct?**
-  _`NepalLawHarvesterTests` has 5 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `$schema`, `$id`, `title` to the rest of the system?**
-  _1960 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `10. Circuit Design (3 hours)`, `10. Data Files (5 hours)`, `10. Digital Devices Applications (2 hours)` to the rest of the system?**
+  _1789 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.005221932114882507 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.006153846153846154 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.05548654244306418 - nodes in this community are weakly interconnected._

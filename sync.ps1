@@ -49,6 +49,9 @@
 .PARAMETER NoReconcile
     Bypasses the automatic reconciliation step during routine commit and push synchronization.
 
+.PARAMETER NoGraphify
+    Bypasses the automatic Graphify knowledge graph update and stale artifact cleanup.
+
 .PARAMETER PullOnly
     Safely pull remote updates with --rebase --autostash without committing or pushing.
 
@@ -107,6 +110,8 @@ param (
     [switch]$Reconcile,
 
     [switch]$NoReconcile,
+
+    [switch]$NoGraphify,
 
     [switch]$WhatIf,
 
@@ -975,6 +980,24 @@ try {
         }
         else {
             Write-Success "All documentation counts and invariant ledgers dynamically reconciled."
+        }
+    }
+
+    # 3.6 Dynamic Graphify Knowledge Graph Auto-Update & Stale Cleanup
+    if (-not $NoGraphify -and (Test-Path (Join-Path $RepoPath "graphify.ps1"))) {
+        Write-Status "Executing Graphify knowledge graph auto-update and stale artifact cleanup..." -Color ([System.ConsoleColor]::Cyan)
+        $graphifyScript = Join-Path $RepoPath "graphify.ps1"
+        try {
+            & $graphifyScript -TargetDirectory $RepoPath -Update
+            if ($LASTEXITCODE -ne 0) {
+                Write-Notice "Notice: Graphify update returned non-zero code ($LASTEXITCODE); proceeding with sync."
+            }
+            else {
+                Write-Success "Knowledge graph in graphify-out synchronized and stales pruned."
+            }
+        }
+        catch {
+            Write-Notice "Notice: Graphify update encountered error ($_); proceeding with sync."
         }
     }
 

@@ -48,10 +48,10 @@
     "semantic_hash": "0748921e00526ceac63918a0383627c6"
   },
   "sync.ps1": {
-    "mtime": 1790476927.496336,
-    "seen": 1790599911.667132,
-    "ast_hash": "5d333016e0ed4651a5fa30f8b7d5ad79",
-    "semantic_hash": "5d333016e0ed4651a5fa30f8b7d5ad79"
+    "mtime": 1790600175.371946,
+    "seen": 1790600193.8414218,
+    "ast_hash": "dcfeba0e2505591bff7377de34bee06d",
+    "semantic_hash": "dcfeba0e2505591bff7377de34bee06d"
   },
   "research/architectures/ARCH-RFC-001-RECORD-KEEPING-STANDARD.md": {
     "mtime": 1790044861.1275935,
@@ -516,10 +516,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790599870.1485686,
-    "seen": 1790599911.6670952,
-    "ast_hash": "82f68bdb18a882b8424304af9ecdfb6c",
-    "semantic_hash": "82f68bdb18a882b8424304af9ecdfb6c"
+    "mtime": 1790600190.3858001,
+    "seen": 1790600193.841368,
+    "ast_hash": "d12f5e52b4b74b29e9b46e0eb913333c",
+    "semantic_hash": "d12f5e52b4b74b29e9b46e0eb913333c"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -570,10 +570,10 @@
     "semantic_hash": "ef915c5d8d1809c77777dfc027680b8a"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790599867.7525473,
-    "seen": 1790599911.6670942,
-    "ast_hash": "b91809dc905da09796eaa2103715ac47",
-    "semantic_hash": "b91809dc905da09796eaa2103715ac47"
+    "mtime": 1790600188.1486783,
+    "seen": 1790600193.841366,
+    "ast_hash": "47ab7e692f98f715338426d796014736",
+    "semantic_hash": "47ab7e692f98f715338426d796014736"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,

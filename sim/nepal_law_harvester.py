@@ -556,7 +556,7 @@ class LegalHarvesterDatabase:
                     depth INTEGER NOT NULL,
                     status TEXT DEFAULT 'QUEUED',
                     claimed_by TEXT,
-                    lease_expires_at TIMESTAMP,
+                    lease_expires_at REAL,
                     retry_count INTEGER DEFAULT 0,
                     last_error TEXT,
                     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -619,14 +619,15 @@ class LegalHarvesterDatabase:
         Atomically claims the highest-priority pending task following IDBFS ordering (lowest depth first).
         Recovers tasks with expired worker leases.
         """
+        now = time.time()
         with self._get_connection() as conn:
             cur = conn.cursor()
             query = """
                 SELECT task_id, domain, url, depth, retry_count
                 FROM crawl_tasks
-                WHERE (status = 'QUEUED' OR (status = 'CLAIMED' AND lease_expires_at < CURRENT_TIMESTAMP))
+                WHERE (status = 'QUEUED' OR (status = 'CLAIMED' AND lease_expires_at < ?))
             """
-            params: List[Any] = []
+            params: List[Any] = [now]
             if max_depth is not None:
                 query += " AND depth <= ?"
                 params.append(max_depth)
@@ -638,15 +639,15 @@ class LegalHarvesterDatabase:
                 return None
                 
             task_id = row["task_id"]
-            # Set lease timestamp in SQLite
+            expires_at = now + lease_seconds
             cur.execute("""
                 UPDATE crawl_tasks
                 SET status = 'CLAIMED',
                     claimed_by = ?,
-                    lease_expires_at = datetime('now', '+' || ? || ' seconds'),
+                    lease_expires_at = ?,
                     updated_at = CURRENT_TIMESTAMP
                 WHERE task_id = ?
-            """, (worker_id, lease_seconds, task_id))
+            """, (worker_id, expires_at, task_id))
             conn.commit()
             
             return {
@@ -659,14 +660,16 @@ class LegalHarvesterDatabase:
 
     def heartbeat_task(self, task_id: int, worker_id: str, lease_seconds: int = 60) -> bool:
         """Extends worker lease for long-running extractions (e.g. large PDF OCR)."""
+        now = time.time()
+        expires_at = now + lease_seconds
         with self._get_connection() as conn:
             cur = conn.cursor()
             cur.execute("""
                 UPDATE crawl_tasks
-                SET lease_expires_at = datetime('now', '+' || ? || ' seconds'),
+                SET lease_expires_at = ?,
                     updated_at = CURRENT_TIMESTAMP
                 WHERE task_id = ? AND claimed_by = ? AND status = 'CLAIMED'
-            """, (lease_seconds, task_id, worker_id))
+            """, (expires_at, task_id, worker_id))
             conn.commit()
             return cur.rowcount > 0
 
@@ -721,6 +724,7 @@ class LegalHarvesterDatabase:
 
     def reclaim_expired_tasks(self) -> int:
         """Reclaims any orphaned leases where the worker died or lost connectivity."""
+        now = time.time()
         with self._get_connection() as conn:
             cur = conn.cursor()
             cur.execute("""
@@ -729,8 +733,8 @@ class LegalHarvesterDatabase:
                     claimed_by = NULL,
                     lease_expires_at = NULL,
                     updated_at = CURRENT_TIMESTAMP
-                WHERE status = 'CLAIMED' AND lease_expires_at < CURRENT_TIMESTAMP
-            """)
+                WHERE status = 'CLAIMED' AND lease_expires_at < ?
+            """, (now,))
             conn.commit()
             return cur.rowcount
 

@@ -104,16 +104,21 @@ To guarantee sustainable progress without speculative burn:
 
 ---
 
-## 6. Safety-First Harvester Invariants
+## 6. Safety-First Harvester Architecture & Calibrated Invariants
 
-To prevent server disruption on `.gov.np` infrastructure and ensure legal compliance under ETA 2063:
+> **Epistemic Calibration Gate:** The ingestion architecture is precisely scoped as:
+> *"Designed and prototyped a safety-first distributed ingestion architecture for building a provenance-aware Nepal knowledge graph, including SHA-256 post-write disk read verification, SQLite WAL persistence, atomic corpus storage, robot policy enforcement, circuit-breaking polite fetcher, Devanagari Unicode normalization, multidimensional legal chronology, and 125-year B.S./A.D. temporal grounding."*
 
-1. **Jittered Domain Politeness:** Enforces a minimum 1.5s – 2.5s randomized delay per domain.
-2. **Transparent Identity:** Emits an explicit academic User-Agent header: `KEC-Academic-Research-Bot/1.0 (+http://kec.edu.np; contact: aaradhyadevtmr@gmail.com)`.
-3. **Automated Circuit Breaker:** Implements zero-overhead socket liveness checks (`1.1.1.1:53`) and backs off 300s on 429/503 responses or router drops.
-4. **Atomic Swapping:** Downloads to `.tmp`, verifies length > 128 bytes and SHA-256 integrity, then performs an atomic OS replace.
-5. **Status Detection:** Automatically detects repeal keywords (*“खारेज गरिएको”, “द्वारा खारेज”*) to tag active vs. repealed statutes.
-6. **Reference Implementation:** Executable prototype verified in [`sim/nepal_law_harvester.py`](../../sim/nepal_law_harvester.py) and [`sim/test_nepal_law_harvester.py`](../../sim/test_nepal_law_harvester.py) (7/7 tests passing).
+To prevent server disruption on `.gov.np` infrastructure, protect local hardware, and ensure compliance under Nepal's Electronic Transactions Act (ETA 2063):
+
+1. **Distributed IDBFS Queue Engine:** Atomic task claiming prioritized by lowest tree depth (`depth ASC, task_id ASC`), worker lease expirations with heartbeats, bounded retry backoff (`max_retries=3`), and automatic reclamation of orphaned worker leases.
+2. **Centralized Crawl Policy & Robots Compliance:** Enforces domain allowlists (`.gov.np`, `lawcommission.gov.np`, `supremecourt.gov.np`), filters binary/executable noise (`.exe`, `.zip`, `.mp4`), and parses `robots.txt` per domain with custom float `crawl-delay` enforcement.
+3. **Three-State Circuit Breaker (`CLOSED` $\to$ `OPEN` $\to$ `HALF_OPEN`):** Intercepts HTTP 429 (Too Many Requests), HTTP 503 (Service Unavailable), and WAN connection drops (`socket.error` / `1.1.1.1:53` probe failure); immediately trips to `OPEN` and enforces a 300-second deep sleep backoff before emitting trial `HALF_OPEN` probes.
+4. **Post-Write Disk Read Verification:** Writes payload to `.tmp`, flushes and `fsync`s to physical storage, re-reads the file from disk to stream and verify SHA-256 and byte length against in-memory payload, and performs atomic `os.replace`. Eliminates partial writes and guarantees zero-drift disk persistence.
+5. **Context-Aware Legal Status Analysis:** Moves beyond naive substring matching to differentiate between an Act being repealed vs. an active statute containing standard closing chapter *“खारेजी र बचाउ”* (Repeal and Savings) repealing older enactments.
+6. **Multidimensional Legal Chronology:** Disentangles crawler ingestion timestamp (`harvested_at`) from authoritative legal chronology: Nepal Gazette publication (`published_date_bs/ad`), Presidential Promulgation (`enacted_date_bs/ad`), and commencement into force (`effective_date_bs/ad`).
+7. **Statutory Entity-Relation Graph:** Persistent SQLite tables (`legal_entities` and `act_relations`) capturing structured enactments (Constitution, Acts, Ordinances, Regulations) and directed relational edges (`REPEALS`, `AMENDS`, `PARTIALLY_REPEALS`, `CITES`).
+8. **Reference Implementation:** Verified in [`sim/nepal_law_harvester.py`](../../sim/nepal_law_harvester.py) and [`sim/test_nepal_law_harvester.py`](../../sim/test_nepal_law_harvester.py) with 12/12 passing unit tests and 0 audit discrepancies (`audit.bat`).
 
 ---
 

@@ -1148,11 +1148,11 @@ Nodes (3): tokens_total, minimum, type
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `BE ECIE / BEIE — Complete Study Syllabus (Year I–IV)` connect `Community 0` to `Community 5`, `Community 133`, `Community 24`, `Community 153`, `Community 28`, `Community 34`, `Community 181`, `Community 62`, `Community 191`, `Community 192`, `Community 75`, `Community 76`, `Community 77`, `Community 78`, `Community 206`, `Community 204`, `Community 205`, `Community 90`, `Community 222`, `Community 223`, `Community 224`, `Community 225`, `Community 226`, `Community 227`, `Community 228`, `Community 229`, `Community 230`, `Community 108`?**
-  _High betweenness centrality (0.200) - this node is a cross-community bridge._
+  _High betweenness centrality (0.163) - this node is a cross-community bridge._
 - **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 64` to `Community 19`, `Community 157`, `Community 158`, `Community 47`?**
-  _High betweenness centrality (0.032) - this node is a cross-community bridge._
-- **Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `Community 47` to `Community 64`, `Community 122`, `Community 172`, `Community 173`, `Community 174`, `Community 186`, `Community 187`, `Community 188`, `Community 159`?**
-  _High betweenness centrality (0.022) - this node is a cross-community bridge._
+  _High betweenness centrality (0.025) - this node is a cross-community bridge._
+- **Why does `References` connect `Community 5` to `Community 0`, `Community 34`, `Community 133`, `Community 75`, `Community 76`, `Community 108`, `Community 78`, `Community 77`, `Community 181`, `Community 24`, `Community 90`?**
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `10. Circuit Design (3 hours)`, `10. Data Files (5 hours)`, `10. Digital Devices Applications (2 hours)` to the rest of the system?**

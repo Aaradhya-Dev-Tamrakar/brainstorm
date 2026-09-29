@@ -3665,17 +3665,17 @@
     {
       "type": "bridge_node",
       "question": "Why does `BE ECIE / BEIE — Complete Study Syllabus (Year I–IV)` connect `Community 0` to `Community 5`, `Community 133`, `Community 24`, `Community 153`, `Community 28`, `Community 34`, `Community 181`, `Community 62`, `Community 191`, `Community 192`, `Community 75`, `Community 76`, `Community 77`, `Community 78`, `Community 206`, `Community 204`, `Community 205`, `Community 90`, `Community 222`, `Community 223`, `Community 224`, `Community 225`, `Community 226`, `Community 227`, `Community 228`, `Community 229`, `Community 230`, `Community 108`?",
-      "why": "High betweenness centrality (0.200) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.163) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
       "question": "Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 64` to `Community 19`, `Community 157`, `Community 158`, `Community 47`?",
-      "why": "High betweenness centrality (0.032) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.025) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
-      "question": "Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `Community 47` to `Community 64`, `Community 122`, `Community 172`, `Community 173`, `Community 174`, `Community 186`, `Community 187`, `Community 188`, `Community 159`?",
-      "why": "High betweenness centrality (0.022) - this node is a cross-community bridge."
+      "question": "Why does `References` connect `Community 5` to `Community 0`, `Community 34`, `Community 133`, `Community 75`, `Community 76`, `Community 108`, `Community 78`, `Community 77`, `Community 181`, `Community 24`, `Community 90`?",
+      "why": "High betweenness centrality (0.017) - this node is a cross-community bridge."
     },
     {
       "type": "verify_inferred",

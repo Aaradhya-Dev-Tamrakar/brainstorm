@@ -36,16 +36,27 @@ BRL operates across a calibrated hybrid model, combining high-trust physical tou
 │                        BRAINSTORM RESEARCH LAB                         │
 ├──────────────────────────────────┬─────────────────────────────────────┤
 │      PHYSICAL / HYBRID ROOT      │       DISTRIBUTED ASYNC ROOT        │
-│    • KEC Makerspace / Hardware   │    • GitHub Organization Ecosystem  │
+│    • KEC Makerspace (FCFS Hub)   │    • GitHub Organization Ecosystem  │
 │    • IEEE KEC KTM Executive Hub  │    • Dual-Layer Verification Gates  │
 │    • Direct Mentorship Sprints   │    • Graphify Topological Knowledge │
-│    • Physical Sensor Benches     │    • NotebookLM Cognitive Grounding │
+│    • Informal Coworking Sessions │    • NotebookLM Cognitive Grounding │
 └──────────────────────────────────┴─────────────────────────────────────┘
 ```
 
 1. **Academic Seniority & Institutional Leverage:** Directed by the final-year IEEE KEC KTM Vice-Chair, enabling cross-faculty engagement across Computer, Electronics, and Civil/Mechanical engineering faculties.
-2. **Physical Maker Infrastructure:** Hands-on prototyping and sensor testbeds hosted at KEC Makerspace.
-3. **Deterministic Digital Ground Truth:** All codebase contributions must pass through `sim/` regression suites and `.\audit.bat` before entering the canonical knowledge graph.
+2. **Physical Maker Space Policy (Strict FCFS Invariant):**
+   - The KEC Makerspace operates strictly on a **First-Come, First-Served (FCFS)** basis under college rules. BRL claims zero special queue privileges, reserved desks, or room ownership.
+   - **Cloud/Laptop-Native Decoupling:** BRL research quests are **100% laptop-native and asynchronous**. Fellows do not depend on physical maker benches to make progress; coworking at the makerspace or campus library is purely optional.
+3. **Google Ecosystem & Industry Alignment (Fusemachines Standard):**
+   - BRL aligns its external tooling with the Google ecosystem (the standard utilized by **Fusemachines** and leading international AI shops) across three tiers:
+     - **Tier 1 (Pedagogy & Collaboration):** Google NotebookLM (queryable lab handbook via `super-nlm`), Google Colab (free T4 GPU execution), and Google Drive (dataset distribution via `scripts/sync_drive.py`).
+     - **Tier 2 (AI Compute & Datasets):** Google AI Studio (generous free-tier Gemini 1.5/2.0 Flash APIs for NLP/OCR seeds) and Kaggle (30 hrs/week free dual-GPU quotas).
+     - **Tier 3 (Enterprise Alignment):** GCP Vertex AI / BigQuery deployment patterns for advanced fellows targeting industrial roles.
+   - **Architectural Guardrails:**
+     - *Git Ground Truth:* Git and Markdown remain the sole source of truth; Google Docs/Sheets are for scratchpads only.
+     - *Zero Mandatory Spend:* All cohort workflows must remain 100% executable on free tiers without requiring personal credit cards.
+     - *Audit Independence:* Dual-layer verification (`.\audit.bat`) must execute fully offline and deterministically without external cloud API dependencies.
+4. **Deterministic Digital Ground Truth:** All codebase contributions must pass through `sim/` regression suites and `.\audit.bat` before entering the canonical knowledge graph.
 
 ---
 
@@ -128,7 +139,53 @@ Every quest submission is evaluated across 5 objective axes, scored from 0 to 3:
 
 ---
 
-## 7. Governance, IP Boundary & Contributor Agreement
+## 7. Zero-Cost Merit Reward Protocol & Metric-Backed LOR Engine
+
+BRL operates with **zero paid tool subscriptions and zero financial barrier to entry**. Rewards are designed to deliver maximum career leverage, academic provenance, and graduate admissions impact for fellows without requiring external capital:
+
+```text
+┌────────────────────────────────────────────────────────────────────────┐
+│                   100% ZERO-COST BRL MERIT REWARDS                     │
+├──────────────────────────────────┬─────────────────────────────────────┤
+│ 1. Metric-Backed LOR             │ 2. Cryptographic Digital Cert       │
+│ • Official letter signed by you  │ • Auto-generated PDF / web badge    │
+│ • Cites exact Git SHAs & metrics │ • Verifiable on GitHub Pages        │
+├──────────────────────────────────┼─────────────────────────────────────┤
+│ 3. Academic Co-Authorship        │ 4. Free-Tier Compute Mastery        │
+│ • Named author on conference     │ • Kaggle 30 hrs/wk free dual-GPU    │
+│   papers / technical dossiers    │ • Google AI Studio free Gemini keys │
+├──────────────────────────────────┼─────────────────────────────────────┤
+│ 5. 1-on-1 Systems Review         │ 6. Cohort 1 Leadership Title        │
+│ • Deep-dive architectural review │ • Promoted to "Quest Lead / Mentor" │
+│   for fellow's own major project │ • High-prestige LinkedIn credential │
+└──────────────────────────────────┴─────────────────────────────────────┘
+```
+
+### Deterministic Merit Ledger (`merit_ledger.json`)
+All merit progression is tracked deterministically in [`research/fellows/merit_ledger.json`](../fellows/merit_ledger.json). The 0–15 evaluation rubric maps directly to Merit XP:
+
+* **Score 8–11 (Pass):** $+100\text{ XP}$ $\rightarrow$ Unlocks Rank E badge, public Git commit credit, and portfolio authorship rights.
+* **Score 12–14 (High Distinction):** $+150\text{ XP}$ $\rightarrow$ Unlocks Rank D badge, 1-on-1 architecture review session with the Lab Director, and Kaggle GPU automation workflows.
+* **Score 15/15 (Exemplary):** $+200\text{ XP}$ $\rightarrow$ Unlocks Rank C eligibility, priority academic paper co-authorship, and official eligibility for a **Metric-Backed Letter of Recommendation**.
+
+### The 6 Core Merit Rewards:
+1. **Metric-Backed Letter of Recommendation (LOR):**
+   - Issued on IEEE KEC KTM / Brainstorm Research Laboratory letterhead, signed by Aaradhya (Vice-Chair & Lab Director).
+   - Uniquely cites exact Git commit SHAs, reproducible test pass rates, lines of code, and invariant properties verified.
+2. **Verifiable Cryptographic Credential:**
+   - Digital fellowship credential hosted at `AaradhyaDT.github.io/verify/<fellow_id>`, linking directly to verified GitHub PRs.
+3. **Formal Academic Co-Authorship:**
+   - Named co-authorship or formal acknowledgment on research publications, IEEE workshop submissions, and public dataset releases (e.g., NISR corpus).
+4. **1-on-1 Systems Architecture & Major Project Review:**
+   - Dedicated 45-minute architectural deep-dive and debugging review with Aaradhya for the fellow's undergraduate major project or personal system build.
+5. **Cohort 1 Quest Lead Title:**
+   - High-performing C0 fellows are promoted to lead and mentor junior engineering cohorts (*"Lead Research Mentor — Brainstorm Research Laboratory"*).
+6. **Zero-Cost Cloud Compute & GPU Mastery:**
+   - Hands-on setup of free compute resources: Kaggle (30 hrs/week free dual-T4/P100 GPUs), Google AI Studio (free-tier Gemini Flash), and GitHub Student Developer Pack.
+
+---
+
+## 8. Governance, IP Boundary & Contributor Agreement
 
 To maintain institutional integrity while protecting intellectual property, all participants adhere to the **BRL Contributor Agreement**:
 
@@ -147,7 +204,7 @@ To maintain institutional integrity while protecting intellectual property, all 
 
 ---
 
-## 8. Multi-Phase Roadmap & Future Scaling
+## 9. Multi-Phase Roadmap & Future Scaling
 
 ```text
 ┌────────────────────────────────────────────────────────────────────────┐

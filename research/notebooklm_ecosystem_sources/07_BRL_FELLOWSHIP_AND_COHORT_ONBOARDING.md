@@ -64,7 +64,26 @@ Contributors advance through five distinct ranks based strictly on deterministic
 
 ---
 
-## 5. Frequently Asked Questions (FAQ)
+## 5. Zero-Cost Merit Rewards & Progression Rights
+
+BRL operates with **zero paid subscriptions**. Every fellow earns high-leverage career, academic, and portfolio credentials tracked in [`research/fellows/merit_ledger.json`](../fellows/merit_ledger.json):
+
+1. **Metric-Backed Letter of Recommendation (LOR):** Signed by Aaradhya (IEEE KEC KTM Vice-Chair & BRL Director) citing exact Git commit hashes, unit test benchmarks, and reproducible artifacts.
+2. **Cryptographic Digital Certificate:** Verifiable credential hosted on `AaradhyaDT.github.io/verify/`.
+3. **Academic Co-Authorship:** Formal co-authorship on conference papers or public dataset releases.
+4. **1-on-1 Systems Architecture Review:** Personal architectural and code review sessions for the fellow's own undergraduate major project.
+5. **Cohort 1 Leadership:** Promotion to Quest Lead and Mentor for subsequent cohorts.
+6. **Free Compute Setup:** Hands-on setup of free Kaggle dual-GPUs (30 hrs/wk), Google AI Studio free Gemini Flash API, and GitHub Student Pack.
+
+---
+
+## 6. Frequently Asked Questions (FAQ)
+
+### Q: Do I need to buy any paid subscriptions or software?
+**A:** No. All BRL workflows, simulations, and compute requirements operate 100% on free-tier tools (Kaggle, Google Colab free tier, Google AI Studio free tier) and local Python runtimes.
+
+### Q: Are we required to be physically present at KEC Makerspace?
+**A:** No. In-person sprints at KEC Makerspace operate strictly on a **First-Come, First-Served (FCFS)** basis under college rules. All BRL quests are **100% laptop-native and asynchronous**—you can make full progress from home, hostel, or library without being blocked by physical desk availability.
 
 ### Q: Can I use ChatGPT / Claude / Gemini for my quests?
 **A:** Yes, as productivity tools. However, you are evaluated on **problem decomposition, data integrity, edge-case analysis, and deterministic execution**. Submitting unverified AI-generated text, fake citations, or unrunnable code constitutes an immediate failure of the audit gate.

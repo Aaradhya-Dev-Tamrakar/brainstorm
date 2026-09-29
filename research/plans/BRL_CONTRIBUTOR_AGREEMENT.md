@@ -59,8 +59,20 @@ This Contributor Agreement establishes the rights, responsibilities, intellectua
 2. **Shared Communication:** Technical inquiries, environment bugs, and quest questions must be posted in the designated shared laboratory channel rather than private direct messages, ensuring transparent peer learning.
 3. **Graceful Exit / Pause:** Contributors experiencing academic overloads, exam periods, or personal emergencies may invoke a `[PAUSE]` at any time without penalty or social friction. Completed work remains attributed; unfinished quests are safely reassigned.
 
+## 6. Zero-Cost Merit Rewards & Progression Rights
+
+1. **Deterministic Merit Ledger:** Contributor progress and Quest evaluations are recorded deterministically in [`research/fellows/merit_ledger.json`](../fellows/merit_ledger.json).
+2. **Reward Eligibility:** Fellows who complete quests and demonstrate epistemic rigor earn verified institutional rewards at zero financial cost:
+   - Official **Metric-Backed Letters of Recommendation (LOR)** signed by the IEEE KEC KTM Vice-Chair & BRL Director.
+   - Publicly verifiable **Cryptographic Digital Certificates** hosted on `AaradhyaDT.github.io/verify/`.
+   - Named **Academic Co-Authorship** or formal acknowledgments on research publications and datasets.
+   - 1-on-1 systems architecture and debugging reviews for the fellow's personal/academic major projects.
+   - **Cohort 1 Quest Lead** appointments.
+3. **Zero Financial Obligations:** Fellows are never required to purchase software subscriptions, cloud credits, or specialized hardware. All tools and compute options are designed to function on generous free tiers (Kaggle 30h/wk GPU, Google AI Studio free tier, Google Colab).
+4. **Physical Maker Space Policy:** In-person sprints hosted at KEC Makerspace adhere strictly to the college's First-Come, First-Served (FCFS) rules. All BRL quests remain 100% laptop-native and asynchronous, ensuring fellows are never bottlenecked by physical bench availability.
+
 ---
 
-## 6. Acknowledgment & Sign-Off
+## 7. Acknowledgment & Sign-Off
 
 By submitting the BRL Intake Form, executing Quest 0, or contributing code to BRL repositories, the contributor affirms that they have read, understood, and agreed to be bound by the terms of this Agreement.

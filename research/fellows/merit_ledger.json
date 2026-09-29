@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "program": "Brainstorm Research Laboratory — Merit Rewards Ledger",
+  "authority": "PLAN-BRL-001",
+  "director": "Aaradhya Dev Tamrakar",
+  "scoring_matrix": {
+    "rubric_max_points": 15,
+    "pass_threshold": 8,
+    "xp_tiers": {
+      "pass": {
+        "min_score": 8,
+        "max_score": 11,
+        "xp": 100,
+        "designation": "Quest Verified (Rank E)",
+        "rewards": ["PUBLIC_GIT_COMMIT_CREDIT", "PORTFOLIO_AUTHORSHIP"]
+      },
+      "high_distinction": {
+        "min_score": 12,
+        "max_score": 14,
+        "xp": 150,
+        "designation": "High Distinction (Rank D)",
+        "rewards": ["COMPUTE_GUIDANCE_KAGGLE_GPU", "ARCHITECTURAL_REVIEW_SESSION", "RANK_D_BADGE"]
+      },
+      "exemplary": {
+        "min_score": 15,
+        "max_score": 15,
+        "xp": 200,
+        "designation": "Exemplary Execution (Rank C/B)",
+        "rewards": ["METRIC_BACKED_LOR_ELIGIBLE", "PAPER_CO_AUTHORSHIP_PRIORITY", "COHORT_1_QUEST_LEAD_ELIGIBLE"]
+      }
+    }
+  },
+  "rewards_catalog": [
+    {
+      "id": "METRIC_BACKED_LOR",
+      "name": "Metric-Backed Letter of Recommendation",
+      "cost": 0,
+      "authority": "IEEE KEC KTM Vice-Chair & BRL Director",
+      "description": "Formal LOR citing exact Git commit hashes, unit test benchmarks, and verified artifacts for grad school / employment."
+    },
+    {
+      "id": "CRYPTOGRAPHIC_CREDENTIAL",
+      "name": "Verifiable Digital Fellowship Certificate",
+      "cost": 0,
+      "authority": "Brainstorm Research Laboratory",
+      "description": "Publicly verifiable fellowship certificate hosted on AaradhyaDT.github.io linking to merged PRs."
+    },
+    {
+      "id": "ACADEMIC_CO_AUTHORSHIP",
+      "name": "Formal Academic Co-Authorship & Acknowledgment",
+      "cost": 0,
+      "authority": "Research Track Principal Investigator",
+      "description": "Named co-authorship or formal acknowledgments on IEEE/ACM conference papers and public datasets."
+    },
+    {
+      "id": "ARCHITECTURAL_REVIEW_SESSION",
+      "name": "1-on-1 Systems Architecture & Major Project Review",
+      "cost": 0,
+      "authority": "Aaradhya Dev Tamrakar",
+      "description": "Deep-dive 1-on-1 technical review and debugging session for the fellow's personal or academic final-year projects."
+    },
+    {
+      "id": "COHORT_1_QUEST_LEAD",
+      "name": "Cohort 1 Quest Lead & Mentorship Title",
+      "cost": 0,
+      "authority": "BRL Directorate",
+      "description": "Formal appointment as Lead Research Mentor for Cohort 1 on LinkedIn and CV."
+    },
+    {
+      "id": "FREE_COMPUTE_NAVIGATION",
+      "name": "Zero-Cost Cloud Compute & GPU Mastery",
+      "cost": 0,
+      "authority": "BRL Tooling Lead",
+      "description": "Guided activation of Kaggle 30h/wk free dual-GPU, Google AI Studio free Gemini API, and GitHub Student Pack."
+    }
+  ],
+  "active_fellows": []
+}

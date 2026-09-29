@@ -259,16 +259,16 @@
 10. `2. Core Architectural & Systemic Limitations` - 17 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `InvariantAssuranceEngineTests` --uses--> `InvariantClassification`  [INFERRED]
-  sim/test_invariant_engine.py → sim/invariant_engine/contract_types.py
 - `SMTInvariantProver` --uses--> `InvariantProperty`  [INFERRED]
   sim/invariant_engine/smt_encoder.py → sim/invariant_engine/contract_types.py
 - `SMTInvariantProver` --uses--> `VerificationResult`  [INFERRED]
   sim/invariant_engine/smt_encoder.py → sim/invariant_engine/contract_types.py
-- `SandboxReplayEngine` --uses--> `BaseStateMachine`  [INFERRED]
-  sim/invariant_engine/sandbox_replay.py → sim/invariant_engine/state_machine.py
-- `InvariantAssuranceEngineTests` --uses--> `SandboxReplayEngine`  [INFERRED]
-  sim/test_invariant_engine.py → sim/invariant_engine/sandbox_replay.py
+- `SMTInvariantProver` --uses--> `BaseStateMachine`  [INFERRED]
+  sim/invariant_engine/smt_encoder.py → sim/invariant_engine/state_machine.py
+- `InvariantAssuranceEngineTests` --uses--> `SMTInvariantProver`  [INFERRED]
+  sim/test_invariant_engine.py → sim/invariant_engine/smt_encoder.py
+- `InvariantAssuranceEngineTests` --uses--> `InvariantClassification`  [INFERRED]
+  sim/test_invariant_engine.py → sim/invariant_engine/contract_types.py
 
 ## Import Cycles
 - None detected.
@@ -1168,11 +1168,11 @@ Nodes (3): tokens_total, minimum, type
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `BE ECIE / BEIE — Complete Study Syllabus (Year I–IV)` connect `Community 0` to `Community 6`, `Community 139`, `Community 140`, `Community 158`, `Community 30`, `Community 31`, `Community 186`, `Community 65`, `Community 196`, `Community 197`, `Community 70`, `Community 80`, `Community 81`, `Community 82`, `Community 83`, `Community 211`, `Community 209`, `Community 210`, `Community 96`, `Community 227`, `Community 228`, `Community 229`, `Community 230`, `Community 231`, `Community 232`, `Community 233`, `Community 234`, `Community 235`, `Community 113`?**
-  _High betweenness centrality (0.194) - this node is a cross-community bridge._
+  _High betweenness centrality (0.167) - this node is a cross-community bridge._
 - **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 66` to `Community 48`, `Community 163`, `Community 164`, `Community 21`?**
-  _High betweenness centrality (0.037) - this node is a cross-community bridge._
+  _High betweenness centrality (0.050) - this node is a cross-community bridge._
 - **Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `Community 48` to `Community 192`, `Community 128`, `Community 193`, `Community 66`, `Community 165`, `Community 176`, `Community 177`, `Community 178`, `Community 191`?**
-  _High betweenness centrality (0.033) - this node is a cross-community bridge._
+  _High betweenness centrality (0.042) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `10. Circuit Design (3 hours)`, `10. Data Files (5 hours)`, `10. Digital Devices Applications (2 hours)` to the rest of the system?**

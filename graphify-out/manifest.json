@@ -6,10 +6,10 @@
     "semantic_hash": "1f807d3a09fa490b7f5315226b97cf4b"
   },
   "schemas/ecosystem.registry.json": {
-    "mtime": 1790662490.2844975,
-    "seen": 1790662496.1230056,
-    "ast_hash": "c78ae77403e0ea03a20336a231211c1c",
-    "semantic_hash": "c78ae77403e0ea03a20336a231211c1c"
+    "mtime": 1790701067.5133617,
+    "seen": 1790701088.8643706,
+    "ast_hash": "4fdb59479a58e17027ce7efc844b4092",
+    "semantic_hash": "4fdb59479a58e17027ce7efc844b4092"
   },
   "schemas/examples/AI-Constraint-Solver.contract.json": {
     "mtime": 1790044861.17107,
@@ -102,10 +102,10 @@
     "semantic_hash": "5b018a5335bcfda1d7e220f7b2eaa4d8"
   },
   "schemas/capability-ontology.md": {
-    "mtime": 1790599594.8643754,
-    "seen": 1790599964.490181,
-    "ast_hash": "105324121d6dcc8881849555974483a9",
-    "semantic_hash": "105324121d6dcc8881849555974483a9"
+    "mtime": 1790701067.517359,
+    "seen": 1790701088.8645363,
+    "ast_hash": "63885730210c8a9c0dd05bd512d891d5",
+    "semantic_hash": "63885730210c8a9c0dd05bd512d891d5"
   },
   "schemas/evidence-policy.md": {
     "mtime": 1790044861.17107,
@@ -138,10 +138,10 @@
     "semantic_hash": "361e8dd333417f7e3bcd00d97cd29842"
   },
   "README.md": {
-    "mtime": 1790693931.9995954,
-    "seen": 1790693955.9144611,
-    "ast_hash": "777643b8d7b8ca2ea9e19e7730ad18c8",
-    "semantic_hash": "777643b8d7b8ca2ea9e19e7730ad18c8"
+    "mtime": 1790701067.51636,
+    "seen": 1790701088.8644495,
+    "ast_hash": "08fa7189e29a0fa944e51c1c605cc30d",
+    "semantic_hash": "08fa7189e29a0fa944e51c1c605cc30d"
   },
   "research/architectures/README.md": {
     "mtime": 1790240407.9593427,
@@ -222,10 +222,10 @@
     "semantic_hash": "7f05ad0aeab58323fb428bb660a57c7f"
   },
   "report/repository-audit.md": {
-    "mtime": 1790599594.8654637,
-    "seen": 1790599964.4901273,
-    "ast_hash": "ec5bfeec1c4483ce7c21179fe0b1fba1",
-    "semantic_hash": "ec5bfeec1c4483ce7c21179fe0b1fba1"
+    "mtime": 1790701067.5183618,
+    "seen": 1790701088.8644574,
+    "ast_hash": "e7a27259e1d3ff7fe7af67bcf32326a4",
+    "semantic_hash": "e7a27259e1d3ff7fe7af67bcf32326a4"
   },
   "research/experiments/COMPOSE-001.md": {
     "mtime": 1790044861.1331217,
@@ -516,10 +516,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790693953.4277813,
-    "seen": 1790693955.9144003,
-    "ast_hash": "0ba6d445e81aed3c073eea70baedfcb3",
-    "semantic_hash": "0ba6d445e81aed3c073eea70baedfcb3"
+    "mtime": 1790701086.6639464,
+    "seen": 1790701088.8643665,
+    "ast_hash": "30961a1b0998a0582e9f6620fe39b3da",
+    "semantic_hash": "30961a1b0998a0582e9f6620fe39b3da"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -570,10 +570,10 @@
     "semantic_hash": "ef915c5d8d1809c77777dfc027680b8a"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790693951.3104188,
-    "seen": 1790693955.9143987,
-    "ast_hash": "a09a057c1f5fe32b0c77e5bc0ad9c87c",
-    "semantic_hash": "a09a057c1f5fe32b0c77e5bc0ad9c87c"
+    "mtime": 1790701084.5766666,
+    "seen": 1790701088.8643641,
+    "ast_hash": "69d0faf704dfe2b7989d7f55b966ecb8",
+    "semantic_hash": "69d0faf704dfe2b7989d7f55b966ecb8"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -1150,5 +1150,23 @@
     "seen": 1790692295.4425054,
     "ast_hash": "7a929800f8347a801adeb2dbde9d51b5",
     "semantic_hash": "7a929800f8347a801adeb2dbde9d51b5"
+  },
+  "schemas/examples/birth-registration-ward.civic.json": {
+    "mtime": 1790701032.648729,
+    "seen": 1790701088.8643773,
+    "ast_hash": "f2b15bb137086dd6c1ce6917c636c2fb",
+    "semantic_hash": "f2b15bb137086dd6c1ce6917c636c2fb"
+  },
+  "schemas/nepal-civic-service.v1.json": {
+    "mtime": 1790701027.0050058,
+    "seen": 1790701088.8643937,
+    "ast_hash": "492ff49c23781e19cfb601f2fddd7fb2",
+    "semantic_hash": "492ff49c23781e19cfb601f2fddd7fb2"
+  },
+  "research/architectures/ARCH-SPEC-008-NEPAL-CIVIC-ACTION-GRAPH.md": {
+    "mtime": 1790701049.1092722,
+    "seen": 1790701088.8644772,
+    "ast_hash": "222c47b4ee052842979fb54e088b3ddb",
+    "semantic_hash": "222c47b4ee052842979fb54e088b3ddb"
   }
 }

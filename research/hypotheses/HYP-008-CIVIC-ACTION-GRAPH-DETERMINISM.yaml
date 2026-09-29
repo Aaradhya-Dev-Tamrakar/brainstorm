@@ -1,0 +1,32 @@
+id: HYP-008
+title: "Civic Action Graph Determinism Eliminates Public Administrative Asymmetry in Nepal"
+author: "Aaradhya Dev Tamrakar"
+date: "2026-09-29"
+
+# Theoretical Justification
+hypothesis: >
+  In the public administrative domain of Nepal, over 70% of bureaucratic rejection ("पहिलो पटकमा काम नहुने"),
+  informal rent-seeking by unauthorized intermediaries ("दलाल शुल्क"), and jurisdictional bounce
+  originate from information asymmetry in prerequisite documentation, statutory fee structures, and ward-level
+  recommendation ("सिफारिस") dependency chains. By formalizing municipal citizen charters (नागरिक वडापत्र)
+  and statutory acts (e.g., स्थानीय सरकार सञ्चालन ऐन, २०७४) into a deterministic directed acyclic graph (DAG)
+  coupled with OpenStreetMap geospatial boundary anchors across Nepal's 753 local levels and 6,743 wards,
+  citizens can achieve >= 95% first-visit completion rates and eliminate 100% of informal intermediary fee dependencies.
+why_we_believe_it: >
+  Under Section 87 of the Good Governance Act 2064 and Section 75 of the Local Government Operation Act 2074,
+  all local public bodies are legally mandated to maintain Citizen Charters specifying required documents,
+  statutory SLAs, fees, and responsible desk officers. The failure is not legal absence but medium failure:
+  these rules exist only on physical painted boards or fragmented PDFs. Once transformed into a computable
+  schema with geospatial routing, execution becomes deterministic for both the citizen and the public desk.
+counterargument: >
+  Informal bureaucratic friction in Nepal is driven partly by discretionary civil service rent-seeking
+  and infrastructure downtime rather than pure citizen ignorance. Providing an exact checklist may still
+  result in rejections due to offline desk discretion, missing staff ("हाकिम नभएको"), or unwritten internal circulars.
+
+# Experimental Falsification Protocol
+target_experiment: "EXP-CIVIC-001"
+success_metric: "Formalization of 25 core ward-level civic procedures across Kathmandu, Lalitpur, and Pokhara into machine-readable JSON-LD contracts, achieving 100% statutory cross-referencing against the Local Government Operation Act 2074 and 0 schema validation errors"
+failure_condition: "Municipal variation in local bylaws creates non-computable, contradictory prerequisite trees across >= 40% of surveyed local levels, preventing a unified civic service schema"
+
+# Lifecycle State: proposed | active | verified | falsified | retired
+status: proposed

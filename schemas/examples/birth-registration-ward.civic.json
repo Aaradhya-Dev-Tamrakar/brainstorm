@@ -1,0 +1,68 @@
+{
+  "$schema": "https://aaradhyadt.dev/schemas/nepal-civic-service.v1.json",
+  "service_id": "NEP-CIVIC-WARD-001",
+  "canonical_name_ne": "जन्म दर्ता प्रमाणपत्र",
+  "canonical_name_en": "Birth Registration Certificate",
+  "category": "vital_registration",
+  "jurisdiction_level": "ward_secretariat",
+  "governing_statutes": [
+    {
+      "act_name_ne": "व्यक्तिगत घटना (दर्ता गर्ने) ऐन, २०३३ तथा नियमावली",
+      "act_name_en": "Individual Event (Registration) Act 2033",
+      "section_clause": "दफा ४",
+      "gazette_reference": "नेपाल राजपत्र भाग २"
+    },
+    {
+      "act_name_ne": "स्थानीय सरकार सञ्चालन ऐन, २०७४",
+      "act_name_en": "Local Government Operation Act 2074",
+      "section_clause": "दफा १२ (२) ख (१)",
+      "gazette_reference": "२०७४/०६/२९"
+    }
+  ],
+  "prerequisites": [
+    {
+      "document_name_ne": "अस्पताल वा स्वास्थ्य संस्थामा जन्म भएको भए जन्मको सूचना फारम वा प्रमाणपत्रको सक्कल",
+      "document_name_en": "Hospital Birth Notification or Certificate Original",
+      "mandatory": true,
+      "issuing_authority_level": "health_institution",
+      "digital_verification_available": true
+    },
+    {
+      "document_name_ne": "बुबा र आमाको नेपाली नागरिकता प्रमाणपत्रको प्रतिलिपि",
+      "document_name_en": "Copies of Father and Mother's Nepali Citizenship Certificates",
+      "mandatory": true,
+      "issuing_authority_level": "district_administration_office",
+      "digital_verification_available": true
+    },
+    {
+      "document_name_ne": "आमाबुबाको विवाह दर्ता प्रमाणपत्रको प्रतिलिपि",
+      "document_name_en": "Copy of Parents' Marriage Registration Certificate",
+      "mandatory": true,
+      "issuing_authority_level": "ward_secretariat",
+      "digital_verification_available": true
+    }
+  ],
+  "fee_structure": {
+    "is_statutory_free": true,
+    "standard_fee_npr": 0,
+    "grace_period_days": 35,
+    "late_fine_formula": "३५ दिन नाघेपछि प्रचलित स्थानीय आर्थिक ऐन बमोजिम (सामान्यतया रु ५० देखि रु २००)",
+    "legal_schedule_reference": "स्थानिय तह आर्थिक ऐन अनुसूची १"
+  },
+  "statutory_sla": {
+    "max_duration_unit": "working_days",
+    "max_duration_value": 1,
+    "sla_display_ne": "कागजात रुजु भएपछि सोही दिन"
+  },
+  "responsible_desk": {
+    "branch_name_ne": "पञ्जीकरण शाखा / व्यक्तिगत घटना दर्ता फाँट",
+    "branch_name_en": "Civil Registration Desk",
+    "officer_title_ne": "स्थानीय पञ्जिकाधिकारी (वडा सचिव)",
+    "appeal_officer_title_ne": "प्रमुख प्रशासकीय अधिकृत"
+  },
+  "digital_integration": {
+    "nagarik_app_supported": true,
+    "versp_mis_integrated": true,
+    "portal_url": "https://public.verspmis.gov.np"
+  }
+}

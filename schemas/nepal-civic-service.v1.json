@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aaradhyadt.dev/schemas/nepal-civic-service.v1.json",
+  "title": "Nepal Civic Service & Citizen Charter Contract Schema v1",
+  "description": "Formal schema for representing machine-readable Citizen Charters (नागरिक वडापत्र), administrative workflows, prerequisites, fees, and statutory anchors across Nepal's public governance mesh.",
+  "type": "object",
+  "required": [
+    "$schema",
+    "service_id",
+    "canonical_name_ne",
+    "canonical_name_en",
+    "category",
+    "jurisdiction_level",
+    "governing_statutes",
+    "prerequisites",
+    "fee_structure",
+    "statutory_sla",
+    "responsible_desk"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
+    "service_id": {
+      "type": "string",
+      "pattern": "^NEP-CIVIC-[A-Z]+-[0-9]{3}$",
+      "description": "Canonical service identifier (e.g., NEP-CIVIC-WARD-001)."
+    },
+    "canonical_name_ne": {
+      "type": "string",
+      "description": "Standard service name in Devanagari (e.g., जन्म दर्ता सिफारिस)."
+    },
+    "canonical_name_en": {
+      "type": "string",
+      "description": "Standard English translation of the service name (e.g., Birth Registration Recommendation)."
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "vital_registration",
+        "recommendation_sifaris",
+        "business_licensing",
+        "land_and_property",
+        "citizenship_and_passport",
+        "social_security",
+        "education_and_health",
+        "revenue_and_taxation",
+        "disaster_and_emergency"
+      ]
+    },
+    "jurisdiction_level": {
+      "type": "string",
+      "enum": [
+        "ward_secretariat",
+        "palika_headquarters",
+        "district_administration_office",
+        "land_revenue_malpot",
+        "survey_office_napi",
+        "transport_management_yatayat",
+        "inland_revenue_kar",
+        "provincial_ministry",
+        "federal_department"
+      ]
+    },
+    "governing_statutes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["act_name_ne", "section_clause"],
+        "properties": {
+          "act_name_ne": { "type": "string" },
+          "act_name_en": { "type": "string" },
+          "section_clause": { "type": "string" },
+          "gazette_reference": { "type": "string" }
+        }
+      }
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["document_name_ne", "mandatory"],
+        "properties": {
+          "document_name_ne": { "type": "string" },
+          "document_name_en": { "type": "string" },
+          "mandatory": { "type": "boolean" },
+          "issuing_authority_level": { "type": "string" },
+          "digital_verification_available": { "type": "boolean" },
+          "notes_ne": { "type": "string" }
+        }
+      }
+    },
+    "fee_structure": {
+      "type": "object",
+      "required": ["is_statutory_free", "standard_fee_npr"],
+      "properties": {
+        "is_statutory_free": { "type": "boolean" },
+        "standard_fee_npr": { "type": "number", "minimum": 0 },
+        "grace_period_days": { "type": "integer", "minimum": 0 },
+        "late_fine_formula": { "type": "string" },
+        "legal_schedule_reference": { "type": "string" }
+      }
+    },
+    "statutory_sla": {
+      "type": "object",
+      "required": ["max_duration_unit", "max_duration_value", "sla_display_ne"],
+      "properties": {
+        "max_duration_unit": { "type": "string", "enum": ["minutes", "hours", "working_days", "weeks"] },
+        "max_duration_value": { "type": "number", "minimum": 0 },
+        "sla_display_ne": { "type": "string" }
+      }
+    },
+    "responsible_desk": {
+      "type": "object",
+      "required": ["branch_name_ne", "officer_title_ne"],
+      "properties": {
+        "branch_name_ne": { "type": "string" },
+        "branch_name_en": { "type": "string" },
+        "officer_title_ne": { "type": "string" },
+        "appeal_officer_title_ne": { "type": "string" }
+      }
+    },
+    "digital_integration": {
+      "type": "object",
+      "properties": {
+        "nagarik_app_supported": { "type": "boolean" },
+        "versp_mis_integrated": { "type": "boolean" },
+        "portal_url": { "type": "string", "format": "uri" }
+      }
+    }
+  }
+}

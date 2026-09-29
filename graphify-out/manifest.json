@@ -516,10 +516,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790683086.6038156,
-    "seen": 1790683088.6004562,
-    "ast_hash": "c4082e807677c2ea42f6f04239457f6a",
-    "semantic_hash": "c4082e807677c2ea42f6f04239457f6a"
+    "mtime": 1790683243.8885725,
+    "seen": 1790683246.0713298,
+    "ast_hash": "05d88bbfcf43ec01b5750ae8d2997d0a",
+    "semantic_hash": "05d88bbfcf43ec01b5750ae8d2997d0a"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -570,10 +570,10 @@
     "semantic_hash": "ef915c5d8d1809c77777dfc027680b8a"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790683084.5804439,
-    "seen": 1790683088.6004553,
-    "ast_hash": "635d5d353c52689006867ca9cdd6dabd",
-    "semantic_hash": "635d5d353c52689006867ca9cdd6dabd"
+    "mtime": 1790683241.6032722,
+    "seen": 1790683246.0713274,
+    "ast_hash": "44fe8152de2c3fa4dfe0b53cadb9038e",
+    "semantic_hash": "44fe8152de2c3fa4dfe0b53cadb9038e"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -1132,5 +1132,11 @@
     "seen": 1790683088.6004508,
     "ast_hash": "9ce99d0c1420cc509e16596e2ad79a38",
     "semantic_hash": "9ce99d0c1420cc509e16596e2ad79a38"
+  },
+  "scripts/add_brl_to_google_calendar.js": {
+    "mtime": 1790683213.6972518,
+    "seen": 1790683246.0713556,
+    "ast_hash": "3b8d2b5ecdcc0b5b1961fae6744cbf57",
+    "semantic_hash": "3b8d2b5ecdcc0b5b1961fae6744cbf57"
   }
 }

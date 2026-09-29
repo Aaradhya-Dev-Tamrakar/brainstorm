@@ -1,0 +1,63 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Aaradhya Dev Tamrakar//Brainstorm Research Laboratory C0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Brainstorm Research Lab — Cohort 0
+X-WR-TIMEZONE:Asia/Kathmandu
+BEGIN:VEVENT
+UID:brl-c0-m1-onboarding-20261005@brainstorm.local
+DTSTAMP:20260929T113000Z
+DTSTART:20261005T091500Z
+DTEND:20261005T111500Z
+SUMMARY:🚀 [BRL C0] Milestone 1: Program Kickoff & Quest 0 (Dry-Run PR)
+DESCRIPTION:Brainstorm Research Laboratory Cohort 0 Kickoff:\n\n1. Distribution of BRL Contributor Agreement.\n2. Verification of local development setups & Git credentials.\n3. Submission and merge of Quest 0 (c0/<username>/quest-0).\n4. Unlocking of Rank E (Research Scout) standing.\n\nCharter: PLAN-BRL-001\nQuest Spec: BRL_QUEST_0_DRY_RUN.md
+LOCATION:KEC Makerspace / Google Meet Hybrid
+STATUS:CONFIRMED
+PRIORITY:1
+END:VEVENT
+BEGIN:VEVENT
+UID:brl-c0-m2-sprint1-20261012@brainstorm.local
+DTSTAMP:20260929T113000Z
+DTSTART:20261012T091500Z
+DTEND:20261012T104500Z
+SUMMARY:🔬 [BRL C0] Milestone 2: Sprint 1 Quest Assignment & Baseline Run
+DESCRIPTION:Execution of Sprint 1 research quests:\n\n• C0-01: Discrete-Event Memory Simulator reproduction.\n• C0-02: Nepal Public Authority source census.\n• C0-03: Devanagari legacy font transcoding vectors.\n• C0-04: Tool module telemetry profiling.\n\nSync Gate: Initial commit on isolated feature branches.
+LOCATION:KEC Makerspace / Async GitHub
+STATUS:CONFIRMED
+PRIORITY:2
+END:VEVENT
+BEGIN:VEVENT
+UID:brl-c0-m3-midcycle-20261026@brainstorm.local
+DTSTAMP:20260929T113000Z
+DTSTART:20261026T091500Z
+DTEND:20261026T111500Z
+SUMMARY:⚖️ [BRL C0] Milestone 3: Mid-Cycle Review & Dual-Layer Audit Gate
+DESCRIPTION:Mid-Cycle progress review and technical gate check:\n\n1. Execution of .\audit.bat across all active PRs.\n2. Peer review of collected datasets and simulation logs.\n3. Academic blackout check: Exam calendar synchronization.\n4. Grade rubric evaluation (Target: Score >= 8/15 for Rank D advancement).
+LOCATION:KEC Makerspace / Kupondole Hub
+STATUS:CONFIRMED
+PRIORITY:1
+END:VEVENT
+BEGIN:VEVENT
+UID:brl-c0-m4-sprint2-20261109@brainstorm.local
+DTSTAMP:20260929T113000Z
+DTSTART:20261109T091500Z
+DTEND:20261109T104500Z
+SUMMARY:🛡️ [BRL C0] Milestone 4: Sprint 2 Edge-Case Probing & Invariant Check
+DESCRIPTION:Advancement into edge-case analysis:\n\n• Invariant violation probes (planted bugs / negative controls).\n• Devanagari ligature corner-cases (reph, nukta, half-forms).\n• Cross-platform reproducibility confirmation (Windows vs Linux).
+LOCATION:Async GitHub / KEC Makerspace
+STATUS:CONFIRMED
+PRIORITY:2
+END:VEVENT
+BEGIN:VEVENT
+UID:brl-c0-m5-delivery-20261123@brainstorm.local
+DTSTAMP:20260929T113000Z
+DTSTART:20261123T091500Z
+DTEND:20261123T114500Z
+SUMMARY:🎓 [BRL C0] Milestone 5: Final Artifact Delivery, Retrospective & Rank Promotion
+DESCRIPTION:Cohort 0 Graduation & Artifact Ledgering:\n\n1. Final PR merge into main with zero audit discrepancies.\n2. Formal publication of BRL Cohort 0 Technical Report.\n3. Issuance of permanent cryptographic authorship credentials.\n4. Cohort 0 Retrospective: Pedagogical teaching tax & calibration for Cohort 1.
+LOCATION:KEC Makerspace / Virtual Retrospective
+STATUS:CONFIRMED
+PRIORITY:1
+END:VEVENT
+END:VCALENDAR

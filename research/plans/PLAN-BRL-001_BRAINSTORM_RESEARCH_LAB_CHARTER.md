@@ -237,3 +237,25 @@ To maintain institutional integrity while protecting intellectual property, all 
 │  • Seed spin-off opportunities / sovereign data infrastructure org.    │
 └────────────────────────────────────────────────────────────────────────┘
 ```
+
+---
+
+## 10. Operational Infrastructure & Master Artifact Index
+
+The operational substrate for BRL Cohort 0 is fully automated and indexed across the repository and cloud hubs:
+
+| Layer | System Artifact | Location / File Reference | Status |
+|---|---|---|---|
+| **Governance** | BRL Contributor Agreement | [`BRL_CONTRIBUTOR_AGREEMENT.md`](BRL_CONTRIBUTOR_AGREEMENT.md) | ✅ Active |
+| **Onboarding** | Quest 0: The Onboarding Litmus Test | [`BRL_QUEST_0_DRY_RUN.md`](BRL_QUEST_0_DRY_RUN.md) | ✅ Active |
+| **Fellows Registry** | Fellows Directory & Profile Template | [`../fellows/README.md`](../fellows/README.md), [`../fellows/TEMPLATE.md`](../fellows/TEMPLATE.md) | ✅ Active |
+| **Merit Engine** | Zero-Cost Merit Rewards Ledger | [`../fellows/merit_ledger.json`](../fellows/merit_ledger.json) | ✅ Active |
+| **Timeline** | 8-Week Milestone Calendar (RFC 5545) | [`BRL_COHORT_0.ics`](BRL_COHORT_0.ics) | ✅ Active |
+| **Calendar Automation** | 1-Click Google Calendar Generator | [`../../scripts/add_brl_to_google_calendar.js`](../../scripts/add_brl_to_google_calendar.js) | ✅ Active |
+| **Form Automation** | 1-Click Google Forms Generator | [`../../scripts/create_c0_intake_form.js`](../../scripts/create_c0_intake_form.js) | ✅ Active |
+| **GitHub CI/PR Gate** | Pull Request Verification Template | [`../../.github/PULL_REQUEST_TEMPLATE.md`](../../.github/PULL_REQUEST_TEMPLATE.md) | ✅ Active |
+| **Outreach** | Candidate Pitch & Communication Playbook | [`BRL_C0_OUTREACH_SCRIPTS.md`](BRL_C0_OUTREACH_SCRIPTS.md) | ✅ Active |
+| **AI Pedagogy** | NotebookLM Grounding Source 07 | [`../notebooklm_ecosystem_sources/07_BRL_FELLOWSHIP_AND_COHORT_ONBOARDING.md`](../notebooklm_ecosystem_sources/07_BRL_FELLOWSHIP_AND_COHORT_ONBOARDING.md) | ✅ Active |
+| **Cloud Datasets** | Google Drive Root Hub | `Brainstorm Research Lab — Cohort 0` (`ID: 1fn7Q_k83yEywx6obo7RJqBJDgSSvSPe2`) | ☁️ Live |
+| **Cloud Handouts** | Google Drive Handouts & Specs | `Handouts & Specs` (`ID: 1JlovLOCpcpHh4kOQliIiZh7mZQ5KDn0Q`) | ☁️ Live |
+| **Branch Safety** | GitHub Protected Ruleset | `Evidence-Backed-Ecosystem-main` (Ruleset ID: `23533023`) | 🛡️ Protected |

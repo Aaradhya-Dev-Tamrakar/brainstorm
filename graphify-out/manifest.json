@@ -516,10 +516,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790692105.7979445,
-    "seen": 1790692108.2668145,
-    "ast_hash": "d711432e67b7a8ef7e8572f15e5a0ef9",
-    "semantic_hash": "d711432e67b7a8ef7e8572f15e5a0ef9"
+    "mtime": 1790692293.1273527,
+    "seen": 1790692295.4424725,
+    "ast_hash": "af1207ffcc7973bf0d0424cda966f0b4",
+    "semantic_hash": "af1207ffcc7973bf0d0424cda966f0b4"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -570,10 +570,10 @@
     "semantic_hash": "ef915c5d8d1809c77777dfc027680b8a"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790692103.7098582,
-    "seen": 1790692108.2668133,
-    "ast_hash": "b37b0e959af5707ead70bd7302a84d91",
-    "semantic_hash": "b37b0e959af5707ead70bd7302a84d91"
+    "mtime": 1790692291.019372,
+    "seen": 1790692295.4424713,
+    "ast_hash": "e5a1d6968838c5f4ec09e0f43433e025",
+    "semantic_hash": "e5a1d6968838c5f4ec09e0f43433e025"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -1074,10 +1074,10 @@
     "semantic_hash": "09642121d24a7d47662e81263ba4666e"
   },
   "research/plans/PLAN-BRL-001_BRAINSTORM_RESEARCH_LAB_CHARTER.md": {
-    "mtime": 1790683946.8107524,
-    "seen": 1790683971.841632,
-    "ast_hash": "2fb8d2b006407e992bb096d76b49c535",
-    "semantic_hash": "2fb8d2b006407e992bb096d76b49c535"
+    "mtime": 1790692268.6581619,
+    "seen": 1790692295.4426198,
+    "ast_hash": "25ea71dc8a3396533d992de5bfd14cee",
+    "semantic_hash": "25ea71dc8a3396533d992de5bfd14cee"
   },
   "scripts/create_c0_intake_form.js": {
     "mtime": 1790682438.2954586,
@@ -1098,10 +1098,10 @@
     "semantic_hash": "96a56fcd657a3d68fcef29c1c14313be"
   },
   "research/fellows/TEMPLATE.md": {
-    "mtime": 1790682410.1670952,
-    "seen": 1790682478.431762,
-    "ast_hash": "d1e855f2972db6711d980cfd960f8527",
-    "semantic_hash": "d1e855f2972db6711d980cfd960f8527"
+    "mtime": 1790692227.3850205,
+    "seen": 1790692295.4425974,
+    "ast_hash": "43469471ac8f4ee882fce4e2fd50ad62",
+    "semantic_hash": "43469471ac8f4ee882fce4e2fd50ad62"
   },
   "research/notebooklm_ecosystem_sources/07_BRL_FELLOWSHIP_AND_COHORT_ONBOARDING.md": {
     "mtime": 1790683065.5032675,
@@ -1116,16 +1116,16 @@
     "semantic_hash": "e58c634699b61c79923e4bb7363b7650"
   },
   "research/plans/BRL_CONTRIBUTOR_AGREEMENT.md": {
-    "mtime": 1790683053.2078438,
-    "seen": 1790683088.6005723,
-    "ast_hash": "678dc383ba7a9a88b1c6974f5e177bd5",
-    "semantic_hash": "678dc383ba7a9a88b1c6974f5e177bd5"
+    "mtime": 1790692238.5663476,
+    "seen": 1790692295.4426181,
+    "ast_hash": "82ba5820e67d1a0c0887bb4d27b5fc92",
+    "semantic_hash": "82ba5820e67d1a0c0887bb4d27b5fc92"
   },
   "research/plans/BRL_QUEST_0_DRY_RUN.md": {
-    "mtime": 1790682400.284787,
-    "seen": 1790682478.4317787,
-    "ast_hash": "5ce3e50395cd2bdee40ff82cc2283bcc",
-    "semantic_hash": "5ce3e50395cd2bdee40ff82cc2283bcc"
+    "mtime": 1790692219.0637162,
+    "seen": 1790692295.4426188,
+    "ast_hash": "9319b95fb54b5afc778cd0f1d1e3e40d",
+    "semantic_hash": "9319b95fb54b5afc778cd0f1d1e3e40d"
   },
   "research/fellows/merit_ledger.json": {
     "mtime": 1790682996.4779656,
@@ -1138,5 +1138,17 @@
     "seen": 1790683246.0713556,
     "ast_hash": "3b8d2b5ecdcc0b5b1961fae6744cbf57",
     "semantic_hash": "3b8d2b5ecdcc0b5b1961fae6744cbf57"
+  },
+  "audit.sh": {
+    "mtime": 1790692202.1875975,
+    "seen": 1790692295.4424546,
+    "ast_hash": "33659ad6f7e2494245b7244b42322aaa",
+    "semantic_hash": "33659ad6f7e2494245b7244b42322aaa"
+  },
+  "sim.sh": {
+    "mtime": 1790692272.7103615,
+    "seen": 1790692295.4425054,
+    "ast_hash": "7a929800f8347a801adeb2dbde9d51b5",
+    "semantic_hash": "7a929800f8347a801adeb2dbde9d51b5"
   }
 }

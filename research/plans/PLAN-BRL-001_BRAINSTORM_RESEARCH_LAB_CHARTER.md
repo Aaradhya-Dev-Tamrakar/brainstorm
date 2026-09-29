@@ -55,8 +55,13 @@ BRL operates across a calibrated hybrid model, combining high-trust physical tou
    - **Architectural Guardrails:**
      - *Git Ground Truth:* Git and Markdown remain the sole source of truth; Google Docs/Sheets are for scratchpads only.
      - *Zero Mandatory Spend:* All cohort workflows must remain 100% executable on free tiers without requiring personal credit cards.
-     - *Audit Independence:* Dual-layer verification (`.\audit.bat`) must execute fully offline and deterministically without external cloud API dependencies.
-4. **Deterministic Digital Ground Truth:** All codebase contributions must pass through `sim/` regression suites and `.\audit.bat` before entering the canonical knowledge graph.
+     - *Audit Independence:* Dual-layer verification (`.\audit.bat` on Windows, `./audit.sh` on POSIX/macOS/WSL) must execute fully offline and deterministically without external cloud API dependencies.
+4. **Deterministic Digital Ground Truth & Cross-Platform Parity:** All codebase contributions must pass through `sim/` regression suites and the dual-layer audit gate (`audit.bat` / `audit.sh` invoking `sim/reconciliation_engine.py`) before entering the canonical knowledge graph.
+5. **Tripartite Asset Classification:** To ensure total clarity between open science and proprietary lab infrastructure:
+   - `OPEN_RESEARCH_ASSETS`: Datasets, benchmark definitions, and public research preprint drafts (permissive open-source licenses).
+   - `BRL_OPERATING_ASSETS`: Ecosystem orchestration, multi-account bridges, and private automation tooling (proprietary BRL infrastructure).
+   - `PUBLIC_VERIFICATION_ARTIFACTS`: Audit ledgers, test dossiers, and digital credential proofs (immutable public verification).
+6. **Dual Contributor Access Protocol:** Accommodates both invited internal fellows (direct branch `c0/<username>/<quest>` protected by GitHub rulesets) and open community applicants (fork-and-pull-request workflow).
 
 ---
 
@@ -256,6 +261,7 @@ The operational substrate for BRL Cohort 0 is fully automated and indexed across
 | **GitHub CI/PR Gate** | Pull Request Verification Template | [`../../.github/PULL_REQUEST_TEMPLATE.md`](../../.github/PULL_REQUEST_TEMPLATE.md) | ✅ Active |
 | **Outreach** | Candidate Pitch & Communication Playbook | [`BRL_C0_OUTREACH_SCRIPTS.md`](BRL_C0_OUTREACH_SCRIPTS.md) | ✅ Active |
 | **AI Pedagogy** | NotebookLM Grounding Source 07 | [`../notebooklm_ecosystem_sources/07_BRL_FELLOWSHIP_AND_COHORT_ONBOARDING.md`](../notebooklm_ecosystem_sources/07_BRL_FELLOWSHIP_AND_COHORT_ONBOARDING.md) | ✅ Active |
+| **Verification Gate** | Dual-Layer Cross-Platform Audit Gate | [`../../audit.bat`](../../audit.bat), [`../../audit.sh`](../../audit.sh) | ✅ Active |
 | **Cloud Datasets** | Google Drive Root Hub | `Brainstorm Research Lab — Cohort 0` (`ID: 1fn7Q_k83yEywx6obo7RJqBJDgSSvSPe2`) | ☁️ Live |
 | **Cloud Handouts** | Google Drive Handouts & Specs | `Handouts & Specs` (`ID: 1JlovLOCpcpHh4kOQliIiZh7mZQ5KDn0Q`) | ☁️ Live |
 | **Branch Safety** | GitHub Protected Ruleset | `Evidence-Backed-Ecosystem-main` (Ruleset ID: `23533023`) | 🛡️ Protected |

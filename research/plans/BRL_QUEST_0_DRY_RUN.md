@@ -16,12 +16,19 @@ Complete the end-to-end laboratory onboarding loop. This quest verifies your loc
 
 ## 2. Step-by-Step Execution Protocol
 
-### Step 1: Clone the Repository
-Clone the central repository and navigate into the root directory:
-```bash
-git clone https://github.com/Aaradhya-Dev-Tamrakar/brainstorm.git
-cd brainstorm
-```
+### Step 1: Clone or Fork the Repository
+Depending on your onboarded access tier:
+- **Direct Collaborator (Invited to BRL):** Clone the central repository directly:
+  ```bash
+  git clone https://github.com/Aaradhya-Dev-Tamrakar/brainstorm.git
+  cd brainstorm
+  ```
+- **Fork Workflow (External / Open Applicant):** Fork the repository on GitHub, then clone your personal fork:
+  ```bash
+  git clone https://github.com/<your_github_username>/brainstorm.git
+  cd brainstorm
+  git remote add upstream https://github.com/Aaradhya-Dev-Tamrakar/brainstorm.git
+  ```
 
 ### Step 2: Configure Git Identity
 Ensure your local Git commits reflect your real name and GitHub-linked email address:
@@ -59,7 +66,8 @@ Run the repository verification suite to confirm that your profile addition intr
 .\audit.bat
 
 # On Linux / macOS / WSL:
-./audit.sh   # or: python sim/reconciliation_engine.py --audit-only
+chmod +x audit.sh
+./audit.sh   # or: python3 sim/reconciliation_engine.py --audit-only
 ```
 **Acceptance Condition:** The terminal must output:
 `[+] PASS: Layer 1 (Structural Consistency) is 100% verified (0 discrepancies).`
@@ -69,16 +77,22 @@ Stage and commit your changes using a clean conventional commit message:
 ```bash
 git add research/fellows/<your_github_username>.md
 git commit -m "docs(fellows): add contributor profile for <your_github_username> (Quest 0)"
+
+# If Direct Collaborator (pushing to central repo):
+git push origin c0/<your_github_username>/quest-0
+
+# If Fork Workflow (pushing to personal fork):
 git push origin c0/<your_github_username>/quest-0
 ```
 
 ### Step 7: Open a Pull Request
-1. Open the GitHub repository in your browser.
-2. Click **Compare & pull request** for your branch.
-3. Fill out the Pull Request template:
+1. Open GitHub in your browser:
+   - For direct branch: Visit `https://github.com/Aaradhya-Dev-Tamrakar/brainstorm` and click **Compare & pull request**.
+   - For fork workflow: Visit your fork and click **Contribute -> Open pull request** against `Aaradhya-Dev-Tamrakar/brainstorm:main`.
+2. Fill out the Pull Request template:
    - Mark the checklist items.
-   - Attach a snippet or confirmation of the passing `.\audit.bat` run.
-4. Submit the PR for review by the Laboratory Director (`AaradhyaDT`).
+   - Attach a snippet or confirmation of the passing `.\audit.bat` (or `./audit.sh`) run.
+3. Submit the PR for review by the Laboratory Director (`AaradhyaDT`).
 
 ---
 

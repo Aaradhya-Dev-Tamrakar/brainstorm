@@ -1,18 +1,18 @@
 # Contributor Profile: [Full Name]
 
 - **GitHub:** `@[username]`
-- **Status:** Active Contributor (Cohort 0)
-- **Current Rank:** Rank E (Research Scout)
-- **Institution / Faculty:** Kathmandu Engineering College (KEC) / Department of Electronics & Computer Engineering
-- **Current Semester:** Semester [X]
-- **Date Joined:** 2026-10-01
+- **Status:** Applicant / C0 Pending
+- **Current Rank:** Unranked (Promoted to Rank E upon Quest 0 verification & merge)
+- **Institution / Faculty:** [e.g. Kathmandu Engineering College (KEC) / Department of Electronics & Computer Engineering]
+- **Current Semester:** [e.g. Semester 5 / 6 / 7 / 8]
+- **Date Joined:** [Assigned upon acceptance]
 
 ---
 
 ## 1. Technical Competencies & Toolchain
-- **Languages:** Python, C++, TypeScript, Bash / PowerShell
-- **Frameworks & Tools:** PyTorch, FastAPI, Git CLI, Linux / WSL
-- **Hardware Profile:** [e.g., Windows 11 + WSL2, 16GB RAM, RTX 3060 6GB]
+- **Languages:** [e.g. Python, C++, TypeScript, Bash / PowerShell]
+- **Frameworks & Tools:** [e.g. PyTorch, FastAPI, Git CLI, Linux / WSL]
+- **Hardware Profile:** [e.g. Windows 11 + WSL2, 16GB RAM, RTX 3060 6GB]
 
 ---
 
@@ -20,8 +20,8 @@
 
 | Quest ID | Title | Target Deliverable | Status | PR / Ledger Reference |
 |---|---|---|---|---|
-| `QUEST-C0-00` | Onboarding Litmus Test | Fellow Profile Creation | Completed | PR #00 |
-| `QUEST-C0-XX` | [Assigned Quest Title] | [Deliverable Specification] | In Progress | — |
+| `QUEST-C0-00` | Onboarding Litmus Test | Fellow Profile Creation | In Review / Verification | PR #[fill] |
+| `QUEST-C0-XX` | [Assigned Quest Title] | [Deliverable Specification] | Pending Rank E Promotion | — |
 
 ---
 

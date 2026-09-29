@@ -25,12 +25,21 @@ This Contributor Agreement establishes the rights, responsibilities, intellectua
 
 ---
 
-## 2. Tooling Boundary & Proprietary Ecosystem Assets
+## 2. Tooling Boundary & Tripartite Asset Classification
 
-1. **Ecosystem Core:** The central orchestration framework of `brainstorm`, the 23-module capability mesh, automation scripts (`sync.ps1`, `reconciliation_engine.py`, `audit.bat`), multi-account MCP bridges (`super-nlm`), and formal verification harnesses are proprietary ecosystem assets governed by BRL.
-2. **Permitted Use:** Contributors are granted non-exclusive, non-transferable access to utilize internal tools solely for executing authorized BRL Quests.
-3. **Prohibited Actions:** Contributors shall not fork, mirror, replicate, redistribute, or commercially rebrand BRL core tooling, internal orchestration frameworks, or automation scripts without express written consent from the Laboratory Director.
-4. **Independent Open Research:** Datasets, benchmark methodologies, and open-source models produced *under* specific public research tracks (such as NISR) will be released under appropriate open licenses (e.g., Apache 2.0 / MIT / CC-BY 4.0) as specified by each project's charter.
+To eliminate ambiguity between collaborative open science and laboratory infrastructure, all repository contents are categorized into three distinct operational asset tiers:
+
+1. **Category I: OPEN RESEARCH ASSETS (`OPEN_RESEARCH_ASSETS`)**
+   - **Scope:** Public research datasets (e.g. Nepali government corpus, Devanagari OCR samples), benchmark datasets, public domain state-machine models, and academic preprint drafts.
+   - **License & Rights:** Released under permissive open licenses (Apache 2.0 / MIT / CC-BY 4.0). Contributors retain permanent co-authorship and public attribution.
+
+2. **Category II: BRL INTERNAL OPERATING ASSETS (`BRL_OPERATING_ASSETS`)**
+   - **Scope:** The central orchestration framework of `brainstorm`, the 23-module capability mesh, private automation engines (`sync.ps1`, `sync.bat`, `reconciliation_engine.py`, `audit.bat`, `audit.sh`), multi-account MCP bridges (`super-nlm`), and formal verification harnesses.
+   - **Governance & Terms:** Proprietary laboratory infrastructure governed by BRL. Contributors receive a non-exclusive, non-transferable license to utilize these tools solely for executing authorized BRL Quests. Forking, mirroring, redistributing, or commercially rebranding core automation assets without express written consent from the Laboratory Director is strictly prohibited.
+
+3. **Category III: PUBLIC VERIFICATION ARTIFACTS (`PUBLIC_VERIFICATION_ARTIFACTS`)**
+   - **Scope:** Zero-discrepancy audit ledgers (`research/results/`), cryptographic verification certificates (`AaradhyaDT.github.io/verify/`), CI provenance logs, and the public merit ledger.
+   - **Integrity & Access:** Irrevocably public, immutable, and cryptographically auditable for third-party verification of student competencies.
 
 ---
 

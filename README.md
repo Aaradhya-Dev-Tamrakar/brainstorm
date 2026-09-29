@@ -201,14 +201,27 @@ The repository includes a PowerShell automation engine designed specifically for
 .\sync.ps1 -Status
 ```
 
-### 🛠️ Zero-Token Architectural & Audit Shortcuts (`.bat`)
+### 🛠️ Cross-Platform Zero-Token Verification & Simulation Launchers (`.bat` / `.sh`)
 
-| Batch Shortcut           | Underlying Engine              | Purpose                                                                  | Execution Cost         |
-| :----------------------- | :----------------------------- | :----------------------------------------------------------------------- | :--------------------- |
-| **`.\audit.bat`**        | `sim/reconciliation_engine.py` | Lints entire repo for broken links, missing metadata, and taxonomy drift | **0 Tokens** (~50 ms)  |
-| **`.\archive.bat`**      | `sim/transcript_archiver.py`   | Detects significant architectural sessions and exports verbatim logs     | **0 Tokens** (~100 ms) |
-| **`.\sim.bat`**          | `sim/warehouse_mem_sim.py`     | Runs GPU-DRAM warehouse discrete event channel simulator                 | **0 Tokens** (~20 ms)  |
-| **`.\build_report.bat`** | `pdflatex / bibtex`            | Compiles print-ready LaTeX research technical report (`report/main.pdf`) | **0 Tokens** (~3 sec)  |
+The repository provides zero-overhead, deterministic launchers engineered for native Windows and POSIX (Linux, macOS, WSL) environments:
+
+| Windows (`.bat`)         | POSIX / WSL (`.sh`)      | Underlying Engine              | Purpose                                                                  | Execution Cost         |
+| :----------------------- | :----------------------- | :----------------------------- | :----------------------------------------------------------------------- | :--------------------- |
+| **`.\audit.bat`**        | **`./audit.sh`**         | `sim/reconciliation_engine.py` | Lints entire repo for broken links, missing metadata, and taxonomy drift | **0 Tokens** (~50 ms)  |
+| **`.\sim.bat`**          | **`./sim.sh`**           | `sim/warehouse_mem_sim.py`     | Runs GPU-DRAM warehouse discrete event channel simulator                 | **0 Tokens** (~20 ms)  |
+| **`.\archive.bat`**      | —                        | `sim/transcript_archiver.py`   | Detects significant architectural sessions and exports verbatim logs     | **0 Tokens** (~100 ms) |
+| **`.\build_report.bat`** | —                        | `pdflatex / bibtex`            | Compiles print-ready LaTeX research technical report (`report/main.pdf`) | **0 Tokens** (~3 sec)  |
+
+---
+
+## 🏛️ Operational Wing: Brainstorm Research Laboratory (BRL)
+
+The repository hosts the central operational infrastructure for the **Brainstorm Research Laboratory (BRL)**—an artifact-driven research guild and empirical fellowship program:
+
+- 📜 **[BRL Program Charter (`PLAN-BRL-001`)](research/plans/PLAN-BRL-001_BRAINSTORM_RESEARCH_LAB_CHARTER.md):** Formal lab governance, Rank E $\to$ A guild progression, FCFS makerspace policy, and Google ecosystem integration.
+- 🤝 **[BRL Contributor Agreement](research/plans/BRL_CONTRIBUTOR_AGREEMENT.md):** Tripartite asset classification (`OPEN_RESEARCH_ASSETS`, `BRL_OPERATING_ASSETS`, `PUBLIC_VERIFICATION_ARTIFACTS`) and public attribution invariants.
+- 🧪 **[Quest 0: Onboarding Litmus Test](research/plans/BRL_QUEST_0_DRY_RUN.md):** Deterministic environment setup and dry-run contribution protocol for new fellows.
+- 👥 **[Fellows Directory & Merit Ledger](research/fellows/README.md):** Machine-readable attribution and credential tracking in [`merit_ledger.json`](research/fellows/merit_ledger.json).
 
 ---
 

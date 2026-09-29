@@ -42,18 +42,25 @@ Contributors advance through five distinct ranks based strictly on deterministic
 
 ## 3. Git Workflow & The Branch Protection Invariant
 
-1. **Never push to `main`:** All work must take place on isolated feature branches formatted as:
+1. **Never push directly to `main`:** All work must take place on isolated feature branches formatted as:
    `c0/<github_username>/<quest-id>`
+   - **Direct Collaborator:** Push directly to the central repository branch: `git push origin c0/<username>/<quest-id>`
+   - **Fork Workflow:** Push to your personal fork and open a cross-repository pull request against `Aaradhya-Dev-Tamrakar/brainstorm:main`.
 2. **Branch Convention Examples:**
    - `c0/roshan-kc/quest-0`
    - `c0/anita-shrestha/quest-c0-02`
 3. **The Zero-Discrepancy Audit Gate:**
-   Before submitting any Pull Request, every contributor must run:
-   ```powershell
+   Before submitting any Pull Request, every contributor must run the deterministic audit suite:
+   ```bash
+   # On Windows:
    .\audit.bat
+
+   # On Linux / macOS / WSL:
+   chmod +x audit.sh
+   ./audit.sh
    ```
    If discrepancies or broken links exist, the PR will not be merged.
-4. **Pull Requests:** All submissions must use the GitHub PR Template (`.github/PULL_REQUEST_TEMPLATE.md`), attaching a terminal snippet of the passing audit gate.
+4. **Pull Requests:** All submissions must use the GitHub PR Template ([`.github/PULL_REQUEST_TEMPLATE.md`](../../.github/PULL_REQUEST_TEMPLATE.md)), attaching a terminal snippet of the passing audit gate.
 
 ---
 
@@ -92,4 +99,4 @@ BRL operates with **zero paid subscriptions**. Every fellow earns high-leverage 
 **A:** Datasets and benchmark papers you author under open research tracks are public. However, BRL's internal 23-module orchestration core and automation scripts are proprietary ecosystem assets and cannot be redistributed without written permission.
 
 ### Q: What happens if I fail an audit check?
-**A:** Run `.\audit.bat` locally. The terminal output will point out the exact file and line number causing the issue (e.g., broken markdown link, syntax error, or failing unit test). Fix the reported issue and re-run.
+**A:** Run `.\audit.bat` (Windows) or `./audit.sh` (Linux / macOS / WSL) locally. The terminal output will point out the exact file and line number causing the issue (e.g., broken markdown link, syntax error, or failing unit test). Fix the reported issue and re-run.

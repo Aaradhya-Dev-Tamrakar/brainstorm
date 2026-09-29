@@ -138,10 +138,10 @@
     "semantic_hash": "361e8dd333417f7e3bcd00d97cd29842"
   },
   "README.md": {
-    "mtime": 1790599852.7656655,
-    "seen": 1790599964.4901202,
-    "ast_hash": "2606f975a03f17c4930835a4cbed8699",
-    "semantic_hash": "2606f975a03f17c4930835a4cbed8699"
+    "mtime": 1790693931.9995954,
+    "seen": 1790693955.9144611,
+    "ast_hash": "777643b8d7b8ca2ea9e19e7730ad18c8",
+    "semantic_hash": "777643b8d7b8ca2ea9e19e7730ad18c8"
   },
   "research/architectures/README.md": {
     "mtime": 1790240407.9593427,
@@ -516,10 +516,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790693660.6805458,
-    "seen": 1790693662.7125227,
-    "ast_hash": "67d8c3c5a0f4e4cfaee5c465e864e891",
-    "semantic_hash": "67d8c3c5a0f4e4cfaee5c465e864e891"
+    "mtime": 1790693953.4277813,
+    "seen": 1790693955.9144003,
+    "ast_hash": "0ba6d445e81aed3c073eea70baedfcb3",
+    "semantic_hash": "0ba6d445e81aed3c073eea70baedfcb3"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -570,10 +570,10 @@
     "semantic_hash": "ef915c5d8d1809c77777dfc027680b8a"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790693658.6642432,
-    "seen": 1790693662.7125213,
-    "ast_hash": "caac17318becaacbbc624571604acdd6",
-    "semantic_hash": "caac17318becaacbbc624571604acdd6"
+    "mtime": 1790693951.3104188,
+    "seen": 1790693955.9143987,
+    "ast_hash": "a09a057c1f5fe32b0c77e5bc0ad9c87c",
+    "semantic_hash": "a09a057c1f5fe32b0c77e5bc0ad9c87c"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -786,10 +786,10 @@
     "semantic_hash": "8b1c0b6bd37ec8602420c4ce3153f080"
   },
   "research/notebooklm_ecosystem_sources/03_REPOSITORY_INVENTORY_AND_PRESENT_STATE.md": {
-    "mtime": 1790216898.326005,
-    "seen": 1790599964.4901676,
-    "ast_hash": "49c691a994362c51a107bc1d495a6e21",
-    "semantic_hash": "49c691a994362c51a107bc1d495a6e21"
+    "mtime": 1790693910.5861712,
+    "seen": 1790693955.91451,
+    "ast_hash": "2d0ba1146aa170b1a834d4e9d4dabffd",
+    "semantic_hash": "2d0ba1146aa170b1a834d4e9d4dabffd"
   },
   "research/notebooklm_ecosystem_sources/04_FUTURE_ROADMAP_AND_STRATEGIC_RESEARCH.md": {
     "mtime": 1790216904.5562916,
@@ -1092,10 +1092,10 @@
     "semantic_hash": "d2c1ae1067e0e20cb7b11bf77e031696"
   },
   "research/fellows/README.md": {
-    "mtime": 1790682405.4872103,
-    "seen": 1790682478.4317613,
-    "ast_hash": "96a56fcd657a3d68fcef29c1c14313be",
-    "semantic_hash": "96a56fcd657a3d68fcef29c1c14313be"
+    "mtime": 1790693914.8005118,
+    "seen": 1790693955.914504,
+    "ast_hash": "6fca20235f46b1cdb4fbf58858296196",
+    "semantic_hash": "6fca20235f46b1cdb4fbf58858296196"
   },
   "research/fellows/TEMPLATE.md": {
     "mtime": 1790692227.3850205,
@@ -1104,10 +1104,10 @@
     "semantic_hash": "43469471ac8f4ee882fce4e2fd50ad62"
   },
   "research/notebooklm_ecosystem_sources/07_BRL_FELLOWSHIP_AND_COHORT_ONBOARDING.md": {
-    "mtime": 1790683065.5032675,
-    "seen": 1790683088.6005645,
-    "ast_hash": "38da4c9781c44f794b91018c72e8185c",
-    "semantic_hash": "38da4c9781c44f794b91018c72e8185c"
+    "mtime": 1790693925.3403647,
+    "seen": 1790693955.9145136,
+    "ast_hash": "f177a2dc1396befab955e9eddb1d92f9",
+    "semantic_hash": "f177a2dc1396befab955e9eddb1d92f9"
   },
   "research/plans/BRL_C0_OUTREACH_SCRIPTS.md": {
     "mtime": 1790682446.1611855,

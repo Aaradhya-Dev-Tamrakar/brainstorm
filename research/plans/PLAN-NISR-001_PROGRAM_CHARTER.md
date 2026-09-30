@@ -73,11 +73,11 @@ Landscape       Ingestion     Intelligence      Flywheel     Provenance      Kno
 - **Publication Target:** *Applied Machine Learning / Computer Vision / NLP.*
 
 ### Track NISR-005: Sovereign Provenance & Cryptographic Lineage
-- **Objective:** Engineer a zero-drift, tamper-evident audit ledger pairing atomic storage, `os.fsync()` physical re-read assertions, and multi-tier cryptographic hashes for sovereign public records.
+- **Objective:** Engineer a zero-drift, tamper-evident audit ledger pairing atomic storage, `os.fsync()` physical re-read assertions, multi-tier cryptographic hashes, and a dual-representation substrate (canonical YAML-frontmatter Markdown `.md` knowledge tree alongside SQLite WAL relational persistence) for sovereign public records.
 - **Publication Target:** *Information Systems / Digital Forensics / Open Data Governance.*
 
 ### Track NISR-006: Legal Knowledge Graph & Temporal Reasoning
-- **Objective:** Formulate a bi-directional 125-year Bikram Sambat $\leftrightarrow$ Gregorian temporal normalization engine and statutory relation graph capturing legislative lifecycles (`AMENDS`, `REPEALS`, `PARTIALLY_REPEALS`, `CITES`).
+- **Objective:** Formulate a bi-directional 125-year Bikram Sambat $\leftrightarrow$ Gregorian temporal normalization engine and statutory relation graph capturing legislative lifecycles (`AMENDS`, `REPEALS`, `PARTIALLY_REPEALS`, `CITES`) with granular section-level (`statute_sections`) indexing and SQLite FTS5 sub-millisecond Devanagari lexical retrieval.
 - **Publication Target:** *Legal Informatics / AI & Law (JURIX / ICAIL).*
 
 ---
@@ -114,7 +114,8 @@ Execution proceeds strictly in a gated, evidence-driven sequence:
 │ PHASE 4: Controlled Single-Source Ingestion Pilot                      │
 │  • Execute full vertical slice harvest against Nepal Law Commission.   │
 │  • Ingest ~400 active Acts with post-write verification and B.S. dates.│
-│  • Produce verified digital legal corpus + SQLite WAL ledger.         │
+│  • Produce verified dual-substrate: Canonical Markdown tree + SQLite   │
+│    WAL ledger with section-level FTS5 indexing.                        │
 └───────────────────────────────────┬────────────────────────────────────┘
                                     │
                                     ▼

@@ -154,3 +154,75 @@ Extracted and ported directly from Aaradhya's portfolio engine (`AaradhyaDT.gith
 2. **Power Outage Resilience:** Desktops set to BIOS `Restore on AC Power Loss = Power On`; Jetson Nano backed by micro-UPS power bank.
 3. **Database WAL Checkpointing:** SQLite operating with `journal_mode=WAL` and `synchronous=NORMAL` to guarantee zero database corruption across abrupt power cuts.
 
+---
+
+## 10. Dual-Representation Storage Architecture: Canonical Markdown & Relational/FTS Database Substrate
+
+To maximize utility across both human knowledge synthesis and high-performance machine intelligence, all harvested Nepal datasets are persisted in a **dual-representation substrate**:
+
+```text
+Harvest Ingestion Pipeline
+           │
+           ├──► [Representation A] Canonical Markdown (.md) Knowledge Tree
+           │    ├── Strict YAML frontmatter (metadata, temporal, citations, tags)
+           │    ├── Obsidian [[wikilinks]] connecting related Acts and Supreme Court precedents
+           │    ├── Clean git diffs tracking legislative amendments (संशोधन) over time
+           │    └── Graphify indexing into ecosystem knowledge graph (graphify-out/)
+           │
+           └──► [Representation B] Relational & FTS Database Substrate (SQLite WAL + FTS5)
+                ├── Document storage and SHA-256 provenance ledger (`harvest_documents`)
+                ├── Statutory entity and directed relation graph (`legal_entities`, `act_relations`)
+                ├── Granular section/article substrate (`statute_sections`)
+                └── Sub-millisecond Devanagari lexical search (`fts_statute_sections`)
+```
+
+### 10.1 Canonical Markdown Specification
+Each harvested statute, regulation, or civic record is converted into an NFC-normalized Devanagari Markdown document with standard YAML frontmatter:
+
+```markdown
+---
+id: "ACT-2072-CONST"
+canonical_title_nep: "नेपालको संविधान"
+canonical_title_en: "Constitution of Nepal"
+doc_type: "CONSTITUTION" # CONSTITUTION | ACT | REGULATION | ORDINANCE | GAZETTE | CIVIC_SERVICE
+status: "ACTIVE"         # ACTIVE | AMENDED | REPEALED
+authority: "Nepal Law Commission"
+source_url: "https://lawcommission.gov.np/..."
+sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+temporal:
+  published_bs: "2072-06-03"
+  published_ad: "2015-09-20"
+  enacted_bs: "2072-06-03"
+  enacted_ad: "2015-09-20"
+  effective_bs: "2072-06-03"
+  effective_ad: "2015-09-20"
+relations:
+  amends: []
+  repealed_by: null
+  cites: ["[[ACT-2063-PROCUREMENT]]"]
+tags:
+  - nepal-data
+  - law
+  - statutory-substrate
+---
+
+# नेपालको संविधान
+
+## भाग ३: मौलिक हक र कर्तव्य
+
+### धारा १६: सम्मानपूर्वक बाँच्न पाउने हक
+(१) प्रत्येक व्यक्तिलाई सम्मानपूर्वक बाँच्न पाउने हक हुनेछ ।
+(२) कसैलाई पनि मृत्युदण्डको सजाय दिने गरी कानुन बनाइने छैन ।
+```
+
+### 10.2 Relational & FTS Database Extensions
+To support granular clause querying and instant Devanagari text search, the SQLite schema is extended with:
+- **`statute_sections` Table:** Maps individual parts, chapters, and sections (*दफा / धारा*) with foreign key bindings to `legal_entities(entity_id)` and pointers to their source `.md` file paths.
+- **`fts_statute_sections` Virtual Table:** Uses SQLite FTS5 with `unicode61` tokenization to provide sub-millisecond lexical queries, snippet extraction, and BM25 ranking across both Devanagari and English texts.
+
+### 10.3 Bidirectional Synchronization Engine (`MD` $\longleftrightarrow$ `DB`)
+To eliminate drift between physical files on disk and the database query engine:
+- **`md_to_db(filepath)`:** Ingests or updates Markdown documents into `legal_entities`, parses section hierarchy into `statute_sections`, and updates FTS5 indices.
+- **`db_to_md(entity_id)`:** Re-generates or verifies canonical Markdown files directly from database ground truth.
+
+

@@ -6,10 +6,10 @@
     "semantic_hash": "1f807d3a09fa490b7f5315226b97cf4b"
   },
   "schemas/ecosystem.registry.json": {
-    "mtime": 1790701067.5133617,
-    "seen": 1790701088.8643706,
-    "ast_hash": "4fdb59479a58e17027ce7efc844b4092",
-    "semantic_hash": "4fdb59479a58e17027ce7efc844b4092"
+    "mtime": 1790736408.1478357,
+    "seen": 1790736414.4922085,
+    "ast_hash": "b0c50043b0889e5f5136d1a2b91c33e8",
+    "semantic_hash": "b0c50043b0889e5f5136d1a2b91c33e8"
   },
   "schemas/examples/AI-Constraint-Solver.contract.json": {
     "mtime": 1790044861.17107,
@@ -516,10 +516,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790701086.6639464,
-    "seen": 1790701088.8643665,
-    "ast_hash": "30961a1b0998a0582e9f6620fe39b3da",
-    "semantic_hash": "30961a1b0998a0582e9f6620fe39b3da"
+    "mtime": 1790736410.8281121,
+    "seen": 1790736414.4922037,
+    "ast_hash": "53a1db205e2c98cfb349619f038a3005",
+    "semantic_hash": "53a1db205e2c98cfb349619f038a3005"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -570,10 +570,10 @@
     "semantic_hash": "ef915c5d8d1809c77777dfc027680b8a"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790701084.5766666,
-    "seen": 1790701088.8643641,
-    "ast_hash": "69d0faf704dfe2b7989d7f55b966ecb8",
-    "semantic_hash": "69d0faf704dfe2b7989d7f55b966ecb8"
+    "mtime": 1790736408.7092595,
+    "seen": 1790736414.4922016,
+    "ast_hash": "045973b3c901d79c9496b784a9bae50b",
+    "semantic_hash": "045973b3c901d79c9496b784a9bae50b"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -858,16 +858,16 @@
     "semantic_hash": "cae08f662e06ade8c98af309b3d9c0b6"
   },
   "research/plans/PLAN-NEP-DATA-001_SOVEREIGN_KNOWLEDGE_GRAPH_AND_IDBFS_INGESTION.md": {
-    "mtime": 1790599557.724282,
-    "seen": 1790599964.4901779,
-    "ast_hash": "df22561991d157629b3edbc93b44905c",
-    "semantic_hash": "df22561991d157629b3edbc93b44905c"
+    "mtime": 1790736375.0826309,
+    "seen": 1790736414.4924483,
+    "ast_hash": "8e289ba5518d221e1a3b4466b73e7023",
+    "semantic_hash": "8e289ba5518d221e1a3b4466b73e7023"
   },
   "research/plans/PLAN-NISR-001_PROGRAM_CHARTER.md": {
-    "mtime": 1790599524.6719759,
-    "seen": 1790599964.4901783,
-    "ast_hash": "7e6830b3f3306959d3cd3c219fcb5dad",
-    "semantic_hash": "7e6830b3f3306959d3cd3c219fcb5dad"
+    "mtime": 1790736389.9727552,
+    "seen": 1790736414.4924498,
+    "ast_hash": "a323d42f2fc012b9a41a768e993a784d",
+    "semantic_hash": "a323d42f2fc012b9a41a768e993a784d"
   },
   "research/plans/PLAN-P2P-001_OFFLINE_DIRECT_TRANSPORT_ENGINE.md": {
     "mtime": 1790494858.1300032,

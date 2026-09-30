@@ -1,171 +1,234 @@
 /**
- * Brainstorm Research Laboratory (BRL) — Cohort 0 Intake Form Generator
- * 
- * Instructions:
+ * Brainstorm Research Laboratory (BRL) — Cohort 0 Participant Intake Form Generator
+ *
+ * FIRST-CONTACT FORM
+ * ------------------
+ * This form is intentionally lightweight. It is sent with the two short C0
+ * briefing documents before formal technical onboarding.
+ *
+ * To create the form:
  * 1. Open https://script.google.com/
- * 2. Create a New Project: "BRL_Cohort_0_Intake_Generator"
- * 3. Paste this code into Code.gs
- * 4. Click "Run" -> select "createBRLCohort0Form"
- * 5. Grant permissions. The script will create the Form and log the edit URL and live URL!
+ * 2. Create a new project.
+ * 3. Paste this file into Code.gs.
+ * 4. Run createBRLCohort0Form().
+ * 5. Grant Google Forms permissions.
+ * 6. Copy the edit URL and live URL from the execution log.
  */
 
 function createBRLCohort0Form() {
-  const formTitle = "Brainstorm Research Laboratory — Cohort 0 Intake & Diagnostic";
+  const formTitle = "Brainstorm Research Laboratory — Cohort 0 Participant Intake";
   const form = FormApp.create(formTitle);
-  
+
   form.setDescription(
-    "Welcome to the Brainstorm Research Laboratory (BRL) Cohort 0 calibration fellowship.\n\n" +
-    "BRL is an artifact-driven research collective focused on sovereign systems engineering, " +
-    "formal verification, and reproducible technical outputs.\n\n" +
-    "This diagnostic form collects baseline hardware, bandwidth, and quest preferences to match you " +
-    "with your initial research quest.\n\n" +
-    "Program Charter: PLAN-BRL-001\n" +
-    "Laboratory Director: Aaradhya Dev Tamrakar"
+    "This short form helps us understand your background, interests, availability, " +
+    "and current setup for Cohort 0 placement.\n\n" +
+    "Please read these first:\n" +
+    "1. https://github.com/Aaradhya-Dev-Tamrakar/brainstorm/blob/main/research/plans/BRL_C0_OVERVIEW.md\n" +
+    "2. https://github.com/Aaradhya-Dev-Tamrakar/brainstorm/blob/main/research/plans/BRL_C0_HOW_IT_WORKS.md\n\n" +
+    "This is an intake and placement form, not a technical exam. You do not need prior research experience."
   );
+
   form.setCollectEmail(true);
   form.setAllowResponseEdits(true);
 
   // -------------------------------------------------------------
-  // SECTION 1: Identity & Access Configuration
+  // SECTION 1: BASIC INFORMATION
   // -------------------------------------------------------------
-  const sec1 = form.addSectionHeaderItem();
-  sec1.setTitle("Section 1: Contributor Identity & System Access");
-  sec1.setHelpText("Your GitHub username and Google account are required to provision repository and dataset access.");
+  form.addSectionHeaderItem()
+    .setTitle("1. Basic Information")
+    .setHelpText("A few details so we can identify and contact you.");
 
   form.addTextItem()
     .setTitle("Full Name")
     .setRequired(true);
 
   form.addTextItem()
-    .setTitle("College / Department / Current Semester")
-    .setHelpText("e.g., Kathmandu Engineering College (KEC), Electronics & Computer Engineering, Semester 7")
-    .setRequired(true);
-
+    .setTitle("Preferred Name")
+    .setHelpText("What should we call you in the cohort?");
+  
   form.addTextItem()
     .setTitle("GitHub Username")
-    .setHelpText("e.g., octocat (Do not include @)")
+    .setHelpText("Enter the username only, without @.")
     .setRequired(true);
 
   form.addTextItem()
-    .setTitle("Google Account Email")
-    .setHelpText("Used for shared Google Drive datasets, Google Colab compute, and NotebookLM research engines.")
+    .setTitle("College / Department / Current Semester")
+    .setRequired(true);
+
+  form.addTextItem()
+    .setTitle("WhatsApp / Preferred Contact")
     .setRequired(true);
 
   // -------------------------------------------------------------
-  // SECTION 2: Hardware & Environment Audit
+  // SECTION 2: CURRENT EXPERIENCE
   // -------------------------------------------------------------
-  const sec2 = form.addPageBreakItem();
-  sec2.setTitle("Section 2: Hardware & Execution Environment Audit");
-  sec2.setHelpText("Helps us match you with quests suitable for your local machine or assign cloud compute (Colab) where needed.");
+  form.addPageBreakItem()
+    .setTitle("2. Current Experience")
+    .setHelpText("There is no 'wrong' answer. This helps us start at the right level.");
+
+  addComfortQuestion(
+    form,
+    "Git / GitHub",
+    [
+      "Never used",
+      "Have seen / used a little",
+      "Can do basic tasks",
+      "Comfortable using it",
+      "Very comfortable"
+    ]
+  );
+
+  addComfortQuestion(
+    form,
+    "Python / Programming",
+    [
+      "Never / almost never",
+      "Basic exposure",
+      "Can write small programs",
+      "Comfortable building small projects",
+      "Very comfortable"
+    ]
+  );
+
+  addComfortQuestion(
+    form,
+    "Terminal / Command Line",
+    [
+      "Never used",
+      "Basic commands only",
+      "Can follow command-line instructions",
+      "Comfortable",
+      "Very comfortable"
+    ]
+  );
+
+  addComfortQuestion(
+    form,
+    "Research / Technical Searching",
+    [
+      "New to it",
+      "Basic",
+      "Comfortable finding sources",
+      "Comfortable comparing sources",
+      "Very comfortable"
+    ]
+  );
+
+  form.addParagraphTextItem()
+    .setTitle("Have you built, investigated, or learned any technical project before?")
+    .setHelpText("A short description is enough. Incomplete projects are completely fine.")
+    .setRequired(true);
+
+  // -------------------------------------------------------------
+  // SECTION 3: INTERESTS
+  // -------------------------------------------------------------
+  form.addPageBreakItem()
+    .setTitle("3. What Interests You?")
+    .setHelpText("Select the areas you would most like to explore in C0.");
+
+  form.addCheckboxItem()
+    .setTitle("Research Areas You Are Interested In")
+    .setChoiceValues([
+      "Nepal public-data collection / data mining",
+      "AI / Machine Learning",
+      "Software engineering / testing",
+      "Embedded systems / hardware",
+      "Document / language technology",
+      "Data analysis / benchmarking",
+      "Research experiments / scientific investigation",
+      "Systems / infrastructure"
+    ])
+    .setRequired(true);
+
+  form.addMultipleChoiceItem()
+    .setTitle("What would you most like to learn or become able to do through C0?")
+    .setChoiceValues([
+      "Learn how to do structured technical research",
+      "Learn practical software/data engineering",
+      "Work on Nepal-focused data and information",
+      "Explore AI/ML through real tasks",
+      "Build stronger Git/GitHub and engineering workflow skills",
+      "Explore systems / embedded / technical infrastructure",
+      "I am still exploring and would like help finding a direction"
+    ])
+    .setRequired(true);
+
+  // -------------------------------------------------------------
+  // SECTION 4: SETUP & AVAILABILITY
+  // -------------------------------------------------------------
+  form.addPageBreakItem()
+    .setTitle("4. Setup & Availability")
+    .setHelpText("This helps us avoid assigning work that does not fit your current setup or schedule.");
 
   form.addMultipleChoiceItem()
     .setTitle("Primary Operating System")
     .setChoiceValues([
-      "Windows 11 / 10 (Native PowerShell)",
-      "Windows Subsystem for Linux (WSL2 / Ubuntu)",
-      "Linux (Native Ubuntu / Debian / Fedora / Arch)",
-      "macOS (Apple Silicon M-series)",
-      "macOS (Intel)"
+      "Windows",
+      "Linux",
+      "macOS",
+      "Windows + WSL",
+      "Other"
     ])
     .setRequired(true);
 
   form.addTextItem()
-    .setTitle("System RAM & CPU")
-    .setHelpText("e.g., 16 GB RAM, AMD Ryzen 7 5800H (8 cores)")
+    .setTitle("Approximate RAM / Laptop or Desktop")
+    .setHelpText("Example: 16 GB RAM, Core i5 laptop. Exact specifications are not required.")
     .setRequired(true);
 
   form.addMultipleChoiceItem()
-    .setTitle("Discrete Dedicated GPU Availability")
+    .setTitle("Realistic Weekly Availability")
     .setChoiceValues([
-      "NVIDIA RTX series (RTX 3060 / 4060 / etc.)",
-      "NVIDIA GTX series (GTX 1650 / 1060 / etc.)",
-      "Apple Silicon Unified Memory (M1/M2/M3/M4)",
-      "Integrated Graphics Only (Intel Iris / AMD Radeon)",
-      "Cloud Only (I plan to use Google Colab / Kaggle for compute)"
-    ])
-    .setRequired(true);
-
-  form.addScaleItem()
-    .setTitle("Git Command-Line Comfort")
-    .setHelpText("1 = I rely on GitHub Desktop/UI; 5 = Comfortable with terminal git branch, rebase, cherry-pick")
-    .setBounds(1, 5)
-    .setLabels("GUI only", "Terminal native")
-    .setRequired(true);
-
-  // -------------------------------------------------------------
-  // SECTION 3: Bandwidth & Calendar Alignment
-  // -------------------------------------------------------------
-  const sec3 = form.addPageBreakItem();
-  sec3.setTitle("Section 3: Weekly Bandwidth & Exam Calendar");
-  sec3.setHelpText("We operate on asynchronous, high-trust autonomy. Honesty regarding exam schedules prevents bottlenecking.");
-
-  form.addMultipleChoiceItem()
-    .setTitle("Realistic Committed Weekly Bandwidth")
-    .setChoiceValues([
-      "3 to 5 hours / week (Scout Pace)",
-      "6 to 8 hours / week (Standard Fellowship Pace — Recommended)",
-      "10+ hours / week (Intensive Track)"
+      "Around 3–4 hours",
+      "Around 5–8 hours",
+      "Around 9–12 hours",
+      "It varies week to week"
     ])
     .setRequired(true);
 
   form.addParagraphTextItem()
-    .setTitle("Upcoming Academic Blackout Dates (Exams, Vivas, Major Project Deadlines)")
-    .setHelpText("List any weeks between October and December 2026 where you will be unavailable due to college exams or travel. (Write 'None' if free).")
+    .setTitle("Known exam / project / travel periods")
+    .setHelpText("Mention any upcoming periods when your availability will be low. Write 'None' if there are no known conflicts.")
     .setRequired(true);
 
   // -------------------------------------------------------------
-  // SECTION 4: Quest Preferences & Skills Diagnostic
+  // SECTION 5: EXPECTATIONS & INTEREST
   // -------------------------------------------------------------
-  const sec4 = form.addPageBreakItem();
-  sec4.setTitle("Section 4: Research Quest Preferences (Cohort 0)");
-  sec4.setHelpText("Select the research domains you are most motivated to investigate for your first sprint.");
+  form.addPageBreakItem()
+    .setTitle("5. Final Check")
+    .setHelpText("A few questions about how you would like to participate.");
 
   form.addMultipleChoiceItem()
-    .setTitle("First-Choice Quest Preference")
+    .setTitle("Which statement best describes you right now?")
     .setChoiceValues([
-      "Quest C0-01: Discrete-Event Memory Simulator & Invariant Verification (Python, deterministic simulations)",
-      "Quest C0-02: Nepal Public Authority Source Census & Accessibility Probing (Web data, TLS/HTTP, JSON schema)",
-      "Quest C0-03: Devanagari Legacy Glyph Transcoding & Parallel Corpus (Unicode, font encodings, NLP)",
-      "Quest C0-04: Tool Module Telemetry & Latency Profiling (Benchmarking, performance analysis)"
+      "I am very new, but I want to learn by doing",
+      "I know some basics and want practical experience",
+      "I already build projects and want research-oriented challenges",
+      "I am mainly interested in exploring and seeing where I fit"
     ])
     .setRequired(true);
 
-  form.addMultipleChoiceItem()
-    .setTitle("Second-Choice Quest Preference")
-    .setChoiceValues([
-      "Quest C0-01: Discrete-Event Memory Simulator & Invariant Verification",
-      "Quest C0-02: Nepal Public Authority Source Census & Accessibility Probing",
-      "Quest C0-03: Devanagari Legacy Glyph Transcoding & Parallel Corpus",
-      "Quest C0-04: Tool Module Telemetry & Latency Profiling"
-    ])
-    .setRequired(true);
-
-  // -------------------------------------------------------------
-  // SECTION 5: Contributor Agreement & Governance Lock
-  // -------------------------------------------------------------
-  const sec5 = form.addPageBreakItem();
-  sec5.setTitle("Section 5: BRL Governance & Contributor Agreement Sign-Off");
-  sec5.setHelpText("Please review the core principles of the Brainstorm Research Laboratory.");
-
-  const agreementText = 
-    "By checking the boxes below, you affirm:\n\n" +
-    "1. Permanent Attribution: All code, datasets, and reports authored by you will permanently bear your name and credit in Git history, release tags, and technical reports.\n" +
-    "2. Tooling Boundary: BRL internal orchestration engines, 23-module capability mesh, and automation tools remain proprietary assets under BRL governance and will not be replicated or redistributed without permission.\n" +
-    "3. Epistemic Rigor: Zero tolerance for fabricated citations, unverified AI halluncinations, or unrunnable code.\n" +
-    "4. No-Guilt Pause: If coursework or exams become overwhelming, you agree to post [PAUSE] in the group to freeze your quest cleanly without guilt or penalty.";
+  form.addParagraphTextItem()
+    .setTitle("Anything else we should know for C0 placement?")
+    .setHelpText("Optional — learning goals, constraints, interests, or anything useful.");
 
   form.addCheckboxItem()
-    .setTitle("Affirmation of BRL Contributor Agreement")
-    .setHelpText(agreementText)
+    .setTitle("Participant Understanding")
     .setChoiceValues([
-      "I have read, understood, and accept the BRL Contributor Agreement (PLAN-BRL-001)."
+      "I have read the short C0 overview, understand the general model, and would like to be considered for Cohort 0."
     ])
     .setRequired(true);
 
-  // Output Links
   Logger.log("=================================================");
-  Logger.log("BRL Cohort 0 Intake Form Created Successfully!");
+  Logger.log("BRL Cohort 0 Participant Intake Form created.");
   Logger.log("Edit Form URL: " + form.getEditUrl());
   Logger.log("Published Live URL: " + form.getPublishedUrl());
   Logger.log("=================================================");
+}
+
+function addComfortQuestion(form, title, choices) {
+  form.addMultipleChoiceItem()
+    .setTitle(title)
+    .setChoiceValues(choices)
+    .setRequired(true);
 }

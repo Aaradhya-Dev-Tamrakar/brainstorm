@@ -3,7 +3,7 @@
  *
  * FIRST-CONTACT FORM
  * ------------------
- * This form is intentionally lightweight. It is sent with the two short C0
+ * This form is intentionally lightweight. It is sent with the short C0
  * briefing documents before formal technical onboarding.
  *
  * To create the form:
@@ -24,8 +24,12 @@ function createBRLCohort0Form() {
     "and current setup for Cohort 0 placement.\n\n" +
     "Please read these first:\n" +
     "1. https://github.com/Aaradhya-Dev-Tamrakar/brainstorm/blob/main/research/plans/BRL_C0_OVERVIEW.md\n" +
-    "2. https://github.com/Aaradhya-Dev-Tamrakar/brainstorm/blob/main/research/plans/BRL_C0_HOW_IT_WORKS.md\n\n" +
-    "This is an intake and placement form, not a technical exam. You do not need prior research experience."
+    "2. https://github.com/Aaradhya-Dev-Tamrakar/brainstorm/blob/main/research/plans/BRL_C0_HOW_IT_WORKS.md\n" +
+    "3. https://github.com/Aaradhya-Dev-Tamrakar/brainstorm/blob/main/research/plans/BRL_C0_PARTICIPANT_PRIVACY.md\n\n" +
+    "This is an intake and placement form, not a technical exam. You do not need prior research experience.\n\n" +
+    "Privacy: information is collected for participant communication, placement, scheduling, " +
+    "and program administration. Optional questions may be declined. Information about your " +
+    "background and interests is used for placement and planning, not as a standalone technical qualification test."
   );
 
   form.setCollectEmail(true);
@@ -45,7 +49,7 @@ function createBRLCohort0Form() {
   form.addTextItem()
     .setTitle("Preferred Name")
     .setHelpText("What should we call you in the cohort?");
-  
+
   form.addTextItem()
     .setTitle("GitHub Username")
     .setHelpText("Enter the username only, without @.")
@@ -123,7 +127,7 @@ function createBRLCohort0Form() {
   // SECTION 3: INTERESTS
   // -------------------------------------------------------------
   form.addPageBreakItem()
-    .setTitle("3. What Interests You?")
+    .setTitle("3. Interests & Learning Goals")
     .setHelpText("Select the areas you would most like to explore in C0.");
 
   form.addCheckboxItem()
@@ -192,11 +196,23 @@ function createBRLCohort0Form() {
     .setRequired(true);
 
   // -------------------------------------------------------------
-  // SECTION 5: EXPECTATIONS & INTEREST
+  // SECTION 5: ACCESSIBILITY / PRACTICAL SUPPORT
   // -------------------------------------------------------------
   form.addPageBreakItem()
-    .setTitle("5. Final Check")
-    .setHelpText("A few questions about how you would like to participate.");
+    .setTitle("5. Participation Support")
+    .setHelpText("Optional. Share only what is useful for making participation practical and accessible for you.");
+
+  form.addParagraphTextItem()
+    .setTitle("Is there anything practical we should consider to make participation easier for you?")
+    .setHelpText("Optional — examples include accessibility needs, preferred communication methods, scheduling constraints, or other practical considerations. Please do not include information you do not want to share.")
+    .setRequired(false);
+
+  // -------------------------------------------------------------
+  // SECTION 6: FINAL CHECK
+  // -------------------------------------------------------------
+  form.addPageBreakItem()
+    .setTitle("6. Final Check")
+    .setHelpText("This confirms that the form is being used for intake and placement.");
 
   form.addMultipleChoiceItem()
     .setTitle("Which statement best describes you right now?")
@@ -208,6 +224,17 @@ function createBRLCohort0Form() {
     ])
     .setRequired(true);
 
+  form.addMultipleChoiceItem()
+    .setTitle("How did you hear about BRL?")
+    .setChoiceValues([
+      "Direct invitation",
+      "Friend / colleague",
+      "College / student community",
+      "Online / social media",
+      "Other"
+    ])
+    .setRequired(false);
+
   form.addParagraphTextItem()
     .setTitle("Anything else we should know for C0 placement?")
     .setHelpText("Optional — learning goals, constraints, interests, or anything useful.");
@@ -215,10 +242,13 @@ function createBRLCohort0Form() {
   form.addCheckboxItem()
     .setTitle("Participant Understanding")
     .setChoiceValues([
-      "I have read the short C0 overview, understand the general model, and would like to be considered for Cohort 0."
+      "I have read the short C0 briefing, understand that this form is for intake and placement, and would like to be considered for Cohort 0."
     ])
     .setRequired(true);
 
+  // -------------------------------------------------------------
+  // OUTPUT LINKS
+  // -------------------------------------------------------------
   Logger.log("=================================================");
   Logger.log("BRL Cohort 0 Participant Intake Form created.");
   Logger.log("Edit Form URL: " + form.getEditUrl());

@@ -94,6 +94,14 @@ Technical questions and blockers are intended to be visible to the cohort so tha
 
 When coursework, exams, or another major commitment temporarily prevents progress, BRL has a **[PAUSE]** mechanism so that work can be stopped and resumed cleanly.
 
+## Participation and funding
+
+C0 participation does not require a fee, donation, or purchase of equipment.
+
+BRL may separately receive general support and may arrange sponsorship for defined research projects. A contributor-led project can also be sponsored specifically without turning that sponsorship into a payment for general participation.
+
+For details, see [BRL Support & Sponsorship Framework](BRL_SUPPORT_AND_SPONSORSHIP.md).
+
 ## What you do not need before joining
 
 You do not need:

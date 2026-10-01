@@ -88,7 +88,35 @@ AI tools may be used as productivity and learning aids, but submitted work must 
 
 C0 is designed around a realistic part-time commitment. The current BRL plan uses approximately **5–8 hours per week** as the normal active-cohort range, with flexibility around academic workload.
 
-There is **no mandatory paid software or subscription requirement**.
+There is **no mandatory paid software, subscription, hardware purchase, or participant contribution required to join C0**.
+
+Participants are not expected to donate to BRL or finance their own assigned Quest in order to participate.
+
+## Support and sponsorship
+
+BRL may receive external support for shared laboratory needs such as infrastructure, compute, hardware, workshops, or research operations. It may also accept sponsorship directed toward a **specific research project**, including a project led by an individual contributor.
+
+These are separate from participation:
+
+```text
+General BRL Support
+→ strengthens shared laboratory infrastructure
+
+Project Sponsorship
+→ supports a defined project and its approved expenses
+
+Individual-Led Project Sponsorship
+→ supports a specific contributor-led project,
+   not the contributor's general participation
+```
+
+Project sponsorship is tied to a defined project, budget, deliverables, and reporting process. Sponsorship does **not** by itself give a sponsor ownership of BRL, unrelated projects, contributor selection, or authority to determine research conclusions.
+
+See [BRL Support & Sponsorship Framework](BRL_SUPPORT_AND_SPONSORSHIP.md) for the operating model.
+
+## Equal opportunity
+
+BRL aims to provide equal opportunity to participate in its research and engineering activities. Selection, Quest assignment, evaluation, progression, authorship, and other participation decisions are based on relevant capability, conduct, contribution, and program requirements.
 
 ## What happens next?
 

@@ -516,10 +516,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790836596.9343991,
-    "seen": 1790836600.498791,
-    "ast_hash": "1efd19f5a63ba08fb7cc2581742f451e",
-    "semantic_hash": "1efd19f5a63ba08fb7cc2581742f451e"
+    "mtime": 1790837809.7512612,
+    "seen": 1790837812.7349017,
+    "ast_hash": "bec3027237f49e57f36e12c7269111cf",
+    "semantic_hash": "bec3027237f49e57f36e12c7269111cf"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -570,10 +570,10 @@
     "semantic_hash": "ef915c5d8d1809c77777dfc027680b8a"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790836594.7339737,
-    "seen": 1790836600.4987884,
-    "ast_hash": "268de92caeef6c77a9196a2be3b46906",
-    "semantic_hash": "268de92caeef6c77a9196a2be3b46906"
+    "mtime": 1790837807.5109918,
+    "seen": 1790837812.7348995,
+    "ast_hash": "4894789a00d5c28d569f21a006310982",
+    "semantic_hash": "4894789a00d5c28d569f21a006310982"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -1200,10 +1200,10 @@
     "semantic_hash": "9d66d72ae5c79bf0a523d8e0484fff88"
   },
   "research/plans/PLAN-MEDIA-001_ECOSYSTEM_PROJECT_WORKING_SCREENSHOT_CAPTURE.md": {
-    "mtime": 1790835292.2794406,
-    "seen": 1790835523.5074594,
-    "ast_hash": "f5216f4db7095f10fb5564189ba13b44",
-    "semantic_hash": "f5216f4db7095f10fb5564189ba13b44"
+    "mtime": 1790837782.759312,
+    "seen": 1790837812.7351377,
+    "ast_hash": "dde485e0a985382fbbd85d1544a74653",
+    "semantic_hash": "dde485e0a985382fbbd85d1544a74653"
   },
   "tools/skills/github-workflow/SKILL.md": {
     "mtime": 1790828954.973477,

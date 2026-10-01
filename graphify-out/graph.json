@@ -32990,7 +32990,7 @@
       "node_kind": "heading",
       "norm_label": "6. epistemic invariants & quality gates",
       "source_file": "research/plans/PLAN-MEDIA-001_ECOSYSTEM_PROJECT_WORKING_SCREENSHOT_CAPTURE.md",
-      "source_location": "L198"
+      "source_location": "L196"
     },
     {
       "id": "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture_phase_1_automation_harness_setup_directory_scaffolding_completed_2026_10_01",
@@ -33041,14 +33041,14 @@
       "source_location": "L178"
     },
     {
-      "id": "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture_phase_5_portfolio_ui_integration_verification_day_4_day_5",
-      "label": "Phase 5: Portfolio UI Integration & Verification (Day 4 - Day 5)",
+      "id": "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture_phase_5_portfolio_ui_integration_verification_completed_2026_10_01",
+      "label": "Phase 5: Portfolio UI Integration & Verification (Completed 2026-10-01)",
       "_origin": "ast",
       "community": 60,
       "community_name": "Community 60",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "phase 5: portfolio ui integration & verification (day 4 - day 5)",
+      "norm_label": "phase 5: portfolio ui integration & verification (completed 2026-10-01)",
       "source_file": "research/plans/PLAN-MEDIA-001_ECOSYSTEM_PROJECT_WORKING_SCREENSHOT_CAPTURE.md",
       "source_location": "L183"
     },
@@ -56033,7 +56033,7 @@
     },
     {
       "source": "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture_5_phased_implementation_roadmap",
-      "target": "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture_phase_5_portfolio_ui_integration_verification_day_4_day_5",
+      "target": "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture_phase_5_portfolio_ui_integration_verification_completed_2026_10_01",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -56083,7 +56083,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/plans/PLAN-MEDIA-001_ECOSYSTEM_PROJECT_WORKING_SCREENSHOT_CAPTURE.md",
-      "source_location": "L198",
+      "source_location": "L196",
       "weight": 1.0
     },
     {
@@ -81542,5 +81542,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "793c58f17ca7c6c0dd50e2ab2d09ee03659912f3"
+  "built_at_commit": "48d28e2298142eda6d57d0612e849ed36e284d1c"
 }

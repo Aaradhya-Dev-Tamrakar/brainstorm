@@ -180,18 +180,16 @@ Focus on the 6 showcased flagship projects featured on the homepage:
 - [x] **Fusemachines ML Suite (`p-003` to `p-028`)**: Key visualizations across tabular, vision, and NLP milestones extracted from executed Jupyter notebooks and authentic plots (`fuse-wk1` to `fuse-wk14`, all < 120 KB).
 - [x] **Hardware & Coursework**: PrakopNet (`p-012`, 32.6 KB), Antenna Lab polar patterns (`p-013`, 29.4 KB), Custom Processor FSM (`p-014`, 30.9 KB), Cryptarithmetic Solver (`p-020`, 24.5 KB), ONM Case Study (`p-026`, 33.5 KB).
 
-### Phase 5: Portfolio UI Integration & Verification (Day 4 - Day 5)
-- [ ] **Markup Upgrade (`projects.html`)**:
-  - Integrate `.project-media-row` layout with `<img class="project-preview-img" ...>` for captured cards.
-  - Implement tactile card hover physics with gold/cyan border glows (`tokens.css`).
-  - Add lightbox modal / full-resolution click-to-expand handler (`components.js` / `core.js`).
-- [ ] **Repository README Synchronization**:
-  - Copy hero banners to respective tool repositories under `docs/assets/preview.png`.
-  - Update repository headers with consistent badges and visual proofs.
-- [ ] **Deterministic Verification**:
-  - Run `python scripts/verify.py` in `AaradhyaDT.github.io` (ensuring 25/25 check categories pass).
-  - Run `.\audit.bat` in `brainstorm` (ensuring 0 errors, 100% invariant satisfaction).
-  - Synchronize via `.\sync.bat` across both repositories.
+### Phase 5: Portfolio UI Integration & Verification (Completed 2026-10-01)
+- [x] **Markup Upgrade (`projects.html`)**:
+  - Integrated `.project-media-preview` container with `<picture>` (`hero.webp` + `hero.png` fallback) across all 39 project cards (`p-001` through `p-039`).
+  - Preserved interactive HTML5 demo video for GCSBR (`p-001`) with new `hero.webp` poster.
+  - Implemented tactile card hover physics with micro-zoom (`scale(1.015)`), ambient background, and frosted "Verified Proof ↗" badge.
+  - Direct lightbox / new tab expansion linking to full-resolution uncompressed PNG evidence.
+- [x] **Deterministic Verification & Ecosystem Sync**:
+  - Ran `python scripts/verify.py` in `AaradhyaDT.github.io` — all 25 categories cleanly PASSED.
+  - Synchronized and pushed via `.\sync.bat` in `AaradhyaDT.github.io` (commit `f2b59e4`, stamped `1d2ce03`).
+  - Ran `.\audit.bat` in `brainstorm` (ensuring 0 errors, 100% invariant satisfaction).
 
 ---
 

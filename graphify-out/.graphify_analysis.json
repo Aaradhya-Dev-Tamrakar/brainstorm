@@ -1799,7 +1799,7 @@
       "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture_phase_2_flagship_6_systems_capture_completed_2026_10_01",
       "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture_phase_3_gui_web_applications_agent_tooling_completed_2026_10_01",
       "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture_phase_4_machine_learning_research_pipelines_completed_2026_10_01",
-      "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture_phase_5_portfolio_ui_integration_verification_day_4_day_5",
+      "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture_phase_5_portfolio_ui_integration_verification_completed_2026_10_01",
       "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture_research_plan_ecosystem_project_working_screenshot_visual_proof_capture_pipeline"
     ],
     "61": [
@@ -4280,7 +4280,7 @@
     {
       "type": "bridge_node",
       "question": "Why does `BE ECIE / BEIE — Complete Study Syllabus (Year I–IV)` connect `Community 0` to `Community 132`, `Community 5`, `Community 268`, `Community 269`, `Community 270`, `Community 271`, `Community 272`, `Community 273`, `Community 274`, `Community 275`, `Community 276`, `Community 159`, `Community 160`, `Community 31`, `Community 186`, `Community 196`, `Community 71`, `Community 80`, `Community 91`, `Community 92`, `Community 93`, `Community 94`, `Community 222`, `Community 235`, `Community 236`, `Community 110`, `Community 249`, `Community 250`, `Community 251`?",
-      "why": "High betweenness centrality (0.156) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.160) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
@@ -4290,7 +4290,7 @@
     {
       "type": "bridge_node",
       "question": "Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 72` to `Community 192`, `Community 193`, `Community 52`, `Community 39`?",
-      "why": "High betweenness centrality (0.027) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.028) - this node is a cross-community bridge."
     },
     {
       "type": "verify_inferred",

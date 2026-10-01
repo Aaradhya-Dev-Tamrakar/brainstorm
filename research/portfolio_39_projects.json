@@ -1,0 +1,866 @@
+[
+  {
+    "id": "p-032",
+    "slug": "brainstorm",
+    "title": "STRANGLER-IPU \u2014 Ingress Processing Unit Architecture",
+    "date": "",
+    "category": "embedded hardware aiml",
+    "repo": "Aaradhya-Dev-Tamrakar/brainstorm",
+    "payload_id": "proj-brainstorm",
+    "tags": [
+      "Computer Architecture",
+      "Systems Architecture",
+      "6G Ingress",
+      "CXL 3.0/4.0",
+      "Discrete-Event Sim",
+      "SimPy",
+      "Near-Memory Computing",
+      "LaTeX"
+    ],
+    "bullets": [
+      "Ingress-Aware Boundary Computing Architecture: Near-memory hardware accelerator subsystem targeting 6G Sub-THz line-rate ingest (800 Gbps \u2013 1.6 Tbps burst) and AI boundary inference, eliminating host DRAM memory-wall contention through decoupled front-end ingress offload",
+      "Discrete-Event Simulation & CXL Modeling: Validated via Python SimPy discrete-event modeling across asymmetric CXL 3.0/4.0 pooled memory fabrics (sim/sweep_ipu_breakeven.py, EXP-001), demonstrating 4.12\u00d7 tail-latency reduction and 68% host memory bus contention relief",
+      "Aerospace & Systems Architecture Governance: Formulated with formal RFCs (ARCH-RFC-001/002/003), invariant specifications (INV-EPI-001,INV-MEM-001), and a self-compiling in-repo LaTeX technical report"
+    ]
+  },
+  {
+    "id": "p-025",
+    "slug": "biasaperture",
+    "title": "BiasAperture \u2014 Vision Fairness & Bias Audit",
+    "date": "",
+    "category": "aiml",
+    "repo": "Aaradhya-Dev-Tamrakar/BiasAperture",
+    "payload_id": "proj-biasaperture",
+    "tags": [
+      "AIF360",
+      "Fairlearn",
+      "FairFace",
+      "UTKFace",
+      "Computer Vision",
+      "Bias Auditing",
+      "Statistical Testing",
+      "SHAP",
+      "EU AI Act",
+      "NIST RMF",
+      "HTML/Jinja2"
+    ],
+    "bullets": [
+      "Diagnostic & evaluative framework for auditing demographic bias in deployed facial-analysis classifiers \u2014 computes subgroup and intersectional fairness metrics in regulator-legible formats (EU AI Act Article 10 / NIST RMF)",
+      "Analytical core computes DPD, EOD, EOP, and DIR across 126 race \u00d7 age \u00d7 gender demographic bins using AIF360 and Fairlearn with $\\chi^2$ significance tests, BCa bootstrap confidence intervals, and SHAP surrogate explainability",
+      "Fusemachines AI Fellowship Capstone, two-person engineering team withTisha Manandhar"
+    ]
+  },
+  {
+    "id": "p-001",
+    "slug": "gcsbr",
+    "title": "Gesture-Controlled Self-Balancing Robot",
+    "date": "2024",
+    "category": "embedded hardware",
+    "repo": "Aaradhya-Dev-Tamrakar/GCSBR",
+    "payload_id": "proj-gcsbr",
+    "tags": [
+      "Arduino",
+      "HC-05",
+      "MPU-6050",
+      "NEMA-17",
+      "MediaPipe",
+      "PID",
+      "MATLAB"
+    ],
+    "bullets": [
+      "Two-wheeled inverted pendulum robot with real-time dual-hand MediaPipe gesture control over HC-05\n                    Bluetooth",
+      "Examiner rated major-project level \u2014 9.6/10"
+    ]
+  },
+  {
+    "id": "p-018",
+    "slug": "spark",
+    "title": "SPARK \u2014 Two-Layer Fall Detection Wearable",
+    "date": "",
+    "category": "embedded hardware aiml",
+    "repo": "Aaradhya-Dev-Tamrakar/SPARK",
+    "payload_id": "proj-spark",
+    "tags": [
+      "ESP32-S3",
+      "MPU6050",
+      "TFLite Micro",
+      "INT8 Quantization",
+      "1D CNN",
+      "SHAP",
+      "FastAPI",
+      "LaTeX"
+    ],
+    "bullets": [
+      "On-device, two-layer fall-detection wearable for eldercare: Layer 1 ISR threshold pre-filter ($|a| > 2.5g$, $\\Delta t < 300\\text{ ms}$) on ESP32-S3 + MPU-6050 at 200 Hz gating an on-device TFLite Micro 1D CNN",
+      "1D CNN trained under leakage-free subject-grouped split on SisFall (0.9185 AUC-ROC, 87.81% sensitivity), quantized to an 18.5 KB INT8 FlatBuffer (87.7% compression vs FP32) with 56 passing unit tests",
+      "Central gateway with SHAP clinical explainability, automated PDF diagnostic reports across 4 biomechanical fall profiles, and Nepal cohort data collection pipeline",
+      "BEI major engineering project, four-person team \u2014 proposal defended Jul 9, 2026"
+    ]
+  },
+  {
+    "id": "p-013",
+    "slug": "antenna-lab-data-analysis",
+    "title": "Antenna Lab Data Analysis",
+    "date": "Jun 2026",
+    "category": "hardware",
+    "repo": "",
+    "payload_id": "",
+    "tags": [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "SciPy",
+      "Matplotlib",
+      "Polar Plot"
+    ],
+    "bullets": [
+      "Python data-analysis pipeline for antenna radiation pattern measurements from lab Excel sheets",
+      "SciPy cubic interpolation plus Matplotlib polar plots \u2014 Communication & RF coursework\n                deliverable"
+    ]
+  },
+  {
+    "id": "p-014",
+    "slug": "custom-processor-fsm-design",
+    "title": "Custom Processor FSM Design",
+    "date": "Jun 2026",
+    "category": "hardware",
+    "repo": "",
+    "payload_id": "",
+    "tags": [
+      "VHDL",
+      "Vivado",
+      "FSM",
+      "Datapath",
+      "FPGA"
+    ],
+    "bullets": [
+      "VHDL implementation of a custom processor datapath and FSM supporting GCD and exponentiation\n                operations",
+      "Simulated and verified in Vivado 2023.2 as Embedded Systems coursework"
+    ]
+  },
+  {
+    "id": "p-012",
+    "slug": "prakopnet-multi-hazard-early-warning-system",
+    "title": "PrakopNet \u2014 Multi-Hazard Early Warning System",
+    "date": "Jun 2026",
+    "category": "embedded hardware",
+    "repo": "",
+    "payload_id": "",
+    "tags": [
+      "ESP32",
+      "Wireless Mesh",
+      "Raspberry Pi 4B",
+      "TFLite Micro",
+      "LSTM",
+      "GPS",
+      "FastAPI",
+      "Edge AI"
+    ],
+    "bullets": [
+      "Solar-powered wireless mesh multi-hazard monitoring platform for remote regions of Nepal \u2014 ESP32 nodes to\n                a Raspberry Pi 4B gateway",
+      "Archived June 29, 2026; superseded by SPARK"
+    ]
+  },
+  {
+    "id": "p-028",
+    "slug": "fuse-wk14",
+    "title": "Fusemachines Wk 14 \u2014 Agentic Intent Routing",
+    "date": "12 Aug 2026",
+    "category": "aiml",
+    "repo": "",
+    "payload_id": "proj-fuse-wk14",
+    "tags": [
+      "Python",
+      "BERT",
+      "Fine-Tuning",
+      "SLM",
+      "Intent Classification",
+      "Stratified Split"
+    ],
+    "bullets": [
+      "Two candidate routing strategies for a ShopAssist AI support platform \u2014 fine-tuned BERT-family\n                encoder vs. fine-tuned LLM/SLM \u2014 classifying customer messages into 11 specialized agent\n                categories",
+      "Benchmarked on 26,872 Bitext customer-support examples with a group-aware stratified split to prevent\n                instruction-text leakage across train/val/test"
+    ]
+  },
+  {
+    "id": "p-027",
+    "slug": "fuse-wk13",
+    "title": "Fusemachines Wk 13 \u2014 LSTM Text Classification",
+    "date": "6 Aug 2026",
+    "category": "aiml",
+    "repo": "",
+    "payload_id": "proj-fuse-wk13",
+    "tags": [
+      "Python",
+      "PyTorch",
+      "LSTM",
+      "AG_NEWS",
+      "NLP"
+    ],
+    "bullets": [
+      "LSTM headline classifier on AG_NEWS (World / Sports / Business / Sci-Tech) \u2014 embedding \u2192 LSTM \u2192 FC,\n                trained top-to-bottom from a skeleton notebook",
+      "PyTorch training loop with vocabulary building from scratch and a short conceptual-reflection\n                section"
+    ]
+  },
+  {
+    "id": "p-024",
+    "slug": "fuse-wk12",
+    "title": "Fusemachines Wk 12 \u2014 NER for Customer Support",
+    "date": "30 Jul 2026",
+    "category": "aiml",
+    "repo": "",
+    "payload_id": "proj-fuse-wk12",
+    "tags": [
+      "Python",
+      "NER",
+      "CoNLL-2003",
+      "Feature Engineering",
+      "NLP"
+    ],
+    "bullets": [
+      "End-to-end Named Entity Recognition pipeline on CoNLL-2003 for automated customer-support ticket\n                triage and CRM routing",
+      "Text preprocessing, EDA (sentence-length / word-frequency / entity distributions), and\n                `word2features` feature engineering ahead of model training"
+    ]
+  },
+  {
+    "id": "p-022",
+    "slug": "fuse-wk11",
+    "title": "Fusemachines Wk 11 \u2014 Vision Transformers",
+    "date": "Jul 2026",
+    "category": "aiml",
+    "repo": "",
+    "payload_id": "proj-fuse-wk11",
+    "tags": [
+      "Python",
+      "PyTorch",
+      "torchvision",
+      "timm",
+      "CLIP",
+      "ONNX",
+      "GradCAM",
+      "Vision Transformers"
+    ],
+    "bullets": [
+      "Five-module deep computer vision stack \u2014 ResNet-50 transfer learning + GradCAM, Faster R-CNN\n                object detection, DeepLabv3+ segmentation, a from-scratch VAE, and ViT patch embedding",
+      "CLIP zero-shot classification hit 92.0% on a 200-image slice, outscoring the fine-tuned ResNet-50\n                (74.1%) \u2014 deployment memo compares both for a 500-camera warehouse rollout, exported to ONNX"
+    ]
+  },
+  {
+    "id": "p-019",
+    "slug": "fuse-wk10",
+    "title": "Fusemachines Wk 10 \u2014 Image Processing",
+    "date": "16 Jul 2026",
+    "category": "aiml",
+    "repo": "",
+    "payload_id": "proj-fuse-wk10",
+    "tags": [
+      "Python",
+      "OpenCV",
+      "NumPy",
+      "Matplotlib",
+      "HSV Segmentation",
+      "Canny Edge Detection",
+      "Hough Transform"
+    ],
+    "bullets": [
+      "HSV-based multi-class fruit segmentation across the Fruits-360 dataset, morphological cleanup, and\n                filter-based denoising benchmarks (Gaussian, median, bilateral)",
+      "From-scratch Canny edge detector (96.9% pixel agreement vs. cv2.Canny()), plus a full\n                fruit-detection pipeline \u2014 Harris corners, tuned Hough circles, connected-component separation of\n                touching fruit, contour-based bounding boxes"
+    ]
+  },
+  {
+    "id": "p-017",
+    "slug": "fuse-wk9",
+    "title": "Fusemachines Wk 9 \u2014 NEU Steel Defect CNN",
+    "date": "9 Jul 2026",
+    "category": "aiml",
+    "repo": "",
+    "payload_id": "proj-fuse-wk9",
+    "tags": [
+      "Python",
+      "PyTorch",
+      "torchvision",
+      "CNN",
+      "Optuna",
+      "scikit-learn"
+    ],
+    "bullets": [
+      "PyTorch CNN classifier for NEU-DET steel surface-defect detection \u2014 six classes, 1,800 grayscale\n                images",
+      "From-scratch NN foundation \u2192 tuned CNN, 98.8%/78.9% train/val accuracy; augmentation,\n                BatchNorm, and dropout ablations plus grid-search and Optuna hyperparameter tuning"
+    ]
+  },
+  {
+    "id": "p-016",
+    "slug": "fuse-wk8",
+    "title": "Fusemachines Wk 8 \u2014 Forecasting",
+    "date": "1 Jul 2026",
+    "category": "aiml",
+    "repo": "",
+    "payload_id": "proj-fuse-wk8",
+    "tags": [
+      "Python",
+      "statsmodels",
+      "SARIMA",
+      "Holt-Winters",
+      "Prophet",
+      "LightGBM",
+      "LSTM",
+      "XGBoost"
+    ],
+    "bullets": [
+      "Time-series pipeline benchmarking nine forecasters on monthly S&P 500 data (1990\u20132024) via\n                MASE/RMSE",
+      "4-model ensemble outperformed every single model \u2014 MASE 2.44, confirmed via Diebold-Mariano test\n                (p = 0.0092)"
+    ]
+  },
+  {
+    "id": "p-011",
+    "slug": "fuse-wk7",
+    "title": "Fusemachines Wk 7 \u2014 Customer Segmentation",
+    "date": "21 Jun 2026",
+    "category": "aiml",
+    "repo": "",
+    "payload_id": "proj-fuse-wk7",
+    "tags": [
+      "Python",
+      "scikit-learn",
+      "K-Means",
+      "Hierarchical Clustering",
+      "DBSCAN",
+      "RFM",
+      "Pandas",
+      "scipy"
+    ],
+    "bullets": [
+      "Market segmentation on UCI Online Retail II (~500,000 transactions) with RFM + category-ratio feature\n                engineering",
+      "Full clustering comparison \u2014 K-Means, Hierarchical, DBSCAN \u2014 validated via Silhouette and\n                Davies-Bouldin indices"
+    ]
+  },
+  {
+    "id": "p-009",
+    "slug": "fuse-wk6",
+    "title": "Fusemachines Wk 6 \u2014 Probabilistic Models",
+    "date": "5 Jun 2026",
+    "category": "aiml",
+    "repo": "",
+    "payload_id": "proj-fuse-wk6",
+    "tags": [
+      "Python",
+      "PyMC",
+      "ArviZ",
+      "pgmpy",
+      "Bayesian Inference",
+      "scikit-learn",
+      "Pandas"
+    ],
+    "bullets": [
+      "Bayesian inference pipeline for Telco Churn using PyMC, ArviZ, and pgmpy",
+      "MLE/MAP estimation, Dirichlet-multinomial updating, and a fitted PyMC Bayesian logistic regression\n                artifact"
+    ]
+  },
+  {
+    "id": "p-006",
+    "slug": "fuse-wk4",
+    "title": "Fusemachines Wk 4 \u2014 Telco Churn & CLV ML Pipeline",
+    "date": "28 May 2026",
+    "category": "aiml",
+    "repo": "",
+    "payload_id": "proj-fuse-wk4",
+    "tags": [
+      "Python",
+      "scikit-learn",
+      "Logistic Regression",
+      "Ridge",
+      "Lasso",
+      "Pandas",
+      "Papermill"
+    ],
+    "bullets": [
+      "Classification and regression pipeline for churn prediction and Customer Lifetime Value modeling \u2014\n                ROC-AUC 0.841 \u00b1 0.005",
+      "Ridge Regression best for CLV (mean $1,304.70); full HTML report export via Papermill"
+    ]
+  },
+  {
+    "id": "p-008",
+    "slug": "fuse-wk5",
+    "title": "Fusemachines Wk 5 \u2014 Telco Churn Tree-Based Ensemble Pipeline",
+    "date": "31 May 2026",
+    "category": "aiml",
+    "repo": "",
+    "payload_id": "proj-fuse-wk5",
+    "tags": [
+      "Python",
+      "XGBoost",
+      "Random Forest",
+      "SHAP",
+      "ImbPipeline",
+      "SMOTE",
+      "Joblib",
+      "scikit-learn"
+    ],
+    "bullets": [
+      "End-to-end classification pipeline on Telco Customer Churn (7,043 rows) with SMOTE restricted to\n                training folds only",
+      "Random Forest + XGBoost with SHAP explainability; secondary tenure-prediction task with a Model Card"
+    ]
+  },
+  {
+    "id": "p-005",
+    "slug": "fuse-wk3",
+    "title": "Fusemachines Wk 3 \u2014 Text-to-SQL Agentic Pipeline",
+    "date": "20 May 2026",
+    "category": "aiml",
+    "repo": "",
+    "payload_id": "proj-fuse-wk3",
+    "tags": [
+      "Python",
+      "FastAPI",
+      "Streamlit",
+      "GPT-4o-mini",
+      "PostgreSQL",
+      "Docker",
+      "Prompt Chaining"
+    ],
+    "bullets": [
+      "Five-stage agentic Text-to-SQL system over a PostgreSQL database \u2014 Planner \u2192 Generator \u2192 Validator \u2192\n                Executor \u2192 Summarizer",
+      "100% execution success and 100% result accuracy across a 50-question benchmark, zero retries required"
+    ]
+  },
+  {
+    "id": "p-004",
+    "slug": "fuse-wk2",
+    "title": "Fusemachines Wk 2 \u2014 Customer API App",
+    "date": "12 May 2026",
+    "category": "aiml apps",
+    "repo": "",
+    "payload_id": "proj-fuse-wk2",
+    "tags": [
+      "FastAPI",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "Pydantic",
+      "Docker",
+      "12-Factor App"
+    ],
+    "bullets": [
+      "12-Factor App compliant RESTful API for customer, order, and payment management, refactored to full\n                12-Factor compliance with a statistics module",
+      "FastAPI + SQLAlchemy over PostgreSQL, Dockerized with environment-based config and centralized\n                logging"
+    ]
+  },
+  {
+    "id": "p-003",
+    "slug": "fuse-wk1",
+    "title": "Fusemachines Wk 1 \u2014 Cardiac Event Data Wrangling",
+    "date": "30 Apr 2026",
+    "category": "aiml",
+    "repo": "",
+    "payload_id": "proj-fuse-wk1",
+    "tags": [
+      "Python",
+      "Pandas",
+      "EDA",
+      "Data Wrangling"
+    ],
+    "bullets": [
+      "Data wrangling and preparation pipeline for cardiac event analysis on a synthetic heart-attack-risk\n                dataset",
+      "EDA, correlation heatmap, and class-imbalance analysis ahead of downstream modeling"
+    ]
+  },
+  {
+    "id": "p-026",
+    "slug": "onm",
+    "title": "ONM Case Study \u2014 Fusemachines Inc.",
+    "date": "Jul 2026",
+    "category": "aiml",
+    "repo": "",
+    "payload_id": "proj-onm",
+    "tags": [
+      "LaTeX",
+      "Organizational Analysis",
+      "Case Study",
+      "Coursework"
+    ],
+    "bullets": [
+      "Organization & Management coursework case study on Fusemachines Inc.'s org structure, HR\n                practices, and cross-functional operations",
+      "Based on a direct interview with the company's Talent Acquisition and PR managers; LaTeX source plus\n                compiled report"
+    ]
+  },
+  {
+    "id": "p-035",
+    "slug": "localsend-mcp",
+    "title": "LocalSend MCP \u2014 Zero-Cloud LAN P2P File & Clipboard Transfer Bridge",
+    "date": "Sep 2026",
+    "category": "mcp apps",
+    "repo": "",
+    "payload_id": "proj-localsend-mcp",
+    "tags": [
+      "Node.js ESM",
+      "@modelcontextprotocol/sdk",
+      "LocalSend v2.1",
+      "mTLS",
+      "UDP Multicast",
+      "P2P Transfer"
+    ],
+    "bullets": [
+      "High-performance Model Context Protocol (MCP) server enabling AI coding agents to discover and exchange files directly with local LAN/Wi-Fi devices.",
+      "Implemented over LocalSend Protocol v2.1/v2.2 with mutual TLS, UDP multicast beaconing (224.0.0.167:53317), and persistent device discovery.",
+      "Zero-cloud local architecture: transfers files, directories, text snippets, and system clipboard state across phones and PCs with zero telemetry."
+    ]
+  },
+  {
+    "id": "p-036",
+    "slug": "google-classroom-mcp",
+    "title": "Google Classroom MCP \u2014 Academic Coursework & Due Date Automation Bridge",
+    "date": "Sep 2026",
+    "category": "mcp apps",
+    "repo": "",
+    "payload_id": "proj-google-classroom-mcp",
+    "tags": [
+      "Node.js ESM",
+      "MCP SDK",
+      "Google Classroom API",
+      "OAuth 2.0",
+      "Coursework Automation",
+      "Drive Integration"
+    ],
+    "bullets": [
+      "Automated Google Classroom MCP server integrating college courses, coursework, assignments, and announcements directly into autonomous AI agent workflows.",
+      "Programmatic OAuth 2.0 authentication with automatic token refresh, token caching, and quota-safe REST API batching.",
+      "Syncs problem sets, attached Google Drive files, grading rubrics, and submission status to provide real-time academic context."
+    ]
+  },
+  {
+    "id": "p-037",
+    "slug": "typora-mcp",
+    "title": "Typora MCP Server \u2014 Native Markdown Desktop Orchestration & Ingestion Engine",
+    "date": "Sep 2026",
+    "category": "mcp apps",
+    "repo": "",
+    "payload_id": "proj-typora-mcp",
+    "tags": [
+      "Node.js ESM",
+      "TypeScript",
+      "MCP SDK",
+      "Win32 CIM",
+      "Typora Engine",
+      "Markdown Tooling"
+    ],
+    "bullets": [
+      "Native Model Context Protocol (MCP) server providing AI agents with live process telemetry and automation for Typora Markdown editor on Windows.",
+      "Win32 CIM / WMI process inspection tracking running instances, open documents, process counts, and hex-encoded session crash recovery files.",
+      "Automated document creation, workspace folder launch, custom CSS theme management, and export pipeline to HTML."
+    ]
+  },
+  {
+    "id": "p-039",
+    "slug": "ieee-xtreme-archive",
+    "title": "IEEE-Xtreme Algorithmic Intelligence Archive \u2014 662-Task Corpus & Xtreme-Bench",
+    "date": "Sep 2026",
+    "category": "aiml apps",
+    "repo": "",
+    "payload_id": "proj-ieee-xtreme-archive",
+    "tags": [
+      "Python 3.14",
+      "Hugging Face",
+      "LLM Benchmark",
+      "Competitive Programming",
+      "SQLite FTS5",
+      "NotebookLM RAG"
+    ],
+    "bullets": [
+      "Autonomous CDP stealth-crawler extracting 662 Olympiad problem statements with verbatim KaTeX LaTeX, execution matrices, and 532 verified optimal solutions.",
+      "Open-sourceXtreme-Benchreasoning benchmark on Hugging Face Hub paired with auv-first automated evaluation harness and live Pass@k leaderboard.",
+      "Deterministic Single-Warehouse RAG pattern compressing 226k words into NotebookLM with sub-millisecond SQLite FTS5 search."
+    ]
+  },
+  {
+    "id": "p-038",
+    "slug": "nepali-ocr-ai",
+    "title": "Nepali OCR AI \u2014 Vision OCR, Varnavinyas Grammar & Bi-Directional Transcoder",
+    "date": "Sep 2026",
+    "category": "aiml apps mcp",
+    "repo": "",
+    "payload_id": "proj-nepali-ocr-ai",
+    "tags": [
+      "Python 3.11",
+      "FastMCP",
+      "Devanagari OCR",
+      "Varnavinyas Engine",
+      "Preeti Unicode",
+      "python-docx"
+    ],
+    "bullets": [
+      "End-to-end Devanagari OCR pipeline featuring adaptive text pre-processing, layout analysis, and bilingual character recognition.",
+      "Varnavinyas grammar engine with statistical rule correction and bidirectional Preeti \u2194 Unicode font transcoder.",
+      "Automated Word (.docx) document repair and standalone FastMCP microservice for AI agent document parsing."
+    ]
+  },
+  {
+    "id": "p-031",
+    "slug": "super-nlm",
+    "title": "Super-NLM \u2014 Multi-Account NotebookLM Hub & MCP Server",
+    "date": "",
+    "category": "apps aiml mcp",
+    "repo": "Aaradhya-Dev-Tamrakar/super-nlm",
+    "payload_id": "proj-super-nlm",
+    "tags": [
+      "Python",
+      "MCP",
+      "NotebookLM",
+      "Multi-Account",
+      "Rate-Limit Routing",
+      "Agentic",
+      "Round-Robin",
+      "FastAPI"
+    ],
+    "bullets": [
+      "Unified dashboard aggregating Google NotebookLM notebooks acrossNGoogle accounts simultaneously \u2014 parallel fetch, globalCtrl+Ksearch, in-app quick chat, and cross-account synthesis via a Pro AI engine router",
+      "Built-in MCP server (super-nlm-mcp) with round-robin multi-account rotation and two-tiered quota cooldown (120 s burst / midnight UTC daily) \u2014 enables parallel AI agents (Antigravity / Claude) to query notebooks without exhausting any single account's rate limit",
+      "Lazy auto-sharing cache invites query accounts as editors behind the scenes; notebook and profile listings served from local cache at zero API quota cost"
+    ]
+  },
+  {
+    "id": "p-034",
+    "slug": "github-pilot",
+    "title": "GitHub Pilot \u2014 Autonomous Multi-Account Fleet Auditor & Navigator",
+    "date": "Sep 2026",
+    "category": "apps aiml",
+    "repo": "Aaradhya-Dev-Tamrakar/github-pilot",
+    "payload_id": "proj-github-pilot",
+    "tags": [
+      "Python 3.10+",
+      "Typer CLI",
+      "HTTP/2 Async",
+      "Token-Zero",
+      "Developer Tooling",
+      "Multi-Account",
+      "Fleet Auditing",
+      "Rich UI"
+    ],
+    "bullets": [
+      "Macro-plane developer fleet orchestrator and multi-account GitHub profile navigator operating across profiles, repositories, CI workflows, and commit signals",
+      "Token-Zero local architecture: delegates repo auditing, rate-limit tracking, SVG stats synthesis, and async HTTP/2 scraping to deterministic local Python scripts, handing AI agents ultra-compact summaries (< 1 KB) to conserve reasoning context",
+      "Multi-account credential resolver, automated conventional commit changelog digests, and pre-commit secret hygiene scanning"
+    ]
+  },
+  {
+    "id": "p-033",
+    "slug": "windows-pilot",
+    "title": "Windows Pilot \u2014 Semantic UIA & MCP Desktop Automation Engine",
+    "date": "Sep 2026",
+    "category": "apps hardware mcp",
+    "repo": "AaradhyaDT/windows-pilot",
+    "payload_id": "proj-windows-pilot",
+    "tags": [
+      "Python 3.10+",
+      "Win32 API",
+      "UI Automation COM",
+      "MCP Server",
+      "Desktop Automation",
+      "Virtual Desktops",
+      "Windows 11",
+      "ActionChain"
+    ],
+    "bullets": [
+      "Mission-critical Windows desktop automation engine for autonomous AI coding agents (Antigravity, Claude Desktop, Cursor) and human operators via CLI and Python SDK",
+      "Resolution-independent Microsoft UI Automation (UIA) COM & Win32 control: locates elements semantically via CSS-like query DSL without fragile pixel coordinates",
+      "Win32 foreground lock bypass (AttachThreadInput), virtual desktop awareness with DWM uncloaking (DWMWA_CLOAKED), high-speed Unicode clipboard injection, and native MCP server (winpilot-mcp)"
+    ]
+  },
+  {
+    "id": "p-023",
+    "slug": "claude-desktop",
+    "title": "Claude Desktop Multi-Profile & Distributed Service Provisioning (DSP) Fabric",
+    "date": "Jul\u2013Sep 2026",
+    "category": "apps aiml mcp",
+    "repo": "",
+    "payload_id": "proj-claude-desktop",
+    "tags": [
+      "DSP Fabric",
+      "FastAPI",
+      "SQLite WAL",
+      "Atomic Leasing",
+      "Self-Healing",
+      "FastMCP (44 Tools)",
+      "CDP Bridge",
+      "PowerShell 7"
+    ],
+    "bullets": [
+      "Heterogeneous Distributed Service Provisioning (DSP) fabric: inverts the DDoS metaphor to coordinate useful compute across autonomous worker daemons (Claude CDP, Gemini, Groq, Ollama) via a centralized FastAPI coordinator",
+      "Distributed state machine on SQLite WAL: atomic CAS task leasing (`lease_token`), capability & headroom scoring scheduler, and a self-healing supervisor loop that isolates stale nodes and reclaims stranded leases",
+      "44+ FastMCP tools across local and remote instances, multi-stage DAG task pipelines with checkpoint persistence, and a Chrome DevTools Protocol (CDP) bridge treating desktop AI GUIs as application-as-a-service backends"
+    ]
+  },
+  {
+    "id": "p-015",
+    "slug": "react-ws",
+    "title": "IEEE KEC React Workshop",
+    "date": "Jun 2026",
+    "category": "apps",
+    "repo": "",
+    "payload_id": "proj-react-ws",
+    "tags": [
+      "React",
+      "Vite",
+      "JavaScript",
+      "Teaching Material"
+    ],
+    "bullets": [
+      "Progressive React teaching material built for an IEEE KEC student-branch workshop \u2014 numbered\n                lesson components from a basic Greeting through Props, a Counter, and a live Clock",
+      "Vite-scaffolded, structured as a self-contained follow-along app for first-time React learners"
+    ]
+  },
+  {
+    "id": "p-020",
+    "slug": "crypto",
+    "title": "Cryptarithmetic Solver & API",
+    "date": "Jul 2026",
+    "category": "apps aiml",
+    "repo": "",
+    "payload_id": "proj-crypto",
+    "tags": [
+      "Python",
+      "FastAPI",
+      "Backtracking",
+      "Docker",
+      "Algorithm Design"
+    ],
+    "bullets": [
+      "Column-by-column backtracking solver for alphametic puzzles (SEND + MORE = MONEY style) \u2014 prunes\n                invalid branches immediately on column-arithmetic failure instead of naive generate-and-test",
+      "FastAPI wrapper with a `metrics` mode for solve-time/branch stats, plus a PowerShell helper and a\n                no-pytest unit test runner"
+    ]
+  },
+  {
+    "id": "p-021",
+    "slug": "pulselive",
+    "title": "Pulse Live \u2014 Real-Time Interactive Polling Platform",
+    "date": "Jul 2026",
+    "category": "apps aiml",
+    "repo": "",
+    "payload_id": "proj-pulselive",
+    "tags": [
+      "React 19",
+      "TypeScript",
+      "Vite",
+      "Supabase",
+      "WebSockets",
+      "React Router v7",
+      "Lucide Icons",
+      "QR Code"
+    ],
+    "bullets": [
+      "Real-time audience engagement platform featuring instant multi-mode polling (Choice, Q&A, Word\n                Cloud), presenter mode, and interactive voting synchronization",
+      "Built with React 19, TypeScript, and Supabase WebSockets / database for instant live response updates,\n                presenter display controls, and QR code joining"
+    ]
+  },
+  {
+    "id": "p-010",
+    "slug": "nexus",
+    "title": "Nexus \u2014 Personal AI Operating System",
+    "date": "",
+    "category": "apps aiml",
+    "repo": "",
+    "payload_id": "proj-nexus",
+    "tags": [
+      "React",
+      "Vite",
+      "FastAPI",
+      "SQLite",
+      "FTS5",
+      "Groq",
+      "Gemini",
+      "Python"
+    ],
+    "bullets": [
+      "Project-centric AI operating system replacing the multi-browser/multi-account/multi-tool workflow",
+      "React (Vite) + FastAPI + SQLite/FTS5, parallel Groq + Gemini fan-out \u2014 v2 redesign complete\n                June\u00a012, 2026"
+    ]
+  },
+  {
+    "id": "p-029",
+    "slug": "md2pdf",
+    "title": "md2pdf \u2014 Desktop Markdown to PDF Converter",
+    "date": "Sep 2026",
+    "category": "apps mcp",
+    "repo": "",
+    "payload_id": "proj-md2pdf",
+    "tags": [
+      "Python",
+      "Tkinter",
+      "Pandoc",
+      "wkhtmltopdf",
+      "Markdown",
+      "Desktop App"
+    ],
+    "bullets": [
+      "Native desktop Markdown editor and PDF conversion workstation built with Python & Tkinter",
+      "High-fidelity conversion pipeline utilizing Pandoc (CommonMark/GFM AST \u2192 HTML) and wkhtmltopdf (WebKit HTML \u2192 PDF engine with explicit UTF-8 encoding)",
+      "Features adjustable margins (default 20mm), live system dependency validation across Windows, macOS, and Linux, and clean save-destination dialogs"
+    ]
+  },
+  {
+    "id": "p-030",
+    "slug": "sys-optimizer",
+    "title": "NovaOptimizer \u2014 Windows Task Manager & System Optimizer",
+    "date": "Sep 2026",
+    "category": "apps",
+    "repo": "Aaradhya-Dev-Tamrakar/system-optimizer",
+    "payload_id": "proj-sys-optimizer",
+    "tags": [
+      "C# / .NET 10",
+      "WPF",
+      "Win32 NT Kernel",
+      "Memory Management",
+      "Task Manager",
+      "Turbo Boost",
+      "Windows 11"
+    ],
+    "bullets": [
+      "High-efficiency, native Windows Task Manager and system optimizer engineered in C# / .NET 10 and WPF with a minimal ~25 MB RAM footprint",
+      "Direct NT kernel memory management: deep physical RAM purging via undocumented `NtSetSystemInformation` (Standby List, System Working Set, and process trimming) with an intelligent background watchdog",
+      "Turbo Boost Profiles (Game, Work, and Study Mode with integrated Pomodoro focus timer), startup bloat auditor, hung-process watchdog, and system latency tweaks"
+    ]
+  },
+  {
+    "id": "p-007",
+    "slug": "stability-ai",
+    "title": "Edge AI Stability Detection System",
+    "date": "May 2026",
+    "category": "aiml embedded",
+    "repo": "",
+    "payload_id": "proj-stability-ai",
+    "tags": [
+      "Python",
+      "scikit-learn",
+      "RandomForest",
+      "FastAPI",
+      "Joblib",
+      "IMU",
+      "Edge AI"
+    ],
+    "bullets": [
+      "ML system predicting platform stability from simulated IMU sensor data \u2014 Random Forest, 99.8% test\n                accuracy",
+      "REST API via FastAPI, Joblib export for robotics integration withGCSBR (Gesture-Controlled Self-Balancing Robot)"
+    ]
+  },
+  {
+    "id": "p-002",
+    "slug": "alpha-superapp",
+    "title": "Alpha Android Super-App",
+    "date": "",
+    "category": "apps embedded",
+    "repo": "",
+    "payload_id": "proj-alpha-superapp",
+    "tags": [
+      "Kotlin",
+      "Jetpack Compose",
+      "Material3",
+      "CameraX",
+      "MediaPipe",
+      "Bluetooth SPP",
+      "DataStore",
+      "Apache POI"
+    ],
+    "bullets": [
+      "Modular personal super-app (Kotlin/Jetpack Compose, Material3) \u2014 gesture remote, budget tracker,\n                multi-mode calculator",
+      "Calculator is the primary shipping target, Play Store release in progress"
+    ]
+  }
+]

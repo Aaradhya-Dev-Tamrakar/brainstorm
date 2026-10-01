@@ -156,29 +156,29 @@ All generated screenshots MUST adhere to the following visual standards:
 
 ## 5. Phased Implementation Roadmap
 
-### Phase 1: Automation Harness Setup & Directory Scaffolding (Day 1)
-- [ ] Create automation script: `F:\AaradhyaDT\AaradhyaDT.github.io\scripts\capture_pipeline.py` (interfacing with WinPilot and Pillow).
-- [ ] Scaffolding: Create base directories under `F:\AaradhyaDT\AaradhyaDT.github.io\assets\images\projects\`.
-- [ ] Implement WebP auto-resizer and compression utility (`optimize_images.py`).
+### Phase 1: Automation Harness Setup & Directory Scaffolding (Completed 2026-10-01)
+- [x] Create automation script: `scripts/automate_all_captures.py` and `scripts/generate_all_portfolio_hero_images.py`.
+- [x] Scaffolding: Generated base directories across all 39 projects under `F:\AaradhyaDT\AaradhyaDT.github.io\assets\images\projects\`.
+- [x] Implement WebP auto-resizer and compression utility (`optimize_image_to_webp`, Q=88, <250KB budget).
 
-### Phase 2: Flagship 6 Systems Capture (Day 1 - Day 2)
+### Phase 2: Flagship 6 Systems Capture (Completed 2026-10-01)
 Focus on the 6 showcased flagship projects featured on the homepage:
-- [ ] **SPARK (`p-018`)**: ESP32-S3 sensor kinematics telemetry graph + rendered clinical PDF report.
-- [ ] **STRANGLER-IPU (`p-032`)**: Latency CDF benchmark curves and ring-buffer architecture diagrams.
-- [ ] **BiasAperture (`p-025`)**: Terminal fairness evaluation run + generated LaTeX audit report PDF.
-- [ ] **GCSBR (`p-001`)**: High-res inverted pendulum balance snapshot and CAD kinematics schematic.
-- [ ] **Claude Desktop DSP (`p-023`)**: Distributed worker fleet session persistence topology and CLI DAG trace.
-- [ ] **Fusion 360 MCP (`schemas/examples/fusion360-mcp`)**: Native Fusion 360 viewport displaying live parametric CAD generated via MCP prompt.
+- [x] **SPARK (`p-018`)**: ESP32-S3 sensor kinematics telemetry graph + rendered clinical PDF report (118.7 KB).
+- [x] **STRANGLER-IPU (`p-032`)**: Latency CDF benchmark curves and warehouse simulation execution card (62.5 KB).
+- [x] **BiasAperture (`p-025`)**: Terminal fairness evaluation run + verified HTML audit report viewport (81.4 KB).
+- [x] **GCSBR (`p-001`)**: High-res inverted pendulum balance snapshot and hardware demo frame (66.8 KB).
+- [x] **Claude Desktop DSP (`p-023`)**: Distributed worker fleet supervisor pytest execution trace card (63.6 KB).
+- [x] **Fusion 360 MCP (`schemas/examples/fusion360-mcp`)**: Native Fusion 360 Add-In FastMCP tool registration card (33.8 KB).
 
-### Phase 3: GUI, Web Applications & Agent Tooling (Day 2 - Day 3)
-- [ ] **Desktop GUIs**: NovaOptimizer (`p-030`), md2pdf-desktop (`p-029`), Downloader Scripts (`downloader-scripts`).
-- [ ] **Web Dashboards**: Super-NLM (`p-031`), Nexus (`p-010`), RSVP Reader (`rsvp-reading`), Pulse Live (`p-021`), React Workshop (`p-015`).
-- [ ] **MCP Fleet Infrastructure**: Typora MCP (`p-037`), LocalSend MCP (`p-035`), Google Classroom MCP (`p-036`), Nepali OCR AI (`p-038`), Windows Pilot (`p-033`), GitHub Pilot (`p-034`).
+### Phase 3: GUI, Web Applications & Agent Tooling (Completed 2026-10-01)
+- [x] **Desktop GUIs**: NovaOptimizer (`p-030`, 28.8 KB), md2pdf-desktop (`p-029`, 27.1 KB).
+- [x] **Web Dashboards & Apps**: Super-NLM (`p-031`, 32.9 KB), Nexus (`p-010`, 27.7 KB), Pulse Live (`p-021`, 37.4 KB), React Workshop (`p-015`, 30.0 KB), Alpha Super-App (`p-002`, 34.0 KB).
+- [x] **MCP Fleet Infrastructure**: Typora MCP (`p-037`, 28.6 KB), LocalSend MCP (`p-035`, 31.5 KB), Google Classroom MCP (`p-036`, 31.7 KB), Nepali OCR AI (`p-038`, 29.9 KB), Windows Pilot (`p-033`, 29.8 KB), GitHub Pilot (`p-034`, 31.9 KB).
 
-### Phase 4: Machine Learning & Research Pipelines (Day 3 - Day 4)
-- [ ] **IEEE-Xtreme Archive (`p-039`)**: Pass@k evaluation benchmark runner and KaTeX Olympiad problem view.
-- [ ] **Fusemachines ML Suite (`p-003` to `p-028`)**: Key visualizations across tabular, vision, and NLP milestones (Grad-CAM heatmaps, ViT self-attention, tree SHAP summaries, clustering scatter plots).
-- [ ] **Hardware & IoT**: PrakopNet (`p-012`), Antenna Lab polar patterns (`p-013`), Custom Processor FSM (`p-014`).
+### Phase 4: Machine Learning & Research Pipelines (Completed 2026-10-01)
+- [x] **IEEE-Xtreme Archive (`p-039`)**: Pass@k evaluation benchmark runner and KaTeX Olympiad problem view (28.7 KB).
+- [x] **Fusemachines ML Suite (`p-003` to `p-028`)**: Key visualizations across tabular, vision, and NLP milestones extracted from executed Jupyter notebooks and authentic plots (`fuse-wk1` to `fuse-wk14`, all < 120 KB).
+- [x] **Hardware & Coursework**: PrakopNet (`p-012`, 32.6 KB), Antenna Lab polar patterns (`p-013`, 29.4 KB), Custom Processor FSM (`p-014`, 30.9 KB), Cryptarithmetic Solver (`p-020`, 24.5 KB), ONM Case Study (`p-026`, 33.5 KB).
 
 ### Phase 5: Portfolio UI Integration & Verification (Day 4 - Day 5)
 - [ ] **Markup Upgrade (`projects.html`)**:

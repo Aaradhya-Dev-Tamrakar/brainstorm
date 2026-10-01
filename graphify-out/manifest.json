@@ -516,10 +516,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790833847.2317195,
-    "seen": 1790833849.9826522,
-    "ast_hash": "c67cef83a1825d59f6771772da5ea05f",
-    "semantic_hash": "c67cef83a1825d59f6771772da5ea05f"
+    "mtime": 1790835520.4699197,
+    "seen": 1790835523.5073247,
+    "ast_hash": "a43d16d9ecbc34e551b346afa5cb821a",
+    "semantic_hash": "a43d16d9ecbc34e551b346afa5cb821a"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -570,10 +570,10 @@
     "semantic_hash": "ef915c5d8d1809c77777dfc027680b8a"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790833845.131408,
-    "seen": 1790833849.9826503,
-    "ast_hash": "005e9af7f8f6ca315295bafb6a729313",
-    "semantic_hash": "005e9af7f8f6ca315295bafb6a729313"
+    "mtime": 1790835518.385473,
+    "seen": 1790835523.5073235,
+    "ast_hash": "2025656387eff0e44d1785ae5eee055e",
+    "semantic_hash": "2025656387eff0e44d1785ae5eee055e"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -1200,10 +1200,10 @@
     "semantic_hash": "9d66d72ae5c79bf0a523d8e0484fff88"
   },
   "research/plans/PLAN-MEDIA-001_ECOSYSTEM_PROJECT_WORKING_SCREENSHOT_CAPTURE.md": {
-    "mtime": 1790827070.289639,
-    "seen": 1790828015.1234858,
-    "ast_hash": "815a48c7da630f5994b8e5d369170cdf",
-    "semantic_hash": "815a48c7da630f5994b8e5d369170cdf"
+    "mtime": 1790835292.2794406,
+    "seen": 1790835523.5074594,
+    "ast_hash": "f5216f4db7095f10fb5564189ba13b44",
+    "semantic_hash": "f5216f4db7095f10fb5564189ba13b44"
   },
   "tools/skills/github-workflow/SKILL.md": {
     "mtime": 1790828954.973477,
@@ -1258,5 +1258,29 @@
     "seen": 1790833849.982684,
     "ast_hash": "5b1f6ce246dba47e4b0b246043a01b19",
     "semantic_hash": "5b1f6ce246dba47e4b0b246043a01b19"
+  },
+  "research/portfolio_39_projects.json": {
+    "mtime": 1790834689.9292922,
+    "seen": 1790835523.5073202,
+    "ast_hash": "4f1df41ef3f3135f391a9f69f18b72ef",
+    "semantic_hash": "4f1df41ef3f3135f391a9f69f18b72ef"
+  },
+  "scripts/extract_fuse_notebook_plots.py": {
+    "mtime": 1790834766.497784,
+    "seen": 1790835523.5073519,
+    "ast_hash": "4b50b0f35feb741b69ea7cd0e4f84ac5",
+    "semantic_hash": "4b50b0f35feb741b69ea7cd0e4f84ac5"
+  },
+  "scripts/generate_all_portfolio_hero_images.py": {
+    "mtime": 1790835075.0650978,
+    "seen": 1790835523.5073526,
+    "ast_hash": "2a0865f8dac24efaf9a29a6f9290652d",
+    "semantic_hash": "2a0865f8dac24efaf9a29a6f9290652d"
+  },
+  "scripts/list_portfolio_projects.py": {
+    "mtime": 1790834685.042971,
+    "seen": 1790835523.5073533,
+    "ast_hash": "8a860bc6ad054e21ead73d9e96fe297c",
+    "semantic_hash": "8a860bc6ad054e21ead73d9e96fe297c"
   }
 }

@@ -516,10 +516,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790828010.973024,
-    "seen": 1790828015.1232653,
-    "ast_hash": "2ccaae37ae704cd59906f539c2cb608e",
-    "semantic_hash": "2ccaae37ae704cd59906f539c2cb608e"
+    "mtime": 1790828922.6819265,
+    "seen": 1790828925.1244116,
+    "ast_hash": "5d6fa14472020f368eb6b533c9d905f4",
+    "semantic_hash": "5d6fa14472020f368eb6b533c9d905f4"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -570,10 +570,10 @@
     "semantic_hash": "ef915c5d8d1809c77777dfc027680b8a"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790828008.5410035,
-    "seen": 1790828015.123263,
-    "ast_hash": "d24ce57061c4a1a82702acd5f6a4cf44",
-    "semantic_hash": "d24ce57061c4a1a82702acd5f6a4cf44"
+    "mtime": 1790828920.6031415,
+    "seen": 1790828925.1244102,
+    "ast_hash": "f7975ab81f9c9b34c2ffa3dc38ab27d0",
+    "semantic_hash": "f7975ab81f9c9b34c2ffa3dc38ab27d0"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -810,10 +810,10 @@
     "semantic_hash": "e04252499fb6f15e3d2fee7398e19a10"
   },
   "research/notes/2026-09-27_BIASAPERTURE_RESEARCH_DOSSIER.md": {
-    "mtime": 1790485016.0502446,
-    "seen": 1790599964.4901717,
-    "ast_hash": "4a1568998cc4d3d0ce3798ca3986a376",
-    "semantic_hash": "4a1568998cc4d3d0ce3798ca3986a376"
+    "mtime": 1790828902.0194387,
+    "seen": 1790828925.124563,
+    "ast_hash": "8045ff22b18fc593f54dadfbb6a5777f",
+    "semantic_hash": "8045ff22b18fc593f54dadfbb6a5777f"
   },
   "research/notes/2026-09-27_LOCALSEND_DIRECT_P2P_AIRDROP_PARITY_PLAN.md": {
     "mtime": 1790494867.6186545,
@@ -1228,5 +1228,11 @@
     "seen": 1790828015.1235263,
     "ast_hash": "b89b14a27b3236bf74b0f3502b34ffad",
     "semantic_hash": "b89b14a27b3236bf74b0f3502b34ffad"
+  },
+  "research/notes/2026-10-01_GEMINI_NOTEBOOKLM_WORKSPACE_REGISTRY.md": {
+    "mtime": 1790828892.135625,
+    "seen": 1790828925.1245656,
+    "ast_hash": "15601cb8b0bf206bfeeb64aacf59d750",
+    "semantic_hash": "15601cb8b0bf206bfeeb64aacf59d750"
   }
 }

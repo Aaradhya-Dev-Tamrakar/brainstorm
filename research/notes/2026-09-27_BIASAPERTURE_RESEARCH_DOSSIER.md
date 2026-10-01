@@ -1,11 +1,15 @@
 # Research Note: BiasAperture (Diagnostic Fairness & Bias Audit Platform)
 
-- **Date & Time**: 2026-09-27
+- **Date & Time**: 2026-09-27 (Updated 2026-10-01)
 - **Target Repository**: [[BiasAperture]] (`F:\Aaradhya-Dev-Tamrakar\BiasAperture` / https://github.com/AaradhyaDT/BiasAperture)
-- **NotebookLM Grounding ID**: `99bee3c6-07ed-4ff0-8ac8-0027b18ad06a`
+- **NotebookLM Grounding IDs**:
+  - Strategy & Foundations: `99bee3c6-07ed-4ff0-8ac8-0027b18ad06a`
+  - References & Literature: `bbac9235-404b-4c39-a2a4-1f30069af30b`
+  - Source & Technical Specs: `928b5ed7-1353-4cb3-a1ce-b215e80b7db4`
+  - Repo State & Synthesis: `6e9505f0-2d5c-4655-8bc7-9f97cf9620b9`
 - **Orchestration**: Multi-profile fleet delegation: User 2 (`dev83` - Lead Orchestrator) -> User 3 (`xavier` - Scout) -> User 4 (`adtbei79001` - Reviewer)
 - **Epistemic Classification**: `EMPIRICALLY_VERIFIED`
-- **Related Documents**: `[[FLEET-001]]`, `[[FLEET-002]]`, `[[FLEET-003]]`, `[[AARADHYA_MASTER_v165]]`
+- **Related Documents**: `[[2026-10-01_GEMINI_NOTEBOOKLM_WORKSPACE_REGISTRY]]`, `[[AARADHYA_MASTER_v165]]`
 
 ---
 
@@ -13,7 +17,7 @@
 **BiasAperture** is an offline, diagnostic and evaluative software framework for auditing demographic bias in facial analysis computer vision models.
 - **Authors**: Aaradhya Dev Tamrakar, Tisha Manandhar
 - **Supervisor**: Shreejan Kisee, Teaching Assistant, Fusemachines AI Fellowship Program, Kathmandu, Nepal.
-- **Status**: Milestones M1–M4 Completed (100%), M5 System Orchestration & Case Studies Active (95%), 78/78 Unit Tests Passing.
+- **Status**: Milestones M1–M4 Completed (100%), M5 System Orchestration & Case Studies Active, Proposal Defense Completed, 85/85 Tests Passing.
 
 ---
 

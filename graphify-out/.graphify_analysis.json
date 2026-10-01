@@ -4310,17 +4310,17 @@
     {
       "type": "bridge_node",
       "question": "Why does `BE ECIE / BEIE — Complete Study Syllabus (Year I–IV)` connect `Community 0` to `Community 5`, `Community 134`, `Community 268`, `Community 269`, `Community 270`, `Community 271`, `Community 272`, `Community 273`, `Community 274`, `Community 275`, `Community 276`, `Community 159`, `Community 160`, `Community 34`, `Community 183`, `Community 193`, `Community 74`, `Community 84`, `Community 221`, `Community 94`, `Community 95`, `Community 96`, `Community 97`, `Community 235`, `Community 236`, `Community 113`, `Community 248`, `Community 249`, `Community 250`?",
-      "why": "High betweenness centrality (0.161) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.156) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
       "question": "Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 75` to `Community 188`, `Community 12`, `Community 189`, `Community 52`?",
-      "why": "High betweenness centrality (0.018) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.037) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
       "question": "Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `Community 52` to `Community 226`, `Community 227`, `Community 228`, `Community 75`, `Community 206`, `Community 207`, `Community 208`, `Community 150`, `Community 190`?",
-      "why": "High betweenness centrality (0.014) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.024) - this node is a cross-community bridge."
     },
     {
       "type": "verify_inferred",

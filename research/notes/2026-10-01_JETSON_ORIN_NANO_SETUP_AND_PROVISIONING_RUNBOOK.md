@@ -242,12 +242,15 @@ Record chronological logs, terminal outputs, issues encountered, and resolutions
 | `2026-10-01 16:49` | Ubuntu Pro Provisioning | Option: `Skip for now` | **Proceeded** | Skipped commercial token prompt to finish desktop load. |
 | `2026-10-01 16:55` | System Telemetry | Option: `No, don't share` | **Opted Out** | Privacy preserved, finalizing desktop launch. |
 | `2026-10-01 16:56` | Desktop Environment | GNOME Shell Desktop | **Live & Operational** | Booted into desktop with **25W Super Mode** indicator active in top panel. |
+| `2026-10-01 17:03` | Network Verification | `ip -br a` in Terminal | **Dual IP Assigned** | Ethernet: `192.168.1.125/24`, Wi-Fi: `192.168.1.126/24`, USB-C: `192.168.55.1`. |
+| `2026-10-01 17:11` | OpenSSH Service | `systemctl enable --now ssh` | **Active (Running)** | Resolved initial `Connection refused` by starting/enabling OpenSSH systemd socket. |
+| `2026-10-01 17:13` | Remote SSH Access | `ssh kecmakerspace@192.168.1.125` | **Authenticated & Live** | Direct remote access established from Windows PowerShell (Kernel `6.8.12-1021-tegra arm64`). |
 
 ---
 
 ## 8. Visual Evidence & Hardware Documentation Gallery
 
-All 57 setup photos and screenshots have been organized chronologically into [`research/media/2026-10-01_jetson_orin_nano_setup/`](file:///f:/Aaradhya-Dev-Tamrakar/brainstorm/research/media/2026-10-01_jetson_orin_nano_setup/):
+All 59 setup photos and screenshots have been organized chronologically into [`research/media/2026-10-01_jetson_orin_nano_setup/`](file:///f:/Aaradhya-Dev-Tamrakar/brainstorm/research/media/2026-10-01_jetson_orin_nano_setup/):
 
 | Step / Artifact | Photo Reference | Description |
 | :--- | :--- | :--- |
@@ -278,6 +281,8 @@ All 57 setup photos and screenshots have been organized chronologically into [`r
 | **51-55. Wi-Fi, Timezone & User Account** | [`51_ubuntu_gui_wifi_kec_makerspace_connected.jpg`](file:///f:/Aaradhya-Dev-Tamrakar/brainstorm/research/media/2026-10-01_jetson_orin_nano_setup/51_ubuntu_gui_wifi_kec_makerspace_connected.jpg) – [`55_ubuntu_gui_ubuntu_pro_skip_for_now.jpg`](file:///f:/Aaradhya-Dev-Tamrakar/brainstorm/research/media/2026-10-01_jetson_orin_nano_setup/55_ubuntu_gui_ubuntu_pro_skip_for_now.jpg) | Connected to `KEC Makerspace-5`, set `Kathmandu, Nepal`, configured `kecmakerspace` user, skipped Ubuntu Pro |
 | **56. Telemetry Opt-Out** | [`56_ubuntu_gui_help_improve_ubuntu_telemetry_opt_out.png`](file:///f:/Aaradhya-Dev-Tamrakar/brainstorm/research/media/2026-10-01_jetson_orin_nano_setup/56_ubuntu_gui_help_improve_ubuntu_telemetry_opt_out.png) | Selected `No, don't share system data` |
 | **57. Desktop Live with Super Mode** | [`57_jetson_orin_nano_desktop_wallpaper_25w_mode_active.jpg`](file:///f:/Aaradhya-Dev-Tamrakar/brainstorm/research/media/2026-10-01_jetson_orin_nano_setup/57_jetson_orin_nano_desktop_wallpaper_25w_mode_active.jpg) | Full Ubuntu 24.04 desktop wallpaper active with **25W Super Mode** enabled in top panel |
+| **58. Terminal Network Verification** | [`58_terminal_ip_address_ethernet_and_wifi_assigned.jpg`](file:///f:/Aaradhya-Dev-Tamrakar/brainstorm/research/media/2026-10-01_jetson_orin_nano_setup/58_terminal_ip_address_ethernet_and_wifi_assigned.jpg) | Terminal `ip -br a` showing Ethernet `192.168.1.125` and Wi-Fi `192.168.1.126` |
+| **59. OpenSSH Server Enablement** | [`59_openssh_server_service_status_disabled.jpg`](file:///f:/Aaradhya-Dev-Tamrakar/brainstorm/research/media/2026-10-01_jetson_orin_nano_setup/59_openssh_server_service_status_disabled.jpg) | Terminal output showing `ssh.service` installed but inactive/disabled needing `systemctl enable --now ssh` |
 
 ---
 

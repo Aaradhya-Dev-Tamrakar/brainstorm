@@ -20947,7 +20947,7 @@
       "node_kind": "heading",
       "norm_label": "8. visual evidence & hardware documentation gallery",
       "source_file": "research/notes/2026-10-01_JETSON_ORIN_NANO_SETUP_AND_PROVISIONING_RUNBOOK.md",
-      "source_location": "L248"
+      "source_location": "L251"
     },
     {
       "id": "research_notes_2026_10_01_jetson_orin_nano_setup_and_provisioning_runbook_9_benchmark_telemetry_ground_truth",
@@ -20959,7 +20959,7 @@
       "node_kind": "heading",
       "norm_label": "9. benchmark & telemetry ground truth",
       "source_file": "research/notes/2026-10-01_JETSON_ORIN_NANO_SETUP_AND_PROVISIONING_RUNBOOK.md",
-      "source_location": "L284"
+      "source_location": "L289"
     },
     {
       "id": "research_notes_2026_10_01_jetson_orin_nano_setup_and_provisioning_runbook_jetson_orin_nano_setup_provisioning_optimization_runbook",
@@ -55266,7 +55266,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/notes/2026-10-01_JETSON_ORIN_NANO_SETUP_AND_PROVISIONING_RUNBOOK.md",
-      "source_location": "L248",
+      "source_location": "L251",
       "weight": 1.0
     },
     {
@@ -55277,7 +55277,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/notes/2026-10-01_JETSON_ORIN_NANO_SETUP_AND_PROVISIONING_RUNBOOK.md",
-      "source_location": "L284",
+      "source_location": "L289",
       "weight": 1.0
     },
     {
@@ -82221,5 +82221,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "227be99a99cd82522f9208e79c317d5f9f08e970"
+  "built_at_commit": "45db737512fa6bf163577049a1aac44c8f89f486"
 }

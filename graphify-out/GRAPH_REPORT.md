@@ -1,7 +1,7 @@
 # Graph Report - brainstorm  (2026-10-01)
 
 ## Corpus Check
-- Large corpus: 277 files · ~728,257 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
+- Large corpus: 278 files · ~744,348 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
 
 ## Summary
 - 3333 nodes · 3861 edges · 287 communities (260 shown, 17 thin omitted)
@@ -1365,11 +1365,11 @@ Nodes (3): tokens_total, minimum, type
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `BE ECIE / BEIE — Complete Study Syllabus (Year I–IV)` connect `Community 0` to `Community 5`, `Community 134`, `Community 268`, `Community 269`, `Community 270`, `Community 271`, `Community 272`, `Community 273`, `Community 274`, `Community 275`, `Community 276`, `Community 159`, `Community 160`, `Community 34`, `Community 183`, `Community 193`, `Community 74`, `Community 84`, `Community 221`, `Community 94`, `Community 95`, `Community 96`, `Community 97`, `Community 235`, `Community 236`, `Community 113`, `Community 248`, `Community 249`, `Community 250`?**
-  _High betweenness centrality (0.161) - this node is a cross-community bridge._
+  _High betweenness centrality (0.156) - this node is a cross-community bridge._
 - **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 75` to `Community 188`, `Community 12`, `Community 189`, `Community 52`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
+  _High betweenness centrality (0.037) - this node is a cross-community bridge._
 - **Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `Community 52` to `Community 226`, `Community 227`, `Community 228`, `Community 75`, `Community 206`, `Community 207`, `Community 208`, `Community 150`, `Community 190`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+  _High betweenness centrality (0.024) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `10. Circuit Design (3 hours)`, `10. Data Files (5 hours)`, `10. Digital Devices Applications (2 hours)` to the rest of the system?**

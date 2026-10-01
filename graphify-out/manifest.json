@@ -516,10 +516,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790856061.8783514,
-    "seen": 1790856065.7832844,
-    "ast_hash": "275f232036e2a7c7ba55d5cffee35674",
-    "semantic_hash": "275f232036e2a7c7ba55d5cffee35674"
+    "mtime": 1790860881.969646,
+    "seen": 1790860884.90538,
+    "ast_hash": "9cf765f9a559b29ffa1e09aa86557661",
+    "semantic_hash": "9cf765f9a559b29ffa1e09aa86557661"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -570,10 +570,10 @@
     "semantic_hash": "ef915c5d8d1809c77777dfc027680b8a"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790856059.4477518,
-    "seen": 1790856065.7832825,
-    "ast_hash": "2f8ee298924d39fab7123cf3843d617a",
-    "semantic_hash": "2f8ee298924d39fab7123cf3843d617a"
+    "mtime": 1790860879.8411481,
+    "seen": 1790860884.9053788,
+    "ast_hash": "fa728becb39c9f734ca5f920b66ae1c1",
+    "semantic_hash": "fa728becb39c9f734ca5f920b66ae1c1"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -1288,5 +1288,23 @@
     "seen": 1790854296.1326413,
     "ast_hash": "d6d8950767bc0395e7d1fd81aa84c3eb",
     "semantic_hash": "d6d8950767bc0395e7d1fd81aa84c3eb"
+  },
+  "schemas/horoscope.evaluation.v1.json": {
+    "mtime": 1790860027.5981627,
+    "seen": 1790860884.9054017,
+    "ast_hash": "00d1820d1afc6f24f0f252562950f58d",
+    "semantic_hash": "00d1820d1afc6f24f0f252562950f58d"
+  },
+  "sim/horoscope_eval_engine.py": {
+    "mtime": 1790860063.6762555,
+    "seen": 1790860884.9054196,
+    "ast_hash": "bb53dd99aa467a4737bfb590b6fc7356",
+    "semantic_hash": "bb53dd99aa467a4737bfb590b6fc7356"
+  },
+  "research/plans/PLAN-HORO-001_DETERMINISTIC_HOROSCOPE_EVALUATION_MODEL.md": {
+    "mtime": 1790860850.4774196,
+    "seen": 1790860884.905518,
+    "ast_hash": "d9d92ce3af97405971a309c06766eff9",
+    "semantic_hash": "d9d92ce3af97405971a309c06766eff9"
   }
 }

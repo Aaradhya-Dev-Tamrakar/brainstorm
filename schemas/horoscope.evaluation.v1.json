@@ -1,0 +1,250 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "title": "Deterministic Horoscope Evaluation & Ground Truth Schema",
+  "description": "Standardized schema for collecting birth data, deterministic celestial ephemeris, rule-based astrological features, and verifiable ground-truth life events for deterministic model evaluation.",
+  "type": "object",
+  "required": [
+    "subject_id",
+    "birth_event",
+    "astronomical_state",
+    "astrological_features",
+    "evaluation_ground_truth"
+  ],
+  "properties": {
+    "subject_id": {
+      "type": "string",
+      "description": "Unique identifier for the subject (e.g. ADB_00123, SYNTH_GRID_KTM_001, PERSON_xxx)"
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["source", "rodden_rating"],
+      "properties": {
+        "source": {
+          "type": "string",
+          "enum": ["Astro-Databank", "Wikidata_SPARQL", "Synthetic_Grid_Sweep", "Clinical_Cohort", "Manual_Registry"]
+        },
+        "rodden_rating": {
+          "type": "string",
+          "enum": ["AA", "A", "B", "C", "DD", "X", "SYNTHETIC_EXACT"],
+          "description": "AA = Birth Certificate / Hospital Record; A = Memory / Family; B = Biography; C = Caution; DD = Conflicting; X = No Time; SYNTHETIC = Generated grid test"
+        },
+        "citation": { "type": "string" }
+      }
+    },
+    "birth_event": {
+      "type": "object",
+      "required": ["utc_datetime_iso", "latitude", "longitude", "timezone_offset_hours"],
+      "properties": {
+        "calendar_system": {
+          "type": "string",
+          "enum": ["Gregorian", "Bikram_Sambat", "Julian"],
+          "default": "Gregorian"
+        },
+        "raw_date_string": { "type": "string", "description": "Original input date string" },
+        "utc_datetime_iso": { "type": "string", "format": "date-time" },
+        "julian_day_ut": { "type": "number", "description": "Julian Day Number at UT" },
+        "latitude": { "type": "number", "minimum": -90.0, "maximum": 90.0 },
+        "longitude": { "type": "number", "minimum": -180.0, "maximum": 180.0 },
+        "elevation_m": { "type": "number", "default": 0.0 },
+        "timezone_offset_hours": { "type": "number", "minimum": -12.0, "maximum": 14.0 },
+        "location_name": { "type": "string" },
+        "time_accuracy_seconds": { "type": "number", "description": "Uncertainty window in birth time" }
+      }
+    },
+    "astronomical_state": {
+      "type": "object",
+      "required": [
+        "coordinate_framework",
+        "ayanamsha_type",
+        "ayanamsha_value_deg",
+        "ascendant_deg",
+        "midheaven_deg",
+        "planets"
+      ],
+      "properties": {
+        "coordinate_framework": {
+          "type": "string",
+          "enum": ["Sidereal_Nirayana", "Tropical_Sayana"],
+          "default": "Sidereal_Nirayana"
+        },
+        "ayanamsha_type": {
+          "type": "string",
+          "enum": ["Lahiri_Chitrapaksha", "Krishnamurti_KP", "Raman", "Fagan_Bradley", "None_Tropical"],
+          "default": "Lahiri_Chitrapaksha"
+        },
+        "ayanamsha_value_deg": { "type": "number" },
+        "obliquity_deg": { "type": "number" },
+        "local_sidereal_time_hours": { "type": "number" },
+        "ascendant_deg": { "type": "number", "minimum": 0.0, "maximum": 360.0 },
+        "midheaven_deg": { "type": "number", "minimum": 0.0, "maximum": 360.0 },
+        "house_system": {
+          "type": "string",
+          "enum": ["Whole_Sign", "Equal_House", "Sripathi", "Placidus", "Bhava_Chalit"],
+          "default": "Whole_Sign"
+        },
+        "house_cusps_deg": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 12,
+          "maxItems": 12
+        },
+        "planets": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["longitude_deg", "zodiac_sign", "speed_deg_per_day", "is_retrograde"],
+            "properties": {
+              "longitude_deg": { "type": "number", "minimum": 0.0, "maximum": 360.0 },
+              "latitude_deg": { "type": "number" },
+              "distance_au": { "type": "number" },
+              "speed_deg_per_day": { "type": "number" },
+              "is_retrograde": { "type": "boolean" },
+              "zodiac_sign": { "type": "string" },
+              "sign_degree": { "type": "number", "minimum": 0.0, "maximum": 30.0 },
+              "nakshatra": { "type": "string" },
+              "nakshatra_pada": { "type": "integer", "minimum": 1, "maximum": 4 },
+              "house_number": { "type": "integer", "minimum": 1, "maximum": 12 }
+            }
+          }
+        }
+      }
+    },
+    "astrological_features": {
+      "type": "object",
+      "required": [
+        "lagna_rashi",
+        "chandra_rashi",
+        "surya_rashi",
+        "birth_nakshatra",
+        "vimshottari_dasha_at_birth",
+        "detected_yogas"
+      ],
+      "properties": {
+        "lagna_rashi": { "type": "string" },
+        "chandra_rashi": { "type": "string" },
+        "surya_rashi": { "type": "string" },
+        "birth_nakshatra": { "type": "string" },
+        "birth_nakshatra_lord": { "type": "string" },
+        "vimshottari_dasha_at_birth": {
+          "type": "object",
+          "required": ["starting_mahadasha_planet", "balance_years", "cycle_start_date_iso"],
+          "properties": {
+            "starting_mahadasha_planet": { "type": "string" },
+            "balance_years": { "type": "number" },
+            "cycle_start_date_iso": { "type": "string" }
+          }
+        },
+        "detected_yogas": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["yoga_name", "category", "satisfied", "involved_planets", "rule_logic"],
+            "properties": {
+              "yoga_name": { "type": "string" },
+              "category": { "type": "string", "enum": ["Auspicious", "Inauspicious", "Neutral", "Raja", "Dhana", "Arishta"] },
+              "satisfied": { "type": "boolean" },
+              "involved_planets": { "type": "array", "items": { "type": "string" } },
+              "rule_logic": { "type": "string" }
+            }
+          }
+        },
+        "manglik_dosha": {
+          "type": "object",
+          "properties": {
+            "is_manglik": { "type": "boolean" },
+            "mars_house": { "type": "integer" },
+            "cancellation_rules_satisfied": { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      }
+    },
+    "evaluation_ground_truth": {
+      "type": "object",
+      "description": "Verifiable, deterministic real-world facts to benchmark model predictions against",
+      "properties": {
+        "verifiable_life_events": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["event_type", "event_date_iso", "verification_tier"],
+            "properties": {
+              "event_type": {
+                "type": "string",
+                "enum": [
+                  "Marriage", "Divorce", "Childbirth", "Graduation",
+                  "Major_Career_Milestone", "Job_Loss", "Business_Founding",
+                  "Major_Health_Incident", "Surgery", "Public_Award",
+                  "Legal_Litigation", "Immigration_Relocation", "Death"
+                ]
+              },
+              "event_date_iso": { "type": "string" },
+              "date_granularity": { "type": "string", "enum": ["Exact_Day", "Month", "Year"] },
+              "active_dasha_at_event": {
+                "type": "object",
+                "properties": {
+                  "mahadasha": { "type": "string" },
+                  "antardasha": { "type": "string" }
+                }
+              },
+              "verification_tier": {
+                "type": "string",
+                "enum": ["FORMALLY_PROVEN", "EMPIRICALLY_VERIFIED", "STATISTICALLY_OBSERVED", "UNVERIFIED_SELF_REPORT"]
+              },
+              "evidence_source": { "type": "string" }
+            }
+          }
+        },
+        "objective_attributes": {
+          "type": "object",
+          "properties": {
+            "primary_profession": { "type": "string" },
+            "highest_education_level": { "type": "string" },
+            "wealth_bracket": { "type": "string" },
+            "lifespan_years": { "type": "number" },
+            "biological_children_count": { "type": "integer" },
+            "divorce_count": { "type": "integer" }
+          }
+        },
+        "psychometric_ground_truth": {
+          "type": "object",
+          "properties": {
+            "big_five_scores": {
+              "type": "object",
+              "properties": {
+                "openness_percentile": { "type": "number", "minimum": 0, "maximum": 100 },
+                "conscientiousness_percentile": { "type": "number", "minimum": 0, "maximum": 100 },
+                "extraversion_percentile": { "type": "number", "minimum": 0, "maximum": 100 },
+                "agreeableness_percentile": { "type": "number", "minimum": 0, "maximum": 100 },
+                "neuroticism_percentile": { "type": "number", "minimum": 0, "maximum": 100 }
+              }
+            }
+          }
+        }
+      }
+    },
+    "model_evaluation_metrics": {
+      "type": "object",
+      "description": "Deterministic scoring of predictions generated by candidate models (LLM or heuristic engine)",
+      "properties": {
+        "candidate_model_name": { "type": "string" },
+        "astronomical_calculation_fidelity": {
+          "type": "number",
+          "description": "Percentage of planetary and ascendant placements stated correctly without hallucination (0.0 to 1.0)"
+        },
+        "barnum_ambiguity_index": {
+          "type": "number",
+          "description": "Ratio of generic, unfalsifiable Barnum statements to total statements (0.0 = completely falsifiable, 1.0 = purely Barnum platitudes)"
+        },
+        "event_timing_brier_score": {
+          "type": "number",
+          "description": "Strict proper scoring rule measuring calibration of predictive event windows"
+        },
+        "deterministic_reproducibility_rate": {
+          "type": "number",
+          "description": "Jaccard similarity of extracted claims across repeated runs with identical input (temperature=0.0)"
+        }
+      }
+    }
+  }
+}

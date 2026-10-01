@@ -1,0 +1,29 @@
+hypothesis_id: HYP-HORO-001
+title: Deterministic Disentanglement of Astronomical Ephemeris from Astrological Interpretive Claims
+date: 2026-10-01
+author: Aaradhya Dev Tamrakar
+status: DRAFT_ACTIVE
+epistemic_tier: HEURISTIC_HYPOTHESIS
+
+statement: >
+  Horoscope analysis can be partitioned into a deterministic physical ephemeris
+  computation layer (astronomical coordinates, house cusps, nakshatra padas,
+  Vimshottari Dasha intervals) and a formal rule-satisfaction layer (symbolic yogas,
+  aspect matrices). By collecting birth records with Rodden Rating AA paired with
+  verifiable timestamped life milestones, horoscope evaluation models can measure
+  predictive calibration and Barnum ambiguity with mathematical determinism,
+  isolating subjective validation bias from empirical signal.
+
+assumptions:
+  - Julian Day and sidereal planetary coordinates (Lahiri Ayanamsha) are closed-form deterministic functions of UTC timestamp and geographic coordinates.
+  - Life events (e.g. graduation, marriage, death, bankruptcy) provide discrete, verifiable temporal ground truth.
+  - Classical textual rules (e.g. Parashari yogas) can be encoded as Boolean predicates without semantic loss.
+
+falsification_criteria:
+  - If identical birth charts evaluated under controlled temperature=0.0 across candidate LLMs yield conflicting diagnostic placements, the model fails calculation fidelity.
+  - If the predictive claim text exhibits a Barnum Ambiguity Index > 0.60, the prediction is classified as unfalsifiable platitude rather than deterministic forecast.
+  - If empirical event timing under active Dasha-Bhukti periods does not exceed a uniform random Monte Carlo baseline at p < 0.01, the astrological correlation hypothesis is falsified.
+
+formal_verification_targets:
+  schema: schemas/horoscope.evaluation.v1.json
+  engine: sim/horoscope_eval_engine.py

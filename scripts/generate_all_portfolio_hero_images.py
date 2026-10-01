@@ -299,24 +299,50 @@ def main():
             ]
         )
 
-    # 13. p-015: react-ws
+    # 13. p-015: react-ws (IEEE KEC React Workshop live UI)
     print("\n[p-015] react-ws...")
-    for slug in ["react-ws", "react-workshop"]:
-        render_terminal_card(
-            slug,
-            "IEEE KEC React Workshop",
-            "IEEE KEC React Workshop — Progressive Learning Deck",
-            [
-                "[*] Vite Development Server Active: http://localhost:3000",
-                "[+] Progressive Workshop Modules Scaffolded:",
-                "    - Lesson 01: JSX Syntax & Virtual DOM Rendering",
-                "    - Lesson 02: Props, Unidirectional Data Flow & Type Validation",
-                "    - Lesson 03: useState & Event Handling (Interactive Counter)",
-                "    - Lesson 04: useEffect & Lifecycle Hooks (Live Real-Time Clock)",
-                "    - Lesson 05: Component Composition & Quiz Deck Challenge",
-                "[+] Audience Engagement: 45 student engineers live in lab"
-            ]
-        )
+    try:
+        import subprocess
+        chrome = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+        temp_dest = BRAINSTORM_ROOT / "scratch" / "temp_react_ws.png"
+        temp_dest.parent.mkdir(parents=True, exist_ok=True)
+        cmd = [
+            chrome,
+            "--headless=new",
+            "--no-sandbox",
+            "--disable-gpu",
+            "--force-dark-mode",
+            "--enable-features=WebContentsForceDark",
+            "--window-size=860,820",
+            "--device-scale-factor=2",
+            "--virtual-time-budget=3000",
+            "--hide-scrollbars",
+            f"--screenshot={temp_dest}",
+            "http://localhost:5173/"
+        ]
+        subprocess.run(cmd, check=True)
+        im = Image.open(temp_dest)
+        for slug in ["react-ws", "react-workshop"]:
+            optimize_image_to_webp(im, PORTFOLIO_ASSETS / slug, slug, "IEEE KEC React Workshop")
+        temp_dest.unlink(missing_ok=True)
+    except Exception as e:
+        print(f"  [-] Error capturing React workshop live UI, using terminal fallback: {e}")
+        for slug in ["react-ws", "react-workshop"]:
+            render_terminal_card(
+                slug,
+                "IEEE KEC React Workshop",
+                "IEEE KEC React Workshop — Progressive Learning Deck",
+                [
+                    "[*] Vite Development Server Active: http://localhost:5173",
+                    "[+] Progressive Workshop Modules Scaffolded:",
+                    "    - Lesson 01: JSX Syntax & Virtual DOM Rendering",
+                    "    - Lesson 02: Props, Unidirectional Data Flow & Type Validation",
+                    "    - Lesson 03: useState & Event Handling (Interactive Counter)",
+                    "    - Lesson 04: useEffect & Lifecycle Hooks (Live Real-Time Clock)",
+                    "    - Lesson 05: Component Composition & Quiz Deck Challenge",
+                    "[+] Audience Engagement: 45 student engineers live in lab"
+                ]
+            )
 
     # 14. p-016: fuse-wk8 (SARIMA Forecast)
     print("\n[p-016] fuse-wk8...")

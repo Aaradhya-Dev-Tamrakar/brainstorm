@@ -1,7 +1,7 @@
 # Graph Report - brainstorm  (2026-10-01)
 
 ## Corpus Check
-- 218 files · ~281,710 words
+- 218 files · ~281,784 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -297,19 +297,19 @@
 7. `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` - 20 edges
 8. `Syllabus` - 19 edges
 9. `2. Granular Claims Audit Register` - 18 edges
-10. `MCP Integration for Claude Code Plugins` - 17 edges
+10. `2. Core Architectural & Systemic Limitations` - 17 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `InvariantAssuranceEngineTests` --uses--> `InvariantClassification`  [INFERRED]
-  sim/test_invariant_engine.py → sim/invariant_engine/contract_types.py
-- `InvariantAssuranceEngineTests` --uses--> `SandboxReplayEngine`  [INFERRED]
-  sim/test_invariant_engine.py → sim/invariant_engine/sandbox_replay.py
-- `InvariantAssuranceEngineTests` --uses--> `SMTInvariantProver`  [INFERRED]
-  sim/test_invariant_engine.py → sim/invariant_engine/smt_encoder.py
 - `SMTInvariantProver` --uses--> `InvariantProperty`  [INFERRED]
   sim/invariant_engine/smt_encoder.py → sim/invariant_engine/contract_types.py
 - `SMTInvariantProver` --uses--> `VerificationResult`  [INFERRED]
   sim/invariant_engine/smt_encoder.py → sim/invariant_engine/contract_types.py
+- `SMTInvariantProver` --uses--> `BaseStateMachine`  [INFERRED]
+  sim/invariant_engine/smt_encoder.py → sim/invariant_engine/state_machine.py
+- `InvariantAssuranceEngineTests` --uses--> `SMTInvariantProver`  [INFERRED]
+  sim/test_invariant_engine.py → sim/invariant_engine/smt_encoder.py
+- `InvariantAssuranceEngineTests` --uses--> `InvariantClassification`  [INFERRED]
+  sim/test_invariant_engine.py → sim/invariant_engine/contract_types.py
 
 ## Import Cycles
 - None detected.
@@ -1361,11 +1361,11 @@ Nodes (3): tokens_total, minimum, type
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `BE ECIE / BEIE — Complete Study Syllabus (Year I–IV)` connect `Community 0` to `Community 132`, `Community 5`, `Community 268`, `Community 269`, `Community 270`, `Community 271`, `Community 272`, `Community 273`, `Community 274`, `Community 275`, `Community 276`, `Community 159`, `Community 160`, `Community 31`, `Community 186`, `Community 196`, `Community 71`, `Community 80`, `Community 91`, `Community 92`, `Community 93`, `Community 94`, `Community 222`, `Community 235`, `Community 236`, `Community 110`, `Community 249`, `Community 250`, `Community 251`?**
-  _High betweenness centrality (0.159) - this node is a cross-community bridge._
-- **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 72` to `Community 192`, `Community 193`, `Community 52`, `Community 39`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
+  _High betweenness centrality (0.156) - this node is a cross-community bridge._
 - **Why does `Skill Development for Claude Code Plugins` connect `Community 144` to `Community 224`, `Community 225`, `Community 226`, `Community 145`, `Community 146`, `Community 245`, `Community 246`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
+  _High betweenness centrality (0.028) - this node is a cross-community bridge._
+- **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 72` to `Community 192`, `Community 193`, `Community 52`, `Community 39`?**
+  _High betweenness centrality (0.027) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `10. Circuit Design (3 hours)`, `10. Data Files (5 hours)`, `10. Digital Devices Applications (2 hours)` to the rest of the system?**

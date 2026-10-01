@@ -39085,7 +39085,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/generate_all_portfolio_hero_images.py",
-      "source_location": "L406",
+      "source_location": "L432",
       "weight": 1.0
     },
     {
@@ -81542,5 +81542,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "140d1162913f48cf9c106d533bea4cd34fc77ec0"
+  "built_at_commit": "793c58f17ca7c6c0dd50e2ab2d09ee03659912f3"
 }

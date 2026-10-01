@@ -1365,10 +1365,8 @@ Nodes (3): tokens_total, minimum, type
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `BE ECIE / BEIE — Complete Study Syllabus (Year I–IV)` connect `Community 0` to `Community 5`, `Community 134`, `Community 268`, `Community 269`, `Community 270`, `Community 271`, `Community 272`, `Community 273`, `Community 274`, `Community 275`, `Community 276`, `Community 159`, `Community 160`, `Community 34`, `Community 183`, `Community 193`, `Community 74`, `Community 84`, `Community 221`, `Community 94`, `Community 95`, `Community 96`, `Community 97`, `Community 235`, `Community 236`, `Community 113`, `Community 248`, `Community 249`, `Community 250`?**
-  _High betweenness centrality (0.156) - this node is a cross-community bridge._
+  _High betweenness centrality (0.159) - this node is a cross-community bridge._
 - **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 75` to `Community 188`, `Community 12`, `Community 189`, `Community 52`?**
-  _High betweenness centrality (0.037) - this node is a cross-community bridge._
-- **Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `Community 52` to `Community 226`, `Community 227`, `Community 228`, `Community 75`, `Community 206`, `Community 207`, `Community 208`, `Community 150`, `Community 190`?**
   _High betweenness centrality (0.024) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
@@ -1378,3 +1376,5 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.006153846153846154 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.05548654244306418 - nodes in this community are weakly interconnected._
+- **Should `Community 2` be split into smaller, more focused modules?**
+  _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._

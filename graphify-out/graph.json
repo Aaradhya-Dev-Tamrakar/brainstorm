@@ -24505,7 +24505,7 @@
       "node_kind": "heading",
       "norm_label": "2. decision tree & workflow paths",
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L24"
+      "source_location": "L28"
     },
     {
       "id": "tools_skills_github_workflow_skill_3_step_by_step_procedure",
@@ -24517,7 +24517,7 @@
       "node_kind": "heading",
       "norm_label": "3. step-by-step procedure",
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L47"
+      "source_location": "L51"
     },
     {
       "id": "tools_skills_github_workflow_skill_4_supporting_resources",
@@ -24529,7 +24529,7 @@
       "node_kind": "heading",
       "norm_label": "4. supporting resources",
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L230"
+      "source_location": "L234"
     },
     {
       "id": "tools_skills_github_workflow_skill_case_a_ecosystem_repositories_sync_bat_present",
@@ -24541,7 +24541,7 @@
       "node_kind": "heading",
       "norm_label": "case a: ecosystem repositories (`sync.bat` present)",
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L155"
+      "source_location": "L159"
     },
     {
       "id": "tools_skills_github_workflow_skill_case_b_standard_repositories_no_sync_wrapper",
@@ -24553,7 +24553,7 @@
       "node_kind": "heading",
       "norm_label": "case b: standard repositories (no sync wrapper)",
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L166"
+      "source_location": "L170"
     },
     {
       "id": "tools_skills_github_workflow_skill_default_github_development_workflow",
@@ -24577,7 +24577,7 @@
       "node_kind": "heading",
       "norm_label": "step 1: scoping & issue initialization",
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L49"
+      "source_location": "L53"
     },
     {
       "id": "tools_skills_github_workflow_skill_step_2_branch_isolation",
@@ -24589,7 +24589,7 @@
       "node_kind": "heading",
       "norm_label": "step 2: branch isolation",
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L79"
+      "source_location": "L83"
     },
     {
       "id": "tools_skills_github_workflow_skill_step_3_implement_changes",
@@ -24601,7 +24601,7 @@
       "node_kind": "heading",
       "norm_label": "step 3: implement changes",
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L97"
+      "source_location": "L101"
     },
     {
       "id": "tools_skills_github_workflow_skill_step_4_checkpoint_task_tracking",
@@ -24613,7 +24613,7 @@
       "node_kind": "heading",
       "norm_label": "step 4: checkpoint task tracking",
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L105"
+      "source_location": "L109"
     },
     {
       "id": "tools_skills_github_workflow_skill_step_5_pre_commit_verification_gate",
@@ -24625,7 +24625,7 @@
       "node_kind": "heading",
       "norm_label": "step 5: pre-commit verification gate",
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L132"
+      "source_location": "L136"
     },
     {
       "id": "tools_skills_github_workflow_skill_step_6_multi_remote_ecosystem_synchronization",
@@ -24637,7 +24637,7 @@
       "node_kind": "heading",
       "norm_label": "step 6: multi-remote ecosystem synchronization",
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L151"
+      "source_location": "L155"
     },
     {
       "id": "tools_skills_github_workflow_skill_step_7_open_pull_request_request_review",
@@ -24649,7 +24649,7 @@
       "node_kind": "heading",
       "norm_label": "step 7: open pull request & request review",
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L175"
+      "source_location": "L179"
     },
     {
       "id": "tools_skills_github_workflow_skill_step_8_post_pr_iteration_branch_cleanup",
@@ -24661,7 +24661,7 @@
       "node_kind": "heading",
       "norm_label": "step 8: post-pr iteration & branch cleanup",
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L213"
+      "source_location": "L217"
     },
     {
       "id": "tools_skills_mcp_integration_skill",
@@ -72387,13 +72387,24 @@
     },
     {
       "source": "tools_skills_github_workflow_skill_3_step_by_step_procedure",
+      "target": "tools_skills_github_workflow_skill_step_3_implement_changes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tools/skills/github-workflow/SKILL.md",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "tools_skills_github_workflow_skill_3_step_by_step_procedure",
       "target": "tools_skills_github_workflow_skill_step_4_checkpoint_task_tracking",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L105",
+      "source_location": "L109",
       "weight": 1.0
     },
     {
@@ -72404,7 +72415,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L132",
+      "source_location": "L136",
       "weight": 1.0
     },
     {
@@ -72415,7 +72426,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L151",
+      "source_location": "L155",
       "weight": 1.0
     },
     {
@@ -72426,7 +72437,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L175",
+      "source_location": "L179",
       "weight": 1.0
     },
     {
@@ -72437,7 +72448,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L213",
+      "source_location": "L217",
       "weight": 1.0
     },
     {
@@ -72448,7 +72459,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L49",
+      "source_location": "L53",
       "weight": 1.0
     },
     {
@@ -72459,18 +72470,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L79",
-      "weight": 1.0
-    },
-    {
-      "source": "tools_skills_github_workflow_skill_3_step_by_step_procedure",
-      "target": "tools_skills_github_workflow_skill_step_3_implement_changes",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L97",
+      "source_location": "L83",
       "weight": 1.0
     },
     {
@@ -72492,7 +72492,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L230",
+      "source_location": "L234",
       "weight": 1.0
     },
     {
@@ -72503,7 +72503,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L24",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -72514,7 +72514,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L47",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -72525,7 +72525,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L155",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -72536,7 +72536,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L166",
+      "source_location": "L170",
       "weight": 1.0
     },
     {
@@ -79752,7 +79752,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/github-workflow/SKILL.md",
-      "source_location": "L55",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
@@ -80186,5 +80186,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "63040666b344ed03e7b293d9e4e879df1cbbe463"
+  "built_at_commit": "e26065b296584d25730f064162753eedf4b644ad"
 }

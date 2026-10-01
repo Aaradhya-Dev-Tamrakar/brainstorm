@@ -18,6 +18,10 @@ This skill defines the canonical standard operating procedure (SOP) for all soft
 4. **Verification Gate**: Never commit or push without passing local linters (`ruff`, `eslint`), formatters, and test suites (`pytest`, `npm test`).
 5. **Ecosystem Synchronization**: When `sync.ps1` or `sync.bat` exists, raw `git commit`, `git add`, or `git push` are strictly forbidden. All version control must run through `.\sync.bat` (or `.\sync.ps1`).
 6. **PR Metadata & Review Dispatch**: Always open pull requests with full sidebar metadata: assign yourself (`--assignee "@me"`), attach labels (`--label "<labels>"`), link the issue with resolution keywords (`Closes #<ID>`), and request peer review from designated teammates (e.g. `--reviewer tiixsha`).
+7. **Collaborative Privacy & Boundary Isolation (Zero Personal Leakage)**:
+   > [!CAUTION]
+   > **Never commit or log personal developer resources into collaborative/public repositories.**
+   > Personal NotebookLM IDs, private journals, personal notes, and local machine configs found in global agent rules are strictly for local assistant tooling context. They must **never** be written into shared repository documentation, Markdown files, or committed artifacts.
 
 ---
 

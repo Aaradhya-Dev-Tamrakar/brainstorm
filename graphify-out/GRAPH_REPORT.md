@@ -1,7 +1,7 @@
 # Graph Report - brainstorm  (2026-10-01)
 
 ## Corpus Check
-- 210 files · ~271,349 words
+- 210 files · ~271,409 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -1326,11 +1326,11 @@ Nodes (3): tokens_total, minimum, type
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `BE ECIE / BEIE — Complete Study Syllabus (Year I–IV)` connect `Community 0` to `Community 131`, `Community 5`, `Community 261`, `Community 263`, `Community 262`, `Community 264`, `Community 265`, `Community 266`, `Community 267`, `Community 268`, `Community 269`, `Community 156`, `Community 157`, `Community 34`, `Community 182`, `Community 190`, `Community 73`, `Community 83`, `Community 216`, `Community 93`, `Community 94`, `Community 95`, `Community 96`, `Community 228`, `Community 229`, `Community 111`, `Community 241`, `Community 242`, `Community 243`?**
-  _High betweenness centrality (0.139) - this node is a cross-community bridge._
+  _High betweenness centrality (0.166) - this node is a cross-community bridge._
 - **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 75` to `Community 186`, `Community 42`, `Community 187`, `Community 53`?**
-  _High betweenness centrality (0.026) - this node is a cross-community bridge._
+  _High betweenness centrality (0.027) - this node is a cross-community bridge._
 - **Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `Community 53` to `Community 203`, `Community 204`, `Community 205`, `Community 75`, `Community 145`, `Community 188`, `Community 221`, `Community 222`, `Community 223`?**
-  _High betweenness centrality (0.023) - this node is a cross-community bridge._
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `10. Circuit Design (3 hours)`, `10. Data Files (5 hours)`, `10. Digital Devices Applications (2 hours)` to the rest of the system?**

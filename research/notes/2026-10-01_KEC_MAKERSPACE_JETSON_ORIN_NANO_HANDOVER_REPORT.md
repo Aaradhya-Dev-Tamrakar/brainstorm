@@ -1,7 +1,7 @@
 # KEC Makerspace — NVIDIA Jetson Orin Nano Developer Kit (8GB)
 ## Official Hardware Handover, Provisioning Report & Developer Guide
 
-- **Target Facility**: KEC Makerspace (Kantipur Engineering College)
+- **Target Facility**: KEC Makerspace (Kathmandu Engineering College)
 - **Prepared By**: Aaradhya Dev Tamrakar
 - **Date**: October 1, 2026
 - **Status**: Operational / Fully Provisioned & Verified (`EMPIRICALLY_VERIFIED`)

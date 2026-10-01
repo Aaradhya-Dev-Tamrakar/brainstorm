@@ -2,7 +2,7 @@
 
 > **Path:** `tools/skills/`  
 > **Global System Path:** `C:\Users\Aaradhya\.gemini\config\skills\`  
-> **Purpose:** Version-controlled master repository and source-of-truth mirror for all 20 custom Antigravity agent skills.
+> **Purpose:** Version-controlled master repository and source-of-truth mirror for all 23 custom Antigravity agent skills.
 
 ---
 
@@ -24,11 +24,14 @@
 | | [`google-ux-fluidity`](google-ux-fluidity/SKILL.md) | `tools/skills/google-ux-fluidity/` | Material Design 3 (M3) UX fluidity, expressive curves, and tactile ripple states. |
 | | [`google-stitch-integration`](google-stitch-integration/SKILL.md) | `tools/skills/google-stitch-integration/` | Ingests production-ready UI layout files and color tokens from Google Stitch. |
 | | [`shadcn-context`](shadcn-context/SKILL.md) | `tools/skills/shadcn-context/` | Component schemas, props, and composition rules for shadcn/ui and Radix primitives. |
+| | [`ui-ux-pro-max`](ui-ux-pro-max/SKILL.md) | `tools/skills/ui-ux-pro-max/` | Advanced UI/UX intelligence, dark-mode-first tokens, elevation layers, and editorial typography. |
 | **Ecosystem & Workflow** | [`github-workflow`](github-workflow/SKILL.md) | `tools/skills/github-workflow/` | Canonical default workflow for issue anchoring, task tracking, verification, sync, and PRs. |
 | | [`portfolio-project-manager`](portfolio-project-manager/SKILL.md) | `tools/skills/portfolio-project-manager/` | Token-zero project onboarding engine for `AaradhyaDT.github.io` (auto IDs & AES encryption). |
 | | [`feature-dev`](feature-dev/SKILL.md) | `tools/skills/feature-dev/` | Guided feature scoping, architecture decomposition, and requirements clarification. |
 | | [`commit-commands`](commit-commands/SKILL.md) | `tools/skills/commit-commands/` | Semantic Git commits, branch hygiene, and GitHub PR workflows. |
 | | [`pr-review-toolkit`](pr-review-toolkit/SKILL.md) | `tools/skills/pr-review-toolkit/` | Multi-perspective code reviews (simplification, silent failure hunting, test quality). |
+| | [`review-bugbot`](review-bugbot/SKILL.md) | `tools/skills/review-bugbot/` | Automated deep code review for silent regressions, race conditions, and concurrency bugs. |
+| | [`split-to-prs`](split-to-prs/SKILL.md) | `tools/skills/split-to-prs/` | Splits large changesets and feature diffs into atomic, reviewer-friendly PR sequences. |
 | | [`security-guidance`](security-guidance/SKILL.md) | `tools/skills/security-guidance/` | Security audits preventing secrets leakage, command injection, and SSRF vulnerabilities. |
 
 ---

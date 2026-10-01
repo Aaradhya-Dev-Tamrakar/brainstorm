@@ -547,48 +547,6 @@
       "schemas_horoscope_evaluation_v1_utc_datetime_iso_type"
     ],
     "5": [
-      "research_experiments_fleet_002",
-      "research_experiments_fleet_002_1_problem_architectural_rationale",
-      "research_experiments_fleet_002_2_multi_tier_hybrid_fleet_topology",
-      "research_experiments_fleet_002_3_1_copilotheadlessadapter_completed_operational_scope_m1_m4",
-      "research_experiments_fleet_002_3_2_sandboxed_local_tool_executor_phase_2_target_specification_m6",
-      "research_experiments_fleet_002_3_3_memory_resource_footprint_benchmark_comparison",
-      "research_experiments_fleet_002_3_specification_component_contracts",
-      "research_experiments_fleet_002_4_verification_checklist_milestones",
-      "research_experiments_fleet_002_experiment_architecture_log_fleet_002_headless_multi_account_github_copilot_worker_fleet",
-      "research_experiments_fleet_002_role_capability_allocation",
-      "research_experiments_fleet_003",
-      "research_experiments_fleet_003_1_system_topology_test_harness_configuration",
-      "research_experiments_fleet_003_2_test_suite_baseline_validation",
-      "research_experiments_fleet_003_3_physical_electron_process_telemetry_benchmark",
-      "research_experiments_fleet_003_4_real_world_engineering_problem_execution",
-      "research_experiments_fleet_003_5_artifacts_code_updates",
-      "research_experiments_fleet_003_experiment_verification_log_fleet_003_live_multi_worker_fleet_verification_physical_telemetry_benchmark",
-      "research_experiments_fleet_003_multi_stage_stage_execution_flow",
-      "research_experiments_fleet_003_telemetry_findings",
-      "research_experiments_gpu_ram_architecture_spec",
-      "research_experiments_gpu_ram_architecture_spec_1_executive_summary_problem_formulation",
-      "research_experiments_gpu_ram_architecture_spec_2_core_architectural_bottlenecks_identified",
-      "research_experiments_gpu_ram_architecture_spec_3_grounding_on_latest_open_source_predecessors",
-      "research_experiments_gpu_ram_architecture_spec_4_semiconductor_economics_dispelling_the_electronics_nightmare",
-      "research_experiments_gpu_ram_architecture_spec_5_incremental_upgrade_methodology_v_1_rightarrow_v_2_rightarrow_paradigm_shift",
-      "research_experiments_gpu_ram_architecture_spec_6_the_stay_saner_for_longer_execution_model",
-      "research_experiments_gpu_ram_architecture_spec_research_log_gpu_ram_architecture_beyond_gatekept_status_quo",
-      "research_experiments_gpu_ram_architecture_spec_the_abstraction_principle",
-      "research_experiments_gpu_ram_architecture_spec_the_capital_cost_matrix",
-      "research_experiments_gpu_ram_architecture_spec_the_central_question",
-      "research_experiments_inv_bmk_001",
-      "research_experiments_inv_bmk_001_1_executive_summary_objective",
-      "research_experiments_inv_bmk_001_2_1_inductive_invariant_property",
-      "research_experiments_inv_bmk_001_2_2_replay_ground_truth_invariant",
-      "research_experiments_inv_bmk_001_2_formal_architecture_mathematical_formulation",
-      "research_experiments_inv_bmk_001_3_benchmark_testbed_composition",
-      "research_experiments_inv_bmk_001_4_empirical_evaluation_results",
-      "research_experiments_inv_bmk_001_5_falsification_key_findings",
-      "research_experiments_inv_bmk_001_6_epistemic_certification",
-      "research_experiments_inv_bmk_001_research_experiment_inv_bmk_001_headless_invariant_assurance_sandbox_replay_benchmark"
-    ],
-    "6": [
       "ref_architectural_review_session",
       "ref_cohort_1_quest_lead_eligible",
       "ref_compute_guidance_kaggle_gpu",
@@ -628,7 +586,7 @@
       "research_fellows_merit_ledger_xp_tiers_high_distinction",
       "research_fellows_merit_ledger_xp_tiers_pass"
     ],
-    "7": [
+    "6": [
       "research_references_beie_complete_syllabus_i_to_iv_2_ct_551_discrete_structure",
       "research_references_beie_complete_syllabus_i_to_iv_2_ct_610_ct_652_database_management_systems",
       "research_references_beie_complete_syllabus_i_to_iv_2_ct_710_ct_653_artificial_intelligence",
@@ -665,6 +623,42 @@
       "research_references_beie_complete_syllabus_i_to_iv_6_sh_553_numerical_methods",
       "research_references_beie_complete_syllabus_i_to_iv_7_ex_707_project_part_a",
       "research_references_beie_complete_syllabus_i_to_iv_references"
+    ],
+    "7": [
+      "ref_balance_years",
+      "ref_cycle_start_date_iso",
+      "ref_starting_mahadasha_planet",
+      "schemas_horoscope_evaluation_v1_astrological_features_properties",
+      "schemas_horoscope_evaluation_v1_balance_years_type",
+      "schemas_horoscope_evaluation_v1_birth_nakshatra_lord_type",
+      "schemas_horoscope_evaluation_v1_birth_nakshatra_type",
+      "schemas_horoscope_evaluation_v1_cancellation_rules_satisfied_items",
+      "schemas_horoscope_evaluation_v1_cancellation_rules_satisfied_type",
+      "schemas_horoscope_evaluation_v1_chandra_rashi_type",
+      "schemas_horoscope_evaluation_v1_cycle_start_date_iso_type",
+      "schemas_horoscope_evaluation_v1_is_manglik_type",
+      "schemas_horoscope_evaluation_v1_lagna_rashi_type",
+      "schemas_horoscope_evaluation_v1_manglik_dosha_properties",
+      "schemas_horoscope_evaluation_v1_manglik_dosha_type",
+      "schemas_horoscope_evaluation_v1_mars_house_type",
+      "schemas_horoscope_evaluation_v1_properties_balance_years",
+      "schemas_horoscope_evaluation_v1_properties_birth_nakshatra",
+      "schemas_horoscope_evaluation_v1_properties_birth_nakshatra_lord",
+      "schemas_horoscope_evaluation_v1_properties_cancellation_rules_satisfied",
+      "schemas_horoscope_evaluation_v1_properties_chandra_rashi",
+      "schemas_horoscope_evaluation_v1_properties_cycle_start_date_iso",
+      "schemas_horoscope_evaluation_v1_properties_is_manglik",
+      "schemas_horoscope_evaluation_v1_properties_lagna_rashi",
+      "schemas_horoscope_evaluation_v1_properties_manglik_dosha",
+      "schemas_horoscope_evaluation_v1_properties_mars_house",
+      "schemas_horoscope_evaluation_v1_properties_starting_mahadasha_planet",
+      "schemas_horoscope_evaluation_v1_properties_surya_rashi",
+      "schemas_horoscope_evaluation_v1_properties_vimshottari_dasha_at_birth",
+      "schemas_horoscope_evaluation_v1_starting_mahadasha_planet_type",
+      "schemas_horoscope_evaluation_v1_surya_rashi_type",
+      "schemas_horoscope_evaluation_v1_vimshottari_dasha_at_birth_properties",
+      "schemas_horoscope_evaluation_v1_vimshottari_dasha_at_birth_required",
+      "schemas_horoscope_evaluation_v1_vimshottari_dasha_at_birth_type"
     ],
     "8": [
       "sim_nepal_law_harvester",
@@ -822,36 +816,6 @@
       "scripts_generate_all_portfolio_hero_images_render_terminal_card"
     ],
     "13": [
-      "ref_evidence_tier",
-      "ref_metric",
-      "ref_scope",
-      "ref_value",
-      "schemas_ecosystem_verification_schema_claim_additionalproperties",
-      "schemas_ecosystem_verification_schema_claim_properties",
-      "schemas_ecosystem_verification_schema_claim_required",
-      "schemas_ecosystem_verification_schema_claim_type",
-      "schemas_ecosystem_verification_schema_defs_claim",
-      "schemas_ecosystem_verification_schema_evidence_tier_enum",
-      "schemas_ecosystem_verification_schema_evidence_tier_type",
-      "schemas_ecosystem_verification_schema_json_ref_e0",
-      "schemas_ecosystem_verification_schema_json_ref_e1",
-      "schemas_ecosystem_verification_schema_json_ref_e2",
-      "schemas_ecosystem_verification_schema_json_ref_e3",
-      "schemas_ecosystem_verification_schema_json_ref_e4",
-      "schemas_ecosystem_verification_schema_json_ref_e5",
-      "schemas_ecosystem_verification_schema_limitations_minlength",
-      "schemas_ecosystem_verification_schema_limitations_type",
-      "schemas_ecosystem_verification_schema_metric_minlength",
-      "schemas_ecosystem_verification_schema_metric_type",
-      "schemas_ecosystem_verification_schema_properties_evidence_tier",
-      "schemas_ecosystem_verification_schema_properties_limitations",
-      "schemas_ecosystem_verification_schema_properties_metric",
-      "schemas_ecosystem_verification_schema_properties_scope",
-      "schemas_ecosystem_verification_schema_properties_value",
-      "schemas_ecosystem_verification_schema_scope_minlength",
-      "schemas_ecosystem_verification_schema_scope_type"
-    ],
-    "14": [
       "schemas_examples_birth_registration_ward_civic",
       "schemas_examples_birth_registration_ward_civic_canonical_name_en",
       "schemas_examples_birth_registration_ward_civic_canonical_name_ne",
@@ -881,7 +845,7 @@
       "schemas_examples_birth_registration_ward_civic_statutory_sla_max_duration_value",
       "schemas_examples_birth_registration_ward_civic_statutory_sla_sla_display_ne"
     ],
-    "15": [
+    "14": [
       "tools_skills_graphify_skill",
       "tools_skills_graphify_skill_for_graphify_add_and_watch",
       "tools_skills_graphify_skill_for_graphify_query",
@@ -910,7 +874,7 @@
       "tools_skills_graphify_skill_what_graphify_is_for",
       "tools_skills_graphify_skill_what_you_must_do_when_invoked"
     ],
-    "16": [
+    "15": [
       "research_notebooklm_ecosystem_sources_03_repository_inventory_and_present_state",
       "research_notebooklm_ecosystem_sources_03_repository_inventory_and_present_state_10_md2pdf_desktop_md2pdf_desktop_fastmcp_server",
       "research_notebooklm_ecosystem_sources_03_repository_inventory_and_present_state_11_yt_dlp_live_yt_dlp_live_capture_dsp_cluster",
@@ -938,7 +902,7 @@
       "research_notebooklm_ecosystem_sources_03_repository_inventory_and_present_state_9_screen_qa_extension_screen_q_a_extension",
       "research_notebooklm_ecosystem_sources_03_repository_inventory_and_present_state_document_3_repository_technical_inventory_present_state"
     ],
-    "17": [
+    "16": [
       "tools_skills_graphify_code_search_scripts_find_implementation",
       "tools_skills_graphify_code_search_scripts_find_implementation_extract_code_snippet",
       "tools_skills_graphify_code_search_scripts_find_implementation_find_graph_path",
@@ -966,7 +930,7 @@
       "tools_skills_graphify_code_search_scripts_find_implementation_style",
       "tools_skills_graphify_code_search_scripts_find_implementation_style_disable"
     ],
-    "18": [
+    "17": [
       "enum",
       "sim_invariant_engine_benchmark_runner",
       "sim_invariant_engine_benchmark_runner_build_benchmark_testbed",
@@ -993,7 +957,7 @@
       "sim_test_invariant_engine_rationale_1",
       "str"
     ],
-    "19": [
+    "18": [
       "sim_invariant_engine_state_machine_basestatemachine_get_initial_constraint",
       "sim_invariant_engine_state_machine_basestatemachine_get_transition_relation",
       "sim_invariant_engine_state_machine_cxlmemoryallocatormachine",
@@ -1020,7 +984,7 @@
       "sim_invariant_engine_state_machine_workersessionruntimemachine_init",
       "sim_invariant_engine_state_machine_workersessionruntimemachine_step"
     ],
-    "20": [
+    "19": [
       "schemas_ecosystem_registry",
       "schemas_ecosystem_registry_entity_classes_ecosystem_modules",
       "schemas_ecosystem_registry_entity_classes_in_tree_research_engines",
@@ -1046,31 +1010,31 @@
       "schemas_ecosystem_registry_statistics_total_tool_modules",
       "schemas_ecosystem_registry_version"
     ],
-    "21": [
-      "report_economic_model",
-      "report_economic_model_1_executive_summary_epistemic_correction",
-      "report_economic_model_2_1_pillar_1_productive_capital_expenditure_capex",
-      "report_economic_model_2_2_pillar_2_productive_operating_expenditure_opex",
-      "report_economic_model_2_3_pillar_3_academic_tuition_cost_of_living_separated_baseline",
-      "report_economic_model_2_4_pillar_4_human_capital_engineering_labor_invested",
-      "report_economic_model_2_5_pillar_5_estimated_replacement_equivalent_labor_cost",
-      "report_economic_model_2_five_pillar_financial_capital_decomposition",
-      "report_economic_model_3_1_replacement_cost_to_direct_cash_spend_ratio_rho_text_cash",
-      "report_economic_model_3_2_direct_ai_spend_as_a_fraction_of_replacement_base_phi_text_ai",
-      "report_economic_model_3_3_google_family_theoretical_retail_cost_avoidance_multiplier_m_text_retail",
-      "report_economic_model_3_defensible_financial_operational_metrics",
-      "report_economic_model_4_vectorized_r_d_resource_consumption",
-      "report_economic_model_5_1_discovery_cost_efficiency_e_text_discovery",
-      "report_economic_model_5_2_human_intervention_ratio_i_text_human",
-      "report_economic_model_5_3_the_funnel_pruning_pipeline_invariant_tracking",
-      "report_economic_model_5_economic_research_direction_discovery_efficiency_funnel_pruning",
-      "report_economic_model_6_1_integration_cost_net_capability_value",
-      "report_economic_model_6_2_measuring_emergent_synergy",
-      "report_economic_model_6_integration_cost_synergy_measurement_models",
-      "report_economic_model_defensible_economic_accounting_r_d_resource_allocation_model",
-      "report_economic_model_task_comparison_example"
+    "20": [
+      "readme",
+      "research_fellows_readme",
+      "research_fellows_readme_brainstorm_research_laboratory_fellows_contributors_directory",
+      "research_fellows_readme_contributor_ranks_progression",
+      "research_fellows_readme_onboarding_procedure",
+      "research_fellows_template",
+      "research_plans_brl_c0_how_it_works",
+      "research_plans_brl_c0_overview",
+      "research_plans_brl_contributor_agreement",
+      "research_plans_brl_quest_0_dry_run",
+      "research_plans_brl_support_and_sponsorship",
+      "research_plans_brl_support_and_sponsorship_1_purpose",
+      "research_plans_brl_support_and_sponsorship_2_general_brl_support",
+      "research_plans_brl_support_and_sponsorship_3_research_or_program_sponsorship",
+      "research_plans_brl_support_and_sponsorship_4_individual_led_project_sponsorship",
+      "research_plans_brl_support_and_sponsorship_5_sponsor_independence",
+      "research_plans_brl_support_and_sponsorship_6_contributor_participation",
+      "research_plans_brl_support_and_sponsorship_7_transparency_and_attribution",
+      "research_plans_brl_support_and_sponsorship_8_financial_and_legal_handling",
+      "research_plans_brl_support_and_sponsorship_9_separation_from_merit",
+      "research_plans_brl_support_and_sponsorship_brainstorm_research_laboratory_support_sponsorship_framework",
+      "research_plans_plan_brl_001_brainstorm_research_lab_charter"
     ],
-    "22": [
+    "21": [
       "research_experiments_bmk_memory_001",
       "research_experiments_bmk_memory_001_1_1_objective",
       "research_experiments_bmk_memory_001_1_2_core_hypothesis_hyp_mem_001",
@@ -1094,7 +1058,7 @@
       "research_experiments_bmk_memory_001_research_benchmark_bmk_memory_001_memory_stratification_graph_density",
       "research_experiments_bmk_memory_001_summary_performance_table"
     ],
-    "23": [
+    "22": [
       "research_notes_2026_10_01_jetson_orin_nano_setup_and_provisioning_runbook",
       "research_notes_2026_10_01_jetson_orin_nano_setup_and_provisioning_runbook_1_1_physical_port_jumper_layout",
       "research_notes_2026_10_01_jetson_orin_nano_setup_and_provisioning_runbook_1_verified_physical_hardware_inventory_inspected_confirmed",
@@ -1117,6 +1081,30 @@
       "research_notes_2026_10_01_jetson_orin_nano_setup_and_provisioning_runbook_8_visual_evidence_hardware_documentation_gallery",
       "research_notes_2026_10_01_jetson_orin_nano_setup_and_provisioning_runbook_9_benchmark_telemetry_ground_truth",
       "research_notes_2026_10_01_jetson_orin_nano_setup_and_provisioning_runbook_jetson_orin_nano_setup_provisioning_optimization_runbook"
+    ],
+    "23": [
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report",
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_1_executive_summary_hardware_inventory",
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_1_via_command_line_powershell_terminal",
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_2_system_specifications_firmware_baseline",
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_2_via_vs_code_recommended_for_development",
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_3_network_access_remote_connection_coordinates",
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_4_operational_best_practices_for_makerspace_members",
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_5_1_python_virtual_environments_pep_668_compliant",
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_5_2_gpu_accelerated_docker_containers",
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_5_3_local_edge_llm_slm_inference_ollama",
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_5_4_40_pin_expansion_header_gpio_safety",
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_5_developer_quickstart_guide_ai_vision_robotics",
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_6_visual_verification_photographic_evidence",
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_7_emergency_support_contact",
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_how_to_connect_remotely",
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_kec_makerspace_nvidia_jetson_orin_nano_developer_kit_8gb",
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_network_coordinates",
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_official_hardware_handover_provisioning_report_developer_guide",
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_physical_inventory_table",
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_rule_1_clean_shutdowns_only_critical",
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_rule_2_8gb_unified_memory_management_swapfile_protection",
+      "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_rule_3_real_time_hardware_thermal_monitoring_jtop"
     ],
     "24": [
       "abc",
@@ -1165,6 +1153,52 @@
       "schemas_examples_google_classroom_mcp_contract_version"
     ],
     "26": [
+      "report_economic_model_1_executive_summary_epistemic_correction",
+      "report_economic_model_2_1_pillar_1_productive_capital_expenditure_capex",
+      "report_economic_model_2_2_pillar_2_productive_operating_expenditure_opex",
+      "report_economic_model_2_3_pillar_3_academic_tuition_cost_of_living_separated_baseline",
+      "report_economic_model_2_4_pillar_4_human_capital_engineering_labor_invested",
+      "report_economic_model_2_5_pillar_5_estimated_replacement_equivalent_labor_cost",
+      "report_economic_model_2_five_pillar_financial_capital_decomposition",
+      "report_economic_model_3_1_replacement_cost_to_direct_cash_spend_ratio_rho_text_cash",
+      "report_economic_model_3_2_direct_ai_spend_as_a_fraction_of_replacement_base_phi_text_ai",
+      "report_economic_model_3_3_google_family_theoretical_retail_cost_avoidance_multiplier_m_text_retail",
+      "report_economic_model_3_defensible_financial_operational_metrics",
+      "report_economic_model_4_vectorized_r_d_resource_consumption",
+      "report_economic_model_5_1_discovery_cost_efficiency_e_text_discovery",
+      "report_economic_model_5_2_human_intervention_ratio_i_text_human",
+      "report_economic_model_5_3_the_funnel_pruning_pipeline_invariant_tracking",
+      "report_economic_model_5_economic_research_direction_discovery_efficiency_funnel_pruning",
+      "report_economic_model_6_1_integration_cost_net_capability_value",
+      "report_economic_model_6_2_measuring_emergent_synergy",
+      "report_economic_model_6_integration_cost_synergy_measurement_models",
+      "report_economic_model_defensible_economic_accounting_r_d_resource_allocation_model",
+      "report_economic_model_task_comparison_example"
+    ],
+    "27": [
+      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan",
+      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_1_executive_summary",
+      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_2_1_the_engineering_bottleneck",
+      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_2_2_why_aec_is_the_perfect_beachhead",
+      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_2_market_opportunity_problem_statement",
+      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_3_1_live_repository_fleet_100_passing_tests",
+      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_3_product_architecture_fleet_inventory",
+      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_4_the_4_universal_engineering_driver_patterns",
+      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_5_1_pricing_strategy_packages",
+      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_5_2_payment_rails_architecture",
+      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_5_monetization_pricing_payment_rails",
+      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_6_zero_server_licensing_engine",
+      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_7_1_nepal_specialized_engineering_verticals",
+      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_7_multi_disciplinary_expansion_roadmap_eng_mcp",
+      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_8_strategic_execution_milestones",
+      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_9_1_the_problem",
+      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_9_2_the_technical_decoupling_why_mcp_still_works",
+      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_9_3_the_strategic_technical_resolution",
+      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_9_developing_market_software_licensing_realities_air_gapped_workarounds",
+      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_arch_plan_001_commercial_business_plan_technical_roadmap",
+      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_universal_engineering_protocol_aec_mcp_multi_disciplinary_engineering_fleet"
+    ],
+    "28": [
       "research_architectures_arch_spec_006_fusion360_universal_mcp_bridge",
       "research_architectures_arch_spec_006_fusion360_universal_mcp_bridge_1_executive_summary_problem_context",
       "research_architectures_arch_spec_006_fusion360_universal_mcp_bridge_2_1_inv_fus_001_main_thread_single_ownership_lock",
@@ -1187,7 +1221,7 @@
       "research_experiments_exp_fusion360_mcp_001_6_artifact_provenance",
       "research_experiments_exp_fusion360_mcp_001_research_experiment_exp_fusion360_mcp_001_empirical_verification_of_universal_cad_actuation_via_mcp"
     ],
-    "27": [
+    "29": [
       "research_plans_plan_brl_001_brainstorm_research_lab_charter_10_operational_infrastructure_master_artifact_index",
       "research_plans_plan_brl_001_brainstorm_research_lab_charter_1_executive_summary_paradigm_shift",
       "research_plans_plan_brl_001_brainstorm_research_lab_charter_2_institutional_positioning_operational_substrates",
@@ -1210,7 +1244,7 @@
       "research_plans_plan_brl_001_brainstorm_research_lab_charter_the_core_problem_the_internship_illusion",
       "research_plans_plan_brl_001_brainstorm_research_lab_charter_the_paradigm_shift"
     ],
-    "28": [
+    "30": [
       "research_plans_plan_nisr_001_program_charter_1_program_mission_paradigm_shift",
       "research_plans_plan_nisr_001_program_charter_2_decoupling_from_spark_academic_vs_research_lab",
       "research_plans_plan_nisr_001_program_charter_3_the_6_emergent_contribution_tracks",
@@ -1233,30 +1267,7 @@
       "research_plans_plan_nisr_001_program_charter_track_nisr_005_sovereign_provenance_cryptographic_lineage",
       "research_plans_plan_nisr_001_program_charter_track_nisr_006_legal_knowledge_graph_temporal_reasoning"
     ],
-    "29": [
-      "research_references_beie_complete_syllabus_i_to_iv_1_telecommunication_ex_703",
-      "research_references_beie_complete_syllabus_i_to_iv_2_engineering_professional_practice_ce_752",
-      "research_references_beie_complete_syllabus_i_to_iv_4_information_systems_ct_751",
-      "research_references_beie_complete_syllabus_i_to_iv_5a_agile_software_development_ct_765_02",
-      "research_references_beie_complete_syllabus_i_to_iv_5b_networking_with_ipv6_ct_765_03",
-      "research_references_beie_complete_syllabus_i_to_iv_5c_advanced_computer_architecture_ct_765_04",
-      "research_references_beie_complete_syllabus_i_to_iv_5e_big_data_technologies_ct_765_07",
-      "research_references_beie_complete_syllabus_i_to_iv_6b_broadcast_engineering_ex_765_03",
-      "research_references_beie_complete_syllabus_i_to_iv_6c_database_management_systems_ex_765_06",
-      "research_references_beie_complete_syllabus_i_to_iv_6d_multimedia_system_ct_785_03",
-      "research_references_beie_complete_syllabus_i_to_iv_6e_enterprise_application_design_and_development_ct_785_04",
-      "research_references_beie_complete_syllabus_i_to_iv_6f_geographical_information_system_ct_785_07",
-      "research_references_beie_complete_syllabus_i_to_iv_6g_power_electronics_ee_785_07",
-      "research_references_beie_complete_syllabus_i_to_iv_6h_remote_sensing_ct_785_01",
-      "research_references_beie_complete_syllabus_i_to_iv_6i_xml_foundations_techniques_and_applications_ct_785_05",
-      "research_references_beie_complete_syllabus_i_to_iv_6j_artificial_intelligence_ct_785_06",
-      "research_references_beie_complete_syllabus_i_to_iv_6k_speech_processing_ct_785_08",
-      "research_references_beie_complete_syllabus_i_to_iv_course_objective",
-      "research_references_beie_complete_syllabus_i_to_iv_course_objectives",
-      "research_references_beie_complete_syllabus_i_to_iv_practical",
-      "research_references_beie_complete_syllabus_i_to_iv_syllabus"
-    ],
-    "30": [
+    "31": [
       "schemas_nepal_civic_service_v1_act_name_en_type",
       "schemas_nepal_civic_service_v1_act_name_ne_type",
       "schemas_nepal_civic_service_v1_digital_verification_available_type",
@@ -1279,7 +1290,7 @@
       "schemas_nepal_civic_service_v1_properties_section_clause",
       "schemas_nepal_civic_service_v1_section_clause_type"
     ],
-    "31": [
+    "32": [
       "tools_skills_github_workflow_examples_templates",
       "tools_skills_github_workflow_examples_templates_1_feature_refactor_issue_template",
       "tools_skills_github_workflow_examples_templates_2_bug_fix_issue_template",
@@ -1302,7 +1313,29 @@
       "tools_skills_github_workflow_skill_step_7_open_pull_request_request_review",
       "tools_skills_github_workflow_skill_step_8_post_pr_iteration_branch_cleanup"
     ],
-    "32": [
+    "33": [
+      "aaradhya_master_v165",
+      "research_notes_2026_09_27_biasaperture_research_dossier",
+      "research_notes_2026_09_27_biasaperture_research_dossier_1_executive_summary_authorship",
+      "research_notes_2026_09_27_biasaperture_research_dossier_2_milestone_architecture_github_project_anchoring_2026_10_01",
+      "research_notes_2026_09_27_biasaperture_research_dossier_3_modularity_single_responsibility_architecture_refactor_issue_32_pr_33",
+      "research_notes_2026_09_27_biasaperture_research_dossier_4_collaborative_peer_review_git_governance_protocol",
+      "research_notes_2026_09_27_biasaperture_research_dossier_5_core_architectural_methodological_pillars",
+      "research_notes_2026_09_27_biasaperture_research_dossier_i_the_core_four_disparity_metrics",
+      "research_notes_2026_09_27_biasaperture_research_dossier_ii_dual_harmonization_engine_fairlearn_aif360",
+      "research_notes_2026_09_27_biasaperture_research_dossier_iii_statistical_rigour_guardrails",
+      "research_notes_2026_09_27_biasaperture_research_dossier_iv_non_negotiable_diagnostic_scope_invariants",
+      "research_notes_2026_09_27_biasaperture_research_dossier_research_note_biasaperture_diagnostic_fairness_bias_audit_platform",
+      "research_notes_2026_09_27_biasaperture_research_dossier_v_regulatory_compliance_mapping",
+      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry",
+      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_1_executive_summary",
+      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_2_personal_ecosystem_core_workspaces",
+      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_3_project_specific_workspaces_biasaperture_fuse_ai_fellowship",
+      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_4_mcp_super_nlm_tooling_integration",
+      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_5_privacy_repository_boundaries",
+      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_research_note_gemini_notebooklm_knowledge_base_registry"
+    ],
+    "34": [
       "ref_pilot_cli",
       "schemas_examples_github_pilot_contract",
       "schemas_examples_github_pilot_contract_capabilities",
@@ -1324,7 +1357,7 @@
       "schemas_examples_github_pilot_contract_tracking_branch",
       "schemas_examples_github_pilot_contract_version"
     ],
-    "33": [
+    "35": [
       "report_limitations",
       "report_limitations_1_motivation_policy",
       "report_limitations_2_10_main_thread_synchronization_boundary_in_cad_actuation",
@@ -1346,7 +1379,29 @@
       "report_limitations_2_core_architectural_systemic_limitations",
       "report_limitations_known_limitations_failure_modes_epistemic_risks"
     ],
-    "34": [
+    "36": [
+      "report_reconciliation_2026_09_19",
+      "report_reconciliation_2026_09_19_1_executive_summary",
+      "report_reconciliation_2026_09_19_2_granular_reconciliation_matrix",
+      "report_reconciliation_2026_09_19_3_epistemic_certification",
+      "report_reconciliation_2026_09_19_comprehensive_multi_model_ecosystem_reconciliation_report_2026_09_19",
+      "research_experiments_fleet_001",
+      "research_experiments_fleet_001_experiment_log_fleet_001_single_task_interruption_state_migration_benchmark",
+      "research_experiments_fleet_001_metrics_logged",
+      "research_experiments_fleet_001_task_specification",
+      "research_experiments_fleet_001_verification_checklist",
+      "research_invariants_inv_wsr_002",
+      "research_invariants_inv_wsr_002_1_1_invariant_a_closed_loop_worker_dispatch_no_orphaned_leases",
+      "research_invariants_inv_wsr_002_1_2_invariant_b_strict_separation_of_real_execution_and_simulation",
+      "research_invariants_inv_wsr_002_1_3_invariant_c_telemetry_truthfulness_quota_headroom",
+      "research_invariants_inv_wsr_002_1_4_invariant_d_atomic_checkpoint_dag_advancement",
+      "research_invariants_inv_wsr_002_1_5_invariant_e_qa_authority_claim_token_isolation_for_state_transitions",
+      "research_invariants_inv_wsr_002_1_the_core_invariant_statements",
+      "research_invariants_inv_wsr_002_2_mathematical_formalization",
+      "research_invariants_inv_wsr_002_3_verification_compliance_gate",
+      "research_invariants_inv_wsr_002_architectural_invariant_inv_wsr_002_worker_protocol_completeness_truthful_telemetry"
+    ],
+    "37": [
       "request",
       "scripts_sync_drive",
       "scripts_sync_drive_create_drive_file",
@@ -1368,29 +1423,7 @@
       "scripts_sync_drive_sync_notebooklm_sources",
       "scripts_sync_drive_update_drive_file"
     ],
-    "35": [
-      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_1_executive_summary",
-      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_2_1_the_engineering_bottleneck",
-      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_2_2_why_aec_is_the_perfect_beachhead",
-      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_2_market_opportunity_problem_statement",
-      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_3_1_live_repository_fleet_100_passing_tests",
-      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_3_product_architecture_fleet_inventory",
-      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_4_the_4_universal_engineering_driver_patterns",
-      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_5_1_pricing_strategy_packages",
-      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_5_2_payment_rails_architecture",
-      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_5_monetization_pricing_payment_rails",
-      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_6_zero_server_licensing_engine",
-      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_7_1_nepal_specialized_engineering_verticals",
-      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_7_multi_disciplinary_expansion_roadmap_eng_mcp",
-      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_8_strategic_execution_milestones",
-      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_9_1_the_problem",
-      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_9_2_the_technical_decoupling_why_mcp_still_works",
-      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_9_3_the_strategic_technical_resolution",
-      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_9_developing_market_software_licensing_realities_air_gapped_workarounds",
-      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_arch_plan_001_commercial_business_plan_technical_roadmap",
-      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_universal_engineering_protocol_aec_mcp_multi_disciplinary_engineering_fleet"
-    ],
-    "36": [
+    "38": [
       "research_daily_2026_09_23",
       "research_daily_2026_09_23_1_schedule_priorities",
       "research_daily_2026_09_23_2026_09_23_daily_log",
@@ -1412,7 +1445,7 @@
       "research_experiments_exp_localsend_mcp_001_6_provenance_reproduction",
       "research_experiments_exp_localsend_mcp_001_research_experiment_exp_localsend_mcp_001_live_empirical_verification_of_the_localsend_mcp_server"
     ],
-    "37": [
+    "39": [
       "research_plans_plan_horo_001_deterministic_horoscope_evaluation_model",
       "research_plans_plan_horo_001_deterministic_horoscope_evaluation_model_1_executive_summary_problem_formulation",
       "research_plans_plan_horo_001_deterministic_horoscope_evaluation_model_2_system_architecture_layer_decomposition",
@@ -1434,7 +1467,29 @@
       "research_plans_plan_horo_001_deterministic_horoscope_evaluation_model_tranche_c_synthetic_geographic_temporal_perturbation_grids",
       "research_plans_plan_horo_001_deterministic_horoscope_evaluation_model_tranche_d_llm_generation_corpus_candidate_models_mathbf_hat_y"
     ],
-    "38": [
+    "40": [
+      "research_references_beie_complete_syllabus_i_to_iv_1_telecommunication_ex_703",
+      "research_references_beie_complete_syllabus_i_to_iv_2_engineering_professional_practice_ce_752",
+      "research_references_beie_complete_syllabus_i_to_iv_5a_agile_software_development_ct_765_02",
+      "research_references_beie_complete_syllabus_i_to_iv_5b_networking_with_ipv6_ct_765_03",
+      "research_references_beie_complete_syllabus_i_to_iv_5c_advanced_computer_architecture_ct_765_04",
+      "research_references_beie_complete_syllabus_i_to_iv_5e_big_data_technologies_ct_765_07",
+      "research_references_beie_complete_syllabus_i_to_iv_6b_broadcast_engineering_ex_765_03",
+      "research_references_beie_complete_syllabus_i_to_iv_6c_database_management_systems_ex_765_06",
+      "research_references_beie_complete_syllabus_i_to_iv_6d_multimedia_system_ct_785_03",
+      "research_references_beie_complete_syllabus_i_to_iv_6e_enterprise_application_design_and_development_ct_785_04",
+      "research_references_beie_complete_syllabus_i_to_iv_6f_geographical_information_system_ct_785_07",
+      "research_references_beie_complete_syllabus_i_to_iv_6g_power_electronics_ee_785_07",
+      "research_references_beie_complete_syllabus_i_to_iv_6h_remote_sensing_ct_785_01",
+      "research_references_beie_complete_syllabus_i_to_iv_6i_xml_foundations_techniques_and_applications_ct_785_05",
+      "research_references_beie_complete_syllabus_i_to_iv_6j_artificial_intelligence_ct_785_06",
+      "research_references_beie_complete_syllabus_i_to_iv_6k_speech_processing_ct_785_08",
+      "research_references_beie_complete_syllabus_i_to_iv_course_objective",
+      "research_references_beie_complete_syllabus_i_to_iv_course_objectives",
+      "research_references_beie_complete_syllabus_i_to_iv_practical",
+      "research_references_beie_complete_syllabus_i_to_iv_syllabus"
+    ],
+    "41": [
       "profile_1_engineering_identity",
       "profile_2_current_academic_professional_snapshot",
       "profile_3_four_tier_status_classification_technical_proficiencies",
@@ -1455,28 +1510,7 @@
       "profile_project_5_super_nlm_hub",
       "profile_project_6_gcsbr_gesture_controlled_self_balancing_robot"
     ],
-    "39": [
-      "readme",
-      "research_fellows_readme",
-      "research_fellows_template",
-      "research_plans_brl_c0_how_it_works",
-      "research_plans_brl_c0_overview",
-      "research_plans_brl_contributor_agreement",
-      "research_plans_brl_quest_0_dry_run",
-      "research_plans_brl_support_and_sponsorship",
-      "research_plans_brl_support_and_sponsorship_1_purpose",
-      "research_plans_brl_support_and_sponsorship_2_general_brl_support",
-      "research_plans_brl_support_and_sponsorship_3_research_or_program_sponsorship",
-      "research_plans_brl_support_and_sponsorship_4_individual_led_project_sponsorship",
-      "research_plans_brl_support_and_sponsorship_5_sponsor_independence",
-      "research_plans_brl_support_and_sponsorship_6_contributor_participation",
-      "research_plans_brl_support_and_sponsorship_7_transparency_and_attribution",
-      "research_plans_brl_support_and_sponsorship_8_financial_and_legal_handling",
-      "research_plans_brl_support_and_sponsorship_9_separation_from_merit",
-      "research_plans_brl_support_and_sponsorship_brainstorm_research_laboratory_support_sponsorship_framework",
-      "research_plans_plan_brl_001_brainstorm_research_lab_charter"
-    ],
-    "40": [
+    "42": [
       "ref_hours",
       "ref_max_duration_unit",
       "ref_max_duration_value",
@@ -1497,7 +1531,7 @@
       "schemas_nepal_civic_service_v1_statutory_sla_required",
       "schemas_nepal_civic_service_v1_statutory_sla_type"
     ],
-    "41": [
+    "43": [
       "ref_nepali_ocr_ai_mcp_server",
       "schemas_examples_nepali_ocr_ai_contract",
       "schemas_examples_nepali_ocr_ai_contract_capabilities",
@@ -1518,7 +1552,7 @@
       "schemas_examples_nepali_ocr_ai_contract_tracking_branch",
       "schemas_examples_nepali_ocr_ai_contract_version"
     ],
-    "42": [
+    "44": [
       "ref_solver_mcp_server",
       "schemas_examples_ai_constraint_solver_contract",
       "schemas_examples_ai_constraint_solver_contract_capabilities",
@@ -1539,7 +1573,7 @@
       "schemas_examples_ai_constraint_solver_contract_tracking_branch",
       "schemas_examples_ai_constraint_solver_contract_version"
     ],
-    "43": [
+    "45": [
       "report_quantitative_claims_audit",
       "report_quantitative_claims_audit_10_central_technical_asset_replacement_valuation",
       "report_quantitative_claims_audit_11_compose_001_cross_document_synthesis_to_latex_pdf",
@@ -1560,7 +1594,7 @@
       "report_quantitative_claims_audit_9_reading_speed_cadence_rsvp_reader",
       "report_quantitative_claims_audit_quantitative_claims_audit_empirical_methodology_registry"
     ],
-    "44": [
+    "46": [
       "research_notes_2026_09_19_agentic_ai_industry_ayush_shah_1_executive_summary",
       "research_notes_2026_09_19_agentic_ai_industry_ayush_shah_2026_09_19_guest_lecture_agentic_ai_in_industry_ayush_kumar_shah_meta",
       "research_notes_2026_09_19_agentic_ai_industry_ayush_shah_2_key_frameworks_architecture_covered",
@@ -1581,7 +1615,7 @@
       "research_notes_2026_09_19_agentic_ai_industry_ayush_shah_k_pre_release_risk_scoring_bounded_triage_agents_slides_61_63",
       "research_notes_2026_09_19_agentic_ai_industry_ayush_shah_l_karpathy_s_autoresearch_experiment_loop_slides_65_67"
     ],
-    "45": [
+    "47": [
       "research_notes_2026_09_27_localsend_direct_p2p_airdrop_parity_plan",
       "research_notes_2026_09_27_localsend_direct_p2p_airdrop_parity_plan_1_problem_statement_motivation",
       "research_notes_2026_09_27_localsend_direct_p2p_airdrop_parity_plan_2_1_scope_decision_excluding_apple_ios_native_awdl",
@@ -1602,7 +1636,7 @@
       "research_plans_plan_p2p_001_offline_direct_transport_engine_5_epistemic_governance_invariant_rules",
       "research_plans_plan_p2p_001_offline_direct_transport_engine_research_plan_zero_router_direct_transport_engine_airdrop_quick_share_parity"
     ],
-    "46": [
+    "48": [
       "research_plans_plan_nep_data_001_sovereign_knowledge_graph_and_idbfs_ingestion_10_1_canonical_markdown_specification",
       "research_plans_plan_nep_data_001_sovereign_knowledge_graph_and_idbfs_ingestion_10_2_relational_fts_database_extensions",
       "research_plans_plan_nep_data_001_sovereign_knowledge_graph_and_idbfs_ingestion_10_3_bidirectional_synchronization_engine_md_longleftrightarrow_db",
@@ -1623,28 +1657,7 @@
       "research_plans_plan_nep_data_001_sovereign_knowledge_graph_and_idbfs_ingestion_research_product_plan_nepal_sovereign_knowledge_graph_idbfs_ingestion_engine",
       "research_plans_plan_nep_data_001_sovereign_knowledge_graph_and_idbfs_ingestion_the_google_colab_closed_loop_training_loop"
     ],
-    "47": [
-      "research_references_beie_complete_syllabus_i_to_iv_10_java_beans_components_6_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_11_miscellaneous_4_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_1_introduction_2_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_2_data_preprocessing_6_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_2_gui_programming_and_components_4_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_3_applets_and_application_deployment_4_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_3_classification_12_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_4_association_analysis_10_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_4_streams_and_file_handling_4_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_5_cluster_analysis_9_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_5_xml_programming_3_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_6_1_ct_725_01_advanced_java_programming",
-      "research_references_beie_complete_syllabus_i_to_iv_6_2_ct_725_02_data_mining",
-      "research_references_beie_complete_syllabus_i_to_iv_6_anomaly_fraud_detection_3_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_6_network_programming_4_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_7_advanced_applications_3_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_7_database_programming_6_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_8_distributed_objects_4_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_9_advanced_swing_and_advanced_awt_5_hours"
-    ],
-    "48": [
+    "49": [
       "sim_nepal_law_harvester_atomic_write_file",
       "sim_nepal_law_harvester_legalchronology",
       "sim_nepal_law_harvester_legalchronology_from_single_date",
@@ -1665,7 +1678,7 @@
       "sim_test_nepal_law_harvester_nepallawharvestertests_test_idbfs_task_lifecycle_and_reclamation",
       "sim_test_nepal_law_harvester_nepallawharvestertests_test_multidimensional_chronology_and_entity_graph"
     ],
-    "49": [
+    "50": [
       "github_pull_request_template",
       "github_pull_request_template_deliverable_summary",
       "github_pull_request_template_quest_contributor_information",
@@ -1685,7 +1698,7 @@
       "research_notebooklm_ecosystem_sources_07_brl_fellowship_and_cohort_onboarding_q_what_happens_if_i_fail_an_audit_check",
       "research_notebooklm_ecosystem_sources_07_brl_fellowship_and_cohort_onboarding_q_what_tools_can_i_share_or_redistribute"
     ],
-    "50": [
+    "51": [
       "ref_f_aaradhya_dev_tamrakar_utility_mcps_localsend_mcp_dist_index_js",
       "schemas_examples_localsend_mcp_contract",
       "schemas_examples_localsend_mcp_contract_capabilities",
@@ -1705,7 +1718,7 @@
       "schemas_examples_localsend_mcp_contract_tracking_branch",
       "schemas_examples_localsend_mcp_contract_version"
     ],
-    "51": [
+    "52": [
       "ref_f_aaradhya_dev_tamrakar_utility_mcps_typora_mcp_dist_index_js",
       "schemas_examples_typora_mcp_contract",
       "schemas_examples_typora_mcp_contract_capabilities",
@@ -1725,7 +1738,7 @@
       "schemas_examples_typora_mcp_contract_tracking_branch",
       "schemas_examples_typora_mcp_contract_version"
     ],
-    "52": [
+    "53": [
       "ref_f_aaradhya_dev_tamrakar_utility_md2pdf_desktop_mcp_server_server_py",
       "schemas_examples_md2pdf_desktop_contract",
       "schemas_examples_md2pdf_desktop_contract_capabilities",
@@ -1745,7 +1758,7 @@
       "schemas_examples_md2pdf_desktop_contract_tracking_branch",
       "schemas_examples_md2pdf_desktop_contract_version"
     ],
-    "53": [
+    "54": [
       "report_repository_audit_2_granular_claims_audit_register",
       "report_repository_audit_item_01_hardware_interrupt_gating_microcontroller_fall_detection",
       "report_repository_audit_item_02_fall_detection_model_footprint_accuracy",
@@ -1765,7 +1778,7 @@
       "report_repository_audit_item_16_localsend_mcp_zero_cloud_device_handoff",
       "report_repository_audit_item_17_google_classroom_mcp_ingestion_hub"
     ],
-    "54": [
+    "55": [
       "research_architectures_arch_plan_002_systems_engineering_mastery_plan",
       "research_architectures_arch_plan_002_systems_engineering_mastery_plan_1_1_cognitive_profile_evaluation",
       "research_architectures_arch_plan_002_systems_engineering_mastery_plan_1_2_the_semantic_gap_strategic_risk",
@@ -1784,7 +1797,7 @@
       "research_architectures_arch_plan_002_systems_engineering_mastery_plan_track_b_real_world_relevancy_external_scale_30_allocation",
       "research_architectures_arch_plan_002_systems_engineering_mastery_plan_transitioning_from_ai_augmented_systems_architect_to_first_principles_engineering_authority"
     ],
-    "55": [
+    "56": [
       "research_decisions_dec_003_main_branch_enforcement_alignment_1_context_problem",
       "research_decisions_dec_003_main_branch_enforcement_alignment_2_decisions",
       "research_decisions_dec_003_main_branch_enforcement_alignment_3_1_pre_state_live_read_back_2026_09_21_16_16_05_45",
@@ -1803,7 +1816,7 @@
       "research_decisions_dec_003_main_branch_enforcement_alignment_mechanism",
       "research_decisions_dec_003_main_branch_enforcement_alignment_non_goals"
     ],
-    "56": [
+    "57": [
       "sim_nepal_law_harvester_circuitbreaker",
       "sim_nepal_law_harvester_circuitbreaker_can_execute",
       "sim_nepal_law_harvester_circuitbreaker_init",
@@ -1822,7 +1835,7 @@
       "sim_nepal_law_harvester_safelegalcrawler_sleep_polite",
       "sim_test_nepal_law_harvester_nepallawharvestertests_test_circuit_breaker_transitions"
     ],
-    "57": [
+    "58": [
       "tools_skills_security_guidance_skill",
       "tools_skills_security_guidance_skill_configuration",
       "tools_skills_security_guidance_skill_enabling_disabling_layers",
@@ -1841,7 +1854,7 @@
       "tools_skills_security_guidance_skill_troubleshooting",
       "tools_skills_security_guidance_skill_vulnerability_patterns_reference"
     ],
-    "58": [
+    "59": [
       "ecosystem_architectural_brainstorm_7_10_the_5_mo_operating_baseline_cognitive_worker_decoupling",
       "ecosystem_architectural_brainstorm_7_11_the_formal_experiment_protocol_inv_telemetry_specification",
       "ecosystem_architectural_brainstorm_7_12_meta_engineering_escaping_recursive_planning_via_the_three_output_rule",
@@ -1859,25 +1872,25 @@
       "ecosystem_architectural_brainstorm_the_decoupling_principle_jarvis_is_not_gemini",
       "ecosystem_architectural_brainstorm_the_prototype_inversion"
     ],
-    "59": [
-      "profile",
-      "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan",
-      "research_architectures_arch_rfc_002_multi_model_council",
-      "research_architectures_arch_rfc_003_capstone_defense_standard",
-      "research_architectures_arch_spec_001_ecie_compute_memory",
-      "research_architectures_arch_spec_002_ingestion_processing_unit",
-      "research_architectures_arch_spec_002_ingestion_processing_unit_2_ipu_system_topology_channel_decomposition",
-      "research_architectures_arch_spec_002_ingestion_processing_unit_3_high_velocity_ingress_stress_scenarios_telecom_ai_workloads",
-      "research_architectures_arch_spec_002_ingestion_processing_unit_4_hardware_realization_open_predecessors",
-      "research_architectures_arch_spec_002_ingestion_processing_unit_5_architectural_invariants_for_the_ipu",
-      "research_architectures_readme",
-      "research_daily_2026_09_19",
-      "research_experiments_exp_001_ipu_breakeven_sweep",
-      "research_invariants_inv_mem_001",
-      "research_notes_2026_09_19_agentic_ai_industry_ayush_shah",
-      "templates_daily_note"
-    ],
     "60": [
+      "ref_method",
+      "schemas_capability_contract_v1_json_ref_deterministic",
+      "schemas_ecosystem_verification_schema_command_minlength",
+      "schemas_ecosystem_verification_schema_command_type",
+      "schemas_ecosystem_verification_schema_defs_verification",
+      "schemas_ecosystem_verification_schema_deterministic_type",
+      "schemas_ecosystem_verification_schema_json_ref_status",
+      "schemas_ecosystem_verification_schema_method_minlength",
+      "schemas_ecosystem_verification_schema_method_type",
+      "schemas_ecosystem_verification_schema_properties_command",
+      "schemas_ecosystem_verification_schema_properties_deterministic",
+      "schemas_ecosystem_verification_schema_properties_method",
+      "schemas_ecosystem_verification_schema_verification_additionalproperties",
+      "schemas_ecosystem_verification_schema_verification_properties",
+      "schemas_ecosystem_verification_schema_verification_required",
+      "schemas_ecosystem_verification_schema_verification_type"
+    ],
+    "61": [
       "research_architectures_arch_spec_005_nepali_ocr_docx_engine",
       "research_architectures_arch_spec_005_nepali_ocr_docx_engine_1_executive_summary_problem_space",
       "research_architectures_arch_spec_005_nepali_ocr_docx_engine_2_system_architecture_lipikaar_ai_pipeline",
@@ -1895,7 +1908,25 @@
       "research_architectures_arch_spec_008_nepal_civic_action_graph_5_security_privacy_invariants",
       "research_architectures_arch_spec_008_nepal_civic_action_graph_arch_spec_008_nepal_civic_action_spatial_knowledge_substrate_nagarikgraph"
     ],
-    "61": [
+    "62": [
+      "research_experiments_exp_001_ipu_breakeven_sweep",
+      "research_experiments_exp_001_ipu_breakeven_sweep_1_research_questions_addressed",
+      "research_experiments_exp_001_ipu_breakeven_sweep_2_parameter_sweep_matrix",
+      "research_experiments_exp_001_ipu_breakeven_sweep_3_measured_metrics",
+      "research_experiments_exp_001_ipu_breakeven_sweep_evaluated_architectural_topologies",
+      "research_experiments_exp_001_ipu_breakeven_sweep_independent_variables",
+      "research_experiments_exp_001_ipu_breakeven_sweep_reproducible_pipeline_package",
+      "research_experiments_exp_001_ipu_breakeven_sweep_research_protocol_exp_001_ingress_boundary_reduction_break_even_parameter_sweep",
+      "sim_results_experiments_report",
+      "sim_results_experiments_report_causal_interpretation_and_limits",
+      "sim_results_experiments_report_distributional_robustness",
+      "sim_results_experiments_report_falsification_probes",
+      "sim_results_experiments_report_formal_model_and_assumptions",
+      "sim_results_experiments_report_strangler_ipu_experiment_report",
+      "sim_results_experiments_report_what_was_tested",
+      "sim_results_experiments_report_why_the_mechanism_should_help"
+    ],
+    "63": [
       "schemas_examples_fusion360_mcp_contract",
       "schemas_examples_fusion360_mcp_contract_capabilities",
       "schemas_examples_fusion360_mcp_contract_location",
@@ -1913,7 +1944,7 @@
       "schemas_examples_fusion360_mcp_contract_tracking_branch",
       "schemas_examples_fusion360_mcp_contract_version"
     ],
-    "62": [
+    "64": [
       "schemas_nepal_civic_service_v1_canonical_name_en_description",
       "schemas_nepal_civic_service_v1_canonical_name_en_type",
       "schemas_nepal_civic_service_v1_canonical_name_ne_description",
@@ -1931,7 +1962,7 @@
       "schemas_nepal_civic_service_v1_service_id_pattern",
       "schemas_nepal_civic_service_v1_service_id_type"
     ],
-    "63": [
+    "65": [
       "sync",
       "sync_confirm_remoteconfigured",
       "sync_find_stagedsecrets",
@@ -1949,7 +1980,7 @@
       "sync_write_status",
       "sync_write_success"
     ],
-    "64": [
+    "66": [
       "tools_skills_github_workflow_references_gh_cli_cheatsheet",
       "tools_skills_github_workflow_references_gh_cli_cheatsheet_1_issue_management",
       "tools_skills_github_workflow_references_gh_cli_cheatsheet_create_a_pull_request",
@@ -1967,7 +1998,7 @@
       "tools_skills_github_workflow_references_gh_cli_cheatsheet_view_inspect_issues",
       "tools_skills_github_workflow_references_gh_cli_cheatsheet_view_inspect_pull_requests"
     ],
-    "65": [
+    "67": [
       "tools_skills_graphify_code_search_skill",
       "tools_skills_graphify_code_search_skill_1_purpose_core_advantage",
       "tools_skills_graphify_code_search_skill_2_quick_command_reference",
@@ -1985,7 +2016,7 @@
       "tools_skills_graphify_code_search_skill_trace_callees_what_does_this_call",
       "tools_skills_graphify_code_search_skill_trace_callers_who_calls_this"
     ],
-    "66": [
+    "68": [
       "callable",
       "robotfileparser",
       "sim_nepal_law_harvester_crawlpolicy",
@@ -2002,24 +2033,7 @@
       "sim_nepal_law_harvester_safelegalcrawler_crawl_step",
       "sim_test_nepal_law_harvester_nepallawharvestertests_test_crawl_policy_and_robots_rules"
     ],
-    "67": [
-      "ref_claimed",
-      "ref_verified",
-      "ref_warn",
-      "schemas_ecosystem_verification_schema_command_minlength",
-      "schemas_ecosystem_verification_schema_command_type",
-      "schemas_ecosystem_verification_schema_deterministic_type",
-      "schemas_ecosystem_verification_schema_method_minlength",
-      "schemas_ecosystem_verification_schema_method_type",
-      "schemas_ecosystem_verification_schema_properties_command",
-      "schemas_ecosystem_verification_schema_properties_deterministic",
-      "schemas_ecosystem_verification_schema_properties_method",
-      "schemas_ecosystem_verification_schema_properties_status",
-      "schemas_ecosystem_verification_schema_status_enum",
-      "schemas_ecosystem_verification_schema_status_type",
-      "schemas_ecosystem_verification_schema_verification_properties"
-    ],
-    "68": [
+    "69": [
       "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture",
       "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture_1_executive_summary_objective",
       "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture_2_capture_architecture_multi_modality_engine",
@@ -2036,7 +2050,7 @@
       "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture_phase_5_portfolio_ui_integration_verification_completed_2026_10_01",
       "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture_research_plan_ecosystem_project_working_screenshot_visual_proof_capture_pipeline"
     ],
-    "69": [
+    "70": [
       "schemas_horoscope_evaluation_v1_astronomical_calculation_fidelity_description",
       "schemas_horoscope_evaluation_v1_astronomical_calculation_fidelity_type",
       "schemas_horoscope_evaluation_v1_barnum_ambiguity_index_description",
@@ -2053,7 +2067,7 @@
       "schemas_horoscope_evaluation_v1_properties_deterministic_reproducibility_rate",
       "schemas_horoscope_evaluation_v1_properties_event_timing_brier_score"
     ],
-    "70": [
+    "71": [
       "tools_doc_archiver_save_doc",
       "tools_doc_archiver_save_doc_extract_gdoc_id",
       "tools_doc_archiver_save_doc_fetch_gdoc_html",
@@ -2070,7 +2084,23 @@
       "tools_doc_archiver_save_doc_resolve_target_directory",
       "tools_doc_archiver_save_doc_slugify"
     ],
-    "71": [
+    "72": [
+      "profile",
+      "research_architectures_arch_rfc_002_multi_model_council",
+      "research_architectures_arch_rfc_003_capstone_defense_standard",
+      "research_architectures_arch_spec_001_ecie_compute_memory",
+      "research_architectures_arch_spec_002_ingestion_processing_unit",
+      "research_architectures_arch_spec_002_ingestion_processing_unit_2_ipu_system_topology_channel_decomposition",
+      "research_architectures_arch_spec_002_ingestion_processing_unit_3_high_velocity_ingress_stress_scenarios_telecom_ai_workloads",
+      "research_architectures_arch_spec_002_ingestion_processing_unit_4_hardware_realization_open_predecessors",
+      "research_architectures_arch_spec_002_ingestion_processing_unit_5_architectural_invariants_for_the_ipu",
+      "research_architectures_readme",
+      "research_daily_2026_09_19",
+      "research_invariants_inv_mem_001",
+      "research_notes_2026_09_19_agentic_ai_industry_ayush_shah",
+      "templates_daily_note"
+    ],
+    "73": [
       "ref_branch_name_ne",
       "ref_officer_title_ne",
       "schemas_nepal_civic_service_v1_appeal_officer_title_ne_type",
@@ -2086,7 +2116,7 @@
       "schemas_nepal_civic_service_v1_responsible_desk_required",
       "schemas_nepal_civic_service_v1_responsible_desk_type"
     ],
-    "72": [
+    "74": [
       "ref_category",
       "ref_event_date_iso",
       "ref_event_type",
@@ -2102,7 +2132,7 @@
       "schemas_capability_contract_v1_json_ref_id",
       "schemas_horoscope_evaluation_v1_items_required"
     ],
-    "73": [
+    "75": [
       "research_notebooklm_ecosystem_sources_02_operational_workflows_and_pipelines",
       "research_notebooklm_ecosystem_sources_02_operational_workflows_and_pipelines_1_overview_of_autonomous_compound_pipelines",
       "research_notebooklm_ecosystem_sources_02_operational_workflows_and_pipelines_2_the_6_flagship_compound_pipelines",
@@ -2118,7 +2148,7 @@
       "research_notebooklm_ecosystem_sources_02_operational_workflows_and_pipelines_pipeline_e_autonomous_youtube_media_ingestion_dsp_processing",
       "research_notebooklm_ecosystem_sources_02_operational_workflows_and_pipelines_pipeline_f_zero_cloud_p2p_device_handoff"
     ],
-    "74": [
+    "76": [
       "schemas_capability_contract_v1_metadata_type",
       "schemas_capability_contract_v1_module_description",
       "schemas_capability_contract_v1_module_pattern",
@@ -2134,7 +2164,7 @@
       "schemas_capability_contract_v1_version_pattern",
       "schemas_capability_contract_v1_version_type"
     ],
-    "75": [
+    "77": [
       "schemas_ecosystem_verification_schema_claimed_result_minlength",
       "schemas_ecosystem_verification_schema_claimed_result_type",
       "schemas_ecosystem_verification_schema_id_pattern",
@@ -2150,7 +2180,7 @@
       "schemas_ecosystem_verification_schema_repository_type",
       "schemas_ecosystem_verification_schema_verification_ref"
     ],
-    "76": [
+    "78": [
       "schemas_model_benchmark_schema_benchmark_id_pattern",
       "schemas_model_benchmark_schema_benchmark_id_type",
       "schemas_model_benchmark_schema_human_intervention_minutes_minimum",
@@ -2166,7 +2196,7 @@
       "schemas_model_benchmark_schema_properties_notes",
       "schemas_model_benchmark_schema_properties_prompt_tokens"
     ],
-    "77": [
+    "79": [
       "sim_task_telemetry",
       "sim_task_telemetry_cmd_close",
       "sim_task_telemetry_cmd_log_dispatch",
@@ -2182,22 +2212,7 @@
       "sim_task_telemetry_run_self_test",
       "sim_task_telemetry_save_all_tasks"
     ],
-    "78": [
-      "ref_balance_years",
-      "ref_cycle_start_date_iso",
-      "ref_starting_mahadasha_planet",
-      "schemas_horoscope_evaluation_v1_balance_years_type",
-      "schemas_horoscope_evaluation_v1_cycle_start_date_iso_type",
-      "schemas_horoscope_evaluation_v1_properties_balance_years",
-      "schemas_horoscope_evaluation_v1_properties_cycle_start_date_iso",
-      "schemas_horoscope_evaluation_v1_properties_starting_mahadasha_planet",
-      "schemas_horoscope_evaluation_v1_properties_vimshottari_dasha_at_birth",
-      "schemas_horoscope_evaluation_v1_starting_mahadasha_planet_type",
-      "schemas_horoscope_evaluation_v1_vimshottari_dasha_at_birth_properties",
-      "schemas_horoscope_evaluation_v1_vimshottari_dasha_at_birth_required",
-      "schemas_horoscope_evaluation_v1_vimshottari_dasha_at_birth_type"
-    ],
-    "79": [
+    "80": [
       "research_notes_customization_token_optimization_guide",
       "research_notes_customization_token_optimization_guide_1_executive_summary",
       "research_notes_customization_token_optimization_guide_2_empirical_overhead_breakdown",
@@ -2212,7 +2227,7 @@
       "research_notes_customization_token_optimization_guide_rule_4_periodic_customization_auditing",
       "research_notes_customization_token_optimization_guide_setup_guide_antigravity_customization_token_budget_overhead_optimization"
     ],
-    "80": [
+    "81": [
       "research_plans_brl_c0_how_it_works_1_read_the_short_introduction",
       "research_plans_brl_c0_how_it_works_2_complete_the_intake_form",
       "research_plans_brl_c0_how_it_works_3_receive_your_first_assignment",
@@ -2227,7 +2242,7 @@
       "research_plans_brl_c0_how_it_works_what_you_do_not_need_before_joining",
       "research_plans_brl_c0_how_it_works_your_path"
     ],
-    "81": [
+    "82": [
       "research_references_beie_complete_syllabus_i_to_iv_1_introduction_5_hours",
       "research_references_beie_complete_syllabus_i_to_iv_2_process_management_6_hours",
       "research_references_beie_complete_syllabus_i_to_iv_3_process_communication_and_synchronization_5_hours",
@@ -2242,7 +2257,7 @@
       "research_references_beie_complete_syllabus_i_to_iv_9_system_administration_4_hours",
       "research_references_beie_complete_syllabus_i_to_iv_reference_books"
     ],
-    "82": [
+    "83": [
       "schemas_horoscope_evaluation_v1_biological_children_count_type",
       "schemas_horoscope_evaluation_v1_divorce_count_type",
       "schemas_horoscope_evaluation_v1_highest_education_level_type",
@@ -2257,7 +2272,7 @@
       "schemas_horoscope_evaluation_v1_properties_wealth_bracket",
       "schemas_horoscope_evaluation_v1_wealth_bracket_type"
     ],
-    "83": [
+    "84": [
       "schemas_nepal_civic_service_v1_fee_structure_properties",
       "schemas_nepal_civic_service_v1_grace_period_days_minimum",
       "schemas_nepal_civic_service_v1_grace_period_days_type",
@@ -2271,20 +2286,6 @@
       "schemas_nepal_civic_service_v1_properties_standard_fee_npr",
       "schemas_nepal_civic_service_v1_standard_fee_npr_minimum",
       "schemas_nepal_civic_service_v1_standard_fee_npr_type"
-    ],
-    "84": [
-      "agents",
-      "research_architectures_arch_rfc_001_record_keeping_standard",
-      "research_architectures_arch_rfc_004_workflow_externalization_freeze",
-      "research_decisions_dec_002_personal_rd_capstone_boundary",
-      "research_decisions_dec_002_personal_rd_capstone_boundary_1_context_problem",
-      "research_decisions_dec_002_personal_rd_capstone_boundary_2_decisions",
-      "research_decisions_dec_002_personal_rd_capstone_boundary_3_consequences_downstream_actions_status_as_of_2026_09_23",
-      "research_decisions_dec_002_personal_rd_capstone_boundary_4_verification_anchors",
-      "research_decisions_dec_002_personal_rd_capstone_boundary_decision_record_dec_002_personal_r_d_duo_capstone_boundary_audit_evidence_discipline",
-      "research_decisions_dec_003_main_branch_enforcement_alignment",
-      "research_invariants_inv_epi_001",
-      "schemas_evidence_policy"
     ],
     "85": [
       "ecosystem_architectural_brainstorm_1_executive_summary_the_core_breakthrough",
@@ -2399,6 +2400,34 @@
       "research_architectures_arch_spec_004_youtube_transformer_cluster_5_architectural_contract_tube_transformer_contract_json"
     ],
     "93": [
+      "research_references_beie_complete_syllabus_i_to_iv_1_fundamentals_of_medical_instrumentation_4_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_2_bioelectric_signals_and_electrodes_4_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_3_physiological_transducers_4_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_4_bioelectric_signals_measurement_and_recording_system_10_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_4_information_systems_ct_751",
+      "research_references_beie_complete_syllabus_i_to_iv_5_non_invasive_diagnostic_instruments_12_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_6_9_ex_725_03_biomedical_instrumentation",
+      "research_references_beie_complete_syllabus_i_to_iv_6_therapeutic_instruments_4_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_6a_optical_fiber_communication_system_ex_765_01",
+      "research_references_beie_complete_syllabus_i_to_iv_7_biomedical_telemetry_and_telemedicine_3_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_8_electrical_safety_of_medical_equipment_4_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_practicals"
+    ],
+    "94": [
+      "schemas_capability_ontology",
+      "schemas_capability_ontology_1_motivation_purpose",
+      "schemas_capability_ontology_2_1_repository",
+      "schemas_capability_ontology_2_2_project",
+      "schemas_capability_ontology_2_3_1_explicit_entity_classes_ont_002_machine_derived_partition",
+      "schemas_capability_ontology_2_3_capability",
+      "schemas_capability_ontology_2_4_interface",
+      "schemas_capability_ontology_2_5_workflow",
+      "schemas_capability_ontology_2_the_canonical_hierarchy",
+      "schemas_capability_ontology_3_authoritative_ecosystem_count_reconciliation",
+      "schemas_capability_ontology_4_verification_governance_rules",
+      "schemas_capability_ontology_canonical_capability_ecosystem_ontology"
+    ],
+    "95": [
       "schemas_horoscope_evaluation_v1_big_five_scores_properties",
       "schemas_horoscope_evaluation_v1_big_five_scores_type",
       "schemas_horoscope_evaluation_v1_evaluation_ground_truth_description",
@@ -2412,7 +2441,7 @@
       "schemas_horoscope_evaluation_v1_psychometric_ground_truth_properties",
       "schemas_horoscope_evaluation_v1_psychometric_ground_truth_type"
     ],
-    "94": [
+    "96": [
       "schemas_horoscope_evaluation_v1_items_properties",
       "schemas_horoscope_evaluation_v1_properties_active_dasha_at_event",
       "schemas_horoscope_evaluation_v1_properties_category",
@@ -2426,7 +2455,7 @@
       "schemas_horoscope_evaluation_v1_properties_verification_tier",
       "schemas_horoscope_evaluation_v1_properties_yoga_name"
     ],
-    "95": [
+    "97": [
       "tools_chat_archiver_save_chat",
       "tools_chat_archiver_save_chat_clean_text",
       "tools_chat_archiver_save_chat_find_last_transcript_doc",
@@ -2440,7 +2469,7 @@
       "tools_chat_archiver_save_chat_resolve_target_directory",
       "tools_chat_archiver_save_chat_slugify"
     ],
-    "96": [
+    "98": [
       "tools_skills_antigravity_ui_motion_design_expert_skill",
       "tools_skills_antigravity_ui_motion_design_expert_skill_1_spatial_layouts_3d_css_transforms",
       "tools_skills_antigravity_ui_motion_design_expert_skill_2_advanced_multi_layer_glassmorphism",
@@ -2454,7 +2483,7 @@
       "tools_skills_review_bugbot_skill",
       "tools_skills_review_bugbot_skill_review_bugbot"
     ],
-    "97": [
+    "99": [
       "tools_skills_design_taste_frontend_skill",
       "tools_skills_design_taste_frontend_skill_1_active_baseline_configuration",
       "tools_skills_design_taste_frontend_skill_2_default_architecture_conventions",
@@ -2468,7 +2497,7 @@
       "tools_skills_design_taste_frontend_skill_rule_5_interactive_ui_states",
       "tools_skills_design_taste_frontend_skill_when_to_use"
     ],
-    "98": [
+    "100": [
       "ref_a",
       "ref_aa",
       "ref_b",
@@ -2481,20 +2510,7 @@
       "schemas_horoscope_evaluation_v1_rodden_rating_enum",
       "schemas_horoscope_evaluation_v1_rodden_rating_type"
     ],
-    "99": [
-      "ref_claimed_result",
-      "ref_claims",
-      "ref_provenance",
-      "ref_repository",
-      "ref_verification",
-      "schemas_ecosystem_verification_schema_defs",
-      "schemas_ecosystem_verification_schema_defs_project",
-      "schemas_ecosystem_verification_schema_json_ref_id",
-      "schemas_ecosystem_verification_schema_project_additionalproperties",
-      "schemas_ecosystem_verification_schema_project_required",
-      "schemas_ecosystem_verification_schema_project_type"
-    ],
-    "100": [
+    "101": [
       "ref_generated_by",
       "ref_manifest_kind",
       "ref_projects",
@@ -2506,19 +2522,6 @@
       "schemas_ecosystem_verification_schema_schema",
       "schemas_ecosystem_verification_schema_title",
       "schemas_ecosystem_verification_schema_type"
-    ],
-    "101": [
-      "report_reconciliation_2026_09_19",
-      "report_reconciliation_2026_09_19_1_executive_summary",
-      "report_reconciliation_2026_09_19_2_granular_reconciliation_matrix",
-      "report_reconciliation_2026_09_19_3_epistemic_certification",
-      "report_reconciliation_2026_09_19_comprehensive_multi_model_ecosystem_reconciliation_report_2026_09_19",
-      "research_experiments_fleet_001",
-      "research_experiments_fleet_001_experiment_log_fleet_001_single_task_interruption_state_migration_benchmark",
-      "research_experiments_fleet_001_metrics_logged",
-      "research_experiments_fleet_001_task_specification",
-      "research_experiments_fleet_001_verification_checklist",
-      "research_invariants_inv_wsr_002"
     ],
     "102": [
       "research_daily_2026_09_24",
@@ -2573,19 +2576,6 @@
       "research_notebooklm_ecosystem_sources_01_ecosystem_master_architecture_verbatim_epistemic_history_invariant_inv_epi_001"
     ],
     "106": [
-      "research_notes_2026_09_27_biasaperture_research_dossier_1_executive_summary_authorship",
-      "research_notes_2026_09_27_biasaperture_research_dossier_2_milestone_architecture_github_project_anchoring_2026_10_01",
-      "research_notes_2026_09_27_biasaperture_research_dossier_3_modularity_single_responsibility_architecture_refactor_issue_32_pr_33",
-      "research_notes_2026_09_27_biasaperture_research_dossier_4_collaborative_peer_review_git_governance_protocol",
-      "research_notes_2026_09_27_biasaperture_research_dossier_5_core_architectural_methodological_pillars",
-      "research_notes_2026_09_27_biasaperture_research_dossier_i_the_core_four_disparity_metrics",
-      "research_notes_2026_09_27_biasaperture_research_dossier_ii_dual_harmonization_engine_fairlearn_aif360",
-      "research_notes_2026_09_27_biasaperture_research_dossier_iii_statistical_rigour_guardrails",
-      "research_notes_2026_09_27_biasaperture_research_dossier_iv_non_negotiable_diagnostic_scope_invariants",
-      "research_notes_2026_09_27_biasaperture_research_dossier_research_note_biasaperture_diagnostic_fairness_bias_audit_platform",
-      "research_notes_2026_09_27_biasaperture_research_dossier_v_regulatory_compliance_mapping"
-    ],
-    "107": [
       "research_plans_brl_c0_overview_brainstorm_research_laboratory_cohort_0_overview",
       "research_plans_brl_c0_overview_equal_opportunity",
       "research_plans_brl_c0_overview_examples_of_c0_work",
@@ -2598,7 +2588,7 @@
       "research_plans_brl_c0_overview_what_is_expected",
       "research_plans_brl_c0_overview_what_the_progression_means"
     ],
-    "108": [
+    "107": [
       "research_plans_brl_quest_0_dry_run_1_objective",
       "research_plans_brl_quest_0_dry_run_2_step_by_step_execution_protocol",
       "research_plans_brl_quest_0_dry_run_3_evaluation_rank_advancement",
@@ -2611,7 +2601,7 @@
       "research_plans_brl_quest_0_dry_run_step_6_commit_and_push",
       "research_plans_brl_quest_0_dry_run_step_7_open_a_pull_request"
     ],
-    "109": [
+    "108": [
       "research_references_beie_complete_syllabus_i_to_iv_10_advanced_topics_4_hours",
       "research_references_beie_complete_syllabus_i_to_iv_1_introduction_to_digital_image_processing_4_hours",
       "research_references_beie_complete_syllabus_i_to_iv_2_two_dimensional_systems_5_hours",
@@ -2623,6 +2613,19 @@
       "research_references_beie_complete_syllabus_i_to_iv_7_grey_level_features_edges_and_lines_6_hours",
       "research_references_beie_complete_syllabus_i_to_iv_8_segmentation_3_hours",
       "research_references_beie_complete_syllabus_i_to_iv_9_frequency_approach_and_transform_domain_3_hours"
+    ],
+    "109": [
+      "research_references_beie_complete_syllabus_i_to_iv_10_java_beans_components_6_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_11_miscellaneous_4_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_2_gui_programming_and_components_4_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_3_applets_and_application_deployment_4_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_4_streams_and_file_handling_4_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_5_xml_programming_3_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_6_1_ct_725_01_advanced_java_programming",
+      "research_references_beie_complete_syllabus_i_to_iv_6_network_programming_4_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_7_database_programming_6_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_8_distributed_objects_4_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_9_advanced_swing_and_advanced_awt_5_hours"
     ],
     "110": [
       "research_references_beie_complete_syllabus_i_to_iv_10_signal_processing_and_communication_application_using_arm_cortex_processors_5_hours",
@@ -2638,19 +2641,6 @@
       "research_references_beie_complete_syllabus_i_to_iv_9_firmware_and_embedded_operating_systems_6_hours"
     ],
     "111": [
-      "research_references_beie_complete_syllabus_i_to_iv_1_fundamentals_of_medical_instrumentation_4_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_2_bioelectric_signals_and_electrodes_4_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_3_physiological_transducers_4_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_4_bioelectric_signals_measurement_and_recording_system_10_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_5_non_invasive_diagnostic_instruments_12_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_6_9_ex_725_03_biomedical_instrumentation",
-      "research_references_beie_complete_syllabus_i_to_iv_6_therapeutic_instruments_4_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_6a_optical_fiber_communication_system_ex_765_01",
-      "research_references_beie_complete_syllabus_i_to_iv_7_biomedical_telemetry_and_telemedicine_3_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_8_electrical_safety_of_medical_equipment_4_hours",
-      "research_references_beie_complete_syllabus_i_to_iv_practicals"
-    ],
-    "112": [
       "research_references_beie_complete_syllabus_i_to_iv_1_overview_of_satellite_communication_2_hours",
       "research_references_beie_complete_syllabus_i_to_iv_2_orbital_mechanics_and_launchers_10_hours",
       "research_references_beie_complete_syllabus_i_to_iv_3_satellite_link_design_9_hours",
@@ -2663,7 +2653,7 @@
       "research_references_beie_complete_syllabus_i_to_iv_9_satellite_navigation_and_global_positioning_system_5_hours",
       "research_references_beie_complete_syllabus_i_to_iv_practical_field_visits"
     ],
-    "113": [
+    "112": [
       "schemas_capability_contract_v1_author_type",
       "schemas_capability_contract_v1_last_updated_format",
       "schemas_capability_contract_v1_last_updated_type",
@@ -2676,7 +2666,7 @@
       "schemas_capability_contract_v1_repository_url_format",
       "schemas_capability_contract_v1_repository_url_type"
     ],
-    "114": [
+    "113": [
       "schemas_capability_contract_v1_capability_properties",
       "schemas_capability_contract_v1_counterexample_schema_description",
       "schemas_capability_contract_v1_counterexample_schema_type",
@@ -2689,20 +2679,20 @@
       "schemas_capability_contract_v1_timeout_ms_minimum",
       "schemas_capability_contract_v1_timeout_ms_type"
     ],
-    "115": [
-      "schemas_capability_ontology_1_motivation_purpose",
-      "schemas_capability_ontology_2_1_repository",
-      "schemas_capability_ontology_2_2_project",
-      "schemas_capability_ontology_2_3_1_explicit_entity_classes_ont_002_machine_derived_partition",
-      "schemas_capability_ontology_2_3_capability",
-      "schemas_capability_ontology_2_4_interface",
-      "schemas_capability_ontology_2_5_workflow",
-      "schemas_capability_ontology_2_the_canonical_hierarchy",
-      "schemas_capability_ontology_3_authoritative_ecosystem_count_reconciliation",
-      "schemas_capability_ontology_4_verification_governance_rules",
-      "schemas_capability_ontology_canonical_capability_ecosystem_ontology"
+    "114": [
+      "schemas_ecosystem_verification_schema_claim_properties",
+      "schemas_ecosystem_verification_schema_limitations_minlength",
+      "schemas_ecosystem_verification_schema_limitations_type",
+      "schemas_ecosystem_verification_schema_metric_minlength",
+      "schemas_ecosystem_verification_schema_metric_type",
+      "schemas_ecosystem_verification_schema_properties_limitations",
+      "schemas_ecosystem_verification_schema_properties_metric",
+      "schemas_ecosystem_verification_schema_properties_scope",
+      "schemas_ecosystem_verification_schema_properties_value",
+      "schemas_ecosystem_verification_schema_scope_minlength",
+      "schemas_ecosystem_verification_schema_scope_type"
     ],
-    "116": [
+    "115": [
       "schemas_horoscope_evaluation_v1_additionalproperties_properties",
       "schemas_horoscope_evaluation_v1_properties_distance_au",
       "schemas_horoscope_evaluation_v1_properties_house_number",
@@ -2715,20 +2705,7 @@
       "schemas_horoscope_evaluation_v1_properties_speed_deg_per_day",
       "schemas_horoscope_evaluation_v1_properties_zodiac_sign"
     ],
-    "117": [
-      "schemas_horoscope_evaluation_v1_astrological_features_properties",
-      "schemas_horoscope_evaluation_v1_birth_nakshatra_lord_type",
-      "schemas_horoscope_evaluation_v1_birth_nakshatra_type",
-      "schemas_horoscope_evaluation_v1_chandra_rashi_type",
-      "schemas_horoscope_evaluation_v1_lagna_rashi_type",
-      "schemas_horoscope_evaluation_v1_properties_birth_nakshatra",
-      "schemas_horoscope_evaluation_v1_properties_birth_nakshatra_lord",
-      "schemas_horoscope_evaluation_v1_properties_chandra_rashi",
-      "schemas_horoscope_evaluation_v1_properties_lagna_rashi",
-      "schemas_horoscope_evaluation_v1_properties_surya_rashi",
-      "schemas_horoscope_evaluation_v1_surya_rashi_type"
-    ],
-    "118": [
+    "116": [
       "sim_test_invariant_engine_invariantassuranceenginetests",
       "sim_test_invariant_engine_invariantassuranceenginetests_test_counterexample_replay_confirmed_in_sandbox",
       "sim_test_invariant_engine_invariantassuranceenginetests_test_full_benchmark_execution_and_dossier_generation",
@@ -2741,7 +2718,19 @@
       "sim_test_invariant_engine_rationale_64",
       "sim_test_invariant_engine_rationale_74"
     ],
-    "119": [
+    "117": [
+      "ecosystem_architectural_brainstorm",
+      "report_economic_model",
+      "report_repository_audit",
+      "report_repository_audit_1_executive_summary",
+      "report_repository_audit_3_corrective_actions_summary",
+      "report_repository_audit_comprehensive_repository_epistemic_claims_audit",
+      "report_repository_audit_epistemic_claim_type_distribution",
+      "research_experiments_fleet_003",
+      "research_experiments_gpu_ram_architecture_spec",
+      "research_experiments_inv_bmk_001"
+    ],
+    "118": [
       "ref_benchmark_id",
       "ref_evaluated_at",
       "ref_human_intervention_minutes",
@@ -2753,7 +2742,7 @@
       "ref_tokens_total",
       "schemas_model_benchmark_schema_required"
     ],
-    "120": [
+    "119": [
       "ref_business_licensing",
       "ref_citizenship_and_passport",
       "ref_disaster_and_emergency",
@@ -2765,7 +2754,7 @@
       "ref_vital_registration",
       "schemas_nepal_civic_service_v1_category_enum"
     ],
-    "121": [
+    "120": [
       "ref_canonical_name_en",
       "ref_canonical_name_ne",
       "ref_fee_structure",
@@ -2776,6 +2765,18 @@
       "ref_service_id",
       "ref_statutory_sla",
       "schemas_nepal_civic_service_v1_required"
+    ],
+    "121": [
+      "ref_claimed_result",
+      "ref_claims",
+      "ref_provenance",
+      "ref_repository",
+      "ref_verification",
+      "schemas_ecosystem_verification_schema_defs_project",
+      "schemas_ecosystem_verification_schema_json_ref_id",
+      "schemas_ecosystem_verification_schema_project_additionalproperties",
+      "schemas_ecosystem_verification_schema_project_required",
+      "schemas_ecosystem_verification_schema_project_type"
     ],
     "122": [
       "research_architectures_arch_rfc_005_memory_stratification",
@@ -2790,6 +2791,30 @@
       "research_architectures_arch_rfc_005_memory_stratification_layer_3_ephemeral_task_state"
     ],
     "123": [
+      "research_experiments_fleet_002",
+      "research_experiments_fleet_002_1_problem_architectural_rationale",
+      "research_experiments_fleet_002_2_multi_tier_hybrid_fleet_topology",
+      "research_experiments_fleet_002_3_1_copilotheadlessadapter_completed_operational_scope_m1_m4",
+      "research_experiments_fleet_002_3_2_sandboxed_local_tool_executor_phase_2_target_specification_m6",
+      "research_experiments_fleet_002_3_3_memory_resource_footprint_benchmark_comparison",
+      "research_experiments_fleet_002_3_specification_component_contracts",
+      "research_experiments_fleet_002_4_verification_checklist_milestones",
+      "research_experiments_fleet_002_experiment_architecture_log_fleet_002_headless_multi_account_github_copilot_worker_fleet",
+      "research_experiments_fleet_002_role_capability_allocation"
+    ],
+    "124": [
+      "research_experiments_gpu_ram_architecture_spec_1_executive_summary_problem_formulation",
+      "research_experiments_gpu_ram_architecture_spec_2_core_architectural_bottlenecks_identified",
+      "research_experiments_gpu_ram_architecture_spec_3_grounding_on_latest_open_source_predecessors",
+      "research_experiments_gpu_ram_architecture_spec_4_semiconductor_economics_dispelling_the_electronics_nightmare",
+      "research_experiments_gpu_ram_architecture_spec_5_incremental_upgrade_methodology_v_1_rightarrow_v_2_rightarrow_paradigm_shift",
+      "research_experiments_gpu_ram_architecture_spec_6_the_stay_saner_for_longer_execution_model",
+      "research_experiments_gpu_ram_architecture_spec_research_log_gpu_ram_architecture_beyond_gatekept_status_quo",
+      "research_experiments_gpu_ram_architecture_spec_the_abstraction_principle",
+      "research_experiments_gpu_ram_architecture_spec_the_capital_cost_matrix",
+      "research_experiments_gpu_ram_architecture_spec_the_central_question"
+    ],
+    "125": [
       "research_plans_plan_cp_001_competitive_programming_archival",
       "research_plans_plan_cp_001_competitive_programming_archival_1_executive_summary_objective",
       "research_plans_plan_cp_001_competitive_programming_archival_2_extraction_pipeline_architecture_winpilot_driven",
@@ -2801,7 +2826,7 @@
       "research_plans_plan_cp_001_competitive_programming_archival_components",
       "research_plans_plan_cp_001_competitive_programming_archival_research_plan_competitive_programming_corpus_autonomous_extraction_pipeline"
     ],
-    "124": [
+    "126": [
       "research_plans_plan_nep_const_001_constitution_of_nepal_plain_explanation_engine",
       "research_plans_plan_nep_const_001_constitution_of_nepal_plain_explanation_engine_1_executive_summary_problem_formulation",
       "research_plans_plan_nep_const_001_constitution_of_nepal_plain_explanation_engine_2_multi_tier_cognitive_architecture",
@@ -2813,7 +2838,7 @@
       "research_plans_plan_nep_const_001_constitution_of_nepal_plain_explanation_engine_phase_3_packaging_digital_delivery",
       "research_plans_plan_nep_const_001_constitution_of_nepal_plain_explanation_engine_research_product_plan_constitution_of_nepal_plain_language_multi_tier_explanation_engine"
     ],
-    "125": [
+    "127": [
       "research_references_beie_complete_syllabus_i_to_iv_1_introduction_3_hours",
       "research_references_beie_complete_syllabus_i_to_iv_2_web_basics_5_hours",
       "research_references_beie_complete_syllabus_i_to_iv_3_server_side_programming_7_hours",
@@ -2825,7 +2850,7 @@
       "research_references_beie_complete_syllabus_i_to_iv_8_web_services_4_hours",
       "research_references_beie_complete_syllabus_i_to_iv_9_the_semantic_web_5_hours"
     ],
-    "126": [
+    "128": [
       "schemas_capability_contract_v1",
       "schemas_capability_contract_v1_additionalproperties",
       "schemas_capability_contract_v1_capability_type",
@@ -2837,7 +2862,7 @@
       "schemas_capability_contract_v1_title",
       "schemas_capability_contract_v1_type"
     ],
-    "127": [
+    "129": [
       "schemas_capability_contract_v1_args_type",
       "schemas_capability_contract_v1_command_description",
       "schemas_capability_contract_v1_command_type",
@@ -2849,7 +2874,7 @@
       "schemas_capability_contract_v1_properties_command",
       "schemas_capability_contract_v1_properties_port"
     ],
-    "128": [
+    "130": [
       "schemas_ecosystem_verification_schema_properties_recorded_at",
       "schemas_ecosystem_verification_schema_properties_source_commit",
       "schemas_ecosystem_verification_schema_properties_source_path",
@@ -2861,7 +2886,7 @@
       "schemas_ecosystem_verification_schema_source_path_minlength",
       "schemas_ecosystem_verification_schema_source_path_type"
     ],
-    "129": [
+    "131": [
       "schemas_evidence_policy_1_motivation_policy_scope",
       "schemas_evidence_policy_2_the_six_evidence_tiers_e0_e5",
       "schemas_evidence_policy_3_1_formally_proven",
@@ -2873,19 +2898,7 @@
       "schemas_evidence_policy_5_external_reference_benchmark_citation_policy",
       "schemas_evidence_policy_calibrated_evidence_policy_epistemic_verification_standard"
     ],
-    "130": [
-      "schemas_horoscope_evaluation_v1_cancellation_rules_satisfied_items",
-      "schemas_horoscope_evaluation_v1_cancellation_rules_satisfied_type",
-      "schemas_horoscope_evaluation_v1_is_manglik_type",
-      "schemas_horoscope_evaluation_v1_manglik_dosha_properties",
-      "schemas_horoscope_evaluation_v1_manglik_dosha_type",
-      "schemas_horoscope_evaluation_v1_mars_house_type",
-      "schemas_horoscope_evaluation_v1_properties_cancellation_rules_satisfied",
-      "schemas_horoscope_evaluation_v1_properties_is_manglik",
-      "schemas_horoscope_evaluation_v1_properties_manglik_dosha",
-      "schemas_horoscope_evaluation_v1_properties_mars_house"
-    ],
-    "131": [
+    "132": [
       "schemas_nepal_civic_service_v1_digital_integration_properties",
       "schemas_nepal_civic_service_v1_digital_integration_type",
       "schemas_nepal_civic_service_v1_nagarik_app_supported_type",
@@ -2897,7 +2910,7 @@
       "schemas_nepal_civic_service_v1_properties_versp_mis_integrated",
       "schemas_nepal_civic_service_v1_versp_mis_integrated_type"
     ],
-    "132": [
+    "133": [
       "tools_skills_feature_dev_skill",
       "tools_skills_feature_dev_skill_core_principles",
       "tools_skills_feature_dev_skill_feature_development",
@@ -2909,7 +2922,7 @@
       "tools_skills_feature_dev_skill_phase_6_quality_review",
       "tools_skills_feature_dev_skill_phase_7_summary"
     ],
-    "133": [
+    "134": [
       "tools_skills_github_workflow_scripts_toggle_issue_task",
       "tools_skills_github_workflow_scripts_toggle_issue_task_get_issue_body",
       "tools_skills_github_workflow_scripts_toggle_issue_task_main",
@@ -2921,7 +2934,7 @@
       "tools_skills_github_workflow_scripts_toggle_issue_task_run_gh_command",
       "tools_skills_github_workflow_scripts_toggle_issue_task_update_issue_body"
     ],
-    "134": [
+    "135": [
       "tools_skills_google_classroom_skill",
       "tools_skills_google_classroom_skill_1_the_what_s_due_pending_homework_audit_most_common",
       "tools_skills_google_classroom_skill_2_assignment_deep_dive_requirements_extraction",
@@ -2932,17 +2945,6 @@
       "tools_skills_google_classroom_skill_core_orchestration_workflows",
       "tools_skills_google_classroom_skill_google_classroom_agent_skill",
       "tools_skills_google_classroom_skill_when_to_activate_this_skill"
-    ],
-    "135": [
-      "aaradhya_master_v165",
-      "research_notes_2026_09_27_biasaperture_research_dossier",
-      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry",
-      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_1_executive_summary",
-      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_2_personal_ecosystem_core_workspaces",
-      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_3_project_specific_workspaces_biasaperture_fuse_ai_fellowship",
-      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_4_mcp_super_nlm_tooling_integration",
-      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_5_privacy_repository_boundaries",
-      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_research_note_gemini_notebooklm_knowledge_base_registry"
     ],
     "136": [
       "modelref",
@@ -3000,6 +3002,17 @@
       "schemas_horoscope_evaluation_v1_properties_house_system"
     ],
     "141": [
+      "ref_evidence_tier",
+      "ref_metric",
+      "ref_scope",
+      "ref_value",
+      "schemas_ecosystem_verification_schema_claim_additionalproperties",
+      "schemas_ecosystem_verification_schema_claim_required",
+      "schemas_ecosystem_verification_schema_claim_type",
+      "schemas_ecosystem_verification_schema_defs",
+      "schemas_ecosystem_verification_schema_defs_claim"
+    ],
+    "142": [
       "ref_fagan_bradley",
       "ref_krishnamurti_kp",
       "ref_lahiri_chitrapaksha",
@@ -3010,7 +3023,7 @@
       "schemas_horoscope_evaluation_v1_ayanamsha_type_type",
       "schemas_horoscope_evaluation_v1_properties_ayanamsha_type"
     ],
-    "142": [
+    "143": [
       "ref_free_tier_api",
       "ref_heavy_compute",
       "ref_paid_api",
@@ -3021,7 +3034,7 @@
       "schemas_capability_contract_v1_cost_tier_type",
       "schemas_capability_contract_v1_properties_cost_tier"
     ],
-    "143": [
+    "144": [
       "ref_is_retrograde",
       "ref_longitude_deg",
       "ref_speed_deg_per_day",
@@ -3032,7 +3045,7 @@
       "schemas_horoscope_evaluation_v1_planets_type",
       "schemas_horoscope_evaluation_v1_properties_planets"
     ],
-    "144": [
+    "145": [
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_1_1_the_core_operating_principle_high_ai_leverage_high_personal_comprehension",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_1_2_the_option_value_vs_realized_value_paradox",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_1_executive_context_identity_anchor",
@@ -3043,7 +3056,7 @@
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_arch_plan_003_intelligent_systems_engineering_research_conversion_roadmap",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_bridging_academic_breadth_beie_and_modern_ai_aif_into_verifiable_intelligent_systems"
     ],
-    "145": [
+    "146": [
       "research_architectures_arch_spec_003_headless_orchestration_substrate",
       "research_architectures_arch_spec_003_headless_orchestration_substrate_1_1_the_front_end_trap_in_autonomous_systems",
       "research_architectures_arch_spec_003_headless_orchestration_substrate_1_2_the_architectural_invariant_substrate_decoupling",
@@ -3054,7 +3067,7 @@
       "research_architectures_arch_spec_003_headless_orchestration_substrate_4_key_advantages_for_the_r_d_strategic_wedge",
       "research_architectures_arch_spec_003_headless_orchestration_substrate_5_architectural_invariants_enforced"
     ],
-    "146": [
+    "147": [
       "research_architectures_arch_spec_007_environment_reproducibility_bootstrap",
       "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_1_executive_summary_problem_statement",
       "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_2_environment_architecture_customization_layers",
@@ -3065,7 +3078,7 @@
       "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_step_2_run_bootstrap_engine",
       "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_what_the_bootstrap_engine_executes"
     ],
-    "147": [
+    "148": [
       "research_daily_2026_09_28",
       "research_daily_2026_09_28_1_schedule_priorities",
       "research_daily_2026_09_28_2026_09_28_daily_log",
@@ -3076,18 +3089,18 @@
       "research_plans_plan_nep_data_001_sovereign_knowledge_graph_and_idbfs_ingestion",
       "research_plans_plan_nisr_001_program_charter"
     ],
-    "148": [
-      "research_invariants_inv_wsr_002_1_1_invariant_a_closed_loop_worker_dispatch_no_orphaned_leases",
-      "research_invariants_inv_wsr_002_1_2_invariant_b_strict_separation_of_real_execution_and_simulation",
-      "research_invariants_inv_wsr_002_1_3_invariant_c_telemetry_truthfulness_quota_headroom",
-      "research_invariants_inv_wsr_002_1_4_invariant_d_atomic_checkpoint_dag_advancement",
-      "research_invariants_inv_wsr_002_1_5_invariant_e_qa_authority_claim_token_isolation_for_state_transitions",
-      "research_invariants_inv_wsr_002_1_the_core_invariant_statements",
-      "research_invariants_inv_wsr_002_2_mathematical_formalization",
-      "research_invariants_inv_wsr_002_3_verification_compliance_gate",
-      "research_invariants_inv_wsr_002_architectural_invariant_inv_wsr_002_worker_protocol_completeness_truthful_telemetry"
-    ],
     "149": [
+      "research_experiments_inv_bmk_001_1_executive_summary_objective",
+      "research_experiments_inv_bmk_001_2_1_inductive_invariant_property",
+      "research_experiments_inv_bmk_001_2_2_replay_ground_truth_invariant",
+      "research_experiments_inv_bmk_001_2_formal_architecture_mathematical_formulation",
+      "research_experiments_inv_bmk_001_3_benchmark_testbed_composition",
+      "research_experiments_inv_bmk_001_4_empirical_evaluation_results",
+      "research_experiments_inv_bmk_001_5_falsification_key_findings",
+      "research_experiments_inv_bmk_001_6_epistemic_certification",
+      "research_experiments_inv_bmk_001_research_experiment_inv_bmk_001_headless_invariant_assurance_sandbox_replay_benchmark"
+    ],
+    "150": [
       "research_notebooklm_ecosystem_sources_05_academic_fellowship_and_hardware_synergies",
       "research_notebooklm_ecosystem_sources_05_academic_fellowship_and_hardware_synergies_1_ioe_pulchowk_tu_engineering_coursework_integration",
       "research_notebooklm_ecosystem_sources_05_academic_fellowship_and_hardware_synergies_2_fusemachines_ai_fellowship_2026",
@@ -3098,7 +3111,7 @@
       "research_notebooklm_ecosystem_sources_05_academic_fellowship_and_hardware_synergies_makerspace_prototyping_laboratory",
       "research_notebooklm_ecosystem_sources_05_academic_fellowship_and_hardware_synergies_spark_hardware_architecture"
     ],
-    "150": [
+    "151": [
       "research_plans_brl_contributor_agreement_1_permanent_public_attribution_invariant",
       "research_plans_brl_contributor_agreement_2_tooling_boundary_tripartite_asset_classification",
       "research_plans_brl_contributor_agreement_3_epistemic_rigor_the_ai_trap_policy",
@@ -3109,7 +3122,7 @@
       "research_plans_brl_contributor_agreement_brainstorm_research_laboratory_brl_contributor_agreement",
       "research_plans_brl_contributor_agreement_preamble"
     ],
-    "151": [
+    "152": [
       "research_profile_1_spark_wearable_edge_ai_kinematics_fall_detection_architecture",
       "research_profile_2_headless_invariant_assurance_engine_inv_bmk_001",
       "research_profile_3_biasaperture_algorithmic_fairness_model_auditing_engine",
@@ -3120,7 +3133,7 @@
       "research_profile_research_profile_technical_capability_summary",
       "research_profile_target_research_domains_capabilities"
     ],
-    "152": [
+    "153": [
       "research_references_beie_complete_syllabus_i_to_iv_1_introduction_to_radar_2_hours",
       "research_references_beie_complete_syllabus_i_to_iv_2_the_radar_equation_8_hours",
       "research_references_beie_complete_syllabus_i_to_iv_3_cw_and_frequency_modulated_radar_4_hours",
@@ -3131,7 +3144,7 @@
       "research_references_beie_complete_syllabus_i_to_iv_7_detection_of_radar_signals_in_noise_5_hours",
       "research_references_beie_complete_syllabus_i_to_iv_8_image_analysis_and_applications_2_hours"
     ],
-    "153": [
+    "154": [
       "schemas_ecosystem_verification_schema_claims_items",
       "schemas_ecosystem_verification_schema_claims_minitems",
       "schemas_ecosystem_verification_schema_claims_type",
@@ -3142,7 +3155,18 @@
       "schemas_ecosystem_verification_schema_properties_claims",
       "schemas_ecosystem_verification_schema_properties_projects"
     ],
-    "154": [
+    "155": [
+      "schemas_ecosystem_verification_schema_evidence_tier_enum",
+      "schemas_ecosystem_verification_schema_evidence_tier_type",
+      "schemas_ecosystem_verification_schema_json_ref_e0",
+      "schemas_ecosystem_verification_schema_json_ref_e1",
+      "schemas_ecosystem_verification_schema_json_ref_e2",
+      "schemas_ecosystem_verification_schema_json_ref_e3",
+      "schemas_ecosystem_verification_schema_json_ref_e4",
+      "schemas_ecosystem_verification_schema_json_ref_e5",
+      "schemas_ecosystem_verification_schema_properties_evidence_tier"
+    ],
+    "156": [
       "schemas_horoscope_evaluation_v1_astrological_features_type",
       "schemas_horoscope_evaluation_v1_model_evaluation_metrics_description",
       "schemas_horoscope_evaluation_v1_model_evaluation_metrics_type",
@@ -3153,7 +3177,7 @@
       "schemas_horoscope_evaluation_v1_subject_id_description",
       "schemas_horoscope_evaluation_v1_subject_id_type"
     ],
-    "155": [
+    "157": [
       "schemas_model_benchmark_schema_epistemic_tier_achieved_enum",
       "schemas_model_benchmark_schema_epistemic_tier_achieved_type",
       "schemas_model_benchmark_schema_json_ref_e0",
@@ -3164,7 +3188,7 @@
       "schemas_model_benchmark_schema_json_ref_e5",
       "schemas_model_benchmark_schema_properties_epistemic_tier_achieved"
     ],
-    "156": [
+    "158": [
       "scripts_readme",
       "scripts_readme_0_deterministic_environment_bootstrap_antigravity_setup",
       "scripts_readme_1_windows_environment_user_shell_folders_selective_onedrive_bypass",
@@ -3175,7 +3199,7 @@
       "scripts_readme_ecosystem_scripts_local_automation_suite",
       "scripts_readme_usage"
     ],
-    "157": [
+    "159": [
       "sim_transcript_archiver",
       "sim_transcript_archiver_evaluate_significance",
       "sim_transcript_archiver_export_verbatim",
@@ -3186,7 +3210,7 @@
       "sim_transcript_archiver_rationale_28",
       "sim_transcript_archiver_rationale_73"
     ],
-    "158": [
+    "160": [
       "tools_skills_commit_commands_skill",
       "tools_skills_commit_commands_skill_1_creating_git_commits",
       "tools_skills_commit_commands_skill_2_commit_push_and_open_pr",
@@ -3197,7 +3221,7 @@
       "tools_skills_commit_commands_skill_expected_behavior",
       "tools_skills_commit_commands_skill_your_task"
     ],
-    "159": [
+    "161": [
       "tools_skills_google_stitch_integration_skill",
       "tools_skills_google_stitch_integration_skill_1_overview_architectural_role",
       "tools_skills_google_stitch_integration_skill_1_stitch_get_project",
@@ -3208,7 +3232,7 @@
       "tools_skills_google_stitch_integration_skill_4_code_synthesis_refinement_pipeline",
       "tools_skills_google_stitch_integration_skill_google_stitch_mcp_integration_guide"
     ],
-    "160": [
+    "162": [
       "tools_skills_google_ux_fluidity_skill",
       "tools_skills_google_ux_fluidity_skill_1_material_3_motion_curves_timing_tokens",
       "tools_skills_google_ux_fluidity_skill_2_radial_ink_ripple_engine_m3_state_layer",
@@ -3219,7 +3243,7 @@
       "tools_skills_google_ux_fluidity_skill_google_ux_fluidity_motion_design_system_material_3",
       "tools_skills_google_ux_fluidity_skill_ripple_css"
     ],
-    "161": [
+    "163": [
       "tools_skills_graphify_references_exports",
       "tools_skills_graphify_references_exports_graphify_reference_extra_exports_and_benchmark",
       "tools_skills_graphify_references_exports_step_6b_wiki_only_if_wiki_flag",
@@ -3230,7 +3254,7 @@
       "tools_skills_graphify_references_exports_step_7d_mcp_server_only_if_mcp_flag",
       "tools_skills_graphify_references_exports_step_8_token_reduction_benchmark_only_if_total_words_5000"
     ],
-    "162": [
+    "164": [
       "tools_skills_shadcn_context_skill",
       "tools_skills_shadcn_context_skill_1_core_architecture_utility_foundation",
       "tools_skills_shadcn_context_skill_2_component_composition_schemas",
@@ -3241,7 +3265,7 @@
       "tools_skills_shadcn_context_skill_shadcn_context_design_system_packs",
       "tools_skills_shadcn_context_skill_the_cn_utility"
     ],
-    "163": [
+    "165": [
       "tools_skills_skill_development_skill",
       "tools_skills_skill_development_skill_additional_resources",
       "tools_skills_skill_development_skill_best_practices_summary",
@@ -3252,7 +3276,7 @@
       "tools_skills_skill_development_skill_study_these_skills",
       "tools_skills_skill_development_skill_validation_checklist"
     ],
-    "164": [
+    "166": [
       "tools_skills_skill_development_skill_about_skills",
       "tools_skills_skill_development_skill_anatomy_of_a_skill",
       "tools_skills_skill_development_skill_assets_assets",
@@ -3263,7 +3287,7 @@
       "tools_skills_skill_development_skill_skill_md_required",
       "tools_skills_skill_development_skill_what_skills_provide"
     ],
-    "165": [
+    "167": [
       "tools_skills_skill_development_skill_skill_creation_process",
       "tools_skills_skill_development_skill_start_with_reusable_skill_contents",
       "tools_skills_skill_development_skill_step_1_understanding_the_skill_with_concrete_examples",
@@ -3274,7 +3298,7 @@
       "tools_skills_skill_development_skill_step_6_iterate",
       "tools_skills_skill_development_skill_update_skill_md"
     ],
-    "166": [
+    "168": [
       "tools_skills_ui_ux_pro_max_skill",
       "tools_skills_ui_ux_pro_max_skill_1_design_tokens_color_systems",
       "tools_skills_ui_ux_pro_max_skill_2_typography_hierarchy_spacing",
@@ -3285,7 +3309,7 @@
       "tools_skills_ui_ux_pro_max_skill_font_pairings",
       "tools_skills_ui_ux_pro_max_skill_ui_ux_pro_max_design_intelligence"
     ],
-    "167": [
+    "169": [
       "ecosystem_architectural_brainstorm_7_18_1_empirical_productive_capital_baseline_ultra_low_cash_outlay",
       "ecosystem_architectural_brainstorm_7_18_2_technical_asset_base_valuation_replacement_labor_equivalent",
       "ecosystem_architectural_brainstorm_7_18_3_defensible_capital_ratios",
@@ -3295,7 +3319,7 @@
       "ecosystem_architectural_brainstorm_i_verified_feature_service_benefits_google_one_ai_pro_tier",
       "ecosystem_architectural_brainstorm_ii_financial_cost_avoidance_ledger"
     ],
-    "168": [
+    "170": [
       "ref_astro_databank",
       "ref_clinical_cohort",
       "ref_manual_registry",
@@ -3305,7 +3329,7 @@
       "schemas_horoscope_evaluation_v1_source_enum",
       "schemas_horoscope_evaluation_v1_source_type"
     ],
-    "169": [
+    "171": [
       "ref_empirical_sandbox",
       "ref_formal_smt",
       "ref_heuristic_unverified",
@@ -3315,7 +3339,7 @@
       "schemas_capability_contract_v1_verification_tier_enum",
       "schemas_capability_contract_v1_verification_tier_type"
     ],
-    "170": [
+    "172": [
       "ref_rodden_rating",
       "ref_source",
       "schemas_horoscope_evaluation_v1_citation_type",
@@ -3325,7 +3349,7 @@
       "schemas_horoscope_evaluation_v1_provenance_required",
       "schemas_horoscope_evaluation_v1_provenance_type"
     ],
-    "171": [
+    "173": [
       "report_handoff_validation",
       "report_handoff_validation_1_validation_status_matrix",
       "report_handoff_validation_2_completed_deliverables",
@@ -3335,7 +3359,7 @@
       "report_handoff_validation_6_remaining_technical_debt",
       "report_handoff_validation_handoff_validation_verification_ledger"
     ],
-    "172": [
+    "174": [
       "research_architectures_arch_rfc_004_workflow_externalization_freeze_1_1_what_do_we_call_this_process",
       "research_architectures_arch_rfc_004_workflow_externalization_freeze_1_executive_summary_epistemic_terminology",
       "research_architectures_arch_rfc_004_workflow_externalization_freeze_2_the_tripartite_ecosystem_lifecycle",
@@ -3345,7 +3369,7 @@
       "research_architectures_arch_rfc_004_workflow_externalization_freeze_5_archival_verification",
       "research_architectures_arch_rfc_004_workflow_externalization_freeze_architectural_rfc_arch_rfc_004_the_workflow_externalization_freeze_utilization_pivot"
     ],
-    "173": [
+    "175": [
       "research_architectures_arch_spec_001_ecie_compute_memory_1_1_the_epistemic_dilemma",
       "research_architectures_arch_spec_001_ecie_compute_memory_1_2_the_resolution_the_systems_architect_paradigm",
       "research_architectures_arch_spec_001_ecie_compute_memory_1_executive_philosophy_the_architect_vs_the_technician",
@@ -3355,7 +3379,7 @@
       "research_architectures_arch_spec_001_ecie_compute_memory_5_architectural_invariants_enforced_in_this_space",
       "research_architectures_arch_spec_001_ecie_compute_memory_architectural_charter_the_ecie_systems_architect_paradigm_clean_slate_compute_memory_co_design"
     ],
-    "174": [
+    "176": [
       "research_experiments_exp_classroom_mcp_001",
       "research_experiments_exp_classroom_mcp_001_1_objective_hypothesis",
       "research_experiments_exp_classroom_mcp_001_2_method",
@@ -3365,7 +3389,7 @@
       "research_experiments_exp_classroom_mcp_001_6_provenance",
       "research_experiments_exp_classroom_mcp_001_research_experiment_exp_classroom_mcp_001_live_read_only_verification_of_the_google_classroom_mcp_server"
     ],
-    "175": [
+    "177": [
       "research_experiments_exp_nisr_001_recon_probe_1_experimental_rationale_objective",
       "research_experiments_exp_nisr_001_recon_probe_2_falsifiable_hypotheses",
       "research_experiments_exp_nisr_001_recon_probe_3_stratified_10_target_reconnaissance_matrix",
@@ -3375,7 +3399,17 @@
       "research_experiments_exp_nisr_001_recon_probe_experiment_protocol_empirical_reconnaissance_of_nepal_s_public_information_substrate",
       "research_experiments_exp_nisr_001_recon_probe_primary_objective"
     ],
-    "176": [
+    "178": [
+      "research_experiments_fleet_003_1_system_topology_test_harness_configuration",
+      "research_experiments_fleet_003_2_test_suite_baseline_validation",
+      "research_experiments_fleet_003_3_physical_electron_process_telemetry_benchmark",
+      "research_experiments_fleet_003_4_real_world_engineering_problem_execution",
+      "research_experiments_fleet_003_5_artifacts_code_updates",
+      "research_experiments_fleet_003_experiment_verification_log_fleet_003_live_multi_worker_fleet_verification_physical_telemetry_benchmark",
+      "research_experiments_fleet_003_multi_stage_stage_execution_flow",
+      "research_experiments_fleet_003_telemetry_findings"
+    ],
+    "179": [
       "research_notebooklm_ecosystem_sources_06_graphify_knowledge_graph_and_ontology",
       "research_notebooklm_ecosystem_sources_06_graphify_knowledge_graph_and_ontology_1_graphify_knowledge_graph_topology",
       "research_notebooklm_ecosystem_sources_06_graphify_knowledge_graph_and_ontology_2_formal_capability_contracts_specification",
@@ -3385,7 +3419,17 @@
       "research_notebooklm_ecosystem_sources_06_graphify_knowledge_graph_and_ontology_god_nodes_central_bridges",
       "research_notebooklm_ecosystem_sources_06_graphify_knowledge_graph_and_ontology_knowledge_graph_traversal_querying"
     ],
-    "177": [
+    "180": [
+      "research_references_beie_complete_syllabus_i_to_iv_1_introduction_2_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_2_data_preprocessing_6_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_3_classification_12_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_4_association_analysis_10_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_5_cluster_analysis_9_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_6_2_ct_725_02_data_mining",
+      "research_references_beie_complete_syllabus_i_to_iv_6_anomaly_fraud_detection_3_hours",
+      "research_references_beie_complete_syllabus_i_to_iv_7_advanced_applications_3_hours"
+    ],
+    "181": [
       "research_references_beie_complete_syllabus_i_to_iv_1_introduction_to_aviation_4_hours",
       "research_references_beie_complete_syllabus_i_to_iv_2_aeronautical_communication_5_hours",
       "research_references_beie_complete_syllabus_i_to_iv_3_aeronautical_navigation_9_hours",
@@ -3395,7 +3439,7 @@
       "research_references_beie_complete_syllabus_i_to_iv_6_aeronautical_mobile_satellite_system_amss_and_global_navigation_satellite_system_gnss_4_hours",
       "research_references_beie_complete_syllabus_i_to_iv_7_basics_of_aircraft_avionics_equipment_5_hours"
     ],
-    "178": [
+    "182": [
       "schemas_ecosystem_verification_schema_generated_by_minlength",
       "schemas_ecosystem_verification_schema_generated_by_type",
       "schemas_ecosystem_verification_schema_manifest_kind_const",
@@ -3405,7 +3449,7 @@
       "schemas_ecosystem_verification_schema_properties_schema_version",
       "schemas_ecosystem_verification_schema_schema_version_const"
     ],
-    "179": [
+    "183": [
       "schemas_examples_downloader_scripts_contract",
       "schemas_examples_downloader_scripts_contract_capabilities",
       "schemas_examples_downloader_scripts_contract_location",
@@ -3415,7 +3459,7 @@
       "schemas_examples_downloader_scripts_contract_tracking_branch",
       "schemas_examples_downloader_scripts_contract_version"
     ],
-    "180": [
+    "184": [
       "schemas_examples_yt_dlp_live_contract",
       "schemas_examples_yt_dlp_live_contract_capabilities",
       "schemas_examples_yt_dlp_live_contract_location",
@@ -3425,7 +3469,7 @@
       "schemas_examples_yt_dlp_live_contract_tracking_branch",
       "schemas_examples_yt_dlp_live_contract_version"
     ],
-    "181": [
+    "185": [
       "schemas_horoscope_evaluation_v1_detected_yogas_items",
       "schemas_horoscope_evaluation_v1_detected_yogas_type",
       "schemas_horoscope_evaluation_v1_house_cusps_deg_items",
@@ -3435,7 +3479,7 @@
       "schemas_horoscope_evaluation_v1_verifiable_life_events_items",
       "schemas_horoscope_evaluation_v1_verifiable_life_events_type"
     ],
-    "182": [
+    "186": [
       "scripts_capture_ecosystem_screens",
       "scripts_capture_ecosystem_screens_cmd_capture_window",
       "scripts_capture_ecosystem_screens_cmd_scaffold",
@@ -3445,17 +3489,7 @@
       "scripts_capture_ecosystem_screens_rationale_71",
       "scripts_capture_ecosystem_screens_rationale_94"
     ],
-    "183": [
-      "sim_results_experiments_report",
-      "sim_results_experiments_report_causal_interpretation_and_limits",
-      "sim_results_experiments_report_distributional_robustness",
-      "sim_results_experiments_report_falsification_probes",
-      "sim_results_experiments_report_formal_model_and_assumptions",
-      "sim_results_experiments_report_strangler_ipu_experiment_report",
-      "sim_results_experiments_report_what_was_tested",
-      "sim_results_experiments_report_why_the_mechanism_should_help"
-    ],
-    "184": [
+    "187": [
       "sim_sweep_ipu_breakeven",
       "sim_sweep_ipu_breakeven_evaluate_conventional_pipeline",
       "sim_sweep_ipu_breakeven_evaluate_ipu_pipeline",
@@ -3465,7 +3499,7 @@
       "sim_sweep_ipu_breakeven_run_parameter_sweep",
       "sim_sweep_ipu_breakeven_sweepconfig"
     ],
-    "185": [
+    "188": [
       "tools_chat_archiver_skill",
       "tools_chat_archiver_skill_1_save_to_current_working_directory_repo",
       "tools_chat_archiver_skill_2_save_to_a_specific_folder_e_g_docs_chat_history_or_custom_path",
@@ -3475,7 +3509,7 @@
       "tools_chat_archiver_skill_chat_archiver_skill",
       "tools_chat_archiver_skill_execution_protocol"
     ],
-    "186": [
+    "189": [
       "tools_doc_archiver_skill",
       "tools_doc_archiver_skill_1_save_to_current_working_directory_repo",
       "tools_doc_archiver_skill_2_save_to_a_specific_folder_e_g_docs_or_research_transcripts",
@@ -3485,7 +3519,7 @@
       "tools_doc_archiver_skill_document_archiver_skill",
       "tools_doc_archiver_skill_execution_protocol"
     ],
-    "187": [
+    "190": [
       "tools_skills_agent_teams_orchestration_skill",
       "tools_skills_agent_teams_orchestration_skill_1_the_core_agent_team_architecture",
       "tools_skills_agent_teams_orchestration_skill_2_concurrency_isolation_invariants_critical",
@@ -3495,7 +3529,7 @@
       "tools_skills_agent_teams_orchestration_skill_agent_teams_orchestration_skill",
       "tools_skills_agent_teams_orchestration_skill_role_invariants"
     ],
-    "188": [
+    "191": [
       "tools_skills_chat_archiver_skill",
       "tools_skills_chat_archiver_skill_1_save_to_current_working_directory_repo",
       "tools_skills_chat_archiver_skill_2_save_to_a_specific_folder_e_g_docs_chat_history_or_custom_path",
@@ -3505,7 +3539,7 @@
       "tools_skills_chat_archiver_skill_chat_archiver_skill",
       "tools_skills_chat_archiver_skill_execution_protocol"
     ],
-    "189": [
+    "192": [
       "tools_skills_doc_archiver_skill",
       "tools_skills_doc_archiver_skill_1_save_to_current_working_directory_repo",
       "tools_skills_doc_archiver_skill_2_save_to_a_specific_folder_e_g_docs_or_research_transcripts",
@@ -3515,7 +3549,7 @@
       "tools_skills_doc_archiver_skill_document_archiver_skill",
       "tools_skills_doc_archiver_skill_execution_protocol"
     ],
-    "190": [
+    "193": [
       "tools_skills_github_workflow_references_multi_remote_sync",
       "tools_skills_github_workflow_references_multi_remote_sync_1_the_multi_remote_pattern",
       "tools_skills_github_workflow_references_multi_remote_sync_2_command_reference",
@@ -3525,7 +3559,7 @@
       "tools_skills_github_workflow_references_multi_remote_sync_non_windows_environments",
       "tools_skills_github_workflow_references_multi_remote_sync_windows_environment"
     ],
-    "191": [
+    "194": [
       "tools_skills_graphify_code_search_references_workflows",
       "tools_skills_graphify_code_search_references_workflows_developer_workflows_fast_implementation_search_with_graphify",
       "tools_skills_graphify_code_search_references_workflows_procedure",
@@ -3535,7 +3569,7 @@
       "tools_skills_graphify_code_search_references_workflows_workflow_4_tracing_control_data_flow_between_two_points",
       "tools_skills_graphify_code_search_references_workflows_workflow_5_deep_component_analysis"
     ],
-    "192": [
+    "195": [
       "tools_skills_portfolio_project_manager_skill",
       "tools_skills_portfolio_project_manager_skill_1_quick_ingestion_workflow_zero_token_manifest_mode",
       "tools_skills_portfolio_project_manager_skill_2_cli_single_command_mode",
@@ -3545,7 +3579,16 @@
       "tools_skills_portfolio_project_manager_skill_portfolio_project_manager_skill",
       "tools_skills_portfolio_project_manager_skill_preview_with_dry_run_recommended_first"
     ],
-    "193": [
+    "196": [
+      "agents",
+      "research_architectures_arch_rfc_001_record_keeping_standard",
+      "research_architectures_arch_rfc_004_workflow_externalization_freeze",
+      "research_decisions_dec_002_personal_rd_capstone_boundary",
+      "research_decisions_dec_003_main_branch_enforcement_alignment",
+      "research_invariants_inv_epi_001",
+      "schemas_evidence_policy"
+    ],
+    "197": [
       "agents_1_git_workflow_ecosystem_automation_critical_strict_enforcement",
       "agents_2_knowledge_graph_codebase_navigation_graphify",
       "agents_3_epistemic_governance_evidence_tiers_arch_rfc_001_arch_rfc_002",
@@ -3554,16 +3597,7 @@
       "agents_agent_rules_workflow_guidelines_brainstorm_ecosystem_orchestration",
       "agents_core_commands"
     ],
-    "194": [
-      "ecosystem_architectural_brainstorm",
-      "report_repository_audit",
-      "report_repository_audit_1_executive_summary",
-      "report_repository_audit_3_corrective_actions_summary",
-      "report_repository_audit_comprehensive_repository_epistemic_claims_audit",
-      "report_repository_audit_epistemic_claim_type_distribution",
-      "schemas_capability_ontology"
-    ],
-    "195": [
+    "198": [
       "graphify",
       "graphify_remove_stalegraphifyartifacts",
       "graphify_resolve_graphifypython",
@@ -3572,7 +3606,7 @@
       "graphify_write_status",
       "graphify_write_success"
     ],
-    "196": [
+    "199": [
       "ref_birth_nakshatra",
       "ref_chandra_rashi",
       "ref_detected_yogas",
@@ -3581,7 +3615,7 @@
       "ref_vimshottari_dasha_at_birth",
       "schemas_horoscope_evaluation_v1_astrological_features_required"
     ],
-    "197": [
+    "200": [
       "ref_capabilities",
       "ref_location",
       "ref_module",
@@ -3590,7 +3624,7 @@
       "ref_version",
       "schemas_capability_contract_v1_required"
     ],
-    "198": [
+    "201": [
       "ref_http",
       "ref_sse",
       "ref_stdio",
@@ -3599,16 +3633,7 @@
       "schemas_capability_contract_v1_transport_enum",
       "schemas_capability_contract_v1_transport_type"
     ],
-    "199": [
-      "ref_method",
-      "schemas_capability_contract_v1_json_ref_deterministic",
-      "schemas_ecosystem_verification_schema_defs_verification",
-      "schemas_ecosystem_verification_schema_json_ref_status",
-      "schemas_ecosystem_verification_schema_verification_additionalproperties",
-      "schemas_ecosystem_verification_schema_verification_required",
-      "schemas_ecosystem_verification_schema_verification_type"
-    ],
-    "200": [
+    "202": [
       "ref_recorded_at",
       "ref_source_commit",
       "ref_source_path",
@@ -3617,7 +3642,7 @@
       "schemas_ecosystem_verification_schema_provenance_required",
       "schemas_ecosystem_verification_schema_provenance_type"
     ],
-    "201": [
+    "203": [
       "research_architectures_arch_rfc_001_record_keeping_standard_1_executive_philosophy_inferior_to_none",
       "research_architectures_arch_rfc_001_record_keeping_standard_2_universal_artifact_taxonomy_addressing_matrix",
       "research_architectures_arch_rfc_001_record_keeping_standard_3_mandatory_frontmatter_metadata_standard",
@@ -3626,7 +3651,7 @@
       "research_architectures_arch_rfc_001_record_keeping_standard_architectural_rfc_arch_rfc_001_gold_standard_epistemic_record_keeping_taxonomy",
       "research_architectures_arch_rfc_001_record_keeping_standard_identifier_classification_schema"
     ],
-    "202": [
+    "204": [
       "research_architectures_arch_rfc_003_capstone_defense_standard_1_1_the_tragedy_of_the_typical_college_project_repo",
       "research_architectures_arch_rfc_003_capstone_defense_standard_1_2_the_dual_track_defense_strategy",
       "research_architectures_arch_rfc_003_capstone_defense_standard_1_executive_philosophy_the_college_capstone_reality_vs_the_industrial_standard",
@@ -3635,16 +3660,7 @@
       "research_architectures_arch_rfc_003_capstone_defense_standard_4_dual_track_academic_deliverables",
       "research_architectures_arch_rfc_003_capstone_defense_standard_architectural_rfc_arch_rfc_003_capstone_defense_academic_repository_standard"
     ],
-    "203": [
-      "research_experiments_exp_001_ipu_breakeven_sweep_1_research_questions_addressed",
-      "research_experiments_exp_001_ipu_breakeven_sweep_2_parameter_sweep_matrix",
-      "research_experiments_exp_001_ipu_breakeven_sweep_3_measured_metrics",
-      "research_experiments_exp_001_ipu_breakeven_sweep_evaluated_architectural_topologies",
-      "research_experiments_exp_001_ipu_breakeven_sweep_independent_variables",
-      "research_experiments_exp_001_ipu_breakeven_sweep_reproducible_pipeline_package",
-      "research_experiments_exp_001_ipu_breakeven_sweep_research_protocol_exp_001_ingress_boundary_reduction_break_even_parameter_sweep"
-    ],
-    "204": [
+    "205": [
       "research_plans_brl_c0_outreach_scripts",
       "research_plans_brl_c0_outreach_scripts_1_the_3_minute_casual_verbal_pitch_in_person_campus",
       "research_plans_brl_c0_outreach_scripts_2_the_1_paragraph_dm_template_whatsapp_telegram",
@@ -3653,7 +3669,7 @@
       "research_plans_brl_c0_outreach_scripts_5_the_graceful_pause_response",
       "research_plans_brl_c0_outreach_scripts_brainstorm_research_laboratory_cohort_0_outreach_communication_scripts"
     ],
-    "205": [
+    "206": [
       "research_references_beie_complete_syllabus_i_to_iv_1_ce_615_ce_655_engineering_economics",
       "research_references_beie_complete_syllabus_i_to_iv_1_sh_401_engineering_mathematics_i",
       "research_references_beie_complete_syllabus_i_to_iv_1_sh_451_engineering_mathematics_ii",
@@ -3662,7 +3678,7 @@
       "research_references_beie_complete_syllabus_i_to_iv_1_sh_655_sh_601_communication_english",
       "research_references_beie_complete_syllabus_i_to_iv_teaching_schedule_examination_scheme"
     ],
-    "206": [
+    "207": [
       "schemas_horoscope_evaluation_v1_astronomical_state_properties",
       "schemas_horoscope_evaluation_v1_ayanamsha_value_deg_type",
       "schemas_horoscope_evaluation_v1_local_sidereal_time_hours_type",
@@ -3671,7 +3687,7 @@
       "schemas_horoscope_evaluation_v1_properties_local_sidereal_time_hours",
       "schemas_horoscope_evaluation_v1_properties_obliquity_deg"
     ],
-    "207": [
+    "208": [
       "schemas_model_benchmark_schema",
       "schemas_model_benchmark_schema_additionalproperties",
       "schemas_model_benchmark_schema_description",
@@ -3680,7 +3696,7 @@
       "schemas_model_benchmark_schema_title",
       "schemas_model_benchmark_schema_type"
     ],
-    "208": [
+    "209": [
       "tools_skills_frontend_design_skill",
       "tools_skills_frontend_design_skill_design_principles",
       "tools_skills_frontend_design_skill_frontend_design",
@@ -3689,7 +3705,7 @@
       "tools_skills_frontend_design_skill_process_plan_review_against_the_brief_build_critique",
       "tools_skills_frontend_design_skill_restraint_and_self_critique"
     ],
-    "209": [
+    "210": [
       "tools_skills_split_to_prs_skill",
       "tools_skills_split_to_prs_skill_1_check_the_state",
       "tools_skills_split_to_prs_skill_2_propose_the_split",
@@ -3698,7 +3714,7 @@
       "tools_skills_split_to_prs_skill_hard_rules",
       "tools_skills_split_to_prs_skill_split_to_prs"
     ],
-    "210": [
+    "211": [
       "ecosystem_architectural_brainstorm_4_emergent_compound_workflows_the_why",
       "ecosystem_architectural_brainstorm_pipeline_a_the_high_bandwidth_rapid_learning_loop",
       "ecosystem_architectural_brainstorm_pipeline_b_the_autonomous_heavy_compute_auditing_loop",
@@ -3706,7 +3722,7 @@
       "ecosystem_architectural_brainstorm_pipeline_d_the_autonomous_invariant_arbitrage_discovery_loop",
       "ecosystem_architectural_brainstorm_pipeline_e_the_autonomous_youtube_content_transformer_cluster"
     ],
-    "211": [
+    "212": [
       "ecosystem_architectural_brainstorm_5_1_the_4_tier_architectural_stack",
       "ecosystem_architectural_brainstorm_5_2_the_non_invasive_tool_manifest_pattern_tool_manifest_json",
       "ecosystem_architectural_brainstorm_5_3_upgrading_to_semantic_capability_contracts_capability_contract_v1_json",
@@ -3714,7 +3730,7 @@
       "ecosystem_architectural_brainstorm_5_5_domain_feasibility_matrix_commercial_framing",
       "ecosystem_architectural_brainstorm_5_architectural_blueprint_the_4_tier_jarvis_engine"
     ],
-    "212": [
+    "213": [
       "ecosystem_architectural_brainstorm_7_4_five_horizon_result_forecast_0_to_36_months",
       "ecosystem_architectural_brainstorm_horizon_1_the_synthetic_invariant_rediscovery_benchmark_months_0_3",
       "ecosystem_architectural_brainstorm_horizon_2_real_world_api_state_machine_assurance_months_3_9",
@@ -3722,7 +3738,15 @@
       "ecosystem_architectural_brainstorm_horizon_4_cross_domain_regulatory_terms_arbitrage_months_18_36",
       "ecosystem_architectural_brainstorm_horizon_5_the_autonomous_systems_researcher_months_36"
     ],
-    "213": [
+    "214": [
+      "ref_claimed",
+      "ref_verified",
+      "ref_warn",
+      "schemas_ecosystem_verification_schema_properties_status",
+      "schemas_ecosystem_verification_schema_status_enum",
+      "schemas_ecosystem_verification_schema_status_type"
+    ],
+    "215": [
       "ref_sidereal_nirayana",
       "ref_tropical_sayana",
       "schemas_horoscope_evaluation_v1_coordinate_framework_default",
@@ -3730,7 +3754,7 @@
       "schemas_horoscope_evaluation_v1_coordinate_framework_type",
       "schemas_horoscope_evaluation_v1_properties_coordinate_framework"
     ],
-    "214": [
+    "216": [
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap",
       "research_notes_brainstorm_1page",
       "research_notes_ku_lab_outreach_tracker",
@@ -3738,7 +3762,7 @@
       "research_profile",
       "research_references_beie_complete_syllabus_i_to_iv"
     ],
-    "215": [
+    "217": [
       "research_architectures_arch_rfc_006_information_boundary",
       "research_architectures_arch_rfc_006_information_boundary_1_executive_summary_problem_statement",
       "research_architectures_arch_rfc_006_information_boundary_2_the_two_plane_security_partition",
@@ -3746,7 +3770,7 @@
       "research_architectures_arch_rfc_006_information_boundary_4_verification_conformance",
       "research_architectures_arch_rfc_006_information_boundary_arch_rfc_006_public_private_information_boundary_security_architecture"
     ],
-    "216": [
+    "218": [
       "research_daily_2026_09_19_1_schedule_priorities",
       "research_daily_2026_09_19_2026_09_19_daily_log",
       "research_daily_2026_09_19_2_active_projects_progress",
@@ -3754,7 +3778,7 @@
       "research_daily_2026_09_19_4_daily_learnings_conceptual_nodes",
       "research_daily_2026_09_19_5_tomorrow_s_context_agent_primer"
     ],
-    "217": [
+    "219": [
       "research_notebooklm_ecosystem_sources_04_future_roadmap_and_strategic_research",
       "research_notebooklm_ecosystem_sources_04_future_roadmap_and_strategic_research_1_flagship_research_wedge_headless_invariant_assurance_engine",
       "research_notebooklm_ecosystem_sources_04_future_roadmap_and_strategic_research_2_the_9_stage_engineering_r_d_sequence",
@@ -3762,7 +3786,7 @@
       "research_notebooklm_ecosystem_sources_04_future_roadmap_and_strategic_research_4_transparent_limitations_known_failure_modes",
       "research_notebooklm_ecosystem_sources_04_future_roadmap_and_strategic_research_document_4_strategic_future_roadmap_architectural_invariants"
     ],
-    "218": [
+    "220": [
       "schemas_capability_contract_v1_args_items",
       "schemas_capability_contract_v1_invariants_checked_description",
       "schemas_capability_contract_v1_invariants_checked_items",
@@ -3770,7 +3794,7 @@
       "schemas_capability_contract_v1_items_type",
       "schemas_capability_contract_v1_properties_invariants_checked"
     ],
-    "219": [
+    "221": [
       "schemas_capability_contract_v1_capabilities_description",
       "schemas_capability_contract_v1_capabilities_items",
       "schemas_capability_contract_v1_capabilities_minitems",
@@ -3778,7 +3802,7 @@
       "schemas_capability_contract_v1_items_ref",
       "schemas_capability_contract_v1_properties_capabilities"
     ],
-    "220": [
+    "222": [
       "schemas_ecosystem_verification",
       "schemas_ecosystem_verification_generated_by",
       "schemas_ecosystem_verification_json_schemas_ecosystem_verification_schema",
@@ -3786,7 +3810,7 @@
       "schemas_ecosystem_verification_projects",
       "schemas_ecosystem_verification_schema_version"
     ],
-    "221": [
+    "223": [
       "schemas_nepal_civic_service_v1",
       "schemas_nepal_civic_service_v1_description",
       "schemas_nepal_civic_service_v1_id",
@@ -3794,7 +3818,7 @@
       "schemas_nepal_civic_service_v1_title",
       "schemas_nepal_civic_service_v1_type"
     ],
-    "222": [
+    "224": [
       "templates_daily_note_1_schedule_priorities",
       "templates_daily_note_2_active_projects_progress",
       "templates_daily_note_3_meetings_transcripts",
@@ -3802,7 +3826,7 @@
       "templates_daily_note_5_tomorrow_s_context_agent_primer",
       "templates_daily_note_date_yyyy_mm_dd_daily_log"
     ],
-    "223": [
+    "225": [
       "templates_meeting_note",
       "templates_meeting_note_1_executive_summary",
       "templates_meeting_note_2_core_concepts_takeaways",
@@ -3810,7 +3834,7 @@
       "templates_meeting_note_4_verification_check_before_finishing_slide_37_gate",
       "templates_meeting_note_tp_date_now_yyyy_mm_dd_meeting_tp_file_title"
     ],
-    "224": [
+    "226": [
       "tools_skills_graphify_code_search_references_graph_recipes",
       "tools_skills_graphify_code_search_references_graph_recipes_1_finding_god_nodes_architectural_hubs",
       "tools_skills_graphify_code_search_references_graph_recipes_2_finding_isolated_or_dead_implementations",
@@ -3818,7 +3842,7 @@
       "tools_skills_graphify_code_search_references_graph_recipes_4_exporting_subgraph_as_markdown_documentation",
       "tools_skills_graphify_code_search_references_graph_recipes_advanced_graph_query_recipes"
     ],
-    "225": [
+    "227": [
       "tools_skills_graphify_references_query",
       "tools_skills_graphify_references_query_for_graphify_explain",
       "tools_skills_graphify_references_query_for_graphify_path",
@@ -3826,447 +3850,449 @@
       "tools_skills_graphify_references_query_step_0_constrained_query_expansion_required_before_traversal",
       "tools_skills_graphify_references_query_step_1_traversal"
     ],
-    "226": [
+    "228": [
       "ecosystem_architectural_brainstorm_7_16_current_state_audit_phase_0_8_human_in_the_loop_to_phase_1_0_autonomous_walk_away",
       "ecosystem_architectural_brainstorm_phase_0_8_human_operated_distributed_cognition_where_you_are_today",
       "ecosystem_architectural_brainstorm_phase_1_0_machine_operated_distributed_cognition_the_immediate_target",
       "ecosystem_architectural_brainstorm_the_crossing_condition_the_walk_away_benchmark",
       "ecosystem_architectural_brainstorm_the_north_star_metric_the_autonomy_ratio"
     ],
-    "227": [
+    "229": [
       "ecosystem_architectural_brainstorm_7_17_capital_allocation_matrix_subscriptions_vs_machine_facing_api_credits",
       "ecosystem_architectural_brainstorm_the_10_task_diagnostic_benchmark",
       "ecosystem_architectural_brainstorm_the_fundamental_dichotomy_consumer_web_uis_vs_programmatic_api_sockets",
       "ecosystem_architectural_brainstorm_the_headstart_powerup_evaluation_where_to_invest_first",
       "ecosystem_architectural_brainstorm_the_systemic_r_d_vectorized_resource_model"
     ],
-    "228": [
+    "230": [
       "ecosystem_architectural_brainstorm_7_5_deviation_safeguards_the_4_critical_traps",
       "ecosystem_architectural_brainstorm_trap_1_the_grand_unified_platform_quagmire",
       "ecosystem_architectural_brainstorm_trap_2_the_formalization_hallucination_trap",
       "ecosystem_architectural_brainstorm_trap_3_the_mock_fidelity_mirage",
       "ecosystem_architectural_brainstorm_trap_4_the_legal_universal_open_texture_fallacy"
     ],
-    "229": [
+    "231": [
       "ref_is_statutory_free",
       "ref_standard_fee_npr",
       "schemas_nepal_civic_service_v1_fee_structure_required",
       "schemas_nepal_civic_service_v1_fee_structure_type",
       "schemas_nepal_civic_service_v1_properties_fee_structure"
     ],
-    "230": [
+    "232": [
       "ref_transport",
       "schemas_capability_contract_v1_mcp_endpoint_description",
       "schemas_capability_contract_v1_mcp_endpoint_required",
       "schemas_capability_contract_v1_mcp_endpoint_type",
       "schemas_capability_contract_v1_properties_mcp_endpoint"
     ],
-    "231": [
+    "233": [
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_5_1_local_research_lab_targets_kathmandu_valley",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_5_2_the_international_research_pipeline",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_5_3_reusable_research_application_pack_aaradhya_research_pack",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_5_4_datacamp_assessed_certification_engine",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_5_layer_3_execution_external_calibration_opportunity_pipeline"
     ],
-    "232": [
+    "234": [
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_7_phased_timeline_board_exam_defense_holiday_runway_semester_launch",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_phase_0a_research_pack_response_management_oct_5_oct_15_2026_priority_p1",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_phase_0b_epfl_e3_submission_systems_rebuild_sprint_oct_16_nov_1_2026_priority_p1",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_phase_1_post_holiday_semester_launch_nov_2026_onward_priority_p1",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_phase_1_the_board_exam_defense_lockdown_sept_24_oct_4_2026_priority_p0"
     ],
-    "233": [
+    "235": [
       "research_architectures_arch_rfc_002_multi_model_council_1_executive_philosophy_the_multi_perspective_cognitive_council",
       "research_architectures_arch_rfc_002_multi_model_council_2_specialized_model_roles_comparative_advantages",
       "research_architectures_arch_rfc_002_multi_model_council_3_the_4_stage_council_consensus_protocol",
       "research_architectures_arch_rfc_002_multi_model_council_4_discrepancy_prevention_rules",
       "research_architectures_arch_rfc_002_multi_model_council_architectural_rfc_arch_rfc_002_the_model_plurality_multi_perspective_council_protocol"
     ],
-    "234": [
+    "236": [
       "research_decisions_dec_001_memory_stratification",
       "research_decisions_dec_001_memory_stratification_1_context_problem",
       "research_decisions_dec_001_memory_stratification_2_decision",
       "research_decisions_dec_001_memory_stratification_3_consequences_empirical_verification",
       "research_decisions_dec_001_memory_stratification_decision_record_dec_001_memory_stratification_retrieval_pruning"
     ],
-    "235": [
+    "237": [
+      "research_decisions_dec_002_personal_rd_capstone_boundary_1_context_problem",
+      "research_decisions_dec_002_personal_rd_capstone_boundary_2_decisions",
+      "research_decisions_dec_002_personal_rd_capstone_boundary_3_consequences_downstream_actions_status_as_of_2026_09_23",
+      "research_decisions_dec_002_personal_rd_capstone_boundary_4_verification_anchors",
+      "research_decisions_dec_002_personal_rd_capstone_boundary_decision_record_dec_002_personal_r_d_duo_capstone_boundary_audit_evidence_discipline"
+    ],
+    "238": [
       "research_fellows_template_1_technical_competencies_toolchain",
       "research_fellows_template_2_active_quest_assignments_deliverables",
       "research_fellows_template_3_verified_artifacts_authorship_ledger",
       "research_fellows_template_4_contributor_agreement_sign_off",
       "research_fellows_template_contributor_profile_full_name"
     ],
-    "236": [
+    "239": [
       "research_invariants_inv_epi_001_1_the_core_invariant_statement",
       "research_invariants_inv_epi_001_2_rationale_epistemic_grounding",
       "research_invariants_inv_epi_001_4_operational_recognition_automation_criteria",
       "research_invariants_inv_epi_001_architectural_invariant_inv_epi_001_verbatim_conversational_logging",
       "research_invariants_inv_epi_001_automated_archival_utility"
     ],
-    "237": [
+    "240": [
       "research_notes_brainstorm_1page_1_architectural_mission",
       "research_notes_brainstorm_1page_2_dual_layer_deterministic_verification_gate",
       "research_notes_brainstorm_1page_3_quantitative_verification_benchmark_inv_bmk_001",
       "research_notes_brainstorm_1page_4_what_this_demonstrates_to_research_labs",
       "research_notes_brainstorm_1page_brainstorm_research_ecosystem_capability_mesh_verification_engine"
     ],
-    "238": [
+    "241": [
       "research_notes_spark_1page_1_problem_statement_challenge",
       "research_notes_spark_1page_2_architectural_innovation_two_layer_hierarchical_gating",
       "research_notes_spark_1page_3_quantitative_benchmarks_empirical_proof",
       "research_notes_spark_1page_4_technical_transferability_to_research_environments",
       "research_notes_spark_1page_spark_smart_protection_alerting_resilient_kit"
     ],
-    "239": [
+    "242": [
       "research_references_beie_complete_syllabus_i_to_iv_3_energy_environment_and_society_ex_758",
       "research_references_beie_complete_syllabus_i_to_iv_components",
       "research_references_beie_complete_syllabus_i_to_iv_evaluation_scheme",
       "research_references_beie_complete_syllabus_i_to_iv_objective",
       "research_references_beie_complete_syllabus_i_to_iv_project_ii_ex_755"
     ],
-    "240": [
+    "243": [
       "scripts_clipboard_downloader",
       "scripts_clipboard_downloader_get_clipboardurl",
       "scripts_clipboard_downloader_resolve_cookieargs",
       "scripts_clipboard_downloader_show_notification",
       "scripts_clipboard_downloader_update_ytdlpnightly"
     ],
-    "241": [
+    "244": [
       "tools_skills_skill_development_skill_auto_discovery",
       "tools_skills_skill_development_skill_no_packaging_needed",
       "tools_skills_skill_development_skill_plugin_specific_considerations",
       "tools_skills_skill_development_skill_skill_location_in_plugins",
       "tools_skills_skill_development_skill_testing_in_plugins"
     ],
-    "242": [
+    "245": [
       "tools_skills_skill_development_skill_common_mistakes_to_avoid",
       "tools_skills_skill_development_skill_mistake_1_weak_trigger_description",
       "tools_skills_skill_development_skill_mistake_2_too_much_in_skill_md",
       "tools_skills_skill_development_skill_mistake_3_second_person_writing",
       "tools_skills_skill_development_skill_mistake_4_missing_resource_references"
     ],
-    "243": [
+    "246": [
       "tools_skills_skill_development_skill_progressive_disclosure_in_practice",
       "tools_skills_skill_development_skill_what_goes_in_examples",
       "tools_skills_skill_development_skill_what_goes_in_references",
       "tools_skills_skill_development_skill_what_goes_in_scripts",
       "tools_skills_skill_development_skill_what_goes_in_skill_md"
     ],
-    "244": [
+    "247": [
       "ecosystem_architectural_brainstorm_7_14_externalized_epistemic_memory_falsifiable_hypothesis_card_schema",
       "ecosystem_architectural_brainstorm_epistemic_repository_architecture",
       "ecosystem_architectural_brainstorm_the_hypothesis_card_standard_research_hypotheses_hyp_template_yaml",
       "ecosystem_architectural_brainstorm_the_llm_consensus_trap"
     ],
-    "245": [
+    "248": [
       "ecosystem_architectural_brainstorm_7_15_the_worker_session_runtime_resolving_the_last_mile_consumer_fleet_bottleneck",
       "ecosystem_architectural_brainstorm_the_3_stage_implementation_sequencing",
       "ecosystem_architectural_brainstorm_the_5_part_control_loop_of_the_worker_session_runtime_wsr",
       "ecosystem_architectural_brainstorm_the_core_invariant_the_task_belongs_to_the_orchestrator_not_the_worker"
     ],
-    "246": [
+    "249": [
       "ecosystem_architectural_brainstorm_7_9_economic_strategy_zero_cost_bootstrapping_the_superlinear_compute_threshold",
       "ecosystem_architectural_brainstorm_economic_telemetry_metrics",
       "ecosystem_architectural_brainstorm_the_4_scaling_thresholds",
       "ecosystem_architectural_brainstorm_the_capital_asymmetry_why_constraints_breed_superior_architecture"
     ],
-    "247": [
+    "250": [
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_4_the_three_project_sequential_execution_roadmap",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_project_1_rebuild_sbr_white_box_audit_hardware_control_layer",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_project_2_integrate_perception_to_embedded_control_systems_layer",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_project_3_research_invariant_assurance_benchmark_research_layer"
     ],
-    "248": [
+    "251": [
       "research_architectures_readme_active_architectural_charters",
       "research_architectures_readme_methodological_invariants",
       "research_architectures_readme_research_architectures_hub",
       "research_architectures_readme_verbatim_provenance_logs"
     ],
-    "249": [
+    "252": [
       "research_experiments_inv_template",
       "research_experiments_inv_template_experiment_log_inv_id",
       "research_experiments_inv_template_findings_epistemic_classification",
       "research_experiments_inv_template_quantitative_metrics"
     ],
-    "250": [
+    "253": [
       "research_invariants_inv_mem_001_1_the_energy_chasm_invariant",
       "research_invariants_inv_mem_001_2_the_uncoalesced_burst_penalty_invariant",
       "research_invariants_inv_mem_001_3_the_isolated_scalar_reduction_boundary_bound",
       "research_invariants_inv_mem_001_invariant_spec_inv_mem_001_the_von_neumann_chasm_coalescing_bounds"
     ],
-    "251": [
+    "254": [
       "research_notes_ku_lab_outreach_tracker_1_active_outreach_pipeline",
       "research_notes_ku_lab_outreach_tracker_2_preparedness_packet_collateral_ready_for_replies",
       "research_notes_ku_lab_outreach_tracker_3_protocol_for_responses",
       "research_notes_ku_lab_outreach_tracker_kathmandu_university_research_lab_outreach_tracker"
     ],
-    "252": [
+    "255": [
       "research_references_beie_complete_syllabus_i_to_iv_1_informal_reports_6_hours",
       "research_references_beie_complete_syllabus_i_to_iv_2_project_field_report_3_hours",
       "research_references_beie_complete_syllabus_i_to_iv_3_formal_report_9_hours",
       "research_references_beie_complete_syllabus_i_to_iv_unit_iv_reports_18_hours"
     ],
-    "253": [
+    "256": [
       "research_references_beie_complete_syllabus_i_to_iv_1_intensive_reading_8_hours",
       "research_references_beie_complete_syllabus_i_to_iv_2_extensive_reading_5_hours",
       "research_references_beie_complete_syllabus_i_to_iv_3_contextual_grammar_2_hours",
       "research_references_beie_complete_syllabus_i_to_iv_unit_i_reading_15_hours"
     ],
-    "254": [
+    "257": [
       "schemas_capability_contract_v1_additionalproperties_type",
       "schemas_capability_contract_v1_env_additionalproperties",
       "schemas_capability_contract_v1_env_type",
       "schemas_capability_contract_v1_properties_env"
     ],
-    "255": [
+    "258": [
       "schemas_capability_contract_v1_id_description",
       "schemas_capability_contract_v1_id_pattern",
       "schemas_capability_contract_v1_id_type",
       "schemas_capability_contract_v1_properties_id"
     ],
-    "256": [
+    "259": [
       "schemas_capability_contract_v1_properties_schema",
       "schemas_capability_contract_v1_schema_description",
       "schemas_capability_contract_v1_schema_format",
       "schemas_capability_contract_v1_schema_type"
     ],
-    "257": [
+    "260": [
       "schemas_horoscope_evaluation_v1_ascendant_deg_maximum",
       "schemas_horoscope_evaluation_v1_ascendant_deg_minimum",
       "schemas_horoscope_evaluation_v1_ascendant_deg_type",
       "schemas_horoscope_evaluation_v1_properties_ascendant_deg"
     ],
-    "258": [
+    "261": [
       "schemas_horoscope_evaluation_v1_house_cusps_deg_maxitems",
       "schemas_horoscope_evaluation_v1_house_cusps_deg_minitems",
       "schemas_horoscope_evaluation_v1_house_cusps_deg_type",
       "schemas_horoscope_evaluation_v1_properties_house_cusps_deg"
     ],
-    "259": [
+    "262": [
       "schemas_horoscope_evaluation_v1_midheaven_deg_maximum",
       "schemas_horoscope_evaluation_v1_midheaven_deg_minimum",
       "schemas_horoscope_evaluation_v1_midheaven_deg_type",
       "schemas_horoscope_evaluation_v1_properties_midheaven_deg"
     ],
-    "260": [
+    "263": [
       "schemas_model_benchmark_schema_pass_rate_percent_maximum",
       "schemas_model_benchmark_schema_pass_rate_percent_minimum",
       "schemas_model_benchmark_schema_pass_rate_percent_type",
       "schemas_model_benchmark_schema_properties_pass_rate_percent"
     ],
-    "261": [
+    "264": [
       "tools_skills_graphify_references_add_watch",
       "tools_skills_graphify_references_add_watch_for_graphify_add",
       "tools_skills_graphify_references_add_watch_for_watch",
       "tools_skills_graphify_references_add_watch_graphify_reference_add_a_url_and_watch_a_folder"
     ],
-    "262": [
+    "265": [
       "tools_skills_graphify_references_hooks",
       "tools_skills_graphify_references_hooks_for_git_commit_hook",
       "tools_skills_graphify_references_hooks_for_native_claude_md_integration",
       "tools_skills_graphify_references_hooks_graphify_reference_commit_hook_and_native_claude_md_integration"
     ],
-    "263": [
+    "266": [
       "tools_skills_graphify_references_update",
       "tools_skills_graphify_references_update_for_cluster_only",
       "tools_skills_graphify_references_update_for_update_incremental_re_extraction",
       "tools_skills_graphify_references_update_graphify_reference_incremental_update_and_cluster_only"
     ],
-    "264": [
+    "267": [
       "tools_skills_skill_development_skill_complete_skill",
       "tools_skills_skill_development_skill_minimal_skill",
       "tools_skills_skill_development_skill_quick_reference",
       "tools_skills_skill_development_skill_standard_skill_recommended"
     ],
-    "265": [
+    "268": [
       "tools_skills_skill_development_skill_imperative_infinitive_form",
       "tools_skills_skill_development_skill_objective_instructional_language",
       "tools_skills_skill_development_skill_third_person_in_description",
       "tools_skills_skill_development_skill_writing_style_requirements"
     ],
-    "266": [
+    "269": [
       "tools_validate_ecosystem",
       "tools_validate_ecosystem_fail",
       "tools_validate_ecosystem_rationale_1",
       "tools_validate_ecosystem_validate"
     ],
-    "267": [
+    "270": [
       "research_architectures_arch_spec_002_ingestion_processing_unit_1_1_the_revolutionary_fallacy_vs_the_evolutionary_invariant",
       "research_architectures_arch_spec_002_ingestion_processing_unit_1_2_the_core_thesis_ingress_boundary_reduction",
       "research_architectures_arch_spec_002_ingestion_processing_unit_1_executive_philosophy_the_strangler_fig_evolutionary_transition"
     ],
-    "268": [
-      "research_fellows_readme_brainstorm_research_laboratory_fellows_contributors_directory",
-      "research_fellows_readme_contributor_ranks_progression",
-      "research_fellows_readme_onboarding_procedure"
-    ],
-    "269": [
+    "271": [
       "research_references_beie_complete_syllabus_i_to_iv_1_editing_mla_apa_2_hours",
       "research_references_beie_complete_syllabus_i_to_iv_2_writing_notices_with_agenda_and_minutes_2_hours",
       "research_references_beie_complete_syllabus_i_to_iv_unit_ii_introduction_to_technical_writing_process_and_meeting_4_hours"
     ],
-    "270": [
+    "272": [
       "research_references_beie_complete_syllabus_i_to_iv_be_ecie_year_ii_part_i_syllabus",
       "research_references_beie_complete_syllabus_i_to_iv_year_ii_part_i",
       "research_references_beie_complete_syllabus_i_to_iv_year_iv_part_i"
     ],
-    "271": [
+    "273": [
       "research_references_beie_complete_syllabus_i_to_iv_language_lab_30_hours",
       "research_references_beie_complete_syllabus_i_to_iv_unit_i_listening_12_hours",
       "research_references_beie_complete_syllabus_i_to_iv_unit_ii_speaking_18_hours"
     ],
-    "272": [
+    "274": [
       "schemas_capability_contract_v1_description_description",
       "schemas_capability_contract_v1_description_type",
       "schemas_capability_contract_v1_properties_description"
     ],
-    "273": [
+    "275": [
       "schemas_capability_contract_v1_deterministic_description",
       "schemas_capability_contract_v1_deterministic_type",
       "schemas_capability_contract_v1_properties_deterministic"
     ],
-    "274": [
+    "276": [
       "schemas_capability_contract_v1_location_description",
       "schemas_capability_contract_v1_location_type",
       "schemas_capability_contract_v1_properties_location"
     ],
-    "275": [
+    "277": [
       "schemas_capability_contract_v1_outputs_description",
       "schemas_capability_contract_v1_outputs_type",
       "schemas_capability_contract_v1_properties_outputs"
     ],
-    "276": [
+    "278": [
       "schemas_capability_contract_v1_properties_side_effects",
       "schemas_capability_contract_v1_side_effects_description",
       "schemas_capability_contract_v1_side_effects_type"
     ],
-    "277": [
+    "279": [
       "schemas_capability_contract_v1_properties_tracking_branch",
       "schemas_capability_contract_v1_tracking_branch_description",
       "schemas_capability_contract_v1_tracking_branch_type"
     ],
-    "278": [
+    "280": [
       "schemas_model_benchmark_schema_completion_tokens_minimum",
       "schemas_model_benchmark_schema_completion_tokens_type",
       "schemas_model_benchmark_schema_properties_completion_tokens"
     ],
-    "279": [
+    "281": [
       "schemas_model_benchmark_schema_evaluated_at_format",
       "schemas_model_benchmark_schema_evaluated_at_type",
       "schemas_model_benchmark_schema_properties_evaluated_at"
     ],
-    "280": [
+    "282": [
       "schemas_model_benchmark_schema_latency_seconds_minimum",
       "schemas_model_benchmark_schema_latency_seconds_type",
       "schemas_model_benchmark_schema_properties_latency_seconds"
     ],
-    "281": [
+    "283": [
       "schemas_model_benchmark_schema_properties_rework_count",
       "schemas_model_benchmark_schema_rework_count_minimum",
       "schemas_model_benchmark_schema_rework_count_type"
     ],
-    "282": [
+    "284": [
       "schemas_model_benchmark_schema_properties_tokens_total",
       "schemas_model_benchmark_schema_tokens_total_minimum",
       "schemas_model_benchmark_schema_tokens_total_type"
     ],
-    "283": [
+    "285": [
       "scripts_create_c0_intake_form",
       "scripts_create_c0_intake_form_addcomfortquestion",
       "scripts_create_c0_intake_form_createbrlcohort0form"
     ],
-    "284": [
+    "286": [
       "sim_invariant_engine_sandbox_replay_py_any",
       "sim_invariant_engine_sandbox_replay_rationale_31",
       "sim_invariant_engine_sandbox_replay_sandboxreplayengine_replay_counterexample"
     ],
-    "285": [
+    "287": [
       "sim_readme",
       "sim_readme_strangler_ipu_pipeline_runner",
       "sim_readme_strangler_ipu_reproducibility_package"
     ],
-    "286": [
+    "288": [
       "tools_skills_graphify_references_github_and_merge",
       "tools_skills_graphify_references_github_and_merge_graphify_reference_github_clone_and_cross_repo_merge",
       "tools_skills_graphify_references_github_and_merge_step_0_clone_github_repo_s_only_if_a_github_url_was_given"
     ],
-    "287": [
+    "289": [
       "tools_skills_graphify_references_transcribe",
       "tools_skills_graphify_references_transcribe_graphify_reference_transcribe_video_and_audio",
       "tools_skills_graphify_references_transcribe_step_2_5_transcribe_video_audio_files_only_if_video_files_detected"
     ],
-    "288": [
+    "290": [
       "audit",
       "audit_sh__entry"
     ],
-    "289": [
+    "291": [
       "research_references_beie_complete_syllabus_i_to_iv_1_ex_716_ex_752_rf_and_microwave_engineering",
       "research_references_beie_complete_syllabus_i_to_iv_elective_i_options_in_this_document"
     ],
-    "290": [
+    "292": [
       "research_references_beie_complete_syllabus_i_to_iv_1_introduction",
       "research_references_beie_complete_syllabus_i_to_iv_unit_iii_writing_proposal_6_hours"
     ],
-    "291": [
+    "293": [
       "research_references_beie_complete_syllabus_i_to_iv_2_ct_658_ct_701_project_management",
       "research_references_beie_complete_syllabus_i_to_iv_prescribed_books"
     ],
-    "292": [
+    "294": [
       "research_references_beie_complete_syllabus_i_to_iv_be_ecie_year_i_part_i_syllabus",
       "research_references_beie_complete_syllabus_i_to_iv_year_i_part_i"
     ],
-    "293": [
+    "295": [
       "research_references_beie_complete_syllabus_i_to_iv_be_ecie_year_i_part_ii_syllabus",
       "research_references_beie_complete_syllabus_i_to_iv_year_i_part_ii"
     ],
-    "294": [
+    "296": [
       "research_references_beie_complete_syllabus_i_to_iv_be_ecie_year_ii_part_ii_syllabus",
       "research_references_beie_complete_syllabus_i_to_iv_year_ii_part_ii"
     ],
-    "295": [
+    "297": [
       "research_references_beie_complete_syllabus_i_to_iv_be_ecie_year_iii_part_i_syllabus",
       "research_references_beie_complete_syllabus_i_to_iv_year_iii_part_i"
     ],
-    "296": [
+    "298": [
       "research_references_beie_complete_syllabus_i_to_iv_be_ecie_year_iii_part_ii_syllabus",
       "research_references_beie_complete_syllabus_i_to_iv_year_iii_part_ii"
     ],
-    "297": [
+    "299": [
       "research_references_beie_complete_syllabus_i_to_iv_beie_iv_ii_study_syllabus_curriculum_ioe_kec",
       "research_references_beie_complete_syllabus_i_to_iv_year_iv_part_ii"
     ],
-    "298": [
+    "300": [
       "scripts_add_brl_to_google_calendar",
       "scripts_add_brl_to_google_calendar_addbrlcohort0calendar"
     ],
-    "299": [
+    "301": [
       "scripts_extract_fuse_notebook_plots",
       "scripts_extract_fuse_notebook_plots_inspect_notebook"
     ],
-    "300": [
+    "302": [
       "sim",
       "sim_sh__entry"
     ],
-    "301": [
+    "303": [
       "tools_skills_graphify_references_extraction_spec",
       "tools_skills_graphify_references_extraction_spec_graphify_reference_extraction_subagent_prompt"
     ],
-    "302": [
+    "304": [
       "scripts_bootstrap_environment"
     ],
-    "303": [
+    "305": [
       "scripts_list_portfolio_projects"
     ],
-    "304": [
+    "306": [
       "scripts_setup_hotkeys"
     ],
-    "305": [
+    "307": [
       "scripts_setup_user_shell_folders"
     ],
-    "306": [
+    "308": [
       "scripts_yt"
     ],
-    "307": [
+    "309": [
       "scripts_yt_music"
     ]
   },
@@ -4276,22 +4302,22 @@
     "2": 0.04081632653061224,
     "3": 0.0425531914893617,
     "4": 0.045454545454545456,
-    "5": 0.05,
-    "6": 0.05263157894736842,
-    "7": 0.05555555555555555,
+    "5": 0.05263157894736842,
+    "6": 0.05555555555555555,
+    "7": 0.058823529411764705,
     "8": 0.11182795698924732,
     "9": 0.10837438423645321,
     "10": 0.06896551724137931,
     "11": 0.12698412698412698,
     "12": 0.12962962962962962,
     "13": 0.07142857142857142,
-    "14": 0.07142857142857142,
-    "15": 0.07407407407407407,
-    "16": 0.07692307692307693,
-    "17": 0.18461538461538463,
-    "18": 0.21,
-    "19": 0.13333333333333333,
-    "20": 0.08333333333333333,
+    "14": 0.07407407407407407,
+    "15": 0.07692307692307693,
+    "16": 0.18461538461538463,
+    "17": 0.21,
+    "18": 0.13333333333333333,
+    "19": 0.08333333333333333,
+    "20": 0.14285714285714285,
     "21": 0.09090909090909091,
     "22": 0.09090909090909091,
     "23": 0.09090909090909091,
@@ -4300,18 +4326,18 @@
     "26": 0.09523809523809523,
     "27": 0.09523809523809523,
     "28": 0.09523809523809523,
-    "29": 0.20476190476190476,
+    "29": 0.09523809523809523,
     "30": 0.09523809523809523,
     "31": 0.09523809523809523,
-    "32": 0.1,
-    "33": 0.1,
-    "34": 0.1631578947368421,
+    "32": 0.09523809523809523,
+    "33": 0.10526315789473684,
+    "34": 0.1,
     "35": 0.1,
     "36": 0.1,
-    "37": 0.1,
-    "38": 0.10526315789473684,
-    "39": 0.17543859649122806,
-    "40": 0.10526315789473684,
+    "37": 0.1631578947368421,
+    "38": 0.1,
+    "39": 0.1,
+    "40": 0.21578947368421053,
     "41": 0.10526315789473684,
     "42": 0.10526315789473684,
     "43": 0.10526315789473684,
@@ -4319,43 +4345,43 @@
     "45": 0.10526315789473684,
     "46": 0.10526315789473684,
     "47": 0.10526315789473684,
-    "48": 0.13450292397660818,
-    "49": 0.1111111111111111,
+    "48": 0.10526315789473684,
+    "49": 0.13450292397660818,
     "50": 0.1111111111111111,
     "51": 0.1111111111111111,
     "52": 0.1111111111111111,
     "53": 0.1111111111111111,
-    "54": 0.11764705882352941,
+    "54": 0.1111111111111111,
     "55": 0.11764705882352941,
-    "56": 0.125,
-    "57": 0.11764705882352941,
-    "58": 0.125,
-    "59": 0.24166666666666667,
+    "56": 0.11764705882352941,
+    "57": 0.125,
+    "58": 0.11764705882352941,
+    "59": 0.125,
     "60": 0.125,
     "61": 0.125,
     "62": 0.125,
-    "63": 0.25,
+    "63": 0.125,
     "64": 0.125,
-    "65": 0.125,
-    "66": 0.1523809523809524,
-    "67": 0.13333333333333333,
-    "68": 0.13333333333333333,
+    "65": 0.25,
+    "66": 0.125,
+    "67": 0.125,
+    "68": 0.1523809523809524,
     "69": 0.13333333333333333,
-    "70": 0.20952380952380953,
-    "71": 0.14285714285714285,
-    "72": 0.15384615384615385,
+    "70": 0.13333333333333333,
+    "71": 0.20952380952380953,
+    "72": 0.2857142857142857,
     "73": 0.14285714285714285,
-    "74": 0.14285714285714285,
+    "74": 0.15384615384615385,
     "75": 0.14285714285714285,
     "76": 0.14285714285714285,
-    "77": 0.5054945054945055,
-    "78": 0.15384615384615385,
-    "79": 0.15384615384615385,
+    "77": 0.14285714285714285,
+    "78": 0.14285714285714285,
+    "79": 0.5054945054945055,
     "80": 0.15384615384615385,
     "81": 0.15384615384615385,
     "82": 0.15384615384615385,
     "83": 0.15384615384615385,
-    "84": 0.25757575757575757,
+    "84": 0.15384615384615385,
     "85": 0.16666666666666666,
     "86": 0.16666666666666666,
     "87": 0.18181818181818182,
@@ -4366,11 +4392,11 @@
     "92": 0.16666666666666666,
     "93": 0.16666666666666666,
     "94": 0.16666666666666666,
-    "95": 0.2727272727272727,
+    "95": 0.16666666666666666,
     "96": 0.16666666666666666,
-    "97": 0.16666666666666666,
-    "98": 0.18181818181818182,
-    "99": 0.18181818181818182,
+    "97": 0.2727272727272727,
+    "98": 0.16666666666666666,
+    "99": 0.16666666666666666,
     "100": 0.18181818181818182,
     "101": 0.18181818181818182,
     "102": 0.18181818181818182,
@@ -4388,8 +4414,8 @@
     "114": 0.18181818181818182,
     "115": 0.18181818181818182,
     "116": 0.18181818181818182,
-    "117": 0.18181818181818182,
-    "118": 0.18181818181818182,
+    "117": 0.2,
+    "118": 0.2,
     "119": 0.2,
     "120": 0.2,
     "121": 0.2,
@@ -4404,9 +4430,9 @@
     "130": 0.2,
     "131": 0.2,
     "132": 0.2,
-    "133": 0.3111111111111111,
-    "134": 0.2,
-    "135": 0.25,
+    "133": 0.2,
+    "134": 0.3111111111111111,
+    "135": 0.2,
     "136": 0.2777777777777778,
     "137": 0.2222222222222222,
     "138": 0.2222222222222222,
@@ -4418,8 +4444,8 @@
     "144": 0.2222222222222222,
     "145": 0.2222222222222222,
     "146": 0.2222222222222222,
-    "147": 0.2777777777777778,
-    "148": 0.2222222222222222,
+    "147": 0.2222222222222222,
+    "148": 0.2777777777777778,
     "149": 0.2222222222222222,
     "150": 0.2222222222222222,
     "151": 0.2222222222222222,
@@ -4428,9 +4454,9 @@
     "154": 0.2222222222222222,
     "155": 0.2222222222222222,
     "156": 0.2222222222222222,
-    "157": 0.3611111111111111,
+    "157": 0.2222222222222222,
     "158": 0.2222222222222222,
-    "159": 0.2222222222222222,
+    "159": 0.3611111111111111,
     "160": 0.2222222222222222,
     "161": 0.2222222222222222,
     "162": 0.2222222222222222,
@@ -4438,8 +4464,8 @@
     "164": 0.2222222222222222,
     "165": 0.2222222222222222,
     "166": 0.2222222222222222,
-    "167": 0.25,
-    "168": 0.25,
+    "167": 0.2222222222222222,
+    "168": 0.2222222222222222,
     "169": 0.25,
     "170": 0.25,
     "171": 0.25,
@@ -4453,23 +4479,23 @@
     "179": 0.25,
     "180": 0.25,
     "181": 0.25,
-    "182": 0.35714285714285715,
+    "182": 0.25,
     "183": 0.25,
-    "184": 0.42857142857142855,
+    "184": 0.25,
     "185": 0.25,
-    "186": 0.25,
-    "187": 0.25,
+    "186": 0.35714285714285715,
+    "187": 0.42857142857142855,
     "188": 0.25,
     "189": 0.25,
     "190": 0.25,
-    "191": 0.39285714285714285,
+    "191": 0.25,
     "192": 0.25,
-    "193": 0.2857142857142857,
-    "194": 0.2857142857142857,
-    "195": 0.5714285714285714,
-    "196": 0.2857142857142857,
+    "193": 0.25,
+    "194": 0.39285714285714285,
+    "195": 0.25,
+    "196": 0.5714285714285714,
     "197": 0.2857142857142857,
-    "198": 0.2857142857142857,
+    "198": 0.5714285714285714,
     "199": 0.2857142857142857,
     "200": 0.2857142857142857,
     "201": 0.2857142857142857,
@@ -4481,13 +4507,13 @@
     "207": 0.2857142857142857,
     "208": 0.2857142857142857,
     "209": 0.2857142857142857,
-    "210": 0.3333333333333333,
+    "210": 0.2857142857142857,
     "211": 0.3333333333333333,
     "212": 0.3333333333333333,
     "213": 0.3333333333333333,
-    "214": 0.5333333333333333,
+    "214": 0.3333333333333333,
     "215": 0.3333333333333333,
-    "216": 0.3333333333333333,
+    "216": 0.5333333333333333,
     "217": 0.3333333333333333,
     "218": 0.3333333333333333,
     "219": 0.3333333333333333,
@@ -4497,8 +4523,8 @@
     "223": 0.3333333333333333,
     "224": 0.3333333333333333,
     "225": 0.3333333333333333,
-    "226": 0.4,
-    "227": 0.4,
+    "226": 0.3333333333333333,
+    "227": 0.3333333333333333,
     "228": 0.4,
     "229": 0.4,
     "230": 0.4,
@@ -4515,9 +4541,9 @@
     "241": 0.4,
     "242": 0.4,
     "243": 0.4,
-    "244": 0.5,
-    "245": 0.5,
-    "246": 0.5,
+    "244": 0.4,
+    "245": 0.4,
+    "246": 0.4,
     "247": 0.5,
     "248": 0.5,
     "249": 0.5,
@@ -4537,9 +4563,9 @@
     "263": 0.5,
     "264": 0.5,
     "265": 0.5,
-    "266": 0.6666666666666666,
-    "267": 0.6666666666666666,
-    "268": 0.6666666666666666,
+    "266": 0.5,
+    "267": 0.5,
+    "268": 0.5,
     "269": 0.6666666666666666,
     "270": 0.6666666666666666,
     "271": 0.6666666666666666,
@@ -4554,13 +4580,13 @@
     "280": 0.6666666666666666,
     "281": 0.6666666666666666,
     "282": 0.6666666666666666,
-    "283": 1.0,
+    "283": 0.6666666666666666,
     "284": 0.6666666666666666,
-    "285": 0.6666666666666666,
+    "285": 1.0,
     "286": 0.6666666666666666,
     "287": 0.6666666666666666,
-    "288": 1.0,
-    "289": 1.0,
+    "288": 0.6666666666666666,
+    "289": 0.6666666666666666,
     "290": 1.0,
     "291": 1.0,
     "292": 1.0,
@@ -4578,7 +4604,9 @@
     "304": 1.0,
     "305": 1.0,
     "306": 1.0,
-    "307": 1.0
+    "307": 1.0,
+    "308": 1.0,
+    "309": 1.0
   },
   "gods": [
     {
@@ -4692,18 +4720,18 @@
   "questions": [
     {
       "type": "bridge_node",
-      "question": "Why does `BE ECIE / BEIE — Complete Study Syllabus (Year I–IV)` connect `Community 0` to `Community 7`, `Community 269`, `Community 270`, `Community 271`, `Community 152`, `Community 29`, `Community 289`, `Community 290`, `Community 291`, `Community 292`, `Community 293`, `Community 294`, `Community 295`, `Community 296`, `Community 297`, `Community 47`, `Community 177`, `Community 205`, `Community 81`, `Community 214`, `Community 109`, `Community 110`, `Community 239`, `Community 112`, `Community 111`, `Community 253`, `Community 252`, `Community 125`?",
-      "why": "High betweenness centrality (0.135) - this node is a cross-community bridge."
+      "question": "Why does `BE ECIE / BEIE — Complete Study Syllabus (Year I–IV)` connect `Community 0` to `Community 256`, `Community 255`, `Community 6`, `Community 271`, `Community 272`, `Community 273`, `Community 153`, `Community 291`, `Community 292`, `Community 293`, `Community 294`, `Community 295`, `Community 40`, `Community 296`, `Community 297`, `Community 298`, `Community 299`, `Community 180`, `Community 181`, `Community 206`, `Community 82`, `Community 216`, `Community 93`, `Community 108`, `Community 109`, `Community 110`, `Community 111`, `Community 242`, `Community 127`?",
+      "why": "High betweenness centrality (0.134) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
-      "question": "Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 85` to `Community 210`, `Community 194`, `Community 211`, `Community 58`?",
+      "question": "Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 85` to `Community 59`, `Community 211`, `Community 212`, `Community 117`?",
+      "why": "High betweenness centrality (0.025) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Skill Development for Claude Code Plugins` connect `Community 165` to `Community 166`, `Community 167`, `Community 267`, `Community 268`, `Community 244`, `Community 245`, `Community 246`?",
       "why": "High betweenness centrality (0.021) - this node is a cross-community bridge."
-    },
-    {
-      "type": "bridge_node",
-      "question": "Why does `required` connect `Community 72` to `Community 181`?",
-      "why": "High betweenness centrality (0.014) - this node is a cross-community bridge."
     },
     {
       "type": "verify_inferred",
@@ -4713,7 +4741,7 @@
     {
       "type": "isolated_nodes",
       "question": "What connects `10. Circuit Design (3 hours)`, `10. Data Files (5 hours)`, `10. Digital Devices Applications (2 hours)` to the rest of the system?",
-      "why": "2303 weakly-connected nodes found - possible documentation gaps or missing edges."
+      "why": "2318 weakly-connected nodes found - possible documentation gaps or missing edges."
     },
     {
       "type": "low_cohesion",

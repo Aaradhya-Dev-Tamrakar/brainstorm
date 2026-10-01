@@ -401,24 +401,51 @@ def main():
     except Exception as e:
         print(f"  [-] Error p-024: {e}")
 
-    # 21. p-026: onm (Fusemachines Case Study)
+    # 21. p-026: onm (Fusemachines Case Study PDF dual pane)
     print("\n[p-026] onm...")
-    for slug in ["onm", "onm-case-study"]:
-        render_terminal_card(
-            slug,
-            "ONM Case Study — Fusemachines Inc.",
-            "Organization & Management Case Study (Fusemachines Inc.)",
-            [
-                "[*] Compiling LaTeX Case Study: 'FUSEMACHINES_ONM_REPORT.tex'...",
-                "[+] Primary Field Data: Direct structured interview with Talent & PR Leads",
-                "[+] Structural Analysis:",
-                "    - Matrix Organizational Structure: Regional Teams (US/Nepal/LatAm)",
-                "    - AI Talent Development: Fellowship-to-Engineering Conversion Pipeline",
-                "    - Agile Operational Cadence: Bi-weekly Sprints & Cross-Functional Pods",
-                "[+] Typesetting: pdflatex + biblatex (Academic Coursework Dossier)",
-                "[+] Output: 14-page formal report with organograms and workflow matrices"
-            ]
-        )
+    onm_pdf = Path(r"C:\Users\Aaradhya\Downloads\ONM_Casestudy_Fusemachines.pdf")
+    if onm_pdf.exists():
+        try:
+            import subprocess
+            temp_dir = BRAINSTORM_ROOT / "scratch" / "temp_onm"
+            temp_dir.mkdir(parents=True, exist_ok=True)
+            # Render page 1 and page 9 at 220 DPI
+            cmd = ["C:\\texlive\\2026\\bin\\windows\\pdftoppm.EXE", "-png", "-r", "220", "-f", "1", "-l", "1", str(onm_pdf), str(temp_dir / "p1")]
+            subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            cmd = ["C:\\texlive\\2026\\bin\\windows\\pdftoppm.EXE", "-png", "-r", "220", "-f", "9", "-l", "9", str(onm_pdf), str(temp_dir / "p9")]
+            subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            
+            p1_img = Image.open(temp_dir / "p1-01.png")
+            p9_img = Image.open(temp_dir / "p9-09.png")
+            gap = 40
+            combo = Image.new("RGB", (p1_img.width + p9_img.width + gap, p1_img.height), color=(240, 242, 245))
+            combo.paste(p1_img, (0, 0))
+            combo.paste(p9_img, (p1_img.width + gap, 0))
+            
+            for slug in ["onm", "onm-case-study"]:
+                optimize_image_to_webp(combo, PORTFOLIO_ASSETS / slug, slug, "ONM Case Study — Fusemachines Inc.")
+            
+            import shutil
+            shutil.rmtree(temp_dir, ignore_errors=True)
+        except Exception as e:
+            print(f"  [-] Error rendering ONM PDF: {e}")
+    else:
+        for slug in ["onm", "onm-case-study"]:
+            render_terminal_card(
+                slug,
+                "ONM Case Study — Fusemachines Inc.",
+                "Organization & Management Case Study (Fusemachines Inc.)",
+                [
+                    "[*] Compiling LaTeX Case Study: 'FUSEMACHINES_ONM_REPORT.tex'...",
+                    "[+] Primary Field Data: Direct structured interview with Talent & PR Leads",
+                    "[+] Structural Analysis:",
+                    "    - Matrix Organizational Structure: Regional Teams (US/Nepal/LatAm)",
+                    "    - AI Talent Development: Fellowship-to-Engineering Conversion Pipeline",
+                    "    - Agile Operational Cadence: Bi-weekly Sprints & Cross-Functional Pods",
+                    "[+] Typesetting: pdflatex + biblatex (Academic Coursework Dossier)",
+                    "[+] Output: 14-page formal report with organograms and workflow matrices"
+                ]
+            )
 
     # 22. p-027: fuse-wk13 (LSTM classifier)
     print("\n[p-027] fuse-wk13...")

@@ -516,10 +516,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790837809.7512612,
-    "seen": 1790837812.7349017,
-    "ast_hash": "bec3027237f49e57f36e12c7269111cf",
-    "semantic_hash": "bec3027237f49e57f36e12c7269111cf"
+    "mtime": 1790841517.1661394,
+    "seen": 1790841520.486191,
+    "ast_hash": "2b35cff3afe2d2d328e6ada3ea552186",
+    "semantic_hash": "2b35cff3afe2d2d328e6ada3ea552186"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -570,10 +570,10 @@
     "semantic_hash": "ef915c5d8d1809c77777dfc027680b8a"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790837807.5109918,
-    "seen": 1790837812.7348995,
-    "ast_hash": "4894789a00d5c28d569f21a006310982",
-    "semantic_hash": "4894789a00d5c28d569f21a006310982"
+    "mtime": 1790841514.874928,
+    "seen": 1790841520.4861877,
+    "ast_hash": "1c65ee62a77a6eaa2d7247e7129ee377",
+    "semantic_hash": "1c65ee62a77a6eaa2d7247e7129ee377"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -1206,10 +1206,10 @@
     "semantic_hash": "dde485e0a985382fbbd85d1544a74653"
   },
   "tools/skills/github-workflow/SKILL.md": {
-    "mtime": 1790828954.973477,
-    "seen": 1790828971.4837966,
-    "ast_hash": "634769a8dd82fe38d0e8f7ba3fe87e8e",
-    "semantic_hash": "634769a8dd82fe38d0e8f7ba3fe87e8e"
+    "mtime": 1790841026.8450577,
+    "seen": 1790841520.4865816,
+    "ast_hash": "7f261fa86dcb5a68dd3f363983c64f7e",
+    "semantic_hash": "7f261fa86dcb5a68dd3f363983c64f7e"
   },
   "tools/skills/github-workflow/examples/templates.md": {
     "mtime": 1790825797.6388931,
@@ -1218,10 +1218,10 @@
     "semantic_hash": "4eb615b28f3985419232b090bb15eca4"
   },
   "tools/skills/github-workflow/references/gh-cli-cheatsheet.md": {
-    "mtime": 1790827708.4509363,
-    "seen": 1790828015.1235254,
-    "ast_hash": "f9681d3741da47eccc0ae8c528f60b6a",
-    "semantic_hash": "f9681d3741da47eccc0ae8c528f60b6a"
+    "mtime": 1790840906.3976095,
+    "seen": 1790841520.486586,
+    "ast_hash": "20e1f32b2cd1b4593dc956219cc004bc",
+    "semantic_hash": "20e1f32b2cd1b4593dc956219cc004bc"
   },
   "tools/skills/github-workflow/references/multi-remote-sync.md": {
     "mtime": 1790825791.5424824,

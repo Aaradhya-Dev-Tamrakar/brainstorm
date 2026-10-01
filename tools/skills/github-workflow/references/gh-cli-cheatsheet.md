@@ -45,6 +45,74 @@ gh issue close <ISSUE_NUMBER> --reason "completed"
 gh issue reopen <ISSUE_NUMBER>
 ```
 
+### Set Native Issue Type (Bug, Feature, Task)
+```bash
+# Set type via GitHub REST API
+gh api -X PATCH repos/{owner}/{repo}/issues/<ISSUE_NUMBER> -f type="Feature"
+gh api -X PATCH repos/{owner}/{repo}/issues/<ISSUE_NUMBER> -f type="Bug"
+gh api -X PATCH repos/{owner}/{repo}/issues/<ISSUE_NUMBER> -f type="Task"
+```
+
+### Milestone & Label Management
+```bash
+# Attach issue to milestone
+gh issue edit <ISSUE_NUMBER> --milestone "M1: Schema Lock & Literature Matrix"
+
+# Add or remove labels
+gh issue edit <ISSUE_NUMBER> --add-label "WP4,enhancement"
+gh issue edit <ISSUE_NUMBER> --remove-label "wontfix"
+
+# Enrich label metadata with description and hex color
+gh label edit WP4 --description "Work Package 4: Fairness Metrics" --color "d4c5f9"
+gh label create "phase-2" --description "Post-capstone backlog" --color "006b75"
+```
+
+### Native Sub-Issue Relationships (GraphQL)
+```bash
+# Capture Node IDs
+gh api graphql -f query='query { repository(owner: "{owner}", name: "{repo}") { issue(number: 28) { id } } }'
+
+# Link Parent -> Child Sub-Issue
+gh api graphql -f query='mutation {
+  addSubIssue(input: {
+    issueId: "<PARENT_NODE_ID>",
+    subIssueId: "<CHILD_NODE_ID>"
+  }) {
+    issue { id }
+    subIssue { id }
+  }
+}'
+```
+
+### GitHub Projects (ProjectsV2) & Cross-Repo Tracking
+```bash
+# Create project under personal namespace (if org creation is restricted)
+gh project create --owner @me --title "Project Board Title"
+
+# Link project to personal mirror repository
+gh api graphql -f query='mutation {
+  linkProjectV2ToRepository(input: {
+    projectId: "<PROJECT_NODE_ID>",
+    repositoryId: "<REPO_NODE_ID>"
+  }) {
+    repository { id }
+  }
+}'
+
+# Add issue to Project Board
+gh api graphql -f query='mutation {
+  addProjectV2ItemById(input: {
+    projectId: "<PROJECT_NODE_ID>",
+    contentId: "<ISSUE_NODE_ID>"
+  }) {
+    item { id }
+  }
+}'
+
+# List project items
+gh project item-list <PROJECT_NUMBER> --owner @me --format json
+```
+
 ---
 
 ### Create a Pull Request
@@ -86,6 +154,18 @@ gh pr edit <PR_NUMBER> --add-reviewer <COLLABORATOR_USERNAME>
 
 # Request team review
 gh pr edit <PR_NUMBER> --add-reviewer <ORGANIZATION/TEAM>
+```
+
+### Edit PR Body & Link Issues (Retroactive / Active)
+```bash
+# Update PR body to link issue or add test proof (works on open and merged PRs)
+gh pr edit <PR_NUMBER> --body "## Summary
+- Feature changes...
+
+Closes #<ISSUE_NUMBER>
+
+## Verification
+- Tests passed."
 ```
 
 ### Merge Pull Request

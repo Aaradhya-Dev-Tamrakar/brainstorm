@@ -12,12 +12,16 @@ This skill defines the canonical standard operating procedure (SOP) for all soft
 
 ## 1. Golden Rules & Invariants
 
-1. **Issue Anchoring**: All non-trivial code modifications must link to a tracked GitHub issue with complete sidebar metadata (`--assignee "@me"`, `--label "<labels>"`). The issue number (`#<ID>`) serves as the permanent tracking anchor for branches, commits, PRs, and audit comments.
+1. **Issue Anchoring**: All non-trivial code modifications must link to a tracked GitHub issue with complete sidebar metadata (`--assignee <EXPLICIT_USERNAME>`, `--label "<labels>"`). Attach the issue to its respective project Milestone (`gh issue edit <ID> --milestone "<Milestone>"`). The issue number (`#<ID>`) serves as the permanent tracking anchor for branches, commits, PRs, and audit comments.
 2. **Branch Isolation**: Never commit multi-step features or refactors directly to `main`. Always branch off `main` using `<type>/<slug>-#<ID>`.
 3. **Checkpoint Task Tracking**: Check off acceptance criteria in the issue body progressively as tasks complete (`gh-task --issue <ID> --task "<name>"`).
 4. **Verification Gate**: Never commit or push without passing local linters (`ruff`, `eslint`), formatters, and test suites (`pytest`, `npm test`).
 5. **Ecosystem Synchronization**: When `sync.ps1` or `sync.bat` exists, raw `git commit`, `git add`, or `git push` are strictly forbidden. All version control must run through `.\sync.bat` (or `.\sync.ps1`).
-6. **PR Metadata & Review Dispatch**: Always open pull requests with full sidebar metadata: assign yourself (`--assignee "@me"`), attach labels (`--label "<labels>"`), link the issue with resolution keywords (`Closes #<ID>`), and request peer review from designated teammates (e.g. `--reviewer tiixsha`).
+6. **PR Metadata & Reciprocal Review Dispatch**:
+   - Always open pull requests with full sidebar metadata: assign your explicit username (e.g. `--assignee AaradhyaDT`), attach labels (`--label "<labels>"`), link the milestone (`--milestone "<Milestone>"`), and link the issue with resolution keywords (`Closes #<ID>`).
+   - **Never use ambiguous `@me` in collaborative or team repositories**: `@me` resolves to whoever executes the CLI command. If a teammate or their AI assistant runs the command, `@me` will misassign the PR. Always use explicit GitHub usernames (`AaradhyaDT`, `tiixsha`).
+   - **Never use organization names as review or assignee targets**: Use personal contributor handles unless explicitly operating inside an organization repository on behalf of the organization.
+   - **Reciprocal Peer Review**: When Developer A opens a PR, assign Developer A and request review from Developer B (`--assignee DevA --reviewer DevB`); when Developer B opens a PR, assign Developer B and request review from Developer A (`--assignee DevB --reviewer DevA`).
 7. **Collaborative Privacy & Boundary Isolation (Zero Personal Leakage)**:
    > [!CAUTION]
    > **Never commit or log personal developer resources into collaborative/public repositories.**
@@ -77,6 +81,24 @@ Define requirements, acceptance criteria, and technical boundaries before touchi
    ```
 
 3. **Record Issue Number**: Note `#<ISSUE_NUMBER>` (e.g., `#28`).
+
+4. **Enrich Issue Metadata (Type, Milestone, Relationships & Projects)**:
+   - **Set Native Issue Type** (`Bug`, `Feature`, `Task`):
+     ```bash
+     gh api -X PATCH repos/{owner}/{repo}/issues/<ISSUE_NUMBER> -f type="Feature"
+     ```
+   - **Attach to Milestone**:
+     ```bash
+     gh issue edit <ISSUE_NUMBER> --milestone "<Milestone Title>"
+     ```
+   - **Link Sub-Issue Relationships** (Parent ↔ Child hierarchy):
+     ```bash
+     # Capture GraphQL node IDs for parent and child:
+     # gh api graphql -f query='query { repository(owner: "{owner}", name: "{repo}") { issue(number: <NUM>) { id } } }'
+     gh api graphql -f query='mutation { addSubIssue(input: { issueId: "<PARENT_NODE_ID>", subIssueId: "<CHILD_NODE_ID>" }) { issue { id } } }'
+     ```
+   - **Cross-Repo Project Board Tracking (ProjectsV2)**:
+     If the target repository belongs to an organization where member project creation is restricted, create and maintain the project board on the personal user namespace (`gh project create --owner @me --title "..."`), link the board to your repository mirror (`linkProjectV2ToRepository`), and add organization issues cross-repo using `addProjectV2ItemById`.
 
 ---
 
@@ -183,15 +205,16 @@ git push -u origin feat/statistical-parity-#28
    - Issue closing keyword: `Closes #<ISSUE_NUMBER>` (or `Fixes #<ISSUE_NUMBER>`, `Resolves #<ISSUE_NUMBER>`).
    - Verifiable test proof.
 
-2. **Open PR with Complete Sidebar Metadata**:
+2. **Open PR with Complete Sidebar Metadata & Milestone**:
    ```bash
    gh pr create \
      --base main \
      --head feat/statistical-parity-#28 \
      --title "feat(fairness): add statistical parity disparity metric (#28)" \
-     --assignee "@me" \
+     --assignee <EXPLICIT_CONTRIBUTOR_USERNAME> \
+     --reviewer <RECIPROCAL_REVIEWER_USERNAME> \
+     --milestone "<Milestone Title>" \
      --label "enhancement,WP4" \
-     --reviewer <COLLABORATOR_USERNAME> \
      --body "$(cat << 'EOF'
    ## Summary
    - Implemented statistical parity difference in src/fairness/metrics.py.
@@ -205,12 +228,42 @@ git push -u origin feat/statistical-parity-#28
    EOF
    )"
    ```
+   > [!IMPORTANT]
+   > - **Never use `@me` in multi-developer repositories**: Always use explicit usernames (`--assignee AaradhyaDT --reviewer tiixsha`) so PRs are deterministically assigned regardless of which collaborator or agent creates the PR.
+   > - **Never use organization names as reviewer/assignee**: Use personal GitHub handles.
+   > - **Reciprocal Review Standard**: Follow the project's peer review convention (e.g., Aaradhya opens $\to$ Tisha reviews; Tisha opens $\to$ Aaradhya reviews).
 
-3. **Verify PR & Attached Commits**:
+3. **Post Issue Cross-Reference Tracking Comment**:
+   Immediately notify and link the tracked issue thread:
+   ```bash
+   gh issue comment <ISSUE_NUMBER> --body "🔗 **Pull Request Attached**: #<PR_NUMBER> (https://github.com/<owner>/<repo>/pull/<PR_NUMBER>)"
+   ```
+
+4. **Verify PR & Attached Commits**:
    ```bash
    gh pr view <PR_NUMBER>
-   gh pr view <PR_NUMBER> --json commits
+   gh pr view <PR_NUMBER> --json commits,assignees,reviewRequests,milestone
    ```
+
+5. **Retroactive PR-to-Issue Linking & Milestone Backfilling (Open or Merged PRs)**:
+   If an open or previously merged PR lacks issue resolution keywords (`Closes #<ID>`) or milestone attachment:
+   ```bash
+   # Update PR body with resolution keywords
+   gh pr edit <PR_NUMBER> --body "## 📌 Purpose
+   Feature implementation summary.
+
+   ## 🔗 Related Issues
+   Closes #<ISSUE_NUMBER>
+
+   ## 🧪 Testing & Verification
+   - [x] Unit tests passing (pytest)
+   - [x] Linter clean (ruff)"
+
+   # Attach milestone to PR (and Issue)
+   gh pr edit <PR_NUMBER> --milestone "<Milestone Title>"
+   gh issue edit <ISSUE_NUMBER> --milestone "<Milestone Title>"
+   ```
+   *(Note: For closed milestones or batch scripting, use the GitHub API: `gh api repos/:owner/:repo/issues/<NUMBER> --method PATCH -F milestone=<MILESTONE_NUMBER>`)*
 
 ---
 

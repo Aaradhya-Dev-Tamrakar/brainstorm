@@ -287,12 +287,6 @@
     "ast_hash": "ec2574eb8b099504fcaea8e5eab891c4",
     "semantic_hash": "ec2574eb8b099504fcaea8e5eab891c4"
   },
-  "schemas/ecosystem.verification.schema.json": {
-    "mtime": 1790044861.1705668,
-    "seen": 1790599911.6670997,
-    "ast_hash": "e0b82563d39fbb0df1117ecdf616a59f",
-    "semantic_hash": "e0b82563d39fbb0df1117ecdf616a59f"
-  },
   "schemas/examples/nepali-ocr-ai.contract.json": {
     "mtime": 1790230165.5922265,
     "seen": 1790599911.667108,
@@ -443,12 +437,6 @@
     "ast_hash": "0f456fc2ceb20328a7af764ae29a85a2",
     "semantic_hash": "0f456fc2ceb20328a7af764ae29a85a2"
   },
-  "schemas/model_benchmark.schema.json": {
-    "mtime": 1790044861.1730664,
-    "seen": 1790599911.6671107,
-    "ast_hash": "5b4e1095d0629dfec6707868974192ae",
-    "semantic_hash": "5b4e1095d0629dfec6707868974192ae"
-  },
   "sim/task_telemetry.py": {
     "mtime": 1790236313.8518806,
     "seen": 1790599911.6671255,
@@ -516,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790948460.002494,
-    "seen": 1790948462.6380308,
-    "ast_hash": "5b64fe4dd259933c86dbc1d023a5c85a",
-    "semantic_hash": "5b64fe4dd259933c86dbc1d023a5c85a"
+    "mtime": 1790949049.9111326,
+    "seen": 1790949052.0159507,
+    "ast_hash": "03f4b285eb6fdee3d669b600810755a8",
+    "semantic_hash": "03f4b285eb6fdee3d669b600810755a8"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -570,10 +558,10 @@
     "semantic_hash": "ef915c5d8d1809c77777dfc027680b8a"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790948457.9632924,
-    "seen": 1790948462.6380296,
-    "ast_hash": "bd269c7ea2d80fccf7524d6dfdfd710d",
-    "semantic_hash": "bd269c7ea2d80fccf7524d6dfdfd710d"
+    "mtime": 1790949047.8867917,
+    "seen": 1790949052.015949,
+    "ast_hash": "9db548aa000aed8f59f5d02f871e251c",
+    "semantic_hash": "9db548aa000aed8f59f5d02f871e251c"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -875,12 +863,6 @@
     "ast_hash": "38de91e2c2e9f46dcf2f6cfecccc471c",
     "semantic_hash": "38de91e2c2e9f46dcf2f6cfecccc471c"
   },
-  "research/references/BEIE_Complete_Syllabus_I_to_IV.md": {
-    "mtime": 1790238080.718405,
-    "seen": 1790599964.4901798,
-    "ast_hash": "fa8f6092611b2b6e39c4b3912dcafecf",
-    "semantic_hash": "fa8f6092611b2b6e39c4b3912dcafecf"
-  },
   "scripts/README.md": {
     "mtime": 1790920667.4306934,
     "seen": 1790920697.641799,
@@ -1133,12 +1115,6 @@
     "ast_hash": "f2b15bb137086dd6c1ce6917c636c2fb",
     "semantic_hash": "f2b15bb137086dd6c1ce6917c636c2fb"
   },
-  "schemas/nepal-civic-service.v1.json": {
-    "mtime": 1790701027.0050058,
-    "seen": 1790701088.8643937,
-    "ast_hash": "492ff49c23781e19cfb601f2fddd7fb2",
-    "semantic_hash": "492ff49c23781e19cfb601f2fddd7fb2"
-  },
   "research/architectures/ARCH-SPEC-008-NEPAL-CIVIC-ACTION-GRAPH.md": {
     "mtime": 1790701049.1092722,
     "seen": 1790701088.8644772,
@@ -1252,12 +1228,6 @@
     "seen": 1790918618.285465,
     "ast_hash": "fedc36df18a00cf748489c67732e64bd",
     "semantic_hash": "fedc36df18a00cf748489c67732e64bd"
-  },
-  "schemas/horoscope.evaluation.v1.json": {
-    "mtime": 1790860027.5981627,
-    "seen": 1790860884.9054017,
-    "ast_hash": "00d1820d1afc6f24f0f252562950f58d",
-    "semantic_hash": "00d1820d1afc6f24f0f252562950f58d"
   },
   "sim/horoscope_eval_engine.py": {
     "mtime": 1790860063.6762555,

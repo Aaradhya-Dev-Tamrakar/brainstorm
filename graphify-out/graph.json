@@ -428,7 +428,7 @@
       "file_type": "code",
       "norm_label": "audit_layer_2_behavioral()",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L1116"
+      "source_location": "L1138"
     },
     {
       "id": "sim_reconciliation_engine_audit_repository",
@@ -440,7 +440,7 @@
       "file_type": "code",
       "norm_label": "audit_repository()",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L1151"
+      "source_location": "L1173"
     },
     {
       "id": "sim_reconciliation_engine_auto_reconcile_counts",
@@ -4876,7 +4876,7 @@
       "source_location": "L102"
     },
     {
-      "id": "sim_reconciliation_engine_rationale_1117",
+      "id": "sim_reconciliation_engine_rationale_1139",
       "label": "Layer 2: Behavioral verification & simulation test suite execution.",
       "_origin": "ast",
       "community": 1,
@@ -4884,7 +4884,7 @@
       "file_type": "rationale",
       "norm_label": "layer 2: behavioral verification & simulation test suite execution.",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L1117"
+      "source_location": "L1139"
     },
     {
       "id": "sim_reconciliation_engine_rationale_138",
@@ -38333,7 +38333,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L1158",
+      "source_location": "L1180",
       "weight": 1.0
     },
     {
@@ -38345,7 +38345,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L1164",
+      "source_location": "L1186",
       "weight": 1.0
     },
     {
@@ -38357,7 +38357,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L1165",
+      "source_location": "L1187",
       "weight": 1.0
     },
     {
@@ -61366,7 +61366,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L1116",
+      "source_location": "L1138",
       "weight": 1.0
     },
     {
@@ -61377,7 +61377,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L1151",
+      "source_location": "L1173",
       "weight": 1.0
     },
     {
@@ -75043,14 +75043,14 @@
       "weight": 1.0
     },
     {
-      "source": "sim_reconciliation_engine_rationale_1117",
+      "source": "sim_reconciliation_engine_rationale_1139",
       "target": "sim_reconciliation_engine_audit_layer_2_behavioral",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L1117",
+      "source_location": "L1139",
       "weight": 1.0
     },
     {
@@ -78407,5 +78407,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "7e41efa4953517e634f26e81ae94150947fbdbe5"
+  "built_at_commit": "3f2b752f971bcb665bfd3e5af4bc2140829f8011"
 }

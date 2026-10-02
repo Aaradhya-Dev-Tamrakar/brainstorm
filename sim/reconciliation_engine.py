@@ -985,22 +985,33 @@ def audit_layer_1_consistency():
                     else:
                         try:
                             import subprocess
-                            subprocess.check_output(
+                            cat_res = subprocess.run(
                                 ["git", "cat-file", "-e", f"{b_commit}^{{commit}}"],
-                                cwd=BRAINSTORM_ROOT, stderr=subprocess.DEVNULL
-                            )
-                            is_anc = subprocess.call(
-                                ["git", "merge-base", "--is-ancestor", b_commit, "HEAD"],
                                 cwd=BRAINSTORM_ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
                             )
-                            if is_anc != 0:
+                            if cat_res.returncode != 0:
                                 discrepancies.append({
-                                    "type": "GRAPHIFY_PROVENANCE_LINEAGE_DRIFT",
+                                    "type": "GRAPHIFY_PROVENANCE_COMMIT_INVALID",
                                     "file": "graphify-out/.graphify_analysis.json",
-                                    "detail": f"Graphify build commit '{b_commit[:8]}' is not in Git ancestry lineage of HEAD."
+                                    "detail": f"Graphify build commit '{b_commit[:8]}' does not exist in Git object database."
                                 })
-                        except Exception:
-                            pass
+                            else:
+                                is_anc = subprocess.call(
+                                    ["git", "merge-base", "--is-ancestor", b_commit, "HEAD"],
+                                    cwd=BRAINSTORM_ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+                                )
+                                if is_anc != 0:
+                                    discrepancies.append({
+                                        "type": "GRAPHIFY_PROVENANCE_LINEAGE_DRIFT",
+                                        "file": "graphify-out/.graphify_analysis.json",
+                                        "detail": f"Graphify build commit '{b_commit[:8]}' is not in Git ancestry lineage of HEAD."
+                                    })
+                        except Exception as proc_err:
+                            discrepancies.append({
+                                "type": "GRAPHIFY_PROVENANCE_EXECUTION_ERROR",
+                                "file": "graphify-out/.graphify_analysis.json",
+                                "detail": f"Failed to verify Graphify commit provenance via Git: {proc_err}"
+                            })
                 except Exception as gae:
                     discrepancies.append({
                         "type": "GRAPHIFY_PROVENANCE_ERROR",
@@ -1038,28 +1049,39 @@ def audit_layer_1_consistency():
                 try:
                     import subprocess
                     # Verify commit object exists in repository
-                    subprocess.check_output(
+                    cat_res = subprocess.run(
                         ["git", "cat-file", "-e", f"{eval_commit}^{{commit}}"],
-                        cwd=BRAINSTORM_ROOT, stderr=subprocess.DEVNULL
-                    )
-                    # Verify commit is in repository lineage (ancestor or current HEAD)
-                    is_ancestor = subprocess.call(
-                        ["git", "merge-base", "--is-ancestor", eval_commit, "HEAD"],
                         cwd=BRAINSTORM_ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
                     )
-                    if is_ancestor != 0:
-                        is_descendant = subprocess.call(
-                            ["git", "merge-base", "--is-ancestor", "HEAD", eval_commit],
+                    if cat_res.returncode != 0:
+                        discrepancies.append({
+                            "type": "LEDGER_COMMIT_NOT_FOUND",
+                            "file": "research/results/dual_layer_verification_ledger.json",
+                            "detail": f"Ledger evaluated_commit '{eval_commit[:8]}' does not exist in Git object database."
+                        })
+                    else:
+                        # Verify commit is in repository lineage (ancestor or current HEAD)
+                        is_ancestor = subprocess.call(
+                            ["git", "merge-base", "--is-ancestor", eval_commit, "HEAD"],
                             cwd=BRAINSTORM_ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
                         )
-                        if is_descendant != 0:
-                            discrepancies.append({
-                                "type": "LEDGER_LINEAGE_DRIFT",
-                                "file": "research/results/dual_layer_verification_ledger.json",
-                                "detail": f"Ledger commit '{eval_commit[:8]}' is not in Git ancestry lineage of HEAD."
-                            })
-                except Exception:
-                    pass
+                        if is_ancestor != 0:
+                            is_descendant = subprocess.call(
+                                ["git", "merge-base", "--is-ancestor", "HEAD", eval_commit],
+                                cwd=BRAINSTORM_ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+                            )
+                            if is_descendant != 0:
+                                discrepancies.append({
+                                    "type": "LEDGER_LINEAGE_DRIFT",
+                                    "file": "research/results/dual_layer_verification_ledger.json",
+                                    "detail": f"Ledger commit '{eval_commit[:8]}' is not in Git ancestry lineage of HEAD."
+                                })
+                except Exception as l_err:
+                    discrepancies.append({
+                        "type": "LEDGER_LINEAGE_EXECUTION_ERROR",
+                        "file": "research/results/dual_layer_verification_ledger.json",
+                        "detail": f"Failed to verify ledger commit lineage via Git: {l_err}"
+                    })
 
             l1_status = ledger_content.get("layer_1_structural_consistency", {}).get("status")
             l2_status = ledger_content.get("layer_2_behavioral_reproducibility", {}).get("status")

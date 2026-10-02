@@ -38,20 +38,17 @@ run on every push and pull request as inspectable, post-hoc evidence:
 | `brainstorm`           | `verify`                       |
 | `AaradhyaDT.github.io` | `verify`                       |
 
-**Enforced on `main` here** (ruleset `Evidence-Backed-Ecosystem-main`): branch-deletion
-and force-push prevention, only. The pull-request requirement and the required status
-check (`verify`) are deliberately **not** enforced: this repository is maintained by
-direct pushes from the local deterministic gate ([`sync.ps1`](sync.ps1) →
-[`audit.bat`](audit.bat)), and a pre-push gate is structurally unsatisfiable by that
-workflow — so it was being bypassed on every push, which made the enforcement claim
-ceremonial rather than real. Verification substance is unchanged
+**Enforced on `main` here** (ruleset `Evidence-Backed-Ecosystem-main`): branch-deletion,
+force-push prevention, and the `verify` status check for non-maintainers and PRs.
+For solo-maintainer operations, direct pushes are authorized via the configured
+repository-role bypass provided they satisfy the local deterministic gate
+([`sync.ps1`](sync.ps1) → [`audit.bat`](audit.bat)). Verification substance is absolute
 ([`sim/reconciliation_engine.py`](sim/reconciliation_engine.py) runs locally before every
 commit and [`.github/workflows/verification.yml`](.github/workflows/verification.yml)
-after every push); only its blocking semantics were removed. Rationale, live evidence
-and the falsification probe are recorded in
-[`DEC-003`](research/decisions/DEC-003-MAIN-BRANCH-ENFORCEMENT-ALIGNMENT.md).
-PR-based gating may still be configured per repository — GitHub rulesets are an
-account/admin-level operation and are not managed by these workflows.
+runs on every remote push). Rationale, live evidence, and the calibrated policy are
+recorded in [`DEC-003`](research/decisions/DEC-003-MAIN-BRANCH-ENFORCEMENT-ALIGNMENT.md)
+(including Addendum `DEC-003-A`).
+PR-based gating remains enforced for external branches and pull requests.
 
 ---
 

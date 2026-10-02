@@ -463,13 +463,14 @@ else:
     det_summary = detect(target_root)
     tokens = {'input': extraction.get('input_tokens', 0), 'output': extraction.get('output_tokens', 0)}
     report = generate(G, communities, cohesion, labels, gods, surprises, det_summary, tokens, str(target_root), suggested_questions=questions)
-    report += f"\n\n## Graph Freshness\n- **Built at commit:** `{built_at_commit}`\n- **Built timestamp:** `{built_timestamp}`\n"
+    report += f"\n\n## Graph Freshness\n- **Built at commit:** `{built_at_commit}`\n- **Built timestamp:** `{built_timestamp}`\n- **Lineage type:** `ancestor_snapshot`\n"
     (out_dir / "GRAPH_REPORT.md").write_text(report, encoding="utf-8")
     
     # Save analysis sidecar
     analysis = {
         'built_at_commit': built_at_commit,
         'built_timestamp': built_timestamp,
+        'lineage_type': 'ancestor_snapshot',
         'communities': {str(k): v for k, v in communities.items()},
         'cohesion': {str(k): v for k, v in cohesion.items()},
         'gods': gods,

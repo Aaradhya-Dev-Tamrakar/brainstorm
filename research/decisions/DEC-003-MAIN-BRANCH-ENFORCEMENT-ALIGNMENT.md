@@ -3,14 +3,14 @@
 ```text
 Decision ID:          DEC-003
 Title:                Relaxation of the `Evidence-Backed-Ecosystem-main` Ruleset to Match the Verified Direct-Push Solo-Maintainer Workflow
-Status:               IMPLEMENTED (Empirically Verified)
-Decision Date:        2026-09-21
+Status:               IMPLEMENTED (Empirically Verified; Reconciled with Addendum DEC-003-A)
+Decision Date:        2026-09-21 (Amended 2026-09-24 via DEC-003-A)
 Principal Architect:  Aaradhya Dev Tamrakar (ADT)
 Governing RFC:        research/architectures/ARCH-RFC-001-RECORD-KEEPING-STANDARD.md, research/architectures/ARCH-RFC-004-WORKFLOW-EXTERNALIZATION-FREEZE.md
 Evidence Tier:        E4 — EXPERIMENTALLY VERIFIED (live GitHub ruleset API read-back + observed push acceptance)
 Epistemic Class:      EMPIRICALLY_VERIFIED
-Source Transcripts:   research/transcripts/2026-09-21_EVALUATE-FOUR-PROJECTS_CONVERSATION.md
-Falsification Probe:  `gh api repos/Aaradhya-Dev-Tamrakar/brainstorm/rules/branches/main` — if `pull_request` or `required_status_checks` reappear, or if any push again reports `Bypassed rule violations`, the premise of this decision is false.
+Source Transcripts:   research/transcripts/2026-09-21_EVALUATE-FOUR-PROJECTS_CONVERSATION.md, research/transcripts/2026-10-02_VERIFY-COMMIT-PROVENANCE_CONVERSATION.md
+Falsification Probe:  `gh api repos/Aaradhya-Dev-Tamrakar/brainstorm/rules/branches/main` — verify ruleset id 23533023 maintains active rules (deletion, non_fast_forward, required_status_checks: verify) and bypass_actors repository-role authorization per DEC-003-A.
 ```
 
 ---
@@ -243,3 +243,44 @@ The `|| echo "::warning::"` fallback should not mask a rejected push: the step s
 loudly, or open a pull request, so that automation regressions surface instead of
 accumulating as stale state. This recommendation is independent of which rules are
 enforced and remains valid under any future ruleset configuration.
+
+---
+
+## 7. Addendum DEC-003-A: Dual-Mode Status Check Alignment (2026-09-24)
+
+### 7.1 Re-introduction of `required_status_checks: verify`
+On **2026-09-24T12:44:30.714+05:45**, repository ruleset `Evidence-Backed-Ecosystem-main` (id `23533023`) was hardened to re-introduce the `required_status_checks` rule targeting the `verify` context (`strict_required_status_checks_policy: false`), while explicitly preserving `bypass_actors: [{"actor_id": 5, "actor_type": "RepositoryRole", "bypass_mode": "always"}]`.
+
+```json
+{
+  "id": 23533023,
+  "name": "Evidence-Backed-Ecosystem-main",
+  "target": "branch",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": { "include": ["refs/heads/main"], "exclude": [] }
+  },
+  "rules": [
+    { "type": "deletion" },
+    { "type": "non_fast_forward" },
+    {
+      "type": "required_status_checks",
+      "parameters": {
+        "strict_required_status_checks_policy": false,
+        "do_not_enforce_on_create": false,
+        "required_status_checks": [{ "context": "verify" }]
+      }
+    }
+  ],
+  "bypass_actors": [
+    { "actor_id": 5, "actor_type": "RepositoryRole", "bypass_mode": "always" }
+  ]
+}
+```
+
+### 7.2 The Calibrated Dual-Mode Policy
+The original 2026-09-21 evaluation identified that pre-push status checks were structurally incompatible with direct pushes when no bypass existed. Under the hardened 2026-09-24 architecture:
+1. **Pull Request Contributors & Non-Maintainers:** Merges to `main` strictly require the remote GitHub Actions `verify` status check to pass before merge.
+2. **Solo Maintainer Direct-Push Exception:** Direct pushes from the primary architect utilizing `sync.bat` are authorized via the repository-role bypass (`actor_id: 5`), provided all commits satisfy local deterministic verification (`audit.bat` Layer 1 structural consistency and Layer 2 behavioral simulation tests) prior to pushing.
+3. **Authorized Observable:** The Git push notice `remote: Bypassed rule violations for refs/heads/main: Required status check "verify" is expected` is an expected, authorized manifestation of the maintainer-role bypass policy, rather than an unmanaged divergence.
+

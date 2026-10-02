@@ -975,6 +975,13 @@ def audit_layer_1_consistency():
                 try:
                     with open(graph_analysis_path, "r", encoding="utf-8") as gaf:
                         gadata = json.load(gaf)
+                    b_lineage = gadata.get("lineage_type")
+                    if b_lineage and b_lineage not in {"ancestor_snapshot", "head_certified"}:
+                        discrepancies.append({
+                            "type": "GRAPHIFY_LINEAGE_TYPE_ERROR",
+                            "file": "graphify-out/.graphify_analysis.json",
+                            "detail": f"Invalid Graphify lineage_type: '{b_lineage}'. Must be 'ancestor_snapshot' or 'head_certified'."
+                        })
                     b_commit = gadata.get("built_at_commit")
                     if not b_commit or not re.match(r"^[0-9a-fA-F]{40}$", str(b_commit)):
                         discrepancies.append({
@@ -1204,11 +1211,19 @@ def audit_repository(auto_fix=False, write_ledger=False):
                 git_sha = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=BRAINSTORM_ROOT, text=True, stderr=subprocess.DEVNULL).strip()
             except Exception:
                 pass
+            is_ci = bool(os.environ.get("CI") or os.environ.get("GITHUB_ACTIONS"))
+            lineage_type = "head_certified" if is_ci else "ancestor_snapshot"
+            prov_note = (
+                "Verified post-push CI ledger certified against exact tested HEAD."
+                if is_ci else
+                "Persisted snapshot from pre-commit reconciliation; automated CI generates per-run ledger matching exact tested HEAD."
+            )
 
             ledger_data = {
                 "timestamp": now_iso,
                 "evaluated_commit": git_sha,
-                "provenance_note": "Persisted snapshot from pre-commit reconciliation; automated CI generates per-run ledger matching exact tested HEAD.",
+                "lineage_type": lineage_type,
+                "provenance_note": prov_note,
                 "layer_1_structural_consistency": {
                     "status": "PASSED" if l1_errors == 0 else "FAILED",
                     "errors": l1_errors,

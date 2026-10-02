@@ -24,10 +24,10 @@
     "semantic_hash": "fe271b9b041d088da4e4a171e190aa7c"
   },
   "sim/reconciliation_engine.py": {
-    "mtime": 1790955215.6231284,
-    "seen": 1790955319.2847762,
-    "ast_hash": "bdb9b6239e811f5f23021dbdf779c936",
-    "semantic_hash": "bdb9b6239e811f5f23021dbdf779c936"
+    "mtime": 1790956022.2836127,
+    "seen": 1790956091.8373914,
+    "ast_hash": "6ad9fc92451f0ececdbd48ebcbcfb385",
+    "semantic_hash": "6ad9fc92451f0ececdbd48ebcbcfb385"
   },
   "sim/sweep_ipu_breakeven.py": {
     "mtime": 1790044861.1795669,
@@ -138,10 +138,10 @@
     "semantic_hash": "361e8dd333417f7e3bcd00d97cd29842"
   },
   "README.md": {
-    "mtime": 1790933062.4945018,
-    "seen": 1790933474.0749457,
-    "ast_hash": "2290508c8b6c077e71dcf4f18dd7fdcd",
-    "semantic_hash": "2290508c8b6c077e71dcf4f18dd7fdcd"
+    "mtime": 1790955876.3718512,
+    "seen": 1790956091.8374405,
+    "ast_hash": "b91e274a0cf101a733624393a14806f7",
+    "semantic_hash": "b91e274a0cf101a733624393a14806f7"
   },
   "research/architectures/README.md": {
     "mtime": 1790240407.9593427,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790955316.601965,
-    "seen": 1790955319.2847223,
-    "ast_hash": "26c59058d599b3041533213060849b36",
-    "semantic_hash": "26c59058d599b3041533213060849b36"
+    "mtime": 1790956088.6971457,
+    "seen": 1790956091.8373399,
+    "ast_hash": "41e0c5e0c411a35f2823b766cbb69514",
+    "semantic_hash": "41e0c5e0c411a35f2823b766cbb69514"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -552,16 +552,16 @@
     "semantic_hash": ""
   },
   "graphify.ps1": {
-    "mtime": 1790953932.2289402,
-    "seen": 1790954327.5562851,
-    "ast_hash": "9921a31efd467f34254a60a2bb6e4a0d",
-    "semantic_hash": "9921a31efd467f34254a60a2bb6e4a0d"
+    "mtime": 1790955930.7556975,
+    "seen": 1790956091.8373315,
+    "ast_hash": "d968e8d0c9c99a6b697cff3ac07f04a6",
+    "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790955314.4888682,
-    "seen": 1790955319.2847204,
-    "ast_hash": "88cc780dc881cf92c3b45ee34bf7ad37",
-    "semantic_hash": "88cc780dc881cf92c3b45ee34bf7ad37"
+    "mtime": 1790956086.5528746,
+    "seen": 1790956091.837339,
+    "ast_hash": "6a10cb4ea602cb8883b27bc40887f4b3",
+    "semantic_hash": "6a10cb4ea602cb8883b27bc40887f4b3"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -732,10 +732,10 @@
     "semantic_hash": "a41953f91b210c2cec950047a347f2ea"
   },
   "research/decisions/DEC-003-MAIN-BRANCH-ENFORCEMENT-ALIGNMENT.md": {
-    "mtime": 1790044861.1321163,
-    "seen": 1790599964.4901488,
-    "ast_hash": "b3afacf6294e9e43ff63fee440bbfccf",
-    "semantic_hash": "b3afacf6294e9e43ff63fee440bbfccf"
+    "mtime": 1790955854.0764785,
+    "seen": 1790956091.8374746,
+    "ast_hash": "5e28f037f2c82ff1f41e406510bd0519",
+    "semantic_hash": "5e28f037f2c82ff1f41e406510bd0519"
   },
   "research/experiments/EXP-NISR-001_RECON_PROBE.md": {
     "mtime": 1790599539.5269911,

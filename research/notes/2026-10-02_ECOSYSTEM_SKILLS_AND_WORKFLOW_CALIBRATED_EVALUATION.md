@@ -9,22 +9,23 @@
 
 ## 1. Executive Summary
 
-On 2026-10-02, a complete inventory audit of all active developer skills across the Antigravity/Gemini workspace was performed. All 13 external built-in and plugin skills were mirrored into the repository under `tools/skills/`, expanding the in-repo skill catalog to **44 total skills**.
+On 2026-10-02, a complete inventory audit of all active developer skills across the Antigravity/Gemini workspace was performed. Across 44 evaluated skills and workflow directives in the broader environment, all 38 standalone packages were mirrored and verified in the repository under `tools/skills/`.
 
 Following this logging pass, an adversarial reality check was conducted to contrast AI-generated speculative praise against empirical ground truth. This note establishes the authoritative, calibrated assessment of the ecosystem's workflow architecture, operational constraints, and real-world standing.
 
 ---
 
-## 2. In-Repo Skills Inventory & Workflow Origin Matrix (38 Total)
+## 2. In-Repo Skills Inventory & Workflow Origin Matrix (38 Mirrored Packages)
 
-All skills are mirrored and version-controlled under [`tools/skills/`](../../tools/skills/):
+All 38 standalone skill packages are mirrored and version-controlled under [`tools/skills/`](../../tools/skills/):
 
-### Summary Breakdown by Origin:
+### Summary Breakdown by Origin (38 In-Repo Mirrored Packages):
 1. **Antigravity Built-in Skills (10):** `antigravity-guide`, `agy-customizations`, `automation`, `generative_ui`, `migrate-workflows`, `permissioned-github`, `plugin`, `ui-extension`, `ui-plugin-navigation`, `google-stitch-integration`.
 2. **Gemini API Plugin Skills (4):** `gemini-api-dev`, `gemini-interactions-api`, `gemini-live-api-dev`, `gemini-omni-flash-api`.
 3. **Workspace R&D & Specialized Engines (16):** `agent-teams-orchestration` (FLEET-001 R&D), `blog-writing-like-claude` (BiasAperture), `chat-archiver` (Brainstorm Incubator), `compliance-report-harmonizer` (BiasAperture), `cp-archive-harvester` (IEEE-Xtreme-Archive), `cyber-forensics` (Cyber-Forensics), `doc-archiver` (Brainstorm Incubator), `google-classroom` (Classroom MCP), `graphify` (Knowledge Core), `graphify-code-search` (Knowledge Core), `github-workflow` (Ecosystem Standard), `portfolio-project-manager` (AaradhyaDT.github.io), `super-nlm` (super-nlm MCP), `super-nlm-downloads` (super-nlm Studio), `win-vault` (Win-Vault Core), `winpilot` (WinPilot UI Framework).
-4. **Global System & Development Standards (9):** `feature-dev`, `design-taste-frontend`, `mcp-integration`, `pr-review-toolkit`, `security-guidance`, `shadcn-context`, `skill-development`, `split-to-prs`.
-5. **Sub-Workflows & Specialized Extensions (6):** `antigravity-ui-motion-design-expert`, `commit-commands`, `frontend-design`, `github-issue-pr-workflow`, `google-ux-fluidity`, `review-bugbot`, `ui-ux-pro-max`.
+4. **Global System & Development Standards (8):** `feature-dev`, `design-taste-frontend`, `mcp-integration`, `pr-review-toolkit`, `security-guidance`, `shadcn-context`, `skill-development`, `split-to-prs`.
+
+*(Note: 10 + 4 + 16 + 8 = 38 in-repo packages. The remaining 6 workspace items—`antigravity-ui-motion-design-expert`, `commit-commands`, `frontend-design`, `github-issue-pr-workflow`, `google-ux-fluidity`, and `review-bugbot`—operate as composite sub-workflows and inline prompt directives rather than standalone packages, totaling 44 workspace capabilities).*
 
 For full interactive paths, individual `SKILL.md` triggers, and synchronization scripts, see the master registry: [`tools/skills/README.md`](../../tools/skills/README.md).
 

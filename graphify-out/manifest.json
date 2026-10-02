@@ -6,10 +6,10 @@
     "semantic_hash": "1f807d3a09fa490b7f5315226b97cf4b"
   },
   "schemas/ecosystem.registry.json": {
-    "mtime": 1790945786.2365532,
-    "seen": 1790945792.13311,
-    "ast_hash": "c880b32711bd80c1678fe60bdbfdc274",
-    "semantic_hash": "c880b32711bd80c1678fe60bdbfdc274"
+    "mtime": 1790948170.3192158,
+    "seen": 1790948462.638033,
+    "ast_hash": "cae7a685fdc63bddc4b3eabdb40e87a3",
+    "semantic_hash": "cae7a685fdc63bddc4b3eabdb40e87a3"
   },
   "schemas/examples/AI-Constraint-Solver.contract.json": {
     "mtime": 1790044861.17107,
@@ -24,10 +24,10 @@
     "semantic_hash": "fe271b9b041d088da4e4a171e190aa7c"
   },
   "sim/reconciliation_engine.py": {
-    "mtime": 1790946372.3347032,
-    "seen": 1790946414.740819,
-    "ast_hash": "97175d5fac8eaceac890c46e0f400b63",
-    "semantic_hash": "97175d5fac8eaceac890c46e0f400b63"
+    "mtime": 1790948333.11988,
+    "seen": 1790948462.6380708,
+    "ast_hash": "f5454b1e718769cf4222f41b286a929b",
+    "semantic_hash": "f5454b1e718769cf4222f41b286a929b"
   },
   "sim/sweep_ipu_breakeven.py": {
     "mtime": 1790044861.1795669,
@@ -102,10 +102,10 @@
     "semantic_hash": "5b018a5335bcfda1d7e220f7b2eaa4d8"
   },
   "schemas/capability-ontology.md": {
-    "mtime": 1790945786.2430668,
-    "seen": 1790945792.133322,
-    "ast_hash": "9cd20d880f544beb91004099290ff9cd",
-    "semantic_hash": "9cd20d880f544beb91004099290ff9cd"
+    "mtime": 1790948260.531454,
+    "seen": 1790948462.638171,
+    "ast_hash": "96c1b4a18eb1a9525fe0ded734e1e05d",
+    "semantic_hash": "96c1b4a18eb1a9525fe0ded734e1e05d"
   },
   "schemas/evidence-policy.md": {
     "mtime": 1790044861.17107,
@@ -516,10 +516,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790946869.4409816,
-    "seen": 1790946872.3529031,
-    "ast_hash": "44f4997cf482d097086dd2b0a99346cb",
-    "semantic_hash": "44f4997cf482d097086dd2b0a99346cb"
+    "mtime": 1790948460.002494,
+    "seen": 1790948462.6380308,
+    "ast_hash": "5b64fe4dd259933c86dbc1d023a5c85a",
+    "semantic_hash": "5b64fe4dd259933c86dbc1d023a5c85a"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -570,10 +570,10 @@
     "semantic_hash": "ef915c5d8d1809c77777dfc027680b8a"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790946867.331822,
-    "seen": 1790946872.3529012,
-    "ast_hash": "95e50e32422a9434c8d921a862daac1c",
-    "semantic_hash": "95e50e32422a9434c8d921a862daac1c"
+    "mtime": 1790948457.9632924,
+    "seen": 1790948462.6380296,
+    "ast_hash": "bd269c7ea2d80fccf7524d6dfdfd710d",
+    "semantic_hash": "bd269c7ea2d80fccf7524d6dfdfd710d"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -1380,10 +1380,10 @@
     "semantic_hash": "a311603777461fd07ccdd952e27dadbf"
   },
   "research/notes/2026-10-02_ECOSYSTEM_SKILLS_AND_WORKFLOW_CALIBRATED_EVALUATION.md": {
-    "mtime": 1790946385.2259636,
-    "seen": 1790946414.740973,
-    "ast_hash": "f2bec39257eb8c5b1461f64ae083be8a",
-    "semantic_hash": "f2bec39257eb8c5b1461f64ae083be8a"
+    "mtime": 1790948373.7290797,
+    "seen": 1790948462.6381562,
+    "ast_hash": "e038b3378e626fde1ac319cc04eca0c3",
+    "semantic_hash": "e038b3378e626fde1ac319cc04eca0c3"
   },
   "tools/skills/antigravity-guide/SKILL.md": {
     "mtime": 1790821502.1616278,

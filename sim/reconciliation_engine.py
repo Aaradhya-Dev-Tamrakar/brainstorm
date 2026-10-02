@@ -203,7 +203,15 @@ def auto_reconcile_counts():
 
             today_iso = datetime.date.today().isoformat()
             special_count = stats.get("special_and_research_branches", 2)
-            dynamic_notes = f"Achieved 100% 1-to-1 module-to-branch cardinality across all {total_modules} ecosystem tools on {today_iso} (1 main + {total_modules} tool branches + {special_count} special/research branches = {total_remote_branches} total remote branches)."
+            automation_count = stats.get("automation_branches", 1)
+            if "automation_branches" not in stats:
+                stats["automation_branches"] = automation_count
+                changed = True
+            if automation_count > 0:
+                branch_breakdown = f"1 main + {total_modules} tool branches + {special_count} special/research branches + {automation_count} automation branch"
+            else:
+                branch_breakdown = f"1 main + {total_modules} tool branches + {special_count} special/research branches"
+            dynamic_notes = f"Achieved 100% 1-to-1 module-to-branch cardinality across all {total_modules} ecosystem tools on {today_iso} ({branch_breakdown} = {total_remote_branches} total remote branches)."
             if stats.get("notes") != dynamic_notes:
                 stats["notes"] = dynamic_notes
                 changed = True
@@ -322,9 +330,10 @@ def auto_reconcile_counts():
                 f"{comp_modules} Computational Engines + {pres_modules} Presentation & Educational Hubs registered in `schemas/ecosystem.registry.json`",
                 new_ont
             )
+            automation_count = stats.get("automation_branches", 1)
             new_ont = re.sub(
-                r'`main` \(orchestrator\) \+\s*\d+\s*tool branches \+\s*\d+\s*special/research branches',
-                f"`main` (orchestrator) + {total_modules} tool branches + {special_count} special/research branches",
+                r'`main` \(orchestrator\) \+\s*\d+\s*tool branches \+\s*\d+\s*special/research branches(?:\s*\+\s*\d+\s*automation branch(?:\s*\([^)]*\))?)?',
+                f"`main` (orchestrator) + {total_modules} tool branches + {special_count} special/research branches + {automation_count} automation branch (`chore/drive-manifest-sync`)",
                 new_ont
             )
             new_ont = re.sub(
@@ -761,7 +770,7 @@ def audit_layer_1_consistency():
     canonical_modules = 25
     canonical_comp = 21
     canonical_pres = 4
-    canonical_branches = 28
+    canonical_branches = 29
     ecosystem_registry_path = os.path.join(SCHEMAS_DIR, "ecosystem.registry.json")
     if os.path.exists(ecosystem_registry_path):
         try:
@@ -772,7 +781,7 @@ def audit_layer_1_consistency():
                 canonical_modules = stats.get("total_tool_modules", 25)
                 canonical_comp = stats.get("computational_modules", 21)
                 canonical_pres = stats.get("presentation_and_educational_modules", 4)
-                canonical_branches = stats.get("total_git_branches", 28)
+                canonical_branches = stats.get("total_git_branches", 29)
         except Exception as e:
             discrepancies.append({
                 "type": "REGISTRY_PARSE_ERROR",
@@ -1003,6 +1012,7 @@ def audit_repository(auto_fix=False, write_ledger=False):
             ledger_data = {
                 "timestamp": now_iso,
                 "evaluated_commit": git_sha,
+                "provenance_note": "Persisted snapshot from pre-commit reconciliation; automated CI generates per-run ledger matching exact tested HEAD.",
                 "layer_1_structural_consistency": {
                     "status": "PASSED" if l1_errors == 0 else "FAILED",
                     "errors": l1_errors,

@@ -611,6 +611,15 @@ def audit_layer_1_consistency():
                     "detail": f"Target not found: '{target}'"
                 })
 
+        # Check against synthetic/placeholder commit SHAs (INV-COMMIT-001)
+        placeholder_sha_pattern = re.compile(r"github\.com/[^/]+/[^/]+/commit/(rel\d+|upg\d+|xtool\d+|placeholder|dummy|todo)", re.IGNORECASE)
+        for p_match in placeholder_sha_pattern.finditer(content):
+            discrepancies.append({
+                "type": "SYNTHETIC_COMMIT_SHA",
+                "file": rel_path,
+                "detail": f"Synthetic/placeholder commit SHA detected: '{p_match.group(1)}'. Authentic 7-40 hex SHA required."
+            })
+
         # Check metadata headers in architecture specs and invariants
         if "research/architectures" in rel_path or "research/invariants" in rel_path:
             if not rel_path.endswith("README.md"):
@@ -644,7 +653,7 @@ def audit_layer_1_consistency():
             d for d in os.listdir(skills_dir)
             if os.path.isdir(os.path.join(skills_dir, d)) and not d.startswith(".")
         ])
-        expected_skills = 44
+        expected_skills = 32
         if len(skill_dirs) != expected_skills:
             discrepancies.append({
                 "type": "SKILL_COUNT_DRIFT",

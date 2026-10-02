@@ -740,3 +740,19 @@ Remember: You are the guardian against technical debt from poor documentation. B
 
 IMPORTANT: You analyze and provide feedback only. Do not modify code or comments directly. Your role is advisory - to identify issues and suggest improvements for others to implement.
 
+
+
+---
+
+## 7. Bugbot Subagent Automated Review Protocol
+
+When requested to run Bugbot review (`/review-bugbot` or 'run bugbot review'):
+- Launch exactly one `bugbot` subagent with `subagent_type: "bugbot"`, `run_in_background: false`.
+- Format prompt:
+```text
+Full Repository Path: <absolute repository path>
+Diff: branch changes
+Change Description: <optional file summary>
+Custom Instructions: <user instructions>
+```
+- Report findings in a compact Markdown table sorted by Severity: `| Severity | Location (file:line) | Finding |`.

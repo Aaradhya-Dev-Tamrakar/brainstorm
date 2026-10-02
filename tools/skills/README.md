@@ -7,7 +7,7 @@
 
 ---
 
-## 📊 Complete Master Skills Matrix (Origin & Workflow Usage)
+## 📊 Complete Master Skills Matrix (Origin & Workflow Usage) (39 Skills)
 
 | Category | Skill Name | Path | Origin | Usage in Workflow Pipeline |
 | :--- | :--- | :--- | :--- | :--- |
@@ -19,6 +19,7 @@
 | | [`super-nlm-downloads`](super-nlm-downloads/SKILL.md) | `tools/skills/super-nlm-downloads/` | `super-nlm` R&D Project | **Artifact Export Phase:** Automates URL downloads of Studio artifacts (audio overviews, mind maps, quizzes, videos) and dispatches LocalSend sharing. |
 | **Codebase Graph & Systems** | [`graphify`](graphify/SKILL.md) | `tools/skills/graphify/` | Brainstorm Knowledge Core (`graphify-out/`) | **Exploration & Onboarding Phase:** Generates persistent codebase knowledge graph (`GRAPH_REPORT.md`), executing BFS (`query`), DFS, and shortest path (`path`). |
 | | [`graphify-code-search`](graphify-code-search/SKILL.md) | `tools/skills/graphify-code-search/` | Brainstorm Knowledge Core | **Implementation Reuse Phase:** Traces caller/callee AST chains, discovers existing helpers, and eliminates duplicate implementation work via graph queries. |
+| | [`graphify-optimizer`](graphify-optimizer/SKILL.md) | `tools/skills/graphify-optimizer/` | Brainstorm Knowledge Core (`graphify.ps1`) | **Knowledge Optimization Phase:** Eliminates leaf-node spur noise, configures `.graphifyignore`, executes directed/code-only AST builds, and labels communities. |
 | | [`mcp-integration`](mcp-integration/SKILL.md) | `tools/skills/mcp-integration/` | Global Antigravity Config | **Integration Phase:** Guidelines for configuring, testing, and registering Model Context Protocol (MCP) servers (stdio, SSE, HTTP, WebSocket). |
 | | [`skill-development`](skill-development/SKILL.md) | `tools/skills/skill-development/` | Global Antigravity Config | **Meta-Authoring Phase:** Enforces progressive disclosure design, prompt scaffolding, and metadata schemas when creating new agent skills. |
 | **Feature Scoping & Git Workflow** | [`feature-dev`](feature-dev/SKILL.md) | `tools/skills/feature-dev/` | Global Antigravity Config | **Scoping & Architecture Phase:** Interactively scopes feature requirements, clarifies ambiguities, and decomposes architecture before writing code. |

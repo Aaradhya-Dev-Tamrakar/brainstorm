@@ -15,17 +15,17 @@ Following this logging pass, an adversarial reality check was conducted to contr
 
 ---
 
-## 2. In-Repo Skills Inventory & Workflow Origin Matrix (38 Mirrored Packages)
+## 2. In-Repo Skills Inventory & Workflow Origin Matrix (39 Mirrored Packages)
 
-All 38 standalone skill packages are mirrored and version-controlled under [`tools/skills/`](../../tools/skills/):
+All 39 standalone skill packages are mirrored and version-controlled under [`tools/skills/`](../../tools/skills/):
 
-### Summary Breakdown by Origin (38 In-Repo Mirrored Packages):
+### Summary Breakdown by Origin (39 In-Repo Mirrored Packages):
 1. **Antigravity Built-in Skills (10):** `antigravity-guide`, `agy-customizations`, `automation`, `generative_ui`, `migrate-workflows`, `permissioned-github`, `plugin`, `ui-extension`, `ui-plugin-navigation`, `google-stitch-integration`.
 2. **Gemini API Plugin Skills (4):** `gemini-api-dev`, `gemini-interactions-api`, `gemini-live-api-dev`, `gemini-omni-flash-api`.
-3. **Workspace R&D & Specialized Engines (16):** `agent-teams-orchestration` (FLEET-001 R&D), `blog-writing-like-claude` (BiasAperture), `chat-archiver` (Brainstorm Incubator), `compliance-report-harmonizer` (BiasAperture), `cp-archive-harvester` (IEEE-Xtreme-Archive), `cyber-forensics` (Cyber-Forensics), `doc-archiver` (Brainstorm Incubator), `google-classroom` (Classroom MCP), `graphify` (Knowledge Core), `graphify-code-search` (Knowledge Core), `github-workflow` (Ecosystem Standard), `portfolio-project-manager` (AaradhyaDT.github.io), `super-nlm` (super-nlm MCP), `super-nlm-downloads` (super-nlm Studio), `win-vault` (Win-Vault Core), `winpilot` (WinPilot UI Framework).
+3. **Workspace R&D & Specialized Engines (17):** `agent-teams-orchestration` (FLEET-001 R&D), `blog-writing-like-claude` (BiasAperture), `chat-archiver` (Brainstorm Incubator), `compliance-report-harmonizer` (BiasAperture), `cp-archive-harvester` (IEEE-Xtreme-Archive), `cyber-forensics` (Cyber-Forensics), `doc-archiver` (Brainstorm Incubator), `google-classroom` (Classroom MCP), `graphify` (Knowledge Core), `graphify-code-search` (Knowledge Core), `graphify-optimizer` (Knowledge Core Optimization), `github-workflow` (Ecosystem Standard), `portfolio-project-manager` (AaradhyaDT.github.io), `super-nlm` (super-nlm MCP), `super-nlm-downloads` (super-nlm Studio), `win-vault` (Win-Vault Core), `winpilot` (WinPilot UI Framework).
 4. **Global System & Development Standards (8):** `feature-dev`, `design-taste-frontend`, `mcp-integration`, `pr-review-toolkit`, `security-guidance`, `shadcn-context`, `skill-development`, `split-to-prs`.
 
-*(Note: 10 + 4 + 16 + 8 = 38 in-repo packages. The remaining 6 workspace items—`antigravity-ui-motion-design-expert`, `commit-commands`, `frontend-design`, `github-issue-pr-workflow`, `google-ux-fluidity`, and `review-bugbot`—operate as composite sub-workflows and inline prompt directives rather than standalone packages, totaling 44 workspace capabilities).*
+*(Note: 10 + 4 + 17 + 8 = 39 in-repo packages. The remaining 5 workspace items—`antigravity-ui-motion-design-expert`, `commit-commands`, `frontend-design`, `google-ux-fluidity`, and `review-bugbot`—operate as composite sub-workflows and inline prompt directives rather than standalone packages, totaling 44 workspace capabilities).*
 
 For full interactive paths, individual `SKILL.md` triggers, and synchronization scripts, see the master registry: [`tools/skills/README.md`](../../tools/skills/README.md).
 

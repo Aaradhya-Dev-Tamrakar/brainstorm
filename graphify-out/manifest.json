@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790949049.9111326,
-    "seen": 1790949052.0159507,
-    "ast_hash": "03f4b285eb6fdee3d669b600810755a8",
-    "semantic_hash": "03f4b285eb6fdee3d669b600810755a8"
+    "mtime": 1790949319.529106,
+    "seen": 1790949321.6564658,
+    "ast_hash": "22104ef572ef215bc0bf9e0f6c1d9949",
+    "semantic_hash": "22104ef572ef215bc0bf9e0f6c1d9949"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "ef915c5d8d1809c77777dfc027680b8a"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790949047.8867917,
-    "seen": 1790949052.015949,
-    "ast_hash": "9db548aa000aed8f59f5d02f871e251c",
-    "semantic_hash": "9db548aa000aed8f59f5d02f871e251c"
+    "mtime": 1790949317.5046048,
+    "seen": 1790949321.656464,
+    "ast_hash": "fc73a623482b62e6b7fbf4fd3d7b6632",
+    "semantic_hash": "fc73a623482b62e6b7fbf4fd3d7b6632"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -876,10 +876,10 @@
     "semantic_hash": "7d778793512114b09a97e27b0d5c1e65"
   },
   "tools/skills/README.md": {
-    "mtime": 1790946069.9323852,
-    "seen": 1790946232.9730868,
-    "ast_hash": "57e5969fb5956b88e1435d69e1a3889a",
-    "semantic_hash": "57e5969fb5956b88e1435d69e1a3889a"
+    "mtime": 1790949232.0841918,
+    "seen": 1790949321.6566386,
+    "ast_hash": "c6dd4b825a27678ae52a113dbc72d9b7",
+    "semantic_hash": "c6dd4b825a27678ae52a113dbc72d9b7"
   },
   "tools/skills/agent-teams-orchestration/SKILL.md": {
     "mtime": 1789792377.3205128,
@@ -1350,10 +1350,10 @@
     "semantic_hash": "a311603777461fd07ccdd952e27dadbf"
   },
   "research/notes/2026-10-02_ECOSYSTEM_SKILLS_AND_WORKFLOW_CALIBRATED_EVALUATION.md": {
-    "mtime": 1790948373.7290797,
-    "seen": 1790948462.6381562,
-    "ast_hash": "e038b3378e626fde1ac319cc04eca0c3",
-    "semantic_hash": "e038b3378e626fde1ac319cc04eca0c3"
+    "mtime": 1790949253.5502968,
+    "seen": 1790949321.6566164,
+    "ast_hash": "0d2cbe6b276845d49abb6209533c7d95",
+    "semantic_hash": "0d2cbe6b276845d49abb6209533c7d95"
   },
   "tools/skills/antigravity-guide/SKILL.md": {
     "mtime": 1790821502.1616278,
@@ -1624,5 +1624,11 @@
     "seen": 1790946232.9731667,
     "ast_hash": "caad3b08ca5f3f7bcd02d3a506d3eae1",
     "semantic_hash": "caad3b08ca5f3f7bcd02d3a506d3eae1"
+  },
+  "tools/skills/graphify-optimizer/SKILL.md": {
+    "mtime": 1790949288.9960907,
+    "seen": 1790949321.656678,
+    "ast_hash": "84e495354caaec454072102f24130366",
+    "semantic_hash": "84e495354caaec454072102f24130366"
   }
 }

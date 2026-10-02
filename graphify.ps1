@@ -64,6 +64,9 @@ param (
     [Parameter(Position = 0)]
     [string]$TargetDirectory = ".",
 
+    [Parameter(Position = 1)]
+    [string]$OutDir = "",
+
     [switch]$Update,
 
     [switch]$Full,
@@ -108,9 +111,45 @@ function Write-Fail {
     Write-Status -Message $Message -Color ([System.ConsoleColor]::Red)
 }
 
-# 1. Resolve Target Root and graphify-out directory
+# 1. Resolve Target Root and graphify-out directory with smart multi-repo discovery
 $ResolvedTarget = (Resolve-Path $TargetDirectory).Path
-$GraphifyOutDir = Join-Path $ResolvedTarget "graphify-out"
+
+if ($OutDir) {
+    if ([System.IO.Path]::IsPathRooted($OutDir)) {
+        $GraphifyOutDir = $OutDir
+    } else {
+        $GraphifyOutDir = Join-Path $ResolvedTarget $OutDir
+    }
+    Write-Status "Using explicitly specified output directory: $GraphifyOutDir"
+} elseif ($env:GRAPHIFY_OUT) {
+    if ([System.IO.Path]::IsPathRooted($env:GRAPHIFY_OUT)) {
+        $GraphifyOutDir = $env:GRAPHIFY_OUT
+    } else {
+        $GraphifyOutDir = Join-Path $ResolvedTarget $env:GRAPHIFY_OUT
+    }
+    Write-Status "Using environment GRAPHIFY_OUT directory: $GraphifyOutDir"
+} else {
+    # Auto-discover existing output directory if placed in standard alternative repo locations
+    $candidates = @(
+        (Join-Path $ResolvedTarget "graphify-out"),
+        (Join-Path $ResolvedTarget "docs\graphify-out"),
+        (Join-Path $ResolvedTarget "docs\knowledge-graph"),
+        (Join-Path $ResolvedTarget ".graphify-out")
+    )
+    $found = $null
+    foreach ($cand in $candidates) {
+        if ((Test-Path (Join-Path $cand "graph.json")) -or (Test-Path (Join-Path $cand "GRAPH_REPORT.md"))) {
+            $found = $cand
+            break
+        }
+    }
+    if ($found) {
+        $GraphifyOutDir = $found
+        Write-Status "Auto-discovered existing Graphify directory: $GraphifyOutDir"
+    } else {
+        $GraphifyOutDir = Join-Path $ResolvedTarget "graphify-out"
+    }
+}
 
 if (-not (Test-Path $GraphifyOutDir)) {
     if (-not $WhatIf) {

@@ -167,3 +167,39 @@ Graphify stores persistent community labels in `graphify-out/.graphify_labels.js
 ```
 
 After updating `.graphify_labels.json`, immediately run `.\graphify.bat -ClusterOnly` to propagate the semantic labels to [graphify-out/GRAPH_REPORT.md](../../../graphify-out/GRAPH_REPORT.md) and [graphify-out/graph.html](../../../graphify-out/graph.html).
+
+---
+
+## 7. Dynamic Output Directory Resolution (`graphify-out` Placement)
+
+Across different repositories in the ecosystem, the Graphify output folder placement varies depending on repository conventions and cleanliness policies:
+* **Root-Level (Standard):** `<repo_root>/graphify-out/` (e.g., `brainstorm`)
+* **Documentation-Nested:** `<repo_root>/docs/graphify-out/` or `<repo_root>/docs/knowledge-graph/` (used in presentation or documentation-heavy repos to avoid root clutter)
+* **Hidden / Metadata-Isolated:** `<repo_root>/.graphify-out/` (when knowledge graph artifacts are treated as local IDE metadata)
+* **Centralized / Monorepo External:** Out-of-tree directories when indexing multiple packages into a shared knowledge base.
+
+### Resolution Precedence Hierarchy:
+1. **Explicit Parameter:** `-OutDir <path>`
+   ```powershell
+   .\graphify.bat -TargetDirectory "." -OutDir "docs/graphify-out"
+   ```
+2. **Environment Variable:** `$env:GRAPHIFY_OUT`
+   ```powershell
+   $env:GRAPHIFY_OUT = "docs/graphify-out"
+   .\graphify.bat
+   ```
+3. **Auto-Discovery (Built into `graphify.ps1`):** Probes candidate directories containing existing `graph.json` or `GRAPH_REPORT.md`:
+   - `<Target>/graphify-out`
+   - `<Target>/docs/graphify-out`
+   - `<Target>/docs/knowledge-graph`
+   - `<Target>/.graphify-out`
+4. **Default Fallback:** Creates `<Target>/graphify-out`.
+
+### Agent & Tool Inspection Pattern:
+When agents query the knowledge graph (or in scripts like `graphify-code-search`), discover the active output directory dynamically rather than hardcoding paths:
+```powershell
+$GraphDir = @("graphify-out", "docs/graphify-out", "docs/knowledge-graph", ".graphify-out") |
+    Where-Object { Test-Path (Join-Path $_ "graph.json") } | Select-Object -First 1
+if (-not $GraphDir) { $GraphDir = "graphify-out" }
+$GraphJsonPath = Join-Path $GraphDir "graph.json"
+```

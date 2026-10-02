@@ -7,7 +7,31 @@ description: Git workflow automation guidelines for creating clean semantic comm
 
 This skill guides atomic commits, conventional commit syntax, branch management, and PR creation.
 
-## 1. Creating Git Commits
+## 0. Synchronized Ecosystem Repositories (`sync.ps1` / `sync.bat`)
+
+When operating in any repository containing `sync.ps1` or `sync.bat` (e.g., `brainstorm`, `AaradhyaDT.github.io`, `system-optimizer`, etc.):
+- **Strict Prohibition**: Do **NOT** run manual `git add`, `git commit`, `git push`, or `git pull` directly.
+- **Execution**: Use `.\sync.bat` (or `.\sync.ps1`) for all git synchronization.
+  - `.\sync.bat` automatically bypasses PowerShell `ExecutionPolicy` restrictions (`Restricted`/`RemoteSigned`) on fresh clones or different Windows devices.
+  - Routine sync: `.\sync.bat`
+  - Semantic commit: `.\sync.bat -m "feat(scope): descriptive summary"`
+  - Safe pull only: `.\sync.bat -PullOnly`
+- **Release SHA & Commit Integrity**: Never use synthetic placeholder SHA strings (e.g. `rel50`, `rel55`, `upg47`). All version releases, changelogs, and milestone references must link to authentic 7–40 hex Git commit SHAs (`https://github.com/<owner>/<repo>/commit/<sha>`).
+- **Agent Rules Architecture**: Store full operational rules and verification gates in `AGENTS.md`. `GEMINI.md` must only reference `[@AGENTS.md](AGENTS.md)`.
+- **Portability Invariant**: If a repository contains `sync.ps1` but lacks `sync.bat`, immediately create `sync.bat` alongside it:
+  ```cmd
+  @echo off
+  where pwsh >nul 2>nul
+  if %ERRORLEVEL% equ 0 (
+      pwsh -NoProfile -ExecutionPolicy Bypass -File "%~dp0sync.ps1" %*
+  ) else (
+      powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0sync.ps1" %*
+  )
+  ```
+
+---
+
+## 1. Creating Git Commits (Standard Non-Sync Repositories)
 
 ---
 allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*)

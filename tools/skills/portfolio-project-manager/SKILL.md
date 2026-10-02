@@ -9,13 +9,13 @@ description: >-
 
 # Portfolio Project Manager Skill
 
-CRITICAL RULE: Whenever the user asks to add, update, or register a new project or tool to their portfolio website (`f:\Aaradhya-Dev-Tamrakar\AaradhyaDT.github.io`):
+CRITICAL RULE: Whenever the user asks to add, update, or register a new project or tool to their portfolio website (`F:\AaradhyaDT\AaradhyaDT.github.io`):
 - **NEVER** manually open and slice `projects.html` with regex or replace large string blocks.
 - **NEVER** manually create unencrypted raw GitHub `href` tags in `projects.html`.
 - **NEVER** hardcode or guess project numbers (`p-00x`) or filter pill counts.
 
 You **MUST** invoke the deterministic project onboarding engine:
-`f:\Aaradhya-Dev-Tamrakar\AaradhyaDT.github.io\scripts\add_project.py`
+`F:\AaradhyaDT\AaradhyaDT.github.io\scripts\add_project.py`
 
 ---
 
@@ -76,20 +76,23 @@ In less than 1 second, `add_project.py`:
 3. **Card Generation**: Generates compliant, accessible `<details class="project-card reveal ...">` markup with the locked link `data-payload-link-id="proj-<slug>"`.
 4. **DOM Section Injection**: Injects the card into `#section-personal` (default) or `#section-projects`.
 5. **Exact Filter Recounting**: Parses all cards in the DOM and automatically writes the exact counts to `<span class="proj-filter-count">` for `All`, `aiml`, `embedded`, `hardware`, and `apps`.
-6. **Post-Addition Integrity**: Automatically runs `scripts/extract_index.py` (updates static search index) and `scripts/verify.py` (guarantees 25/25 check categories pass).
+6. **Post-Addition Integrity**: Automatically runs `scripts/extract_index.py` (updates static search index) and `scripts/verify.py` (guarantees 26/26 check categories pass, including `release-shas` and `version` integrity).
 
 ---
 
-## 4. Finalizing Deployment
+## 4. Release SHA & What's New Integrity Invariant
 
-Once `add_project.py` completes cleanly:
+Whenever versioning, bumping, or adding releases to `assets/js/data/releases.js`:
+- **NEVER** use synthetic or placeholder `sha` strings (e.g., `rel50`, `rel55`, `upg47`, `xtool20`).
+- **ALWAYS** ensure every `sha` is a valid, existing Git commit short hash (matching `^[0-9a-f]{7,40}$`) that resolves directly to `https://github.com/AaradhyaDT/AaradhyaDT.github.io/commit/<sha>`.
+- `scripts/site_automation.py` automatically resolves `git rev-parse --short HEAD` for major releases, and `scripts/verify.py` (Category 26: `release-shas`) enforces this during pre-commit and CI.
+
+---
+
+## 5. Finalizing Deployment
+
+Once all additions pass local verification:
 ```powershell
-.\sync.ps1 -m "feat(projects): register <project-name> in portfolio showcase"
+.\sync.bat -m "feat(projects): register <project-name> in portfolio showcase"
 ```
-If deploying upstream to production `AaradhyaDT/AaradhyaDT.github.io`:
-```powershell
-git push https://github.com/AaradhyaDT/AaradhyaDT.github.io.git main:sync-<branch-name> --force
-gh pr create --repo AaradhyaDT/AaradhyaDT.github.io --head sync-<branch-name> --base main --title "..."
-gh pr merge <PR_NUM> --repo AaradhyaDT/AaradhyaDT.github.io --squash --delete-branch --admin
-gh workflow run "Deploy to GitHub Pages" --repo AaradhyaDT/AaradhyaDT.github.io --ref main
-```
+*(Runs single-pass search extraction, AST graph update, 26-category verification gate, commit, push, and bot stamp sync).*

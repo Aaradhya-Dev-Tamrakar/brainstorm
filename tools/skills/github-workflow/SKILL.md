@@ -26,6 +26,13 @@ This skill defines the canonical standard operating procedure (SOP) for all soft
    > [!CAUTION]
    > **Never commit or log personal developer resources into collaborative/public repositories.**
    > Personal NotebookLM IDs, private journals, personal notes, and local machine configs found in global agent rules are strictly for local assistant tooling context. They must **never** be written into shared repository documentation, Markdown files, or committed artifacts.
+8. **Release SHA & Commit History Linking Integrity**:
+   - Whenever documenting version releases, "What's New" logs (`releases.js`), changelogs, or repository milestones, **NEVER** use placeholder/synthetic strings (e.g., `rel50`, `rel55`, `upg47`, `xtool20`).
+   - Every commit reference must link to an authentic 7–40 hex Git commit short SHA (`https://github.com/<owner>/<repo>/commit/<sha>`) that resolves directly on GitHub.
+   - For automated releases, resolve `git rev-parse --short HEAD` dynamically and enforce CI validation gates (`scripts/verify.py`).
+9. **Agent Rules Architecture (`AGENTS.md` Single Source of Truth)**:
+   - Always maintain full operational guidelines, verification rules, and ecosystem invariants in `AGENTS.md`.
+   - Keep `GEMINI.md` lean by referencing `[@AGENTS.md](AGENTS.md)` to prevent documentation duplication and rule drift across tools.
 
 ---
 

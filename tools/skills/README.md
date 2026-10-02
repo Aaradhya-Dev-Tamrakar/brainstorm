@@ -2,11 +2,11 @@
 
 > **Path:** `tools/skills/`  
 > **Global System Path:** `C:\Users\Aaradhya\.gemini\config\skills\`  
-> **Purpose:** Version-controlled master repository and source-of-truth mirror for all 25 custom Antigravity agent skills.
+> **Purpose:** Version-controlled master repository and source-of-truth mirror for all 30 custom Antigravity agent skills.
 
 ---
 
-## 📊 Skills Matrix & Functional Taxonomy
+## 📊 Skills Matrix & Functional Taxonomy (30 Skills)
 
 | Category | Skill Name | Path | Description & Core Triggers |
 | :--- | :--- | :--- | :--- |
@@ -14,6 +14,7 @@
 | | [`super-nlm-downloads`](super-nlm-downloads/SKILL.md) | `tools/skills/super-nlm-downloads/` | Automates URL extraction, subject folder downloads (outside repo), and LocalSend transfers. |
 | **Ingestion & Archival** | [`doc-archiver`](doc-archiver/SKILL.md) | `tools/skills/doc-archiver/` | Invokes `save-doc` CLI to extract Google Docs and web docs into structured Markdown. |
 | | [`chat-archiver`](chat-archiver/SKILL.md) | `tools/skills/chat-archiver/` | Invokes `save-chat` CLI to parse ChatGPT and model share URLs into clean dialogue logs. |
+| | [`cp-archive-harvester`](cp-archive-harvester/SKILL.md) | `tools/skills/cp-archive-harvester/` | Autonomous CDP scraper for competitive programming problem statements and 100-pt solutions. |
 | | [`google-classroom`](google-classroom/SKILL.md) | `tools/skills/google-classroom/` | Google Classroom MCP assistant for coursework, assignments, and due date management. |
 | **Multi-Agent Orchestration** | [`agent-teams-orchestration`](agent-teams-orchestration/SKILL.md) | `tools/skills/agent-teams-orchestration/` | Scout-Reviewer-Writer-Lead division of labor, concurrency isolation, and bounded iterations. |
 | **Codebase Graph & Systems** | [`graphify`](graphify/SKILL.md) | `tools/skills/graphify/` | Persistent knowledge graph query, path traversal, and community structure analysis. |
@@ -28,13 +29,17 @@
 | | [`shadcn-context`](shadcn-context/SKILL.md) | `tools/skills/shadcn-context/` | Component schemas, props, and composition rules for shadcn/ui and Radix primitives. |
 | | [`ui-ux-pro-max`](ui-ux-pro-max/SKILL.md) | `tools/skills/ui-ux-pro-max/` | Advanced UI/UX intelligence, dark-mode-first tokens, elevation layers, and editorial typography. |
 | **Ecosystem & Workflow** | [`github-workflow`](github-workflow/SKILL.md) | `tools/skills/github-workflow/` | Canonical default workflow for issue anchoring, task tracking, verification, sync, and PRs. |
+| | [`github-issue-pr-workflow`](github-issue-pr-workflow/SKILL.md) | `tools/skills/github-issue-pr-workflow/` | End-to-end issue-driven development, checkbox tracking, and PR dispatch lifecycle. |
 | | [`portfolio-project-manager`](portfolio-project-manager/SKILL.md) | `tools/skills/portfolio-project-manager/` | Token-zero project onboarding engine for `AaradhyaDT.github.io` (auto IDs & AES encryption). |
 | | [`feature-dev`](feature-dev/SKILL.md) | `tools/skills/feature-dev/` | Guided feature scoping, architecture decomposition, and requirements clarification. |
-| | [`commit-commands`](commit-commands/SKILL.md) | `tools/skills/commit-commands/` | Semantic Git commits, branch hygiene, and GitHub PR workflows. |
+| | [`commit-commands`](commit-commands/SKILL.md) | `tools/skills/commit-commands/` | Semantic Git commits, branch hygiene, release commit invariants, and GitHub PR workflows. |
 | | [`pr-review-toolkit`](pr-review-toolkit/SKILL.md) | `tools/skills/pr-review-toolkit/` | Multi-perspective code reviews (simplification, silent failure hunting, test quality). |
 | | [`review-bugbot`](review-bugbot/SKILL.md) | `tools/skills/review-bugbot/` | Automated deep code review for silent regressions, race conditions, and concurrency bugs. |
 | | [`split-to-prs`](split-to-prs/SKILL.md) | `tools/skills/split-to-prs/` | Splits large changesets and feature diffs into atomic, reviewer-friendly PR sequences. |
 | | [`security-guidance`](security-guidance/SKILL.md) | `tools/skills/security-guidance/` | Security audits preventing secrets leakage, command injection, and SSRF vulnerabilities. |
+| **System Automation & Forensics** | [`cyber-forensics`](cyber-forensics/SKILL.md) | `tools/skills/cyber-forensics/` | Windows DFIR triage, stealth evasion hunting, NTFS ADS detection, and cryptographic ledgers. |
+| | [`win-vault`](win-vault/SKILL.md) | `tools/skills/win-vault/` | Windows folder locking, privacy vault management, and NTFS ACL administration. |
+| | [`winpilot`](winpilot/SKILL.md) | `tools/skills/winpilot/` | Windows UI automation, screen perception, window management, and silent screenshot capture. |
 
 ---
 

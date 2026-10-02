@@ -516,10 +516,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790923671.445647,
-    "seen": 1790923675.6313796,
-    "ast_hash": "baf8aa041fc730ccbdbfb9f019b658a7",
-    "semantic_hash": "baf8aa041fc730ccbdbfb9f019b658a7"
+    "mtime": 1790928799.130705,
+    "seen": 1790928801.5748093,
+    "ast_hash": "6093935a1f72c008f7adf44a39e7b31d",
+    "semantic_hash": "6093935a1f72c008f7adf44a39e7b31d"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -570,10 +570,10 @@
     "semantic_hash": "ef915c5d8d1809c77777dfc027680b8a"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790923669.072619,
-    "seen": 1790923675.6313775,
-    "ast_hash": "ec86f5038dcea3b62433409b1bc29d59",
-    "semantic_hash": "ec86f5038dcea3b62433409b1bc29d59"
+    "mtime": 1790928797.0972779,
+    "seen": 1790928801.574808,
+    "ast_hash": "fc727d98b72488d21c272854d8c264c2",
+    "semantic_hash": "fc727d98b72488d21c272854d8c264c2"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -894,10 +894,10 @@
     "semantic_hash": "7d778793512114b09a97e27b0d5c1e65"
   },
   "tools/skills/README.md": {
-    "mtime": 1790923359.1950526,
-    "seen": 1790923418.8709319,
-    "ast_hash": "6cf52007a510452884d4b36cf4bf7fea",
-    "semantic_hash": "6cf52007a510452884d4b36cf4bf7fea"
+    "mtime": 1790928777.662201,
+    "seen": 1790928801.5749688,
+    "ast_hash": "c2468b5caf813d3d82bd353944e15749",
+    "semantic_hash": "c2468b5caf813d3d82bd353944e15749"
   },
   "tools/skills/agent-teams-orchestration/SKILL.md": {
     "mtime": 1789792377.3205128,
@@ -918,10 +918,10 @@
     "semantic_hash": "8c74810cf3e998121d4b2f7d8433b5d8"
   },
   "tools/skills/commit-commands/SKILL.md": {
-    "mtime": 1788920371.7279975,
-    "seen": 1790599964.4901917,
-    "ast_hash": "38e7ca2744b1549b62b24f87d42cc3be",
-    "semantic_hash": "38e7ca2744b1549b62b24f87d42cc3be"
+    "mtime": 1790923962.5433905,
+    "seen": 1790928801.5749722,
+    "ast_hash": "fad0c2c004c64818e363e168ec5df0c5",
+    "semantic_hash": "fad0c2c004c64818e363e168ec5df0c5"
   },
   "tools/skills/design-taste-frontend/SKILL.md": {
     "mtime": 1788918672.4829366,
@@ -930,10 +930,10 @@
     "semantic_hash": "8eef617740533edf04ee8250294c0cd8"
   },
   "tools/skills/doc-archiver/SKILL.md": {
-    "mtime": 1790233600.6808722,
-    "seen": 1790599964.4901931,
-    "ast_hash": "7d778793512114b09a97e27b0d5c1e65",
-    "semantic_hash": "7d778793512114b09a97e27b0d5c1e65"
+    "mtime": 1790245344.583157,
+    "seen": 1790928801.5749755,
+    "ast_hash": "58d534c3ae1b4c04723d7991609c1a23",
+    "semantic_hash": "58d534c3ae1b4c04723d7991609c1a23"
   },
   "tools/skills/feature-dev/SKILL.md": {
     "mtime": 1788920421.1597216,
@@ -1044,10 +1044,10 @@
     "semantic_hash": "7aec261a37d1f6c4a301292861232bc2"
   },
   "tools/skills/portfolio-project-manager/SKILL.md": {
-    "mtime": 1789579941.2260091,
-    "seen": 1790599964.490209,
-    "ast_hash": "7da635dc9fe6cac05d769b1cff025263",
-    "semantic_hash": "7da635dc9fe6cac05d769b1cff025263"
+    "mtime": 1790923241.315706,
+    "seen": 1790928801.5749965,
+    "ast_hash": "c6df0bd6f5b778102903be6eaa84fcd2",
+    "semantic_hash": "c6df0bd6f5b778102903be6eaa84fcd2"
   },
   "tools/skills/pr-review-toolkit/SKILL.md": {
     "mtime": 1788920416.0251675,
@@ -1206,10 +1206,10 @@
     "semantic_hash": "dde485e0a985382fbbd85d1544a74653"
   },
   "tools/skills/github-workflow/SKILL.md": {
-    "mtime": 1790841026.8450577,
-    "seen": 1790841520.4865816,
-    "ast_hash": "7f261fa86dcb5a68dd3f363983c64f7e",
-    "semantic_hash": "7f261fa86dcb5a68dd3f363983c64f7e"
+    "mtime": 1790923941.6127644,
+    "seen": 1790928801.5749805,
+    "ast_hash": "063364c67dac3f2fe520b995622ee369",
+    "semantic_hash": "063364c67dac3f2fe520b995622ee369"
   },
   "tools/skills/github-workflow/examples/templates.md": {
     "mtime": 1790825797.6388931,
@@ -1356,15 +1356,57 @@
     "semantic_hash": "ada2caeeed12d626f40a4e93bbe09456"
   },
   "tools/skills/cyber-forensics/SKILL.md": {
-    "mtime": 1790923594.4351501,
-    "seen": 1790923638.059415,
+    "mtime": 1790923587.1521695,
+    "seen": 1790928801.574974,
     "ast_hash": "eed98fa3027e5a120687dd8755bff801",
     "semantic_hash": "eed98fa3027e5a120687dd8755bff801"
   },
   "tools/skills/win-vault/SKILL.md": {
-    "mtime": 1790923579.2284095,
-    "seen": 1790923638.0594432,
+    "mtime": 1790923570.7972844,
+    "seen": 1790928801.5750053,
     "ast_hash": "04b363dc024363c4939b9daaf3191c81",
     "semantic_hash": "04b363dc024363c4939b9daaf3191c81"
+  },
+  "tools/skills/github-issue-pr-workflow/scripts/toggle_issue_task.py": {
+    "mtime": 1790825758.7956884,
+    "seen": 1790928801.5748725,
+    "ast_hash": "455b3f3fcbfd9601a906bf8d75a71ddf",
+    "semantic_hash": "455b3f3fcbfd9601a906bf8d75a71ddf"
+  },
+  "tools/skills/cp-archive-harvester/SKILL.md": {
+    "mtime": 1790493737.5991619,
+    "seen": 1790928801.5749729,
+    "ast_hash": "b6b36ed00fb877da454fe8c5d12e3457",
+    "semantic_hash": "b6b36ed00fb877da454fe8c5d12e3457"
+  },
+  "tools/skills/github-issue-pr-workflow/SKILL.md": {
+    "mtime": 1790923953.6058712,
+    "seen": 1790928801.5749779,
+    "ast_hash": "1200c2b2ac1219b2b883a1e977d7cb46",
+    "semantic_hash": "1200c2b2ac1219b2b883a1e977d7cb46"
+  },
+  "tools/skills/github-issue-pr-workflow/examples/templates.md": {
+    "mtime": 1790825797.6388931,
+    "seen": 1790928801.5749786,
+    "ast_hash": "4eb615b28f3985419232b090bb15eca4",
+    "semantic_hash": "4eb615b28f3985419232b090bb15eca4"
+  },
+  "tools/skills/github-issue-pr-workflow/references/gh-cli-cheatsheet.md": {
+    "mtime": 1790840970.0501292,
+    "seen": 1790928801.5749793,
+    "ast_hash": "5bfb2dde7691488ad5f06495638d06d4",
+    "semantic_hash": "5bfb2dde7691488ad5f06495638d06d4"
+  },
+  "tools/skills/github-issue-pr-workflow/references/multi-remote-sync.md": {
+    "mtime": 1790825791.5424824,
+    "seen": 1790928801.5749798,
+    "ast_hash": "b89b14a27b3236bf74b0f3502b34ffad",
+    "semantic_hash": "b89b14a27b3236bf74b0f3502b34ffad"
+  },
+  "tools/skills/winpilot/SKILL.md": {
+    "mtime": 1790489687.1095862,
+    "seen": 1790928801.5750058,
+    "ast_hash": "2ccf21abd84526f1480208db465e78c0",
+    "semantic_hash": "2ccf21abd84526f1480208db465e78c0"
   }
 }

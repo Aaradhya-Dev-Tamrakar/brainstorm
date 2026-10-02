@@ -49,3 +49,12 @@ save-doc "<URL>" --append "path/to/existing_document.md"
 ```
 
 The `save-doc` command parses Google Docs and web documents into clean, structured Markdown with tables, headings, links, and formatting preserved without manual token overhead.
+
+---
+
+## Headless PDF Export Invariants (`INV-PDF-001`)
+
+When exporting Markdown or HTML to PDF via headless browsers (Chromium / Microsoft Edge):
+1. **URI Formatting Requirement**: Never pass raw Windows filesystem paths (e.g. `C:\path\to\doc.html`). Always convert to standard `file:///` URLs (e.g., `file:///C:/path/to/doc.html` or `url.pathToFileURL(path).href`).
+2. **Synchronous Process Synchronization**: Always await process completion (`-Wait` in PowerShell or `execFileSync` in Node.js) before cleaning up temporary HTML files to prevent browser 404 race conditions (`ERR_FILE_NOT_FOUND`).
+3. **Typora MCP Native Tool**: Prefer using `typora_export_pdf` from `typora-mcp` to get exact Typora CSS theme rendering directly into PDF artifacts.

@@ -24,10 +24,10 @@
     "semantic_hash": "fe271b9b041d088da4e4a171e190aa7c"
   },
   "sim/reconciliation_engine.py": {
-    "mtime": 1790951597.8944006,
-    "seen": 1790951782.33711,
-    "ast_hash": "3536aab9236d56acb064e9b193eff4f7",
-    "semantic_hash": "3536aab9236d56acb064e9b193eff4f7"
+    "mtime": 1790952571.4523914,
+    "seen": 1790952635.7087657,
+    "ast_hash": "fe71928e6ca4a71d4bb4804fd26a096d",
+    "semantic_hash": ""
   },
   "sim/sweep_ipu_breakeven.py": {
     "mtime": 1790044861.1795669,
@@ -162,21 +162,21 @@
     "semantic_hash": "77df233338b8864af651a589a5335968"
   },
   "research/hypotheses/HYP-001.yaml": {
-    "mtime": 1789044267.2595766,
-    "seen": 1789412554.294676,
-    "ast_hash": "a1d91c7a875096135425641e37519983",
-    "semantic_hash": "a1d91c7a875096135425641e37519983"
+    "mtime": 1790044861.1366224,
+    "seen": 1790952635.7089188,
+    "ast_hash": "7c375273d8cabf6c5445ce0eadd0ecbc",
+    "semantic_hash": ""
   },
   "research/hypotheses/HYP-002.yaml": {
-    "mtime": 1789044504.8490784,
-    "seen": 1789412554.2946765,
-    "ast_hash": "96106c7c123abe9af3c513a197dcda1d",
-    "semantic_hash": "96106c7c123abe9af3c513a197dcda1d"
+    "mtime": 1790044861.1366224,
+    "seen": 1790952635.7089202,
+    "ast_hash": "ac23c47f48cc435bce7835516ae21174",
+    "semantic_hash": ""
   },
   "schemas/capability-registry.yaml": {
-    "mtime": 1789837397.161205,
-    "seen": 1789898156.97952,
-    "ast_hash": "9cf72f78f2a4e503d6c513533c010249",
+    "mtime": 1790950256.7863448,
+    "seen": 1790952635.7089908,
+    "ast_hash": "696f4b205e671cc0185ab94d5fe9f3fc",
     "semantic_hash": ""
   },
   "research/experiments/INV-template.md": {
@@ -186,16 +186,16 @@
     "semantic_hash": "c02b958294645995dfe499f50ae38e70"
   },
   "report/main.pdf": {
-    "mtime": 1789821493.488891,
-    "seen": 1789828583.8536382,
+    "mtime": 1790044861.1245964,
+    "seen": 1790952635.7091231,
     "ast_hash": "cb1196224927b84f5401c21d97cb9912",
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1790950286.2366507,
-    "seen": 1790950402.258892,
-    "ast_hash": "534daa5ad347b6356ab2b7f8a37adbd8",
-    "semantic_hash": "534daa5ad347b6356ab2b7f8a37adbd8"
+    "mtime": 1790952593.055761,
+    "seen": 1790952635.7088327,
+    "ast_hash": "948f6ecb0b3ca961309c10c6de037070",
+    "semantic_hash": ""
   },
   "report/economic-model.md": {
     "mtime": 1790234914.4392133,
@@ -264,8 +264,8 @@
     "semantic_hash": "6c57947d325a347de1436308a7bcad06"
   },
   "research/hypotheses/HYP-003.yaml": {
-    "mtime": 1789820265.7716467,
-    "seen": 1789828583.853627,
+    "mtime": 1790044861.1366224,
+    "seen": 1790952635.7089217,
     "ast_hash": "f78803aaeb9cf2427ebc8c991eeb8586",
     "semantic_hash": ""
   },
@@ -342,15 +342,15 @@
     "semantic_hash": "e71b14a0c90bee5de6ec9b18e548fddc"
   },
   ".github/workflows/sync-drive.yml": {
-    "mtime": 1789820265.6890843,
-    "seen": 1789828583.8535924,
-    "ast_hash": "fa7d060beb13ad278f19561cfd2eb598",
+    "mtime": 1790948387.7136075,
+    "seen": 1790952635.708828,
+    "ast_hash": "d9be0b12d86adc82018857e21693f6ff",
     "semantic_hash": ""
   },
   ".github/workflows/verification.yml": {
-    "mtime": 1789820265.6890843,
-    "seen": 1789828583.853593,
-    "ast_hash": "05827e03f336054896cf4a3701a1928f",
+    "mtime": 1790933444.9828844,
+    "seen": 1790952635.7088294,
+    "ast_hash": "01f69d37f161ae782b1c6902953059f7",
     "semantic_hash": ""
   },
   "research/experiments/EXP-DRIVE-SYNC-001.md": {
@@ -474,26 +474,26 @@
     "semantic_hash": "f7d04b1b01dded94f052c17918bfd5a0"
   },
   "research/hypotheses/HYP-004-MODEL-ROUTING-SPECIALIZATION.yaml": {
-    "mtime": 1789825383.7963817,
-    "seen": 1789828583.8536277,
-    "ast_hash": "dd479c98fc5c1694378acb35b6a6de26",
+    "mtime": 1790044861.137123,
+    "seen": 1790952635.7089229,
+    "ast_hash": "31db95028bf69633e0ece068f0183991",
     "semantic_hash": ""
   },
   "research/results/cxl_3_0_executive_synthesis.pdf": {
-    "mtime": 1789821411.0457532,
-    "seen": 1789828583.853639,
+    "mtime": 1790044861.1432388,
+    "seen": 1790952635.709125,
     "ast_hash": "5b71d901203348a6520f7803471fc362",
     "semantic_hash": ""
   },
   "research/results/send_more_money_audit_certificate.pdf": {
-    "mtime": 1789821432.2043004,
-    "seen": 1789828583.8536394,
+    "mtime": 1790044861.1453729,
+    "seen": 1790952635.709127,
     "ast_hash": "d05fea92d84fd1c5ba2f42a591c5c754",
     "semantic_hash": ""
   },
   "research/results/EXP-FUSION360-MCP-001_partB_bridge_9876.png": {
-    "mtime": 1789823478.1103404,
-    "seen": 1789828583.85364,
+    "mtime": 1790044861.1412287,
+    "seen": 1790952635.7091978,
     "ast_hash": "ed42ec849cb0cf25e0bad99fb6de01b9",
     "semantic_hash": ""
   },
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790951779.3926744,
-    "seen": 1790951782.3370552,
-    "ast_hash": "e1beae872cae91ed44a3c03677d04bd6",
-    "semantic_hash": "e1beae872cae91ed44a3c03677d04bd6"
+    "mtime": 1790952538.8750582,
+    "seen": 1790952635.7086887,
+    "ast_hash": "d90889c54c591a4cc35e50b016d56216",
+    "semantic_hash": ""
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -546,8 +546,8 @@
     "semantic_hash": "907566a104f229c5ec4a016c095a76b9"
   },
   "research/hypotheses/HYP-005-EVIDENCE-CALIBRATED-FAIRNESS-AUDIT.yaml": {
-    "mtime": 1789967579.2910051,
-    "seen": 1789967651.7415638,
+    "mtime": 1790044861.137621,
+    "seen": 1790952635.7089245,
     "ast_hash": "6d724b873c81213279207a4ed19a8412",
     "semantic_hash": ""
   },
@@ -558,10 +558,10 @@
     "semantic_hash": "4247f183e1fdcc01bcd457546d9d5044"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790951777.2555912,
-    "seen": 1790951782.3370535,
-    "ast_hash": "5b23d85c1b79ebbee13150259fd30969",
-    "semantic_hash": "5b23d85c1b79ebbee13150259fd30969"
+    "mtime": 1790952605.6405118,
+    "seen": 1790952635.7086854,
+    "ast_hash": "5fde0a9165f59a478a4e09e547dc1592",
+    "semantic_hash": ""
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -1630,5 +1630,395 @@
     "seen": 1790949473.6091602,
     "ast_hash": "cfc27f355a865723c06918605915da04",
     "semantic_hash": "cfc27f355a865723c06918605915da04"
+  },
+  "requirements.txt": {
+    "mtime": 1790498947.45865,
+    "seen": 1790952635.7088518,
+    "ast_hash": "19bc4d0a690b7568c4bdccc6b3a6fd8e",
+    "semantic_hash": ""
+  },
+  "research/hypotheses/HYP-006-DIRECT-L2-TRANSPORT-PARITY.yaml": {
+    "mtime": 1790494861.8844044,
+    "seen": 1790952635.7089257,
+    "ast_hash": "7342a6216efa933f471463b5478167b6",
+    "semantic_hash": ""
+  },
+  "research/hypotheses/HYP-007-ADAPTIVE-INGESTION-LANDSCAPE.yaml": {
+    "mtime": 1790599547.7741156,
+    "seen": 1790952635.7089272,
+    "ast_hash": "51eabaa5f6e1913893bdf58f4bf04a74",
+    "semantic_hash": ""
+  },
+  "research/hypotheses/HYP-008-CIVIC-ACTION-GRAPH-DETERMINISM.yaml": {
+    "mtime": 1790701019.0908961,
+    "seen": 1790952635.7089286,
+    "ast_hash": "077e77d1c2bff3f9e522a5abe67a28d4",
+    "semantic_hash": ""
+  },
+  "research/hypotheses/HYP-HORO-001.yaml": {
+    "mtime": 1790860080.8577273,
+    "seen": 1790952635.7089298,
+    "ast_hash": "8eddd32bedfb762bb829adb39736822a",
+    "semantic_hash": ""
+  },
+  "tools/skills/plugin/references/ui-extension/template/sidecars/panel/index.html": {
+    "mtime": 1790821502.1656368,
+    "seen": 1790952635.7090993,
+    "ast_hash": "9b92c33af982087ab0ec5a4901822224",
+    "semantic_hash": ""
+  },
+  "tools/skills/ui-extension/references/template/sidecars/panel/index.html": {
+    "mtime": 1790821502.1656368,
+    "seen": 1790952635.7091165,
+    "ast_hash": "9b92c33af982087ab0ec5a4901822224",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/01_nvme_ssd_and_wifi_bottom_view.jpg": {
+    "mtime": 1790847671.798007,
+    "seen": 1790952635.7091284,
+    "ast_hash": "a2802835d9e13dd7e211b1449a0f6e2a",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/02_adata_128gb_microsd_card.jpg": {
+    "mtime": 1790918313.6708558,
+    "seen": 1790952635.7091303,
+    "ast_hash": "a1c120601951df552f0a8a3070f1c63a",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/03_19v_power_supply_brick.jpg": {
+    "mtime": 1790847671.802507,
+    "seen": 1790952635.7091315,
+    "ast_hash": "451c1d15db7b4127379dba10672c165b",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/04_usb_ttl_uart_serial_cable.jpg": {
+    "mtime": 1790847671.8065126,
+    "seen": 1790952635.7091331,
+    "ast_hash": "2f942ec560257ded7778aa9f5942779f",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/05_adata_sd_card_adapter.jpg": {
+    "mtime": 1790847671.8080144,
+    "seen": 1790952635.7091346,
+    "ast_hash": "7a3693621dfa07c3129cd86dbe040475",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/06_desk_setup_displayport_cable_keyboard.jpg": {
+    "mtime": 1790847722.2636714,
+    "seen": 1790952635.7091358,
+    "ast_hash": "2244d23facf75b08ddcb002b06db7430",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/07_jetson_orin_nano_top_view_fan_heatsink.jpg": {
+    "mtime": 1790847722.2646759,
+    "seen": 1790952635.709137,
+    "ast_hash": "a68f34dc4b166a8478379b5e45c1168a",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/08_uefi_initial_boot_firmware_36_4_3.jpg": {
+    "mtime": 1790848555.4855661,
+    "seen": 1790952635.7091382,
+    "ast_hash": "1492227d25e35a1c11b79703430728ba",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/09_uefi_boot_menu_prompt.jpg": {
+    "mtime": 1790848555.4865665,
+    "seen": 1790952635.7091393,
+    "ast_hash": "f11b16b7233c58fa04aee5f8b887bc84",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/10_nvidia_docs_and_iso_download.png": {
+    "mtime": 1790849083.1286283,
+    "seen": 1790952635.7091405,
+    "ast_hash": "2cce6618f92b0aee125a2d0d75fe023b",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/11_balena_etcher_ready_to_flash.png": {
+    "mtime": 1790849254.6885755,
+    "seen": 1790952635.7091417,
+    "ast_hash": "cb2519421db23640c564624c44d876ee",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/12_balena_etcher_starting_flash.png": {
+    "mtime": 1790849254.6905873,
+    "seen": 1790952635.7091427,
+    "ast_hash": "2f20f99740978374ddd81e4b244f1f88",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/13_balena_etcher_flashing_progress.png": {
+    "mtime": 1790849275.1736572,
+    "seen": 1790952635.709144,
+    "ast_hash": "2fe0aad583a7d7706dcafb46b398216f",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/14_balena_etcher_validating_progress.png": {
+    "mtime": 1790849616.527129,
+    "seen": 1790952635.709145,
+    "ast_hash": "189a0eb8d9094b752003764578716190",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/15_balena_etcher_flash_completed.png": {
+    "mtime": 1790849849.3639734,
+    "seen": 1790952635.709146,
+    "ast_hash": "a7f3aa19861ef46b9ec4aa65530dec9f",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/16_windows_explorer_sd_card_ejected.png": {
+    "mtime": 1790849888.8403788,
+    "seen": 1790952635.7091472,
+    "ast_hash": "51b1ff0625993f31470162f75330bed8",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/17_qspi_firmware_update_prompt.jpg": {
+    "mtime": 1790850003.8656397,
+    "seen": 1790952635.7091484,
+    "ast_hash": "2a1c0032ed975a4bda5abf26ba82149e",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/18_uefi_boot_menu_screen.jpg": {
+    "mtime": 1790850003.86664,
+    "seen": 1790952635.7091496,
+    "ast_hash": "ca5977bca1a044f3532f39870f08a45b",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/19_grub_boot_menu_install_iso_selected.jpg": {
+    "mtime": 1790850273.721805,
+    "seen": 1790952635.709151,
+    "ast_hash": "adc697d03a2a1d26c701e8d0ee814de5",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/20_qspi_update_user_confirmed.jpg": {
+    "mtime": 1790850273.7228043,
+    "seen": 1790952635.7091525,
+    "ast_hash": "f5260e2ea1ee92b72a2e48b38448c404",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/21_qspi_capsule_flashing_progress_5_percent.jpg": {
+    "mtime": 1790850273.7248056,
+    "seen": 1790952635.7091544,
+    "ast_hash": "0f902b4a08f9cbefe29cfeee656a19b4",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/22_pre_iso_installer_logic_running.jpg": {
+    "mtime": 1790850380.162266,
+    "seen": 1790952635.7091553,
+    "ast_hash": "feeaf62b9dbfbfa116635620e7c05612",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/23_pre_iso_installer_logic_closeup.jpg": {
+    "mtime": 1790850380.163264,
+    "seen": 1790952635.7091563,
+    "ast_hash": "e2df8447e6cc67555787c918b5c1f8df",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/24_firmware_39_2_1_version_header.jpg": {
+    "mtime": 1790850433.4273653,
+    "seen": 1790952635.7091577,
+    "ast_hash": "a5bbd00c59c07b0200ba5c5f9fbf94d6",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/25_qspi_stage2_capsule_update_7_percent.jpg": {
+    "mtime": 1790850433.4283676,
+    "seen": 1790952635.709159,
+    "ast_hash": "48025640c43ab8ddc1cbd13f028a82dc",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/26_qspi_stage2_capsule_update_6_percent.jpg": {
+    "mtime": 1790850433.4293664,
+    "seen": 1790952635.7091599,
+    "ast_hash": "37c7adb638c93eb95d0598eeb1f19776",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/27_grub_post_firmware_update_install_iso.jpg": {
+    "mtime": 1790850546.070314,
+    "seen": 1790952635.7091613,
+    "ast_hash": "6cd794e77633c92656d1a913dd37352b",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/28_grub_post_firmware_update_closeup.jpg": {
+    "mtime": 1790850546.0713122,
+    "seen": 1790952635.7091622,
+    "ast_hash": "768cdb82401fb9c146716cac43a8346e",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/29_installer_target_storage_install_on_nvme.jpg": {
+    "mtime": 1790850704.4031725,
+    "seen": 1790952635.7091634,
+    "ast_hash": "e38bc776c31eca287d25a1e5cf590403",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/30_efi_stub_booting_linux_kernel.jpg": {
+    "mtime": 1790850869.7364645,
+    "seen": 1790952635.7091646,
+    "ast_hash": "500204b7789c7e6aed87b7e2155b0e54",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/31_kernel_pcie_gen4_nvme_and_usb_detected.jpg": {
+    "mtime": 1790850869.735464,
+    "seen": 1790952635.7091658,
+    "ast_hash": "39f439450f00488cc7fb8bb9decf9bd6",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/32_kernel_r8168_gigabit_ethernet_loaded.jpg": {
+    "mtime": 1790850869.7379649,
+    "seen": 1790952635.7091668,
+    "ast_hash": "7a130d606a1944acad30803534c84feb",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/33_kernel_tegra_memory_controller_init.jpg": {
+    "mtime": 1790850869.7384675,
+    "seen": 1790952635.7091682,
+    "ast_hash": "3f0f05de85f15bf05d72d9dccc0c4287",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/34_board_detection_orin_nano_devkit_super.jpg": {
+    "mtime": 1790851080.7874956,
+    "seen": 1790952635.7091691,
+    "ast_hash": "b5b0ffc0ccd4bc0b5eb3db7d3841ab9a",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/35_nvme_partition_table_475gb_rootfs.jpg": {
+    "mtime": 1790851080.7909942,
+    "seen": 1790952635.70917,
+    "ast_hash": "fa9cfdda3942252dbbce81e9ccc42f63",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/36_subiquity_curtin_system_installation.jpg": {
+    "mtime": 1790851080.788994,
+    "seen": 1790952635.7091715,
+    "ast_hash": "e6f95b0542738dee8483a155830c1faf",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/37_subiquity_autoinstall_config_pass.jpg": {
+    "mtime": 1790851080.7899952,
+    "seen": 1790952635.7091727,
+    "ast_hash": "91aeceb70be5ad6baa46ad635d720a68",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/38_ubuntu_24_04_3_cloud_init_boot.jpg": {
+    "mtime": 1790851080.7849934,
+    "seen": 1790952635.7091737,
+    "ast_hash": "79a1e20290de834b30f450b909921131",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/39_package_installation_nvidia_l4t_and_desktop_stack.jpg": {
+    "mtime": 1790851086.8528297,
+    "seen": 1790952635.709175,
+    "ast_hash": "087c8096a901ec8eb6ae30fc84c8c7fe",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/40_subiquity_late_purge_and_initrd_update.jpg": {
+    "mtime": 1790851670.0438414,
+    "seen": 1790952635.709176,
+    "ast_hash": "a9dc0d347de343e2bb7a7549e26c97ba",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/41_subiquity_late_apt_noble_and_nvidia_ctk_config.jpg": {
+    "mtime": 1790851670.040829,
+    "seen": 1790952635.7091775,
+    "ast_hash": "17a4a08e4c583bdee224d5bec2fa20d6",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/42_subiquity_late_group_add_i2c_gpio.jpg": {
+    "mtime": 1790851670.0423312,
+    "seen": 1790952635.709179,
+    "ast_hash": "b9e0540d592ab416a56b1a0635122dcb",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/43_l4tlauncher_attempting_direct_nvme_boot.jpg": {
+    "mtime": 1790851670.039328,
+    "seen": 1790952635.70918,
+    "ast_hash": "c8a0c6d25793155bd14ce062d2912973",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/44_ubuntu_desktop_gui_welcome_screen.jpg": {
+    "mtime": 1790851670.0383344,
+    "seen": 1790952635.7091818,
+    "ast_hash": "b8cbd68d0fb09dcb0698bb6cc0df56e3",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/45_nvidia_driver_license_agreement_accept.jpg": {
+    "mtime": 1790851852.7719831,
+    "seen": 1790952635.709183,
+    "ast_hash": "797f2318ce74242c90d3259a764814d7",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/46_ubuntu_gui_language_selection_expanded.jpg": {
+    "mtime": 1790851852.7729847,
+    "seen": 1790952635.709184,
+    "ast_hash": "f0a7bddaa0a6b6393038efe194ae77d3",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/47_ubuntu_gui_typing_keyboard_english_us.jpg": {
+    "mtime": 1790851852.7739854,
+    "seen": 1790952635.7091854,
+    "ast_hash": "0b129863a2b954583be4543c9bbfe2ab",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/48_ubuntu_gui_wifi_kec_makerspace_connected.jpg": {
+    "mtime": 1790852829.7340355,
+    "seen": 1790952635.7091866,
+    "ast_hash": "94ba0f261594192ce76ad294aab4d6d4",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/49_ubuntu_gui_timezone_kathmandu_nepal.jpg": {
+    "mtime": 1790852829.7380366,
+    "seen": 1790952635.709188,
+    "ast_hash": "3aeadbb5495cdc68f0417ac7307783a7",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/50_ubuntu_gui_user_account_kecmakerspace.jpg": {
+    "mtime": 1790852829.732037,
+    "seen": 1790952635.7091894,
+    "ast_hash": "081903fede5ef1c762d1fec1bab161ea",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/51_ubuntu_gui_password_configuration.jpg": {
+    "mtime": 1790852829.735037,
+    "seen": 1790952635.7091904,
+    "ast_hash": "b0a0739015137a7726ad4da5c86d56d1",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/52_ubuntu_gui_ubuntu_pro_skip_for_now.jpg": {
+    "mtime": 1790852829.7360373,
+    "seen": 1790952635.7091913,
+    "ast_hash": "c05b43b3189bcb146e41b0d47e19766e",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/53_ubuntu_gui_help_improve_ubuntu_telemetry_opt_out.png": {
+    "mtime": 1790853054.321492,
+    "seen": 1790952635.7091928,
+    "ast_hash": "0cc098da6080c3554ea838f8dda86d14",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/54_jetson_orin_nano_desktop_wallpaper_25w_mode_active.jpg": {
+    "mtime": 1790853126.1648693,
+    "seen": 1790952635.709194,
+    "ast_hash": "632363180c0728ca739aed5aed6224f6",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/55_terminal_ip_address_ethernet_and_wifi_assigned.jpg": {
+    "mtime": 1790853451.2507536,
+    "seen": 1790952635.709195,
+    "ast_hash": "741be32902a5bd8e37257fce746db5c6",
+    "semantic_hash": ""
+  },
+  "research/media/2026-10-01_jetson_orin_nano_setup/56_openssh_server_service_status_disabled.jpg": {
+    "mtime": 1790853981.2894099,
+    "seen": 1790952635.7091963,
+    "ast_hash": "9cd6af2b031798f4307591f0e49a5993",
+    "semantic_hash": ""
+  },
+  "tools/skills/plugin/references/ui-extension/template/assets/logo.svg": {
+    "mtime": 1790821502.1641362,
+    "seen": 1790952635.7091992,
+    "ast_hash": "f9fa87bd3646c8113ecd46c7fe638850",
+    "semantic_hash": ""
+  },
+  "tools/skills/ui-extension/references/template/assets/logo.svg": {
+    "mtime": 1790821502.1641362,
+    "seen": 1790952635.7092004,
+    "ast_hash": "f9fa87bd3646c8113ecd46c7fe638850",
+    "semantic_hash": ""
   }
 }

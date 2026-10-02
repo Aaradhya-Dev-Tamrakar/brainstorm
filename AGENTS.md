@@ -153,7 +153,7 @@ Speculative text is never ground truth; deterministic execution is. Before final
 Whenever implementing features, fixing bugs, refactoring, or managing version control across ecosystem repositories:
 1. **Issue Anchoring**: Formulate requirements with acceptance tasks (`- [ ]`) and create a tracked issue with full metadata (`gh issue create --assignee "AaradhyaDT" --label "<labels>"`).
 2. **Branch Isolation**: Branch off `main` via `<type>/<slug>-#<id>`, never committing multi-step changes directly to `main` for multi-contributor features.
-3. **Brainstorm Maintainer Exception (`DEC-003`)**: For the central `brainstorm` orchestration root, solo maintainer direct commits to `main` are authorized provided all changes pass local deterministic verification gates (`.\audit.bat` and `.\sim.bat`) prior to running `.\sync.bat`.
+3. **Brainstorm Maintainer Exception (`DEC-003`)**: For the central `brainstorm` orchestration root, solo maintainer direct commits to `main` are authorized provided all changes pass local deterministic verification gates (`.\audit.bat` and `.\sim.bat`) prior to running `.\sync.bat`. (Note: The live GitHub Ruleset configures `required_status_checks: verify` with an explicit maintainer role bypass so local deterministic passes authorize direct `.\sync.bat` pushes).
 4. **Progressive Task Tracking**: Check off tasks as completed using `gh-task --issue <id> --task "..."`.
 5. **Verification Gate**: Enforce local test passes (`.\audit.bat`, `pytest`, `ruff`) before commits.
 6. **Ecosystem Synchronization**: Run all version control through `.\sync.bat` (or `.\sync.ps1`).

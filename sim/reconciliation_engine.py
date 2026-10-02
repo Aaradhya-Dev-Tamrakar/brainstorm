@@ -949,6 +949,25 @@ def audit_layer_1_consistency():
                         "file": "graphify-out/graph.json",
                         "detail": f"Leaf/spur ratio exceeds structural threshold: {deg1_ratio*100:.1f}% (max 80%)."
                     })
+
+            # Validate Graphify Provenance & Manifest Integrity
+            graph_manifest_path = os.path.join(BRAINSTORM_ROOT, "graphify-out", "manifest.json")
+            if os.path.exists(graph_manifest_path):
+                try:
+                    with open(graph_manifest_path, "r", encoding="utf-8") as gmf:
+                        gmdata = json.load(gmf)
+                    if not isinstance(gmdata, dict) or len(gmdata) < 10:
+                        discrepancies.append({
+                            "type": "GRAPHIFY_MANIFEST_STALE",
+                            "file": "graphify-out/manifest.json",
+                            "detail": "Graphify manifest contains insufficient file provenance entries."
+                        })
+                except Exception as me:
+                    discrepancies.append({
+                        "type": "GRAPHIFY_MANIFEST_ERROR",
+                        "file": "graphify-out/manifest.json",
+                        "detail": f"Failed to parse Graphify manifest: {me}"
+                    })
         except Exception as ge:
             discrepancies.append({
                 "type": "GRAPHIFY_SCHEMA_ERROR",
@@ -963,6 +982,13 @@ def audit_layer_1_consistency():
             with open(ledger_file_path, "r", encoding="utf-8") as ldf:
                 ledger_content = json.load(ldf)
             eval_commit = ledger_content.get("evaluated_commit")
+            lineage_type = ledger_content.get("lineage_type")
+            if lineage_type and lineage_type not in {"ancestor_snapshot", "head_certified"}:
+                discrepancies.append({
+                    "type": "LEDGER_LINEAGE_TYPE_ERROR",
+                    "file": "research/results/dual_layer_verification_ledger.json",
+                    "detail": f"Invalid ledger lineage_type: '{lineage_type}'. Must be 'ancestor_snapshot' or 'head_certified'."
+                })
             if not eval_commit or not re.match(r"^[0-9a-fA-F]{40}$", str(eval_commit)):
                 discrepancies.append({
                     "type": "LEDGER_AUTHENTICITY_ERROR",

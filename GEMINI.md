@@ -1,4 +1,4 @@
-# Agent Rules & Workflow Guidelines — Brainstorm & Ecosystem Orchestration
+# Antigravity IDE & Gemini Agent Rules — Brainstorm & Ecosystem Orchestration
 
 Welcome, Agent. This repository (`F:\Aaradhya-Dev-Tamrakar\brainstorm`) serves as the **central architectural brain, R&D incubator, and capability mesh root** for Aaradhya's personal tool ecosystem across 23 tool modules (19 computational engines, 4 presentation hubs) and 26 Git tracking branches.
 
@@ -163,4 +163,3 @@ Whenever referencing ecosystem milestones, portfolio releases (`releases.js`), o
 - **Zero Placeholder SHAs**: **NEVER** use synthetic or placeholder `sha` strings (e.g., `rel50`, `rel55`, `upg47`, `xtool20`).
 - **Authentic Git Hashes**: All commit references must link to authentic 7–40 hex Git commit SHAs resolving directly to `https://github.com/<owner>/<repo>/commit/<sha>`.
 - **Automated Verification**: Portfolio changes must satisfy the 26-category verification gate (`scripts/verify.py`), specifically Category 26 (`release-shas`).
-

@@ -1685,11 +1685,11 @@ Nodes (3): tokens_total, minimum, type
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `BE ECIE / BEIE — Complete Study Syllabus (Year I–IV)` connect `Community 0` to `Community 1`, `Community 150`, `Community 298`, `Community 299`, `Community 53`, `Community 182`, `Community 181`, `Community 314`, `Community 315`, `Community 316`, `Community 333`, `Community 334`, `Community 335`, `Community 336`, `Community 337`, `Community 338`, `Community 211`, `Community 339`, `Community 340`, `Community 341`, `Community 99`, `Community 236`, `Community 254`, `Community 125`, `Community 126`, `Community 127`?**
-  _High betweenness centrality (0.107) - this node is a cross-community bridge._
+  _High betweenness centrality (0.115) - this node is a cross-community bridge._
 - **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 102` to `Community 248`, `Community 25`, `Community 68`, `Community 247`?**
-  _High betweenness centrality (0.023) - this node is a cross-community bridge._
-- **Why does `Research Program Charter: Nepal Information Systems Research (NISR)` connect `Community 39` to `Community 62`?**
-  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `required` connect `Community 86` to `Community 69`, `Community 151`?**
+  _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `10. Circuit Design (3 hours)`, `10. Data Files (5 hours)`, `10. Digital Devices Applications (2 hours)` to the rest of the system?**

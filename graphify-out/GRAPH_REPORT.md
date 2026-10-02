@@ -340,7 +340,7 @@
 7. `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` - 20 edges
 8. `Syllabus` - 19 edges
 9. `2. Granular Claims Audit Register` - 18 edges
-10. `2. Core Architectural & Systemic Limitations` - 17 edges
+10. `Specialized Reviewer Perspectives` - 17 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `NepalLawHarvesterTests` --uses--> `LegalHarvesterDatabase`  [INFERRED]
@@ -1580,11 +1580,11 @@ Nodes (3): tokens_total, minimum, type
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `BE ECIE / BEIE — Complete Study Syllabus (Year I–IV)` connect `Community 0` to `Community 8`, `Community 266`, `Community 146`, `Community 276`, `Community 277`, `Community 293`, `Community 38`, `Community 295`, `Community 294`, `Community 46`, `Community 175`, `Community 54`, `Community 311`, `Community 312`, `Community 313`, `Community 314`, `Community 315`, `Community 316`, `Community 317`, `Community 318`, `Community 319`, `Community 202`, `Community 96`, `Community 228`, `Community 123`, `Community 124`, `Community 125`, `Community 126`?**
-  _High betweenness centrality (0.124) - this node is a cross-community bridge._
-- **Why does `References` connect `Community 8` to `Community 0`, `Community 38`, `Community 202`, `Community 266`, `Community 175`, `Community 146`, `Community 54`, `Community 123`, `Community 124`, `Community 125`, `Community 126`?**
-  _High betweenness centrality (0.017) - this node is a cross-community bridge._
-- **Why does `Skill Development for Claude Code Plugins` connect `Community 189` to `Community 290`, `Community 291`, `Community 268`, `Community 269`, `Community 270`, `Community 190`, `Community 191`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+  _High betweenness centrality (0.110) - this node is a cross-community bridge._
+- **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 99` to `Community 98`, `Community 235`, `Community 236`, `Community 68`?**
+  _High betweenness centrality (0.034) - this node is a cross-community bridge._
+- **Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `Community 68` to `Community 192`, `Community 257`, `Community 258`, `Community 259`, `Community 99`, `Community 237`, `Community 271`, `Community 272`, `Community 273`?**
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `10. Circuit Design (3 hours)`, `10. Data Files (5 hours)`, `10. Digital Devices Applications (2 hours)` to the rest of the system?**

@@ -1,0 +1,59 @@
+{
+  "$schema": "../capability.contract.v1.json",
+  "module": "Win-Vault",
+  "version": "1.0.0",
+  "location": "F:\\Aaradhya-Dev-Tamrakar\\Win-Vault",
+  "tracking_branch": "Win-Vault",
+  "runtime": "powershell7",
+  "capabilities": [
+    {
+      "id": "vault_gui_lock_toggle",
+      "description": "Native Windows Forms GUI interface providing masked bullet password entry, SHA-256 master key verification, low-level NTFS ACL kernel denial, and automatic explorer launching upon unlock.",
+      "category": "computation",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "deterministic_execution",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 60000,
+      "inputs": {
+        "type": "object",
+        "properties": {
+          "action": { "type": "string", "enum": ["interactive", "lock", "unlock", "change_password"], "default": "interactive" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["success", "status"],
+        "properties": {
+          "success": { "type": "boolean" },
+          "status": { "type": "string", "enum": ["locked", "unlocked", "setup_complete", "cancelled"] }
+        }
+      }
+    },
+    {
+      "id": "kernel_acl_permission_lock",
+      "description": "Applies .NET FileSystemAccessRule Deny descriptor for WorldSid (*S-1-1-0) and sets Hidden/System flags to physically deny filesystem access.",
+      "category": "computation",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "deterministic_execution",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 10000,
+      "inputs": {
+        "type": "object",
+        "required": ["target_directory", "lock_state"],
+        "properties": {
+          "target_directory": { "type": "string" },
+          "lock_state": { "type": "boolean" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["success"],
+        "properties": {
+          "success": { "type": "boolean" }
+        }
+      }
+    }
+  ]
+}

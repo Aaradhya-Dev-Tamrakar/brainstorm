@@ -456,23 +456,24 @@ def audit_layer_1_consistency():
                             "detail": f"Capability '{cid}' is marked IMPLEMENTED but only has tier {cevidence}"
                         })
 
-                # Validate entity class partition counts
+                # Validate entity class partition counts against dynamic ecosystem registry
+                _, _, total_mod_dyn, comp_mod_dyn, pres_mod_dyn = get_ecosystem_module_counts()
                 count_eco = sum(1 for c in caps if c.get("entity_class") == "ecosystem_module")
                 count_pres = sum(1 for c in caps if c.get("entity_class") == "presentation_hub")
                 count_eng = sum(1 for c in caps if c.get("entity_class") == "research_engine")
                 count_prop = sum(1 for c in caps if c.get("entity_class") == "research_proposal")
                 
-                if count_eco != 19:
+                if count_eco != comp_mod_dyn:
                     discrepancies.append({
                         "type": "ENTITY_CLASS_COUNT_DRIFT",
                         "file": rel_path,
-                        "detail": f"Expected 19 'ecosystem_module' entries in capability-registry.yaml, found {count_eco}"
+                        "detail": f"Expected {comp_mod_dyn} 'ecosystem_module' entries in capability-registry.yaml, found {count_eco}"
                     })
-                if count_pres != 4:
+                if count_pres != pres_mod_dyn:
                     discrepancies.append({
                         "type": "ENTITY_CLASS_COUNT_DRIFT",
                         "file": rel_path,
-                        "detail": f"Expected 4 'presentation_hub' entries in capability-registry.yaml, found {count_pres}"
+                        "detail": f"Expected {pres_mod_dyn} 'presentation_hub' entries in capability-registry.yaml, found {count_pres}"
                     })
                 if count_eng != 2:
                     discrepancies.append({
@@ -486,11 +487,12 @@ def audit_layer_1_consistency():
                         "file": rel_path,
                         "detail": f"Expected 0 'research_proposal' entries in capability-registry.yaml, found {count_prop}"
                     })
-                if len(caps) != 25:
+                expected_total_caps = comp_mod_dyn + pres_mod_dyn + 2
+                if len(caps) != expected_total_caps:
                     discrepancies.append({
                         "type": "TOTAL_CAPABILITIES_COUNT_DRIFT",
                         "file": rel_path,
-                        "detail": f"Expected 25 total capabilities in capability-registry.yaml, found {len(caps)}"
+                        "detail": f"Expected {expected_total_caps} total capabilities in capability-registry.yaml, found {len(caps)}"
                     })
 
                 # Cross-registry synchronization check: All modules in ecosystem.registry.json must exist in capability-registry.yaml

@@ -85,11 +85,11 @@ To eliminate counting discrepancies across `README.md`, `PROFILE.md`, and `ECOSY
 
 | Ontological Dimension | Authoritative Count | Schema Entity Class | Description & Scope |
 | :--- | :---: | :--- | :--- |
-| **Cataloged Tool Modules** | **23** | `ecosystem_module` + `presentation_hub` | 19 Computational Engines + 4 Presentation & Educational Hubs registered in `schemas/ecosystem.registry.json`. |
+| **Cataloged Tool Modules** | **24** | `ecosystem_module` + `presentation_hub` | 19 Computational Engines + 4 Presentation & Educational Hubs registered in `schemas/ecosystem.registry.json`. |
 | **Physical Git Repositories** | **22** | Physical Repo Root | 1 Orchestration Root (`brainstorm`) + 21 local tool repositories tracked across local storage (`F:\Aaradhya-Dev-Tamrakar` and `F:\AaradhyaDT`). |
-| **Git Tracking Branches in `brainstorm`** | **26** | Git Ref | `main` (orchestrator) + 23 tool branches + 2 special/research branches synchronized via `sync.ps1`. |
+| **Git Tracking Branches in `brainstorm`** | **27** | Git Ref | `main` (orchestrator) + 23 tool branches + 2 special/research branches synchronized via `sync.ps1`. |
 | **Active Engineering Projects** | **18** | Engineering Initiative | Concrete initiatives: SPARK, STRANGLER-IPU, BiasAperture, Super-NLM, NovaOptimizer, Fusion 360 MCP, Nexus, Claude Fleet, Alpha-SuperApp, Screen Q&A, md2pdf, yt-dlp-live, AI CSP Solver, RSVP Reader, GitHub Pilot, Nepali OCR AI, Google Classroom MCP, LocalSend MCP. |
-| **Computational Capabilities** | **19** | `ecosystem_module` | Independent functional engines exposing programmatic APIs/CLI/MCP interfaces. |
+| **Computational Capabilities** | **20** | `ecosystem_module` | Independent functional engines exposing programmatic APIs/CLI/MCP interfaces. |
 | **Presentation & Educational Hubs** | **4** | `presentation_hub` | Non-computational repositories: Portfolio Main (`Aaradhya-Dev-Tamrakar.github.io`), Portfolio Mirror (`AaradhyaDT.github.io`), KEC Makerspace digital asset hub, and IEEE React Workshop repo. |
 | **In-Tree Research Engines** | **2** | `research_engine` | In-tree computational & formalization engines hosted in `brainstorm` (`STRANGLER-IPU`, `headless-invariant-assurance`). |
 | **In-Tree Research Proposals** | **0** | `research_proposal` | Active formal proposals awaiting initial prototype execution. |

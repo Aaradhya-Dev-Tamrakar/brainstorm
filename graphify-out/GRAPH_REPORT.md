@@ -1,7 +1,7 @@
 # Graph Report - brainstorm  (2026-10-02)
 
 ## Corpus Check
-- Large corpus: 337 files · ~738,720 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
+- Large corpus: 337 files · ~739,051 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
 
 ## Summary
 - 3130 nodes · 3703 edges · 261 communities (241 shown, 8 thin omitted)
@@ -1260,8 +1260,10 @@ Nodes (3): side_effects, description, type
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Skill Development for Claude Code Plugins` connect `Community 153` to `Community 236`, `Community 237`, `Community 154`, `Community 155`, `Community 220`, `Community 221`, `Community 222`?**
-  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+- **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 87` to `Community 192`, `Community 191`, `Community 65`, `Community 31`?**
+  _High betweenness centrality (0.039) - this node is a cross-community bridge._
+- **Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `Community 65` to `Community 224`, `Community 193`, `Community 225`, `Community 210`, `Community 211`, `Community 212`, `Community 87`, `Community 156`, `Community 223`?**
+  _High betweenness centrality (0.032) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 5 inferred relationships involving `NepalLawHarvesterTests` (e.g. with `CircuitBreaker` and `CrawlPolicy`) actually correct?**
@@ -1272,5 +1274,3 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.07358156028368794 - nodes in this community are weakly interconnected._
-- **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.08687943262411348 - nodes in this community are weakly interconnected._

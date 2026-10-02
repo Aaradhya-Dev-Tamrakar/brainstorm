@@ -24,10 +24,10 @@
     "semantic_hash": "fe271b9b041d088da4e4a171e190aa7c"
   },
   "sim/reconciliation_engine.py": {
-    "mtime": 1790950363.2016244,
-    "seen": 1790950402.2588453,
-    "ast_hash": "ae6f25e13ca2875775753a79b09ddaff",
-    "semantic_hash": "ae6f25e13ca2875775753a79b09ddaff"
+    "mtime": 1790951597.8944006,
+    "seen": 1790951782.33711,
+    "ast_hash": "3536aab9236d56acb064e9b193eff4f7",
+    "semantic_hash": "3536aab9236d56acb064e9b193eff4f7"
   },
   "sim/sweep_ipu_breakeven.py": {
     "mtime": 1790044861.1795669,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790950947.423914,
-    "seen": 1790950950.0985348,
-    "ast_hash": "00df999a2ee5178d6ec23a144d0fc609",
-    "semantic_hash": "00df999a2ee5178d6ec23a144d0fc609"
+    "mtime": 1790951779.3926744,
+    "seen": 1790951782.3370552,
+    "ast_hash": "e1beae872cae91ed44a3c03677d04bd6",
+    "semantic_hash": "e1beae872cae91ed44a3c03677d04bd6"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "4247f183e1fdcc01bcd457546d9d5044"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790950945.3151457,
-    "seen": 1790950950.0985332,
-    "ast_hash": "c1aaea47a5a6f3a7b329875885e8804a",
-    "semantic_hash": "c1aaea47a5a6f3a7b329875885e8804a"
+    "mtime": 1790951777.2555912,
+    "seen": 1790951782.3370535,
+    "ast_hash": "5b23d85c1b79ebbee13150259fd30969",
+    "semantic_hash": "5b23d85c1b79ebbee13150259fd30969"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -1350,10 +1350,10 @@
     "semantic_hash": "a311603777461fd07ccdd952e27dadbf"
   },
   "research/notes/2026-10-02_ECOSYSTEM_SKILLS_AND_WORKFLOW_CALIBRATED_EVALUATION.md": {
-    "mtime": 1790949253.5502968,
-    "seen": 1790949321.6566164,
-    "ast_hash": "0d2cbe6b276845d49abb6209533c7d95",
-    "semantic_hash": "0d2cbe6b276845d49abb6209533c7d95"
+    "mtime": 1790951519.3129227,
+    "seen": 1790951782.3372242,
+    "ast_hash": "61f9102be2eac95a7be99d7458ef012d",
+    "semantic_hash": "61f9102be2eac95a7be99d7458ef012d"
   },
   "tools/skills/antigravity-guide/SKILL.md": {
     "mtime": 1790821502.1616278,

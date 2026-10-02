@@ -910,17 +910,105 @@ def audit_layer_1_consistency():
                 gdata = json.load(gf)
             nodes = gdata.get("nodes", [])
             links = gdata.get("links", []) or gdata.get("edges", [])
-            if len(nodes) < 100 or len(links) < 100:
+            total_n = len(nodes)
+            total_e = len(links)
+            if total_n < 100 or total_e < 100:
                 discrepancies.append({
                     "type": "GRAPHIFY_QUALITY_WARNING",
                     "file": "graphify-out/graph.json",
-                    "detail": f"Graphify node/link count below target structural density ({len(nodes)} nodes, {len(links)} links)."
+                    "detail": f"Graphify node/link count below target structural density ({total_n} nodes, {total_e} links)."
                 })
+            else:
+                # Degree distribution and topological health checks per graphify-optimizer standard
+                degree = {}
+                for e in links:
+                    s, t = e.get("source"), e.get("target")
+                    degree[s] = degree.get(s, 0) + 1
+                    degree[t] = degree.get(t, 0) + 1
+                isolated = sum(1 for n in nodes if degree.get(n.get("id"), 0) == 0)
+                deg1 = sum(1 for n in nodes if degree.get(n.get("id"), 0) <= 1)
+                deg1_ratio = deg1 / max(1, total_n)
+                iso_ratio = isolated / max(1, total_n)
+                density = total_e / max(1, total_n)
+
+                if density < 0.8:
+                    discrepancies.append({
+                        "type": "GRAPHIFY_LOW_DENSITY_WARNING",
+                        "file": "graphify-out/graph.json",
+                        "detail": f"Graph density below topological threshold: {density:.2f} edges/node (min 0.80)."
+                    })
+                if iso_ratio > 0.15:
+                    discrepancies.append({
+                        "type": "GRAPHIFY_ISOLATED_NODES_ERROR",
+                        "file": "graphify-out/graph.json",
+                        "detail": f"Isolated node ratio exceeds threshold: {iso_ratio*100:.1f}% (max 15%)."
+                    })
+                if deg1_ratio > 0.80:
+                    discrepancies.append({
+                        "type": "GRAPHIFY_LEAF_SPUR_ERROR",
+                        "file": "graphify-out/graph.json",
+                        "detail": f"Leaf/spur ratio exceeds structural threshold: {deg1_ratio*100:.1f}% (max 80%)."
+                    })
         except Exception as ge:
             discrepancies.append({
                 "type": "GRAPHIFY_SCHEMA_ERROR",
                 "file": "graphify-out/graph.json",
                 "detail": f"Graphify output graph.json failed schema parsing: {ge}"
+            })
+
+    # Validate Dual-Layer Verification Ledger Invariant & Lineage
+    ledger_file_path = os.path.join(RESULTS_DIR, "dual_layer_verification_ledger.json")
+    if os.path.exists(ledger_file_path):
+        try:
+            with open(ledger_file_path, "r", encoding="utf-8") as ldf:
+                ledger_content = json.load(ldf)
+            eval_commit = ledger_content.get("evaluated_commit")
+            if not eval_commit or not re.match(r"^[0-9a-fA-F]{40}$", str(eval_commit)):
+                discrepancies.append({
+                    "type": "LEDGER_AUTHENTICITY_ERROR",
+                    "file": "research/results/dual_layer_verification_ledger.json",
+                    "detail": f"Committed ledger evaluated_commit must be an authentic 40-hex Git SHA, got: '{eval_commit}'."
+                })
+            else:
+                try:
+                    import subprocess
+                    # Verify commit object exists in repository
+                    subprocess.check_output(
+                        ["git", "cat-file", "-e", f"{eval_commit}^{{commit}}"],
+                        cwd=BRAINSTORM_ROOT, stderr=subprocess.DEVNULL
+                    )
+                    # Verify commit is in repository lineage (ancestor or current HEAD)
+                    is_ancestor = subprocess.call(
+                        ["git", "merge-base", "--is-ancestor", eval_commit, "HEAD"],
+                        cwd=BRAINSTORM_ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+                    )
+                    if is_ancestor != 0:
+                        is_descendant = subprocess.call(
+                            ["git", "merge-base", "--is-ancestor", "HEAD", eval_commit],
+                            cwd=BRAINSTORM_ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+                        )
+                        if is_descendant != 0:
+                            discrepancies.append({
+                                "type": "LEDGER_LINEAGE_DRIFT",
+                                "file": "research/results/dual_layer_verification_ledger.json",
+                                "detail": f"Ledger commit '{eval_commit[:8]}' is not in Git ancestry lineage of HEAD."
+                            })
+                except Exception:
+                    pass
+
+            l1_status = ledger_content.get("layer_1_structural_consistency", {}).get("status")
+            l2_status = ledger_content.get("layer_2_behavioral_reproducibility", {}).get("status")
+            if l1_status != "PASSED" or l2_status != "PASSED" or not ledger_content.get("certified", False):
+                discrepancies.append({
+                    "type": "LEDGER_UNCERTIFIED_ERROR",
+                    "file": "research/results/dual_layer_verification_ledger.json",
+                    "detail": f"Committed ledger indicates uncertified state (L1: {l1_status}, L2: {l2_status})."
+                })
+        except Exception as lde:
+            discrepancies.append({
+                "type": "LEDGER_SCHEMA_ERROR",
+                "file": "research/results/dual_layer_verification_ledger.json",
+                "detail": f"Failed to parse verification ledger schema: {lde}"
             })
 
     # Enforce zero synthetic commit SHAs in actual references (ignore rule definitions/skills)

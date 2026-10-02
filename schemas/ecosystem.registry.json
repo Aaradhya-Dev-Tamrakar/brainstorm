@@ -9,16 +9,16 @@
     "role": "Central Architecture Registry, Verification Engine, and Orchestration Blueprint"
   },
   "statistics": {
-    "total_git_branches": 27,
+    "total_git_branches": 28,
     "orchestration_branches": 1,
-    "total_tool_modules": 24,
-    "computational_modules": 20,
+    "total_tool_modules": 25,
+    "computational_modules": 21,
     "presentation_and_educational_modules": 4,
     "special_and_research_branches": 2,
     "research_artifacts": 34,
-    "notes": "Achieved 100% 1-to-1 module-to-branch cardinality across all 24 ecosystem tools on 2026-10-02 (1 main + 24 tool branches + 2 special/research branches = 27 total remote branches).",
+    "notes": "Achieved 100% 1-to-1 module-to-branch cardinality across all 25 ecosystem tools on 2026-10-02 (1 main + 25 tool branches + 2 special/research branches = 28 total remote branches).",
     "entity_classes": {
-      "ecosystem_modules": 20,
+      "ecosystem_modules": 21,
       "presentation_hubs": 4,
       "in_tree_research_engines": 2,
       "in_tree_research_proposals": 0
@@ -321,6 +321,19 @@
       "local_path": "F:\\Aaradhya-Dev-Tamrakar\\Win-Vault",
       "core_superpower": "Lightweight, zero-dependency Windows native GUI privacy vault with kernel-level NTFS Access Control (ACL) denial and hidden system encapsulation",
       "contract_ref": "schemas/examples/win-vault.contract.json",
+      "entity_class": "ecosystem_module"
+    },
+    {
+      "index": 25,
+      "id": "cyber-forensics",
+      "branch": "Cyber-Forensics",
+      "name": "Cyber-Forensics",
+      "category": "computational_engine",
+      "tech_stack": "PowerShell 7, Win32/NT APIs, NTFS Streams, DFIR Parsers",
+      "execution_context": "Local Desktop (Bare Metal)",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\Cyber-Forensics",
+      "core_superpower": "Deterministic Windows DFIR artifact triage, multi-layer stealth evasion detection (ADS, CLSID, RLO, MZ PE magic byte masquerades), and cryptographic chain of custody logging",
+      "contract_ref": "schemas/examples/cyber-forensics.contract.json",
       "entity_class": "ecosystem_module"
     }
   ]

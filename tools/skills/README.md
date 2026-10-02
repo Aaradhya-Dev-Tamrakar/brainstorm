@@ -2,7 +2,7 @@
 
 > **Path:** `tools/skills/`  
 > **Global System Path:** `C:\Users\Aaradhya\.gemini\config\skills\`  
-> **Purpose:** Version-controlled master repository and source-of-truth mirror for all 23 custom Antigravity agent skills.
+> **Purpose:** Version-controlled master repository and source-of-truth mirror for all 25 custom Antigravity agent skills.
 
 ---
 
@@ -10,6 +10,8 @@
 
 | Category | Skill Name | Path | Description & Core Triggers |
 | :--- | :--- | :--- | :--- |
+| **NotebookLM Fleet & Downloads** | [`super-nlm`](super-nlm/SKILL.md) | `tools/skills/super-nlm/` | Google NotebookLM multi-account rotator, MCP query engine, and batch generation. |
+| | [`super-nlm-downloads`](super-nlm-downloads/SKILL.md) | `tools/skills/super-nlm-downloads/` | Automates URL extraction, subject folder downloads (outside repo), and LocalSend transfers. |
 | **Ingestion & Archival** | [`doc-archiver`](doc-archiver/SKILL.md) | `tools/skills/doc-archiver/` | Invokes `save-doc` CLI to extract Google Docs and web docs into structured Markdown. |
 | | [`chat-archiver`](chat-archiver/SKILL.md) | `tools/skills/chat-archiver/` | Invokes `save-chat` CLI to parse ChatGPT and model share URLs into clean dialogue logs. |
 | | [`google-classroom`](google-classroom/SKILL.md) | `tools/skills/google-classroom/` | Google Classroom MCP assistant for coursework, assignments, and due date management. |

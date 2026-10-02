@@ -1,0 +1,61 @@
+{
+  "$schema": "../capability.contract.v1.json",
+  "module": "cyber-forensics",
+  "version": "1.0.0",
+  "location": "F:\\Aaradhya-Dev-Tamrakar\\Cyber-Forensics",
+  "tracking_branch": "Cyber-Forensics",
+  "runtime": "powershell7",
+  "capabilities": [
+    {
+      "id": "stealth_evasion_hunting",
+      "description": "Multi-layer filesystem audit discovering Super-Hidden (System+Hidden) flags, NTFS Alternate Data Streams (ADS), CLSID shell extension disguises, Unicode RLO/zero-width character obfuscation, and PE binary magic byte (MZ header) masquerading.",
+      "category": "computation",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "deterministic_execution",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 120000,
+      "inputs": {
+        "type": "object",
+        "required": ["target_path"],
+        "properties": {
+          "target_path": { "type": "string", "description": "Directory or volume path to audit" },
+          "json_output": { "type": "boolean", "default": true }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["findings_count", "suspicious_artifacts"],
+        "properties": {
+          "findings_count": { "type": "integer" },
+          "suspicious_artifacts": { "type": "array" }
+        }
+      }
+    },
+    {
+      "id": "windows_execution_artifact_triage",
+      "description": "Harvests Windows Prefetch (.pf) binaries, execution frequency, and cryptographic metadata timestamps for forensic timeline reconstruction.",
+      "category": "ingestion",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "deterministic_execution",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 60000,
+      "inputs": {
+        "type": "object",
+        "properties": {
+          "process_filter": { "type": "string", "default": "" },
+          "limit": { "type": "integer", "default": 25 }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["records_harvested", "chain_of_custody"],
+        "properties": {
+          "records_harvested": { "type": "integer" },
+          "chain_of_custody": { "type": "object" }
+        }
+      }
+    }
+  ]
+}

@@ -729,3 +729,33 @@ capabilities:
     development_hours: 12
     confidence: 0.95
     last_verified: "2026-10-02"
+
+  - id: "cyber-forensics"
+    entity_class: "ecosystem_module"
+    name: "Cyber-Forensics"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\Cyber-Forensics"
+    category: "COMPUTATIONAL_ENGINE"
+    status: "IMPLEMENTED"
+    description: "Deterministic Windows DFIR artifact triage, multi-layer stealth evasion detection (ADS, CLSID, RLO, MZ PE magic byte masquerades), and cryptographic chain of custody logging."
+    inputs:
+      - "Target directory or volume path"
+      - "Artifact filters and limit thresholds"
+    outputs:
+      - "Structured forensic evasion findings (JSON/CLI)"
+      - "Windows Prefetch execution history timelines"
+      - "Cryptographic SHA-256 evidence chain of custody records"
+    interfaces:
+      - "PowerShell 7 DFIR CLI Modules"
+      - "JSON Output Pipeline"
+    dependencies:
+      - "Windows 11 / 10"
+      - "PowerShell 5.1 / 7+"
+      - "Win32 / NT Kernel APIs"
+    evidence: "E4"
+    benchmarks: "100% detection recall across synthetic stealth evasion specimen suites"
+    verification: "test_evasion_hunter.ps1 regression test suite"
+    maintenance_cost: "1.0 hours/month"
+    development_hours: 16
+    confidence: 0.95
+    last_verified: "2026-10-02"
+

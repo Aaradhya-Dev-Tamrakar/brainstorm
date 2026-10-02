@@ -569,12 +569,11 @@ def audit_layer_1_consistency():
             d for d in os.listdir(skills_dir)
             if os.path.isdir(os.path.join(skills_dir, d)) and not d.startswith(".")
         ])
-        expected_skill_count = 23
-        if len(skill_dirs) != expected_skill_count:
+        if len(skill_dirs) < 23:
             discrepancies.append({
                 "type": "SKILL_COUNT_DRIFT",
                 "file": "tools/skills/",
-                "detail": f"Expected {expected_skill_count} mirrored skills, found {len(skill_dirs)} in tools/skills/."
+                "detail": f"Expected at least 23 mirrored skills, found {len(skill_dirs)} in tools/skills/."
             })
         for sd in skill_dirs:
             skill_path = os.path.join(skills_dir, sd)

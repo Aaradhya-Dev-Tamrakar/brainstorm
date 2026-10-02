@@ -42,7 +42,14 @@ This directory contains standalone PowerShell, Python, and Batch utilities that 
 
 ---
 
-### 3. Local Cloud & Device Sync
+### 3. Media Transcoding & Stream Copying (FFmpeg Engine)
+- **[`convert-media.ps1`](convert-media.ps1):** Multi-mode converter engine with dark WPF GUI, clipboard auto-path detection, batch recursion, and toast notifications.
+- **[`convert-media.bat`](convert-media.bat):** 1-click desktop/terminal launcher for the Media Converter GUI.
+- **[`convert-ts.bat`](convert-ts.bat):** Ultra-fast stream-copy remuxing wrapper for `.ts` -> `.mp4` (drag-and-drop or active folder execution).
+
+---
+
+### 4. Local Cloud & Device Sync
 - **[`sync_drive.py`](sync_drive.py):** Google Drive / local filesystem synchronizer with file hash comparison, rate limiting, and manifest tracking.
 - **[`setup-hotkeys.ps1`](setup-hotkeys.ps1):** Configures ecosystem keyboard triggers and global execution hotkeys.
 

@@ -1505,11 +1505,11 @@ Nodes (3): tokens_total, minimum, type
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `BE ECIE / BEIE — Complete Study Syllabus (Year I–IV)` connect `Community 0` to `Community 260`, `Community 5`, `Community 261`, `Community 136`, `Community 277`, `Community 278`, `Community 279`, `Community 32`, `Community 161`, `Community 297`, `Community 298`, `Community 299`, `Community 300`, `Community 301`, `Community 302`, `Community 303`, `Community 48`, `Community 304`, `Community 305`, `Community 185`, `Community 208`, `Community 88`, `Community 222`, `Community 115`, `Community 116`, `Community 117`, `Community 118`, `Community 247`?**
-  _High betweenness centrality (0.123) - this node is a cross-community bridge._
-- **Why does `Skill Development for Claude Code Plugins` connect `Community 172` to `Community 173`, `Community 174`, `Community 273`, `Community 274`, `Community 249`, `Community 250`, `Community 251`?**
-  _High betweenness centrality (0.024) - this node is a cross-community bridge._
-- **Why does `required` connect `Community 78` to `Community 64`, `Community 137`?**
-  _High betweenness centrality (0.020) - this node is a cross-community bridge._
+  _High betweenness centrality (0.128) - this node is a cross-community bridge._
+- **Why does `required` connect `Community 128` to `Community 203`, `Community 229`, `Community 78`?**
+  _High betweenness centrality (0.023) - this node is a cross-community bridge._
+- **Why does `category` connect `Community 78` to `Community 128`?**
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `10. Circuit Design (3 hours)`, `10. Data Files (5 hours)`, `10. Digital Devices Applications (2 hours)` to the rest of the system?**

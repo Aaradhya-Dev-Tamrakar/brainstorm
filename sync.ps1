@@ -896,12 +896,27 @@ try {
     Write-Status "Branch     : $currentBranch"
     Write-Status "Remote URL : $TargetRemoteUrl"
 
-    # 1. Pull latest changes
-    Write-Status "Pulling latest updates from origin/$currentBranch..."
-    git pull --rebase --autostash origin $currentBranch
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "git pull encountered conflicts or errors."
-        exit $LASTEXITCODE
+    # 1. Pull latest changes if branch exists on remote
+    $remoteBranchExists = $false
+    try {
+        $lsRemote = git ls-remote --heads origin $currentBranch 2>$null
+        if ($lsRemote -and $lsRemote.Trim().Length -gt 0) {
+            $remoteBranchExists = $true
+        }
+    }
+    catch {
+        $remoteBranchExists = $false
+    }
+
+    if ($remoteBranchExists) {
+        Write-Status "Pulling latest updates from origin/$currentBranch..."
+        git pull --rebase --autostash origin $currentBranch
+        if ($LASTEXITCODE -ne 0) {
+            Write-Fail "git pull encountered conflicts or errors."
+            exit $LASTEXITCODE
+        }
+    } else {
+        Write-Notice "Branch '$currentBranch' does not exist on origin yet. Skipping initial pull."
     }
 
     if ($PullOnly) {

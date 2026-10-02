@@ -24,10 +24,10 @@
     "semantic_hash": "fe271b9b041d088da4e4a171e190aa7c"
   },
   "sim/reconciliation_engine.py": {
-    "mtime": 1790941007.5222197,
-    "seen": 1790941048.748343,
-    "ast_hash": "215685f908f7179cc31de5d9ae6c768e",
-    "semantic_hash": "215685f908f7179cc31de5d9ae6c768e"
+    "mtime": 1790945257.5530846,
+    "seen": 1790945340.4547942,
+    "ast_hash": "7bb0078bc1e343d8c5579754b0acb91b",
+    "semantic_hash": "7bb0078bc1e343d8c5579754b0acb91b"
   },
   "sim/sweep_ipu_breakeven.py": {
     "mtime": 1790044861.1795669,
@@ -48,10 +48,10 @@
     "semantic_hash": "0748921e00526ceac63918a0383627c6"
   },
   "sync.ps1": {
-    "mtime": 1790600445.548776,
-    "seen": 1790600471.368698,
-    "ast_hash": "ba7d4b89b8d65a33c8be8787296c24b8",
-    "semantic_hash": "ba7d4b89b8d65a33c8be8787296c24b8"
+    "mtime": 1790945324.7427711,
+    "seen": 1790945340.4548266,
+    "ast_hash": "48933fb6a3224404d9294d8d89e4b21e",
+    "semantic_hash": "48933fb6a3224404d9294d8d89e4b21e"
   },
   "research/architectures/ARCH-RFC-001-RECORD-KEEPING-STANDARD.md": {
     "mtime": 1790044861.1275935,
@@ -516,10 +516,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790945009.7968843,
-    "seen": 1790945012.547061,
-    "ast_hash": "e681b153c400b9a143c5ef43a7b20920",
-    "semantic_hash": "e681b153c400b9a143c5ef43a7b20920"
+    "mtime": 1790945336.6245258,
+    "seen": 1790945340.454677,
+    "ast_hash": "4848d7004715501afc0387c9bee424f5",
+    "semantic_hash": "4848d7004715501afc0387c9bee424f5"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -570,10 +570,10 @@
     "semantic_hash": "ef915c5d8d1809c77777dfc027680b8a"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790945007.6774848,
-    "seen": 1790945012.5470593,
-    "ast_hash": "cb05652c3d028d316c84738ce8d285f9",
-    "semantic_hash": "cb05652c3d028d316c84738ce8d285f9"
+    "mtime": 1790945334.4311843,
+    "seen": 1790945340.454674,
+    "ast_hash": "c9c27f72dc0d7bb9431fb03283c7e441",
+    "semantic_hash": "c9c27f72dc0d7bb9431fb03283c7e441"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -1528,5 +1528,11 @@
     "seen": 1790941048.748504,
     "ast_hash": "55e71e074cf74f64b344a2767cdadbec",
     "semantic_hash": "55e71e074cf74f64b344a2767cdadbec"
+  },
+  "scripts/verify.py": {
+    "mtime": 1790945240.5044272,
+    "seen": 1790945340.454764,
+    "ast_hash": "8c50a1cd7a7cccd007c5f173bf950133",
+    "semantic_hash": "8c50a1cd7a7cccd007c5f173bf950133"
   }
 }

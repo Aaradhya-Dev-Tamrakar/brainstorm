@@ -842,6 +842,30 @@ def audit_layer_1_consistency():
                 "detail": "Core economic constants ($1,272.55 outlay, $25,000 replacement base, 19.65x ratio) not reconciled."
             })
 
+    # Enforce zero synthetic commit SHAs in actual references (ignore rule definitions/skills)
+    synthetic_pattern = re.compile(r'\b(rel\d+|upg\d+|xtool\d+|dummy_sha|fake_sha|placeholder_sha)\b', re.IGNORECASE)
+    rule_mention_pattern = re.compile(r'(?:NEVER|e\.g\.|pattern|regex|rule|constraint|synthetic)', re.IGNORECASE)
+    text_extensions = {".md", ".py", ".json", ".yaml", ".yml", ".ps1", ".bat", ".tex"}
+    for root_dir, dirs, files in os.walk(BRAINSTORM_ROOT):
+        dirs[:] = [d for d in dirs if d not in (".git", ".venv", "__pycache__", ".ruff_cache", ".pytest_cache", "graphify-out", "tools/skills", "skills")]
+        for f in files:
+            if any(f.endswith(ext) for ext in text_extensions):
+                fpath = os.path.join(root_dir, f)
+                rel_fpath = os.path.relpath(fpath, BRAINSTORM_ROOT).replace("\\", "/")
+                if rel_fpath.startswith("sim/reconciliation_engine.py") or rel_fpath.startswith("scripts/verify.py") or "skills" in rel_fpath:
+                    continue
+                try:
+                    with open(fpath, "r", encoding="utf-8", errors="ignore") as tf:
+                        for line_no, line in enumerate(tf, start=1):
+                            if synthetic_pattern.search(line) and not rule_mention_pattern.search(line):
+                                discrepancies.append({
+                                    "type": "SYNTHETIC_COMMIT_SHA_ERROR",
+                                    "file": rel_fpath,
+                                    "detail": f"Synthetic commit SHA pattern detected at line {line_no}: {line.strip()[:60]}"
+                                })
+                except Exception:
+                    pass
+
     print(f"[*] Total Documentation & Schema Files Audited: {total_files_audited}")
     
     if not discrepancies:

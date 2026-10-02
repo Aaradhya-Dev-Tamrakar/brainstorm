@@ -15,57 +15,18 @@ Following this logging pass, an adversarial reality check was conducted to contr
 
 ---
 
-## 2. In-Repo Skills Inventory (44 Total)
+## 2. In-Repo Skills Inventory & Workflow Origin Matrix (45 Total)
 
-All skills are organized under [`tools/skills/`](../../tools/skills/):
+All skills are mirrored and version-controlled under [`tools/skills/`](../../tools/skills/):
 
-```
-tools/skills/
-├── agent-teams-orchestration/       # Scout/Reviewer/Writer/Lead multi-agent orchestration
-├── agy-customizations/              # Customization reference (skills, hooks, MCP, rules)
-├── antigravity-guide/               # Antigravity CLI, IDE, and SDK reference
-├── antigravity-ui-motion-design-expert/ # 3D spatial transforms & GSAP motion timelines
-├── automation/                      # Antigravity automation framework & event hooks
-├── chat-archiver/                   # Shared AI dialogue markdown archiver
-├── commit-commands/                 # Semantic commit & PR creation workflow
-├── compliance-report-harmonizer/    # Dual-format HTML/PDF compliance reporting
-├── cp-archive-harvester/            # CDP competitive programming harvester
-├── cyber-forensics/                 # Windows DFIR triage, ADS, & Prefetch hunting
-├── design-taste-frontend/           # Anti-AI template frontend styling rules
-├── doc-archiver/                    # Google Docs & web page markdown archiver
-├── feature-dev/                     # Guided feature development & codebase discovery
-├── frontend-design/                 # Distinctive UI aesthetic & typography direction
-├── gemini-api-dev/                  # Official google-genai SDK developer workflows
-├── gemini-interactions-api/         # Multi-turn background agent loops
-├── gemini-live-api-dev/             # Real-time WebSocket audio/video streaming
-├── gemini-omni-flash-api/           # Generative video editing via Omni Flash
-├── generative_ui/                   # Interactive HTML widgets & chat artifacts
-├── github-issue-pr-workflow/        # Complete issue-to-PR task lifecycle
-├── github-workflow/                 # Ecosystem multi-remote sync & PR standard
-├── google-classroom/                # Classroom assignment tracking & submissions
-├── google-stitch-integration/       # MCP ingestion of Stitch UI designs
-├── google-ux-fluidity/              # Material Design 3 UX motion & ink ripples
-├── graphify/                        # Persistent codebase knowledge graph engine
-├── graphify-code-search/            # Graph-driven implementation discovery
-├── mcp-integration/                 # Model Context Protocol integration guidelines
-├── migrate-workflows/               # Legacy workflow to modern skill migration
-├── permissioned-github/             # Fine-grained GitHub permission management
-├── plugin/                          # Antigravity plugin manifest & discovery
-├── portfolio-project-manager/       # Token-Zero project onboarding & AES encryption
-├── pr-review-toolkit/               # Multi-perspective PR review framework
-├── review-bugbot/                   # Automated Bugbot PR review agent
-├── security-guidance/               # Application security & vulnerability auditing
-├── shadcn-context/                  # shadcn/ui & Radix component schemas
-├── skill-development/               # Skill creation & progressive disclosure guide
-├── split-to-prs/                    # Task splitting into granular reviewable PRs
-├── super-nlm/                       # Super-NLM MCP fleet querying & Drive sync
-├── super-nlm-downloads/             # Autonomous NotebookLM Studio downloader
-├── ui-extension/                    # Sidecar webview panel extension templates
-├── ui-plugin-navigation/            # UI plugin routing & view management
-├── ui-ux-pro-max/                   # Production design tokens & responsive systems
-├── win-vault/                       # NTFS ACL privacy vault & kernel locking
-└── winpilot/                        # Windows UI Automation (UIA) desktop perception
-```
+### Summary Breakdown by Origin:
+1. **Antigravity Built-in Skills (10):** `antigravity-guide`, `agy-customizations`, `automation`, `generative_ui`, `migrate-workflows`, `permissioned-github`, `plugin`, `ui-extension`, `ui-plugin-navigation`, `google-stitch-integration`.
+2. **Gemini API Plugin Skills (4):** `gemini-api-dev`, `gemini-interactions-api`, `gemini-live-api-dev`, `gemini-omni-flash-api`.
+3. **Workspace R&D & Specialized Engines (16):** `agent-teams-orchestration` (FLEET-001 R&D), `blog-writing-like-claude` (BiasAperture), `chat-archiver` (Brainstorm Incubator), `compliance-report-harmonizer` (BiasAperture), `cp-archive-harvester` (IEEE-Xtreme-Archive), `cyber-forensics` (Cyber-Forensics), `doc-archiver` (Brainstorm Incubator), `google-classroom` (Classroom MCP), `graphify` (Knowledge Core), `graphify-code-search` (Knowledge Core), `github-workflow` (Ecosystem Standard), `portfolio-project-manager` (AaradhyaDT.github.io), `super-nlm` (super-nlm MCP), `super-nlm-downloads` (super-nlm Studio), `win-vault` (Win-Vault Core), `winpilot` (WinPilot UI Framework).
+4. **Global System & Development Standards (9):** `feature-dev`, `design-taste-frontend`, `mcp-integration`, `pr-review-toolkit`, `security-guidance`, `shadcn-context`, `skill-development`, `split-to-prs`.
+5. **Sub-Workflows & Specialized Extensions (6):** `antigravity-ui-motion-design-expert`, `commit-commands`, `frontend-design`, `github-issue-pr-workflow`, `google-ux-fluidity`, `review-bugbot`, `ui-ux-pro-max`.
+
+For full interactive paths, individual `SKILL.md` triggers, and synchronization scripts, see the master registry: [`tools/skills/README.md`](../../tools/skills/README.md).
 
 ---
 

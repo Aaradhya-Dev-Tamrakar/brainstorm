@@ -968,6 +968,45 @@ def audit_layer_1_consistency():
                         "file": "graphify-out/manifest.json",
                         "detail": f"Failed to parse Graphify manifest: {me}"
                     })
+
+            # Validate Graphify Cryptographic Commit Provenance & Lineage
+            graph_analysis_path = os.path.join(BRAINSTORM_ROOT, "graphify-out", ".graphify_analysis.json")
+            if os.path.exists(graph_analysis_path):
+                try:
+                    with open(graph_analysis_path, "r", encoding="utf-8") as gaf:
+                        gadata = json.load(gaf)
+                    b_commit = gadata.get("built_at_commit")
+                    if not b_commit or not re.match(r"^[0-9a-fA-F]{40}$", str(b_commit)):
+                        discrepancies.append({
+                            "type": "GRAPHIFY_PROVENANCE_COMMIT_MISSING",
+                            "file": "graphify-out/.graphify_analysis.json",
+                            "detail": f"Graphify analysis sidecar missing valid 40-hex 'built_at_commit' SHA, got: '{b_commit}'."
+                        })
+                    else:
+                        try:
+                            import subprocess
+                            subprocess.check_output(
+                                ["git", "cat-file", "-e", f"{b_commit}^{{commit}}"],
+                                cwd=BRAINSTORM_ROOT, stderr=subprocess.DEVNULL
+                            )
+                            is_anc = subprocess.call(
+                                ["git", "merge-base", "--is-ancestor", b_commit, "HEAD"],
+                                cwd=BRAINSTORM_ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+                            )
+                            if is_anc != 0:
+                                discrepancies.append({
+                                    "type": "GRAPHIFY_PROVENANCE_LINEAGE_DRIFT",
+                                    "file": "graphify-out/.graphify_analysis.json",
+                                    "detail": f"Graphify build commit '{b_commit[:8]}' is not in Git ancestry lineage of HEAD."
+                                })
+                        except Exception:
+                            pass
+                except Exception as gae:
+                    discrepancies.append({
+                        "type": "GRAPHIFY_PROVENANCE_ERROR",
+                        "file": "graphify-out/.graphify_analysis.json",
+                        "detail": f"Failed to parse Graphify analysis sidecar: {gae}"
+                    })
         except Exception as ge:
             discrepancies.append({
                 "type": "GRAPHIFY_SCHEMA_ERROR",

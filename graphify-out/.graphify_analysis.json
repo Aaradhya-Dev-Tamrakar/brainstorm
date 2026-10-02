@@ -1,4 +1,6 @@
 {
+  "built_at_commit": "7e41efa4953517e634f26e81ae94150947fbdbe5",
+  "built_timestamp": "2026-10-02T15:22:07.122577+00:00",
   "communities": {
     "0": [
       "research_experiments_exp_drive_sync_001",
@@ -63,7 +65,7 @@
       "sim_reconciliation_engine_parse_simple_yaml_capabilities",
       "sim_reconciliation_engine_rationale_1",
       "sim_reconciliation_engine_rationale_102",
-      "sim_reconciliation_engine_rationale_1078",
+      "sim_reconciliation_engine_rationale_1117",
       "sim_reconciliation_engine_rationale_138",
       "sim_reconciliation_engine_rationale_155",
       "sim_reconciliation_engine_rationale_455",
@@ -4028,8 +4030,13 @@
   "questions": [
     {
       "type": "bridge_node",
+      "question": "Why does `Research Note: BiasAperture (Diagnostic Fairness & Bias Audit Platform)` connect `5. Core Architectural & Methodological Pillars` to `🏛️ Research Architectures Hub`?",
+      "why": "High betweenness centrality (0.016) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
       "question": "Why does `Skill Development for Claude Code Plugins` connect `Skill Development for Claude Code Plugins` to `Quick Reference`, `Writing Style Requirements`, `About Skills`, `Skill Creation Process`, `Plugin-Specific Considerations`, `Common Mistakes to Avoid`, `Progressive Disclosure in Practice`?",
-      "why": "High betweenness centrality (0.017) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.016) - this node is a cross-community bridge."
     },
     {
       "type": "verify_inferred",
@@ -4055,11 +4062,6 @@
       "type": "low_cohesion",
       "question": "Should `run_all_reproducibility.py` be split into smaller, more focused modules?",
       "why": "Cohesion score 0.07358156028368794 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `generate_video.py` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.08687943262411348 - nodes in this community are weakly interconnected."
     }
   ]
 }

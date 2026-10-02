@@ -24,10 +24,10 @@
     "semantic_hash": "fe271b9b041d088da4e4a171e190aa7c"
   },
   "sim/reconciliation_engine.py": {
-    "mtime": 1790952571.4523914,
-    "seen": 1790953100.8413413,
-    "ast_hash": "fe71928e6ca4a71d4bb4804fd26a096d",
-    "semantic_hash": "fe71928e6ca4a71d4bb4804fd26a096d"
+    "mtime": 1790954350.5706353,
+    "seen": 1790954529.7902405,
+    "ast_hash": "171198861efd7db09a58eb92224a0321",
+    "semantic_hash": "171198861efd7db09a58eb92224a0321"
   },
   "sim/sweep_ipu_breakeven.py": {
     "mtime": 1790044861.1795669,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790953216.5897872,
-    "seen": 1790953219.0354245,
-    "ast_hash": "f647484fd1717f67974caae6959e2068",
-    "semantic_hash": "f647484fd1717f67974caae6959e2068"
+    "mtime": 1790954526.7366185,
+    "seen": 1790954529.7901745,
+    "ast_hash": "599280d5009db87d15a8fdd510f24357",
+    "semantic_hash": "599280d5009db87d15a8fdd510f24357"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -552,16 +552,16 @@
     "semantic_hash": ""
   },
   "graphify.ps1": {
-    "mtime": 1790953082.6609535,
-    "seen": 1790953100.8412764,
-    "ast_hash": "ecf755f4c3d33ca49fccfa20af5405e0",
-    "semantic_hash": "ecf755f4c3d33ca49fccfa20af5405e0"
+    "mtime": 1790953932.2289402,
+    "seen": 1790954327.5562851,
+    "ast_hash": "9921a31efd467f34254a60a2bb6e4a0d",
+    "semantic_hash": "9921a31efd467f34254a60a2bb6e4a0d"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790953214.5062783,
-    "seen": 1790953219.035423,
-    "ast_hash": "bafdd73064fc20505741475b278efb37",
-    "semantic_hash": "bafdd73064fc20505741475b278efb37"
+    "mtime": 1790954524.5611172,
+    "seen": 1790954529.7901726,
+    "ast_hash": "bd6f91a645c89ecbc2e52da68ca9e9c1",
+    "semantic_hash": "bd6f91a645c89ecbc2e52da68ca9e9c1"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,

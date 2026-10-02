@@ -1,7 +1,7 @@
 # Graph Report - brainstorm  (2026-10-02)
 
 ## Corpus Check
-- Large corpus: 337 files · ~739,218 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
+- Large corpus: 337 files · ~739,390 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
 
 ## Summary
 - 3130 nodes · 3703 edges · 261 communities (241 shown, 8 thin omitted)
@@ -1260,8 +1260,10 @@ Nodes (3): side_effects, description, type
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `Research Note: BiasAperture (Diagnostic Fairness & Bias Audit Platform)` connect `5. Core Architectural & Methodological Pillars` to `🏛️ Research Architectures Hub`?**
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
 - **Why does `Skill Development for Claude Code Plugins` connect `Skill Development for Claude Code Plugins` to `Quick Reference`, `Writing Style Requirements`, `About Skills`, `Skill Creation Process`, `Plugin-Specific Considerations`, `Common Mistakes to Avoid`, `Progressive Disclosure in Practice`?**
-  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 5 inferred relationships involving `NepalLawHarvesterTests` (e.g. with `CircuitBreaker` and `CrawlPolicy`) actually correct?**
@@ -1272,5 +1274,7 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
 - **Should `run_all_reproducibility.py` be split into smaller, more focused modules?**
   _Cohesion score 0.07358156028368794 - nodes in this community are weakly interconnected._
-- **Should `generate_video.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.08687943262411348 - nodes in this community are weakly interconnected._
+
+## Graph Freshness
+- **Built at commit:** `7e41efa4953517e634f26e81ae94150947fbdbe5`
+- **Built timestamp:** `2026-10-02T15:22:07.122577+00:00`

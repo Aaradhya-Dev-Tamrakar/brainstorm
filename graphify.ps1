@@ -334,13 +334,17 @@ if ($ClusterOnly) {
 
 Write-Status "Executing thorough Graphify extraction & graph update on: $ResolvedTarget"
 
+$CurrentGitCommit = (git rev-parse HEAD 2>$null)
+if ($CurrentGitCommit) { $CurrentGitCommit = $CurrentGitCommit.Trim() }
+if (-not $CurrentGitCommit) { $CurrentGitCommit = "UNKNOWN" }
+
 # Build Python execution script for deterministic graph updates
 $isDirectedStr = if ($Directed) { "True" } else { "False" }
 $isUpdateStr = if ($Update -and -not $Full) { "True" } else { "False" }
 $isCodeOnlyStr = if ($CodeOnly) { "True" } else { "False" }
 
 $PyScript = @'
-import os, sys, json
+import os, sys, json, datetime
 from pathlib import Path
 
 target_root = Path(r'__TARGET_ROOT__')
@@ -350,9 +354,12 @@ out_dir.mkdir(parents=True, exist_ok=True)
 is_directed = __IS_DIRECTED__
 is_update = __IS_UPDATE__
 is_code_only = __IS_CODE_ONLY__
+built_at_commit = '__BUILT_AT_COMMIT__'
+built_timestamp = datetime.datetime.now(datetime.timezone.utc).isoformat()
 
 print(f"Target Root: {target_root}")
 print(f"Mode: {'Incremental Update' if is_update else 'Full Extraction'}")
+print(f"Commit Provenance: {built_at_commit}")
 
 # Step A: Detection & Extraction
 from graphify.detect import detect, detect_incremental, save_manifest
@@ -456,10 +463,13 @@ else:
     det_summary = detect(target_root)
     tokens = {'input': extraction.get('input_tokens', 0), 'output': extraction.get('output_tokens', 0)}
     report = generate(G, communities, cohesion, labels, gods, surprises, det_summary, tokens, str(target_root), suggested_questions=questions)
+    report += f"\n\n## Graph Freshness\n- **Built at commit:** `{built_at_commit}`\n- **Built timestamp:** `{built_timestamp}`\n"
     (out_dir / "GRAPH_REPORT.md").write_text(report, encoding="utf-8")
     
     # Save analysis sidecar
     analysis = {
+        'built_at_commit': built_at_commit,
+        'built_timestamp': built_timestamp,
         'communities': {str(k): v for k, v in communities.items()},
         'cohesion': {str(k): v for k, v in cohesion.items()},
         'gods': gods,
@@ -469,8 +479,8 @@ else:
     (out_dir / ".graphify_analysis.json").write_text(json.dumps(analysis, indent=2, ensure_ascii=False), encoding="utf-8")
     (out_dir / ".graphify_labels.json").write_text(json.dumps({str(k): v for k, v in labels.items()}, indent=2, ensure_ascii=False), encoding="utf-8")
     
-    print(f"Graph finalized: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges, {len(communities)} communities")
-'@ -replace '__TARGET_ROOT__', $ResolvedTarget -replace '__OUT_DIR__', $GraphifyOutDir -replace '__IS_DIRECTED__', $isDirectedStr -replace '__IS_UPDATE__', $isUpdateStr -replace '__IS_CODE_ONLY__', $isCodeOnlyStr
+    print(f"Graph finalized: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges, {len(communities)} communities (commit {built_at_commit[:8]})")
+'@ -replace '__TARGET_ROOT__', $ResolvedTarget -replace '__OUT_DIR__', $GraphifyOutDir -replace '__IS_DIRECTED__', $isDirectedStr -replace '__IS_UPDATE__', $isUpdateStr -replace '__IS_CODE_ONLY__', $isCodeOnlyStr -replace '__BUILT_AT_COMMIT__', $CurrentGitCommit
 
 if ($WhatIf) {
     Write-Notice "[WhatIf] Would execute graphify update pipeline with interpreter: $GraphifyPython"

@@ -1261,7 +1261,7 @@ Nodes (3): side_effects, description, type
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Skill Development for Claude Code Plugins` connect `Community 153` to `Community 236`, `Community 237`, `Community 154`, `Community 155`, `Community 220`, `Community 221`, `Community 222`?**
-  _High betweenness centrality (0.026) - this node is a cross-community bridge._
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 5 inferred relationships involving `NepalLawHarvesterTests` (e.g. with `CircuitBreaker` and `CrawlPolicy`) actually correct?**

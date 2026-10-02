@@ -3464,7 +3464,7 @@
       "file_type": "code",
       "norm_label": "audit_layer_1_consistency()",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L403"
+      "source_location": "L445"
     },
     {
       "id": "sim_reconciliation_engine_audit_layer_2_behavioral",
@@ -3476,7 +3476,7 @@
       "file_type": "code",
       "norm_label": "audit_layer_2_behavioral()",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L882"
+      "source_location": "L933"
     },
     {
       "id": "sim_reconciliation_engine_audit_repository",
@@ -3488,7 +3488,7 @@
       "file_type": "code",
       "norm_label": "audit_repository()",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L917"
+      "source_location": "L968"
     },
     {
       "id": "sim_reconciliation_engine_auto_reconcile_counts",
@@ -15778,14 +15778,14 @@
       "source_location": "L10"
     },
     {
-      "id": "research_notes_2026_10_02_ecosystem_skills_and_workflow_calibrated_evaluation_2_in_repo_skills_inventory_workflow_origin_matrix_45_total",
-      "label": "2. In-Repo Skills Inventory & Workflow Origin Matrix (45 Total)",
+      "id": "research_notes_2026_10_02_ecosystem_skills_and_workflow_calibrated_evaluation_2_in_repo_skills_inventory_workflow_origin_matrix_38_total",
+      "label": "2. In-Repo Skills Inventory & Workflow Origin Matrix (38 Total)",
       "_origin": "ast",
       "community": 146,
       "community_name": "Community 146",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "2. in-repo skills inventory & workflow origin matrix (45 total)",
+      "norm_label": "2. in-repo skills inventory & workflow origin matrix (38 total)",
       "source_file": "research/notes/2026-10-02_ECOSYSTEM_SKILLS_AND_WORKFLOW_CALIBRATED_EVALUATION.md",
       "source_location": "L18"
     },
@@ -43711,7 +43711,7 @@
       "source_location": "L155"
     },
     {
-      "id": "sim_reconciliation_engine_rationale_404",
+      "id": "sim_reconciliation_engine_rationale_446",
       "label": "Layer 1: Structural consistency, schemas, metadata, links, and economic\u2026",
       "_origin": "ast",
       "community": 66,
@@ -43719,7 +43719,7 @@
       "file_type": "rationale",
       "norm_label": "layer 1: structural consistency, schemas, metadata, links, and economic...",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L404"
+      "source_location": "L446"
     },
     {
       "id": "sim_reconciliation_engine_rationale_59",
@@ -43744,7 +43744,7 @@
       "source_location": "L82"
     },
     {
-      "id": "sim_reconciliation_engine_rationale_883",
+      "id": "sim_reconciliation_engine_rationale_934",
       "label": "Layer 2: Behavioral verification & simulation test suite execution.",
       "_origin": "ast",
       "community": 66,
@@ -43752,7 +43752,7 @@
       "file_type": "rationale",
       "norm_label": "layer 2: behavioral verification & simulation test suite execution.",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L883"
+      "source_location": "L934"
     },
     {
       "id": "tools_skills_security_guidance_skill",
@@ -51216,7 +51216,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L491",
+      "source_location": "L533",
       "weight": 1.0
     },
     {
@@ -51228,7 +51228,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L535",
+      "source_location": "L577",
       "weight": 1.0
     },
     {
@@ -51240,7 +51240,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L706",
+      "source_location": "L757",
       "weight": 1.0
     },
     {
@@ -51252,7 +51252,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L748",
+      "source_location": "L799",
       "weight": 1.0
     },
     {
@@ -51264,7 +51264,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L924",
+      "source_location": "L975",
       "weight": 1.0
     },
     {
@@ -51276,7 +51276,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L930",
+      "source_location": "L981",
       "weight": 1.0
     },
     {
@@ -51288,7 +51288,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L931",
+      "source_location": "L982",
       "weight": 1.0
     },
     {
@@ -68524,7 +68524,7 @@
       "weight": 1.0
     },
     {
-      "source": "research_notes_2026_10_02_ecosystem_skills_and_workflow_calibrated_evaluation_2_in_repo_skills_inventory_workflow_origin_matrix_45_total",
+      "source": "research_notes_2026_10_02_ecosystem_skills_and_workflow_calibrated_evaluation_2_in_repo_skills_inventory_workflow_origin_matrix_38_total",
       "target": "research_notes_2026_10_02_ecosystem_skills_and_workflow_calibrated_evaluation_summary_breakdown_by_origin",
       "relation": "contains",
       "_origin": "ast",
@@ -68580,7 +68580,7 @@
     },
     {
       "source": "research_notes_2026_10_02_ecosystem_skills_and_workflow_calibrated_evaluation_calibrated_evaluation_architectural_audit_ecosystem_skills_developer_workflow",
-      "target": "research_notes_2026_10_02_ecosystem_skills_and_workflow_calibrated_evaluation_2_in_repo_skills_inventory_workflow_origin_matrix_45_total",
+      "target": "research_notes_2026_10_02_ecosystem_skills_and_workflow_calibrated_evaluation_2_in_repo_skills_inventory_workflow_origin_matrix_38_total",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -88001,7 +88001,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L403",
+      "source_location": "L445",
       "weight": 1.0
     },
     {
@@ -88034,7 +88034,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L882",
+      "source_location": "L933",
       "weight": 1.0
     },
     {
@@ -88045,7 +88045,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L917",
+      "source_location": "L968",
       "weight": 1.0
     },
     {
@@ -101502,14 +101502,14 @@
       "weight": 1.0
     },
     {
-      "source": "sim_reconciliation_engine_rationale_404",
+      "source": "sim_reconciliation_engine_rationale_446",
       "target": "sim_reconciliation_engine_audit_layer_1_consistency",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L404",
+      "source_location": "L446",
       "weight": 1.0
     },
     {
@@ -101535,14 +101535,14 @@
       "weight": 1.0
     },
     {
-      "source": "sim_reconciliation_engine_rationale_883",
+      "source": "sim_reconciliation_engine_rationale_934",
       "target": "sim_reconciliation_engine_audit_layer_2_behavioral",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L883",
+      "source_location": "L934",
       "weight": 1.0
     },
     {
@@ -104787,5 +104787,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "c235e2f0f55d67dcf1dee9a2eaeca870e4edc66c"
+  "built_at_commit": "c00ceab706a58c925192f430192055139db18c62"
 }

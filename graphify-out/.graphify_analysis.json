@@ -2091,10 +2091,10 @@
       "sim_reconciliation_engine_rationale_102",
       "sim_reconciliation_engine_rationale_138",
       "sim_reconciliation_engine_rationale_155",
-      "sim_reconciliation_engine_rationale_404",
+      "sim_reconciliation_engine_rationale_446",
       "sim_reconciliation_engine_rationale_59",
       "sim_reconciliation_engine_rationale_82",
-      "sim_reconciliation_engine_rationale_883"
+      "sim_reconciliation_engine_rationale_934"
     ],
     "67": [
       "tools_skills_security_guidance_skill",
@@ -3261,7 +3261,7 @@
     "146": [
       "research_notes_2026_10_02_ecosystem_skills_and_workflow_calibrated_evaluation",
       "research_notes_2026_10_02_ecosystem_skills_and_workflow_calibrated_evaluation_1_executive_summary",
-      "research_notes_2026_10_02_ecosystem_skills_and_workflow_calibrated_evaluation_2_in_repo_skills_inventory_workflow_origin_matrix_45_total",
+      "research_notes_2026_10_02_ecosystem_skills_and_workflow_calibrated_evaluation_2_in_repo_skills_inventory_workflow_origin_matrix_38_total",
       "research_notes_2026_10_02_ecosystem_skills_and_workflow_calibrated_evaluation_3_calibrated_reality_audit_epistemic_deconstruction",
       "research_notes_2026_10_02_ecosystem_skills_and_workflow_calibrated_evaluation_4_final_calibrated_ratings",
       "research_notes_2026_10_02_ecosystem_skills_and_workflow_calibrated_evaluation_a_the_aspirational_framing_vs_physical_reality",
@@ -5439,12 +5439,12 @@
     {
       "type": "bridge_node",
       "question": "Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 102` to `Community 248`, `Community 25`, `Community 68`, `Community 247`?",
-      "why": "High betweenness centrality (0.019) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.023) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
-      "question": "Why does `Quantitative Claims Audit & Empirical Methodology Registry` connect `Community 59` to `Community 25`?",
-      "why": "High betweenness centrality (0.016) - this node is a cross-community bridge."
+      "question": "Why does `Research Program Charter: Nepal Information Systems Research (NISR)` connect `Community 39` to `Community 62`?",
+      "why": "High betweenness centrality (0.017) - this node is a cross-community bridge."
     },
     {
       "type": "verify_inferred",

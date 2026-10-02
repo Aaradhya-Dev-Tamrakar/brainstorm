@@ -15,7 +15,7 @@ Following this logging pass, an adversarial reality check was conducted to contr
 
 ---
 
-## 2. In-Repo Skills Inventory & Workflow Origin Matrix (45 Total)
+## 2. In-Repo Skills Inventory & Workflow Origin Matrix (38 Total)
 
 All skills are mirrored and version-controlled under [`tools/skills/`](../../tools/skills/):
 

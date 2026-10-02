@@ -390,6 +390,48 @@ def auto_reconcile_counts():
         except Exception as e:
             print(f"[!] Warning during repository-audit.md reconciliation: {e}")
 
+    # 5. Dynamic Skill Matrix & Evaluation Note Reconciliation
+    skills_dir = os.path.join(BRAINSTORM_ROOT, "tools", "skills")
+    if os.path.exists(skills_dir):
+        skill_dirs = [
+            d for d in os.listdir(skills_dir)
+            if os.path.isdir(os.path.join(skills_dir, d)) and not d.startswith(".")
+        ]
+        actual_skills_count = len(skill_dirs)
+        skills_readme = os.path.join(skills_dir, "README.md")
+        if os.path.exists(skills_readme):
+            try:
+                with open(skills_readme, "r", encoding="utf-8") as srf:
+                    s_content = srf.read()
+                new_s_content = re.sub(
+                    r'(## 📊 [^\n]*\()\d+(\s+Skills\))',
+                    rf"\g<1>{actual_skills_count}\g<2>",
+                    s_content
+                )
+                if new_s_content != s_content:
+                    with open(skills_readme, "w", encoding="utf-8") as srf:
+                        srf.write(new_s_content)
+                    reconciled_actions.append(f"tools/skills/README.md -> {actual_skills_count} Mirrored Skills")
+            except Exception as e:
+                print(f"[!] Warning during tools/skills/README.md reconciliation: {e}")
+
+        eval_note = os.path.join(BRAINSTORM_ROOT, "research", "notes", "2026-10-02_ECOSYSTEM_SKILLS_AND_WORKFLOW_CALIBRATED_EVALUATION.md")
+        if os.path.exists(eval_note):
+            try:
+                with open(eval_note, "r", encoding="utf-8") as enf:
+                    e_content = enf.read()
+                new_e_content = re.sub(
+                    r'(## 2\. In-Repo Skills Inventory[^\n]*\()\d+(\s+Total)',
+                    rf"\g<1>{actual_skills_count}\g<2>",
+                    e_content
+                )
+                if new_e_content != e_content:
+                    with open(eval_note, "w", encoding="utf-8") as enf:
+                        enf.write(new_e_content)
+                    reconciled_actions.append(f"2026-10-02_ECOSYSTEM_SKILLS_AND_WORKFLOW_CALIBRATED_EVALUATION.md -> {actual_skills_count} Mirrored Skills")
+            except Exception as e:
+                print(f"[!] Warning during evaluation note reconciliation: {e}")
+
     if reconciled_actions:
         print("[*] Dynamic Reconciliation Engine synchronized declarations:")
         for act in reconciled_actions:
@@ -653,13 +695,22 @@ def audit_layer_1_consistency():
             d for d in os.listdir(skills_dir)
             if os.path.isdir(os.path.join(skills_dir, d)) and not d.startswith(".")
         ])
-        expected_skills = 38
-        if len(skill_dirs) != expected_skills:
-            discrepancies.append({
-                "type": "SKILL_COUNT_DRIFT",
-                "file": "tools/skills/",
-                "detail": f"Expected exactly {expected_skills} mirrored skills, found {len(skill_dirs)} in tools/skills/."
-            })
+        actual_skills_count = len(skill_dirs)
+
+        # Dynamic reconciliation check: match physical skill folders against README declared count
+        skills_readme = os.path.join(skills_dir, "README.md")
+        if os.path.exists(skills_readme):
+            with open(skills_readme, "r", encoding="utf-8", errors="ignore") as srf:
+                readme_text = srf.read()
+            m = re.search(r'## 📊 [^\n]*\((\d+)\s+Skills\)', readme_text)
+            if m:
+                declared_count = int(m.group(1))
+                if declared_count != actual_skills_count:
+                    discrepancies.append({
+                        "type": "SKILL_COUNT_DRIFT",
+                        "file": "tools/skills/README.md",
+                        "detail": f"Declared skill count in tools/skills/README.md ({declared_count}) does not match physical skill directories ({actual_skills_count}). Run .\\audit.bat --fix to reconcile."
+                    })
         for sd in skill_dirs:
             skill_path = os.path.join(skills_dir, sd)
             skill_md = os.path.join(skill_path, "SKILL.md")

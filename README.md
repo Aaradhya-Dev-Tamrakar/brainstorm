@@ -72,7 +72,7 @@ Rather than building an isolated chatbot, this repository models tools as **auto
 └───────────────────────────────────────┬────────────────────────────────────────┘
                                         │ Typed Capability Contracts
 ┌───────────────────────────────────────▼────────────────────────────────────────┐
-│ 3. CAPABILITY MESH (21 Computational Engines across 23 Modules)               │
+│ 3. CAPABILITY MESH (21 Computational Engines across 25 Modules)               │
 │    • Ingestion : Screen Q&A (DOM), Super-NLM (Notebooks), Google Classroom MCP │
 │    • Compute   : Fusion 360 MCP (CAD), BiasAperture (Fairness), SPARK (Edge AI)│
 │    • Solvers   : AI Constraint Solver (Cryptarithmetic & CSP)                  │
@@ -140,7 +140,7 @@ Rather than expanding the ecosystem by inventing new projects, the immediate eng
 
 ## 🗂️ Authoritative Ecosystem Catalog
 
-The ecosystem encompasses **23 tool modules** cataloged in `schemas/ecosystem.registry.json` and tracked across local tool repositories plus 1 orchestration root (`brainstorm`), with machine-readable contracts and interfaces (23 modules = 19 active computational engines + 4 presentation/educational hubs):
+The ecosystem encompasses **25 tool modules** cataloged in `schemas/ecosystem.registry.json` and tracked across local tool repositories plus 1 orchestration root (`brainstorm`), with machine-readable contracts and interfaces (25 modules = 21 active computational engines + 4 presentation/educational hubs):
 
 > 📖 **Machine-Readable Registry:** [`schemas/capability-registry.yaml`](schemas/capability-registry.yaml) | [`schemas/ecosystem.registry.json`](schemas/ecosystem.registry.json)  
 > 📜 **Ontology Standard:** [`schemas/capability-ontology.md`](schemas/capability-ontology.md)
@@ -170,6 +170,8 @@ The ecosystem encompasses **23 tool modules** cataloged in `schemas/ecosystem.re
 | 21  | `localsend-mcp`                   | **LocalSend MCP Server**     | Ingestion / Actuation  | Local Desktop / Fleet MCP |    **E4**     | Zero-cloud local P2P file, text, and clipboard transfer across LAN/Wi-Fi devices with mutual TLS           |
 | 22  | `downloader-scripts`              | **Downloader Scripts Hub**   | Ingestion / Actuation  | Local Desktop             |    **E4**     | Zero-click clipboard auto-paste downloader, 1-click WPF Audio vs Video selector, and dual-routing          |
 | 23  | `typora-mcp`                      | **Typora MCP Server**        | Publishing / Actuation | Local Desktop / Fleet MCP |    **E4**     | Programmatic Typora automation, process telemetry, hex history/draft recovery, CSS theme governance & HTML |
+| 24  | `Win-Vault`                       | **Win-Vault**                | Computation / Security | Local Desktop (Bare Metal)|    **E4**     | Zero-dependency native GUI privacy vault with kernel-level NTFS Access Control (ACL) denial                 |
+| 25  | `Cyber-Forensics`                 | **Cyber-Forensics**          | Computation / Security | Local Desktop (Bare Metal)|    **E4**     | Deterministic Windows DFIR triage, multi-layer stealth evasion detection, and cryptographic chain of custody|
 
 ---
 

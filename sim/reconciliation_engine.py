@@ -238,6 +238,21 @@ def auto_reconcile_counts():
                 new_content
             )
             new_content = re.sub(
+                r'(\*\*)\d+(\s+tool modules\*\*)',
+                rf"\g<1>{total_modules}\g<2>",
+                new_content
+            )
+            new_content = re.sub(
+                r'(\()\d+(\s+modules\s*=\s*)\d+(\s+active computational engines\s*\+\s*)\d+(\s+presentation/educational hubs\))',
+                rf"\g<1>{total_modules}\g<2>{comp_modules}\g<3>{pres_modules}\g<4>",
+                new_content
+            )
+            new_content = re.sub(
+                r'(\bCAPABILITY MESH \()\d+(\s+Computational Engines across\s+)\d+(\s+Modules\))',
+                rf"\g<1>{comp_modules}\g<2>{total_modules}\g<3>",
+                new_content
+            )
+            new_content = re.sub(
                 r'\b\d+\s+Computational Engines\b',
                 f"{comp_modules} Computational Engines",
                 new_content
@@ -260,6 +275,8 @@ def auto_reconcile_counts():
         try:
             with open(ontology_file, "r", encoding="utf-8") as of:
                 ont_text = of.read()
+            total_caps = comp_modules + pres_modules + 2
+            special_count = stats.get("special_and_research_branches", 2)
             new_ont = re.sub(
                 r'(\|\s*\*\*Research Experiments, Specs & RFCs\*\*\s*\|\s*\*\*)\d+(\*\*\s*\|)',
                 rf"\g<1>{total_physical}\g<2>",
@@ -285,12 +302,70 @@ def auto_reconcile_counts():
                 rf"\g<1>{total_remote_branches}\g<2>",
                 new_ont
             )
+            new_ont = re.sub(
+                r'(\|\s*\*\*Total Capabilities in Registry\*\*\s*\|\s*\*\*)\d+(\*\*\s*\|)',
+                rf"\g<1>{total_caps}\g<2>",
+                new_ont
+            )
+            new_ont = re.sub(
+                r'(- `ecosystem_module`: Distinct, autonomous external tool repositories exposing computational engines \()\d+(\s+modules\)\.)',
+                rf"\g<1>{comp_modules}\g<2>",
+                new_ont
+            )
+            new_ont = re.sub(
+                r'(- `artifact`: Empirical result files, PDF certificates, or formal research specs in `research/` \()\d+(\s+active\)\.)',
+                rf"\g<1>{total_physical}\g<2>",
+                new_ont
+            )
+            new_ont = re.sub(
+                r'\b\d+\s+Computational Engines\s*\+\s*\d+\s+Presentation & Educational Hubs registered in `schemas/ecosystem\.registry\.json`',
+                f"{comp_modules} Computational Engines + {pres_modules} Presentation & Educational Hubs registered in `schemas/ecosystem.registry.json`",
+                new_ont
+            )
+            new_ont = re.sub(
+                r'`main` \(orchestrator\) \+\s*\d+\s*tool branches \+\s*\d+\s*special/research branches',
+                f"`main` (orchestrator) + {total_modules} tool branches + {special_count} special/research branches",
+                new_ont
+            )
+            new_ont = re.sub(
+                r'\b\d+\s+ecosystem modules\s*\+\s*\d+\s+presentation hubs\s*\+\s*\d+\s+in-tree engines in `schemas/capability-registry\.yaml`',
+                f"{comp_modules} ecosystem modules + {pres_modules} presentation hubs + 2 in-tree engines in `schemas/capability-registry.yaml`",
+                new_ont
+            )
             if new_ont != ont_text:
                 with open(ontology_file, "w", encoding="utf-8") as of:
                     of.write(new_ont)
                 reconciled_actions.append(f"schemas/capability-ontology.md -> {total_modules} Modules, {total_physical} Research Artifacts, {total_remote_branches} Branches")
         except Exception as e:
             print(f"[!] Warning during capability-ontology.md reconciliation: {e}")
+
+    # 4. Update AGENTS.md
+    agents_file = os.path.join(BRAINSTORM_ROOT, "AGENTS.md")
+    if os.path.exists(agents_file):
+        try:
+            with open(agents_file, "r", encoding="utf-8") as af:
+                agents_content = af.read()
+            new_agents = re.sub(
+                r'(across\s+)\d+(\s+tool modules \()\d+(\s+computational engines,\s*)\d+(\s+presentation hubs\) and\s+)\d+(\s+Git tracking branches)',
+                rf"\g<1>{total_modules}\g<2>{comp_modules}\g<3>{pres_modules}\g<4>{total_remote_branches}\g<5>",
+                agents_content
+            )
+            new_agents = re.sub(
+                r'(representing all\s+)\d+(\s+interconnected modules)',
+                rf"\g<1>{total_modules}\g<2>",
+                new_agents
+            )
+            new_agents = re.sub(
+                r'(across all\s+)\d+(\s+modules\.\s*Target:\s*0\s*errors\.)',
+                rf"\g<1>{total_modules}\g<2>",
+                new_agents
+            )
+            if new_agents != agents_content:
+                with open(agents_file, "w", encoding="utf-8") as af:
+                    af.write(new_agents)
+                reconciled_actions.append(f"AGENTS.md -> {total_modules} Modules ({comp_modules} Comp, {pres_modules} Pres), {total_remote_branches} Branches")
+        except Exception as e:
+            print(f"[!] Warning during AGENTS.md reconciliation: {e}")
 
     # 4. Update report/repository-audit.md
     audit_file = os.path.join(REPORT_DIR, "repository-audit.md")
@@ -569,11 +644,12 @@ def audit_layer_1_consistency():
             d for d in os.listdir(skills_dir)
             if os.path.isdir(os.path.join(skills_dir, d)) and not d.startswith(".")
         ])
-        if len(skill_dirs) < 23:
+        expected_skills = 30
+        if len(skill_dirs) != expected_skills:
             discrepancies.append({
                 "type": "SKILL_COUNT_DRIFT",
                 "file": "tools/skills/",
-                "detail": f"Expected at least 23 mirrored skills, found {len(skill_dirs)} in tools/skills/."
+                "detail": f"Expected exactly {expected_skills} mirrored skills, found {len(skill_dirs)} in tools/skills/."
             })
         for sd in skill_dirs:
             skill_path = os.path.join(skills_dir, sd)
@@ -622,12 +698,21 @@ def audit_layer_1_consistency():
 
     # Derive canonical count dynamically from schemas/ecosystem.registry.json
     canonical_artifact_count = None
+    canonical_modules = 25
+    canonical_comp = 21
+    canonical_pres = 4
+    canonical_branches = 28
     ecosystem_registry_path = os.path.join(SCHEMAS_DIR, "ecosystem.registry.json")
     if os.path.exists(ecosystem_registry_path):
         try:
             with open(ecosystem_registry_path, "r", encoding="utf-8") as erf:
                 ereg_data = json.load(erf)
-                canonical_artifact_count = ereg_data.get("statistics", {}).get("research_artifacts")
+                stats = ereg_data.get("statistics", {})
+                canonical_artifact_count = stats.get("research_artifacts")
+                canonical_modules = stats.get("total_tool_modules", 25)
+                canonical_comp = stats.get("computational_modules", 21)
+                canonical_pres = stats.get("presentation_and_educational_modules", 4)
+                canonical_branches = stats.get("total_git_branches", 28)
         except Exception as e:
             discrepancies.append({
                 "type": "REGISTRY_PARSE_ERROR",
@@ -673,7 +758,7 @@ def audit_layer_1_consistency():
                 "detail": f"Failed to audit module-to-branch cardinality: {e}"
             })
 
-    # Validate ontology, README, and audit research artifact count consistency
+    # Validate ontology, README, AGENTS, and audit count consistency
     readme_file = os.path.join(BRAINSTORM_ROOT, "README.md")
     if os.path.exists(readme_file):
         with open(readme_file, "r", encoding="utf-8") as rf:
@@ -683,6 +768,23 @@ def audit_layer_1_consistency():
                 "type": "README_TAXONOMY_ERROR",
                 "file": "README.md",
                 "detail": f"README.md missing canonical '{canonical_artifact_count} Research Specs & Experiments' inventory declaration."
+            })
+        if f"**{canonical_modules} tool modules**" not in readme_text:
+            discrepancies.append({
+                "type": "README_MODULE_COUNT_ERROR",
+                "file": "README.md",
+                "detail": f"README.md missing canonical '**{canonical_modules} tool modules**' declaration."
+            })
+
+    agents_file = os.path.join(BRAINSTORM_ROOT, "AGENTS.md")
+    if os.path.exists(agents_file):
+        with open(agents_file, "r", encoding="utf-8") as af:
+            agents_text = af.read()
+        if f"across {canonical_modules} tool modules ({canonical_comp} computational engines, {canonical_pres} presentation hubs) and {canonical_branches} Git tracking branches" not in agents_text:
+            discrepancies.append({
+                "type": "AGENTS_COUNT_DRIFT",
+                "file": "AGENTS.md",
+                "detail": f"AGENTS.md missing canonical 'across {canonical_modules} tool modules ({canonical_comp} computational engines, {canonical_pres} presentation hubs) and {canonical_branches} Git tracking branches' declaration."
             })
 
     ontology_file = os.path.join(SCHEMAS_DIR, "capability-ontology.md")
@@ -694,6 +796,18 @@ def audit_layer_1_consistency():
                 "type": "ONTOLOGY_TAXONOMY_ERROR",
                 "file": "schemas/capability-ontology.md",
                 "detail": f"Ontology missing reconciled research artifacts count ({canonical_artifact_count})."
+            })
+        if f"| **Cataloged Tool Modules** | **{canonical_modules}** |" not in ont_text:
+            discrepancies.append({
+                "type": "ONTOLOGY_MODULE_COUNT_ERROR",
+                "file": "schemas/capability-ontology.md",
+                "detail": f"Ontology missing reconciled cataloged modules count ({canonical_modules})."
+            })
+        if f"| **Git Tracking Branches in `brainstorm`** | **{canonical_branches}** |" not in ont_text:
+            discrepancies.append({
+                "type": "ONTOLOGY_BRANCH_COUNT_ERROR",
+                "file": "schemas/capability-ontology.md",
+                "detail": f"Ontology missing reconciled Git tracking branches count ({canonical_branches})."
             })
 
     audit_file = os.path.join(REPORT_DIR, "repository-audit.md")

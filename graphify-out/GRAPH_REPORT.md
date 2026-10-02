@@ -1,7 +1,7 @@
 # Graph Report - brainstorm  (2026-10-02)
 
 ## Corpus Check
-- Large corpus: 296 files · ~745,495 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
+- Large corpus: 296 files · ~746,048 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
 
 ## Summary
 - 3839 nodes · 4385 edges · 320 communities (292 shown, 17 thin omitted)
@@ -329,19 +329,19 @@
 7. `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` - 20 edges
 8. `Syllabus` - 19 edges
 9. `2. Granular Claims Audit Register` - 18 edges
-10. `2. Core Architectural & Systemic Limitations` - 17 edges
+10. `MCP Integration for Claude Code Plugins` - 17 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `NepalLawHarvesterTests` --uses--> `LegalHarvesterDatabase`  [INFERRED]
+  sim/test_nepal_law_harvester.py → sim/nepal_law_harvester.py
 - `SMTInvariantProver` --uses--> `InvariantProperty`  [INFERRED]
   sim/invariant_engine/smt_encoder.py → sim/invariant_engine/contract_types.py
 - `SMTInvariantProver` --uses--> `VerificationResult`  [INFERRED]
   sim/invariant_engine/smt_encoder.py → sim/invariant_engine/contract_types.py
-- `SandboxReplayEngine` --uses--> `BaseStateMachine`  [INFERRED]
-  sim/invariant_engine/sandbox_replay.py → sim/invariant_engine/state_machine.py
 - `SMTInvariantProver` --uses--> `BaseStateMachine`  [INFERRED]
   sim/invariant_engine/smt_encoder.py → sim/invariant_engine/state_machine.py
-- `run_benchmark()` --uses--> `BaseStateMachine`  [INFERRED]
-  sim/invariant_engine/benchmark_runner.py → sim/invariant_engine/state_machine.py
+- `SandboxReplayEngine` --uses--> `BaseStateMachine`  [INFERRED]
+  sim/invariant_engine/sandbox_replay.py → sim/invariant_engine/state_machine.py
 
 ## Import Cycles
 - None detected.
@@ -1525,11 +1525,11 @@ Nodes (3): tokens_total, minimum, type
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `BE ECIE / BEIE — Complete Study Syllabus (Year I–IV)` connect `Community 0` to `Community 5`, `Community 136`, `Community 266`, `Community 267`, `Community 282`, `Community 283`, `Community 284`, `Community 34`, `Community 166`, `Community 301`, `Community 302`, `Community 303`, `Community 304`, `Community 305`, `Community 306`, `Community 307`, `Community 52`, `Community 308`, `Community 309`, `Community 192`, `Community 218`, `Community 91`, `Community 228`, `Community 117`, `Community 118`, `Community 119`, `Community 120`, `Community 252`?**
-  _High betweenness centrality (0.123) - this node is a cross-community bridge._
-- **Why does `required` connect `Community 210` to `Community 137`, `Community 212`?**
-  _High betweenness centrality (0.017) - this node is a cross-community bridge._
-- **Why does `required` connect `Community 87` to `Community 210`?**
-  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+  _High betweenness centrality (0.133) - this node is a cross-community bridge._
+- **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 94` to `Community 224`, `Community 66`, `Community 28`, `Community 223`?**
+  _High betweenness centrality (0.028) - this node is a cross-community bridge._
+- **Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `Community 66` to `Community 257`, `Community 258`, `Community 225`, `Community 259`, `Community 241`, `Community 242`, `Community 243`, `Community 182`, `Community 94`?**
+  _High betweenness centrality (0.025) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `10. Circuit Design (3 hours)`, `10. Data Files (5 hours)`, `10. Digital Devices Applications (2 hours)` to the rest of the system?**

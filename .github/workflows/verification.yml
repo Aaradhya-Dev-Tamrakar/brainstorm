@@ -25,9 +25,15 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Validate ecosystem manifest
         run: python tools/validate_ecosystem.py
-      - name: Reconciliation audit
-        run: python sim/reconciliation_engine.py
+      - name: Reconciliation audit & ledger certification
+        run: python sim/reconciliation_engine.py --ledger
       - name: Dynamic simulation test suite regression
         run: python -m unittest discover -s sim -p "test_*.py"
       - name: Task telemetry regression
         run: python sim/task_telemetry.py --test
+      - name: Upload verification ledger artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: dual-layer-verification-ledger
+          path: research/results/dual_layer_verification_ledger.json

@@ -1940,10 +1940,10 @@
       "sim_reconciliation_engine_rationale_102",
       "sim_reconciliation_engine_rationale_138",
       "sim_reconciliation_engine_rationale_155",
-      "sim_reconciliation_engine_rationale_329",
+      "sim_reconciliation_engine_rationale_404",
       "sim_reconciliation_engine_rationale_59",
-      "sim_reconciliation_engine_rationale_736",
-      "sim_reconciliation_engine_rationale_82"
+      "sim_reconciliation_engine_rationale_82",
+      "sim_reconciliation_engine_rationale_850"
     ],
     "64": [
       "tools_skills_github_issue_pr_workflow_references_gh_cli_cheatsheet",
@@ -4849,12 +4849,23 @@
       "degree": 18
     },
     {
-      "id": "report_limitations_2_core_architectural_systemic_limitations",
-      "label": "2. Core Architectural & Systemic Limitations",
+      "id": "tools_skills_mcp_integration_skill_mcp_integration_for_claude_code_plugins",
+      "label": "MCP Integration for Claude Code Plugins",
       "degree": 17
     }
   ],
   "surprises": [
+    {
+      "source": "NepalLawHarvesterTests",
+      "target": "LegalHarvesterDatabase",
+      "source_files": [
+        "sim/test_nepal_law_harvester.py",
+        "sim/nepal_law_harvester.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
     {
       "source": "SMTInvariantProver",
       "target": "InvariantProperty",
@@ -4878,17 +4889,6 @@
       "why": "inferred connection - not explicitly stated in source; bridges separate communities"
     },
     {
-      "source": "SandboxReplayEngine",
-      "target": "BaseStateMachine",
-      "source_files": [
-        "sim/invariant_engine/sandbox_replay.py",
-        "sim/invariant_engine/state_machine.py"
-      ],
-      "confidence": "INFERRED",
-      "relation": "uses",
-      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
-    },
-    {
       "source": "SMTInvariantProver",
       "target": "BaseStateMachine",
       "source_files": [
@@ -4900,10 +4900,10 @@
       "why": "inferred connection - not explicitly stated in source; bridges separate communities"
     },
     {
-      "source": "run_benchmark()",
+      "source": "SandboxReplayEngine",
       "target": "BaseStateMachine",
       "source_files": [
-        "sim/invariant_engine/benchmark_runner.py",
+        "sim/invariant_engine/sandbox_replay.py",
         "sim/invariant_engine/state_machine.py"
       ],
       "confidence": "INFERRED",
@@ -4915,17 +4915,17 @@
     {
       "type": "bridge_node",
       "question": "Why does `BE ECIE / BEIE — Complete Study Syllabus (Year I–IV)` connect `Community 0` to `Community 5`, `Community 136`, `Community 266`, `Community 267`, `Community 282`, `Community 283`, `Community 284`, `Community 34`, `Community 166`, `Community 301`, `Community 302`, `Community 303`, `Community 304`, `Community 305`, `Community 306`, `Community 307`, `Community 52`, `Community 308`, `Community 309`, `Community 192`, `Community 218`, `Community 91`, `Community 228`, `Community 117`, `Community 118`, `Community 119`, `Community 120`, `Community 252`?",
-      "why": "High betweenness centrality (0.123) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.133) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
-      "question": "Why does `required` connect `Community 210` to `Community 137`, `Community 212`?",
-      "why": "High betweenness centrality (0.017) - this node is a cross-community bridge."
+      "question": "Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 94` to `Community 224`, `Community 66`, `Community 28`, `Community 223`?",
+      "why": "High betweenness centrality (0.028) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
-      "question": "Why does `required` connect `Community 87` to `Community 210`?",
-      "why": "High betweenness centrality (0.016) - this node is a cross-community bridge."
+      "question": "Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `Community 66` to `Community 257`, `Community 258`, `Community 225`, `Community 259`, `Community 241`, `Community 242`, `Community 243`, `Community 182`, `Community 94`?",
+      "why": "High betweenness centrality (0.025) - this node is a cross-community bridge."
     },
     {
       "type": "verify_inferred",

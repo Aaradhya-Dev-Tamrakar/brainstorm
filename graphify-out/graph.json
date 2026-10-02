@@ -2730,7 +2730,7 @@
       "file_type": "code",
       "norm_label": "audit_layer_1_consistency()",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L328"
+      "source_location": "L403"
     },
     {
       "id": "sim_reconciliation_engine_audit_layer_2_behavioral",
@@ -2742,7 +2742,7 @@
       "file_type": "code",
       "norm_label": "audit_layer_2_behavioral()",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L735"
+      "source_location": "L849"
     },
     {
       "id": "sim_reconciliation_engine_audit_repository",
@@ -2754,7 +2754,7 @@
       "file_type": "code",
       "norm_label": "audit_repository()",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L770"
+      "source_location": "L884"
     },
     {
       "id": "sim_reconciliation_engine_auto_reconcile_counts",
@@ -38671,7 +38671,7 @@
       "source_location": "L155"
     },
     {
-      "id": "sim_reconciliation_engine_rationale_329",
+      "id": "sim_reconciliation_engine_rationale_404",
       "label": "Layer 1: Structural consistency, schemas, metadata, links, and economic\u2026",
       "_origin": "ast",
       "community": 63,
@@ -38679,7 +38679,7 @@
       "file_type": "rationale",
       "norm_label": "layer 1: structural consistency, schemas, metadata, links, and economic...",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L329"
+      "source_location": "L404"
     },
     {
       "id": "sim_reconciliation_engine_rationale_59",
@@ -38693,17 +38693,6 @@
       "source_location": "L59"
     },
     {
-      "id": "sim_reconciliation_engine_rationale_736",
-      "label": "Layer 2: Behavioral verification & simulation test suite execution.",
-      "_origin": "ast",
-      "community": 63,
-      "community_name": "Community 63",
-      "file_type": "rationale",
-      "norm_label": "layer 2: behavioral verification & simulation test suite execution.",
-      "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L736"
-    },
-    {
       "id": "sim_reconciliation_engine_rationale_82",
       "label": "Enumerate valid physical Markdown research artifacts on disk.",
       "_origin": "ast",
@@ -38713,6 +38702,17 @@
       "norm_label": "enumerate valid physical markdown research artifacts on disk.",
       "source_file": "sim/reconciliation_engine.py",
       "source_location": "L82"
+    },
+    {
+      "id": "sim_reconciliation_engine_rationale_850",
+      "label": "Layer 2: Behavioral verification & simulation test suite execution.",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": "Community 63",
+      "file_type": "rationale",
+      "norm_label": "layer 2: behavioral verification & simulation test suite execution.",
+      "source_file": "sim/reconciliation_engine.py",
+      "source_location": "L850"
     },
     {
       "id": "tools_skills_github_issue_pr_workflow_references_gh_cli_cheatsheet",
@@ -44467,7 +44467,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udee0\ufe0f cross-platform zero-token verification & simulation launchers (`.bat` / `.sh`)",
       "source_file": "README.md",
-      "source_location": "L204"
+      "source_location": "L206"
     },
     {
       "id": "readme_emergent_compound_workflows",
@@ -44503,7 +44503,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udcc4 license",
       "source_file": "README.md",
-      "source_location": "L228"
+      "source_location": "L230"
     },
     {
       "id": "readme_main_branch_checks_verified_enforcement",
@@ -44539,7 +44539,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83c\udfdb\ufe0f operational wing: brainstorm research laboratory (brl)",
       "source_file": "README.md",
-      "source_location": "L217"
+      "source_location": "L219"
     },
     {
       "id": "readme_personal_engineering_ecosystem_r_d_infrastructure",
@@ -44563,7 +44563,7 @@
       "node_kind": "heading",
       "norm_label": "\u26a1 unified synchronization engine (`sync.ps1`)",
       "source_file": "README.md",
-      "source_location": "L176"
+      "source_location": "L178"
     },
     {
       "id": "schemas_nepal_civic_service_v1_governing_statutes_items",
@@ -46196,7 +46196,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L416",
+      "source_location": "L491",
       "weight": 1.0
     },
     {
@@ -46208,7 +46208,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L460",
+      "source_location": "L535",
       "weight": 1.0
     },
     {
@@ -46220,7 +46220,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L621",
+      "source_location": "L697",
       "weight": 1.0
     },
     {
@@ -46232,7 +46232,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L654",
+      "source_location": "L739",
       "weight": 1.0
     },
     {
@@ -46244,7 +46244,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L777",
+      "source_location": "L891",
       "weight": 1.0
     },
     {
@@ -46256,7 +46256,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L783",
+      "source_location": "L897",
       "weight": 1.0
     },
     {
@@ -46268,7 +46268,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L784",
+      "source_location": "L898",
       "weight": 1.0
     },
     {
@@ -54661,7 +54661,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L176",
+      "source_location": "L178",
       "weight": 1.0
     },
     {
@@ -54672,7 +54672,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L217",
+      "source_location": "L219",
       "weight": 1.0
     },
     {
@@ -54683,7 +54683,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L228",
+      "source_location": "L230",
       "weight": 1.0
     },
     {
@@ -54705,7 +54705,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L204",
+      "source_location": "L206",
       "weight": 1.0
     },
     {
@@ -81875,7 +81875,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L328",
+      "source_location": "L403",
       "weight": 1.0
     },
     {
@@ -81891,13 +81891,24 @@
     },
     {
       "source": "sim_reconciliation_engine",
+      "target": "sim_reconciliation_engine_get_physical_research_artifacts",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "sim/reconciliation_engine.py",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "sim_reconciliation_engine",
       "target": "sim_reconciliation_engine_audit_layer_2_behavioral",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L735",
+      "source_location": "L849",
       "weight": 1.0
     },
     {
@@ -81908,18 +81919,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L770",
-      "weight": 1.0
-    },
-    {
-      "source": "sim_reconciliation_engine",
-      "target": "sim_reconciliation_engine_get_physical_research_artifacts",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L81",
+      "source_location": "L884",
       "weight": 1.0
     },
     {
@@ -91174,14 +91174,14 @@
       "weight": 1.0
     },
     {
-      "source": "sim_reconciliation_engine_rationale_329",
+      "source": "sim_reconciliation_engine_rationale_404",
       "target": "sim_reconciliation_engine_audit_layer_1_consistency",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L329",
+      "source_location": "L404",
       "weight": 1.0
     },
     {
@@ -91196,17 +91196,6 @@
       "weight": 1.0
     },
     {
-      "source": "sim_reconciliation_engine_rationale_736",
-      "target": "sim_reconciliation_engine_audit_layer_2_behavioral",
-      "relation": "rationale_for",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "sim/reconciliation_engine.py",
-      "source_location": "L736",
-      "weight": 1.0
-    },
-    {
       "source": "sim_reconciliation_engine_rationale_82",
       "target": "sim_reconciliation_engine_get_physical_research_artifacts",
       "relation": "rationale_for",
@@ -91215,6 +91204,17 @@
       "confidence_score": 1.0,
       "source_file": "sim/reconciliation_engine.py",
       "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "sim_reconciliation_engine_rationale_850",
+      "target": "sim_reconciliation_engine_audit_layer_2_behavioral",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "sim/reconciliation_engine.py",
+      "source_location": "L850",
       "weight": 1.0
     },
     {
@@ -91918,7 +91918,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L221",
+      "source_location": "L223",
       "weight": 1.0
     },
     {
@@ -91929,7 +91929,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L222",
+      "source_location": "L224",
       "weight": 1.0
     },
     {
@@ -91940,7 +91940,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L223",
+      "source_location": "L225",
       "weight": 1.0
     },
     {
@@ -91951,7 +91951,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L224",
+      "source_location": "L226",
       "weight": 1.0
     },
     {
@@ -93870,5 +93870,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "2b8891b5a95035f4ac045d164e63f70512a318b9"
+  "built_at_commit": "068eeb14af43b286678c3c95e5591e5362bc3452"
 }

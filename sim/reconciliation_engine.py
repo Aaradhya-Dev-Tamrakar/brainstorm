@@ -644,7 +644,7 @@ def audit_layer_1_consistency():
             d for d in os.listdir(skills_dir)
             if os.path.isdir(os.path.join(skills_dir, d)) and not d.startswith(".")
         ])
-        expected_skills = 31
+        expected_skills = 44
         if len(skill_dirs) != expected_skills:
             discrepancies.append({
                 "type": "SKILL_COUNT_DRIFT",

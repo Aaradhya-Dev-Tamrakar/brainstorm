@@ -24,10 +24,10 @@
     "semantic_hash": "fe271b9b041d088da4e4a171e190aa7c"
   },
   "sim/reconciliation_engine.py": {
-    "mtime": 1790939788.644104,
-    "seen": 1790939800.580282,
-    "ast_hash": "2b2b2e9adc626bddddb2156259458ae5",
-    "semantic_hash": "2b2b2e9adc626bddddb2156259458ae5"
+    "mtime": 1790940535.534038,
+    "seen": 1790940560.7294757,
+    "ast_hash": "2f3241c9a400e5926d095340ad9fceb5",
+    "semantic_hash": "2f3241c9a400e5926d095340ad9fceb5"
   },
   "sim/sweep_ipu_breakeven.py": {
     "mtime": 1790044861.1795669,
@@ -516,10 +516,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790939797.5314727,
-    "seen": 1790939800.5802312,
-    "ast_hash": "52d1230a94de806c6fba4bade39ee2e3",
-    "semantic_hash": "52d1230a94de806c6fba4bade39ee2e3"
+    "mtime": 1790940619.5833285,
+    "seen": 1790940622.8898132,
+    "ast_hash": "adadee978c674a20d880c79762d53fad",
+    "semantic_hash": "adadee978c674a20d880c79762d53fad"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -570,10 +570,10 @@
     "semantic_hash": "ef915c5d8d1809c77777dfc027680b8a"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790939795.4405317,
-    "seen": 1790939800.5802295,
-    "ast_hash": "7da1dd48e9754c132ff3bd25c945a1d9",
-    "semantic_hash": "7da1dd48e9754c132ff3bd25c945a1d9"
+    "mtime": 1790940617.3326974,
+    "seen": 1790940622.8898115,
+    "ast_hash": "c34f80c73b66a91340a50e7b6068fd78",
+    "semantic_hash": "c34f80c73b66a91340a50e7b6068fd78"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -1420,5 +1420,215 @@
     "seen": 1790939800.5803943,
     "ast_hash": "deb6e4d3cd1448bb6ccd1a85df0f92cb",
     "semantic_hash": "deb6e4d3cd1448bb6ccd1a85df0f92cb"
+  },
+  "tools/skills/gemini-omni-flash-api/scripts/upload_file.py": {
+    "mtime": 1789443228.1160667,
+    "seen": 1790940560.7295318,
+    "ast_hash": "c43de270923212da200015b7ba53ab5b",
+    "semantic_hash": "c43de270923212da200015b7ba53ab5b"
+  },
+  "tools/skills/gemini-omni-flash-api/scripts/video/generate_video.py": {
+    "mtime": 1789443228.117216,
+    "seen": 1790940560.7295363,
+    "ast_hash": "ca2cccfb02396976a15a56a2218d7aa8",
+    "semantic_hash": "ca2cccfb02396976a15a56a2218d7aa8"
+  },
+  "tools/skills/gemini-omni-flash-api/scripts/video/inspect_video.py": {
+    "mtime": 1789443228.118433,
+    "seen": 1790940560.7295396,
+    "ast_hash": "af343f5dcaef301318689831df78f379",
+    "semantic_hash": "af343f5dcaef301318689831df78f379"
+  },
+  "tools/skills/gemini-omni-flash-api/scripts/video/prep_video.py": {
+    "mtime": 1789443228.1214924,
+    "seen": 1790940560.7295418,
+    "ast_hash": "a311603777461fd07ccdd952e27dadbf",
+    "semantic_hash": "a311603777461fd07ccdd952e27dadbf"
+  },
+  "tools/skills/ui-extension/references/template/plugin.json": {
+    "mtime": 1790821502.1646357,
+    "seen": 1790940560.7295578,
+    "ast_hash": "6faba41e5d36275007a2c5cb1a5993c3",
+    "semantic_hash": "6faba41e5d36275007a2c5cb1a5993c3"
+  },
+  "tools/skills/ui-extension/references/template/sidecars/panel/app.js": {
+    "mtime": 1790821502.1656368,
+    "seen": 1790940560.7295606,
+    "ast_hash": "fb5d56fceec758946ac6dac24338cf9a",
+    "semantic_hash": "fb5d56fceec758946ac6dac24338cf9a"
+  },
+  "tools/skills/ui-extension/references/template/sidecars/panel/main.mjs": {
+    "mtime": 1790821502.1661355,
+    "seen": 1790940560.7295635,
+    "ast_hash": "e90362a35d9bc5b0253ecbd34a27a72f",
+    "semantic_hash": "e90362a35d9bc5b0253ecbd34a27a72f"
+  },
+  "tools/skills/ui-extension/references/template/sidecars/panel/package.json": {
+    "mtime": 1790821502.166643,
+    "seen": 1790940560.7295659,
+    "ast_hash": "4fdb5caf1bb27508d74713c3c6b1889b",
+    "semantic_hash": "4fdb5caf1bb27508d74713c3c6b1889b"
+  },
+  "tools/skills/ui-extension/references/template/sidecars/panel/sidecar.json": {
+    "mtime": 1790821502.171156,
+    "seen": 1790940560.729568,
+    "ast_hash": "99794dd89de42772f09470a3dff92637",
+    "semantic_hash": "99794dd89de42772f09470a3dff92637"
+  },
+  "research/notes/2026-10-02_ECOSYSTEM_SKILLS_AND_WORKFLOW_CALIBRATED_EVALUATION.md": {
+    "mtime": 1790940474.9651701,
+    "seen": 1790940560.729819,
+    "ast_hash": "5f383bb902d3d75cf5dfb593a630f0de",
+    "semantic_hash": "5f383bb902d3d75cf5dfb593a630f0de"
+  },
+  "tools/skills/agy-customizations/SKILL.md": {
+    "mtime": 1790821502.1586297,
+    "seen": 1790940560.7299137,
+    "ast_hash": "0fba56800984a308994ed8ba42fb583c",
+    "semantic_hash": "0fba56800984a308994ed8ba42fb583c"
+  },
+  "tools/skills/agy-customizations/docs/hooks.md": {
+    "mtime": 1790821502.1591294,
+    "seen": 1790940560.7299163,
+    "ast_hash": "c8b7946d945d9a8df89c66a258c29f4a",
+    "semantic_hash": "c8b7946d945d9a8df89c66a258c29f4a"
+  },
+  "tools/skills/agy-customizations/docs/json_configs.md": {
+    "mtime": 1790821502.1591294,
+    "seen": 1790940560.729919,
+    "ast_hash": "d18014582f59fe7dfd19a386bac6010b",
+    "semantic_hash": "d18014582f59fe7dfd19a386bac6010b"
+  },
+  "tools/skills/agy-customizations/docs/mcp_servers.md": {
+    "mtime": 1790821502.1596282,
+    "seen": 1790940560.7299213,
+    "ast_hash": "2c02d92bfb9d2f1489c57cdfa383a764",
+    "semantic_hash": "2c02d92bfb9d2f1489c57cdfa383a764"
+  },
+  "tools/skills/agy-customizations/docs/plugins.md": {
+    "mtime": 1790821502.1601274,
+    "seen": 1790940560.7299235,
+    "ast_hash": "de6569860e353f30960fd9794a0991ac",
+    "semantic_hash": "de6569860e353f30960fd9794a0991ac"
+  },
+  "tools/skills/agy-customizations/docs/rules.md": {
+    "mtime": 1790821502.1606288,
+    "seen": 1790940560.7299259,
+    "ast_hash": "bc9da6cd7f8d6aad85bf8cdacf1e16bb",
+    "semantic_hash": "bc9da6cd7f8d6aad85bf8cdacf1e16bb"
+  },
+  "tools/skills/agy-customizations/docs/skills.md": {
+    "mtime": 1790821502.1611297,
+    "seen": 1790940560.7299278,
+    "ast_hash": "55e71e074cf74f64b344a2767cdadbec",
+    "semantic_hash": "55e71e074cf74f64b344a2767cdadbec"
+  },
+  "tools/skills/antigravity-guide/SKILL.md": {
+    "mtime": 1790821502.1616278,
+    "seen": 1790940560.7299304,
+    "ast_hash": "92bf1e5d830ca873966f5caae29daf99",
+    "semantic_hash": "92bf1e5d830ca873966f5caae29daf99"
+  },
+  "tools/skills/antigravity-guide/references/app.md": {
+    "mtime": 1790821502.1616278,
+    "seen": 1790940560.7299325,
+    "ast_hash": "4622079e3d6dbd496a968d3d1e8b3f94",
+    "semantic_hash": "4622079e3d6dbd496a968d3d1e8b3f94"
+  },
+  "tools/skills/antigravity-guide/references/cli.md": {
+    "mtime": 1790821502.1621296,
+    "seen": 1790940560.7299352,
+    "ast_hash": "dde27935b6101dcbdb05e2b977263c00",
+    "semantic_hash": "dde27935b6101dcbdb05e2b977263c00"
+  },
+  "tools/skills/antigravity-guide/references/ide.md": {
+    "mtime": 1790940518.7145255,
+    "seen": 1790940560.7299376,
+    "ast_hash": "cedb2854634432e7d81016b9c6614159",
+    "semantic_hash": "cedb2854634432e7d81016b9c6614159"
+  },
+  "tools/skills/antigravity-guide/references/sdk.md": {
+    "mtime": 1790821502.1626298,
+    "seen": 1790940560.7299397,
+    "ast_hash": "379ebda336a0b70ad14954c959f6b3cc",
+    "semantic_hash": "379ebda336a0b70ad14954c959f6b3cc"
+  },
+  "tools/skills/automation/SKILL.md": {
+    "mtime": 1790821502.1741724,
+    "seen": 1790940560.7299457,
+    "ast_hash": "2e38418c4b7cc0185c5ea48ee25da0d0",
+    "semantic_hash": "2e38418c4b7cc0185c5ea48ee25da0d0"
+  },
+  "tools/skills/gemini-api-dev/SKILL.md": {
+    "mtime": 1789443228.1120403,
+    "seen": 1790940560.7299755,
+    "ast_hash": "665e3e1e7982ce6c9a89f4c29de474f6",
+    "semantic_hash": "665e3e1e7982ce6c9a89f4c29de474f6"
+  },
+  "tools/skills/gemini-api-dev/references/migration.md": {
+    "mtime": 1789443228.1136687,
+    "seen": 1790940560.729978,
+    "ast_hash": "e85cc3508af05365382e1ea596afc9cc",
+    "semantic_hash": "e85cc3508af05365382e1ea596afc9cc"
+  },
+  "tools/skills/gemini-interactions-api/SKILL.md": {
+    "mtime": 1788327022.5795734,
+    "seen": 1790940560.7299805,
+    "ast_hash": "05fde82d83d7dfa9583f19de83ed5756",
+    "semantic_hash": "05fde82d83d7dfa9583f19de83ed5756"
+  },
+  "tools/skills/gemini-interactions-api/references/migration.md": {
+    "mtime": 1788327022.5801232,
+    "seen": 1790940560.729983,
+    "ast_hash": "3269aa7b94ca9343effd5cb6a3e8d13e",
+    "semantic_hash": "3269aa7b94ca9343effd5cb6a3e8d13e"
+  },
+  "tools/skills/gemini-live-api-dev/SKILL.md": {
+    "mtime": 1789443228.1142025,
+    "seen": 1790940560.7299855,
+    "ast_hash": "9d11b30b89598067f42597c8cfaf1906",
+    "semantic_hash": "9d11b30b89598067f42597c8cfaf1906"
+  },
+  "tools/skills/gemini-omni-flash-api/SKILL.md": {
+    "mtime": 1789443228.1142025,
+    "seen": 1790940560.7299876,
+    "ast_hash": "bef8ce46c24e1c9df1318ccc49e3b1ff",
+    "semantic_hash": "bef8ce46c24e1c9df1318ccc49e3b1ff"
+  },
+  "tools/skills/generative_ui/SKILL.md": {
+    "mtime": 1790821502.1746728,
+    "seen": 1790940560.7299902,
+    "ast_hash": "ecae832fae4b8322209dd873231bab37",
+    "semantic_hash": "ecae832fae4b8322209dd873231bab37"
+  },
+  "tools/skills/migrate-workflows/SKILL.md": {
+    "mtime": 1790821502.1755638,
+    "seen": 1790940560.7300668,
+    "ast_hash": "c3e50711a69ff8a5a98d260fc60c3860",
+    "semantic_hash": "c3e50711a69ff8a5a98d260fc60c3860"
+  },
+  "tools/skills/permissioned-github/SKILL.md": {
+    "mtime": 1790821502.17618,
+    "seen": 1790940560.7300694,
+    "ast_hash": "4491983f5f190871b77baab528b96dc6",
+    "semantic_hash": "4491983f5f190871b77baab528b96dc6"
+  },
+  "tools/skills/plugin/SKILL.md": {
+    "mtime": 1790821502.1766806,
+    "seen": 1790940560.7300718,
+    "ast_hash": "d97683ef5813e0d5628b79fc10b700c5",
+    "semantic_hash": "d97683ef5813e0d5628b79fc10b700c5"
+  },
+  "tools/skills/ui-extension/SKILL.md": {
+    "mtime": 1790821502.1631289,
+    "seen": 1790940560.7301018,
+    "ast_hash": "452d927dd68b35b27ed131fd34a64d70",
+    "semantic_hash": "452d927dd68b35b27ed131fd34a64d70"
+  },
+  "tools/skills/ui-plugin-navigation/SKILL.md": {
+    "mtime": 1790821502.1771884,
+    "seen": 1790940560.7301042,
+    "ast_hash": "caad3b08ca5f3f7bcd02d3a506d3eae1",
+    "semantic_hash": "caad3b08ca5f3f7bcd02d3a506d3eae1"
   }
 }

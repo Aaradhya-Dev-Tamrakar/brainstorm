@@ -2,14 +2,15 @@
 
 > **Path:** `tools/skills/`  
 > **Global System Path:** `C:\Users\Aaradhya\.gemini\config\skills\`  
-> **Purpose:** Version-controlled master repository and source-of-truth mirror for all 31 custom Antigravity agent skills.
+> **Purpose:** Version-controlled master repository and source-of-truth mirror for all 33 custom Antigravity agent skills.
 
 ---
 
-## 📊 Skills Matrix & Functional Taxonomy (31 Skills)
+## 📊 Skills Matrix & Functional Taxonomy (33 Skills)
 
 | Category | Skill Name | Path | Description & Core Triggers |
 | :--- | :--- | :--- | :--- |
+| **Writing & Publishing** | [`blog-writing-like-claude`](blog-writing-like-claude/SKILL.md) | `tools/skills/blog-writing-like-claude/` | Enforces calm-authority voice, zero-hype vocabulary, functional precision, scope boundaries, and dog-fooding transparency modeled after the Claude blog. (Origin: BiasAperture) |
 | **Compliance & Auditing** | [`compliance-report-harmonizer`](compliance-report-harmonizer/SKILL.md) | `tools/skills/compliance-report-harmonizer/` | Enforces report harmonization, structural invariants, dual HTML/PDF interoperability, and headless Blink print rendering. (Origin: BiasAperture) |
 | **NotebookLM Fleet & Downloads** | [`super-nlm`](super-nlm/SKILL.md) | `tools/skills/super-nlm/` | Google NotebookLM multi-account rotator, MCP query engine, and batch generation. |
 | | [`super-nlm-downloads`](super-nlm-downloads/SKILL.md) | `tools/skills/super-nlm-downloads/` | Automates URL extraction, subject folder downloads (outside repo), and LocalSend transfers. |

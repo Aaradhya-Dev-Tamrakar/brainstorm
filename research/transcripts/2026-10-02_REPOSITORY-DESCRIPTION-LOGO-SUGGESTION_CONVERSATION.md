@@ -3,6 +3,10 @@
 - **Source URL:** [https://chatgpt.com/share/6abfa597-2b4c-83ee-92bc-2bfc2542b31a](https://chatgpt.com/share/6abfa597-2b4c-83ee-92bc-2bfc2542b31a)
 - **Archived Date:** 2026-10-02
 - **Total Turns:** 30
+- **External Search References:**
+  1. [Color palettes for breadth thinking and depth thinking depiction](https://www.google.com/search?q=color+pallets+for+breadth+thinking+and+for+depth+thinking+depiction)
+  2. [Structure styles in design for massive breadth in ideas and work division](https://www.google.com/search?q=describe+the+structure+styles+in+design+for+massive+breadth+in+ideas+and+work+division+to+achieve+that+depth)
+  3. [Design thinking: Making visuals look deliberate vs. AI slop](https://www.google.com/search?q=how+do+you+say+in+design+thinking+to+make+the+image+look+more+deliberate+than+AI+slop)
 
 ---
 

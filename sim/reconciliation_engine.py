@@ -902,6 +902,27 @@ def audit_layer_1_consistency():
                 "detail": "Core economic constants ($1,272.55 outlay, $25,000 replacement base, 19.65x ratio) not reconciled."
             })
 
+    # Validate Graphify Knowledge Graph Quality Gate
+    graph_json_path = os.path.join(BRAINSTORM_ROOT, "graphify-out", "graph.json")
+    if os.path.exists(graph_json_path):
+        try:
+            with open(graph_json_path, "r", encoding="utf-8") as gf:
+                gdata = json.load(gf)
+            nodes = gdata.get("nodes", [])
+            links = gdata.get("links", []) or gdata.get("edges", [])
+            if len(nodes) < 100 or len(links) < 100:
+                discrepancies.append({
+                    "type": "GRAPHIFY_QUALITY_WARNING",
+                    "file": "graphify-out/graph.json",
+                    "detail": f"Graphify node/link count below target structural density ({len(nodes)} nodes, {len(links)} links)."
+                })
+        except Exception as ge:
+            discrepancies.append({
+                "type": "GRAPHIFY_SCHEMA_ERROR",
+                "file": "graphify-out/graph.json",
+                "detail": f"Graphify output graph.json failed schema parsing: {ge}"
+            })
+
     # Enforce zero synthetic commit SHAs in actual references (ignore rule definitions/skills)
     synthetic_pattern = re.compile(r'\b(rel\d+|upg\d+|xtool\d+|dummy_sha|fake_sha|placeholder_sha)\b', re.IGNORECASE)
     rule_mention_pattern = re.compile(r'(?:NEVER|e\.g\.|pattern|regex|rule|constraint|synthetic)', re.IGNORECASE)

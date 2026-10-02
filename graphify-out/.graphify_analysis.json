@@ -68,7 +68,7 @@
       "sim_reconciliation_engine_rationale_455",
       "sim_reconciliation_engine_rationale_59",
       "sim_reconciliation_engine_rationale_82",
-      "sim_reconciliation_engine_rationale_943",
+      "sim_reconciliation_engine_rationale_964",
       "sim_run_all_reproducibility",
       "sim_run_all_reproducibility_main",
       "sim_run_all_reproducibility_rationale_1",
@@ -2378,7 +2378,7 @@
       "tools_skills_super_nlm_downloads_scripts_download_and_share_sharevialocalsend"
     ],
     "112": [
-      "agents_1_default_github_workflow_github_workflow",
+      "agents_1_default_github_workflow_github_workflow_maintainer_policy",
       "agents_1_git_workflow_ecosystem_automation_critical_strict_enforcement",
       "agents_2_knowledge_graph_codebase_navigation_graphify",
       "agents_2_release_sha_commit_integrity_invariant",
@@ -4028,8 +4028,13 @@
   "questions": [
     {
       "type": "bridge_node",
-      "question": "Why does `Skill Development for Claude Code Plugins` connect `Community 153` to `Community 236`, `Community 237`, `Community 154`, `Community 155`, `Community 220`, `Community 221`, `Community 222`?",
-      "why": "High betweenness centrality (0.017) - this node is a cross-community bridge."
+      "question": "Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 87` to `Community 192`, `Community 191`, `Community 65`, `Community 31`?",
+      "why": "High betweenness centrality (0.039) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `Community 65` to `Community 224`, `Community 193`, `Community 225`, `Community 210`, `Community 211`, `Community 212`, `Community 87`, `Community 156`, `Community 223`?",
+      "why": "High betweenness centrality (0.032) - this node is a cross-community bridge."
     },
     {
       "type": "verify_inferred",
@@ -4055,11 +4060,6 @@
       "type": "low_cohesion",
       "question": "Should `Community 1` be split into smaller, more focused modules?",
       "why": "Cohesion score 0.07358156028368794 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `Community 2` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.08687943262411348 - nodes in this community are weakly interconnected."
     }
   ]
 }

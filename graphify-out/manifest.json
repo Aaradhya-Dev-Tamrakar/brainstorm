@@ -24,10 +24,10 @@
     "semantic_hash": "fe271b9b041d088da4e4a171e190aa7c"
   },
   "sim/reconciliation_engine.py": {
-    "mtime": 1790948333.11988,
-    "seen": 1790948462.6380708,
-    "ast_hash": "f5454b1e718769cf4222f41b286a929b",
-    "semantic_hash": "f5454b1e718769cf4222f41b286a929b"
+    "mtime": 1790950363.2016244,
+    "seen": 1790950402.2588453,
+    "ast_hash": "ae6f25e13ca2875775753a79b09ddaff",
+    "semantic_hash": "ae6f25e13ca2875775753a79b09ddaff"
   },
   "sim/sweep_ipu_breakeven.py": {
     "mtime": 1790044861.1795669,
@@ -192,10 +192,10 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1790945786.2435625,
-    "seen": 1790945792.1332138,
-    "ast_hash": "dd8205f718797eb00d3d4e9b66dd9262",
-    "semantic_hash": "dd8205f718797eb00d3d4e9b66dd9262"
+    "mtime": 1790950286.2366507,
+    "seen": 1790950402.258892,
+    "ast_hash": "534daa5ad347b6356ab2b7f8a37adbd8",
+    "semantic_hash": "534daa5ad347b6356ab2b7f8a37adbd8"
   },
   "report/economic-model.md": {
     "mtime": 1790234914.4392133,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790950036.8631408,
-    "seen": 1790950039.6086175,
-    "ast_hash": "d34ed0cd5891872745784b557dae8bd1",
-    "semantic_hash": "d34ed0cd5891872745784b557dae8bd1"
+    "mtime": 1790950399.4333763,
+    "seen": 1790950402.25878,
+    "ast_hash": "17410ab7484f88f7055e4da8aa7e246e",
+    "semantic_hash": "17410ab7484f88f7055e4da8aa7e246e"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "4247f183e1fdcc01bcd457546d9d5044"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790950034.7446887,
-    "seen": 1790950039.6086159,
-    "ast_hash": "3e62b20b9fc3e284678e67fbf2144be7",
-    "semantic_hash": "3e62b20b9fc3e284678e67fbf2144be7"
+    "mtime": 1790950397.30772,
+    "seen": 1790950402.2587783,
+    "ast_hash": "fa0605fdc43f3989c67de5acced60101",
+    "semantic_hash": "fa0605fdc43f3989c67de5acced60101"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,

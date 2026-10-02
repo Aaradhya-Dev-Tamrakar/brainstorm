@@ -149,14 +149,15 @@ Speculative text is never ground truth; deterministic execution is. Before final
 
 ## 6. GitHub Development Workflow & Commit Integrity Invariants
 
-### 1. Default GitHub Workflow (`github-workflow`)
-Whenever implementing features, fixing bugs, refactoring, or managing version control across repositories:
+### 1. Default GitHub Workflow (`github-workflow`) & Maintainer Policy
+Whenever implementing features, fixing bugs, refactoring, or managing version control across ecosystem repositories:
 1. **Issue Anchoring**: Formulate requirements with acceptance tasks (`- [ ]`) and create a tracked issue with full metadata (`gh issue create --assignee "AaradhyaDT" --label "<labels>"`).
-2. **Branch Isolation**: Branch off `main` via `<type>/<slug>-#<id>`, never committing multi-step changes directly to `main`.
-3. **Progressive Task Tracking**: Check off tasks as completed using `gh-task --issue <id> --task "..."`.
-4. **Verification Gate**: Enforce local test passes (`.\audit.bat`, `pytest`, `ruff`) before commits.
-5. **Ecosystem Synchronization**: Run all version control through `.\sync.bat` (or `.\sync.ps1`).
-6. **PR & Review Dispatch**: Open PR linking the issue (`Closes #<id>`) and document verification proof.
+2. **Branch Isolation**: Branch off `main` via `<type>/<slug>-#<id>`, never committing multi-step changes directly to `main` for multi-contributor features.
+3. **Brainstorm Maintainer Exception (`DEC-003`)**: For the central `brainstorm` orchestration root, solo maintainer direct commits to `main` are authorized provided all changes pass local deterministic verification gates (`.\audit.bat` and `.\sim.bat`) prior to running `.\sync.bat`.
+4. **Progressive Task Tracking**: Check off tasks as completed using `gh-task --issue <id> --task "..."`.
+5. **Verification Gate**: Enforce local test passes (`.\audit.bat`, `pytest`, `ruff`) before commits.
+6. **Ecosystem Synchronization**: Run all version control through `.\sync.bat` (or `.\sync.ps1`).
+7. **PR & Review Dispatch**: Open PR linking the issue (`Closes #<id>`) and document verification proof for team/ecosystem repos.
 
 ### 2. Release SHA & Commit Integrity Invariant
 Whenever referencing ecosystem milestones, portfolio releases (`releases.js`), or repository commit links:

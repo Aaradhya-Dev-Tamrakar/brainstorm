@@ -1,10 +1,10 @@
 # Canonical Capability Registry
 # Schema standard: ONT-001 / POL-001
-# Single source of truth for all ecosystem capabilities
+# Capability registry synchronized with primary operational authority: schemas/ecosystem.registry.json
 
 version: "1.0.0"
 registry_type: "canonical_capability_registry"
-last_reconciled: "2026-09-24"
+last_reconciled: "2026-10-02"
 maintainer: "Aaradhya Dev Tamrakar"
 
 capabilities:

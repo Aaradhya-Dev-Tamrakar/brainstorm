@@ -6,10 +6,10 @@
     "semantic_hash": "1f807d3a09fa490b7f5315226b97cf4b"
   },
   "schemas/ecosystem.registry.json": {
-    "mtime": 1790827922.673422,
-    "seen": 1790828015.123269,
-    "ast_hash": "49a8c109ef367a05db70172edffee582",
-    "semantic_hash": "49a8c109ef367a05db70172edffee582"
+    "mtime": 1790918611.6787918,
+    "seen": 1790918618.285201,
+    "ast_hash": "7ff4b5dc6d58b0b7614e596503e00c64",
+    "semantic_hash": "7ff4b5dc6d58b0b7614e596503e00c64"
   },
   "schemas/examples/AI-Constraint-Solver.contract.json": {
     "mtime": 1790044861.17107,
@@ -516,10 +516,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790861617.8443837,
-    "seen": 1790861620.979857,
-    "ast_hash": "1979875a4e47fb5e83f84e03fbc6e822",
-    "semantic_hash": "1979875a4e47fb5e83f84e03fbc6e822"
+    "mtime": 1790918614.5428314,
+    "seen": 1790918618.2851958,
+    "ast_hash": "90ffb3822d9b7d610218ed170d0e28af",
+    "semantic_hash": "90ffb3822d9b7d610218ed170d0e28af"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -570,10 +570,10 @@
     "semantic_hash": "ef915c5d8d1809c77777dfc027680b8a"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790861615.505013,
-    "seen": 1790861620.979855,
-    "ast_hash": "6a3758e3b0a3b638c7368b922d6ef582",
-    "semantic_hash": "6a3758e3b0a3b638c7368b922d6ef582"
+    "mtime": 1790918612.320272,
+    "seen": 1790918618.2851923,
+    "ast_hash": "c9ba1002827ef70ede26f72561e6fdfb",
+    "semantic_hash": "c9ba1002827ef70ede26f72561e6fdfb"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -1284,10 +1284,10 @@
     "semantic_hash": "8a860bc6ad054e21ead73d9e96fe297c"
   },
   "research/notes/2026-10-01_JETSON_ORIN_NANO_SETUP_AND_PROVISIONING_RUNBOOK.md": {
-    "mtime": 1790854270.845812,
-    "seen": 1790854296.1326413,
-    "ast_hash": "d6d8950767bc0395e7d1fd81aa84c3eb",
-    "semantic_hash": "d6d8950767bc0395e7d1fd81aa84c3eb"
+    "mtime": 1790918547.2798035,
+    "seen": 1790918618.285465,
+    "ast_hash": "fedc36df18a00cf748489c67732e64bd",
+    "semantic_hash": "fedc36df18a00cf748489c67732e64bd"
   },
   "schemas/horoscope.evaluation.v1.json": {
     "mtime": 1790860027.5981627,
@@ -1308,9 +1308,9 @@
     "semantic_hash": "d9d92ce3af97405971a309c06766eff9"
   },
   "research/notes/2026-10-01_KEC_MAKERSPACE_JETSON_ORIN_NANO_HANDOVER_REPORT.md": {
-    "mtime": 1790861590.2917273,
-    "seen": 1790861620.9799795,
-    "ast_hash": "27bc35a569e02c5bc1f2df6f51f036d9",
-    "semantic_hash": "27bc35a569e02c5bc1f2df6f51f036d9"
+    "mtime": 1790918555.858065,
+    "seen": 1790918618.2854667,
+    "ast_hash": "404747440af4f4d4ee277ef0db8f3d5b",
+    "semantic_hash": "404747440af4f4d4ee277ef0db8f3d5b"
   }
 }

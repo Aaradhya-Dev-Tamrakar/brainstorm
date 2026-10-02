@@ -4,7 +4,7 @@
 - **Focus**: NVIDIA Jetson Orin Nano Developer Kit (8GB) Hardware Provisioning, JetPack 7.2.1 (L4T r39.2.1) UEFI Capsule Upgrade, 512GB PCIe Gen4 NVMe Direct Boot, Network Setup & Headless OpenSSH Server Configuration.
 - **Participants**: Aaradhya (User), Antigravity (Assistant)
 - **Repository**: `brainstorm` (`F:\Aaradhya-Dev-Tamrakar\brainstorm`)
-- **Epistemic Classification**: `EMPIRICALLY_VERIFIED` (Hardware ground truth, 59 photos, live SSH verification)
+- **Epistemic Classification**: `EMPIRICALLY_VERIFIED` (Hardware ground truth, 56 photos, live SSH verification)
 
 ---
 
@@ -43,14 +43,14 @@ The goal of this session was to execute complete zero-drift physical setup and o
 - **Stages**:
   - Stage 1: Capsule writing progress `5%...100%` -> auto-reboot.
   - Stage 2: PreIsoInstaller logic executed on UEFI `39.2.1-gcid-46758480` -> Secondary capsule update `7%...100%`.
-- **Evidence**: Photos `17_qspi_firmware_update_prompt.jpg` to `29_grub_post_firmware_update_closeup.jpg`.
+- **Evidence**: Photos `17_qspi_firmware_update_prompt.jpg` to `28_grub_post_firmware_update_closeup.jpg`.
 
 ### Phase 4: Direct NVMe Target Installation
 - **Selection**: User selected `*Install on NVMe` in GNU GRUB 2.12.
 - **Detection**: Linux kernel enumerated PCIe Gen4 link at 31.5 Gb/s and identified `Orin Nano DevKit Super`.
 - **Storage Layout**: Curtin/Subiquity formatted `/dev/nvme0n1p1` as 475.4 GB rootfs partition alongside 14 system/firmware slots.
 - **Packages**: Installed `nvidia-container-toolkit`, `docker.io`, `nvidia-l4t-kernel`, and GNOME desktop stack.
-- **Evidence**: Photos `30_installer_target_storage_install_on_nvme.jpg` to `44_l4tlauncher_attempting_direct_nvme_boot.jpg`.
+- **Evidence**: Photos `29_installer_target_storage_install_on_nvme.jpg` to `43_l4tlauncher_attempting_direct_nvme_boot.jpg`.
 
 ### Phase 5: GUI Out-of-Box-Experience (OOBE)
 - **Language & EULA**: English (US), accepted NVIDIA Embedded Software License.
@@ -58,12 +58,12 @@ The goal of this session was to execute complete zero-drift physical setup and o
 - **Location**: Timezone configured to `Kathmandu, Nepal (+0545)`.
 - **Credentials**: User account `kecmakerspace` created. Telemetry opted-out.
 - **Result**: Desktop loaded with default **25W Super Mode** active in top panel.
-- **Evidence**: Photos `45_ubuntu_desktop_gui_welcome_screen.jpg` to `57_jetson_orin_nano_desktop_wallpaper_25w_mode_active.jpg`.
+- **Evidence**: Photos `44_ubuntu_desktop_gui_welcome_screen.jpg` to `54_jetson_orin_nano_desktop_wallpaper_25w_mode_active.jpg`.
 
 ### Phase 6: Network Audit & Headless OpenSSH Server Setup
-- **User Action**: Ran `ip -br a` on terminal (Photo 58).
+- **User Action**: Ran `ip -br a` on terminal (Photo 55).
 - **SSH Issue**: Initial SSH connection from Windows PC returned `Connection refused`.
-- **Investigation**: Photo 59 confirmed `openssh-server` was installed but `ssh.service` was disabled / inactive in Ubuntu 24.04 socket mode.
+- **Investigation**: Photo 56 confirmed `openssh-server` was installed but `ssh.service` was disabled / inactive in Ubuntu 24.04 socket mode.
 - **Resolution**: Ran `sudo systemctl enable --now ssh` on the Jetson.
 - **Final Verification**: Successfully authenticated and logged in via Windows PowerShell:
   ```powershell
@@ -76,5 +76,5 @@ The goal of this session was to execute complete zero-drift physical setup and o
 ## 3. Associated Artifacts & Evidence Files
 
 1. **Comprehensive Runbook**: [`research/notes/2026-10-01_JETSON_ORIN_NANO_SETUP_AND_PROVISIONING_RUNBOOK.md`](file:///f:/Aaradhya-Dev-Tamrakar/brainstorm/research/notes/2026-10-01_JETSON_ORIN_NANO_SETUP_AND_PROVISIONING_RUNBOOK.md)
-2. **Media Gallery**: [`research/media/2026-10-01_jetson_orin_nano_setup/`](file:///f:/Aaradhya-Dev-Tamrakar/brainstorm/research/media/2026-10-01_jetson_orin_nano_setup/) (59 images)
+2. **Media Gallery**: [`research/media/2026-10-01_jetson_orin_nano_setup/`](file:///f:/Aaradhya-Dev-Tamrakar/brainstorm/research/media/2026-10-01_jetson_orin_nano_setup/) (56 images)
 3. **Repository Sync Commit**: [`3c1efa5`](https://github.com/Aaradhya-Dev-Tamrakar/brainstorm/commit/3c1efa5)

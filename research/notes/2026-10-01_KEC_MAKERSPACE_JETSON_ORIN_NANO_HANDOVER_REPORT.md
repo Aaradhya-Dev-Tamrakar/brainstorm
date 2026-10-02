@@ -205,7 +205,7 @@ A complete photographic archive documenting every hardware component, firmware s
 
 - **Full Runbook**: [`research/notes/2026-10-01_JETSON_ORIN_NANO_SETUP_AND_PROVISIONING_RUNBOOK.md`](file:///f:/Aaradhya-Dev-Tamrakar/brainstorm/research/notes/2026-10-01_JETSON_ORIN_NANO_SETUP_AND_PROVISIONING_RUNBOOK.md)
 - **Session Transcript**: [`research/transcripts/2026-10-01_JETSON-ORIN-NANO-HARDWARE-AND-FIRMWARE-PROVISIONING_CONVERSATION.md`](file:///f:/Aaradhya-Dev-Tamrakar/brainstorm/research/transcripts/2026-10-01_JETSON-ORIN-NANO-HARDWARE-AND-FIRMWARE-PROVISIONING_CONVERSATION.md)
-- **59-Photo Evidence Gallery**: [`research/media/2026-10-01_jetson_orin_nano_setup/`](file:///f:/Aaradhya-Dev-Tamrakar/brainstorm/research/media/2026-10-01_jetson_orin_nano_setup/)
+- **56-Photo Evidence Gallery**: [`research/media/2026-10-01_jetson_orin_nano_setup/`](file:///f:/Aaradhya-Dev-Tamrakar/brainstorm/research/media/2026-10-01_jetson_orin_nano_setup/)
 
 ---
 

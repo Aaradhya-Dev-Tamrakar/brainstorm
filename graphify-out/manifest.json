@@ -516,10 +516,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790923506.3188305,
-    "seen": 1790923511.3049986,
-    "ast_hash": "33f04329adfdfd41f59c7ce1b20bbb2b",
-    "semantic_hash": "33f04329adfdfd41f59c7ce1b20bbb2b"
+    "mtime": 1790923631.2794325,
+    "seen": 1790923638.0592608,
+    "ast_hash": "807780ee8d190b4bd6c5387ca29134f6",
+    "semantic_hash": "807780ee8d190b4bd6c5387ca29134f6"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -570,10 +570,10 @@
     "semantic_hash": "ef915c5d8d1809c77777dfc027680b8a"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790923503.85795,
-    "seen": 1790923511.3049953,
-    "ast_hash": "f42f147d22b9142e825f19858682b058",
-    "semantic_hash": "f42f147d22b9142e825f19858682b058"
+    "mtime": 1790923628.2228138,
+    "seen": 1790923638.05926,
+    "ast_hash": "d42b1db0bfbc0c6d420ff3d3a488eb89",
+    "semantic_hash": "d42b1db0bfbc0c6d420ff3d3a488eb89"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -1350,9 +1350,21 @@
     "semantic_hash": "0fb01a1bc7ae1ec472d63ae1f7d83ab4"
   },
   "GEMINI.md": {
-    "mtime": 1790923436.1857722,
-    "seen": 1790923456.9229622,
-    "ast_hash": "badcebe38f33dfe474fa987d1b7e6edf",
-    "semantic_hash": "badcebe38f33dfe474fa987d1b7e6edf"
+    "mtime": 1790923556.006012,
+    "seen": 1790923638.0593305,
+    "ast_hash": "ada2caeeed12d626f40a4e93bbe09456",
+    "semantic_hash": "ada2caeeed12d626f40a4e93bbe09456"
+  },
+  "tools/skills/cyber-forensics/SKILL.md": {
+    "mtime": 1790923594.4351501,
+    "seen": 1790923638.059415,
+    "ast_hash": "eed98fa3027e5a120687dd8755bff801",
+    "semantic_hash": "eed98fa3027e5a120687dd8755bff801"
+  },
+  "tools/skills/win-vault/SKILL.md": {
+    "mtime": 1790923579.2284095,
+    "seen": 1790923638.0594432,
+    "ast_hash": "04b363dc024363c4939b9daaf3191c81",
+    "semantic_hash": "04b363dc024363c4939b9daaf3191c81"
   }
 }

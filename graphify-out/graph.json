@@ -316,6 +316,45 @@
       "source_location": "L147"
     },
     {
+      "id": "sim_nepal_law_harvester_legalchronology",
+      "label": "LegalChronology",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "file_type": "code",
+      "norm_label": "legalchronology",
+      "source_file": "sim/nepal_law_harvester.py",
+      "source_location": "L59"
+    },
+    {
+      "id": "sim_nepal_law_harvester_safelegalcrawler",
+      "label": "SafeLegalCrawler",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "file_type": "code",
+      "norm_label": "safelegalcrawler",
+      "source_file": "sim/nepal_law_harvester.py",
+      "source_location": "L833"
+    },
+    {
+      "id": "sim_test_nepal_law_harvester_nepallawharvestertests",
+      "label": "NepalLawHarvesterTests",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "file_type": "code",
+      "norm_label": "nepallawharvestertests",
+      "source_file": "sim/test_nepal_law_harvester.py",
+      "source_location": "L42"
+    },
+    {
       "id": "sim_nepal_law_harvester_circuitbreaker",
       "label": "CircuitBreaker",
       "_callable": true,
@@ -340,45 +379,6 @@
       "norm_label": "politefetcher",
       "source_file": "sim/nepal_law_harvester.py",
       "source_location": "L435"
-    },
-    {
-      "id": "sim_nepal_law_harvester_safelegalcrawler",
-      "label": "SafeLegalCrawler",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "NepalLawHarvesterTests",
-      "file_type": "code",
-      "norm_label": "safelegalcrawler",
-      "source_file": "sim/nepal_law_harvester.py",
-      "source_location": "L833"
-    },
-    {
-      "id": "sim_test_nepal_law_harvester_nepallawharvestertests",
-      "label": "NepalLawHarvesterTests",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "NepalLawHarvesterTests",
-      "file_type": "code",
-      "norm_label": "nepallawharvestertests",
-      "source_file": "sim/test_nepal_law_harvester.py",
-      "source_location": "L42"
-    },
-    {
-      "id": "sim_nepal_law_harvester_legalchronology",
-      "label": "LegalChronology",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "nepal_law_harvester.py",
-      "file_type": "code",
-      "norm_label": "legalchronology",
-      "source_file": "sim/nepal_law_harvester.py",
-      "source_location": "L59"
     },
     {
       "id": "sim_nepal_law_harvester_legalstatusevidence",
@@ -1067,6 +1067,54 @@
       "source_location": "L186"
     },
     {
+      "id": "scripts_generate_all_portfolio_hero_images_extract_plot_from_notebook",
+      "label": "extract_plot_from_notebook()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 113,
+      "community_name": "Split to PRs",
+      "file_type": "code",
+      "norm_label": "extract_plot_from_notebook()",
+      "source_file": "scripts/generate_all_portfolio_hero_images.py",
+      "source_location": "L113"
+    },
+    {
+      "id": "scripts_generate_all_portfolio_hero_images_main",
+      "label": "main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 113,
+      "community_name": "Split to PRs",
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": "scripts/generate_all_portfolio_hero_images.py",
+      "source_location": "L135"
+    },
+    {
+      "id": "scripts_generate_all_portfolio_hero_images_optimize_image_to_webp",
+      "label": "optimize_image_to_webp()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 113,
+      "community_name": "Split to PRs",
+      "file_type": "code",
+      "norm_label": "optimize_image_to_webp()",
+      "source_file": "scripts/generate_all_portfolio_hero_images.py",
+      "source_location": "L26"
+    },
+    {
+      "id": "scripts_generate_all_portfolio_hero_images_render_terminal_card",
+      "label": "render_terminal_card()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 113,
+      "community_name": "Split to PRs",
+      "file_type": "code",
+      "norm_label": "render_terminal_card()",
+      "source_file": "scripts/generate_all_portfolio_hero_images.py",
+      "source_location": "L62"
+    },
+    {
       "id": "sim_horoscope_eval_engine_calculate_ascendant",
       "label": "calculate_ascendant()",
       "_callable": true,
@@ -1209,54 +1257,6 @@
       "norm_label": "process_horoscope_record()",
       "source_file": "sim/horoscope_eval_engine.py",
       "source_location": "L395"
-    },
-    {
-      "id": "sim_nepali_calendar_ad_to_bs",
-      "label": "ad_to_bs()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "datetime",
-      "file_type": "code",
-      "norm_label": "ad_to_bs()",
-      "source_file": "sim/nepali_calendar.py",
-      "source_location": "L153"
-    },
-    {
-      "id": "sim_nepali_calendar_format_dual_date",
-      "label": "format_dual_date()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "datetime",
-      "file_type": "code",
-      "norm_label": "format_dual_date()",
-      "source_file": "sim/nepali_calendar.py",
-      "source_location": "L202"
-    },
-    {
-      "id": "sim_nepali_calendar_format_dual_from_bs",
-      "label": "format_dual_from_bs()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "datetime",
-      "file_type": "code",
-      "norm_label": "format_dual_from_bs()",
-      "source_file": "sim/nepali_calendar.py",
-      "source_location": "L220"
-    },
-    {
-      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_test_format_dual_date_structure",
-      "label": ".test_format_dual_date_structure()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "datetime",
-      "file_type": "code",
-      "norm_label": ".test_format_dual_date_structure()",
-      "source_file": "sim/test_nepal_law_harvester.py",
-      "source_location": "L82"
     },
     {
       "id": "tools_skills_compliance_report_harmonizer_scripts_export_report_pdf_compile_all_case_study_reports",
@@ -3107,6 +3107,162 @@
       "source_location": "L143"
     },
     {
+      "id": "sim_nepal_law_harvester_atomic_write_file",
+      "label": "atomic_write_file()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "file_type": "code",
+      "norm_label": "atomic_write_file()",
+      "source_file": "sim/nepal_law_harvester.py",
+      "source_location": "L215"
+    },
+    {
+      "id": "sim_nepal_law_harvester_legalchronology_from_single_date",
+      "label": ".from_single_date()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "file_type": "code",
+      "norm_label": ".from_single_date()",
+      "source_file": "sim/nepal_law_harvester.py",
+      "source_location": "L92"
+    },
+    {
+      "id": "sim_nepal_law_harvester_legalchronology_to_dict",
+      "label": ".to_dict()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "file_type": "code",
+      "norm_label": ".to_dict()",
+      "source_file": "sim/nepal_law_harvester.py",
+      "source_location": "L76"
+    },
+    {
+      "id": "sim_nepal_law_harvester_safelegalcrawler_process_document",
+      "label": ".process_document()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "file_type": "code",
+      "norm_label": ".process_document()",
+      "source_file": "sim/nepal_law_harvester.py",
+      "source_location": "L863"
+    },
+    {
+      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_setup",
+      "label": ".setUp()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "file_type": "code",
+      "norm_label": ".setup()",
+      "source_file": "sim/test_nepal_law_harvester.py",
+      "source_location": "L44"
+    },
+    {
+      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_teardown",
+      "label": ".tearDown()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "file_type": "code",
+      "norm_label": ".teardown()",
+      "source_file": "sim/test_nepal_law_harvester.py",
+      "source_location": "L51"
+    },
+    {
+      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_test_ad_to_bs_exact_historical_milestones",
+      "label": ".test_ad_to_bs_exact_historical_milestones()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "file_type": "code",
+      "norm_label": ".test_ad_to_bs_exact_historical_milestones()",
+      "source_file": "sim/test_nepal_law_harvester.py",
+      "source_location": "L55"
+    },
+    {
+      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_test_atomic_file_swapping",
+      "label": ".test_atomic_file_swapping()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "file_type": "code",
+      "norm_label": ".test_atomic_file_swapping()",
+      "source_file": "sim/test_nepal_law_harvester.py",
+      "source_location": "L116"
+    },
+    {
+      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_test_bs_to_ad_bi_directional_reversibility",
+      "label": ".test_bs_to_ad_bi_directional_reversibility()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "file_type": "code",
+      "norm_label": ".test_bs_to_ad_bi_directional_reversibility()",
+      "source_file": "sim/test_nepal_law_harvester.py",
+      "source_location": "L73"
+    },
+    {
+      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_test_crawl_step_end_to_end_with_link_discovery",
+      "label": ".test_crawl_step_end_to_end_with_link_discovery()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "file_type": "code",
+      "norm_label": ".test_crawl_step_end_to_end_with_link_discovery()",
+      "source_file": "sim/test_nepal_law_harvester.py",
+      "source_location": "L303"
+    },
+    {
+      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_test_crawler_end_to_end_deduplication",
+      "label": ".test_crawler_end_to_end_deduplication()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "file_type": "code",
+      "norm_label": ".test_crawler_end_to_end_deduplication()",
+      "source_file": "sim/test_nepal_law_harvester.py",
+      "source_location": "L132"
+    },
+    {
+      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_test_idbfs_task_lifecycle_and_reclamation",
+      "label": ".test_idbfs_task_lifecycle_and_reclamation()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "file_type": "code",
+      "norm_label": ".test_idbfs_task_lifecycle_and_reclamation()",
+      "source_file": "sim/test_nepal_law_harvester.py",
+      "source_location": "L158"
+    },
+    {
+      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_test_multidimensional_chronology_and_entity_graph",
+      "label": ".test_multidimensional_chronology_and_entity_graph()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "file_type": "code",
+      "norm_label": ".test_multidimensional_chronology_and_entity_graph()",
+      "source_file": "sim/test_nepal_law_harvester.py",
+      "source_location": "L268"
+    },
+    {
       "id": "scripts_automate_all_captures_capture_chrome_local",
       "label": "capture_chrome_local()",
       "_callable": true,
@@ -3347,42 +3503,6 @@
       "source_location": "L858"
     },
     {
-      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_setup",
-      "label": ".setUp()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "NepalLawHarvesterTests",
-      "file_type": "code",
-      "norm_label": ".setup()",
-      "source_file": "sim/test_nepal_law_harvester.py",
-      "source_location": "L44"
-    },
-    {
-      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_teardown",
-      "label": ".tearDown()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "NepalLawHarvesterTests",
-      "file_type": "code",
-      "norm_label": ".teardown()",
-      "source_file": "sim/test_nepal_law_harvester.py",
-      "source_location": "L51"
-    },
-    {
-      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_test_ad_to_bs_exact_historical_milestones",
-      "label": ".test_ad_to_bs_exact_historical_milestones()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "NepalLawHarvesterTests",
-      "file_type": "code",
-      "norm_label": ".test_ad_to_bs_exact_historical_milestones()",
-      "source_file": "sim/test_nepal_law_harvester.py",
-      "source_location": "L55"
-    },
-    {
       "id": "sim_test_nepal_law_harvester_nepallawharvestertests_test_circuit_breaker_transitions",
       "label": ".test_circuit_breaker_transitions()",
       "_callable": true,
@@ -3395,54 +3515,6 @@
       "source_location": "L207"
     },
     {
-      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_test_crawl_step_end_to_end_with_link_discovery",
-      "label": ".test_crawl_step_end_to_end_with_link_discovery()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "NepalLawHarvesterTests",
-      "file_type": "code",
-      "norm_label": ".test_crawl_step_end_to_end_with_link_discovery()",
-      "source_file": "sim/test_nepal_law_harvester.py",
-      "source_location": "L303"
-    },
-    {
-      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_test_crawler_end_to_end_deduplication",
-      "label": ".test_crawler_end_to_end_deduplication()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "NepalLawHarvesterTests",
-      "file_type": "code",
-      "norm_label": ".test_crawler_end_to_end_deduplication()",
-      "source_file": "sim/test_nepal_law_harvester.py",
-      "source_location": "L132"
-    },
-    {
-      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_test_devanagari_unicode_normalization",
-      "label": ".test_devanagari_unicode_normalization()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "NepalLawHarvesterTests",
-      "file_type": "code",
-      "norm_label": ".test_devanagari_unicode_normalization()",
-      "source_file": "sim/test_nepal_law_harvester.py",
-      "source_location": "L95"
-    },
-    {
-      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_test_idbfs_task_lifecycle_and_reclamation",
-      "label": ".test_idbfs_task_lifecycle_and_reclamation()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "NepalLawHarvesterTests",
-      "file_type": "code",
-      "norm_label": ".test_idbfs_task_lifecycle_and_reclamation()",
-      "source_file": "sim/test_nepal_law_harvester.py",
-      "source_location": "L158"
-    },
-    {
       "id": "sim_nepal_law_harvester_analyze_statute_status",
       "label": "analyze_statute_status()",
       "_callable": true,
@@ -3453,18 +3525,6 @@
       "norm_label": "analyze_statute_status()",
       "source_file": "sim/nepal_law_harvester.py",
       "source_location": "L135"
-    },
-    {
-      "id": "sim_nepal_law_harvester_atomic_write_file",
-      "label": "atomic_write_file()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "nepal_law_harvester.py",
-      "file_type": "code",
-      "norm_label": "atomic_write_file()",
-      "source_file": "sim/nepal_law_harvester.py",
-      "source_location": "L215"
     },
     {
       "id": "sim_nepal_law_harvester_detect_statute_status",
@@ -3491,30 +3551,6 @@
       "source_location": "L205"
     },
     {
-      "id": "sim_nepal_law_harvester_legalchronology_from_single_date",
-      "label": ".from_single_date()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "nepal_law_harvester.py",
-      "file_type": "code",
-      "norm_label": ".from_single_date()",
-      "source_file": "sim/nepal_law_harvester.py",
-      "source_location": "L92"
-    },
-    {
-      "id": "sim_nepal_law_harvester_legalchronology_to_dict",
-      "label": ".to_dict()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "nepal_law_harvester.py",
-      "file_type": "code",
-      "norm_label": ".to_dict()",
-      "source_file": "sim/nepal_law_harvester.py",
-      "source_location": "L76"
-    },
-    {
       "id": "sim_nepal_law_harvester_normalize_devanagari",
       "label": "normalize_devanagari()",
       "_callable": true,
@@ -3527,16 +3563,16 @@
       "source_location": "L123"
     },
     {
-      "id": "sim_nepal_law_harvester_safelegalcrawler_process_document",
-      "label": ".process_document()",
+      "id": "sim_nepali_calendar_ad_to_bs",
+      "label": "ad_to_bs()",
       "_callable": true,
       "_origin": "ast",
       "community": 7,
       "community_name": "nepal_law_harvester.py",
       "file_type": "code",
-      "norm_label": ".process_document()",
-      "source_file": "sim/nepal_law_harvester.py",
-      "source_location": "L863"
+      "norm_label": "ad_to_bs()",
+      "source_file": "sim/nepali_calendar.py",
+      "source_location": "L153"
     },
     {
       "id": "sim_nepali_calendar_bs_to_ad",
@@ -3551,6 +3587,30 @@
       "source_location": "L180"
     },
     {
+      "id": "sim_nepali_calendar_format_dual_date",
+      "label": "format_dual_date()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "nepal_law_harvester.py",
+      "file_type": "code",
+      "norm_label": "format_dual_date()",
+      "source_file": "sim/nepali_calendar.py",
+      "source_location": "L202"
+    },
+    {
+      "id": "sim_nepali_calendar_format_dual_from_bs",
+      "label": "format_dual_from_bs()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "nepal_law_harvester.py",
+      "file_type": "code",
+      "norm_label": "format_dual_from_bs()",
+      "source_file": "sim/nepali_calendar.py",
+      "source_location": "L220"
+    },
+    {
       "id": "sim_nepali_calendar_parse_date_string",
       "label": "parse_date_string()",
       "_callable": true,
@@ -3563,40 +3623,28 @@
       "source_location": "L231"
     },
     {
-      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_test_atomic_file_swapping",
-      "label": ".test_atomic_file_swapping()",
+      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_test_devanagari_unicode_normalization",
+      "label": ".test_devanagari_unicode_normalization()",
       "_callable": true,
       "_origin": "ast",
       "community": 7,
       "community_name": "nepal_law_harvester.py",
       "file_type": "code",
-      "norm_label": ".test_atomic_file_swapping()",
+      "norm_label": ".test_devanagari_unicode_normalization()",
       "source_file": "sim/test_nepal_law_harvester.py",
-      "source_location": "L116"
+      "source_location": "L95"
     },
     {
-      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_test_bs_to_ad_bi_directional_reversibility",
-      "label": ".test_bs_to_ad_bi_directional_reversibility()",
+      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_test_format_dual_date_structure",
+      "label": ".test_format_dual_date_structure()",
       "_callable": true,
       "_origin": "ast",
       "community": 7,
       "community_name": "nepal_law_harvester.py",
       "file_type": "code",
-      "norm_label": ".test_bs_to_ad_bi_directional_reversibility()",
+      "norm_label": ".test_format_dual_date_structure()",
       "source_file": "sim/test_nepal_law_harvester.py",
-      "source_location": "L73"
-    },
-    {
-      "id": "sim_test_nepal_law_harvester_nepallawharvestertests_test_multidimensional_chronology_and_entity_graph",
-      "label": ".test_multidimensional_chronology_and_entity_graph()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "nepal_law_harvester.py",
-      "file_type": "code",
-      "norm_label": ".test_multidimensional_chronology_and_entity_graph()",
-      "source_file": "sim/test_nepal_law_harvester.py",
-      "source_location": "L268"
+      "source_location": "L82"
     },
     {
       "id": "sim_test_nepal_law_harvester_nepallawharvestertests_test_statute_status_detection",
@@ -4065,54 +4113,6 @@
       "norm_label": "save_all_tasks()",
       "source_file": "sim/task_telemetry.py",
       "source_location": "L59"
-    },
-    {
-      "id": "scripts_generate_all_portfolio_hero_images_extract_plot_from_notebook",
-      "label": "extract_plot_from_notebook()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 93,
-      "community_name": "save_chat.py",
-      "file_type": "code",
-      "norm_label": "extract_plot_from_notebook()",
-      "source_file": "scripts/generate_all_portfolio_hero_images.py",
-      "source_location": "L113"
-    },
-    {
-      "id": "scripts_generate_all_portfolio_hero_images_main",
-      "label": "main()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 93,
-      "community_name": "save_chat.py",
-      "file_type": "code",
-      "norm_label": "main()",
-      "source_file": "scripts/generate_all_portfolio_hero_images.py",
-      "source_location": "L135"
-    },
-    {
-      "id": "scripts_generate_all_portfolio_hero_images_optimize_image_to_webp",
-      "label": "optimize_image_to_webp()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 93,
-      "community_name": "save_chat.py",
-      "file_type": "code",
-      "norm_label": "optimize_image_to_webp()",
-      "source_file": "scripts/generate_all_portfolio_hero_images.py",
-      "source_location": "L26"
-    },
-    {
-      "id": "scripts_generate_all_portfolio_hero_images_render_terminal_card",
-      "label": "render_terminal_card()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 93,
-      "community_name": "save_chat.py",
-      "file_type": "code",
-      "norm_label": "render_terminal_card()",
-      "source_file": "scripts/generate_all_portfolio_hero_images.py",
-      "source_location": "L62"
     },
     {
       "id": "tools_chat_archiver_save_chat_clean_text",
@@ -5151,30 +5151,6 @@
       "source_location": "L799"
     },
     {
-      "id": "aaradhya_master_v165",
-      "label": "AARADHYA_MASTER_v165.md",
-      "_origin": "ast",
-      "community": 100,
-      "community_name": "5. Core Architectural & Methodological Pillars",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "aaradhya_master_v165.md",
-      "source_file": "AARADHYA_MASTER_v165.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "research_notes_2026_09_27_biasaperture_research_dossier",
-      "label": "2026-09-27_BIASAPERTURE_RESEARCH_DOSSIER.md",
-      "_origin": "ast",
-      "community": 100,
-      "community_name": "5. Core Architectural & Methodological Pillars",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "2026-09-27_biasaperture_research_dossier.md",
-      "source_file": "research/notes/2026-09-27_BIASAPERTURE_RESEARCH_DOSSIER.md",
-      "source_location": "L1"
-    },
-    {
       "id": "research_notes_2026_09_27_biasaperture_research_dossier_1_executive_summary_authorship",
       "label": "1. Executive Summary & Authorship",
       "_origin": "ast",
@@ -5305,90 +5281,6 @@
       "norm_label": "v. regulatory compliance mapping",
       "source_file": "research/notes/2026-09-27_BIASAPERTURE_RESEARCH_DOSSIER.md",
       "source_location": "L101"
-    },
-    {
-      "id": "research_notes_2026_10_01_gemini_notebooklm_workspace_registry",
-      "label": "2026-10-01_GEMINI_NOTEBOOKLM_WORKSPACE_REGISTRY.md",
-      "_origin": "ast",
-      "community": 100,
-      "community_name": "5. Core Architectural & Methodological Pillars",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "2026-10-01_gemini_notebooklm_workspace_registry.md",
-      "source_file": "research/notes/2026-10-01_GEMINI_NOTEBOOKLM_WORKSPACE_REGISTRY.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_1_executive_summary",
-      "label": "1. Executive Summary",
-      "_origin": "ast",
-      "community": 100,
-      "community_name": "5. Core Architectural & Methodological Pillars",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1. executive summary",
-      "source_file": "research/notes/2026-10-01_GEMINI_NOTEBOOKLM_WORKSPACE_REGISTRY.md",
-      "source_location": "L10"
-    },
-    {
-      "id": "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_2_personal_ecosystem_core_workspaces",
-      "label": "2. Personal & Ecosystem Core Workspaces",
-      "_origin": "ast",
-      "community": 100,
-      "community_name": "5. Core Architectural & Methodological Pillars",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2. personal & ecosystem core workspaces",
-      "source_file": "research/notes/2026-10-01_GEMINI_NOTEBOOKLM_WORKSPACE_REGISTRY.md",
-      "source_location": "L16"
-    },
-    {
-      "id": "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_3_project_specific_workspaces_biasaperture_fuse_ai_fellowship",
-      "label": "3. Project-Specific Workspaces: BiasAperture (Fuse AI Fellowship)",
-      "_origin": "ast",
-      "community": 100,
-      "community_name": "5. Core Architectural & Methodological Pillars",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3. project-specific workspaces: biasaperture (fuse ai fellowship)",
-      "source_file": "research/notes/2026-10-01_GEMINI_NOTEBOOKLM_WORKSPACE_REGISTRY.md",
-      "source_location": "L25"
-    },
-    {
-      "id": "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_4_mcp_super_nlm_tooling_integration",
-      "label": "4. MCP & Super-NLM Tooling Integration",
-      "_origin": "ast",
-      "community": 100,
-      "community_name": "5. Core Architectural & Methodological Pillars",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "4. mcp & super-nlm tooling integration",
-      "source_file": "research/notes/2026-10-01_GEMINI_NOTEBOOKLM_WORKSPACE_REGISTRY.md",
-      "source_location": "L38"
-    },
-    {
-      "id": "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_5_privacy_repository_boundaries",
-      "label": "5. Privacy & Repository Boundaries",
-      "_origin": "ast",
-      "community": 100,
-      "community_name": "5. Core Architectural & Methodological Pillars",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "5. privacy & repository boundaries",
-      "source_file": "research/notes/2026-10-01_GEMINI_NOTEBOOKLM_WORKSPACE_REGISTRY.md",
-      "source_location": "L49"
-    },
-    {
-      "id": "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_research_note_gemini_notebooklm_knowledge_base_registry",
-      "label": "Research Note: Gemini & NotebookLM Knowledge Base Registry",
-      "_origin": "ast",
-      "community": 100,
-      "community_name": "5. Core Architectural & Methodological Pillars",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "research note: gemini & notebooklm knowledge base registry",
-      "source_file": "research/notes/2026-10-01_GEMINI_NOTEBOOKLM_WORKSPACE_REGISTRY.md",
-      "source_location": "L1"
     },
     {
       "id": "research_plans_brl_c0_overview_brainstorm_research_laboratory_cohort_0_overview",
@@ -5897,18 +5789,6 @@
       "source_location": "L169"
     },
     {
-      "id": "schemas_capability_ontology",
-      "label": "capability-ontology.md",
-      "_origin": "ast",
-      "community": 105,
-      "community_name": "2. The Canonical Hierarchy",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "capability-ontology.md",
-      "source_file": "schemas/capability-ontology.md",
-      "source_location": "L1"
-    },
-    {
       "id": "schemas_capability_ontology_1_motivation_purpose",
       "label": "1. Motivation & Purpose",
       "_origin": "ast",
@@ -6405,18 +6285,6 @@
       "source_location": "L28"
     },
     {
-      "id": "tools_skills_gemini_api_dev_references_migration_api_migration_generatecontent_interactions_73",
-      "label": "API Migration (generateContent \u2192 Interactions)",
-      "_origin": "ast",
-      "community": 109,
-      "community_name": "Migration Reference",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "api migration (generatecontent \u2192 interactions)",
-      "source_file": "tools/skills/gemini-api-dev/references/migration.md",
-      "source_location": "L73"
-    },
-    {
       "id": "tools_skills_gemini_api_dev_references_migration_confirm_the_migration_scope",
       "label": "Confirm the Migration Scope",
       "_origin": "ast",
@@ -6857,18 +6725,6 @@
       "source_location": "L28"
     },
     {
-      "id": "tools_skills_gemini_interactions_api_references_migration_api_migration_generatecontent_interactions_73",
-      "label": "API Migration (generateContent \u2192 Interactions)",
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "Migration Reference",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "api migration (generatecontent \u2192 interactions)",
-      "source_file": "tools/skills/gemini-interactions-api/references/migration.md",
-      "source_location": "L73"
-    },
-    {
       "id": "tools_skills_gemini_interactions_api_references_migration_confirm_the_migration_scope",
       "label": "Confirm the Migration Scope",
       "_origin": "ast",
@@ -7107,92 +6963,70 @@
       "source_location": "L16"
     },
     {
-      "id": "tools_skills_split_to_prs_skill",
-      "label": "split-to-prs/SKILL.md",
+      "id": "image",
+      "label": "Image",
       "_origin": "ast",
       "community": 113,
       "community_name": "Split to PRs",
-      "file_type": "document",
-      "frontmatter": {
-        "name": "split-to-prs",
-        "description": "&gt;-"
-      },
-      "node_kind": "page",
-      "norm_label": "split-to-prs/skill.md",
-      "source_file": "tools/skills/split-to-prs/SKILL.md",
+      "file_type": "code",
+      "norm_label": "image",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "scripts_generate_all_portfolio_hero_images",
+      "label": "generate_all_portfolio_hero_images.py",
+      "_origin": "ast",
+      "community": 113,
+      "community_name": "Split to PRs",
+      "file_type": "code",
+      "norm_label": "generate_all_portfolio_hero_images.py",
+      "source_file": "scripts/generate_all_portfolio_hero_images.py",
       "source_location": "L1"
     },
     {
-      "id": "tools_skills_split_to_prs_skill_1_check_the_state",
-      "label": "1. Check the state",
+      "id": "scripts_generate_all_portfolio_hero_images_py_path",
+      "label": "Path",
       "_origin": "ast",
       "community": 113,
       "community_name": "Split to PRs",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1. check the state",
-      "source_file": "tools/skills/split-to-prs/SKILL.md",
-      "source_location": "L18"
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "",
+      "source_location": ""
     },
     {
-      "id": "tools_skills_split_to_prs_skill_2_propose_the_split",
-      "label": "2. Propose the split",
+      "id": "scripts_generate_all_portfolio_hero_images_rationale_114",
+      "label": "Extract a base64 PNG plot from an executed notebook cell.",
       "_origin": "ast",
       "community": 113,
       "community_name": "Split to PRs",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2. propose the split",
-      "source_file": "tools/skills/split-to-prs/SKILL.md",
-      "source_location": "L24"
+      "file_type": "rationale",
+      "norm_label": "extract a base64 png plot from an executed notebook cell.",
+      "source_file": "scripts/generate_all_portfolio_hero_images.py",
+      "source_location": "L114"
     },
     {
-      "id": "tools_skills_split_to_prs_skill_3_execute_the_split",
-      "label": "3. Execute the split",
+      "id": "scripts_generate_all_portfolio_hero_images_rationale_27",
+      "label": "Resize, optimize, and save both WebP (<250KB) and PNG fallback.",
       "_origin": "ast",
       "community": 113,
       "community_name": "Split to PRs",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3. execute the split",
-      "source_file": "tools/skills/split-to-prs/SKILL.md",
-      "source_location": "L34"
+      "file_type": "rationale",
+      "norm_label": "resize, optimize, and save both webp (<250kb) and png fallback.",
+      "source_file": "scripts/generate_all_portfolio_hero_images.py",
+      "source_location": "L27"
     },
     {
-      "id": "tools_skills_split_to_prs_skill_4_report_back",
-      "label": "4. Report back",
+      "id": "scripts_generate_all_portfolio_hero_images_rationale_63",
+      "label": "Render a crisp dark-mode terminal card with macOS/modern window controls.",
       "_origin": "ast",
       "community": 113,
       "community_name": "Split to PRs",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "4. report back",
-      "source_file": "tools/skills/split-to-prs/SKILL.md",
-      "source_location": "L47"
-    },
-    {
-      "id": "tools_skills_split_to_prs_skill_hard_rules",
-      "label": "Hard rules",
-      "_origin": "ast",
-      "community": 113,
-      "community_name": "Split to PRs",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "hard rules",
-      "source_file": "tools/skills/split-to-prs/SKILL.md",
-      "source_location": "L11"
-    },
-    {
-      "id": "tools_skills_split_to_prs_skill_split_to_prs",
-      "label": "Split to PRs",
-      "_origin": "ast",
-      "community": 113,
-      "community_name": "Split to PRs",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "split to prs",
-      "source_file": "tools/skills/split-to-prs/SKILL.md",
-      "source_location": "L7"
+      "file_type": "rationale",
+      "norm_label": "render a crisp dark-mode terminal card with macos/modern window controls.",
+      "source_file": "scripts/generate_all_portfolio_hero_images.py",
+      "source_location": "L63"
     },
     {
       "id": "research_architectures_arch_rfc_005_memory_stratification",
@@ -7915,17 +7749,6 @@
       "source_location": "L1"
     },
     {
-      "id": "datetime",
-      "label": "datetime",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "datetime",
-      "file_type": "code",
-      "norm_label": "datetime",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "sim_horoscope_eval_engine",
       "label": "horoscope_eval_engine.py",
       "_origin": "ast",
@@ -7938,28 +7761,6 @@
     },
     {
       "id": "sim_horoscope_eval_engine_py_any",
-      "label": "Any",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "datetime",
-      "file_type": "code",
-      "norm_label": "any",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "sim_nepali_calendar",
-      "label": "nepali_calendar.py",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "datetime",
-      "file_type": "code",
-      "norm_label": "nepali_calendar.py",
-      "source_file": "sim/nepali_calendar.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "sim_nepali_calendar_py_any",
       "label": "Any",
       "_origin": "ast",
       "community": 12,
@@ -8111,50 +7912,6 @@
       "norm_label": "mean obliquity of the ecliptic in degrees (iau formula).",
       "source_file": "sim/horoscope_eval_engine.py",
       "source_location": "L93"
-    },
-    {
-      "id": "sim_nepali_calendar_rationale_1",
-      "label": "nepali_calendar.py ------------------ Deterministic 125-Year Bikram Sambat\u2026",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "datetime",
-      "file_type": "rationale",
-      "norm_label": "nepali_calendar.py ------------------ deterministic 125-year bikram sambat...",
-      "source_file": "sim/nepali_calendar.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "sim_nepali_calendar_rationale_154",
-      "label": "Converts Gregorian (A.D.) date to Bikram Sambat (B.S.). Returns (bs_year,\u2026",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "datetime",
-      "file_type": "rationale",
-      "norm_label": "converts gregorian (a.d.) date to bikram sambat (b.s.). returns (bs_year,...",
-      "source_file": "sim/nepali_calendar.py",
-      "source_location": "L154"
-    },
-    {
-      "id": "sim_nepali_calendar_rationale_203",
-      "label": "Generates standardized dual-calendar metadata dictionary for legal ingestion.",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "datetime",
-      "file_type": "rationale",
-      "norm_label": "generates standardized dual-calendar metadata dictionary for legal ingestion.",
-      "source_file": "sim/nepali_calendar.py",
-      "source_location": "L203"
-    },
-    {
-      "id": "sim_nepali_calendar_rationale_221",
-      "label": "Generates dual-calendar metadata given Bikram Sambat (B.S.) date components.",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "datetime",
-      "file_type": "rationale",
-      "norm_label": "generates dual-calendar metadata given bikram sambat (b.s.) date components.",
-      "source_file": "sim/nepali_calendar.py",
-      "source_location": "L221"
     },
     {
       "id": "research_plans_plan_nep_const_001_constitution_of_nepal_plain_explanation_engine",
@@ -9735,52 +9492,112 @@
       "source_location": "L7"
     },
     {
-      "id": "research_architectures_readme_active_architectural_charters",
-      "label": "Active Architectural Charters",
+      "id": "aaradhya_master_v165",
+      "label": "AARADHYA_MASTER_v165.md",
       "_origin": "ast",
       "community": 133,
       "community_name": "\ud83c\udfdb\ufe0f Research Architectures Hub",
       "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "active architectural charters",
-      "source_file": "research/architectures/README.md",
-      "source_location": "L8"
-    },
-    {
-      "id": "research_architectures_readme_methodological_invariants",
-      "label": "Methodological Invariants",
-      "_origin": "ast",
-      "community": 133,
-      "community_name": "\ud83c\udfdb\ufe0f Research Architectures Hub",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "methodological invariants",
-      "source_file": "research/architectures/README.md",
-      "source_location": "L26"
-    },
-    {
-      "id": "research_architectures_readme_research_architectures_hub",
-      "label": "\ud83c\udfdb\ufe0f Research Architectures Hub",
-      "_origin": "ast",
-      "community": 133,
-      "community_name": "\ud83c\udfdb\ufe0f Research Architectures Hub",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\ud83c\udfdb\ufe0f research architectures hub",
-      "source_file": "research/architectures/README.md",
+      "node_kind": "page",
+      "norm_label": "aaradhya_master_v165.md",
+      "source_file": "AARADHYA_MASTER_v165.md",
       "source_location": "L1"
     },
     {
-      "id": "research_architectures_readme_verbatim_provenance_logs",
-      "label": "\ud83c\udf99\ufe0f Verbatim Provenance Logs",
+      "id": "research_notes_2026_09_27_biasaperture_research_dossier",
+      "label": "2026-09-27_BIASAPERTURE_RESEARCH_DOSSIER.md",
+      "_origin": "ast",
+      "community": 133,
+      "community_name": "\ud83c\udfdb\ufe0f Research Architectures Hub",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-09-27_biasaperture_research_dossier.md",
+      "source_file": "research/notes/2026-09-27_BIASAPERTURE_RESEARCH_DOSSIER.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "research_notes_2026_10_01_gemini_notebooklm_workspace_registry",
+      "label": "2026-10-01_GEMINI_NOTEBOOKLM_WORKSPACE_REGISTRY.md",
+      "_origin": "ast",
+      "community": 133,
+      "community_name": "\ud83c\udfdb\ufe0f Research Architectures Hub",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-10-01_gemini_notebooklm_workspace_registry.md",
+      "source_file": "research/notes/2026-10-01_GEMINI_NOTEBOOKLM_WORKSPACE_REGISTRY.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_1_executive_summary",
+      "label": "1. Executive Summary",
       "_origin": "ast",
       "community": 133,
       "community_name": "\ud83c\udfdb\ufe0f Research Architectures Hub",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83c\udf99\ufe0f verbatim provenance logs",
-      "source_file": "research/architectures/README.md",
-      "source_location": "L33"
+      "norm_label": "1. executive summary",
+      "source_file": "research/notes/2026-10-01_GEMINI_NOTEBOOKLM_WORKSPACE_REGISTRY.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_2_personal_ecosystem_core_workspaces",
+      "label": "2. Personal & Ecosystem Core Workspaces",
+      "_origin": "ast",
+      "community": 133,
+      "community_name": "\ud83c\udfdb\ufe0f Research Architectures Hub",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. personal & ecosystem core workspaces",
+      "source_file": "research/notes/2026-10-01_GEMINI_NOTEBOOKLM_WORKSPACE_REGISTRY.md",
+      "source_location": "L16"
+    },
+    {
+      "id": "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_3_project_specific_workspaces_biasaperture_fuse_ai_fellowship",
+      "label": "3. Project-Specific Workspaces: BiasAperture (Fuse AI Fellowship)",
+      "_origin": "ast",
+      "community": 133,
+      "community_name": "\ud83c\udfdb\ufe0f Research Architectures Hub",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. project-specific workspaces: biasaperture (fuse ai fellowship)",
+      "source_file": "research/notes/2026-10-01_GEMINI_NOTEBOOKLM_WORKSPACE_REGISTRY.md",
+      "source_location": "L25"
+    },
+    {
+      "id": "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_4_mcp_super_nlm_tooling_integration",
+      "label": "4. MCP & Super-NLM Tooling Integration",
+      "_origin": "ast",
+      "community": 133,
+      "community_name": "\ud83c\udfdb\ufe0f Research Architectures Hub",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. mcp & super-nlm tooling integration",
+      "source_file": "research/notes/2026-10-01_GEMINI_NOTEBOOKLM_WORKSPACE_REGISTRY.md",
+      "source_location": "L38"
+    },
+    {
+      "id": "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_5_privacy_repository_boundaries",
+      "label": "5. Privacy & Repository Boundaries",
+      "_origin": "ast",
+      "community": 133,
+      "community_name": "\ud83c\udfdb\ufe0f Research Architectures Hub",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5. privacy & repository boundaries",
+      "source_file": "research/notes/2026-10-01_GEMINI_NOTEBOOKLM_WORKSPACE_REGISTRY.md",
+      "source_location": "L49"
+    },
+    {
+      "id": "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_research_note_gemini_notebooklm_knowledge_base_registry",
+      "label": "Research Note: Gemini & NotebookLM Knowledge Base Registry",
+      "_origin": "ast",
+      "community": 133,
+      "community_name": "\ud83c\udfdb\ufe0f Research Architectures Hub",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "research note: gemini & notebooklm knowledge base registry",
+      "source_file": "research/notes/2026-10-01_GEMINI_NOTEBOOKLM_WORKSPACE_REGISTRY.md",
+      "source_location": "L1"
     },
     {
       "id": "modelref",
@@ -10150,138 +9967,6 @@
       "node_kind": "heading",
       "norm_label": "\ud83c\udfdb\ufe0f research experiment: inv-bmk-001 (headless invariant assurance & sandbox replay benchmark)",
       "source_file": "research/experiments/INV-BMK-001.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "report_reconciliation_2026_09_19",
-      "label": "reconciliation-2026-09-19.md",
-      "_origin": "ast",
-      "community": 138,
-      "community_name": "1. The Core Invariant Statements",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "reconciliation-2026-09-19.md",
-      "source_file": "report/reconciliation-2026-09-19.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "report_reconciliation_2026_09_19_1_executive_summary",
-      "label": "1. Executive Summary",
-      "_origin": "ast",
-      "community": 138,
-      "community_name": "1. The Core Invariant Statements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1. executive summary",
-      "source_file": "report/reconciliation-2026-09-19.md",
-      "source_location": "L15"
-    },
-    {
-      "id": "report_reconciliation_2026_09_19_2_granular_reconciliation_matrix",
-      "label": "2. Granular Reconciliation Matrix",
-      "_origin": "ast",
-      "community": 138,
-      "community_name": "1. The Core Invariant Statements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2. granular reconciliation matrix",
-      "source_file": "report/reconciliation-2026-09-19.md",
-      "source_location": "L21"
-    },
-    {
-      "id": "report_reconciliation_2026_09_19_3_epistemic_certification",
-      "label": "3. Epistemic Certification",
-      "_origin": "ast",
-      "community": 138,
-      "community_name": "1. The Core Invariant Statements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3. epistemic certification",
-      "source_file": "report/reconciliation-2026-09-19.md",
-      "source_location": "L37"
-    },
-    {
-      "id": "report_reconciliation_2026_09_19_comprehensive_multi_model_ecosystem_reconciliation_report_2026_09_19",
-      "label": "Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19)",
-      "_origin": "ast",
-      "community": 138,
-      "community_name": "1. The Core Invariant Statements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "comprehensive multi-model ecosystem reconciliation report (2026-09-19)",
-      "source_file": "report/reconciliation-2026-09-19.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "research_experiments_fleet_001",
-      "label": "FLEET-001.md",
-      "_origin": "ast",
-      "community": 138,
-      "community_name": "1. The Core Invariant Statements",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "fleet-001.md",
-      "source_file": "research/experiments/FLEET-001.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "research_experiments_fleet_001_experiment_log_fleet_001_single_task_interruption_state_migration_benchmark",
-      "label": "Experiment Log: FLEET-001 (Single-Task Interruption & State Migration Benchmark)",
-      "_origin": "ast",
-      "community": 138,
-      "community_name": "1. The Core Invariant Statements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "experiment log: fleet-001 (single-task interruption & state migration benchmark)",
-      "source_file": "research/experiments/FLEET-001.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "research_experiments_fleet_001_metrics_logged",
-      "label": "Metrics Logged",
-      "_origin": "ast",
-      "community": 138,
-      "community_name": "1. The Core Invariant Statements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "metrics logged",
-      "source_file": "research/experiments/FLEET-001.md",
-      "source_location": "L21"
-    },
-    {
-      "id": "research_experiments_fleet_001_task_specification",
-      "label": "Task Specification",
-      "_origin": "ast",
-      "community": 138,
-      "community_name": "1. The Core Invariant Statements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "task specification",
-      "source_file": "research/experiments/FLEET-001.md",
-      "source_location": "L9"
-    },
-    {
-      "id": "research_experiments_fleet_001_verification_checklist",
-      "label": "Verification Checklist",
-      "_origin": "ast",
-      "community": 138,
-      "community_name": "1. The Core Invariant Statements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "verification checklist",
-      "source_file": "research/experiments/FLEET-001.md",
-      "source_location": "L14"
-    },
-    {
-      "id": "research_invariants_inv_wsr_002",
-      "label": "INV-WSR-002.md",
-      "_origin": "ast",
-      "community": 138,
-      "community_name": "1. The Core Invariant Statements",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "inv-wsr-002.md",
-      "source_file": "research/invariants/INV-WSR-002.md",
       "source_location": "L1"
     },
     {
@@ -13511,18 +13196,6 @@
       "source_location": "L62"
     },
     {
-      "id": "readme",
-      "label": "README.md",
-      "_origin": "ast",
-      "community": 164,
-      "community_name": "README.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "readme.md",
-      "source_file": "README.md",
-      "source_location": "L1"
-    },
-    {
       "id": "research_fellows_readme",
       "label": "fellows/README.md",
       "_origin": "ast",
@@ -13533,42 +13206,6 @@
       "norm_label": "fellows/readme.md",
       "source_file": "research/fellows/README.md",
       "source_location": "L1"
-    },
-    {
-      "id": "research_fellows_readme_brainstorm_research_laboratory_fellows_contributors_directory",
-      "label": "Brainstorm Research Laboratory \u2014 Fellows & Contributors Directory",
-      "_origin": "ast",
-      "community": 164,
-      "community_name": "README.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "brainstorm research laboratory \u2014 fellows & contributors directory",
-      "source_file": "research/fellows/README.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "research_fellows_readme_contributor_ranks_progression",
-      "label": "Contributor Ranks & Progression",
-      "_origin": "ast",
-      "community": 164,
-      "community_name": "README.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "contributor ranks & progression",
-      "source_file": "research/fellows/README.md",
-      "source_location": "L7"
-    },
-    {
-      "id": "research_fellows_readme_onboarding_procedure",
-      "label": "Onboarding Procedure",
-      "_origin": "ast",
-      "community": 164,
-      "community_name": "README.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "onboarding procedure",
-      "source_file": "research/fellows/README.md",
-      "source_location": "L21"
     },
     {
       "id": "research_fellows_template",
@@ -15190,54 +14827,6 @@
       "source_location": "L11"
     },
     {
-      "id": "tools_skills_graphify_code_search_references_workflows_procedure_30",
-      "label": "Procedure:",
-      "_origin": "ast",
-      "community": 179,
-      "community_name": "Developer Workflows: Fast Implementation Search with Graphify",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "procedure:",
-      "source_file": "tools/skills/graphify-code-search/references/workflows.md",
-      "source_location": "L30"
-    },
-    {
-      "id": "tools_skills_graphify_code_search_references_workflows_procedure_47",
-      "label": "Procedure:",
-      "_origin": "ast",
-      "community": 179,
-      "community_name": "Developer Workflows: Fast Implementation Search with Graphify",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "procedure:",
-      "source_file": "tools/skills/graphify-code-search/references/workflows.md",
-      "source_location": "L47"
-    },
-    {
-      "id": "tools_skills_graphify_code_search_references_workflows_procedure_63",
-      "label": "Procedure:",
-      "_origin": "ast",
-      "community": 179,
-      "community_name": "Developer Workflows: Fast Implementation Search with Graphify",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "procedure:",
-      "source_file": "tools/skills/graphify-code-search/references/workflows.md",
-      "source_location": "L63"
-    },
-    {
-      "id": "tools_skills_graphify_code_search_references_workflows_procedure_78",
-      "label": "Procedure:",
-      "_origin": "ast",
-      "community": 179,
-      "community_name": "Developer Workflows: Fast Implementation Search with Graphify",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "procedure:",
-      "source_file": "tools/skills/graphify-code-search/references/workflows.md",
-      "source_location": "L78"
-    },
-    {
       "id": "tools_skills_graphify_code_search_references_workflows_workflow_1_before_writing_new_code_zero_duplicate_rule",
       "label": "Workflow 1: \"Before Writing New Code\" (Zero-Duplicate Rule)",
       "_origin": "ast",
@@ -16136,22 +15725,6 @@
       "source_location": "L24"
     },
     {
-      "id": "tools_skills_gemini_api_dev_skill",
-      "label": "gemini-api-dev/SKILL.md",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "Gemini API Development Skill",
-      "file_type": "document",
-      "frontmatter": {
-        "name": "gemini-api-dev",
-        "description": "Use this skill when writing code that calls the Gemini API for text generation, multi-turn chat, multimodal understanding, image generation, video generation, streaming responses, background research tasks, function calling, structured output, or migrating from the old generateContent API. Covers SDK usage and best practices for Gemini models and agents in Python and TypeScript."
-      },
-      "node_kind": "page",
-      "norm_label": "gemini-api-dev/skill.md",
-      "source_file": "tools/skills/gemini-api-dev/SKILL.md",
-      "source_location": "L1"
-    },
-    {
       "id": "tools_skills_gemini_api_dev_skill_antigravity_agent",
       "label": "Antigravity Agent",
       "_origin": "ast",
@@ -16332,66 +15905,6 @@
       "source_location": "L76"
     },
     {
-      "id": "tools_skills_gemini_api_dev_skill_javascript_typescript_116",
-      "label": "JavaScript/TypeScript",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "Gemini API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "javascript/typescript",
-      "source_file": "tools/skills/gemini-api-dev/SKILL.md",
-      "source_location": "L116"
-    },
-    {
-      "id": "tools_skills_gemini_api_dev_skill_javascript_typescript_154",
-      "label": "JavaScript/TypeScript",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "Gemini API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "javascript/typescript",
-      "source_file": "tools/skills/gemini-api-dev/SKILL.md",
-      "source_location": "L154"
-    },
-    {
-      "id": "tools_skills_gemini_api_dev_skill_javascript_typescript_207",
-      "label": "JavaScript/TypeScript",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "Gemini API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "javascript/typescript",
-      "source_file": "tools/skills/gemini-api-dev/SKILL.md",
-      "source_location": "L207"
-    },
-    {
-      "id": "tools_skills_gemini_api_dev_skill_javascript_typescript_254",
-      "label": "JavaScript/TypeScript",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "Gemini API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "javascript/typescript",
-      "source_file": "tools/skills/gemini-api-dev/SKILL.md",
-      "source_location": "L254"
-    },
-    {
-      "id": "tools_skills_gemini_api_dev_skill_javascript_typescript_300",
-      "label": "JavaScript/TypeScript",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "Gemini API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "javascript/typescript",
-      "source_file": "tools/skills/gemini-api-dev/SKILL.md",
-      "source_location": "L300"
-    },
-    {
       "id": "tools_skills_gemini_api_dev_skill_managed_agents",
       "label": "Managed Agents",
       "_origin": "ast",
@@ -16414,66 +15927,6 @@
       "norm_label": "python",
       "source_file": "tools/skills/gemini-api-dev/SKILL.md",
       "source_location": "L63"
-    },
-    {
-      "id": "tools_skills_gemini_api_dev_skill_python_101",
-      "label": "Python",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "Gemini API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "python",
-      "source_file": "tools/skills/gemini-api-dev/SKILL.md",
-      "source_location": "L101"
-    },
-    {
-      "id": "tools_skills_gemini_api_dev_skill_python_134",
-      "label": "Python",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "Gemini API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "python",
-      "source_file": "tools/skills/gemini-api-dev/SKILL.md",
-      "source_location": "L134"
-    },
-    {
-      "id": "tools_skills_gemini_api_dev_skill_python_191",
-      "label": "Python",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "Gemini API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "python",
-      "source_file": "tools/skills/gemini-api-dev/SKILL.md",
-      "source_location": "L191"
-    },
-    {
-      "id": "tools_skills_gemini_api_dev_skill_python_227",
-      "label": "Python",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "Gemini API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "python",
-      "source_file": "tools/skills/gemini-api-dev/SKILL.md",
-      "source_location": "L227"
-    },
-    {
-      "id": "tools_skills_gemini_api_dev_skill_python_286",
-      "label": "Python",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "Gemini API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "python",
-      "source_file": "tools/skills/gemini-api-dev/SKILL.md",
-      "source_location": "L286"
     },
     {
       "id": "tools_skills_gemini_api_dev_skill_quick_start",
@@ -17417,17 +16870,6 @@
       "source_location": "L163"
     },
     {
-      "id": "tools_skills_gemini_omni_flash_api_scripts_video_generate_video_rationale_177",
-      "label": "argparse type converter for validating video resolution.",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "generate_video.py",
-      "file_type": "rationale",
-      "norm_label": "argparse type converter for validating video resolution.",
-      "source_file": "tools/skills/gemini-omni-flash-api/scripts/video/generate_video.py",
-      "source_location": "L177"
-    },
-    {
       "id": "tools_skills_gemini_omni_flash_api_scripts_video_generate_video_rationale_186",
       "label": "If asset_path is a File API URI, returns it directly (normalized). If it is a\u2026",
       "_origin": "ast",
@@ -17514,6 +16956,66 @@
       "norm_label": "custom argumentparser that ensures any error output is sanitized to prevent...",
       "source_file": "tools/skills/gemini-omni-flash-api/scripts/video/generate_video.py",
       "source_location": "L582"
+    },
+    {
+      "id": "report_reconciliation_2026_09_19",
+      "label": "reconciliation-2026-09-19.md",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "reconciliation-2026-09-19.md",
+      "source_file": "report/reconciliation-2026-09-19.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "report_reconciliation_2026_09_19_1_executive_summary",
+      "label": "1. Executive Summary",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. executive summary",
+      "source_file": "report/reconciliation-2026-09-19.md",
+      "source_location": "L15"
+    },
+    {
+      "id": "report_reconciliation_2026_09_19_2_granular_reconciliation_matrix",
+      "label": "2. Granular Reconciliation Matrix",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. granular reconciliation matrix",
+      "source_file": "report/reconciliation-2026-09-19.md",
+      "source_location": "L21"
+    },
+    {
+      "id": "report_reconciliation_2026_09_19_3_epistemic_certification",
+      "label": "3. Epistemic Certification",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. epistemic certification",
+      "source_file": "report/reconciliation-2026-09-19.md",
+      "source_location": "L37"
+    },
+    {
+      "id": "report_reconciliation_2026_09_19_comprehensive_multi_model_ecosystem_reconciliation_report_2026_09_19",
+      "label": "Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19)",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "comprehensive multi-model ecosystem reconciliation report (2026-09-19)",
+      "source_file": "report/reconciliation-2026-09-19.md",
+      "source_location": "L1"
     },
     {
       "id": "research_architectures_arch_spec_003_headless_orchestration_substrate",
@@ -17622,6 +17124,126 @@
       "norm_label": "5. architectural invariants enforced",
       "source_file": "research/architectures/ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md",
       "source_location": "L92"
+    },
+    {
+      "id": "research_architectures_arch_spec_007_environment_reproducibility_bootstrap",
+      "label": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "arch-spec-007-environment-reproducibility-bootstrap.md",
+      "source_file": "research/architectures/ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_1_executive_summary_problem_statement",
+      "label": "1. Executive Summary & Problem Statement",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. executive summary & problem statement",
+      "source_file": "research/architectures/ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "source_location": "L17"
+    },
+    {
+      "id": "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_2_environment_architecture_customization_layers",
+      "label": "2. Environment Architecture & Customization Layers",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. environment architecture & customization layers",
+      "source_file": "research/architectures/ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "source_location": "L25"
+    },
+    {
+      "id": "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_3_the_1_click_bootstrap_protocol_bootstrap_environment_ps1",
+      "label": "3. The 1-Click Bootstrap Protocol (`bootstrap-environment.ps1`)",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. the 1-click bootstrap protocol (`bootstrap-environment.ps1`)",
+      "source_file": "research/architectures/ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "source_location": "L58"
+    },
+    {
+      "id": "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_4_skills_taxonomy_registry_reference",
+      "label": "4. Skills Taxonomy & Registry Reference",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. skills taxonomy & registry reference",
+      "source_file": "research/architectures/ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "source_location": "L82"
+    },
+    {
+      "id": "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_5_verification_acceptance_criteria",
+      "label": "5. Verification & Acceptance Criteria",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5. verification & acceptance criteria",
+      "source_file": "research/architectures/ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "source_location": "L94"
+    },
+    {
+      "id": "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_step_1_clone_repository",
+      "label": "Step 1: Clone Repository",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "step 1: clone repository",
+      "source_file": "research/architectures/ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "source_location": "L62"
+    },
+    {
+      "id": "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_step_2_run_bootstrap_engine",
+      "label": "Step 2: Run Bootstrap Engine",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "step 2: run bootstrap engine",
+      "source_file": "research/architectures/ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "source_location": "L68"
+    },
+    {
+      "id": "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_what_the_bootstrap_engine_executes",
+      "label": "What the Bootstrap Engine Executes:",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "what the bootstrap engine executes:",
+      "source_file": "research/architectures/ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "source_location": "L73"
+    },
+    {
+      "id": "research_invariants_inv_wsr_002",
+      "label": "INV-WSR-002.md",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "inv-wsr-002.md",
+      "source_file": "research/invariants/INV-WSR-002.md",
+      "source_location": "L1"
     },
     {
       "id": "templates_meeting_note",
@@ -18852,51 +18474,63 @@
       "source_location": "L1"
     },
     {
-      "id": "research_invariants_inv_mem_001_1_the_energy_chasm_invariant",
-      "label": "1. The Energy Chasm Invariant",
+      "id": "research_decisions_dec_001_memory_stratification",
+      "label": "DEC-001-MEMORY-STRATIFICATION.md",
+      "_origin": "ast",
+      "community": 214,
+      "community_name": "\ud83d\udd2c Invariant Spec: INV-MEM-001 (The Von Neumann Chasm & Coalescing Bounds)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "dec-001-memory-stratification.md",
+      "source_file": "research/decisions/DEC-001-MEMORY-STRATIFICATION.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "research_decisions_dec_001_memory_stratification_1_context_problem",
+      "label": "1. Context & Problem",
       "_origin": "ast",
       "community": 214,
       "community_name": "\ud83d\udd2c Invariant Spec: INV-MEM-001 (The Von Neumann Chasm & Coalescing Bounds)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "1. the energy chasm invariant",
-      "source_file": "research/invariants/INV-MEM-001.md",
+      "norm_label": "1. context & problem",
+      "source_file": "research/decisions/DEC-001-MEMORY-STRATIFICATION.md",
       "source_location": "L17"
     },
     {
-      "id": "research_invariants_inv_mem_001_2_the_uncoalesced_burst_penalty_invariant",
-      "label": "2. The Uncoalesced Burst Penalty Invariant",
+      "id": "research_decisions_dec_001_memory_stratification_2_decision",
+      "label": "2. Decision",
       "_origin": "ast",
       "community": 214,
       "community_name": "\ud83d\udd2c Invariant Spec: INV-MEM-001 (The Von Neumann Chasm & Coalescing Bounds)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "2. the uncoalesced burst penalty invariant",
-      "source_file": "research/invariants/INV-MEM-001.md",
-      "source_location": "L25"
+      "norm_label": "2. decision",
+      "source_file": "research/decisions/DEC-001-MEMORY-STRATIFICATION.md",
+      "source_location": "L27"
     },
     {
-      "id": "research_invariants_inv_mem_001_3_the_isolated_scalar_reduction_boundary_bound",
-      "label": "3. The Isolated Scalar-Reduction Boundary Bound",
+      "id": "research_decisions_dec_001_memory_stratification_3_consequences_empirical_verification",
+      "label": "3. Consequences & Empirical Verification",
       "_origin": "ast",
       "community": 214,
       "community_name": "\ud83d\udd2c Invariant Spec: INV-MEM-001 (The Von Neumann Chasm & Coalescing Bounds)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "3. the isolated scalar-reduction boundary bound",
-      "source_file": "research/invariants/INV-MEM-001.md",
-      "source_location": "L39"
+      "norm_label": "3. consequences & empirical verification",
+      "source_file": "research/decisions/DEC-001-MEMORY-STRATIFICATION.md",
+      "source_location": "L41"
     },
     {
-      "id": "research_invariants_inv_mem_001_invariant_spec_inv_mem_001_the_von_neumann_chasm_coalescing_bounds",
-      "label": "\ud83d\udd2c Invariant Spec: INV-MEM-001 (The Von Neumann Chasm & Coalescing Bounds)",
+      "id": "research_decisions_dec_001_memory_stratification_decision_record_dec_001_memory_stratification_retrieval_pruning",
+      "label": "\ud83c\udfdb\ufe0f DECISION RECORD: DEC-001 (Memory Stratification & Retrieval Pruning)",
       "_origin": "ast",
       "community": 214,
       "community_name": "\ud83d\udd2c Invariant Spec: INV-MEM-001 (The Von Neumann Chasm & Coalescing Bounds)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83d\udd2c invariant spec: inv-mem-001 (the von neumann chasm & coalescing bounds)",
-      "source_file": "research/invariants/INV-MEM-001.md",
+      "norm_label": "\ud83c\udfdb\ufe0f decision record: dec-001 (memory stratification & retrieval pruning)",
+      "source_file": "research/decisions/DEC-001-MEMORY-STRATIFICATION.md",
       "source_location": "L1"
     },
     {
@@ -19379,66 +19013,6 @@
       "source_location": "L76"
     },
     {
-      "id": "tools_skills_gemini_interactions_api_skill_javascript_typescript_116",
-      "label": "JavaScript/TypeScript",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Gemini Interactions API Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "javascript/typescript",
-      "source_file": "tools/skills/gemini-interactions-api/SKILL.md",
-      "source_location": "L116"
-    },
-    {
-      "id": "tools_skills_gemini_interactions_api_skill_javascript_typescript_154",
-      "label": "JavaScript/TypeScript",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Gemini Interactions API Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "javascript/typescript",
-      "source_file": "tools/skills/gemini-interactions-api/SKILL.md",
-      "source_location": "L154"
-    },
-    {
-      "id": "tools_skills_gemini_interactions_api_skill_javascript_typescript_207",
-      "label": "JavaScript/TypeScript",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Gemini Interactions API Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "javascript/typescript",
-      "source_file": "tools/skills/gemini-interactions-api/SKILL.md",
-      "source_location": "L207"
-    },
-    {
-      "id": "tools_skills_gemini_interactions_api_skill_javascript_typescript_254",
-      "label": "JavaScript/TypeScript",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Gemini Interactions API Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "javascript/typescript",
-      "source_file": "tools/skills/gemini-interactions-api/SKILL.md",
-      "source_location": "L254"
-    },
-    {
-      "id": "tools_skills_gemini_interactions_api_skill_javascript_typescript_300",
-      "label": "JavaScript/TypeScript",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Gemini Interactions API Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "javascript/typescript",
-      "source_file": "tools/skills/gemini-interactions-api/SKILL.md",
-      "source_location": "L300"
-    },
-    {
       "id": "tools_skills_gemini_interactions_api_skill_managed_agents",
       "label": "Managed Agents",
       "_origin": "ast",
@@ -19461,66 +19035,6 @@
       "norm_label": "python",
       "source_file": "tools/skills/gemini-interactions-api/SKILL.md",
       "source_location": "L63"
-    },
-    {
-      "id": "tools_skills_gemini_interactions_api_skill_python_101",
-      "label": "Python",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Gemini Interactions API Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "python",
-      "source_file": "tools/skills/gemini-interactions-api/SKILL.md",
-      "source_location": "L101"
-    },
-    {
-      "id": "tools_skills_gemini_interactions_api_skill_python_134",
-      "label": "Python",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Gemini Interactions API Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "python",
-      "source_file": "tools/skills/gemini-interactions-api/SKILL.md",
-      "source_location": "L134"
-    },
-    {
-      "id": "tools_skills_gemini_interactions_api_skill_python_191",
-      "label": "Python",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Gemini Interactions API Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "python",
-      "source_file": "tools/skills/gemini-interactions-api/SKILL.md",
-      "source_location": "L191"
-    },
-    {
-      "id": "tools_skills_gemini_interactions_api_skill_python_227",
-      "label": "Python",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Gemini Interactions API Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "python",
-      "source_file": "tools/skills/gemini-interactions-api/SKILL.md",
-      "source_location": "L227"
-    },
-    {
-      "id": "tools_skills_gemini_interactions_api_skill_python_286",
-      "label": "Python",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Gemini Interactions API Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "python",
-      "source_file": "tools/skills/gemini-interactions-api/SKILL.md",
-      "source_location": "L286"
     },
     {
       "id": "tools_skills_gemini_interactions_api_skill_quick_start",
@@ -19919,6 +19433,54 @@
       "source_location": "L484"
     },
     {
+      "id": "research_experiments_fleet_001_experiment_log_fleet_001_single_task_interruption_state_migration_benchmark",
+      "label": "Experiment Log: FLEET-001 (Single-Task Interruption & State Migration Benchmark)",
+      "_origin": "ast",
+      "community": 226,
+      "community_name": "Community 226",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "experiment log: fleet-001 (single-task interruption & state migration benchmark)",
+      "source_file": "research/experiments/FLEET-001.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "research_experiments_fleet_001_metrics_logged",
+      "label": "Metrics Logged",
+      "_origin": "ast",
+      "community": 226,
+      "community_name": "Community 226",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "metrics logged",
+      "source_file": "research/experiments/FLEET-001.md",
+      "source_location": "L21"
+    },
+    {
+      "id": "research_experiments_fleet_001_task_specification",
+      "label": "Task Specification",
+      "_origin": "ast",
+      "community": 226,
+      "community_name": "Community 226",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task specification",
+      "source_file": "research/experiments/FLEET-001.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "research_experiments_fleet_001_verification_checklist",
+      "label": "Verification Checklist",
+      "_origin": "ast",
+      "community": 226,
+      "community_name": "Community 226",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "verification checklist",
+      "source_file": "research/experiments/FLEET-001.md",
+      "source_location": "L14"
+    },
+    {
       "id": "research_experiments_inv_template",
       "label": "INV-template.md",
       "_origin": "ast",
@@ -20055,6 +19617,18 @@
       "source_location": "L21"
     },
     {
+      "id": "report_repository_audit_1_executive_summary",
+      "label": "1. Executive Summary",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "2. Granular Claims Audit Register",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. executive summary",
+      "source_file": "report/repository-audit.md",
+      "source_location": "L15"
+    },
+    {
       "id": "report_repository_audit_2_granular_claims_audit_register",
       "label": "2. Granular Claims Audit Register",
       "_origin": "ast",
@@ -20065,6 +19639,42 @@
       "norm_label": "2. granular claims audit register",
       "source_file": "report/repository-audit.md",
       "source_location": "L39"
+    },
+    {
+      "id": "report_repository_audit_3_corrective_actions_summary",
+      "label": "3. Corrective Actions Summary",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "2. Granular Claims Audit Register",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. corrective actions summary",
+      "source_file": "report/repository-audit.md",
+      "source_location": "L212"
+    },
+    {
+      "id": "report_repository_audit_comprehensive_repository_epistemic_claims_audit",
+      "label": "Comprehensive Repository Epistemic & Claims Audit",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "2. Granular Claims Audit Register",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "comprehensive repository epistemic & claims audit",
+      "source_file": "report/repository-audit.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "report_repository_audit_epistemic_claim_type_distribution",
+      "label": "Epistemic Claim Type Distribution",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "2. Granular Claims Audit Register",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "epistemic claim type distribution",
+      "source_file": "report/repository-audit.md",
+      "source_location": "L19"
     },
     {
       "id": "report_repository_audit_item_01_hardware_interrupt_gating_microcontroller_fall_detection",
@@ -20663,6 +20273,42 @@
       "norm_label": "dependency-free validation for the canonical ecosystem verification manifest.",
       "source_file": "tools/validate_ecosystem.py",
       "source_location": "L1"
+    },
+    {
+      "id": "research_fellows_readme_brainstorm_research_laboratory_fellows_contributors_directory",
+      "label": "Brainstorm Research Laboratory \u2014 Fellows & Contributors Directory",
+      "_origin": "ast",
+      "community": 239,
+      "community_name": "Community 239",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "brainstorm research laboratory \u2014 fellows & contributors directory",
+      "source_file": "research/fellows/README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "research_fellows_readme_contributor_ranks_progression",
+      "label": "Contributor Ranks & Progression",
+      "_origin": "ast",
+      "community": 239,
+      "community_name": "Community 239",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "contributor ranks & progression",
+      "source_file": "research/fellows/README.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "research_fellows_readme_onboarding_procedure",
+      "label": "Onboarding Procedure",
+      "_origin": "ast",
+      "community": 239,
+      "community_name": "Community 239",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "onboarding procedure",
+      "source_file": "research/fellows/README.md",
+      "source_location": "L21"
     },
     {
       "id": "research_experiments_bmk_memory_001",
@@ -22799,18 +22445,6 @@
       "source_location": "L65"
     },
     {
-      "id": "tools_skills_mcp_integration_skill_mcp_server_types_479",
-      "label": "MCP Server Types",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "MCP Integration for Claude Code Plugins",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "mcp server types",
-      "source_file": "tools/skills/mcp-integration/SKILL.md",
-      "source_location": "L479"
-    },
-    {
       "id": "tools_skills_mcp_integration_skill_mcp_tool_naming",
       "label": "MCP Tool Naming",
       "_origin": "ast",
@@ -23176,6 +22810,30 @@
       "source_location": "L1"
     },
     {
+      "id": "profile",
+      "label": "PROFILE.md",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "profile.md",
+      "source_file": "PROFILE.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "readme",
+      "label": "README.md",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "readme.md",
+      "source_file": "README.md",
+      "source_location": "L1"
+    },
+    {
       "id": "report_economic_model",
       "label": "economic-model.md",
       "_origin": "ast",
@@ -23185,6 +22843,18 @@
       "node_kind": "page",
       "norm_label": "economic-model.md",
       "source_file": "report/economic-model.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "report_quantitative_claims_audit",
+      "label": "quantitative-claims-audit.md",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "quantitative-claims-audit.md",
+      "source_file": "report/quantitative-claims-audit.md",
       "source_location": "L1"
     },
     {
@@ -23200,52 +22870,112 @@
       "source_location": "L1"
     },
     {
-      "id": "report_repository_audit_1_executive_summary",
-      "label": "1. Executive Summary",
+      "id": "research_architectures_arch_spec_001_ecie_compute_memory",
+      "label": "ARCH-SPEC-001-ECIE-COMPUTE-MEMORY.md",
       "_origin": "ast",
       "community": 31,
       "community_name": "ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md",
       "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1. executive summary",
-      "source_file": "report/repository-audit.md",
-      "source_location": "L15"
-    },
-    {
-      "id": "report_repository_audit_3_corrective_actions_summary",
-      "label": "3. Corrective Actions Summary",
-      "_origin": "ast",
-      "community": 31,
-      "community_name": "ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3. corrective actions summary",
-      "source_file": "report/repository-audit.md",
-      "source_location": "L212"
-    },
-    {
-      "id": "report_repository_audit_comprehensive_repository_epistemic_claims_audit",
-      "label": "Comprehensive Repository Epistemic & Claims Audit",
-      "_origin": "ast",
-      "community": 31,
-      "community_name": "ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "comprehensive repository epistemic & claims audit",
-      "source_file": "report/repository-audit.md",
+      "node_kind": "page",
+      "norm_label": "arch-spec-001-ecie-compute-memory.md",
+      "source_file": "research/architectures/ARCH-SPEC-001-ECIE-COMPUTE-MEMORY.md",
       "source_location": "L1"
     },
     {
-      "id": "report_repository_audit_epistemic_claim_type_distribution",
-      "label": "Epistemic Claim Type Distribution",
+      "id": "research_daily_2026_09_19",
+      "label": "2026-09-19.md",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-09-19.md",
+      "source_file": "research/daily/2026-09-19.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "research_daily_2026_09_23",
+      "label": "2026-09-23.md",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-09-23.md",
+      "source_file": "research/daily/2026-09-23.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "research_daily_2026_09_23_1_schedule_priorities",
+      "label": "1. Schedule & Priorities",
       "_origin": "ast",
       "community": 31,
       "community_name": "ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "epistemic claim type distribution",
-      "source_file": "report/repository-audit.md",
+      "norm_label": "1. schedule & priorities",
+      "source_file": "research/daily/2026-09-23.md",
+      "source_location": "L8"
+    },
+    {
+      "id": "research_daily_2026_09_23_2026_09_23_daily_log",
+      "label": "2026-09-23 \u2014 Daily Log",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2026-09-23 \u2014 daily log",
+      "source_file": "research/daily/2026-09-23.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "research_daily_2026_09_23_2_active_projects_progress",
+      "label": "2. Active Projects Progress",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. active projects progress",
+      "source_file": "research/daily/2026-09-23.md",
+      "source_location": "L15"
+    },
+    {
+      "id": "research_daily_2026_09_23_3_daily_learnings_conceptual_nodes",
+      "label": "3. Daily Learnings & Conceptual Nodes",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. daily learnings & conceptual nodes",
+      "source_file": "research/daily/2026-09-23.md",
       "source_location": "L19"
+    },
+    {
+      "id": "research_daily_2026_09_23_4_tomorrow_s_context_agent_primer",
+      "label": "4. Tomorrow's Context (Agent Primer)",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. tomorrow's context (agent primer)",
+      "source_file": "research/daily/2026-09-23.md",
+      "source_location": "L23"
+    },
+    {
+      "id": "research_experiments_fleet_001",
+      "label": "FLEET-001.md",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "fleet-001.md",
+      "source_file": "research/experiments/FLEET-001.md",
+      "source_location": "L1"
     },
     {
       "id": "research_experiments_fleet_003",
@@ -23281,6 +23011,42 @@
       "node_kind": "page",
       "norm_label": "inv-bmk-001.md",
       "source_file": "research/experiments/INV-BMK-001.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "research_notes_2026_09_19_agentic_ai_industry_ayush_shah",
+      "label": "2026-09-19_Agentic-AI-Industry-Ayush-Shah.md",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-09-19_agentic-ai-industry-ayush-shah.md",
+      "source_file": "research/notes/2026-09-19_Agentic-AI-Industry-Ayush-Shah.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "schemas_capability_ontology",
+      "label": "capability-ontology.md",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "capability-ontology.md",
+      "source_file": "schemas/capability-ontology.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "templates_daily_note",
+      "label": "daily-note.md",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "ECOSYSTEM_ARCHITECTURAL_BRAINSTORM.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "daily-note.md",
+      "source_file": "templates/daily-note.md",
       "source_location": "L1"
     },
     {
@@ -26527,112 +26293,48 @@
       "source_location": "L101"
     },
     {
-      "id": "research_architectures_arch_spec_007_environment_reproducibility_bootstrap",
-      "label": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
+      "id": "sim_nepal_law_harvester_rationale_216",
+      "label": "Writes data to a temporary file (.tmp), flushes and fsyncs to physical disk,\u2026",
       "_origin": "ast",
       "community": 44,
       "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "arch-spec-007-environment-reproducibility-bootstrap.md",
-      "source_file": "research/architectures/ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
-      "source_location": "L1"
+      "file_type": "rationale",
+      "norm_label": "writes data to a temporary file (.tmp), flushes and fsyncs to physical disk,...",
+      "source_file": "sim/nepal_law_harvester.py",
+      "source_location": "L216"
     },
     {
-      "id": "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_1_executive_summary_problem_statement",
-      "label": "1. Executive Summary & Problem Statement",
+      "id": "sim_nepal_law_harvester_rationale_60",
+      "label": "Multidimensional statutory temporal grounding. Distinguishes ingestion\u2026",
       "_origin": "ast",
       "community": 44,
       "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1. executive summary & problem statement",
-      "source_file": "research/architectures/ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
-      "source_location": "L17"
+      "file_type": "rationale",
+      "norm_label": "multidimensional statutory temporal grounding. distinguishes ingestion...",
+      "source_file": "sim/nepal_law_harvester.py",
+      "source_location": "L60"
     },
     {
-      "id": "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_2_environment_architecture_customization_layers",
-      "label": "2. Environment Architecture & Customization Layers",
+      "id": "sim_nepal_law_harvester_rationale_834",
+      "label": "Polite, safety-guarded crawler and ingestion engine for Nepal's statutory legal\u2026",
       "_origin": "ast",
       "community": 44,
       "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2. environment architecture & customization layers",
-      "source_file": "research/architectures/ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
-      "source_location": "L25"
+      "file_type": "rationale",
+      "norm_label": "polite, safety-guarded crawler and ingestion engine for nepal's statutory legal...",
+      "source_file": "sim/nepal_law_harvester.py",
+      "source_location": "L834"
     },
     {
-      "id": "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_3_the_1_click_bootstrap_protocol_bootstrap_environment_ps1",
-      "label": "3. The 1-Click Bootstrap Protocol (`bootstrap-environment.ps1`)",
+      "id": "sim_nepal_law_harvester_rationale_867",
+      "label": "Executes atomic storage with post-write disk read verification, normalizes\u2026",
       "_origin": "ast",
       "community": 44,
       "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3. the 1-click bootstrap protocol (`bootstrap-environment.ps1`)",
-      "source_file": "research/architectures/ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
-      "source_location": "L58"
-    },
-    {
-      "id": "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_4_skills_taxonomy_registry_reference",
-      "label": "4. Skills Taxonomy & Registry Reference",
-      "_origin": "ast",
-      "community": 44,
-      "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "4. skills taxonomy & registry reference",
-      "source_file": "research/architectures/ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
-      "source_location": "L82"
-    },
-    {
-      "id": "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_5_verification_acceptance_criteria",
-      "label": "5. Verification & Acceptance Criteria",
-      "_origin": "ast",
-      "community": 44,
-      "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "5. verification & acceptance criteria",
-      "source_file": "research/architectures/ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
-      "source_location": "L94"
-    },
-    {
-      "id": "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_step_1_clone_repository",
-      "label": "Step 1: Clone Repository",
-      "_origin": "ast",
-      "community": 44,
-      "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "step 1: clone repository",
-      "source_file": "research/architectures/ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
-      "source_location": "L62"
-    },
-    {
-      "id": "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_step_2_run_bootstrap_engine",
-      "label": "Step 2: Run Bootstrap Engine",
-      "_origin": "ast",
-      "community": 44,
-      "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "step 2: run bootstrap engine",
-      "source_file": "research/architectures/ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
-      "source_location": "L68"
-    },
-    {
-      "id": "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_what_the_bootstrap_engine_executes",
-      "label": "What the Bootstrap Engine Executes:",
-      "_origin": "ast",
-      "community": 44,
-      "community_name": "ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "what the bootstrap engine executes:",
-      "source_file": "research/architectures/ARCH-SPEC-007-ENVIRONMENT-REPRODUCIBILITY-BOOTSTRAP.md",
-      "source_location": "L73"
+      "file_type": "rationale",
+      "norm_label": "executes atomic storage with post-write disk read verification, normalizes...",
+      "source_file": "sim/nepal_law_harvester.py",
+      "source_location": "L867"
     },
     {
       "id": "profile_1_engineering_identity",
@@ -29513,18 +29215,6 @@
       "source_location": "L11"
     },
     {
-      "id": "report_quantitative_claims_audit",
-      "label": "quantitative-claims-audit.md",
-      "_origin": "ast",
-      "community": 57,
-      "community_name": "2. Quantitative Claims Register",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "quantitative-claims-audit.md",
-      "source_file": "report/quantitative-claims-audit.md",
-      "source_location": "L1"
-    },
-    {
       "id": "report_quantitative_claims_audit_10_central_technical_asset_replacement_valuation",
       "label": "10. Central Technical Asset Replacement Valuation",
       "_origin": "ast",
@@ -29741,6 +29431,22 @@
       "source_location": "L1"
     },
     {
+      "id": "tools_skills_split_to_prs_skill",
+      "label": "split-to-prs/SKILL.md",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "skills/README.md",
+      "file_type": "document",
+      "frontmatter": {
+        "name": "split-to-prs",
+        "description": "&gt;-"
+      },
+      "node_kind": "page",
+      "norm_label": "split-to-prs/skill.md",
+      "source_file": "tools/skills/split-to-prs/SKILL.md",
+      "source_location": "L1"
+    },
+    {
       "id": "tools_skills_ui_plugin_navigation_skill",
       "label": "ui-plugin-navigation/SKILL.md",
       "_origin": "ast",
@@ -29755,6 +29461,22 @@
       "node_kind": "page",
       "norm_label": "ui-plugin-navigation/skill.md",
       "source_file": "tools/skills/ui-plugin-navigation/SKILL.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "tools_skills_gemini_api_dev_skill",
+      "label": "gemini-api-dev/SKILL.md",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "skills/README.md",
+      "file_type": "document",
+      "frontmatter": {
+        "name": "gemini-api-dev",
+        "description": "Use this skill when writing code that calls the Gemini API for text generation, multi-turn chat, multimodal understanding, image generation, video generation, streaming responses, background research tasks, function calling, structured output, or migrating from the old generateContent API. Covers SDK usage and best practices for Gemini models and agents in Python and TypeScript."
+      },
+      "node_kind": "page",
+      "norm_label": "gemini-api-dev/skill.md",
+      "source_file": "tools/skills/gemini-api-dev/SKILL.md",
       "source_location": "L1"
     },
     {
@@ -29804,6 +29526,78 @@
       "norm_label": "\ud83d\udd04 synchronization protocol",
       "source_file": "tools/skills/README.md",
       "source_location": "L63"
+    },
+    {
+      "id": "tools_skills_split_to_prs_skill_1_check_the_state",
+      "label": "1. Check the state",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "skills/README.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. check the state",
+      "source_file": "tools/skills/split-to-prs/SKILL.md",
+      "source_location": "L18"
+    },
+    {
+      "id": "tools_skills_split_to_prs_skill_2_propose_the_split",
+      "label": "2. Propose the split",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "skills/README.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. propose the split",
+      "source_file": "tools/skills/split-to-prs/SKILL.md",
+      "source_location": "L24"
+    },
+    {
+      "id": "tools_skills_split_to_prs_skill_3_execute_the_split",
+      "label": "3. Execute the split",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "skills/README.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. execute the split",
+      "source_file": "tools/skills/split-to-prs/SKILL.md",
+      "source_location": "L34"
+    },
+    {
+      "id": "tools_skills_split_to_prs_skill_4_report_back",
+      "label": "4. Report back",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "skills/README.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. report back",
+      "source_file": "tools/skills/split-to-prs/SKILL.md",
+      "source_location": "L47"
+    },
+    {
+      "id": "tools_skills_split_to_prs_skill_hard_rules",
+      "label": "Hard rules",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "skills/README.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "hard rules",
+      "source_file": "tools/skills/split-to-prs/SKILL.md",
+      "source_location": "L11"
+    },
+    {
+      "id": "tools_skills_split_to_prs_skill_split_to_prs",
+      "label": "Split to PRs",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "skills/README.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "split to prs",
+      "source_file": "tools/skills/split-to-prs/SKILL.md",
+      "source_location": "L7"
     },
     {
       "id": "tools_skills_ui_plugin_navigation_skill_constraints_tips",
@@ -30648,17 +30442,6 @@
       "source_location": "L436"
     },
     {
-      "id": "sim_nepal_law_harvester_rationale_834",
-      "label": "Polite, safety-guarded crawler and ingestion engine for Nepal's statutory legal\u2026",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "NepalLawHarvesterTests",
-      "file_type": "rationale",
-      "norm_label": "polite, safety-guarded crawler and ingestion engine for nepal's statutory legal...",
-      "source_file": "sim/nepal_law_harvester.py",
-      "source_location": "L834"
-    },
-    {
       "id": "sim_nepal_law_harvester_rationale_859",
       "label": "Applies randomized jitter delay between manual requests.",
       "_origin": "ast",
@@ -31130,6 +30913,30 @@
       "source_location": "L1"
     },
     {
+      "id": "research_architectures_arch_rfc_002_multi_model_council",
+      "label": "ARCH-RFC-002-MULTI-MODEL-COUNCIL.md",
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "DEC-003-MAIN-BRANCH-ENFORCEMENT-ALIGNMENT.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "arch-rfc-002-multi-model-council.md",
+      "source_file": "research/architectures/ARCH-RFC-002-MULTI-MODEL-COUNCIL.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "research_architectures_arch_rfc_003_capstone_defense_standard",
+      "label": "ARCH-RFC-003-CAPSTONE-DEFENSE-STANDARD.md",
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "DEC-003-MAIN-BRANCH-ENFORCEMENT-ALIGNMENT.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "arch-rfc-003-capstone-defense-standard.md",
+      "source_file": "research/architectures/ARCH-RFC-003-CAPSTONE-DEFENSE-STANDARD.md",
+      "source_location": "L1"
+    },
+    {
       "id": "research_architectures_arch_rfc_004_workflow_externalization_freeze",
       "label": "ARCH-RFC-004-WORKFLOW-EXTERNALIZATION-FREEZE.md",
       "_origin": "ast",
@@ -31142,64 +30949,64 @@
       "source_location": "L1"
     },
     {
-      "id": "research_decisions_dec_001_memory_stratification",
-      "label": "DEC-001-MEMORY-STRATIFICATION.md",
+      "id": "research_architectures_readme",
+      "label": "architectures/README.md",
       "_origin": "ast",
       "community": 64,
       "community_name": "DEC-003-MAIN-BRANCH-ENFORCEMENT-ALIGNMENT.md",
       "file_type": "document",
       "node_kind": "page",
-      "norm_label": "dec-001-memory-stratification.md",
-      "source_file": "research/decisions/DEC-001-MEMORY-STRATIFICATION.md",
+      "norm_label": "architectures/readme.md",
+      "source_file": "research/architectures/README.md",
       "source_location": "L1"
     },
     {
-      "id": "research_decisions_dec_001_memory_stratification_1_context_problem",
-      "label": "1. Context & Problem",
+      "id": "research_architectures_readme_active_architectural_charters",
+      "label": "Active Architectural Charters",
       "_origin": "ast",
       "community": 64,
       "community_name": "DEC-003-MAIN-BRANCH-ENFORCEMENT-ALIGNMENT.md",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "1. context & problem",
-      "source_file": "research/decisions/DEC-001-MEMORY-STRATIFICATION.md",
-      "source_location": "L17"
+      "norm_label": "active architectural charters",
+      "source_file": "research/architectures/README.md",
+      "source_location": "L8"
     },
     {
-      "id": "research_decisions_dec_001_memory_stratification_2_decision",
-      "label": "2. Decision",
+      "id": "research_architectures_readme_methodological_invariants",
+      "label": "Methodological Invariants",
       "_origin": "ast",
       "community": 64,
       "community_name": "DEC-003-MAIN-BRANCH-ENFORCEMENT-ALIGNMENT.md",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "2. decision",
-      "source_file": "research/decisions/DEC-001-MEMORY-STRATIFICATION.md",
-      "source_location": "L27"
+      "norm_label": "methodological invariants",
+      "source_file": "research/architectures/README.md",
+      "source_location": "L26"
     },
     {
-      "id": "research_decisions_dec_001_memory_stratification_3_consequences_empirical_verification",
-      "label": "3. Consequences & Empirical Verification",
+      "id": "research_architectures_readme_research_architectures_hub",
+      "label": "\ud83c\udfdb\ufe0f Research Architectures Hub",
       "_origin": "ast",
       "community": 64,
       "community_name": "DEC-003-MAIN-BRANCH-ENFORCEMENT-ALIGNMENT.md",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "3. consequences & empirical verification",
-      "source_file": "research/decisions/DEC-001-MEMORY-STRATIFICATION.md",
-      "source_location": "L41"
-    },
-    {
-      "id": "research_decisions_dec_001_memory_stratification_decision_record_dec_001_memory_stratification_retrieval_pruning",
-      "label": "\ud83c\udfdb\ufe0f DECISION RECORD: DEC-001 (Memory Stratification & Retrieval Pruning)",
-      "_origin": "ast",
-      "community": 64,
-      "community_name": "DEC-003-MAIN-BRANCH-ENFORCEMENT-ALIGNMENT.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\ud83c\udfdb\ufe0f decision record: dec-001 (memory stratification & retrieval pruning)",
-      "source_file": "research/decisions/DEC-001-MEMORY-STRATIFICATION.md",
+      "norm_label": "\ud83c\udfdb\ufe0f research architectures hub",
+      "source_file": "research/architectures/README.md",
       "source_location": "L1"
+    },
+    {
+      "id": "research_architectures_readme_verbatim_provenance_logs",
+      "label": "\ud83c\udf99\ufe0f Verbatim Provenance Logs",
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "DEC-003-MAIN-BRANCH-ENFORCEMENT-ALIGNMENT.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83c\udf99\ufe0f verbatim provenance logs",
+      "source_file": "research/architectures/README.md",
+      "source_location": "L33"
     },
     {
       "id": "research_decisions_dec_002_personal_rd_capstone_boundary",
@@ -32178,6 +31985,17 @@
       "source_location": "L203"
     },
     {
+      "id": "datetime",
+      "label": "datetime",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "nepal_law_harvester.py",
+      "file_type": "code",
+      "norm_label": "datetime",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "sim_nepal_law_harvester",
       "label": "nepal_law_harvester.py",
       "_origin": "ast",
@@ -32187,6 +32005,28 @@
       "norm_label": "nepal_law_harvester.py",
       "source_file": "sim/nepal_law_harvester.py",
       "source_location": "L1"
+    },
+    {
+      "id": "sim_nepali_calendar",
+      "label": "nepali_calendar.py",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "nepal_law_harvester.py",
+      "file_type": "code",
+      "norm_label": "nepali_calendar.py",
+      "source_file": "sim/nepali_calendar.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "sim_nepali_calendar_py_any",
+      "label": "Any",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "nepal_law_harvester.py",
+      "file_type": "code",
+      "norm_label": "any",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "sim_test_nepal_law_harvester",
@@ -32266,37 +32106,26 @@
       "source_location": "L206"
     },
     {
-      "id": "sim_nepal_law_harvester_rationale_216",
-      "label": "Writes data to a temporary file (.tmp), flushes and fsyncs to physical disk,\u2026",
+      "id": "sim_nepali_calendar_rationale_1",
+      "label": "nepali_calendar.py ------------------ Deterministic 125-Year Bikram Sambat\u2026",
       "_origin": "ast",
       "community": 7,
       "community_name": "nepal_law_harvester.py",
       "file_type": "rationale",
-      "norm_label": "writes data to a temporary file (.tmp), flushes and fsyncs to physical disk,...",
-      "source_file": "sim/nepal_law_harvester.py",
-      "source_location": "L216"
+      "norm_label": "nepali_calendar.py ------------------ deterministic 125-year bikram sambat...",
+      "source_file": "sim/nepali_calendar.py",
+      "source_location": "L1"
     },
     {
-      "id": "sim_nepal_law_harvester_rationale_60",
-      "label": "Multidimensional statutory temporal grounding. Distinguishes ingestion\u2026",
+      "id": "sim_nepali_calendar_rationale_154",
+      "label": "Converts Gregorian (A.D.) date to Bikram Sambat (B.S.). Returns (bs_year,\u2026",
       "_origin": "ast",
       "community": 7,
       "community_name": "nepal_law_harvester.py",
       "file_type": "rationale",
-      "norm_label": "multidimensional statutory temporal grounding. distinguishes ingestion...",
-      "source_file": "sim/nepal_law_harvester.py",
-      "source_location": "L60"
-    },
-    {
-      "id": "sim_nepal_law_harvester_rationale_867",
-      "label": "Executes atomic storage with post-write disk read verification, normalizes\u2026",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "nepal_law_harvester.py",
-      "file_type": "rationale",
-      "norm_label": "executes atomic storage with post-write disk read verification, normalizes...",
-      "source_file": "sim/nepal_law_harvester.py",
-      "source_location": "L867"
+      "norm_label": "converts gregorian (a.d.) date to bikram sambat (b.s.). returns (bs_year,...",
+      "source_file": "sim/nepali_calendar.py",
+      "source_location": "L154"
     },
     {
       "id": "sim_nepali_calendar_rationale_181",
@@ -32308,6 +32137,28 @@
       "norm_label": "converts bikram sambat (b.s.) date to gregorian (a.d.). returns (ad_year,...",
       "source_file": "sim/nepali_calendar.py",
       "source_location": "L181"
+    },
+    {
+      "id": "sim_nepali_calendar_rationale_203",
+      "label": "Generates standardized dual-calendar metadata dictionary for legal ingestion.",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "nepal_law_harvester.py",
+      "file_type": "rationale",
+      "norm_label": "generates standardized dual-calendar metadata dictionary for legal ingestion.",
+      "source_file": "sim/nepali_calendar.py",
+      "source_location": "L203"
+    },
+    {
+      "id": "sim_nepali_calendar_rationale_221",
+      "label": "Generates dual-calendar metadata given Bikram Sambat (B.S.) date components.",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "nepal_law_harvester.py",
+      "file_type": "rationale",
+      "norm_label": "generates dual-calendar metadata given bikram sambat (b.s.) date components.",
+      "source_file": "sim/nepali_calendar.py",
+      "source_location": "L221"
     },
     {
       "id": "sim_nepali_calendar_rationale_232",
@@ -33470,78 +33321,6 @@
       "source_location": "L70"
     },
     {
-      "id": "research_daily_2026_09_23",
-      "label": "2026-09-23.md",
-      "_origin": "ast",
-      "community": 78,
-      "community_name": "3. Execution & Results",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "2026-09-23.md",
-      "source_file": "research/daily/2026-09-23.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "research_daily_2026_09_23_1_schedule_priorities",
-      "label": "1. Schedule & Priorities",
-      "_origin": "ast",
-      "community": 78,
-      "community_name": "3. Execution & Results",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1. schedule & priorities",
-      "source_file": "research/daily/2026-09-23.md",
-      "source_location": "L8"
-    },
-    {
-      "id": "research_daily_2026_09_23_2026_09_23_daily_log",
-      "label": "2026-09-23 \u2014 Daily Log",
-      "_origin": "ast",
-      "community": 78,
-      "community_name": "3. Execution & Results",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2026-09-23 \u2014 daily log",
-      "source_file": "research/daily/2026-09-23.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "research_daily_2026_09_23_2_active_projects_progress",
-      "label": "2. Active Projects Progress",
-      "_origin": "ast",
-      "community": 78,
-      "community_name": "3. Execution & Results",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2. active projects progress",
-      "source_file": "research/daily/2026-09-23.md",
-      "source_location": "L15"
-    },
-    {
-      "id": "research_daily_2026_09_23_3_daily_learnings_conceptual_nodes",
-      "label": "3. Daily Learnings & Conceptual Nodes",
-      "_origin": "ast",
-      "community": 78,
-      "community_name": "3. Execution & Results",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3. daily learnings & conceptual nodes",
-      "source_file": "research/daily/2026-09-23.md",
-      "source_location": "L19"
-    },
-    {
-      "id": "research_daily_2026_09_23_4_tomorrow_s_context_agent_primer",
-      "label": "4. Tomorrow's Context (Agent Primer)",
-      "_origin": "ast",
-      "community": 78,
-      "community_name": "3. Execution & Results",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "4. tomorrow's context (agent primer)",
-      "source_file": "research/daily/2026-09-23.md",
-      "source_location": "L23"
-    },
-    {
       "id": "research_experiments_exp_localsend_mcp_001",
       "label": "EXP-LOCALSEND-MCP-001.md",
       "_origin": "ast",
@@ -33990,78 +33769,6 @@
       "source_location": "L83"
     },
     {
-      "id": "tools_skills_gemini_live_api_dev_skill_javascript_108",
-      "label": "JavaScript",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "Gemini Live API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "javascript",
-      "source_file": "tools/skills/gemini-live-api-dev/SKILL.md",
-      "source_location": "L108"
-    },
-    {
-      "id": "tools_skills_gemini_live_api_dev_skill_javascript_132",
-      "label": "JavaScript",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "Gemini Live API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "javascript",
-      "source_file": "tools/skills/gemini-live-api-dev/SKILL.md",
-      "source_location": "L132"
-    },
-    {
-      "id": "tools_skills_gemini_live_api_dev_skill_javascript_146",
-      "label": "JavaScript",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "Gemini Live API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "javascript",
-      "source_file": "tools/skills/gemini-live-api-dev/SKILL.md",
-      "source_location": "L146"
-    },
-    {
-      "id": "tools_skills_gemini_live_api_dev_skill_javascript_163",
-      "label": "JavaScript",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "Gemini Live API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "javascript",
-      "source_file": "tools/skills/gemini-live-api-dev/SKILL.md",
-      "source_location": "L163"
-    },
-    {
-      "id": "tools_skills_gemini_live_api_dev_skill_javascript_195",
-      "label": "JavaScript",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "Gemini Live API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "javascript",
-      "source_file": "tools/skills/gemini-live-api-dev/SKILL.md",
-      "source_location": "L195"
-    },
-    {
-      "id": "tools_skills_gemini_live_api_dev_skill_javascript_279",
-      "label": "JavaScript",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "Gemini Live API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "javascript",
-      "source_file": "tools/skills/gemini-live-api-dev/SKILL.md",
-      "source_location": "L279"
-    },
-    {
       "id": "tools_skills_gemini_live_api_dev_skill_key_documentation_pages",
       "label": "Key Documentation Pages",
       "_origin": "ast",
@@ -34134,18 +33841,6 @@
       "source_location": "L217"
     },
     {
-      "id": "tools_skills_gemini_live_api_dev_skill_model_258",
-      "label": "Model",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "Gemini Live API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "model",
-      "source_file": "tools/skills/gemini-live-api-dev/SKILL.md",
-      "source_location": "L258"
-    },
-    {
       "id": "tools_skills_gemini_live_api_dev_skill_models",
       "label": "Models",
       "_origin": "ast",
@@ -34204,78 +33899,6 @@
       "norm_label": "python",
       "source_file": "tools/skills/gemini-live-api-dev/SKILL.md",
       "source_location": "L75"
-    },
-    {
-      "id": "tools_skills_gemini_live_api_dev_skill_python_127",
-      "label": "Python",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "Gemini Live API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "python",
-      "source_file": "tools/skills/gemini-live-api-dev/SKILL.md",
-      "source_location": "L127"
-    },
-    {
-      "id": "tools_skills_gemini_live_api_dev_skill_python_139",
-      "label": "Python",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "Gemini Live API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "python",
-      "source_file": "tools/skills/gemini-live-api-dev/SKILL.md",
-      "source_location": "L139"
-    },
-    {
-      "id": "tools_skills_gemini_live_api_dev_skill_python_155",
-      "label": "Python",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "Gemini Live API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "python",
-      "source_file": "tools/skills/gemini-live-api-dev/SKILL.md",
-      "source_location": "L155"
-    },
-    {
-      "id": "tools_skills_gemini_live_api_dev_skill_python_175",
-      "label": "Python",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "Gemini Live API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "python",
-      "source_file": "tools/skills/gemini-live-api-dev/SKILL.md",
-      "source_location": "L175"
-    },
-    {
-      "id": "tools_skills_gemini_live_api_dev_skill_python_265",
-      "label": "Python",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "Gemini Live API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "python",
-      "source_file": "tools/skills/gemini-live-api-dev/SKILL.md",
-      "source_location": "L265"
-    },
-    {
-      "id": "tools_skills_gemini_live_api_dev_skill_python_93",
-      "label": "Python",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "Gemini Live API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "python",
-      "source_file": "tools/skills/gemini-live-api-dev/SKILL.md",
-      "source_location": "L93"
     },
     {
       "id": "tools_skills_gemini_live_api_dev_skill_quick_start",
@@ -34767,54 +34390,6 @@
       "source_location": "L7"
     },
     {
-      "id": "profile",
-      "label": "PROFILE.md",
-      "_origin": "ast",
-      "community": 83,
-      "community_name": "PROFILE.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "profile.md",
-      "source_file": "PROFILE.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "research_architectures_arch_rfc_002_multi_model_council",
-      "label": "ARCH-RFC-002-MULTI-MODEL-COUNCIL.md",
-      "_origin": "ast",
-      "community": 83,
-      "community_name": "PROFILE.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "arch-rfc-002-multi-model-council.md",
-      "source_file": "research/architectures/ARCH-RFC-002-MULTI-MODEL-COUNCIL.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "research_architectures_arch_rfc_003_capstone_defense_standard",
-      "label": "ARCH-RFC-003-CAPSTONE-DEFENSE-STANDARD.md",
-      "_origin": "ast",
-      "community": 83,
-      "community_name": "PROFILE.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "arch-rfc-003-capstone-defense-standard.md",
-      "source_file": "research/architectures/ARCH-RFC-003-CAPSTONE-DEFENSE-STANDARD.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "research_architectures_arch_spec_001_ecie_compute_memory",
-      "label": "ARCH-SPEC-001-ECIE-COMPUTE-MEMORY.md",
-      "_origin": "ast",
-      "community": 83,
-      "community_name": "PROFILE.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "arch-spec-001-ecie-compute-memory.md",
-      "source_file": "research/architectures/ARCH-SPEC-001-ECIE-COMPUTE-MEMORY.md",
-      "source_location": "L1"
-    },
-    {
       "id": "research_architectures_arch_spec_002_ingestion_processing_unit",
       "label": "ARCH-SPEC-002-INGESTION-PROCESSING-UNIT.md",
       "_origin": "ast",
@@ -34911,30 +34486,6 @@
       "source_location": "L103"
     },
     {
-      "id": "research_architectures_readme",
-      "label": "architectures/README.md",
-      "_origin": "ast",
-      "community": 83,
-      "community_name": "PROFILE.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "architectures/readme.md",
-      "source_file": "research/architectures/README.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "research_daily_2026_09_19",
-      "label": "2026-09-19.md",
-      "_origin": "ast",
-      "community": 83,
-      "community_name": "PROFILE.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "2026-09-19.md",
-      "source_file": "research/daily/2026-09-19.md",
-      "source_location": "L1"
-    },
-    {
       "id": "research_invariants_inv_mem_001",
       "label": "INV-MEM-001.md",
       "_origin": "ast",
@@ -34947,27 +34498,51 @@
       "source_location": "L1"
     },
     {
-      "id": "research_notes_2026_09_19_agentic_ai_industry_ayush_shah",
-      "label": "2026-09-19_Agentic-AI-Industry-Ayush-Shah.md",
+      "id": "research_invariants_inv_mem_001_1_the_energy_chasm_invariant",
+      "label": "1. The Energy Chasm Invariant",
       "_origin": "ast",
       "community": 83,
       "community_name": "PROFILE.md",
       "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "2026-09-19_agentic-ai-industry-ayush-shah.md",
-      "source_file": "research/notes/2026-09-19_Agentic-AI-Industry-Ayush-Shah.md",
-      "source_location": "L1"
+      "node_kind": "heading",
+      "norm_label": "1. the energy chasm invariant",
+      "source_file": "research/invariants/INV-MEM-001.md",
+      "source_location": "L17"
     },
     {
-      "id": "templates_daily_note",
-      "label": "daily-note.md",
+      "id": "research_invariants_inv_mem_001_2_the_uncoalesced_burst_penalty_invariant",
+      "label": "2. The Uncoalesced Burst Penalty Invariant",
       "_origin": "ast",
       "community": 83,
       "community_name": "PROFILE.md",
       "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "daily-note.md",
-      "source_file": "templates/daily-note.md",
+      "node_kind": "heading",
+      "norm_label": "2. the uncoalesced burst penalty invariant",
+      "source_file": "research/invariants/INV-MEM-001.md",
+      "source_location": "L25"
+    },
+    {
+      "id": "research_invariants_inv_mem_001_3_the_isolated_scalar_reduction_boundary_bound",
+      "label": "3. The Isolated Scalar-Reduction Boundary Bound",
+      "_origin": "ast",
+      "community": 83,
+      "community_name": "PROFILE.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. the isolated scalar-reduction boundary bound",
+      "source_file": "research/invariants/INV-MEM-001.md",
+      "source_location": "L39"
+    },
+    {
+      "id": "research_invariants_inv_mem_001_invariant_spec_inv_mem_001_the_von_neumann_chasm_coalescing_bounds",
+      "label": "\ud83d\udd2c Invariant Spec: INV-MEM-001 (The Von Neumann Chasm & Coalescing Bounds)",
+      "_origin": "ast",
+      "community": 83,
+      "community_name": "PROFILE.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd2c invariant spec: inv-mem-001 (the von neumann chasm & coalescing bounds)",
+      "source_file": "research/invariants/INV-MEM-001.md",
       "source_location": "L1"
     },
     {
@@ -36635,39 +36210,6 @@
       "source_location": "L36"
     },
     {
-      "id": "image",
-      "label": "Image",
-      "_origin": "ast",
-      "community": 93,
-      "community_name": "save_chat.py",
-      "file_type": "code",
-      "norm_label": "image",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "scripts_generate_all_portfolio_hero_images",
-      "label": "generate_all_portfolio_hero_images.py",
-      "_origin": "ast",
-      "community": 93,
-      "community_name": "save_chat.py",
-      "file_type": "code",
-      "norm_label": "generate_all_portfolio_hero_images.py",
-      "source_file": "scripts/generate_all_portfolio_hero_images.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_generate_all_portfolio_hero_images_py_path",
-      "label": "Path",
-      "_origin": "ast",
-      "community": 93,
-      "community_name": "save_chat.py",
-      "file_type": "code",
-      "norm_label": "path",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "tools_chat_archiver_save_chat",
       "label": "save_chat.py",
       "_origin": "ast",
@@ -36677,39 +36219,6 @@
       "norm_label": "save_chat.py",
       "source_file": "tools/chat_archiver/save_chat.py",
       "source_location": "L1"
-    },
-    {
-      "id": "scripts_generate_all_portfolio_hero_images_rationale_114",
-      "label": "Extract a base64 PNG plot from an executed notebook cell.",
-      "_origin": "ast",
-      "community": 93,
-      "community_name": "save_chat.py",
-      "file_type": "rationale",
-      "norm_label": "extract a base64 png plot from an executed notebook cell.",
-      "source_file": "scripts/generate_all_portfolio_hero_images.py",
-      "source_location": "L114"
-    },
-    {
-      "id": "scripts_generate_all_portfolio_hero_images_rationale_27",
-      "label": "Resize, optimize, and save both WebP (<250KB) and PNG fallback.",
-      "_origin": "ast",
-      "community": 93,
-      "community_name": "save_chat.py",
-      "file_type": "rationale",
-      "norm_label": "resize, optimize, and save both webp (<250kb) and png fallback.",
-      "source_file": "scripts/generate_all_portfolio_hero_images.py",
-      "source_location": "L27"
-    },
-    {
-      "id": "scripts_generate_all_portfolio_hero_images_rationale_63",
-      "label": "Render a crisp dark-mode terminal card with macOS/modern window controls.",
-      "_origin": "ast",
-      "community": 93,
-      "community_name": "save_chat.py",
-      "file_type": "rationale",
-      "norm_label": "render a crisp dark-mode terminal card with macos/modern window controls.",
-      "source_file": "scripts/generate_all_portfolio_hero_images.py",
-      "source_location": "L63"
     },
     {
       "id": "tools_chat_archiver_save_chat_rationale_10",
@@ -65888,7 +65397,7 @@
     },
     {
       "source": "tools_skills_gemini_api_dev_references_migration_migration_checklist",
-      "target": "tools_skills_gemini_api_dev_references_migration_api_migration_generatecontent_interactions_73",
+      "target": "tools_skills_gemini_api_dev_references_migration_api_migration_generatecontent_interactions",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -65998,7 +65507,7 @@
     },
     {
       "source": "tools_skills_gemini_api_dev_skill_antigravity_agent",
-      "target": "tools_skills_gemini_api_dev_skill_python_191",
+      "target": "tools_skills_gemini_api_dev_skill_python",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66009,7 +65518,7 @@
     },
     {
       "source": "tools_skills_gemini_api_dev_skill_antigravity_agent",
-      "target": "tools_skills_gemini_api_dev_skill_javascript_typescript_207",
+      "target": "tools_skills_gemini_api_dev_skill_javascript_typescript",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66053,7 +65562,7 @@
     },
     {
       "source": "tools_skills_gemini_api_dev_skill_custom_agents",
-      "target": "tools_skills_gemini_api_dev_skill_python_227",
+      "target": "tools_skills_gemini_api_dev_skill_python",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66064,7 +65573,7 @@
     },
     {
       "source": "tools_skills_gemini_api_dev_skill_custom_agents",
-      "target": "tools_skills_gemini_api_dev_skill_javascript_typescript_254",
+      "target": "tools_skills_gemini_api_dev_skill_javascript_typescript",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66119,7 +65628,7 @@
     },
     {
       "source": "tools_skills_gemini_api_dev_skill_deep_research_agent",
-      "target": "tools_skills_gemini_api_dev_skill_python_134",
+      "target": "tools_skills_gemini_api_dev_skill_python",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66130,7 +65639,7 @@
     },
     {
       "source": "tools_skills_gemini_api_dev_skill_deep_research_agent",
-      "target": "tools_skills_gemini_api_dev_skill_javascript_typescript_154",
+      "target": "tools_skills_gemini_api_dev_skill_javascript_typescript",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66328,7 +65837,7 @@
     },
     {
       "source": "tools_skills_gemini_api_dev_skill_stateful_conversation",
-      "target": "tools_skills_gemini_api_dev_skill_python_101",
+      "target": "tools_skills_gemini_api_dev_skill_python",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66339,7 +65848,7 @@
     },
     {
       "source": "tools_skills_gemini_api_dev_skill_stateful_conversation",
-      "target": "tools_skills_gemini_api_dev_skill_javascript_typescript_116",
+      "target": "tools_skills_gemini_api_dev_skill_javascript_typescript",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66350,7 +65859,7 @@
     },
     {
       "source": "tools_skills_gemini_api_dev_skill_streaming",
-      "target": "tools_skills_gemini_api_dev_skill_python_286",
+      "target": "tools_skills_gemini_api_dev_skill_python",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66361,7 +65870,7 @@
     },
     {
       "source": "tools_skills_gemini_api_dev_skill_streaming",
-      "target": "tools_skills_gemini_api_dev_skill_javascript_typescript_300",
+      "target": "tools_skills_gemini_api_dev_skill_javascript_typescript",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66394,7 +65903,7 @@
     },
     {
       "source": "tools_skills_gemini_interactions_api_references_migration_migration_checklist",
-      "target": "tools_skills_gemini_interactions_api_references_migration_api_migration_generatecontent_interactions_73",
+      "target": "tools_skills_gemini_interactions_api_references_migration_api_migration_generatecontent_interactions",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66504,7 +66013,7 @@
     },
     {
       "source": "tools_skills_gemini_interactions_api_skill_antigravity_agent",
-      "target": "tools_skills_gemini_interactions_api_skill_python_191",
+      "target": "tools_skills_gemini_interactions_api_skill_python",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66515,7 +66024,7 @@
     },
     {
       "source": "tools_skills_gemini_interactions_api_skill_antigravity_agent",
-      "target": "tools_skills_gemini_interactions_api_skill_javascript_typescript_207",
+      "target": "tools_skills_gemini_interactions_api_skill_javascript_typescript",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66559,7 +66068,7 @@
     },
     {
       "source": "tools_skills_gemini_interactions_api_skill_custom_agents",
-      "target": "tools_skills_gemini_interactions_api_skill_python_227",
+      "target": "tools_skills_gemini_interactions_api_skill_python",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66570,7 +66079,7 @@
     },
     {
       "source": "tools_skills_gemini_interactions_api_skill_custom_agents",
-      "target": "tools_skills_gemini_interactions_api_skill_javascript_typescript_254",
+      "target": "tools_skills_gemini_interactions_api_skill_javascript_typescript",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66625,7 +66134,7 @@
     },
     {
       "source": "tools_skills_gemini_interactions_api_skill_deep_research_agent",
-      "target": "tools_skills_gemini_interactions_api_skill_python_134",
+      "target": "tools_skills_gemini_interactions_api_skill_python",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66636,7 +66145,7 @@
     },
     {
       "source": "tools_skills_gemini_interactions_api_skill_deep_research_agent",
-      "target": "tools_skills_gemini_interactions_api_skill_javascript_typescript_154",
+      "target": "tools_skills_gemini_interactions_api_skill_javascript_typescript",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66801,7 +66310,7 @@
     },
     {
       "source": "tools_skills_gemini_interactions_api_skill_stateful_conversation",
-      "target": "tools_skills_gemini_interactions_api_skill_python_101",
+      "target": "tools_skills_gemini_interactions_api_skill_python",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66812,7 +66321,7 @@
     },
     {
       "source": "tools_skills_gemini_interactions_api_skill_stateful_conversation",
-      "target": "tools_skills_gemini_interactions_api_skill_javascript_typescript_116",
+      "target": "tools_skills_gemini_interactions_api_skill_javascript_typescript",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66823,7 +66332,7 @@
     },
     {
       "source": "tools_skills_gemini_interactions_api_skill_streaming",
-      "target": "tools_skills_gemini_interactions_api_skill_python_286",
+      "target": "tools_skills_gemini_interactions_api_skill_python",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66834,7 +66343,7 @@
     },
     {
       "source": "tools_skills_gemini_interactions_api_skill_streaming",
-      "target": "tools_skills_gemini_interactions_api_skill_javascript_typescript_300",
+      "target": "tools_skills_gemini_interactions_api_skill_javascript_typescript",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66878,7 +66387,7 @@
     },
     {
       "source": "tools_skills_gemini_live_api_dev_skill_connecting_to_the_live_api",
-      "target": "tools_skills_gemini_live_api_dev_skill_javascript_108",
+      "target": "tools_skills_gemini_live_api_dev_skill_javascript",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -66889,7 +66398,7 @@
     },
     {
       "source": "tools_skills_gemini_live_api_dev_skill_connecting_to_the_live_api",
-      "target": "tools_skills_gemini_live_api_dev_skill_python_93",
+      "target": "tools_skills_gemini_live_api_dev_skill_python",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -67076,7 +66585,7 @@
     },
     {
       "source": "tools_skills_gemini_live_api_dev_skill_live_streaming_transcription_gemini_live_transcribe",
-      "target": "tools_skills_gemini_live_api_dev_skill_model_258",
+      "target": "tools_skills_gemini_live_api_dev_skill_model",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -67098,7 +66607,7 @@
     },
     {
       "source": "tools_skills_gemini_live_api_dev_skill_live_streaming_transcription_gemini_live_transcribe",
-      "target": "tools_skills_gemini_live_api_dev_skill_python_265",
+      "target": "tools_skills_gemini_live_api_dev_skill_python",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -67109,7 +66618,7 @@
     },
     {
       "source": "tools_skills_gemini_live_api_dev_skill_live_streaming_transcription_gemini_live_transcribe",
-      "target": "tools_skills_gemini_live_api_dev_skill_javascript_279",
+      "target": "tools_skills_gemini_live_api_dev_skill_javascript",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -67219,7 +66728,7 @@
     },
     {
       "source": "tools_skills_gemini_live_api_dev_skill_receiving_audio_and_text",
-      "target": "tools_skills_gemini_live_api_dev_skill_python_175",
+      "target": "tools_skills_gemini_live_api_dev_skill_python",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -67230,7 +66739,7 @@
     },
     {
       "source": "tools_skills_gemini_live_api_dev_skill_receiving_audio_and_text",
-      "target": "tools_skills_gemini_live_api_dev_skill_javascript_195",
+      "target": "tools_skills_gemini_live_api_dev_skill_javascript",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -67241,7 +66750,7 @@
     },
     {
       "source": "tools_skills_gemini_live_api_dev_skill_sending_audio",
-      "target": "tools_skills_gemini_live_api_dev_skill_python_139",
+      "target": "tools_skills_gemini_live_api_dev_skill_python",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -67252,7 +66761,7 @@
     },
     {
       "source": "tools_skills_gemini_live_api_dev_skill_sending_audio",
-      "target": "tools_skills_gemini_live_api_dev_skill_javascript_146",
+      "target": "tools_skills_gemini_live_api_dev_skill_javascript",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -67263,7 +66772,7 @@
     },
     {
       "source": "tools_skills_gemini_live_api_dev_skill_sending_text",
-      "target": "tools_skills_gemini_live_api_dev_skill_python_127",
+      "target": "tools_skills_gemini_live_api_dev_skill_python",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -67274,7 +66783,7 @@
     },
     {
       "source": "tools_skills_gemini_live_api_dev_skill_sending_text",
-      "target": "tools_skills_gemini_live_api_dev_skill_javascript_132",
+      "target": "tools_skills_gemini_live_api_dev_skill_javascript",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -67285,7 +66794,7 @@
     },
     {
       "source": "tools_skills_gemini_live_api_dev_skill_sending_video",
-      "target": "tools_skills_gemini_live_api_dev_skill_python_155",
+      "target": "tools_skills_gemini_live_api_dev_skill_python",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -67296,7 +66805,7 @@
     },
     {
       "source": "tools_skills_gemini_live_api_dev_skill_sending_video",
-      "target": "tools_skills_gemini_live_api_dev_skill_javascript_163",
+      "target": "tools_skills_gemini_live_api_dev_skill_javascript",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -68770,7 +68279,7 @@
     },
     {
       "source": "tools_skills_graphify_code_search_references_workflows_workflow_2_understanding_how_to_call_an_api_usage_pattern_discovery",
-      "target": "tools_skills_graphify_code_search_references_workflows_procedure_30",
+      "target": "tools_skills_graphify_code_search_references_workflows_procedure",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -68781,7 +68290,7 @@
     },
     {
       "source": "tools_skills_graphify_code_search_references_workflows_workflow_3_safe_refactoring_signature_modification_impact_analysis",
-      "target": "tools_skills_graphify_code_search_references_workflows_procedure_47",
+      "target": "tools_skills_graphify_code_search_references_workflows_procedure",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -68792,7 +68301,7 @@
     },
     {
       "source": "tools_skills_graphify_code_search_references_workflows_workflow_4_tracing_control_data_flow_between_two_points",
-      "target": "tools_skills_graphify_code_search_references_workflows_procedure_63",
+      "target": "tools_skills_graphify_code_search_references_workflows_procedure",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -68803,7 +68312,7 @@
     },
     {
       "source": "tools_skills_graphify_code_search_references_workflows_workflow_5_deep_component_analysis",
-      "target": "tools_skills_graphify_code_search_references_workflows_procedure_78",
+      "target": "tools_skills_graphify_code_search_references_workflows_procedure",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -70310,7 +69819,7 @@
     },
     {
       "source": "tools_skills_mcp_integration_skill_quick_reference",
-      "target": "tools_skills_mcp_integration_skill_mcp_server_types_479",
+      "target": "tools_skills_mcp_integration_skill_mcp_server_types",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -76106,6 +75615,17 @@
       "weight": 1.0
     },
     {
+      "source": "tools_skills_gemini_omni_flash_api_scripts_video_generate_video_rationale_154",
+      "target": "tools_skills_gemini_omni_flash_api_scripts_video_generate_video_argparse_resolution_type",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tools/skills/gemini-omni-flash-api/scripts/video/generate_video.py",
+      "source_location": "L177",
+      "weight": 1.0
+    },
+    {
       "source": "tools_skills_gemini_omni_flash_api_scripts_video_generate_video_rationale_163",
       "target": "tools_skills_gemini_omni_flash_api_scripts_video_generate_video_parse_and_validate_resolution",
       "relation": "rationale_for",
@@ -76114,17 +75634,6 @@
       "confidence_score": 1.0,
       "source_file": "tools/skills/gemini-omni-flash-api/scripts/video/generate_video.py",
       "source_location": "L163",
-      "weight": 1.0
-    },
-    {
-      "source": "tools_skills_gemini_omni_flash_api_scripts_video_generate_video_rationale_177",
-      "target": "tools_skills_gemini_omni_flash_api_scripts_video_generate_video_argparse_resolution_type",
-      "relation": "rationale_for",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tools/skills/gemini-omni-flash-api/scripts/video/generate_video.py",
-      "source_location": "L177",
       "weight": 1.0
     },
     {
@@ -78898,5 +78407,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "14d7e0b726d09309b2a28bbd3cfc6a8b898800c1"
+  "built_at_commit": "6f8cd4b5afd85413bb4cbc9d6ac76571b04692c1"
 }

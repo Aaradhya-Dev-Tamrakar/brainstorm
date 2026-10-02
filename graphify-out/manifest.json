@@ -25,9 +25,9 @@
   },
   "sim/reconciliation_engine.py": {
     "mtime": 1790952571.4523914,
-    "seen": 1790952635.7087657,
+    "seen": 1790953100.8413413,
     "ast_hash": "fe71928e6ca4a71d4bb4804fd26a096d",
-    "semantic_hash": ""
+    "semantic_hash": "fe71928e6ca4a71d4bb4804fd26a096d"
   },
   "sim/sweep_ipu_breakeven.py": {
     "mtime": 1790044861.1795669,
@@ -193,9 +193,9 @@
   },
   "AGENTS.md": {
     "mtime": 1790952593.055761,
-    "seen": 1790952635.7088327,
+    "seen": 1790953100.8413835,
     "ast_hash": "948f6ecb0b3ca961309c10c6de037070",
-    "semantic_hash": ""
+    "semantic_hash": "948f6ecb0b3ca961309c10c6de037070"
   },
   "report/economic-model.md": {
     "mtime": 1790234914.4392133,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790952538.8750582,
-    "seen": 1790952635.7086887,
-    "ast_hash": "d90889c54c591a4cc35e50b016d56216",
-    "semantic_hash": ""
+    "mtime": 1790953216.5897872,
+    "seen": 1790953219.0354245,
+    "ast_hash": "f647484fd1717f67974caae6959e2068",
+    "semantic_hash": "f647484fd1717f67974caae6959e2068"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -552,16 +552,16 @@
     "semantic_hash": ""
   },
   "graphify.ps1": {
-    "mtime": 1790949415.8216753,
-    "seen": 1790949473.6089647,
-    "ast_hash": "4247f183e1fdcc01bcd457546d9d5044",
-    "semantic_hash": "4247f183e1fdcc01bcd457546d9d5044"
+    "mtime": 1790953082.6609535,
+    "seen": 1790953100.8412764,
+    "ast_hash": "ecf755f4c3d33ca49fccfa20af5405e0",
+    "semantic_hash": "ecf755f4c3d33ca49fccfa20af5405e0"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790952605.6405118,
-    "seen": 1790952635.7086854,
-    "ast_hash": "5fde0a9165f59a478a4e09e547dc1592",
-    "semantic_hash": ""
+    "mtime": 1790953214.5062783,
+    "seen": 1790953219.035423,
+    "ast_hash": "bafdd73064fc20505741475b278efb37",
+    "semantic_hash": "bafdd73064fc20505741475b278efb37"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,

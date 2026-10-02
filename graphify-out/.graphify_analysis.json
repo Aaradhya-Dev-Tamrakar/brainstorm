@@ -63,7 +63,7 @@
       "sim_reconciliation_engine_parse_simple_yaml_capabilities",
       "sim_reconciliation_engine_rationale_1",
       "sim_reconciliation_engine_rationale_102",
-      "sim_reconciliation_engine_rationale_1052",
+      "sim_reconciliation_engine_rationale_1078",
       "sim_reconciliation_engine_rationale_138",
       "sim_reconciliation_engine_rationale_155",
       "sim_reconciliation_engine_rationale_455",
@@ -4028,13 +4028,8 @@
   "questions": [
     {
       "type": "bridge_node",
-      "question": "Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Community 87` to `Community 192`, `Community 191`, `Community 65`, `Community 31`?",
-      "why": "High betweenness centrality (0.039) - this node is a cross-community bridge."
-    },
-    {
-      "type": "bridge_node",
-      "question": "Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `Community 65` to `Community 224`, `Community 193`, `Community 225`, `Community 210`, `Community 211`, `Community 212`, `Community 87`, `Community 156`, `Community 223`?",
-      "why": "High betweenness centrality (0.032) - this node is a cross-community bridge."
+      "question": "Why does `Skill Development for Claude Code Plugins` connect `Skill Development for Claude Code Plugins` to `Quick Reference`, `Writing Style Requirements`, `About Skills`, `Skill Creation Process`, `Plugin-Specific Considerations`, `Common Mistakes to Avoid`, `Progressive Disclosure in Practice`?",
+      "why": "High betweenness centrality (0.017) - this node is a cross-community bridge."
     },
     {
       "type": "verify_inferred",
@@ -4053,13 +4048,18 @@
     },
     {
       "type": "low_cohesion",
-      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "question": "Should `4. Step-by-Step Implementation Timeline` be split into smaller, more focused modules?",
       "why": "Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected."
     },
     {
       "type": "low_cohesion",
-      "question": "Should `Community 1` be split into smaller, more focused modules?",
+      "question": "Should `run_all_reproducibility.py` be split into smaller, more focused modules?",
       "why": "Cohesion score 0.07358156028368794 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `generate_video.py` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.08687943262411348 - nodes in this community are weakly interconnected."
     }
   ]
 }

@@ -335,17 +335,21 @@ if ($ClusterOnly) {
 Write-Status "Executing thorough Graphify extraction & graph update on: $ResolvedTarget"
 
 # Build Python execution script for deterministic graph updates
-$PyScript = @"
+$isDirectedStr = if ($Directed) { "True" } else { "False" }
+$isUpdateStr = if ($Update -and -not $Full) { "True" } else { "False" }
+$isCodeOnlyStr = if ($CodeOnly) { "True" } else { "False" }
+
+$PyScript = @'
 import os, sys, json
 from pathlib import Path
 
-target_root = Path(r'$ResolvedTarget')
-out_dir = Path(r'$GraphifyOutDir')
+target_root = Path(r'__TARGET_ROOT__')
+out_dir = Path(r'__OUT_DIR__')
 out_dir.mkdir(parents=True, exist_ok=True)
 
-is_directed = $(if ($Directed) { "True" } else { "False" })
-is_update = $(if ($Update -and -not $Full) { "True" } else { "False" })
-is_code_only = $(if ($CodeOnly) { "True" } else { "False" })
+is_directed = __IS_DIRECTED__
+is_update = __IS_UPDATE__
+is_code_only = __IS_CODE_ONLY__
 
 print(f"Target Root: {target_root}")
 print(f"Mode: {'Incremental Update' if is_update else 'Full Extraction'}")
@@ -466,16 +470,25 @@ else:
     (out_dir / ".graphify_labels.json").write_text(json.dumps({str(k): v for k, v in labels.items()}, indent=2, ensure_ascii=False), encoding="utf-8")
     
     print(f"Graph finalized: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges, {len(communities)} communities")
-"@
+'@ -replace '__TARGET_ROOT__', $ResolvedTarget -replace '__OUT_DIR__', $GraphifyOutDir -replace '__IS_DIRECTED__', $isDirectedStr -replace '__IS_UPDATE__', $isUpdateStr -replace '__IS_CODE_ONLY__', $isCodeOnlyStr
 
 if ($WhatIf) {
     Write-Notice "[WhatIf] Would execute graphify update pipeline with interpreter: $GraphifyPython"
 }
 else {
-    & $GraphifyPython -c $PyScript
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Graphify Python update exited with code $LASTEXITCODE"
-        exit $LASTEXITCODE
+    $RunnerPy = Join-Path $GraphifyOutDir ".graphify_update_runner.py"
+    $Utf8NoBom = New-Object System.Text.UTF8Encoding $false
+    [System.IO.File]::WriteAllText($RunnerPy, $PyScript, $Utf8NoBom)
+    try {
+        & $GraphifyPython $RunnerPy
+        $resCode = $LASTEXITCODE
+    }
+    finally {
+        if (Test-Path $RunnerPy) { Remove-Item $RunnerPy -Force -ErrorAction SilentlyContinue }
+    }
+    if ($resCode -ne 0) {
+        Write-Fail "Graphify Python update exited with code $resCode"
+        exit $resCode
     }
 
     # Generate HTML visualization if not skipped

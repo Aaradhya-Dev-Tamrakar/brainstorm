@@ -2,14 +2,15 @@
 
 > **Path:** `tools/skills/`  
 > **Global System Path:** `C:\Users\Aaradhya\.gemini\config\skills\`  
-> **Purpose:** Version-controlled master repository and source-of-truth mirror for all 30 custom Antigravity agent skills.
+> **Purpose:** Version-controlled master repository and source-of-truth mirror for all 31 custom Antigravity agent skills.
 
 ---
 
-## 📊 Skills Matrix & Functional Taxonomy (30 Skills)
+## 📊 Skills Matrix & Functional Taxonomy (31 Skills)
 
 | Category | Skill Name | Path | Description & Core Triggers |
 | :--- | :--- | :--- | :--- |
+| **Compliance & Auditing** | [`compliance-report-harmonizer`](compliance-report-harmonizer/SKILL.md) | `tools/skills/compliance-report-harmonizer/` | Enforces report harmonization, structural invariants, dual HTML/PDF interoperability, and headless Blink print rendering. (Origin: BiasAperture) |
 | **NotebookLM Fleet & Downloads** | [`super-nlm`](super-nlm/SKILL.md) | `tools/skills/super-nlm/` | Google NotebookLM multi-account rotator, MCP query engine, and batch generation. |
 | | [`super-nlm-downloads`](super-nlm-downloads/SKILL.md) | `tools/skills/super-nlm-downloads/` | Automates URL extraction, subject folder downloads (outside repo), and LocalSend transfers. |
 | **Ingestion & Archival** | [`doc-archiver`](doc-archiver/SKILL.md) | `tools/skills/doc-archiver/` | Invokes `save-doc` CLI to extract Google Docs and web docs into structured Markdown. |

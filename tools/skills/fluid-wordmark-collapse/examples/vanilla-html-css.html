@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fluid Wordmark Collapse Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400..700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0e0c;
+      --bg2: #161513;
+      --line: rgba(255, 255, 255, 0.09);
+      --text: #eeeae2;
+      --muted: #b3ada4;
+      --heading: #f8f5ee;
+      --accent: #d4a85a;
+      --accent-a35: rgba(212, 168, 90, 0.35);
+      --serif: "Playfair Display", Georgia, serif;
+      --mono: "DM Mono", monospace;
+      --sans: "Inter", sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      min-height: 250vh;
+    }
+
+    /* ── 3-Zone Fixed-Slot Navigation ── */
+    #nav {
+      --nav-logo-slot: 250px;
+      --nav-right-slot: max-content;
+
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+
+      display: grid;
+      grid-template-columns: var(--nav-logo-slot) 1fr var(--nav-right-slot);
+      column-gap: 1.5rem;
+      align-items: center;
+
+      padding: 1.75rem 3rem;
+      border-bottom: 1px solid transparent;
+      transition: padding 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+                  background 0.35s ease,
+                  border-color 0.35s ease,
+                  box-shadow 0.35s ease;
+    }
+
+    #nav.scrolled {
+      padding-top: 0.85rem;
+      padding-bottom: 0.85rem;
+      background: rgba(15, 14, 12, 0.9);
+      backdrop-filter: blur(20px);
+      border-color: var(--line);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    /* ── Zone 1: Logo & Fluid Wordmark ── */
+    .nav-logo {
+      width: var(--nav-logo-slot);
+      min-width: var(--nav-logo-slot);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-brand-text {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.28em;
+      transition: gap 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .nav-word {
+      display: inline-flex;
+      align-items: baseline;
+    }
+
+    .nav-initial {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--heading);
+      letter-spacing: 0.02em;
+      display: inline-block;
+    }
+
+    .nav-rest {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: var(--muted);
+      display: inline-block;
+      max-width: 140px;
+      opacity: 0.88;
+      overflow: hidden;
+      white-space: nowrap;
+      vertical-align: baseline;
+      transform: scaleX(1) translateX(0);
+      transform-origin: left baseline;
+      will-change: max-width, opacity, transform;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      transition:
+        max-width 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .nav-dot {
+      color: var(--accent);
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    #nav.scrolled .nav-rest {
+      max-width: 0;
+      opacity: 0;
+      transform: scaleX(0.75) translateX(-4px);
+      pointer-events: none;
+    }
+
+    #nav.scrolled .nav-brand-text {
+      gap: 0.04em;
+    }
+
+    /* Hover Peek */
+    @media (hover: hover) {
+      #nav.scrolled .nav-logo:hover .nav-rest {
+        max-width: 140px;
+        opacity: 0.95;
+        transform: scaleX(1) translateX(0);
+        pointer-events: auto;
+      }
+      #nav.scrolled .nav-logo:hover .nav-brand-text {
+        gap: 0.28em;
+      }
+    }
+
+    /* ── Zone 2: Navigation Links (Stationary) ── */
+    .nav-links {
+      display: flex;
+      gap: 0.5rem;
+      list-style: none;
+      margin-left: 0.5rem;
+    }
+
+    .nav-links a {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: none;
+      padding: 0.5rem 0.85rem;
+      border-radius: 4px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav-links a:hover {
+      color: var(--heading);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* ── Zone 3: Right Controls (Stationary) ── */
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      justify-self: end;
+    }
+
+    .nav-cta {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      padding: 0.5rem 1.15rem;
+      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      box-shadow: 0 0 10px var(--accent-a35);
+      border-radius: 2px;
+    }
+
+    /* Hero section */
+    .hero {
+      padding: 12rem 3rem 4rem;
+      max-width: 800px;
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      color: var(--heading);
+    }
+    .hero p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="nav" aria-label="Primary navigation">
+    <!-- Zone 1: Logo -->
+    <a href="#" class="nav-logo" aria-label="Aaradhya Dev Tamrakar">
+      <span class="nav-brand-text" aria-hidden="true">
+        <span class="nav-word"><span class="nav-initial">A</span><span class="nav-rest">aradhya</span></span>
+        <span class="nav-word"><span class="nav-initial">D</span><span class="nav-rest">ev</span></span>
+        <span class="nav-word"><span class="nav-initial">T</span><span class="nav-rest">amrakar</span></span>
+        <span class="nav-dot">.</span>
+      </span>
+    </a>
+
+    <!-- Zone 2: Navigation Links -->
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#background">Background</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#build-log">Build Log</a></li>
+    </ul>
+
+    <!-- Zone 3: Utility Controls -->
+    <div class="nav-right">
+      <a href="#contact" class="nav-cta">Connect</a>
+    </div>
+  </nav>
+
+  <main class="hero">
+    <h1>Editorial Fluidity Demo</h1>
+    <p>Scroll down to see the full name smoothly fold inward into the acronym monogram (A D T .). Notice how neither the center links nor the right CTA shift horizontally by even one pixel.</p>
+  </main>
+
+  <script>
+    const nav = document.getElementById('nav');
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          nav.classList.toggle('scrolled', window.scrollY > 50);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  </script>
+</body>
+</html>

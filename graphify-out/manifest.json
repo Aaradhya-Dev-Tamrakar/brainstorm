@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790994569.8325553,
-    "seen": 1790994581.576784,
-    "ast_hash": "e576483aa0d9e74774aafccc89621fe7",
-    "semantic_hash": "e576483aa0d9e74774aafccc89621fe7"
+    "mtime": 1790996693.0539186,
+    "seen": 1790996695.8121183,
+    "ast_hash": "c6b5800bc516eb08208858fd3fcf6409",
+    "semantic_hash": "c6b5800bc516eb08208858fd3fcf6409"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790994567.7113557,
-    "seen": 1790994581.576782,
-    "ast_hash": "d516aed02230f8f148a1946fa1f1996e",
-    "semantic_hash": "d516aed02230f8f148a1946fa1f1996e"
+    "mtime": 1790996690.9812205,
+    "seen": 1790996695.8121161,
+    "ast_hash": "83189fff46b3b97ef5fd48fe9e0630b9",
+    "semantic_hash": "83189fff46b3b97ef5fd48fe9e0630b9"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -876,10 +876,10 @@
     "semantic_hash": "7d778793512114b09a97e27b0d5c1e65"
   },
   "tools/skills/README.md": {
-    "mtime": 1790994427.2174318,
-    "seen": 1790994581.5770183,
-    "ast_hash": "5fe889e16f42e97ee004fc7534b73800",
-    "semantic_hash": "5fe889e16f42e97ee004fc7534b73800"
+    "mtime": 1790996662.859634,
+    "seen": 1790996695.81233,
+    "ast_hash": "785f9a2aaf41c9a2d5a17200a57da640",
+    "semantic_hash": "785f9a2aaf41c9a2d5a17200a57da640"
   },
   "tools/skills/agent-teams-orchestration/SKILL.md": {
     "mtime": 1789792377.3205128,
@@ -2134,5 +2134,29 @@
     "seen": 1790994581.5770953,
     "ast_hash": "f380f49f7e44ccb71e83900e7eb3c0d6",
     "semantic_hash": "f380f49f7e44ccb71e83900e7eb3c0d6"
+  },
+  "tools/skills/fluid-wordmark-collapse/examples/react-tailwind.tsx": {
+    "mtime": 1790996348.2759268,
+    "seen": 1790996695.8122053,
+    "ast_hash": "f77b79111fbc674eeae48790ccc68627",
+    "semantic_hash": "f77b79111fbc674eeae48790ccc68627"
+  },
+  "tools/skills/fluid-wordmark-collapse/SKILL.md": {
+    "mtime": 1790996366.1540682,
+    "seen": 1790996695.8123648,
+    "ast_hash": "af1d3c277ad6beb2cc59ceaf19f9e4eb",
+    "semantic_hash": "af1d3c277ad6beb2cc59ceaf19f9e4eb"
+  },
+  "tools/skills/fluid-wordmark-collapse/references/css-gotchas.md": {
+    "mtime": 1790996322.292847,
+    "seen": 1790996695.8123658,
+    "ast_hash": "5a666986ab07c84173fb9407281a472d",
+    "semantic_hash": "5a666986ab07c84173fb9407281a472d"
+  },
+  "tools/skills/fluid-wordmark-collapse/references/fixed-slot-architecture.md": {
+    "mtime": 1790996309.6031916,
+    "seen": 1790996695.8123665,
+    "ast_hash": "891822e3e7dc4085f4ffd69c38c847d1",
+    "semantic_hash": "891822e3e7dc4085f4ffd69c38c847d1"
   }
 }

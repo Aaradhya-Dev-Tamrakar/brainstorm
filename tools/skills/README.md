@@ -7,7 +7,7 @@
 
 ---
 
-## 📊 Complete Master Skills Matrix (Origin & Workflow Usage) (49 Skills)
+## 📊 Complete Master Skills Matrix (Origin & Workflow Usage) (50 Skills)
 
 | Category | Skill Name | Path | Origin | Usage in Workflow Pipeline |
 | :--- | :--- | :--- | :--- | :--- |
@@ -38,6 +38,7 @@
 | | [`shadcn-context`](shadcn-context/SKILL.md) | `tools/skills/shadcn-context/` | Global Antigravity Config | **UI Component Schema Phase:** Provides exact Radix UI primitive schemas, Tailwind CSS classes, and composition patterns for `shadcn/ui`. |
 | | [`ui-ux-pro-max`](ui-ux-pro-max/SKILL.md) | `tools/skills/ui-ux-pro-max/` | Extended UI Design System | **Editorial Design Phase:** Advanced dark-mode first tokens, elevation scale vectors, visual hierarchy rules, and editorial typography. |
 | | [`portfolio-project-manager`](portfolio-project-manager/SKILL.md) | `tools/skills/portfolio-project-manager/` | `AaradhyaDT.github.io` (`scripts/add-project.js`) | **Portfolio Publishing Phase:** Token-Zero project onboarding engine for `AaradhyaDT.github.io` (auto IDs, AES-256-GCM encryption, verification). |
+| | [`fluid-wordmark-collapse`](fluid-wordmark-collapse/SKILL.md) | `tools/skills/fluid-wordmark-collapse/` | Portfolio UI Core (`AaradhyaDT.github.io`) | **Fluid Branding Phase:** Anthropic-style wordmark collapse into monograms in-place with 3-zone fixed-slot anti-displacement layout. |
 | **Technical Writing & Security** | [`blog-writing-like-claude`](blog-writing-like-claude/SKILL.md) | `tools/skills/blog-writing-like-claude/` | `BiasAperture` Project / Global Config | **Technical Publishing Phase:** Enforces calm-authority voice, zero-hype vocabulary, explicit scope boundaries, modeled after Claude engineering blog. |
 | | [`compliance-report-harmonizer`](compliance-report-harmonizer/SKILL.md) | `tools/skills/compliance-report-harmonizer/` | `BiasAperture` Project / Global Config | **Formal Audit Reporting Phase:** Harmonizes compliance & fairness audit reports across HTML/PDF with pre-calibrated regulatory terms & Blink rendering. |
 | | [`security-guidance`](security-guidance/SKILL.md) | `tools/skills/security-guidance/` | Global Antigravity Config | **Vulnerability Gate Phase:** Security audits preventing credential leaks, command injection, path traversal, XSS, SSRF, and unsafe deserialization. |

@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DomainLexiconEntryV1",
+  "description": "Standardized schema for domain-specialized technical vocabulary entries, cross-lingual English-to-Nepali alignment, anti-jargon rules, and register calibration.",
+  "type": "object",
+  "required": [
+    "id",
+    "domain",
+    "term_en",
+    "definition_en",
+    "register",
+    "banned_alternatives",
+    "nepali_alignment"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^VOCAB-[A-Z0-9]+-[0-9]{4}$",
+      "description": "Deterministic identifier (e.g., VOCAB-ML-0042, VOCAB-SYS-0015)."
+    },
+    "domain": {
+      "type": "string",
+      "enum": [
+        "machine_learning",
+        "systems_engineering",
+        "cyber_forensics",
+        "computational_fairness",
+        "legal_governance",
+        "healthcare_biotech",
+        "agritech"
+      ],
+      "description": "Field or discipline for the technical jargon."
+    },
+    "term_en": {
+      "type": "string",
+      "description": "Primary canonical English technical term."
+    },
+    "definition_en": {
+      "type": "string",
+      "description": "Functional, non-hype definition (10-25 words defining what it is and mechanically does)."
+    },
+    "register": {
+      "type": "string",
+      "enum": ["calm_authority", "formal_specification", "peer_reviewed_academic", "developer_documentation"],
+      "description": "Target tone register matching Claude engineering standard."
+    },
+    "banned_alternatives": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Inflated marketing buzzwords, vague analogies, or hype terms strictly forbidden when describing this concept."
+    },
+    "canonical_usage_en": {
+      "type": "string",
+      "description": "Exemplary sentence demonstrating calm authority and functional precision."
+    },
+    "scope_boundary_en": {
+      "type": "string",
+      "description": "Explicit statement declaring what this term or system does NOT imply or perform."
+    },
+    "nepali_alignment": {
+      "type": "object",
+      "required": ["policy_tier", "canonical_rendering", "transliteration_devanagari"],
+      "properties": {
+        "policy_tier": {
+          "type": "string",
+          "enum": [
+            "tier_1_native_nepali",
+            "tier_2_phonetic_transliteration",
+            "tier_3_preserved_inline_english"
+          ],
+          "description": "Tier 1: Established native term; Tier 2: Loanword transliterated to Devanagari; Tier 3: Invariant English acronym or mathematical symbol."
+        },
+        "canonical_rendering": {
+          "type": "string",
+          "description": "Recommended rendering in technical Nepali prose."
+        },
+        "transliteration_devanagari": {
+          "type": "string",
+          "description": "Devanagari phonetic rendering (e.g., ब्याकप्रोपोगेशन, जनसांख्यिकीय समानता)."
+        },
+        "context_sentence_ne": {
+          "type": "string",
+          "description": "Exemplary technical sentence in Nepali showing natural syntactic framing."
+        },
+        "archaic_sanskrit_anti_pattern": {
+          "type": "string",
+          "description": "Hyper-formal Sanskritized neologism to avoid due to practitioner alienation."
+        }
+      }
+    }
+  }
+}

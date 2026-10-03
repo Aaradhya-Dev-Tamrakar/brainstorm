@@ -1,0 +1,29 @@
+id: HYP-009
+title: "Context-Injected Domain Ontology & Tri-Tier Translation Exceed Monolithic Fine-Tuning in Technical Register Calibration and Zero-Hype Jargon Adherence"
+author: "Aaradhya Dev Tamrakar"
+date: "2026-10-03"
+
+# Theoretical Justification
+hypothesis: >
+  A modular bilingual writing system combining a deterministic domain ontology (schemas/domain-lexicon.contract.v1.json),
+  an anti-hype linter, and a tri-tier sociolinguistic translation policy (Native Academic, Phonetic Loanword, Preserved In-line)
+  will achieve: (a) 0% banned marketing superlative leak, (b) >= 90% functional definition compliance across specialized domains
+  (ML auditing, memory systems, cyber-forensics), and (c) >= 85% readability acceptance by bilingual domain practitioners in Nepali,
+  outperforming raw monolithic LLM fine-tuning without tokenizer expansion at 1/100th of the computational training cost.
+why_we_believe_it: >
+  Large language models already possess latent semantic associations for technical concepts; their primary failure mode
+  in domain writing is register miscalibration (defaulting to promotional prose) and Devanagari morphological fragmentation.
+  Explicit constraint injection via schemas and linters enforces deterministic boundaries that gradient descent alone
+  struggles to guarantee without extensive, costly negative-reinforcement tuning (DPO/RLHF).
+counterargument: >
+  Pre-prompting and schema-guided linters consume inference context tokens and may introduce latency overhead during generation;
+  furthermore, rigid lexicon constraints could restrict stylistic fluency in complex comparative arguments, and rule-based linters
+  cannot fully account for nuanced context-dependent polysemy in technical Nepali.
+
+# Experimental Falsification Protocol
+target_experiment: "VOCAB-EVAL-001"
+success_metric: "0% banned buzzwords detected in generated outputs; >= 90% compliance with functional definition and scope boundary rules; >= 85% bilingual practitioner preference for Tri-Tier Nepali over baseline direct machine translation"
+failure_condition: "Banned buzzword occurrence exceeds 2% across 100 test prompts, or bilingual practitioner preference falls below 60% compared to unconstrained foundation model generation"
+
+# Lifecycle State: proposed | active | verified | falsified | retired
+status: proposed

@@ -6,10 +6,10 @@
     "semantic_hash": "1f807d3a09fa490b7f5315226b97cf4b"
   },
   "schemas/ecosystem.registry.json": {
-    "mtime": 1790948170.3192158,
-    "seen": 1790948462.638033,
-    "ast_hash": "cae7a685fdc63bddc4b3eabdb40e87a3",
-    "semantic_hash": "cae7a685fdc63bddc4b3eabdb40e87a3"
+    "mtime": 1790993201.7336514,
+    "seen": 1790993209.554214,
+    "ast_hash": "ca5fde97fe2f78066764b55d5bb16e97",
+    "semantic_hash": "ca5fde97fe2f78066764b55d5bb16e97"
   },
   "schemas/examples/AI-Constraint-Solver.contract.json": {
     "mtime": 1790044861.17107,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790956088.6971457,
-    "seen": 1790956091.8373399,
-    "ast_hash": "41e0c5e0c411a35f2823b766cbb69514",
-    "semantic_hash": "41e0c5e0c411a35f2823b766cbb69514"
+    "mtime": 1790993206.271132,
+    "seen": 1790993209.5542052,
+    "ast_hash": "b275f270d22dc629a8a1b7679e8005af",
+    "semantic_hash": "b275f270d22dc629a8a1b7679e8005af"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790956086.5528746,
-    "seen": 1790956091.837339,
-    "ast_hash": "6a10cb4ea602cb8883b27bc40887f4b3",
-    "semantic_hash": "6a10cb4ea602cb8883b27bc40887f4b3"
+    "mtime": 1790993203.983441,
+    "seen": 1790993209.5542018,
+    "ast_hash": "1dd397bf7b32d2b3395edd46d11ef125",
+    "semantic_hash": "1dd397bf7b32d2b3395edd46d11ef125"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -2020,5 +2020,17 @@
     "seen": 1790952635.7092004,
     "ast_hash": "f9fa87bd3646c8113ecd46c7fe638850",
     "semantic_hash": ""
+  },
+  "schemas/domain-lexicon.contract.v1.json": {
+    "mtime": 1790993164.4816494,
+    "seen": 1790993209.5542114,
+    "ast_hash": "489987818bf0050bc22fcafcc379eb67",
+    "semantic_hash": "489987818bf0050bc22fcafcc379eb67"
+  },
+  "research/plans/PLAN-VOCAB-001_BILINGUAL_DOMAIN_ONTOLOGY_AND_PRECISION_WRITING_ENGINE.md": {
+    "mtime": 1790993178.6286182,
+    "seen": 1790993209.5545733,
+    "ast_hash": "68a20288f4e7169b083007ab7bbcaa4e",
+    "semantic_hash": "68a20288f4e7169b083007ab7bbcaa4e"
   }
 }

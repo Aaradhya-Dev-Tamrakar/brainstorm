@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fluid Wordmark Navbar — Boilerplate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400..700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       3-Zone Fixed-Slot Navigation Bar with Fluid Wordmark Collapse
+       ========================================================================= -->
+  <header>
+    <nav id="nav" class="nav-container" aria-label="Main Navigation">
+      
+      <!-- Zone 1: Dedicated Fixed Brand Slot (Anti-Displacement) -->
+      <div class="nav-brand-slot">
+        <a href="#top" class="nav-logo" aria-label="Aaradhya Dev Tamrakar">
+          <span class="nav-brand-text">
+            <span class="nav-word" data-word="Aaradhya"><span class="nav-initial">A</span><span class="nav-rest">aradhya</span></span>
+            <span class="nav-word" data-word="Dev"><span class="nav-initial">D</span><span class="nav-rest">ev</span></span>
+            <span class="nav-word" data-word="Tamrakar"><span class="nav-initial">T</span><span class="nav-rest">amrakar</span></span>
+            <span class="nav-dot" aria-hidden="true">.</span>
+          </span>
+        </a>
+      </div>
+
+      <!-- Zone 2: Navigation Links (Fluid Middle Column) -->
+      <ul class="nav-links">
+        <li><a href="#work" class="nav-link active">Work</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#research" class="nav-link">Research</a></li>
+        <li><a href="#notes" class="nav-link">Notes</a></li>
+      </ul>
+
+      <!-- Zone 3: Utility Controls & Action Buttons (Right-Anchored) -->
+      <div class="nav-right">
+        <button class="nav-search-btn" aria-label="Search">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-hint">Ctrl+K</span>
+        </button>
+        <a href="#connect" class="nav-cta">Connect</a>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- =========================================================================
+       Main Content (Scroll Runway)
+       ========================================================================= -->
+  <main id="top" class="main-content">
+    
+    <section class="hero-section">
+      <div class="badge">Kinematic Design Pattern</div>
+      <h1 class="hero-title">Fluid Wordmark Collapse & 3-Zone Fixed-Slot Navbar</h1>
+      <p class="hero-description">
+        Inspired by Anthropic's flagship brand wordmark interaction. Words fold in-place into their root initial letters
+        (<strong>A</strong>[aradhya] <strong>D</strong>[ev] <strong>T</strong>[amrakar] &rarr; <strong>A D T .</strong>)
+        with zero layout displacement across adjacent navigation links.
+      </p>
+      <div class="hero-actions">
+        <a href="#scroll-test" class="btn btn-primary">Scroll Down to Test &darr;</a>
+        <a href="README.md" class="btn btn-secondary">Read Documentation</a>
+      </div>
+    </section>
+
+    <section id="scroll-test" class="content-section">
+      <h2 class="section-title">Kinematic Architecture Highlights</h2>
+      
+      <div class="cards-grid">
+        <article class="card">
+          <span class="card-num">01</span>
+          <h3>Zero Layout Shift (CLS = 0)</h3>
+          <p>
+            The dedicated <code>--nav-logo-slot: 250px</code> reserves horizontal geometry, ensuring navigation links
+            and right-aligned buttons never slide or jitter when letters collapse.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-num">02</span>
+          <h3>120fps GPU Compositing</h3>
+          <p>
+            Collapsing letters are promoted to dedicated compositor layers via <code>will-change: max-width, opacity, transform</code>
+            with 3D subpixel rendering to prevent text blurriness.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-num">03</span>
+          <h3>M3 Spring Kinematics</h3>
+          <p>
+            Transitions follow Material Design 3 natural spring curves (<code>cubic-bezier(0.16, 1, 0.3, 1)</code>)
+            for crisp, tactile contraction and effortless hover previews.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="spacer-section">
+      <p class="spacer-text">Scroll up and down to observe the in-place contraction and hover expansion.</p>
+    </section>
+
+  </main>
+
+  <script src="navbar.js"></script>
+</body>
+</html>

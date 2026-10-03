@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790996693.0539186,
-    "seen": 1790996695.8121183,
-    "ast_hash": "c6b5800bc516eb08208858fd3fcf6409",
-    "semantic_hash": "c6b5800bc516eb08208858fd3fcf6409"
+    "mtime": 1790997073.3283887,
+    "seen": 1790997076.2982213,
+    "ast_hash": "fa89997828c33e6ca06a73b6b8889869",
+    "semantic_hash": "fa89997828c33e6ca06a73b6b8889869"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790996690.9812205,
-    "seen": 1790996695.8121161,
-    "ast_hash": "83189fff46b3b97ef5fd48fe9e0630b9",
-    "semantic_hash": "83189fff46b3b97ef5fd48fe9e0630b9"
+    "mtime": 1790997071.1116257,
+    "seen": 1790997076.2982197,
+    "ast_hash": "1362d68ece829f05a97e47987339ac1d",
+    "semantic_hash": "1362d68ece829f05a97e47987339ac1d"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -2158,5 +2158,23 @@
     "seen": 1790996695.8123665,
     "ast_hash": "891822e3e7dc4085f4ffd69c38c847d1",
     "semantic_hash": "891822e3e7dc4085f4ffd69c38c847d1"
+  },
+  "templates/boilerplates/fluid-wordmark-navbar/navbar.js": {
+    "mtime": 1790997027.3581069,
+    "seen": 1790997076.29829,
+    "ast_hash": "76ae6b33687fe933380b7d60a4cdf38b",
+    "semantic_hash": "76ae6b33687fe933380b7d60a4cdf38b"
+  },
+  "templates/README.md": {
+    "mtime": 1790997040.4880767,
+    "seen": 1790997076.2984035,
+    "ast_hash": "1ee06d8eb144129c1c6faae34b651f59",
+    "semantic_hash": "1ee06d8eb144129c1c6faae34b651f59"
+  },
+  "templates/boilerplates/fluid-wordmark-navbar/README.md": {
+    "mtime": 1790997035.2549486,
+    "seen": 1790997076.2984045,
+    "ast_hash": "f829fb79fc5265e332a308c846102218",
+    "semantic_hash": "f829fb79fc5265e332a308c846102218"
   }
 }

@@ -1,0 +1,511 @@
+/* ==========================================================================
+   Fluid Wordmark Navbar — CSS Architecture
+   ========================================================================== */
+
+:root {
+  --bg: #0c0b0a;
+  --bg-card: #151412;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.16);
+  --text: #ece8e1;
+  --text-muted: #9c9589;
+  --text-heading: #f9f7f2;
+  --accent: #d4a85a;
+  --accent-glow: rgba(212, 168, 90, 0.2);
+
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "DM Mono", monospace;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Spring easing curve (M3 Decelerated curve) */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-snap: cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* Base reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   1. 3-Zone Fixed-Slot Navigation Container
+   ========================================================================== */
+
+#nav {
+  /* Dedicated slot widths */
+  --nav-logo-slot: 250px;
+  --nav-right-slot: max-content;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  /* 3-Column Grid: Zone 1 (Fixed) | Zone 2 (Fluid) | Zone 3 (Max Content) */
+  display: grid;
+  grid-template-columns: var(--nav-logo-slot) 1fr var(--nav-right-slot);
+  column-gap: 1.5rem;
+  align-items: center;
+
+  padding: 1.5rem 3rem;
+  border-bottom: 1px solid transparent;
+
+  /* Hardware acceleration and smooth header condensation */
+  will-change: padding, background-color, border-color, box-shadow;
+  transition: padding 0.4s var(--ease-spring),
+              background-color 0.35s ease,
+              border-color 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
+/* Scrolled state applied deterministically via requestAnimationFrame */
+#nav.scrolled {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-color: rgba(12, 11, 10, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-color: var(--border);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   2. Zone 1: Fluid Wordmark Collapse (Anthropic Archetype)
+   ========================================================================== */
+
+.nav-brand-slot {
+  display: flex;
+  align-items: center;
+  width: var(--nav-logo-slot);
+  min-width: var(--nav-logo-slot);
+  flex-shrink: 0;
+}
+
+.nav-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-heading);
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.nav-brand-text {
+  display: inline-flex;
+  align-items: baseline;
+  cursor: pointer;
+}
+
+.nav-word {
+  display: inline-flex;
+  align-items: baseline;
+  overflow: visible;
+}
+
+/* Spacing between syllables */
+.nav-word + .nav-word {
+  margin-left: 0.32em;
+}
+
+/* Root initial letters (Always visible, perfectly crisp) */
+.nav-initial {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--text-heading);
+  transform: translateZ(0);
+}
+
+/* Trailing syllables (Fold inward smoothly) */
+.nav-rest {
+  display: inline-block;
+  max-width: 140px;
+  opacity: 1;
+  transform: scaleX(1) translateZ(0);
+  transform-origin: left baseline;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--text-muted);
+
+  /* Layer promotion & subpixel sharpness */
+  will-change: max-width, opacity, transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  /* High-end spring kinematics */
+  transition: max-width 0.45s var(--ease-spring),
+              opacity 0.28s ease,
+              transform 0.45s var(--ease-spring),
+              color 0.25s ease;
+}
+
+/* Trailing punctuation dot */
+.nav-dot {
+  display: inline-block;
+  color: var(--accent);
+  margin-left: 0.08em;
+  font-weight: 700;
+}
+
+/* ── Collapsed State (On Scroll) ── */
+#nav.scrolled .nav-rest {
+  max-width: 0;
+  opacity: 0;
+  transform: scaleX(0.7) translateZ(0);
+  pointer-events: none;
+}
+
+#nav.scrolled .nav-word + .nav-word {
+  margin-left: 0.15em;
+  transition: margin-left 0.45s var(--ease-spring);
+}
+
+/* ── Hover-to-Peek Expansion (When Scrolled) ── */
+#nav.scrolled .nav-logo:hover .nav-rest,
+#nav.scrolled .nav-logo:focus-visible .nav-rest {
+  max-width: 140px;
+  opacity: 0.95;
+  transform: scaleX(1) translateZ(0);
+  pointer-events: auto;
+  color: var(--text);
+  transition: max-width 0.38s var(--ease-spring),
+              opacity 0.22s ease 0.03s,
+              transform 0.38s var(--ease-spring);
+}
+
+#nav.scrolled .nav-logo:hover .nav-word + .nav-word,
+#nav.scrolled .nav-logo:focus-visible .nav-word + .nav-word {
+  margin-left: 0.32em;
+}
+
+/* ==========================================================================
+   3. Zone 2: Navigation Links (Fluid Column)
+   ========================================================================== */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  justify-content: flex-start;
+  margin-left: 0.5rem;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 0.5rem 0.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text-heading);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================================================================
+   4. Zone 3: Utility Controls & CTA (Right Anchored)
+   ========================================================================== */
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  justify-self: end;
+  flex-shrink: 0;
+}
+
+.nav-search-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-search-btn:hover {
+  border-color: var(--border-hover);
+  color: var(--text);
+}
+
+.search-hint {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  min-height: 38px;
+  padding: 0.5rem 1.15rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #0c0b0a;
+  background: var(--accent);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px var(--accent-glow);
+  transition: transform 0.2s var(--ease-spring),
+              box-shadow 0.2s ease,
+              background-color 0.2s ease;
+}
+
+.nav-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 18px var(--accent-glow);
+  background: #deb66c;
+}
+
+/* ==========================================================================
+   5. Content Sections (Test Runway)
+   ========================================================================== */
+
+.main-content {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 11rem 2rem 8rem;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 4rem 1rem 6rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  background: rgba(212, 168, 90, 0.08);
+  border: 1px solid rgba(212, 168, 90, 0.25);
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 400;
+  line-height: 1.18;
+  color: var(--text-heading);
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--text-heading);
+  color: #0c0b0a;
+}
+
+.btn-primary:hover {
+  background: #ffffff;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--border-hover);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.content-section {
+  padding: 5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--text-heading);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+.card-num {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.card code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+}
+
+.spacer-section {
+  height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px dashed var(--border);
+}
+
+.spacer-text {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   6. Responsive Layout Breakpoints
+   ========================================================================== */
+
+@media (max-width: 1050px) and (min-width: 901px) {
+  #nav {
+    --nav-logo-slot: 230px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    column-gap: 1rem;
+  }
+  .nav-links a {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 900px) {
+  #nav {
+    grid-template-columns: auto 1fr auto;
+    padding: 1rem 1.25rem;
+  }
+  .nav-brand-slot {
+    width: auto;
+    min-width: 0;
+  }
+  /* Keep mobile wordmark permanently collapsed */
+  .nav-rest {
+    max-width: 0 !important;
+    opacity: 0 !important;
+    transform: scaleX(0.7) !important;
+    pointer-events: none !important;
+  }
+  .nav-word + .nav-word {
+    margin-left: 0.15em !important;
+  }
+  .nav-links {
+    display: none; /* In production, render mobile drawer menu */
+  }
+}
+
+/* ==========================================================================
+   7. Accessibility: Prefers Reduced Motion
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  #nav,
+  .nav-rest,
+  .nav-word + .nav-word,
+  .nav-cta,
+  .card {
+    transition: none !important;
+    animation: none !important;
+  }
+}

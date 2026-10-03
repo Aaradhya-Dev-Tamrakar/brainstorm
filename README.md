@@ -22,6 +22,7 @@ To eliminate ambiguity between what is **implemented**, what is **experimentally
 - 🔬 **[Quantitative Claims & Methodology Audit](report/quantitative-claims-audit.md):** Detailed register of every benchmark, sample size, hardware spec, and variance figure.
 - 💰 **[Defensible Economic Model & Capital Accounting](report/economic-model.md):** Tracks direct cash expenditure, compute cost, human effort, replacement cost, and integration overhead separately; no market-value claim is made without external evidence.
 - ⚙️ **Low-Cost Cognitive-Worker Baseline:** Minimizes fixed subscription commitments and measures actual marginal API/compute cost per verified task.
+- 🎓 **[BEI Curriculum Skills & Capability Ontology](research/notes/2026-10-03_BEI_CURRICULUM_SKILLS_AND_CAPABILITY_ONTOLOGY.md):** Exhaustive mapping of all 73 syllabi across 10 engineering domains, connecting academic foundations to 10 modular agent skills ([`tools/skills/`](tools/skills/)) and deterministic simulation grounding ([`sim/bei_foundation_sim.py`](sim/bei_foundation_sim.py)).
 - ⚠️ **[Known Limitations & Failure Modes](report/limitations.md):** Transparent disclosure of technical risks, formalization gaps, benchmark dependencies, and maintenance debt.
 
 ### `main` branch checks & verified enforcement

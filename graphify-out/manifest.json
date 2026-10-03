@@ -138,10 +138,10 @@
     "semantic_hash": "361e8dd333417f7e3bcd00d97cd29842"
   },
   "README.md": {
-    "mtime": 1790955876.3718512,
-    "seen": 1790956091.8374405,
-    "ast_hash": "b91e274a0cf101a733624393a14806f7",
-    "semantic_hash": "b91e274a0cf101a733624393a14806f7"
+    "mtime": 1790994540.3235767,
+    "seen": 1790994581.5769162,
+    "ast_hash": "e9a3edc3d031f866c077ebe80b5c31ba",
+    "semantic_hash": "e9a3edc3d031f866c077ebe80b5c31ba"
   },
   "research/architectures/README.md": {
     "mtime": 1790240407.9593427,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1790993206.271132,
-    "seen": 1790993209.5542052,
-    "ast_hash": "b275f270d22dc629a8a1b7679e8005af",
-    "semantic_hash": "b275f270d22dc629a8a1b7679e8005af"
+    "mtime": 1790994569.8325553,
+    "seen": 1790994581.576784,
+    "ast_hash": "e576483aa0d9e74774aafccc89621fe7",
+    "semantic_hash": "e576483aa0d9e74774aafccc89621fe7"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1790993203.983441,
-    "seen": 1790993209.5542018,
-    "ast_hash": "1dd397bf7b32d2b3395edd46d11ef125",
-    "semantic_hash": "1dd397bf7b32d2b3395edd46d11ef125"
+    "mtime": 1790994567.7113557,
+    "seen": 1790994581.576782,
+    "ast_hash": "d516aed02230f8f148a1946fa1f1996e",
+    "semantic_hash": "d516aed02230f8f148a1946fa1f1996e"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -876,10 +876,10 @@
     "semantic_hash": "7d778793512114b09a97e27b0d5c1e65"
   },
   "tools/skills/README.md": {
-    "mtime": 1790949232.0841918,
-    "seen": 1790949321.6566386,
-    "ast_hash": "c6dd4b825a27678ae52a113dbc72d9b7",
-    "semantic_hash": "c6dd4b825a27678ae52a113dbc72d9b7"
+    "mtime": 1790994427.2174318,
+    "seen": 1790994581.5770183,
+    "ast_hash": "5fe889e16f42e97ee004fc7534b73800",
+    "semantic_hash": "5fe889e16f42e97ee004fc7534b73800"
   },
   "tools/skills/agent-teams-orchestration/SKILL.md": {
     "mtime": 1789792377.3205128,
@@ -2032,5 +2032,107 @@
     "seen": 1790993209.5545733,
     "ast_hash": "68a20288f4e7169b083007ab7bbcaa4e",
     "semantic_hash": "68a20288f4e7169b083007ab7bbcaa4e"
+  },
+  "sim/bei_foundation_sim.py": {
+    "mtime": 1790994239.0516176,
+    "seen": 1790994581.5768332,
+    "ast_hash": "666dd567e1e15517f3d71409fcdb7403",
+    "semantic_hash": "666dd567e1e15517f3d71409fcdb7403"
+  },
+  "tools/skills/avionic-telecom-analyzer/scripts/aero_calc.py": {
+    "mtime": 1790994346.431247,
+    "seen": 1790994581.576867,
+    "ast_hash": "665320303e7b442d7c637323680ec9c2",
+    "semantic_hash": "665320303e7b442d7c637323680ec9c2"
+  },
+  "tools/skills/control-systems-sim/scripts/control_analyzer.py": {
+    "mtime": 1790994326.3496873,
+    "seen": 1790994581.5768704,
+    "ast_hash": "35773ef13da60cda9caed7f79e08fe00",
+    "semantic_hash": "35773ef13da60cda9caed7f79e08fe00"
+  },
+  "tools/skills/dsp-signal-engine/scripts/filter_synth.py": {
+    "mtime": 1790994303.0081098,
+    "seen": 1790994581.5768843,
+    "ast_hash": "70dc20d90de6b1467c369b7d1d7f9397",
+    "semantic_hash": "70dc20d90de6b1467c369b7d1d7f9397"
+  },
+  "tools/skills/electronics-circuit-synth/scripts/circuit_calc.py": {
+    "mtime": 1790994380.311256,
+    "seen": 1790994581.5768855,
+    "ast_hash": "e33c0114ee7da942e85c2f20fdc0738a",
+    "semantic_hash": "e33c0114ee7da942e85c2f20fdc0738a"
+  },
+  "tools/skills/rf-link-budget-calc/scripts/rf_calc.py": {
+    "mtime": 1790994399.679281,
+    "seen": 1790994581.5768998,
+    "ast_hash": "870b9d7cca79e018e560159bbb18276c",
+    "semantic_hash": "870b9d7cca79e018e560159bbb18276c"
+  },
+  "research/notes/2026-10-03_BEI_CURRICULUM_SKILLS_AND_CAPABILITY_ONTOLOGY.md": {
+    "mtime": 1790994194.5590487,
+    "seen": 1790994581.5769887,
+    "ast_hash": "438d3b9619a2a61533f530e820864ecd",
+    "semantic_hash": "438d3b9619a2a61533f530e820864ecd"
+  },
+  "tools/skills/avionic-telecom-analyzer/SKILL.md": {
+    "mtime": 1790994353.5230443,
+    "seen": 1790994581.5770407,
+    "ast_hash": "2b18fcbeb33bdc2019f12192192ba5d4",
+    "semantic_hash": "2b18fcbeb33bdc2019f12192192ba5d4"
+  },
+  "tools/skills/control-systems-sim/SKILL.md": {
+    "mtime": 1790994338.0019956,
+    "seen": 1790994581.5770466,
+    "ast_hash": "41e3931bfb09f37cfa90a38ab4c6afd9",
+    "semantic_hash": "41e3931bfb09f37cfa90a38ab4c6afd9"
+  },
+  "tools/skills/dsa-complexity-optimizer/SKILL.md": {
+    "mtime": 1790994284.1691191,
+    "seen": 1790994581.5770512,
+    "ast_hash": "724e37f664e90a3d107c375993a793f2",
+    "semantic_hash": "724e37f664e90a3d107c375993a793f2"
+  },
+  "tools/skills/dsp-signal-engine/SKILL.md": {
+    "mtime": 1790994309.4686604,
+    "seen": 1790994581.577052,
+    "ast_hash": "3e11ea94b37205dba832183977ba1614",
+    "semantic_hash": "3e11ea94b37205dba832183977ba1614"
+  },
+  "tools/skills/electronics-circuit-synth/SKILL.md": {
+    "mtime": 1790994386.9368532,
+    "seen": 1790994581.5770528,
+    "ast_hash": "571880483bb1f997c792369c7d6a5e27",
+    "semantic_hash": "571880483bb1f997c792369c7d6a5e27"
+  },
+  "tools/skills/embedded-firmware-scaffold/SKILL.md": {
+    "mtime": 1790994318.7023332,
+    "seen": 1790994581.5770538,
+    "ast_hash": "0ab6c05112906d49e233f4c86110d11f",
+    "semantic_hash": "0ab6c05112906d49e233f4c86110d11f"
+  },
+  "tools/skills/oose-architecture-modeler/SKILL.md": {
+    "mtime": 1790994269.455279,
+    "seen": 1790994581.5770829,
+    "ast_hash": "53af8cd02a405be217055a63b0fcfbd2",
+    "semantic_hash": "53af8cd02a405be217055a63b0fcfbd2"
+  },
+  "tools/skills/pm-workflow-orchestrator/SKILL.md": {
+    "mtime": 1790994277.420109,
+    "seen": 1790994581.5770857,
+    "ast_hash": "9b158a4cbe65cbb47d902ec3b09ccb6d",
+    "semantic_hash": "9b158a4cbe65cbb47d902ec3b09ccb6d"
+  },
+  "tools/skills/rf-link-budget-calc/SKILL.md": {
+    "mtime": 1790994369.9273822,
+    "seen": 1790994581.5770886,
+    "ast_hash": "e570b9df2bc235721ca2307532a1fc54",
+    "semantic_hash": "e570b9df2bc235721ca2307532a1fc54"
+  },
+  "tools/skills/systems-concurrency-harness/SKILL.md": {
+    "mtime": 1790994292.6461556,
+    "seen": 1790994581.5770953,
+    "ast_hash": "f380f49f7e44ccb71e83900e7eb3c0d6",
+    "semantic_hash": "f380f49f7e44ccb71e83900e7eb3c0d6"
   }
 }

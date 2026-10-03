@@ -7,7 +7,7 @@
 
 ---
 
-## 📊 Complete Master Skills Matrix (Origin & Workflow Usage) (39 Skills)
+## 📊 Complete Master Skills Matrix (Origin & Workflow Usage) (49 Skills)
 
 | Category | Skill Name | Path | Origin | Usage in Workflow Pipeline |
 | :--- | :--- | :--- | :--- | :--- |
@@ -57,6 +57,16 @@
 | | [`plugin`](plugin/SKILL.md) | `tools/skills/plugin/` | Antigravity IDE Built-in | **Plugin Scaffolding Phase:** Scaffolds, packages, and registers namespaced Antigravity plugins containing skill bundles and rules. |
 | | [`ui-extension`](ui-extension/SKILL.md) | `tools/skills/ui-extension/` | Antigravity IDE Built-in | **Sidecar Extension Phase:** Authors webview sidecars and custom extension panels integrated into the Antigravity IDE layout. |
 | | [`ui-plugin-navigation`](ui-plugin-navigation/SKILL.md) | `tools/skills/ui-plugin-navigation/` | Antigravity IDE Built-in | **Navigation Routing Phase:** Surfaces context-relevant UI plugin panels and handles route switches across active sidecar tools. |
+| **BEI Engineering & Systems Foundations** | [`oose-architecture-modeler`](oose-architecture-modeler/SKILL.md) | `tools/skills/oose-architecture-modeler/` | BE ECIE Curriculum (`CT 657`, `CT 451`) | **Architecture Design Phase:** Generates Mermaid UML diagrams, subsystem allocations, and typed JSON capability contracts. |
+| | [`pm-workflow-orchestrator`](pm-workflow-orchestrator/SKILL.md) | `tools/skills/pm-workflow-orchestrator/` | BE ECIE Curriculum (`CT 658`, `CE 615`) | **Milestone Planning Phase:** Decomposes WBS work packages, CPM critical paths, and acceptance tasks (`- [ ]`) for `github-workflow`. |
+| | [`dsa-complexity-optimizer`](dsa-complexity-optimizer/SKILL.md) | `tools/skills/dsa-complexity-optimizer/` | BE ECIE Curriculum (`CT 552`, `CT 551`) | **Algorithmic Optimization Phase:** Profiles Big-O bounds, selects optimal data structures, and assists with CP problem solving. |
+| | [`systems-concurrency-harness`](systems-concurrency-harness/SKILL.md) | `tools/skills/systems-concurrency-harness/` | BE ECIE Curriculum (`CT 612`, `CT 401`) | **Concurrency Triage Phase:** Audits race conditions, evaluates Banker's deadlock avoidance, and scaffolds thread-safe bounded ring buffers. |
+| | [`dsp-signal-engine`](dsp-signal-engine/SKILL.md) | `tools/skills/dsp-signal-engine/` | BE ECIE Curriculum (`EX 710`, `EX 605`) | **DSP Synthesis Phase:** Synthesizes FIR/IIR filters, evaluates FFT spectra, and models fixed-point quantization noise via `filter_synth.py`. |
+| | [`embedded-firmware-scaffold`](embedded-firmware-scaffold/SKILL.md) | `tools/skills/embedded-firmware-scaffold/` | BE ECIE Curriculum (`CT 655`, `EX 452`) | **Firmware Scaffolding Phase:** Generates bare-metal C HAL drivers, register bitmasks, non-blocking ISR ring buffers, and FreeRTOS tasks. |
+| | [`control-systems-sim`](control-systems-sim/SKILL.md) | `tools/skills/control-systems-sim/` | BE ECIE Curriculum (`EX 509`) | **Feedback Dynamics Phase:** Evaluates 2nd-order transfer functions, computes stability margins, and tunes closed-loop PID controllers. |
+| | [`avionic-telecom-analyzer`](avionic-telecom-analyzer/SKILL.md) | `tools/skills/avionic-telecom-analyzer/` | BE ECIE Curriculum (`EX 725 04`, `EX 725 01`) | **Avionics & Radar Phase:** Computes Radar Range Equations, solves Multilateration TDOA positioning, and calculates VOR/DME/ILS geometries. |
+| | [`rf-link-budget-calc`](rf-link-budget-calc/SKILL.md) | `tools/skills/rf-link-budget-calc/` | BE ECIE Curriculum (`EX 503`, `EX 653`, `EX 716`) | **RF & Wireless Phase:** Computes Friis path loss, antenna directivity, transmission line VSWR, and receiver link margins. |
+| | [`electronics-circuit-synth`](electronics-circuit-synth/SKILL.md) | `tools/skills/electronics-circuit-synth/` | BE ECIE Curriculum (`EX 501`, `EX 553`, `EX 510`) | **Analog Circuit Synthesis Phase:** Designs Sallen-Key active filters, calculates 555 astable components, and models Wheatstone bridges. |
 
 ---
 

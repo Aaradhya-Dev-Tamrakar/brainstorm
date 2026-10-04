@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>प्रीति ↔ यूनिकोड रूपान्तरक | Preeti ↔ Unicode (Nirmala UI) Converter</title>
+  <style>
+    :root {
+      --bg: #121214;
+      --surface: #1e1e24;
+      --surface-variant: #282832;
+      --primary: #bb86fc;
+      --primary-hover: #9955e8;
+      --primary-container: #3700b3;
+      --on-primary: #000000;
+      --secondary: #03dac6;
+      --text: #e6e1e5;
+      --text-muted: #9e9ea8;
+      --border: #383844;
+      --error: #cf6679;
+      --success: #03dac6;
+      --font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font-nepali: 'Nirmala UI', 'Mangal', 'Kalimati', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-family);
+      line-height: 1.5;
+      padding: 24px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+    }
+
+    .header-title h1 {
+      font-size: 1.6rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .header-title p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--surface-variant);
+      color: var(--secondary);
+      border: 1px solid var(--border);
+    }
+
+    /* Mode Selector Bar */
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: var(--surface);
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .radio-label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+
+    .radio-label input[type="radio"] {
+      accent-color: var(--primary);
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--on-primary);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+    }
+
+    .btn-secondary {
+      background: var(--surface-variant);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: #343442;
+    }
+
+    /* Split Panels */
+    .converter-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 14px;
+      flex: 1;
+      align-items: stretch;
+    }
+
+    @media (max-width: 860px) {
+      .converter-grid {
+        grid-template-columns: 1fr;
+      }
+      .center-actions {
+        flex-direction: row !important;
+        justify-content: center;
+      }
+    }
+
+    .panel {
+      background: var(--surface);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .panel-header {
+      padding: 10px 16px;
+      background: var(--surface-variant);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .panel-header .title {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .panel textarea {
+      flex: 1;
+      min-height: 280px;
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 16px;
+      color: var(--text);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      resize: vertical;
+    }
+
+    .input-box {
+      font-family: Consolas, monospace;
+    }
+
+    .output-box {
+      font-family: var(--font-nepali);
+    }
+
+    .center-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Cheat Sheet & Instructions Accordion */
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 18px;
+    }
+
+    summary {
+      font-weight: 600;
+      color: var(--primary);
+      cursor: pointer;
+      user-select: none;
+      outline: none;
+    }
+
+    .cheat-content {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      font-size: 0.85rem;
+    }
+
+    .cheat-card {
+      background: var(--surface-variant);
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .cheat-card h4 {
+      color: var(--secondary);
+      margin-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 4px;
+    }
+
+    .cheat-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .cheat-table td {
+      padding: 3px 6px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--secondary);
+      color: #000;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      display: none;
+      animation: fadeIn 0.3s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="header-title">
+        <h1>प्रीति ↔ यूनिकोड (Nirmala UI) फन्ट रूपान्तरक</h1>
+        <p>Preeti to Unicode &amp; Unicode to Preeti Bidirectional Offline Converter</p>
+      </div>
+      <div class="badge">100% Offline &amp; Client-Side</div>
+    </header>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <div class="radio-group">
+        <label class="radio-label">
+          <input type="radio" name="direction" value="p2u" checked onchange="handleModeChange()">
+          <span>Preeti → Unicode (Nirmala UI)</span>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="direction" value="u2p" onchange="handleModeChange()">
+          <span>Unicode → Preeti</span>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="direction" value="auto" onchange="handleModeChange()">
+          <span>Auto-detect (स्वतः)</span>
+        </label>
+      </div>
+
+      <div class="btn-group">
+        <button class="btn-secondary" onclick="pasteInput()">📋 Paste</button>
+        <button class="btn-secondary" onclick="swapPanels()">⇄ Swap</button>
+        <button class="btn-secondary" onclick="clearAll()">Clear</button>
+        <button class="btn-primary" onclick="convertNow()">Convert →</button>
+      </div>
+    </div>
+
+    <!-- Converter Grid -->
+    <div class="converter-grid">
+      <!-- Input Panel -->
+      <div class="panel">
+        <div class="panel-header">
+          <span class="title" id="inputLabel">Preeti Input</span>
+          <span id="inputStats">0 chars, 0 words</span>
+        </div>
+        <textarea id="inputText" class="input-box" placeholder="यहाँ पेस्ट वा टाइप गर्नुहोस् (e.g. g]kfn)..." oninput="onInputChange()"></textarea>
+      </div>
+
+      <!-- Center Action Buttons -->
+      <div class="center-actions">
+        <button class="btn-primary" onclick="convertNow()" title="Convert">⇄</button>
+      </div>
+
+      <!-- Output Panel -->
+      <div class="panel">
+        <div class="panel-header">
+          <span class="title" id="outputLabel">Unicode Devanagari Output (Nirmala UI)</span>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span id="outputStats">0 chars, 0 words</span>
+            <button class="btn-secondary" style="padding:4px 10px; font-size:0.78rem;" onclick="copyOutput()">📋 Copy</button>
+          </div>
+        </div>
+        <textarea id="outputText" class="output-box" placeholder="रूपान्तरित नतिजा यता देखा पर्नेछ..." readonly></textarea>
+      </div>
+    </div>
+
+    <!-- Preeti Cheat Sheet -->
+    <details>
+      <summary>⌨️ Preeti Keyboard Reference &amp; Office Typing Tips (टाइपिङ सहयोग तालिका)</summary>
+      <div class="cheat-content">
+        <div class="cheat-card">
+          <h4>साझा कार्यालयी शब्दहरू</h4>
+          <table class="cheat-table">
+            <tr><td>नेपाल</td><td><code>g]kfn</code></td></tr>
+            <tr><td>सेवा</td><td><code>;]jf</code></td></tr>
+            <tr><td>नमस्ते</td><td><code>gd:t]</code></td></tr>
+            <tr><td>बैठक</td><td><code>a}7s</code></td></tr>
+            <tr><td>सदस्यता</td><td><code>;b:otf</code></td></tr>
+            <tr><td>नेतृत्व</td><td><code>g]t[Tj</code></td></tr>
+            <tr><td>कार्यक्रम</td><td><code>sfo{s|d</code></td></tr>
+            <tr><td>प्रोग्राम</td><td><code>k|f]u|fd</code></td></tr>
+            <tr><td>सम्बन्धित</td><td><code>;DalGwt</code></td></tr>
+            <tr><td>अध्यक्ष</td><td><code>cWoIf</code></td></tr>
+            <tr><td>प्रमुख</td><td><code>k|d'v</code></td></tr>
+          </table>
+        </div>
+
+        <div class="cheat-card">
+          <h4>स्वर र मात्रा (Vowels &amp; Matras)</h4>
+          <table class="cheat-table">
+            <tr><td>ा (आकार)</td><td><code>f</code></td></tr>
+            <tr><td>ि (ह्रस्व इकार)</td><td><code>l</code> (अगाडि टाइप गर्ने)</td></tr>
+            <tr><td>ी (दीर्घ ईकार)</td><td><code>L</code> (Shift + l)</td></tr>
+            <tr><td>ु (ह्रस्व उकार)</td><td><code>'</code> (Single quote)</td></tr>
+            <tr><td>ू (दीर्घ ऊकार)</td><td><code>"</code> (Shift + ')</td></tr>
+            <tr><td>े (एकार)</td><td><code>]</code></td></tr>
+            <tr><td>ै (ऐकार)</td><td><code>}</code></td></tr>
+            <tr><td>र् (Reph)</td><td><code>{</code> (Shift + [)</td></tr>
+            <tr><td>ं (शिरबिन्दु)</td><td><code>+</code> (Shift + =)</td></tr>
+            <tr><td>ँ (चन्द्रबिन्दु)</td><td><code>F</code> (Shift + f)</td></tr>
+            <tr><td>। (पूर्णविराम)</td><td><code>.</code></td></tr>
+          </table>
+        </div>
+
+        <div class="cheat-card">
+          <h4>संयुक्त व्यञ्जन (Conjuncts)</h4>
+          <table class="cheat-table">
+            <tr><td>त्र</td><td><code>q</code></td></tr>
+            <tr><td>त्त</td><td><code>Q</code></td></tr>
+            <tr><td>ज्ञ</td><td><code>1</code></td></tr>
+            <tr><td>श्र</td><td><code>&gt;</code></td></tr>
+            <tr><td>क्ष</td><td><code>If</code></td></tr>
+            <tr><td>द्ध</td><td><code>4</code></td></tr>
+            <tr><td>द्व</td><td><code>å</code></td></tr>
+            <tr><td>द्य</td><td><code>B</code></td></tr>
+            <tr><td>ट्ट</td><td><code>§</code></td></tr>
+            <tr><td>ठ्ठ</td><td><code>¶</code></td></tr>
+            <tr><td>ड्ड</td><td><code>•</code></td></tr>
+          </table>
+        </div>
+
+        <div class="cheat-card">
+          <h4>किन समस्या आउँछ?</h4>
+          <p style="color:var(--text-muted); font-size:0.82rem; line-height:1.5;">
+            Preeti ले सामान्य English अक्षर (जस्तै 'g', ']', 'k') लाई Devanagari जस्तो देखिने गरी देखाउँछ। तर Nirmala UI / Mangal साँचो Devanagari Unicode (U+0900..U+097F) हो। Word मा फन्ट मात्र फेर्दा अक्षर बिग्रिन्छ र हीरा (◆) चिन्ह आउँछ। यो रूपान्तरकले वास्तविक डाटा नै फेरिदिन्छ।
+          </p>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div id="toast" class="toast">कपी गरियो! (Copied to Clipboard)</div>
+
+  <script>
+    // ═════════════════════════════════════════════════════════════════════════
+    //  PREETI ↔ UNICODE ENGINE IN JAVASCRIPT
+    // ═════════════════════════════════════════════════════════════════════════
+
+    const PREETI_CHAR_MAP = {
+      "÷": "/", "v": "ख", "r": "च", "\"": "ू", "~": "ञ्", "z": "श", "ç": "ॐ",
+      "f": "ा", "b": "द", "n": "ल", "j": "व", "×": "×", "V": "ख्", "R": "च्",
+      "ß": "द्म", "^": "६", "Û": "!", "Z": "श्", "F": "ँ", "B": "द्य", "N": "ल्",
+      "Ë": "ङ्ग", "J": "व्", "6": "ट", "2": "द्द", "¿": "रू", ">": "श्र", ":": "स्",
+      "§": "ट्ट", "&": "७", "£": "घ्", "•": "ड्ड", ".": "।", "«": "्र", "*": "८",
+      "„": "ध्र", "w": "ध", "s": "क", "g": "न", "æ": "“", "c": "अ", "o": "य",
+      "k": "प", "W": "ध्", "Ö": "=", "S": "क्", "Ò": "¨", "_": ")", "[": "ृ",
+      "Ú": "’", "G": "न्", "ˆ": "फ्", "C": "ऋ", "O": "इ", "Î": "ङ्ख", "K": "प्",
+      "7": "ठ", "¶": "ठ्ठ", "3": "घ", "9": "ढ", "?": "रु", ";": "स", "'": "ु",
+      "#": "३", "¢": "द्घ", "/": "र", "+": "ं", "ª": "ङ", "t": "त", "p": "उ",
+      "|": "्र", "x": "ह", "å": "द्व", "d": "म", "`": "ञ", "l": "ि", "h": "ज",
+      "T": "त्", "P": "ए", "Ý": "ट्ठ", "\\": "्", "Ù": ";", "X": "ह्", "Å": "हृ",
+      "D": "म्", "@": "२", "Í": "ङ्क", "L": "ी", "H": "ज्", "4": "द्ध", "±": "+",
+      "0": "ण्", "<": "?", "8": "ड", "¥": "र्‍", "$": "४", "¡": "ज्ञ्", ",": ",",
+      "©": "र", "(": "९", "‘": "ॅ", "u": "ग", "q": "त्र", "}": "ै", "y": "थ",
+      "e": "भ", "a": "ब", "i": "ष्", "‰": "झ्", "U": "ग्", "Q": "त्त", "]": "े",
+      "˜": "ऽ", "Y": "थ्", "Ø": "्य", "E": "भ्", "A": "ब्", "M": "ः", "Ì": "न्न",
+      "I": "क्ष्", "5": "छ", "´": "झ", "1": "ज्ञ", "°": "ङ्ढ", "=": ".", "Æ": "”",
+      "‹": "ङ्घ", "%": "५", "¤": "झ्", "!": "१", "-": "(", "›": "द्र", ")": "०",
+      "…": "‘", "Ü": "%"
+    };
+
+    const PREETI_POST_RULES = [
+      ["्ा", ""],
+      ["(त्र|त्त)([^उभप]+?)m", "$1m$2"],
+      ["त्रm", "क्र"],
+      ["त्तm", "क्त"],
+      ["([^उभप]+?)m", "m$1"],
+      ["उm", "ऊ"],
+      ["भm", "झ"],
+      ["पm", "फ"],
+      ["इ{", "ई"],
+      ["ि((.्)*[^्])", "$1ि"],
+      ["(.[ािीुूृेैोौंःँ]*?){", "{$1"],
+      ["((.्)*){", "{$1"],
+      ["{", "र्"],
+      ["([ाीुूृेैोौंःँ]+?)(्(.्)*[^्])", "$2$1"],
+      ["्([ाीुूृेैोौंःँ]+?)((.्)*[^्])", "्$2$1"],
+      ["([ंँ])([ािीुूृेैोौः]*)", "$2$1"],
+      ["ँँ", "ँ"],
+      ["ंं", "ं"],
+      ["ेे", "े"],
+      ["ैै", "ै"],
+      ["ुु", "ु"],
+      ["ूू", "ू"],
+      ["^ः", ":"],
+      ["टृ", "ट्ट"],
+      ["ेा", "ाे"],
+      ["ैा", "ाै"],
+      ["अाे", "ओ"],
+      ["अाै", "औ"],
+      ["अा", "आ"],
+      ["एे", "ऐ"],
+      ["ाे", "ो"],
+      ["ाै", "ौ"]
+    ];
+
+    const UNICODE_TO_PREETI_MAP = {
+      'क': 's', 'ख': 'v', 'ग': 'u', 'घ': '3', 'ङ': 'ª',
+      'च': 'r', 'छ': '5', 'ज': 'h', 'झ': '´', 'ञ': '`',
+      'ट': '6', 'ठ': '7', 'ड': '8', 'ढ': '9', 'ण': '0f',
+      'त': 't', 'थ': 'y', 'द': 'b', 'ध': 'w', 'न': 'g',
+      'प': 'k', 'फ': 'km', 'ब': 'a', 'भ': 'e', 'म': 'd',
+      'य': 'o', 'र': '/', 'ल': 'n', 'व': 'j',
+      'श': 'z', 'ष': 'if', 'स': ';', 'ह': 'x',
+      'ा': 'f', 'ि': 'l', 'ी': 'L', 'ु': "'", 'ू': '"', 'ृ': '[',
+      'े': ']', 'ै': '}',
+      '्': '\\', '्र': '|',
+      'ं': '+', 'ँ': 'F', 'ः': 'M', '।': '.', '॥': '..',
+      '०': ')', '१': '!', '२': '@', '३': '#', '४': '$', '५': '%',
+      '६': '^', '७': '&', '८': '*', '९': '(',
+      'अ': 'c', 'आ': 'cf', 'इ': 'O', 'ई': 'O{', 'उ': 'p', 'ऊ': 'pm',
+      'ऋ': 'C', 'ए': 'P', 'ऐ': 'P]', 'ओ': 'cf]', 'औ': 'cf}',
+      'क्': 'S', 'ख्': 'V', 'ग्': 'U', 'घ्': '£',
+      'च्': 'R', 'छ्': '5\\', 'ज्': 'H', 'झ्': '‰', 'ञ्': '~',
+      'ट्': '6\\', 'ठ्': '7\\', 'ड्': '8\\', 'ढ्': '9\\', 'ण्': '0',
+      'त्': 'T', 'थ्': 'Y', 'द्': 'b\\', 'ध्': 'W', 'न्': 'G',
+      'प्': 'K', 'फ्': 'ˆ', 'ब्': 'A', 'भ्': 'E', 'म्': 'D',
+      'य्': 'Y', 'ल्': 'N', 'व्': 'J',
+      'श्': 'Z', 'ष्': 'i', 'स्': ':', 'ह्': 'X',
+      'क्ष': 'If', 'क्ष्': 'I',
+      'त्र': 'q', 'त्त': 'Q', 'ज्ञ': '1', 'श्र': '>',
+      'द्द': '2', 'द्ध': '4', 'द्व': 'å', 'द्य': 'B', 'द्म': 'ß',
+      'ट्ट': '§', 'ठ्ठ': '¶', 'ड्ड': '•', 'ङ्क': 'Í', 'ङ्ख': 'Î', 'ङ्ग': 'Ë',
+      'ॐ': 'ç', 'रू': '¿', 'रु': '?', 'द्र': '›', 'ध्र': '„',
+      '(': '-', ')': '_', '?': '<', '=': 'Ö', '!': 'Û',
+      ':': 'Ù', '/': '÷'
+    };
+
+    function preetiToUnicode(text) {
+      if (!text) return "";
+      let output = "";
+      for (let i = 0; i < text.length; i++) {
+        const ch = text[i];
+        output += PREETI_CHAR_MAP[ch] !== undefined ? PREETI_CHAR_MAP[ch] : ch;
+      }
+      for (let r = 0; r < PREETI_POST_RULES.length; r++) {
+        output = output.replace(new RegExp(PREETI_POST_RULES[r][0], 'g'), PREETI_POST_RULES[r][1]);
+      }
+      return output;
+    }
+
+    function unicodeToPreeti(text) {
+      if (!text) return "";
+      let norm = text.replace(/क्+ष/g, 'क्ष')
+                     .replace(/त्+र/g, 'त्र')
+                     .replace(/ज्+ञ/g, 'ज्ञ')
+                     .replace(/श्+र/g, 'श्र')
+                     .replace(/ो/g, 'ाे')
+                     .replace(/ौ/g, 'ाै');
+
+      let converted = "";
+      let idx = -1;
+      const n = norm.length;
+      const halfKeys = new Set('WERTYUXASDGHJK:ZVNIi');
+
+      while (idx + 1 < n) {
+        idx++;
+        const ch = norm[idx];
+        if (ch === '\ufeff') continue;
+
+        try {
+          if (idx + 1 < n && norm[idx + 1] === 'ि') {
+            if (ch === 'q') {
+              converted += 'l' + ch;
+            } else {
+              converted += 'l' + (UNICODE_TO_PREETI_MAP[ch] || ch);
+            }
+            idx++;
+            continue;
+          }
+
+          if (idx + 2 < n && norm[idx + 2] === 'ि') {
+            const mappedCh = UNICODE_TO_PREETI_MAP[ch] || ch;
+            if (halfKeys.has(mappedCh)) {
+              const nextCh = norm[idx + 1];
+              if (nextCh !== 'q') {
+                converted += 'l' + mappedCh + (UNICODE_TO_PREETI_MAP[nextCh] || nextCh);
+                idx += 2;
+                continue;
+              } else {
+                converted += 'l' + mappedCh + nextCh;
+                idx += 2;
+                continue;
+              }
+            }
+          }
+
+          if (idx + 1 < n && ch === 'र' && norm[idx + 1] === '्') {
+            if (idx + 3 < n && ['ा', 'ो', 'ौ', 'े', 'ै', 'ी', 'ाे', 'ाै'].includes(norm[idx + 3])) {
+              converted += (UNICODE_TO_PREETI_MAP[norm[idx + 2]] || norm[idx + 2]) +
+                           (UNICODE_TO_PREETI_MAP[norm[idx + 3]] || norm[idx + 3]) + '{';
+              idx += 3;
+              continue;
+            } else if (idx + 3 < n && norm[idx + 3] === 'ि') {
+              converted += (UNICODE_TO_PREETI_MAP[norm[idx + 3]] || norm[idx + 3]) +
+                           (UNICODE_TO_PREETI_MAP[norm[idx + 2]] || norm[idx + 2]) + '{';
+              idx += 3;
+              continue;
+            } else if (idx + 2 < n) {
+              converted += (UNICODE_TO_PREETI_MAP[norm[idx + 2]] || norm[idx + 2]) + '{';
+              idx += 2;
+              continue;
+            }
+          }
+
+          if (idx + 3 < n && norm[idx + 3] === 'ि') {
+            const join = norm[idx + 2];
+            if (join === '|' || join === '«') {
+              const mappedCh = UNICODE_TO_PREETI_MAP[ch] || ch;
+              if (halfKeys.has(mappedCh)) {
+                converted += 'l' + mappedCh + (UNICODE_TO_PREETI_MAP[norm[idx + 1]] || norm[idx + 1]) + join;
+                idx += 3;
+                continue;
+              }
+            }
+          }
+        } catch (e) {}
+
+        converted += UNICODE_TO_PREETI_MAP[ch] !== undefined ? UNICODE_TO_PREETI_MAP[ch] : ch;
+      }
+
+      converted = converted.replace(/Si/g, 'I')
+                           .replace(/H`/g, '1')
+                           .replace(/b\\w/g, '4')
+                           .replace(/z\|/g, '>')
+                           .replace(/\/'/g, '?')
+                           .replace(/\/"/g, '¿')
+                           .replace(/Tt/g, 'Q')
+                           .replace(/b\\lj/g, 'lå')
+                           .replace(/b\\j/g, 'å')
+                           .replace(/0f\\/g, '0')
+                           .replace(/`\\/g, '~');
+
+      return converted;
+    }
+
+    function detectEncoding(text) {
+      if (!text) return "unknown";
+      if (/[\u0900-\u097F]/.test(text)) return "unicode";
+      return "preeti";
+    }
+
+    // ═════════════════════════════════════════════════════════════════════════
+    //  UI CONTROLLER LOGIC
+    // ═════════════════════════════════════════════════════════════════════════
+
+    function convertNow() {
+      const input = document.getElementById('inputText').value;
+      if (!input.trim()) return;
+
+      const mode = document.querySelector('input[name="direction"]:checked').value;
+      let output = "";
+
+      if (mode === "auto") {
+        const enc = detectEncoding(input);
+        output = enc === "unicode" ? unicodeToPreeti(input) : preetiToUnicode(input);
+      } else if (mode === "p2u") {
+        output = preetiToUnicode(input);
+      } else {
+        output = unicodeToPreeti(input);
+      }
+
+      document.getElementById('outputText').value = output;
+      updateStats();
+    }
+
+    function onInputChange() {
+      convertNow();
+      updateStats();
+    }
+
+    function updateStats() {
+      const inText = document.getElementById('inputText').value;
+      const outText = document.getElementById('outputText').value;
+
+      const inWords = inText.trim() ? inText.trim().split(/\s+/).length : 0;
+      const outWords = outText.trim() ? outText.trim().split(/\s+/).length : 0;
+
+      document.getElementById('inputStats').innerText = `${inText.length} chars, ${inWords} words`;
+      document.getElementById('outputStats').innerText = `${outText.length} chars, ${outWords} words`;
+    }
+
+    function handleModeChange() {
+      const mode = document.querySelector('input[name="direction"]:checked').value;
+      const inLabel = document.getElementById('inputLabel');
+      const outLabel = document.getElementById('outputLabel');
+      const inBox = document.getElementById('inputText');
+      const outBox = document.getElementById('outputText');
+
+      if (mode === "p2u") {
+        inLabel.innerText = "Preeti Input (ASCII)";
+        outLabel.innerText = "Unicode Devanagari Output (Nirmala UI)";
+        inBox.className = "input-box";
+        outBox.className = "output-box";
+      } else if (mode === "u2p") {
+        inLabel.innerText = "Unicode Devanagari Input (Nirmala UI)";
+        outLabel.innerText = "Preeti Output (ASCII)";
+        inBox.className = "output-box";
+        outBox.className = "input-box";
+      } else {
+        inLabel.innerText = "Input (Auto-detecting)";
+        outLabel.innerText = "Output";
+      }
+      convertNow();
+    }
+
+    function swapPanels() {
+      const inBox = document.getElementById('inputText');
+      const outBox = document.getElementById('outputText');
+      const temp = inBox.value;
+      inBox.value = outBox.value;
+      outBox.value = temp;
+
+      // Flip direction
+      const currentMode = document.querySelector('input[name="direction"]:checked').value;
+      if (currentMode === "p2u") {
+        document.querySelector('input[value="u2p"]').checked = true;
+      } else if (currentMode === "u2p") {
+        document.querySelector('input[value="p2u"]').checked = true;
+      }
+      handleModeChange();
+      convertNow();
+    }
+
+    function clearAll() {
+      document.getElementById('inputText').value = "";
+      document.getElementById('outputText').value = "";
+      updateStats();
+    }
+
+    async function pasteInput() {
+      try {
+        const text = await navigator.clipboard.readText();
+        document.getElementById('inputText').value = text;
+        onInputChange();
+        showToast("पेस्ट गरियो! (Pasted from clipboard)");
+      } catch (e) {
+        alert("Clipboard access error: " + e);
+      }
+    }
+
+    function copyOutput() {
+      const out = document.getElementById('outputText').value;
+      if (!out) return;
+      navigator.clipboard.writeText(out).then(() => {
+        showToast("कपी गरियो! (Copied to clipboard)");
+      });
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.innerText = msg;
+      t.style.display = "block";
+      setTimeout(() => {
+        t.style.display = "none";
+      }, 2000);
+    }
+  </script>
+</body>
+</html>

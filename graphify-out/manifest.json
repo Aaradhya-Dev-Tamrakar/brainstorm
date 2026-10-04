@@ -6,10 +6,10 @@
     "semantic_hash": "1f807d3a09fa490b7f5315226b97cf4b"
   },
   "schemas/ecosystem.registry.json": {
-    "mtime": 1790993201.7336514,
-    "seen": 1790993209.554214,
-    "ast_hash": "ca5fde97fe2f78066764b55d5bb16e97",
-    "semantic_hash": "ca5fde97fe2f78066764b55d5bb16e97"
+    "mtime": 1791127969.0122027,
+    "seen": 1791127983.748848,
+    "ast_hash": "1c066ab227fe9047461dd12e8e473487",
+    "semantic_hash": "1c066ab227fe9047461dd12e8e473487"
   },
   "schemas/examples/AI-Constraint-Solver.contract.json": {
     "mtime": 1790044861.17107,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791020398.9047184,
-    "seen": 1791020401.8305879,
-    "ast_hash": "70ff8f4ab5ad91467d0463269f4732bf",
-    "semantic_hash": "70ff8f4ab5ad91467d0463269f4732bf"
+    "mtime": 1791127972.4477713,
+    "seen": 1791127983.7488432,
+    "ast_hash": "cd95195cb61b5cedef7b89a071b7e3e0",
+    "semantic_hash": "cd95195cb61b5cedef7b89a071b7e3e0"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1791020396.822854,
-    "seen": 1791020401.8305862,
-    "ast_hash": "43abae9712c7771af3ead4f8b0caa000",
-    "semantic_hash": "43abae9712c7771af3ead4f8b0caa000"
+    "mtime": 1791127970.3272305,
+    "seen": 1791127983.7488415,
+    "ast_hash": "12d1c16b44606d9ea17f92d3d2de7de9",
+    "semantic_hash": "12d1c16b44606d9ea17f92d3d2de7de9"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -2188,5 +2188,35 @@
     "seen": 1791020401.8307877,
     "ast_hash": "4fc339c568b0533d4b0cdce4a4ccf176",
     "semantic_hash": "4fc339c568b0533d4b0cdce4a4ccf176"
+  },
+  "tools/preeti-converter/converter_engine.py": {
+    "mtime": 1791126916.6097093,
+    "seen": 1791127983.7489178,
+    "ast_hash": "c30d0a0927ab9cf290b594aff78ee804",
+    "semantic_hash": "c30d0a0927ab9cf290b594aff78ee804"
+  },
+  "tools/preeti-converter/converter_gui.py": {
+    "mtime": 1791127006.2951355,
+    "seen": 1791127983.7489188,
+    "ast_hash": "46a20690fe0639a01cc71f8bb9689f1b",
+    "semantic_hash": "46a20690fe0639a01cc71f8bb9689f1b"
+  },
+  "tools/preeti-converter/rules.json": {
+    "mtime": 1791126477.1456175,
+    "seen": 1791127983.7489195,
+    "ast_hash": "7eb8733fd1e756577cdc32ad9d604c3b",
+    "semantic_hash": "7eb8733fd1e756577cdc32ad9d604c3b"
+  },
+  "tools/preeti-converter/shuvayatra_preeti.js": {
+    "mtime": 1791126395.845656,
+    "seen": 1791127983.7489202,
+    "ast_hash": "072191e3430db71b0131da3f91dbe6d4",
+    "semantic_hash": "072191e3430db71b0131da3f91dbe6d4"
+  },
+  "tools/preeti-converter/README.md": {
+    "mtime": 1791127069.2561083,
+    "seen": 1791127983.7490482,
+    "ast_hash": "28bfa3997c33b87b2208e6801fdb251d",
+    "semantic_hash": "28bfa3997c33b87b2208e6801fdb251d"
   }
 }

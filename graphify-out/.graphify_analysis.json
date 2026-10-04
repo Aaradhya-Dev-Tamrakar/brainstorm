@@ -1,6 +1,6 @@
 {
-  "built_at_commit": "de7e4fb05d3c9213722953c5f75df2e17c4afed5",
-  "built_timestamp": "2026-10-04T15:52:50.198810+00:00",
+  "built_at_commit": "4aaa026878da0c561f100fb1f4c5acf2f3a7a809",
+  "built_timestamp": "2026-10-04T16:16:34.502450+00:00",
   "lineage_type": "ancestor_snapshot",
   "communities": {
     "0": [
@@ -177,56 +177,6 @@
       "tools_skills_gemini_omni_flash_api_scripts_video_generate_video_strip_query_params"
     ],
     "3": [
-      "tools_skills_gemini_omni_flash_api_skill",
-      "tools_skills_gemini_omni_flash_api_skill_audio_handling_in_video_editing",
-      "tools_skills_gemini_omni_flash_api_skill_available_scripts",
-      "tools_skills_gemini_omni_flash_api_skill_core_capabilities",
-      "tools_skills_gemini_omni_flash_api_skill_declaring_sources_and_references",
-      "tools_skills_gemini_omni_flash_api_skill_dependencies_and_prerequisites",
-      "tools_skills_gemini_omni_flash_api_skill_gemini_omni_flash_skill",
-      "tools_skills_gemini_omni_flash_api_skill_meta_prompting",
-      "tools_skills_gemini_omni_flash_api_skill_prompting_gemini_omni_flash",
-      "tools_skills_gemini_omni_flash_api_skill_prompting_the_audio",
-      "tools_skills_gemini_omni_flash_api_skill_prompts_for_editing",
-      "tools_skills_gemini_omni_flash_api_skill_prompts_for_extending_a_video",
-      "tools_skills_gemini_omni_flash_api_skill_reference_documentation",
-      "tools_skills_gemini_omni_flash_api_skill_removing_unwanted_elements",
-      "tools_skills_gemini_omni_flash_api_skill_simple_tags_recommended",
-      "tools_skills_gemini_omni_flash_api_skill_single_scene",
-      "tools_skills_gemini_omni_flash_api_skill_text_in_videos",
-      "tools_skills_gemini_omni_flash_api_skill_timing_events",
-      "tools_skills_gemini_omni_flash_api_skill_using_tags_in_prompts_to_set_image_and_video_roles",
-      "tools_skills_gemini_omni_flash_api_skill_video_extension_constraints_and_guidelines",
-      "tools_skills_gemini_omni_flash_api_skill_workflow",
-      "tools_skills_graphify_optimizer_skill",
-      "tools_skills_graphify_optimizer_skill_1_when_to_use_this_skill",
-      "tools_skills_graphify_optimizer_skill_2_core_operational_workflow",
-      "tools_skills_graphify_optimizer_skill_3_diagnostic_commands_measuring_graph_health",
-      "tools_skills_graphify_optimizer_skill_4_ingestion_hygiene_rules_for_graphifyignore",
-      "tools_skills_graphify_optimizer_skill_5_execution_flags_playbooks",
-      "tools_skills_graphify_optimizer_skill_6_semantic_community_labeling",
-      "tools_skills_graphify_optimizer_skill_7_dynamic_output_directory_resolution_graphify_out_placement",
-      "tools_skills_graphify_optimizer_skill_agent_tool_inspection_pattern",
-      "tools_skills_graphify_optimizer_skill_graphify_optimizer_relevancy_engine",
-      "tools_skills_graphify_optimizer_skill_health_benchmarks",
-      "tools_skills_graphify_optimizer_skill_playbook_a_full_calibrated_directed_rebuild",
-      "tools_skills_graphify_optimizer_skill_playbook_b_pure_code_ast_extraction_zero_hallucination",
-      "tools_skills_graphify_optimizer_skill_playbook_c_incremental_ecosystem_sync_routine",
-      "tools_skills_graphify_optimizer_skill_playbook_d_re_clustering_without_re_extraction",
-      "tools_skills_graphify_optimizer_skill_playbook_e_obsidian_knowledge_vault_generation",
-      "tools_skills_graphify_optimizer_skill_resolution_precedence_hierarchy",
-      "tools_skills_winpilot_skill",
-      "tools_skills_winpilot_skill_1_environment_python_runtime",
-      "tools_skills_winpilot_skill_2_core_modules_capabilities",
-      "tools_skills_winpilot_skill_3_cli_commands",
-      "tools_skills_winpilot_skill_4_mcp_tools_winpilot_mcp_server",
-      "tools_skills_winpilot_skill_a_window_management_winpilot_core_window",
-      "tools_skills_winpilot_skill_b_screen_perception_image_capture_winpilot_core_screen",
-      "tools_skills_winpilot_skill_c_ui_automation_text_extraction_winpilot_core_uia",
-      "tools_skills_winpilot_skill_d_input_simulation_winpilot_core_input",
-      "tools_skills_winpilot_skill_winpilot_windows_ui_automation_perception_engine"
-    ],
-    "4": [
       "tools_skills_mcp_integration_skill",
       "tools_skills_mcp_integration_skill_additional_resources",
       "tools_skills_mcp_integration_skill_authentication_patterns",
@@ -276,7 +226,7 @@
       "tools_skills_mcp_integration_skill_validation_checklist",
       "tools_skills_mcp_integration_skill_websocket_real_time"
     ],
-    "5": [
+    "4": [
       "sim_bei_foundation_sim",
       "sim_bei_foundation_sim_boundedblockingringbuffer",
       "sim_bei_foundation_sim_boundedblockingringbuffer_get",
@@ -323,7 +273,90 @@
       "sim_bei_foundation_sim_verify_economics_engine",
       "sim_bei_foundation_sim_verify_project_management_cpm"
     ],
+    "5": [
+      "tools_skills_permissioned_github_skill",
+      "tools_skills_permissioned_github_skill_asking_for_permissions",
+      "tools_skills_permissioned_github_skill_example_10_searching_pull_requests",
+      "tools_skills_permissioned_github_skill_example_11_searching_commits",
+      "tools_skills_permissioned_github_skill_example_12_searching_code",
+      "tools_skills_permissioned_github_skill_example_13_searching_issues",
+      "tools_skills_permissioned_github_skill_example_14_running_dispatching_a_workflow",
+      "tools_skills_permissioned_github_skill_example_15_listing_viewing_or_watching_workflow_runs",
+      "tools_skills_permissioned_github_skill_example_1_creating_an_issue",
+      "tools_skills_permissioned_github_skill_example_2_commenting_on_a_pr",
+      "tools_skills_permissioned_github_skill_example_3_closing_an_issue",
+      "tools_skills_permissioned_github_skill_example_4_approving_a_pr",
+      "tools_skills_permissioned_github_skill_example_5_pushing_to_an_existing_branch",
+      "tools_skills_permissioned_github_skill_example_6_creating_a_new_branch",
+      "tools_skills_permissioned_github_skill_example_7_fetching_a_repository",
+      "tools_skills_permissioned_github_skill_example_8_cloning_a_repository",
+      "tools_skills_permissioned_github_skill_example_9_deleting_a_branch",
+      "tools_skills_permissioned_github_skill_examples",
+      "tools_skills_permissioned_github_skill_github_skill",
+      "tools_skills_permissioned_github_skill_how_and_when_to_ask_for_permissions",
+      "tools_skills_permissioned_github_skill_how_to_interact_with_github",
+      "tools_skills_permissioned_github_skill_permission_format",
+      "tools_skills_shadcn_context_skill",
+      "tools_skills_shadcn_context_skill_1_core_architecture_utility_foundation",
+      "tools_skills_shadcn_context_skill_2_component_composition_schemas",
+      "tools_skills_shadcn_context_skill_3_anti_hallucination_customization_rules",
+      "tools_skills_shadcn_context_skill_class_variance_authority_cva",
+      "tools_skills_shadcn_context_skill_dialog_modal",
+      "tools_skills_shadcn_context_skill_form_field_react_hook_form_zod",
+      "tools_skills_shadcn_context_skill_shadcn_context_design_system_packs",
+      "tools_skills_shadcn_context_skill_the_cn_utility",
+      "tools_skills_super_nlm_downloads_skill",
+      "tools_skills_super_nlm_downloads_skill_automated_execution_workflow",
+      "tools_skills_super_nlm_downloads_skill_core_operational_principles",
+      "tools_skills_super_nlm_downloads_skill_option_1_direct_deterministic_script_recommended",
+      "tools_skills_super_nlm_downloads_skill_option_2_step_by_step_cli_execution",
+      "tools_skills_super_nlm_downloads_skill_step_1_identify_notebook_resolve_path",
+      "tools_skills_super_nlm_downloads_skill_step_2_download_outside_repository",
+      "tools_skills_super_nlm_downloads_skill_step_3_localsend_sharing_via_localsend_mcp",
+      "tools_skills_super_nlm_downloads_skill_super_nlm_studio_artifact_downloads_localsend_sharing_skill",
+      "tools_skills_super_nlm_downloads_skill_verification_safety_gates"
+    ],
     "6": [
+      "datetime",
+      "sim_horoscope_eval_engine",
+      "sim_horoscope_eval_engine_calculate_ascendant",
+      "sim_horoscope_eval_engine_calculate_gmst_hours",
+      "sim_horoscope_eval_engine_calculate_julian_day",
+      "sim_horoscope_eval_engine_calculate_lahiri_ayanamsha",
+      "sim_horoscope_eval_engine_calculate_nakshatra",
+      "sim_horoscope_eval_engine_calculate_obliquity",
+      "sim_horoscope_eval_engine_calculate_planetary_positions",
+      "sim_horoscope_eval_engine_calculate_vimshottari_balance",
+      "sim_horoscope_eval_engine_detect_classical_yogas",
+      "sim_horoscope_eval_engine_evaluate_prediction_claim",
+      "sim_horoscope_eval_engine_normalize_deg",
+      "sim_horoscope_eval_engine_process_horoscope_record",
+      "sim_horoscope_eval_engine_py_any",
+      "sim_horoscope_eval_engine_rationale_1",
+      "sim_horoscope_eval_engine_rationale_100",
+      "sim_horoscope_eval_engine_rationale_108",
+      "sim_horoscope_eval_engine_rationale_119",
+      "sim_horoscope_eval_engine_rationale_148",
+      "sim_horoscope_eval_engine_rationale_218",
+      "sim_horoscope_eval_engine_rationale_234",
+      "sim_horoscope_eval_engine_rationale_278",
+      "sim_horoscope_eval_engine_rationale_351",
+      "sim_horoscope_eval_engine_rationale_405",
+      "sim_horoscope_eval_engine_rationale_69",
+      "sim_horoscope_eval_engine_rationale_74",
+      "sim_horoscope_eval_engine_rationale_93",
+      "sim_nepali_calendar",
+      "sim_nepali_calendar_ad_to_bs",
+      "sim_nepali_calendar_format_dual_date",
+      "sim_nepali_calendar_format_dual_from_bs",
+      "sim_nepali_calendar_py_any",
+      "sim_nepali_calendar_rationale_1",
+      "sim_nepali_calendar_rationale_154",
+      "sim_nepali_calendar_rationale_203",
+      "sim_nepali_calendar_rationale_221",
+      "sim_test_nepal_law_harvester_nepallawharvestertests_test_format_dual_date_structure"
+    ],
+    "7": [
       "ref_architectural_review_session",
       "ref_cohort_1_quest_lead_eligible",
       "ref_compute_guidance_kaggle_gpu",
@@ -363,7 +396,7 @@
       "research_fellows_merit_ledger_xp_tiers_high_distinction",
       "research_fellows_merit_ledger_xp_tiers_pass"
     ],
-    "7": [
+    "8": [
       "ref_banned_alternatives",
       "ref_capabilities",
       "ref_category",
@@ -402,7 +435,7 @@
       "schemas_domain_lexicon_contract_v1_title",
       "schemas_domain_lexicon_contract_v1_type"
     ],
-    "8": [
+    "9": [
       "tools_skills_fluid_wordmark_collapse_references_css_gotchas",
       "tools_skills_fluid_wordmark_collapse_references_css_gotchas_1_the_contain_inline_size_disappearing_text_trap",
       "tools_skills_fluid_wordmark_collapse_references_css_gotchas_2_the_animation_timeline_scroll_inside_fixed_navbars_trap",
@@ -438,7 +471,7 @@
       "tools_skills_fluid_wordmark_collapse_skill_ready_to_use_boilerplates",
       "tools_skills_fluid_wordmark_collapse_skill_reference_files"
     ],
-    "9": [
+    "10": [
       "tools_skills_antigravity_guide_references_app",
       "tools_skills_antigravity_guide_references_app_1_unified_interface_surfaces",
       "tools_skills_antigravity_guide_references_app_2_agent_settings_permissions",
@@ -473,12 +506,15 @@
       "tools_skills_antigravity_guide_skill_2_smart_hybrid_retrieval_when_to_fetch_live_docs",
       "tools_skills_antigravity_guide_skill_google_antigravity_agy_guide_sitemap"
     ],
-    "10": [
-      "datetime",
+    "11": [
       "sim_nepal_law_harvester",
       "sim_nepal_law_harvester_analyze_statute_status",
+      "sim_nepal_law_harvester_atomic_write_file",
       "sim_nepal_law_harvester_detect_statute_status",
       "sim_nepal_law_harvester_is_internet_available",
+      "sim_nepal_law_harvester_legalchronology",
+      "sim_nepal_law_harvester_legalchronology_from_single_date",
+      "sim_nepal_law_harvester_legalchronology_to_dict",
       "sim_nepal_law_harvester_legalstatusevidence",
       "sim_nepal_law_harvester_normalize_devanagari",
       "sim_nepal_law_harvester_rationale_1",
@@ -487,26 +523,22 @@
       "sim_nepal_law_harvester_rationale_136",
       "sim_nepal_law_harvester_rationale_200",
       "sim_nepal_law_harvester_rationale_206",
-      "sim_nepali_calendar",
-      "sim_nepali_calendar_ad_to_bs",
+      "sim_nepal_law_harvester_rationale_216",
+      "sim_nepal_law_harvester_rationale_60",
+      "sim_nepal_law_harvester_rationale_867",
+      "sim_nepal_law_harvester_safelegalcrawler_process_document",
       "sim_nepali_calendar_bs_to_ad",
-      "sim_nepali_calendar_format_dual_date",
-      "sim_nepali_calendar_format_dual_from_bs",
       "sim_nepali_calendar_parse_date_string",
-      "sim_nepali_calendar_py_any",
-      "sim_nepali_calendar_rationale_1",
-      "sim_nepali_calendar_rationale_154",
       "sim_nepali_calendar_rationale_181",
-      "sim_nepali_calendar_rationale_203",
-      "sim_nepali_calendar_rationale_221",
       "sim_nepali_calendar_rationale_232",
       "sim_test_nepal_law_harvester",
-      "sim_test_nepal_law_harvester_nepallawharvestertests_test_devanagari_unicode_normalization",
-      "sim_test_nepal_law_harvester_nepallawharvestertests_test_format_dual_date_structure",
+      "sim_test_nepal_law_harvester_nepallawharvestertests_test_atomic_file_swapping",
+      "sim_test_nepal_law_harvester_nepallawharvestertests_test_bs_to_ad_bi_directional_reversibility",
+      "sim_test_nepal_law_harvester_nepallawharvestertests_test_multidimensional_chronology_and_entity_graph",
       "sim_test_nepal_law_harvester_nepallawharvestertests_test_statute_status_detection",
       "sim_test_nepal_law_harvester_rationale_1"
     ],
-    "11": [
+    "12": [
       "tools_skills_gemini_live_api_dev_skill",
       "tools_skills_gemini_live_api_dev_skill_audio_formats",
       "tools_skills_gemini_live_api_dev_skill_authentication",
@@ -538,7 +570,7 @@
       "tools_skills_gemini_live_api_dev_skill_when_mcp_is_installed_preferred",
       "tools_skills_gemini_live_api_dev_skill_when_mcp_is_not_installed_fallback_only"
     ],
-    "12": [
+    "13": [
       "tools_skills_pr_review_toolkit_skill",
       "tools_skills_pr_review_toolkit_skill_1_identify_all_error_handling_code",
       "tools_skills_pr_review_toolkit_skill_2_scrutinize_each_error_handler",
@@ -570,7 +602,7 @@
       "tools_skills_pr_review_toolkit_skill_your_review_process",
       "tools_skills_pr_review_toolkit_skill_your_tone"
     ],
-    "13": [
+    "14": [
       "sim_nepal_law_harvester_legalharvesterdatabase",
       "sim_nepal_law_harvester_legalharvesterdatabase_claim_task",
       "sim_nepal_law_harvester_legalharvesterdatabase_complete_task",
@@ -601,7 +633,7 @@
       "sim_nepal_law_harvester_rationale_781",
       "sim_nepal_law_harvester_rationale_799"
     ],
-    "14": [
+    "15": [
       "schemas_examples_birth_registration_ward_civic",
       "schemas_examples_birth_registration_ward_civic_canonical_name_en",
       "schemas_examples_birth_registration_ward_civic_canonical_name_ne",
@@ -631,7 +663,7 @@
       "schemas_examples_birth_registration_ward_civic_statutory_sla_max_duration_value",
       "schemas_examples_birth_registration_ward_civic_statutory_sla_sla_display_ne"
     ],
-    "15": [
+    "16": [
       "tools_preeti_converter_converter_gui_preeticonverterapp",
       "tools_preeti_converter_converter_gui_preeticonverterapp_bind_shortcuts",
       "tools_preeti_converter_converter_gui_preeticonverterapp_browse_input",
@@ -661,36 +693,36 @@
       "tools_preeti_converter_converter_gui_rationale_652",
       "tools_preeti_converter_converter_gui_rationale_68"
     ],
-    "16": [
-      "sim_horoscope_eval_engine",
-      "sim_horoscope_eval_engine_calculate_ascendant",
-      "sim_horoscope_eval_engine_calculate_gmst_hours",
-      "sim_horoscope_eval_engine_calculate_julian_day",
-      "sim_horoscope_eval_engine_calculate_lahiri_ayanamsha",
-      "sim_horoscope_eval_engine_calculate_nakshatra",
-      "sim_horoscope_eval_engine_calculate_obliquity",
-      "sim_horoscope_eval_engine_calculate_planetary_positions",
-      "sim_horoscope_eval_engine_calculate_vimshottari_balance",
-      "sim_horoscope_eval_engine_detect_classical_yogas",
-      "sim_horoscope_eval_engine_evaluate_prediction_claim",
-      "sim_horoscope_eval_engine_normalize_deg",
-      "sim_horoscope_eval_engine_process_horoscope_record",
-      "sim_horoscope_eval_engine_py_any",
-      "sim_horoscope_eval_engine_rationale_1",
-      "sim_horoscope_eval_engine_rationale_100",
-      "sim_horoscope_eval_engine_rationale_108",
-      "sim_horoscope_eval_engine_rationale_119",
-      "sim_horoscope_eval_engine_rationale_148",
-      "sim_horoscope_eval_engine_rationale_218",
-      "sim_horoscope_eval_engine_rationale_234",
-      "sim_horoscope_eval_engine_rationale_278",
-      "sim_horoscope_eval_engine_rationale_351",
-      "sim_horoscope_eval_engine_rationale_405",
-      "sim_horoscope_eval_engine_rationale_69",
-      "sim_horoscope_eval_engine_rationale_74",
-      "sim_horoscope_eval_engine_rationale_93"
-    ],
     "17": [
+      "sim_nepal_law_harvester_circuitbreaker",
+      "sim_nepal_law_harvester_circuitbreaker_can_execute",
+      "sim_nepal_law_harvester_circuitbreaker_init",
+      "sim_nepal_law_harvester_circuitbreaker_record_failure",
+      "sim_nepal_law_harvester_circuitbreaker_record_success",
+      "sim_nepal_law_harvester_circuitbreaker_reset",
+      "sim_nepal_law_harvester_circuitbreaker_trip",
+      "sim_nepal_law_harvester_politefetcher",
+      "sim_nepal_law_harvester_politefetcher_fetch",
+      "sim_nepal_law_harvester_politefetcher_init",
+      "sim_nepal_law_harvester_politefetcher_sleep_polite",
+      "sim_nepal_law_harvester_rationale_274",
+      "sim_nepal_law_harvester_rationale_436",
+      "sim_nepal_law_harvester_rationale_834",
+      "sim_nepal_law_harvester_rationale_859",
+      "sim_nepal_law_harvester_safelegalcrawler",
+      "sim_nepal_law_harvester_safelegalcrawler_init",
+      "sim_nepal_law_harvester_safelegalcrawler_sleep_polite",
+      "sim_test_nepal_law_harvester_nepallawharvestertests",
+      "sim_test_nepal_law_harvester_nepallawharvestertests_setup",
+      "sim_test_nepal_law_harvester_nepallawharvestertests_teardown",
+      "sim_test_nepal_law_harvester_nepallawharvestertests_test_ad_to_bs_exact_historical_milestones",
+      "sim_test_nepal_law_harvester_nepallawharvestertests_test_circuit_breaker_transitions",
+      "sim_test_nepal_law_harvester_nepallawharvestertests_test_crawl_step_end_to_end_with_link_discovery",
+      "sim_test_nepal_law_harvester_nepallawharvestertests_test_crawler_end_to_end_deduplication",
+      "sim_test_nepal_law_harvester_nepallawharvestertests_test_devanagari_unicode_normalization",
+      "sim_test_nepal_law_harvester_nepallawharvestertests_test_idbfs_task_lifecycle_and_reclamation"
+    ],
+    "18": [
       "tools_skills_graphify_skill",
       "tools_skills_graphify_skill_for_graphify_add_and_watch",
       "tools_skills_graphify_skill_for_graphify_query",
@@ -719,7 +751,7 @@
       "tools_skills_graphify_skill_what_graphify_is_for",
       "tools_skills_graphify_skill_what_you_must_do_when_invoked"
     ],
-    "18": [
+    "19": [
       "research_notebooklm_ecosystem_sources_03_repository_inventory_and_present_state",
       "research_notebooklm_ecosystem_sources_03_repository_inventory_and_present_state_10_md2pdf_desktop_md2pdf_desktop_fastmcp_server",
       "research_notebooklm_ecosystem_sources_03_repository_inventory_and_present_state_11_yt_dlp_live_yt_dlp_live_capture_dsp_cluster",
@@ -747,7 +779,7 @@
       "research_notebooklm_ecosystem_sources_03_repository_inventory_and_present_state_9_screen_qa_extension_screen_q_a_extension",
       "research_notebooklm_ecosystem_sources_03_repository_inventory_and_present_state_document_3_repository_technical_inventory_present_state"
     ],
-    "19": [
+    "20": [
       "tools_skills_gemini_api_dev_skill",
       "tools_skills_gemini_api_dev_skill_antigravity_agent",
       "tools_skills_gemini_api_dev_skill_content_types_inside_content_array_on_model_output_and_user_input_steps",
@@ -775,7 +807,7 @@
       "tools_skills_gemini_api_dev_skill_when_mcp_is_installed_preferred",
       "tools_skills_gemini_api_dev_skill_when_mcp_is_not_installed_fallback"
     ],
-    "20": [
+    "21": [
       "tools_skills_graphify_code_search_scripts_find_implementation",
       "tools_skills_graphify_code_search_scripts_find_implementation_extract_code_snippet",
       "tools_skills_graphify_code_search_scripts_find_implementation_find_graph_path",
@@ -803,7 +835,7 @@
       "tools_skills_graphify_code_search_scripts_find_implementation_style",
       "tools_skills_graphify_code_search_scripts_find_implementation_style_disable"
     ],
-    "21": [
+    "22": [
       "enum",
       "sim_invariant_engine_benchmark_runner",
       "sim_invariant_engine_benchmark_runner_build_benchmark_testbed",
@@ -830,7 +862,7 @@
       "sim_test_invariant_engine_rationale_1",
       "str"
     ],
-    "22": [
+    "23": [
       "schemas_ecosystem_registry",
       "schemas_ecosystem_registry_entity_classes_ecosystem_modules",
       "schemas_ecosystem_registry_entity_classes_in_tree_research_engines",
@@ -857,7 +889,7 @@
       "schemas_ecosystem_registry_statistics_total_tool_modules",
       "schemas_ecosystem_registry_version"
     ],
-    "23": [
+    "24": [
       "sim_invariant_engine_state_machine_basestatemachine_get_initial_constraint",
       "sim_invariant_engine_state_machine_basestatemachine_get_transition_relation",
       "sim_invariant_engine_state_machine_cxlmemoryallocatormachine",
@@ -884,7 +916,7 @@
       "sim_invariant_engine_state_machine_workersessionruntimemachine_init",
       "sim_invariant_engine_state_machine_workersessionruntimemachine_step"
     ],
-    "24": [
+    "25": [
       "tools_skills_gemini_interactions_api_skill",
       "tools_skills_gemini_interactions_api_skill_antigravity_agent",
       "tools_skills_gemini_interactions_api_skill_content_types_inside_content_array_on_model_output_and_user_input_steps",
@@ -909,7 +941,55 @@
       "tools_skills_gemini_interactions_api_skill_streaming",
       "tools_skills_gemini_interactions_api_skill_streaming_event_types"
     ],
-    "25": [
+    "26": [
+      "readme",
+      "research_fellows_readme",
+      "research_fellows_readme_brainstorm_research_laboratory_fellows_contributors_directory",
+      "research_fellows_readme_contributor_ranks_progression",
+      "research_fellows_readme_onboarding_procedure",
+      "research_fellows_template",
+      "research_plans_brl_c0_how_it_works",
+      "research_plans_brl_c0_overview",
+      "research_plans_brl_contributor_agreement",
+      "research_plans_brl_quest_0_dry_run",
+      "research_plans_brl_support_and_sponsorship",
+      "research_plans_brl_support_and_sponsorship_1_purpose",
+      "research_plans_brl_support_and_sponsorship_2_general_brl_support",
+      "research_plans_brl_support_and_sponsorship_3_research_or_program_sponsorship",
+      "research_plans_brl_support_and_sponsorship_4_individual_led_project_sponsorship",
+      "research_plans_brl_support_and_sponsorship_5_sponsor_independence",
+      "research_plans_brl_support_and_sponsorship_6_contributor_participation",
+      "research_plans_brl_support_and_sponsorship_7_transparency_and_attribution",
+      "research_plans_brl_support_and_sponsorship_8_financial_and_legal_handling",
+      "research_plans_brl_support_and_sponsorship_9_separation_from_merit",
+      "research_plans_brl_support_and_sponsorship_brainstorm_research_laboratory_support_sponsorship_framework",
+      "research_plans_plan_brl_001_brainstorm_research_lab_charter"
+    ],
+    "27": [
+      "report_economic_model",
+      "report_economic_model_1_executive_summary_epistemic_correction",
+      "report_economic_model_2_1_pillar_1_productive_capital_expenditure_capex",
+      "report_economic_model_2_2_pillar_2_productive_operating_expenditure_opex",
+      "report_economic_model_2_3_pillar_3_academic_tuition_cost_of_living_separated_baseline",
+      "report_economic_model_2_4_pillar_4_human_capital_engineering_labor_invested",
+      "report_economic_model_2_5_pillar_5_estimated_replacement_equivalent_labor_cost",
+      "report_economic_model_2_five_pillar_financial_capital_decomposition",
+      "report_economic_model_3_1_replacement_cost_to_direct_cash_spend_ratio_rho_text_cash",
+      "report_economic_model_3_2_direct_ai_spend_as_a_fraction_of_replacement_base_phi_text_ai",
+      "report_economic_model_3_3_google_family_theoretical_retail_cost_avoidance_multiplier_m_text_retail",
+      "report_economic_model_3_defensible_financial_operational_metrics",
+      "report_economic_model_4_vectorized_r_d_resource_consumption",
+      "report_economic_model_5_1_discovery_cost_efficiency_e_text_discovery",
+      "report_economic_model_5_2_human_intervention_ratio_i_text_human",
+      "report_economic_model_5_3_the_funnel_pruning_pipeline_invariant_tracking",
+      "report_economic_model_5_economic_research_direction_discovery_efficiency_funnel_pruning",
+      "report_economic_model_6_1_integration_cost_net_capability_value",
+      "report_economic_model_6_2_measuring_emergent_synergy",
+      "report_economic_model_6_integration_cost_synergy_measurement_models",
+      "report_economic_model_defensible_economic_accounting_r_d_resource_allocation_model",
+      "report_economic_model_task_comparison_example"
+    ],
+    "28": [
       "research_experiments_bmk_memory_001",
       "research_experiments_bmk_memory_001_1_1_objective",
       "research_experiments_bmk_memory_001_1_2_core_hypothesis_hyp_mem_001",
@@ -933,7 +1013,7 @@
       "research_experiments_bmk_memory_001_research_benchmark_bmk_memory_001_memory_stratification_graph_density",
       "research_experiments_bmk_memory_001_summary_performance_table"
     ],
-    "26": [
+    "29": [
       "research_notes_2026_10_01_jetson_orin_nano_setup_and_provisioning_runbook",
       "research_notes_2026_10_01_jetson_orin_nano_setup_and_provisioning_runbook_1_1_physical_port_jumper_layout",
       "research_notes_2026_10_01_jetson_orin_nano_setup_and_provisioning_runbook_1_verified_physical_hardware_inventory_inspected_confirmed",
@@ -957,7 +1037,7 @@
       "research_notes_2026_10_01_jetson_orin_nano_setup_and_provisioning_runbook_9_benchmark_telemetry_ground_truth",
       "research_notes_2026_10_01_jetson_orin_nano_setup_and_provisioning_runbook_jetson_orin_nano_setup_provisioning_optimization_runbook"
     ],
-    "27": [
+    "30": [
       "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report",
       "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_1_executive_summary_hardware_inventory",
       "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_1_via_command_line_powershell_terminal",
@@ -981,7 +1061,7 @@
       "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_rule_2_8gb_unified_memory_management_swapfile_protection",
       "research_notes_2026_10_01_kec_makerspace_jetson_orin_nano_handover_report_rule_3_real_time_hardware_thermal_monitoring_jtop"
     ],
-    "28": [
+    "31": [
       "tools_skills_blog_writing_like_claude_skill",
       "tools_skills_blog_writing_like_claude_skill_1_core_philosophy_the_whiteboard_test",
       "tools_skills_blog_writing_like_claude_skill_2_the_10_invariant_writing_rules",
@@ -1005,31 +1085,7 @@
       "tools_skills_blog_writing_like_claude_skill_rule_9_machine_readable_metadata_structured_data",
       "tools_skills_blog_writing_like_claude_skill_the_three_pillars"
     ],
-    "29": [
-      "tools_skills_permissioned_github_skill",
-      "tools_skills_permissioned_github_skill_asking_for_permissions",
-      "tools_skills_permissioned_github_skill_example_10_searching_pull_requests",
-      "tools_skills_permissioned_github_skill_example_11_searching_commits",
-      "tools_skills_permissioned_github_skill_example_12_searching_code",
-      "tools_skills_permissioned_github_skill_example_13_searching_issues",
-      "tools_skills_permissioned_github_skill_example_14_running_dispatching_a_workflow",
-      "tools_skills_permissioned_github_skill_example_15_listing_viewing_or_watching_workflow_runs",
-      "tools_skills_permissioned_github_skill_example_1_creating_an_issue",
-      "tools_skills_permissioned_github_skill_example_2_commenting_on_a_pr",
-      "tools_skills_permissioned_github_skill_example_3_closing_an_issue",
-      "tools_skills_permissioned_github_skill_example_4_approving_a_pr",
-      "tools_skills_permissioned_github_skill_example_5_pushing_to_an_existing_branch",
-      "tools_skills_permissioned_github_skill_example_6_creating_a_new_branch",
-      "tools_skills_permissioned_github_skill_example_7_fetching_a_repository",
-      "tools_skills_permissioned_github_skill_example_8_cloning_a_repository",
-      "tools_skills_permissioned_github_skill_example_9_deleting_a_branch",
-      "tools_skills_permissioned_github_skill_examples",
-      "tools_skills_permissioned_github_skill_github_skill",
-      "tools_skills_permissioned_github_skill_how_and_when_to_ask_for_permissions",
-      "tools_skills_permissioned_github_skill_how_to_interact_with_github",
-      "tools_skills_permissioned_github_skill_permission_format"
-    ],
-    "30": [
+    "32": [
       "abc",
       "sim_invariant_engine_state_machine",
       "sim_invariant_engine_state_machine_basestatemachine",
@@ -1052,7 +1108,7 @@
       "sim_invariant_engine_state_machine_tokenbucketratelimitermachine_step",
       "sim_invariant_engine_state_machine_workersessionruntimemachine_reset"
     ],
-    "31": [
+    "33": [
       "ref_f_aaradhya_dev_tamrakar_utility_mcps_google_classroom_mcp_index_mjs",
       "schemas_examples_google_classroom_mcp_contract",
       "schemas_examples_google_classroom_mcp_contract_capabilities",
@@ -1075,7 +1131,7 @@
       "schemas_examples_google_classroom_mcp_contract_tracking_branch",
       "schemas_examples_google_classroom_mcp_contract_version"
     ],
-    "32": [
+    "34": [
       "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan",
       "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_1_executive_summary",
       "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_2_1_the_engineering_bottleneck",
@@ -1098,7 +1154,7 @@
       "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_arch_plan_001_commercial_business_plan_technical_roadmap",
       "research_architectures_arch_plan_001_aec_eng_mcp_commercial_business_plan_universal_engineering_protocol_aec_mcp_multi_disciplinary_engineering_fleet"
     ],
-    "33": [
+    "35": [
       "research_architectures_arch_spec_006_fusion360_universal_mcp_bridge",
       "research_architectures_arch_spec_006_fusion360_universal_mcp_bridge_1_executive_summary_problem_context",
       "research_architectures_arch_spec_006_fusion360_universal_mcp_bridge_2_1_inv_fus_001_main_thread_single_ownership_lock",
@@ -1121,7 +1177,7 @@
       "research_experiments_exp_fusion360_mcp_001_6_artifact_provenance",
       "research_experiments_exp_fusion360_mcp_001_research_experiment_exp_fusion360_mcp_001_empirical_verification_of_universal_cad_actuation_via_mcp"
     ],
-    "34": [
+    "36": [
       "research_plans_plan_brl_001_brainstorm_research_lab_charter_10_operational_infrastructure_master_artifact_index",
       "research_plans_plan_brl_001_brainstorm_research_lab_charter_1_executive_summary_paradigm_shift",
       "research_plans_plan_brl_001_brainstorm_research_lab_charter_2_institutional_positioning_operational_substrates",
@@ -1144,7 +1200,7 @@
       "research_plans_plan_brl_001_brainstorm_research_lab_charter_the_core_problem_the_internship_illusion",
       "research_plans_plan_brl_001_brainstorm_research_lab_charter_the_paradigm_shift"
     ],
-    "35": [
+    "37": [
       "research_plans_plan_nisr_001_program_charter_1_program_mission_paradigm_shift",
       "research_plans_plan_nisr_001_program_charter_2_decoupling_from_spark_academic_vs_research_lab",
       "research_plans_plan_nisr_001_program_charter_3_the_6_emergent_contribution_tracks",
@@ -1167,7 +1223,30 @@
       "research_plans_plan_nisr_001_program_charter_track_nisr_005_sovereign_provenance_cryptographic_lineage",
       "research_plans_plan_nisr_001_program_charter_track_nisr_006_legal_knowledge_graph_temporal_reasoning"
     ],
-    "36": [
+    "38": [
+      "tools_skills_gemini_omni_flash_api_skill",
+      "tools_skills_gemini_omni_flash_api_skill_audio_handling_in_video_editing",
+      "tools_skills_gemini_omni_flash_api_skill_available_scripts",
+      "tools_skills_gemini_omni_flash_api_skill_core_capabilities",
+      "tools_skills_gemini_omni_flash_api_skill_declaring_sources_and_references",
+      "tools_skills_gemini_omni_flash_api_skill_dependencies_and_prerequisites",
+      "tools_skills_gemini_omni_flash_api_skill_gemini_omni_flash_skill",
+      "tools_skills_gemini_omni_flash_api_skill_meta_prompting",
+      "tools_skills_gemini_omni_flash_api_skill_prompting_gemini_omni_flash",
+      "tools_skills_gemini_omni_flash_api_skill_prompting_the_audio",
+      "tools_skills_gemini_omni_flash_api_skill_prompts_for_editing",
+      "tools_skills_gemini_omni_flash_api_skill_prompts_for_extending_a_video",
+      "tools_skills_gemini_omni_flash_api_skill_reference_documentation",
+      "tools_skills_gemini_omni_flash_api_skill_removing_unwanted_elements",
+      "tools_skills_gemini_omni_flash_api_skill_simple_tags_recommended",
+      "tools_skills_gemini_omni_flash_api_skill_single_scene",
+      "tools_skills_gemini_omni_flash_api_skill_text_in_videos",
+      "tools_skills_gemini_omni_flash_api_skill_timing_events",
+      "tools_skills_gemini_omni_flash_api_skill_using_tags_in_prompts_to_set_image_and_video_roles",
+      "tools_skills_gemini_omni_flash_api_skill_video_extension_constraints_and_guidelines",
+      "tools_skills_gemini_omni_flash_api_skill_workflow"
+    ],
+    "39": [
       "tools_skills_github_workflow_examples_templates",
       "tools_skills_github_workflow_examples_templates_1_feature_refactor_issue_template",
       "tools_skills_github_workflow_examples_templates_2_bug_fix_issue_template",
@@ -1190,51 +1269,7 @@
       "tools_skills_github_workflow_skill_step_7_open_pull_request_request_review",
       "tools_skills_github_workflow_skill_step_8_post_pr_iteration_branch_cleanup"
     ],
-    "37": [
-      "aaradhya_master_v165",
-      "research_notes_2026_09_27_biasaperture_research_dossier",
-      "research_notes_2026_09_27_biasaperture_research_dossier_1_executive_summary_authorship",
-      "research_notes_2026_09_27_biasaperture_research_dossier_2_milestone_architecture_github_project_anchoring_2026_10_01",
-      "research_notes_2026_09_27_biasaperture_research_dossier_3_modularity_single_responsibility_architecture_refactor_issue_32_pr_33",
-      "research_notes_2026_09_27_biasaperture_research_dossier_4_collaborative_peer_review_git_governance_protocol",
-      "research_notes_2026_09_27_biasaperture_research_dossier_5_core_architectural_methodological_pillars",
-      "research_notes_2026_09_27_biasaperture_research_dossier_i_the_core_four_disparity_metrics",
-      "research_notes_2026_09_27_biasaperture_research_dossier_ii_dual_harmonization_engine_fairlearn_aif360",
-      "research_notes_2026_09_27_biasaperture_research_dossier_iii_statistical_rigour_guardrails",
-      "research_notes_2026_09_27_biasaperture_research_dossier_iv_non_negotiable_diagnostic_scope_invariants",
-      "research_notes_2026_09_27_biasaperture_research_dossier_research_note_biasaperture_diagnostic_fairness_bias_audit_platform",
-      "research_notes_2026_09_27_biasaperture_research_dossier_v_regulatory_compliance_mapping",
-      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry",
-      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_1_executive_summary",
-      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_2_personal_ecosystem_core_workspaces",
-      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_3_project_specific_workspaces_biasaperture_fuse_ai_fellowship",
-      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_4_mcp_super_nlm_tooling_integration",
-      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_5_privacy_repository_boundaries",
-      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_research_note_gemini_notebooklm_knowledge_base_registry"
-    ],
-    "38": [
-      "profile",
-      "research_architectures_arch_rfc_001_record_keeping_standard",
-      "research_architectures_arch_rfc_002_multi_model_council",
-      "research_architectures_arch_rfc_003_capstone_defense_standard",
-      "research_architectures_arch_rfc_004_workflow_externalization_freeze",
-      "research_architectures_arch_spec_001_ecie_compute_memory",
-      "research_architectures_arch_spec_002_ingestion_processing_unit",
-      "research_architectures_arch_spec_002_ingestion_processing_unit_1_1_the_revolutionary_fallacy_vs_the_evolutionary_invariant",
-      "research_architectures_arch_spec_002_ingestion_processing_unit_1_2_the_core_thesis_ingress_boundary_reduction",
-      "research_architectures_arch_spec_002_ingestion_processing_unit_1_executive_philosophy_the_strangler_fig_evolutionary_transition",
-      "research_architectures_arch_spec_002_ingestion_processing_unit_2_ipu_system_topology_channel_decomposition",
-      "research_architectures_arch_spec_002_ingestion_processing_unit_3_high_velocity_ingress_stress_scenarios_telecom_ai_workloads",
-      "research_architectures_arch_spec_002_ingestion_processing_unit_4_hardware_realization_open_predecessors",
-      "research_architectures_arch_spec_002_ingestion_processing_unit_5_architectural_invariants_for_the_ipu",
-      "research_architectures_readme",
-      "research_daily_2026_09_19",
-      "research_invariants_inv_epi_001",
-      "research_invariants_inv_mem_001",
-      "research_notes_2026_09_19_agentic_ai_industry_ayush_shah",
-      "templates_daily_note"
-    ],
-    "39": [
+    "40": [
       "ref_pilot_cli",
       "ref_status",
       "schemas_examples_github_pilot_contract",
@@ -1256,7 +1291,7 @@
       "schemas_examples_github_pilot_contract_tracking_branch",
       "schemas_examples_github_pilot_contract_version"
     ],
-    "40": [
+    "41": [
       "report_limitations",
       "report_limitations_1_motivation_policy",
       "report_limitations_2_10_main_thread_synchronization_boundary_in_cad_actuation",
@@ -1278,7 +1313,7 @@
       "report_limitations_2_core_architectural_systemic_limitations",
       "report_limitations_known_limitations_failure_modes_epistemic_risks"
     ],
-    "41": [
+    "42": [
       "request",
       "scripts_sync_drive",
       "scripts_sync_drive_create_drive_file",
@@ -1300,7 +1335,7 @@
       "scripts_sync_drive_sync_notebooklm_sources",
       "scripts_sync_drive_update_drive_file"
     ],
-    "42": [
+    "43": [
       "research_daily_2026_09_23",
       "research_daily_2026_09_23_1_schedule_priorities",
       "research_daily_2026_09_23_2026_09_23_daily_log",
@@ -1322,7 +1357,7 @@
       "research_experiments_exp_localsend_mcp_001_6_provenance_reproduction",
       "research_experiments_exp_localsend_mcp_001_research_experiment_exp_localsend_mcp_001_live_empirical_verification_of_the_localsend_mcp_server"
     ],
-    "43": [
+    "44": [
       "research_decisions_dec_003_main_branch_enforcement_alignment_1_context_problem",
       "research_decisions_dec_003_main_branch_enforcement_alignment_2_decisions",
       "research_decisions_dec_003_main_branch_enforcement_alignment_3_1_pre_state_live_read_back_2026_09_21_16_16_05_45",
@@ -1344,7 +1379,7 @@
       "research_decisions_dec_003_main_branch_enforcement_alignment_mechanism",
       "research_decisions_dec_003_main_branch_enforcement_alignment_non_goals"
     ],
-    "44": [
+    "45": [
       "research_plans_plan_horo_001_deterministic_horoscope_evaluation_model",
       "research_plans_plan_horo_001_deterministic_horoscope_evaluation_model_1_executive_summary_problem_formulation",
       "research_plans_plan_horo_001_deterministic_horoscope_evaluation_model_2_system_architecture_layer_decomposition",
@@ -1365,28 +1400,6 @@
       "research_plans_plan_horo_001_deterministic_horoscope_evaluation_model_tranche_b_verifiable_discrete_life_milestones_target_vector_mathbf_y",
       "research_plans_plan_horo_001_deterministic_horoscope_evaluation_model_tranche_c_synthetic_geographic_temporal_perturbation_grids",
       "research_plans_plan_horo_001_deterministic_horoscope_evaluation_model_tranche_d_llm_generation_corpus_candidate_models_mathbf_hat_y"
-    ],
-    "45": [
-      "sim_nepal_law_harvester_atomic_write_file",
-      "sim_nepal_law_harvester_legalchronology",
-      "sim_nepal_law_harvester_legalchronology_from_single_date",
-      "sim_nepal_law_harvester_legalchronology_to_dict",
-      "sim_nepal_law_harvester_rationale_216",
-      "sim_nepal_law_harvester_rationale_60",
-      "sim_nepal_law_harvester_rationale_834",
-      "sim_nepal_law_harvester_rationale_867",
-      "sim_nepal_law_harvester_safelegalcrawler",
-      "sim_nepal_law_harvester_safelegalcrawler_process_document",
-      "sim_test_nepal_law_harvester_nepallawharvestertests",
-      "sim_test_nepal_law_harvester_nepallawharvestertests_setup",
-      "sim_test_nepal_law_harvester_nepallawharvestertests_teardown",
-      "sim_test_nepal_law_harvester_nepallawharvestertests_test_ad_to_bs_exact_historical_milestones",
-      "sim_test_nepal_law_harvester_nepallawharvestertests_test_atomic_file_swapping",
-      "sim_test_nepal_law_harvester_nepallawharvestertests_test_bs_to_ad_bi_directional_reversibility",
-      "sim_test_nepal_law_harvester_nepallawharvestertests_test_crawl_step_end_to_end_with_link_discovery",
-      "sim_test_nepal_law_harvester_nepallawharvestertests_test_crawler_end_to_end_deduplication",
-      "sim_test_nepal_law_harvester_nepallawharvestertests_test_idbfs_task_lifecycle_and_reclamation",
-      "sim_test_nepal_law_harvester_nepallawharvestertests_test_multidimensional_chronology_and_entity_graph"
     ],
     "46": [
       "profile_1_engineering_identity",
@@ -1678,45 +1691,25 @@
       "report_repository_audit_item_17_google_classroom_mcp_ingestion_hub"
     ],
     "60": [
-      "research_architectures_arch_spec_003_headless_orchestration_substrate",
-      "research_architectures_arch_spec_003_headless_orchestration_substrate_1_1_the_front_end_trap_in_autonomous_systems",
-      "research_architectures_arch_spec_003_headless_orchestration_substrate_1_2_the_architectural_invariant_substrate_decoupling",
-      "research_architectures_arch_spec_003_headless_orchestration_substrate_1_executive_philosophy_headless_engine_first_interface_second",
-      "research_architectures_arch_spec_003_headless_orchestration_substrate_2_1_the_cli_as_the_first_jarvis_prototype",
-      "research_architectures_arch_spec_003_headless_orchestration_substrate_2_the_deterministic_loop_compose_execute_verify",
-      "research_architectures_arch_spec_003_headless_orchestration_substrate_3_core_contract_data_boundaries",
-      "research_architectures_arch_spec_003_headless_orchestration_substrate_4_key_advantages_for_the_r_d_strategic_wedge",
-      "research_architectures_arch_spec_003_headless_orchestration_substrate_5_architectural_invariants_enforced",
-      "research_architectures_arch_spec_007_environment_reproducibility_bootstrap",
-      "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_1_executive_summary_problem_statement",
-      "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_2_environment_architecture_customization_layers",
-      "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_3_the_1_click_bootstrap_protocol_bootstrap_environment_ps1",
-      "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_4_skills_taxonomy_registry_reference",
-      "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_5_verification_acceptance_criteria",
-      "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_step_1_clone_repository",
-      "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_step_2_run_bootstrap_engine",
-      "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_what_the_bootstrap_engine_executes"
+      "profile",
+      "research_architectures_arch_spec_001_ecie_compute_memory",
+      "research_daily_2026_09_19",
+      "research_daily_2026_09_19_1_schedule_priorities",
+      "research_daily_2026_09_19_2026_09_19_daily_log",
+      "research_daily_2026_09_19_2_active_projects_progress",
+      "research_daily_2026_09_19_3_meetings_transcripts",
+      "research_daily_2026_09_19_4_daily_learnings_conceptual_nodes",
+      "research_daily_2026_09_19_5_tomorrow_s_context_agent_primer",
+      "research_notes_2026_09_19_agentic_ai_industry_ayush_shah",
+      "templates_daily_note",
+      "templates_meeting_note",
+      "templates_readme",
+      "templates_readme_1_document_note_templates_obsidian_knowledge_core",
+      "templates_readme_2_frontend_component_boilerplates",
+      "templates_readme_ecosystem_templates_code_boilerplates_registry",
+      "templates_readme_template_catalog"
     ],
     "61": [
-      "report_economic_model_1_executive_summary_epistemic_correction",
-      "report_economic_model_2_1_pillar_1_productive_capital_expenditure_capex",
-      "report_economic_model_2_2_pillar_2_productive_operating_expenditure_opex",
-      "report_economic_model_2_3_pillar_3_academic_tuition_cost_of_living_separated_baseline",
-      "report_economic_model_2_4_pillar_4_human_capital_engineering_labor_invested",
-      "report_economic_model_2_5_pillar_5_estimated_replacement_equivalent_labor_cost",
-      "report_economic_model_2_five_pillar_financial_capital_decomposition",
-      "report_economic_model_3_1_replacement_cost_to_direct_cash_spend_ratio_rho_text_cash",
-      "report_economic_model_3_2_direct_ai_spend_as_a_fraction_of_replacement_base_phi_text_ai",
-      "report_economic_model_3_3_google_family_theoretical_retail_cost_avoidance_multiplier_m_text_retail",
-      "report_economic_model_3_defensible_financial_operational_metrics",
-      "report_economic_model_4_vectorized_r_d_resource_consumption",
-      "report_economic_model_6_1_integration_cost_net_capability_value",
-      "report_economic_model_6_2_measuring_emergent_synergy",
-      "report_economic_model_6_integration_cost_synergy_measurement_models",
-      "report_economic_model_defensible_economic_accounting_r_d_resource_allocation_model",
-      "report_economic_model_task_comparison_example"
-    ],
-    "62": [
       "research_architectures_arch_plan_002_systems_engineering_mastery_plan",
       "research_architectures_arch_plan_002_systems_engineering_mastery_plan_1_1_cognitive_profile_evaluation",
       "research_architectures_arch_plan_002_systems_engineering_mastery_plan_1_2_the_semantic_gap_strategic_risk",
@@ -1735,7 +1728,7 @@
       "research_architectures_arch_plan_002_systems_engineering_mastery_plan_track_b_real_world_relevancy_external_scale_30_allocation",
       "research_architectures_arch_plan_002_systems_engineering_mastery_plan_transitioning_from_ai_augmented_systems_architect_to_first_principles_engineering_authority"
     ],
-    "63": [
+    "62": [
       "research_notes_2026_10_03_bei_curriculum_skills_and_capability_ontology_1_executive_summary_epistemic_framework",
       "research_notes_2026_10_03_bei_curriculum_skills_and_capability_ontology_2_curriculum_architecture_semester_breakdown",
       "research_notes_2026_10_03_bei_curriculum_skills_and_capability_ontology_3_the_10_master_engineering_competency_domains",
@@ -1754,26 +1747,26 @@
       "research_notes_2026_10_03_bei_curriculum_skills_and_capability_ontology_domain_9_rf_microwave_wireless_antennas_aeronautical_telecommunications",
       "research_notes_2026_10_03_bei_curriculum_skills_and_capability_ontology_master_curriculum_ontology_engineering_competencies_skills_architecture_derived_from_the_4_year_be_ecie_beie_degree"
     ],
-    "64": [
-      "sim_nepal_law_harvester_circuitbreaker",
-      "sim_nepal_law_harvester_circuitbreaker_can_execute",
-      "sim_nepal_law_harvester_circuitbreaker_init",
-      "sim_nepal_law_harvester_circuitbreaker_record_failure",
-      "sim_nepal_law_harvester_circuitbreaker_record_success",
-      "sim_nepal_law_harvester_circuitbreaker_reset",
-      "sim_nepal_law_harvester_circuitbreaker_trip",
-      "sim_nepal_law_harvester_politefetcher",
-      "sim_nepal_law_harvester_politefetcher_fetch",
-      "sim_nepal_law_harvester_politefetcher_init",
-      "sim_nepal_law_harvester_politefetcher_sleep_polite",
-      "sim_nepal_law_harvester_rationale_274",
-      "sim_nepal_law_harvester_rationale_436",
-      "sim_nepal_law_harvester_rationale_859",
-      "sim_nepal_law_harvester_safelegalcrawler_init",
-      "sim_nepal_law_harvester_safelegalcrawler_sleep_polite",
-      "sim_test_nepal_law_harvester_nepallawharvestertests_test_circuit_breaker_transitions"
+    "63": [
+      "tools_skills_graphify_optimizer_skill",
+      "tools_skills_graphify_optimizer_skill_1_when_to_use_this_skill",
+      "tools_skills_graphify_optimizer_skill_2_core_operational_workflow",
+      "tools_skills_graphify_optimizer_skill_3_diagnostic_commands_measuring_graph_health",
+      "tools_skills_graphify_optimizer_skill_4_ingestion_hygiene_rules_for_graphifyignore",
+      "tools_skills_graphify_optimizer_skill_5_execution_flags_playbooks",
+      "tools_skills_graphify_optimizer_skill_6_semantic_community_labeling",
+      "tools_skills_graphify_optimizer_skill_7_dynamic_output_directory_resolution_graphify_out_placement",
+      "tools_skills_graphify_optimizer_skill_agent_tool_inspection_pattern",
+      "tools_skills_graphify_optimizer_skill_graphify_optimizer_relevancy_engine",
+      "tools_skills_graphify_optimizer_skill_health_benchmarks",
+      "tools_skills_graphify_optimizer_skill_playbook_a_full_calibrated_directed_rebuild",
+      "tools_skills_graphify_optimizer_skill_playbook_b_pure_code_ast_extraction_zero_hallucination",
+      "tools_skills_graphify_optimizer_skill_playbook_c_incremental_ecosystem_sync_routine",
+      "tools_skills_graphify_optimizer_skill_playbook_d_re_clustering_without_re_extraction",
+      "tools_skills_graphify_optimizer_skill_playbook_e_obsidian_knowledge_vault_generation",
+      "tools_skills_graphify_optimizer_skill_resolution_precedence_hierarchy"
     ],
-    "65": [
+    "64": [
       "tools_skills_security_guidance_skill",
       "tools_skills_security_guidance_skill_configuration",
       "tools_skills_security_guidance_skill_enabling_disabling_layers",
@@ -1792,25 +1785,7 @@
       "tools_skills_security_guidance_skill_troubleshooting",
       "tools_skills_security_guidance_skill_vulnerability_patterns_reference"
     ],
-    "66": [
-      "agents",
-      "gemini",
-      "gemini_antigravity_ide_gemini_agent_rules_brainstorm_ecosystem_orchestration",
-      "research_decisions_dec_001_memory_stratification",
-      "research_decisions_dec_001_memory_stratification_1_context_problem",
-      "research_decisions_dec_001_memory_stratification_2_decision",
-      "research_decisions_dec_001_memory_stratification_3_consequences_empirical_verification",
-      "research_decisions_dec_001_memory_stratification_decision_record_dec_001_memory_stratification_retrieval_pruning",
-      "research_decisions_dec_002_personal_rd_capstone_boundary",
-      "research_decisions_dec_002_personal_rd_capstone_boundary_1_context_problem",
-      "research_decisions_dec_002_personal_rd_capstone_boundary_2_decisions",
-      "research_decisions_dec_002_personal_rd_capstone_boundary_3_consequences_downstream_actions_status_as_of_2026_09_23",
-      "research_decisions_dec_002_personal_rd_capstone_boundary_4_verification_anchors",
-      "research_decisions_dec_002_personal_rd_capstone_boundary_decision_record_dec_002_personal_r_d_duo_capstone_boundary_audit_evidence_discipline",
-      "research_decisions_dec_003_main_branch_enforcement_alignment",
-      "schemas_evidence_policy"
-    ],
-    "67": [
+    "65": [
       "ecosystem_architectural_brainstorm_7_10_the_5_mo_operating_baseline_cognitive_worker_decoupling",
       "ecosystem_architectural_brainstorm_7_11_the_formal_experiment_protocol_inv_telemetry_specification",
       "ecosystem_architectural_brainstorm_7_12_meta_engineering_escaping_recursive_planning_via_the_three_output_rule",
@@ -1828,7 +1803,7 @@
       "ecosystem_architectural_brainstorm_the_decoupling_principle_jarvis_is_not_gemini",
       "ecosystem_architectural_brainstorm_the_prototype_inversion"
     ],
-    "68": [
+    "66": [
       "event",
       "tools_preeti_converter_quick_bridge_floatingwidget",
       "tools_preeti_converter_quick_bridge_floatingwidget_copy_result",
@@ -1846,7 +1821,7 @@
       "tools_preeti_converter_quick_bridge_rationale_75",
       "tools_preeti_converter_quick_bridge_toastnotification_show"
     ],
-    "69": [
+    "67": [
       "research_architectures_arch_spec_005_nepali_ocr_docx_engine",
       "research_architectures_arch_spec_005_nepali_ocr_docx_engine_1_executive_summary_problem_space",
       "research_architectures_arch_spec_005_nepali_ocr_docx_engine_2_system_architecture_lipikaar_ai_pipeline",
@@ -1864,7 +1839,7 @@
       "research_architectures_arch_spec_008_nepal_civic_action_graph_5_security_privacy_invariants",
       "research_architectures_arch_spec_008_nepal_civic_action_graph_arch_spec_008_nepal_civic_action_spatial_knowledge_substrate_nagarikgraph"
     ],
-    "70": [
+    "68": [
       "research_experiments_exp_001_ipu_breakeven_sweep",
       "research_experiments_exp_001_ipu_breakeven_sweep_1_research_questions_addressed",
       "research_experiments_exp_001_ipu_breakeven_sweep_2_parameter_sweep_matrix",
@@ -1882,7 +1857,7 @@
       "sim_results_experiments_report_what_was_tested",
       "sim_results_experiments_report_why_the_mechanism_should_help"
     ],
-    "71": [
+    "69": [
       "research_plans_plan_vocab_001_bilingual_domain_ontology_and_precision_writing_engine",
       "research_plans_plan_vocab_001_bilingual_domain_ontology_and_precision_writing_engine_1_executive_summary_problem_formulation",
       "research_plans_plan_vocab_001_bilingual_domain_ontology_and_precision_writing_engine_2_architectural_viability_evaluation_model_training_vs_ontology_skill_layer",
@@ -1900,7 +1875,7 @@
       "research_plans_plan_vocab_001_bilingual_domain_ontology_and_precision_writing_engine_the_tri_tier_vocabulary_policy",
       "research_plans_plan_vocab_001_bilingual_domain_ontology_and_precision_writing_engine_tokenizer_mitigation_strategy"
     ],
-    "72": [
+    "70": [
       "schemas_examples_fusion360_mcp_contract",
       "schemas_examples_fusion360_mcp_contract_capabilities",
       "schemas_examples_fusion360_mcp_contract_location",
@@ -1918,7 +1893,7 @@
       "schemas_examples_fusion360_mcp_contract_tracking_branch",
       "schemas_examples_fusion360_mcp_contract_version"
     ],
-    "73": [
+    "71": [
       "sync",
       "sync_confirm_remoteconfigured",
       "sync_find_stagedsecrets",
@@ -1936,7 +1911,7 @@
       "sync_write_status",
       "sync_write_success"
     ],
-    "74": [
+    "72": [
       "tools_skills_gemini_omni_flash_api_scripts_video_inspect_video",
       "tools_skills_gemini_omni_flash_api_scripts_video_inspect_video_format_size",
       "tools_skills_gemini_omni_flash_api_scripts_video_inspect_video_inspect_video",
@@ -1954,7 +1929,7 @@
       "tools_skills_gemini_omni_flash_api_scripts_video_prep_video_rationale_39",
       "tools_skills_gemini_omni_flash_api_scripts_video_prep_video_rationale_9"
     ],
-    "75": [
+    "73": [
       "tools_skills_github_workflow_references_gh_cli_cheatsheet",
       "tools_skills_github_workflow_references_gh_cli_cheatsheet_1_issue_management",
       "tools_skills_github_workflow_references_gh_cli_cheatsheet_create_a_pull_request",
@@ -1972,7 +1947,7 @@
       "tools_skills_github_workflow_references_gh_cli_cheatsheet_view_inspect_issues",
       "tools_skills_github_workflow_references_gh_cli_cheatsheet_view_inspect_pull_requests"
     ],
-    "76": [
+    "74": [
       "tools_skills_graphify_code_search_skill",
       "tools_skills_graphify_code_search_skill_1_purpose_core_advantage",
       "tools_skills_graphify_code_search_skill_2_quick_command_reference",
@@ -1990,7 +1965,25 @@
       "tools_skills_graphify_code_search_skill_trace_callees_what_does_this_call",
       "tools_skills_graphify_code_search_skill_trace_callers_who_calls_this"
     ],
-    "77": [
+    "75": [
+      "tools_skills_migrate_workflows_skill",
+      "tools_skills_migrate_workflows_skill_instructions_for_the_agent",
+      "tools_skills_migrate_workflows_skill_migrate_workflows_to_skills",
+      "tools_skills_migrate_workflows_skill_step_1_discover_existing_workflows",
+      "tools_skills_migrate_workflows_skill_step_2_convert_each_workflow_to_a_skill_idempotent_execution",
+      "tools_skills_migrate_workflows_skill_step_3_verify_and_confirm",
+      "tools_skills_readme",
+      "tools_skills_readme_antigravity_custom_skills_registry_workflow_origin_matrix",
+      "tools_skills_readme_complete_master_skills_matrix_origin_workflow_usage_50_skills",
+      "tools_skills_readme_synchronization_protocol",
+      "tools_skills_ui_plugin_navigation_skill",
+      "tools_skills_ui_plugin_navigation_skill_constraints_tips",
+      "tools_skills_ui_plugin_navigation_skill_step_1_find_ui_plugin_panes_and_their_views",
+      "tools_skills_ui_plugin_navigation_skill_step_2_emit_the_pill_link",
+      "tools_skills_ui_plugin_navigation_skill_ui_plugin_navigation",
+      "tools_skills_ui_plugin_navigation_skill_when_to_surface_a_pill"
+    ],
+    "76": [
       "callable",
       "robotfileparser",
       "sim_nepal_law_harvester_crawlpolicy",
@@ -2007,24 +2000,7 @@
       "sim_nepal_law_harvester_safelegalcrawler_crawl_step",
       "sim_test_nepal_law_harvester_nepallawharvestertests_test_crawl_policy_and_robots_rules"
     ],
-    "78": [
-      "report_reconciliation_2026_09_19",
-      "report_reconciliation_2026_09_19_1_executive_summary",
-      "report_reconciliation_2026_09_19_2_granular_reconciliation_matrix",
-      "report_reconciliation_2026_09_19_3_epistemic_certification",
-      "report_reconciliation_2026_09_19_comprehensive_multi_model_ecosystem_reconciliation_report_2026_09_19",
-      "research_invariants_inv_wsr_002",
-      "research_invariants_inv_wsr_002_1_1_invariant_a_closed_loop_worker_dispatch_no_orphaned_leases",
-      "research_invariants_inv_wsr_002_1_2_invariant_b_strict_separation_of_real_execution_and_simulation",
-      "research_invariants_inv_wsr_002_1_3_invariant_c_telemetry_truthfulness_quota_headroom",
-      "research_invariants_inv_wsr_002_1_4_invariant_d_atomic_checkpoint_dag_advancement",
-      "research_invariants_inv_wsr_002_1_5_invariant_e_qa_authority_claim_token_isolation_for_state_transitions",
-      "research_invariants_inv_wsr_002_1_the_core_invariant_statements",
-      "research_invariants_inv_wsr_002_2_mathematical_formalization",
-      "research_invariants_inv_wsr_002_3_verification_compliance_gate",
-      "research_invariants_inv_wsr_002_architectural_invariant_inv_wsr_002_worker_protocol_completeness_truthful_telemetry"
-    ],
-    "79": [
+    "77": [
       "research_notes_2026_10_03_bei_curriculum_skills_and_capability_ontology",
       "tools_skills_avionic_telecom_analyzer_skill",
       "tools_skills_avionic_telecom_analyzer_skill_1_operating_rules_avionics_principles",
@@ -2033,15 +2009,15 @@
       "tools_skills_avionic_telecom_analyzer_skill_capability_a_radar_range_equation_cli",
       "tools_skills_avionic_telecom_analyzer_skill_capability_b_multilateration_mlat_tdoa_hyperbolic_positioning",
       "tools_skills_avionic_telecom_analyzer_skill_capability_c_vor_dme_radio_navigation_geometry",
-      "tools_skills_electronics_circuit_synth_skill",
-      "tools_skills_electronics_circuit_synth_skill_1_operating_rules_analog_design_principles",
-      "tools_skills_electronics_circuit_synth_skill_2_core_capabilities_workflows",
-      "tools_skills_electronics_circuit_synth_skill_analog_electronics_circuit_synthesizer_electronics_circuit_synth",
-      "tools_skills_electronics_circuit_synth_skill_capability_a_analog_circuit_synthesis_cli",
-      "tools_skills_electronics_circuit_synth_skill_capability_b_2nd_order_sallen_key_lowpass_active_filter",
-      "tools_skills_electronics_circuit_synth_skill_capability_c_transistor_dc_biasing_small_signal_voltage_gain"
+      "tools_skills_rf_link_budget_calc_skill",
+      "tools_skills_rf_link_budget_calc_skill_1_operating_rules_rf_foundations",
+      "tools_skills_rf_link_budget_calc_skill_2_core_capabilities_workflows",
+      "tools_skills_rf_link_budget_calc_skill_capability_a_end_to_end_link_budget_cli",
+      "tools_skills_rf_link_budget_calc_skill_capability_b_antenna_array_pattern_multiplication",
+      "tools_skills_rf_link_budget_calc_skill_capability_c_quarter_wave_transformer_single_stub_matching",
+      "tools_skills_rf_link_budget_calc_skill_rf_wireless_link_budget_calculator_rf_link_budget_calc"
     ],
-    "80": [
+    "78": [
       "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture",
       "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture_1_executive_summary_objective",
       "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture_2_capture_architecture_multi_modality_engine",
@@ -2058,7 +2034,7 @@
       "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture_phase_5_portfolio_ui_integration_verification_completed_2026_10_01",
       "research_plans_plan_media_001_ecosystem_project_working_screenshot_capture_research_plan_ecosystem_project_working_screenshot_visual_proof_capture_pipeline"
     ],
-    "81": [
+    "79": [
       "tools_doc_archiver_save_doc",
       "tools_doc_archiver_save_doc_extract_gdoc_id",
       "tools_doc_archiver_save_doc_fetch_gdoc_html",
@@ -2075,7 +2051,7 @@
       "tools_doc_archiver_save_doc_resolve_target_directory",
       "tools_doc_archiver_save_doc_slugify"
     ],
-    "82": [
+    "80": [
       "tools_preeti_converter_converter_engine",
       "tools_preeti_converter_converter_engine_convert_docx",
       "tools_preeti_converter_converter_engine_detect_encoding",
@@ -2085,14 +2061,14 @@
       "tools_preeti_converter_converter_engine_rationale_155",
       "tools_preeti_converter_converter_engine_rationale_170",
       "tools_preeti_converter_converter_engine_rationale_201",
-      "tools_preeti_converter_converter_engine_rationale_457",
-      "tools_preeti_converter_converter_engine_rationale_510",
+      "tools_preeti_converter_converter_engine_rationale_476",
+      "tools_preeti_converter_converter_engine_rationale_561",
       "tools_preeti_converter_converter_engine_unicode_to_preeti",
       "tools_preeti_converter_converter_gui",
       "tools_preeti_converter_converter_gui_main",
       "tools_preeti_converter_converter_gui_rationale_1"
     ],
-    "83": [
+    "81": [
       "tools_skills_antigravity_guide_references_customizations_hooks",
       "tools_skills_antigravity_guide_references_customizations_hooks_1_pretooluse_contract",
       "tools_skills_antigravity_guide_references_customizations_hooks_2_posttooluse_contract",
@@ -2109,7 +2085,7 @@
       "tools_skills_antigravity_guide_references_customizations_hooks_supported_event_types",
       "tools_skills_antigravity_guide_references_customizations_hooks_the_matcher"
     ],
-    "84": [
+    "82": [
       "tools_skills_antigravity_guide_references_customizations_json_configs",
       "tools_skills_antigravity_guide_references_customizations_json_configs_configuration_schema",
       "tools_skills_antigravity_guide_references_customizations_json_configs_explicitly_configured_paths",
@@ -2126,7 +2102,7 @@
       "tools_skills_antigravity_guide_references_customizations_plugins_registering_plugins",
       "tools_skills_antigravity_guide_references_customizations_plugins_turning_plugins_on_and_off"
     ],
-    "85": [
+    "83": [
       "research_notebooklm_ecosystem_sources_02_operational_workflows_and_pipelines",
       "research_notebooklm_ecosystem_sources_02_operational_workflows_and_pipelines_1_overview_of_autonomous_compound_pipelines",
       "research_notebooklm_ecosystem_sources_02_operational_workflows_and_pipelines_2_the_6_flagship_compound_pipelines",
@@ -2142,7 +2118,7 @@
       "research_notebooklm_ecosystem_sources_02_operational_workflows_and_pipelines_pipeline_e_autonomous_youtube_media_ingestion_dsp_processing",
       "research_notebooklm_ecosystem_sources_02_operational_workflows_and_pipelines_pipeline_f_zero_cloud_p2p_device_handoff"
     ],
-    "86": [
+    "84": [
       "schemas_capability_contract_v1_metadata_type",
       "schemas_capability_contract_v1_module_description",
       "schemas_capability_contract_v1_module_pattern",
@@ -2158,7 +2134,7 @@
       "schemas_capability_contract_v1_version_pattern",
       "schemas_capability_contract_v1_version_type"
     ],
-    "87": [
+    "85": [
       "sim_task_telemetry",
       "sim_task_telemetry_cmd_close",
       "sim_task_telemetry_cmd_log_dispatch",
@@ -2174,7 +2150,7 @@
       "sim_task_telemetry_run_self_test",
       "sim_task_telemetry_save_all_tasks"
     ],
-    "88": [
+    "86": [
       "tools_skills_design_taste_frontend_skill",
       "tools_skills_design_taste_frontend_skill_1_active_baseline_configuration",
       "tools_skills_design_taste_frontend_skill_2_token_systems_material_architecture",
@@ -2190,7 +2166,7 @@
       "tools_skills_design_taste_frontend_skill_c_3d_spatial_transforms",
       "tools_skills_design_taste_frontend_skill_master_frontend_design_motion_engineering"
     ],
-    "89": [
+    "87": [
       "tools_skills_super_nlm_skill",
       "tools_skills_super_nlm_skill_1_architectural_overview",
       "tools_skills_super_nlm_skill_2_model_context_protocol_mcp_reference",
@@ -2206,7 +2182,22 @@
       "tools_skills_super_nlm_skill_studio_artifact_operations_scheduling",
       "tools_skills_super_nlm_skill_super_nlm_orchestrator_fleet_management_skill"
     ],
-    "90": [
+    "88": [
+      "research_architectures_arch_spec_002_ingestion_processing_unit",
+      "research_architectures_arch_spec_002_ingestion_processing_unit_1_1_the_revolutionary_fallacy_vs_the_evolutionary_invariant",
+      "research_architectures_arch_spec_002_ingestion_processing_unit_1_2_the_core_thesis_ingress_boundary_reduction",
+      "research_architectures_arch_spec_002_ingestion_processing_unit_1_executive_philosophy_the_strangler_fig_evolutionary_transition",
+      "research_architectures_arch_spec_002_ingestion_processing_unit_2_ipu_system_topology_channel_decomposition",
+      "research_architectures_arch_spec_002_ingestion_processing_unit_3_high_velocity_ingress_stress_scenarios_telecom_ai_workloads",
+      "research_architectures_arch_spec_002_ingestion_processing_unit_4_hardware_realization_open_predecessors",
+      "research_architectures_arch_spec_002_ingestion_processing_unit_5_architectural_invariants_for_the_ipu",
+      "research_invariants_inv_mem_001",
+      "research_invariants_inv_mem_001_1_the_energy_chasm_invariant",
+      "research_invariants_inv_mem_001_2_the_uncoalesced_burst_penalty_invariant",
+      "research_invariants_inv_mem_001_3_the_isolated_scalar_reduction_boundary_bound",
+      "research_invariants_inv_mem_001_invariant_spec_inv_mem_001_the_von_neumann_chasm_coalescing_bounds"
+    ],
+    "89": [
       "research_notes_customization_token_optimization_guide",
       "research_notes_customization_token_optimization_guide_1_executive_summary",
       "research_notes_customization_token_optimization_guide_2_empirical_overhead_breakdown",
@@ -2221,7 +2212,7 @@
       "research_notes_customization_token_optimization_guide_rule_4_periodic_customization_auditing",
       "research_notes_customization_token_optimization_guide_setup_guide_antigravity_customization_token_budget_overhead_optimization"
     ],
-    "91": [
+    "90": [
       "research_plans_brl_c0_how_it_works_1_read_the_short_introduction",
       "research_plans_brl_c0_how_it_works_2_complete_the_intake_form",
       "research_plans_brl_c0_how_it_works_3_receive_your_first_assignment",
@@ -2236,7 +2227,7 @@
       "research_plans_brl_c0_how_it_works_what_you_do_not_need_before_joining",
       "research_plans_brl_c0_how_it_works_your_path"
     ],
-    "92": [
+    "91": [
       "schemas_domain_lexicon_contract_v1_archaic_sanskrit_anti_pattern_description",
       "schemas_domain_lexicon_contract_v1_archaic_sanskrit_anti_pattern_type",
       "schemas_domain_lexicon_contract_v1_canonical_rendering_description",
@@ -2251,7 +2242,7 @@
       "schemas_domain_lexicon_contract_v1_transliteration_devanagari_description",
       "schemas_domain_lexicon_contract_v1_transliteration_devanagari_type"
     ],
-    "93": [
+    "92": [
       "schemas_domain_lexicon_contract_v1_canonical_usage_en_description",
       "schemas_domain_lexicon_contract_v1_canonical_usage_en_type",
       "schemas_domain_lexicon_contract_v1_definition_en_description",
@@ -2266,7 +2257,7 @@
       "schemas_domain_lexicon_contract_v1_term_en_description",
       "schemas_domain_lexicon_contract_v1_term_en_type"
     ],
-    "94": [
+    "93": [
       "tools_skills_ui_extension_skill",
       "tools_skills_ui_extension_skill_backend_sidecarapp",
       "tools_skills_ui_extension_skill_building_ui_extensions",
@@ -2280,6 +2271,20 @@
       "tools_skills_ui_extension_skill_where_to_install",
       "tools_skills_ui_extension_skill_workflow",
       "tools_skills_ui_extension_skill_writing_portable_backend_code"
+    ],
+    "94": [
+      "agents",
+      "gemini",
+      "gemini_antigravity_ide_gemini_agent_rules_brainstorm_ecosystem_orchestration",
+      "research_architectures_arch_rfc_001_record_keeping_standard",
+      "research_architectures_arch_rfc_002_multi_model_council",
+      "research_architectures_arch_rfc_003_capstone_defense_standard",
+      "research_architectures_arch_rfc_004_workflow_externalization_freeze",
+      "research_architectures_readme",
+      "research_decisions_dec_002_personal_rd_capstone_boundary",
+      "research_decisions_dec_003_main_branch_enforcement_alignment",
+      "research_invariants_inv_epi_001",
+      "schemas_evidence_policy"
     ],
     "95": [
       "ecosystem_architectural_brainstorm_1_executive_summary_the_core_breakthrough",
@@ -2296,20 +2301,6 @@
       "ecosystem_architectural_brainstorm_the_ultimate_conceptual_model_jarvis_as_the_cognitive_interface_not_just_a_chatbot"
     ],
     "96": [
-      "readme",
-      "research_fellows_readme",
-      "research_fellows_readme_brainstorm_research_laboratory_fellows_contributors_directory",
-      "research_fellows_readme_contributor_ranks_progression",
-      "research_fellows_readme_onboarding_procedure",
-      "research_fellows_template",
-      "research_plans_brl_c0_how_it_works",
-      "research_plans_brl_c0_overview",
-      "research_plans_brl_contributor_agreement",
-      "research_plans_brl_quest_0_dry_run",
-      "research_plans_brl_support_and_sponsorship",
-      "research_plans_plan_brl_001_brainstorm_research_lab_charter"
-    ],
-    "97": [
       "readme_authoritative_ecosystem_catalog",
       "readme_authoritative_governance_evidence_standards",
       "readme_core_architecture_capability_mesh_decoupled_cognition",
@@ -2323,7 +2314,7 @@
       "readme_personal_engineering_ecosystem_r_d_infrastructure",
       "readme_unified_synchronization_engine_sync_ps1"
     ],
-    "98": [
+    "97": [
       "ref_actuation",
       "ref_cognition",
       "ref_compute",
@@ -2337,7 +2328,7 @@
       "schemas_capability_contract_v1_category_type",
       "schemas_capability_contract_v1_properties_category"
     ],
-    "99": [
+    "98": [
       "ref_audit",
       "ref_execute",
       "ref_find_counterexample",
@@ -2351,7 +2342,7 @@
       "schemas_capability_contract_v1_objective_type",
       "schemas_capability_contract_v1_properties_objective"
     ],
-    "100": [
+    "99": [
       "research_architectures_arch_spec_004_youtube_transformer_cluster",
       "research_architectures_arch_spec_004_youtube_transformer_cluster_1_1_the_youtube_cold_start_dilemma",
       "research_architectures_arch_spec_004_youtube_transformer_cluster_1_2_the_two_pronged_audience_seeding_wedge",
@@ -2365,7 +2356,7 @@
       "research_architectures_arch_spec_004_youtube_transformer_cluster_4_verification_testing_matrix",
       "research_architectures_arch_spec_004_youtube_transformer_cluster_5_architectural_contract_tube_transformer_contract_json"
     ],
-    "101": [
+    "100": [
       "schemas_capability_ontology",
       "schemas_capability_ontology_1_motivation_purpose",
       "schemas_capability_ontology_2_1_repository",
@@ -2379,7 +2370,7 @@
       "schemas_capability_ontology_4_verification_governance_rules",
       "schemas_capability_ontology_canonical_capability_ecosystem_ontology"
     ],
-    "102": [
+    "101": [
       "tools_chat_archiver_save_chat",
       "tools_chat_archiver_save_chat_clean_text",
       "tools_chat_archiver_save_chat_find_last_transcript_doc",
@@ -2393,7 +2384,7 @@
       "tools_chat_archiver_save_chat_resolve_target_directory",
       "tools_chat_archiver_save_chat_slugify"
     ],
-    "103": [
+    "102": [
       "tools_preeti_converter_readme",
       "tools_preeti_converter_readme_4_ways_to_use_this_toolkit",
       "tools_preeti_converter_readme_authentic_ligature_synthesizer_rules",
@@ -2407,7 +2398,7 @@
       "tools_preeti_converter_readme_repository_structure",
       "tools_preeti_converter_readme_the_core_problem_office_workflow"
     ],
-    "104": [
+    "103": [
       "tools_skills_automation_skill",
       "tools_skills_automation_skill_1_translate_schedule_author_self_contained_run_prompt",
       "tools_skills_automation_skill_2_announce_automation_creation_write_configdir_sidecars_sidecar_id_sidecar_json",
@@ -2421,7 +2412,7 @@
       "tools_skills_automation_skill_turn_2_confirm_the_specific_time_day",
       "tools_skills_automation_skill_turn_3_ask_what_the_task_should_do"
     ],
-    "105": [
+    "104": [
       "ref_agritech",
       "ref_computational_fairness",
       "ref_cyber_forensics",
@@ -2433,6 +2424,19 @@
       "schemas_domain_lexicon_contract_v1_domain_enum",
       "schemas_domain_lexicon_contract_v1_domain_type",
       "schemas_domain_lexicon_contract_v1_properties_domain"
+    ],
+    "105": [
+      "report_reconciliation_2026_09_19",
+      "report_reconciliation_2026_09_19_1_executive_summary",
+      "report_reconciliation_2026_09_19_2_granular_reconciliation_matrix",
+      "report_reconciliation_2026_09_19_3_epistemic_certification",
+      "report_reconciliation_2026_09_19_comprehensive_multi_model_ecosystem_reconciliation_report_2026_09_19",
+      "research_experiments_fleet_001",
+      "research_experiments_fleet_001_experiment_log_fleet_001_single_task_interruption_state_migration_benchmark",
+      "research_experiments_fleet_001_metrics_logged",
+      "research_experiments_fleet_001_task_specification",
+      "research_experiments_fleet_001_verification_checklist",
+      "research_invariants_inv_wsr_002"
     ],
     "106": [
       "research_daily_2026_09_24",
@@ -2474,6 +2478,19 @@
       "research_experiments_compose_002_typed_contract_match"
     ],
     "109": [
+      "research_experiments_fleet_002",
+      "research_experiments_fleet_003",
+      "research_experiments_fleet_003_1_system_topology_test_harness_configuration",
+      "research_experiments_fleet_003_2_test_suite_baseline_validation",
+      "research_experiments_fleet_003_3_physical_electron_process_telemetry_benchmark",
+      "research_experiments_fleet_003_4_real_world_engineering_problem_execution",
+      "research_experiments_fleet_003_5_artifacts_code_updates",
+      "research_experiments_fleet_003_experiment_verification_log_fleet_003_live_multi_worker_fleet_verification_physical_telemetry_benchmark",
+      "research_experiments_fleet_003_multi_stage_stage_execution_flow",
+      "research_experiments_fleet_003_telemetry_findings",
+      "research_experiments_inv_bmk_001"
+    ],
+    "110": [
       "research_failures_fail_2026_10_03_classroom_mcp_discovery_and_auth_hitches",
       "research_failures_fail_2026_10_03_classroom_mcp_discovery_and_auth_hitches_1_executive_summary",
       "research_failures_fail_2026_10_03_classroom_mcp_discovery_and_auth_hitches_2_root_cause_analysis_of_the_five_hitches",
@@ -2486,7 +2503,7 @@
       "research_failures_fail_2026_10_03_classroom_mcp_discovery_and_auth_hitches_hitch_5_hardware_accelerated_browser_capture_black_out",
       "research_failures_fail_2026_10_03_classroom_mcp_discovery_and_auth_hitches_incident_failure_report_google_classroom_mcp_discovery_daemon_caching_dual_scope_boundaries"
     ],
-    "110": [
+    "111": [
       "research_notebooklm_ecosystem_sources_01_ecosystem_master_architecture",
       "research_notebooklm_ecosystem_sources_01_ecosystem_master_architecture_1_executive_summary_foundational_vision",
       "research_notebooklm_ecosystem_sources_01_ecosystem_master_architecture_2_4_tier_decoupled_architectural_model",
@@ -2499,7 +2516,20 @@
       "research_notebooklm_ecosystem_sources_01_ecosystem_master_architecture_tier_4_deterministic_reality_verification_layer",
       "research_notebooklm_ecosystem_sources_01_ecosystem_master_architecture_verbatim_epistemic_history_invariant_inv_epi_001"
     ],
-    "111": [
+    "112": [
+      "research_notes_2026_09_27_biasaperture_research_dossier_1_executive_summary_authorship",
+      "research_notes_2026_09_27_biasaperture_research_dossier_2_milestone_architecture_github_project_anchoring_2026_10_01",
+      "research_notes_2026_09_27_biasaperture_research_dossier_3_modularity_single_responsibility_architecture_refactor_issue_32_pr_33",
+      "research_notes_2026_09_27_biasaperture_research_dossier_4_collaborative_peer_review_git_governance_protocol",
+      "research_notes_2026_09_27_biasaperture_research_dossier_5_core_architectural_methodological_pillars",
+      "research_notes_2026_09_27_biasaperture_research_dossier_i_the_core_four_disparity_metrics",
+      "research_notes_2026_09_27_biasaperture_research_dossier_ii_dual_harmonization_engine_fairlearn_aif360",
+      "research_notes_2026_09_27_biasaperture_research_dossier_iii_statistical_rigour_guardrails",
+      "research_notes_2026_09_27_biasaperture_research_dossier_iv_non_negotiable_diagnostic_scope_invariants",
+      "research_notes_2026_09_27_biasaperture_research_dossier_research_note_biasaperture_diagnostic_fairness_bias_audit_platform",
+      "research_notes_2026_09_27_biasaperture_research_dossier_v_regulatory_compliance_mapping"
+    ],
+    "113": [
       "research_plans_brl_c0_overview_brainstorm_research_laboratory_cohort_0_overview",
       "research_plans_brl_c0_overview_equal_opportunity",
       "research_plans_brl_c0_overview_examples_of_c0_work",
@@ -2512,7 +2542,7 @@
       "research_plans_brl_c0_overview_what_is_expected",
       "research_plans_brl_c0_overview_what_the_progression_means"
     ],
-    "112": [
+    "114": [
       "research_plans_brl_quest_0_dry_run_1_objective",
       "research_plans_brl_quest_0_dry_run_2_step_by_step_execution_protocol",
       "research_plans_brl_quest_0_dry_run_3_evaluation_rank_advancement",
@@ -2525,7 +2555,7 @@
       "research_plans_brl_quest_0_dry_run_step_6_commit_and_push",
       "research_plans_brl_quest_0_dry_run_step_7_open_a_pull_request"
     ],
-    "113": [
+    "115": [
       "schemas_capability_contract_v1_author_type",
       "schemas_capability_contract_v1_last_updated_format",
       "schemas_capability_contract_v1_last_updated_type",
@@ -2538,7 +2568,7 @@
       "schemas_capability_contract_v1_repository_url_format",
       "schemas_capability_contract_v1_repository_url_type"
     ],
-    "114": [
+    "116": [
       "schemas_capability_contract_v1_capability_properties",
       "schemas_capability_contract_v1_counterexample_schema_description",
       "schemas_capability_contract_v1_counterexample_schema_type",
@@ -2551,7 +2581,7 @@
       "schemas_capability_contract_v1_timeout_ms_minimum",
       "schemas_capability_contract_v1_timeout_ms_type"
     ],
-    "115": [
+    "117": [
       "sim_test_invariant_engine_invariantassuranceenginetests",
       "sim_test_invariant_engine_invariantassuranceenginetests_test_counterexample_replay_confirmed_in_sandbox",
       "sim_test_invariant_engine_invariantassuranceenginetests_test_full_benchmark_execution_and_dossier_generation",
@@ -2564,20 +2594,7 @@
       "sim_test_invariant_engine_rationale_64",
       "sim_test_invariant_engine_rationale_74"
     ],
-    "116": [
-      "templates_meeting_note",
-      "templates_meeting_note_1_executive_summary",
-      "templates_meeting_note_2_core_concepts_takeaways",
-      "templates_meeting_note_3_action_items_decisions",
-      "templates_meeting_note_4_verification_check_before_finishing_slide_37_gate",
-      "templates_meeting_note_tp_date_now_yyyy_mm_dd_meeting_tp_file_title",
-      "templates_readme",
-      "templates_readme_1_document_note_templates_obsidian_knowledge_core",
-      "templates_readme_2_frontend_component_boilerplates",
-      "templates_readme_ecosystem_templates_code_boilerplates_registry",
-      "templates_readme_template_catalog"
-    ],
-    "117": [
+    "118": [
       "tools_skills_compliance_report_harmonizer_skill",
       "tools_skills_compliance_report_harmonizer_skill_1_core_principles_harmonized_lexicon",
       "tools_skills_compliance_report_harmonizer_skill_2_structural_report_invariants",
@@ -2590,7 +2607,7 @@
       "tools_skills_compliance_report_harmonizer_skill_invariant_rules",
       "tools_skills_compliance_report_harmonizer_skill_universal_python_automation_pattern_scripts_export_report_pdf_py"
     ],
-    "118": [
+    "119": [
       "tools_skills_cp_archive_harvester_skill",
       "tools_skills_cp_archive_harvester_skill_1_operating_rules_pre_flight_checks",
       "tools_skills_cp_archive_harvester_skill_2_harvester_cli_commands",
@@ -2603,7 +2620,7 @@
       "tools_skills_cp_archive_harvester_skill_mode_d_full_autonomous_pipeline",
       "tools_skills_cp_archive_harvester_skill_mode_e_repository_synchronization_sync_ps1"
     ],
-    "119": [
+    "120": [
       "tools_skills_gemini_api_dev_references_migration",
       "tools_skills_gemini_api_dev_references_migration_active_legacy_models_migration_recommended",
       "tools_skills_gemini_api_dev_references_migration_api_migration_generatecontent_interactions",
@@ -2616,7 +2633,7 @@
       "tools_skills_gemini_api_dev_references_migration_model_string_updates",
       "tools_skills_gemini_api_dev_references_migration_verify_the_migration"
     ],
-    "120": [
+    "121": [
       "tools_skills_gemini_interactions_api_references_migration",
       "tools_skills_gemini_interactions_api_references_migration_active_legacy_models_migration_recommended",
       "tools_skills_gemini_interactions_api_references_migration_api_migration_generatecontent_interactions",
@@ -2629,7 +2646,7 @@
       "tools_skills_gemini_interactions_api_references_migration_model_string_updates",
       "tools_skills_gemini_interactions_api_references_migration_verify_the_migration"
     ],
-    "121": [
+    "122": [
       "tools_skills_super_nlm_downloads_scripts_download_and_share",
       "tools_skills_super_nlm_downloads_scripts_download_and_share_collectpayloads",
       "tools_skills_super_nlm_downloads_scripts_download_and_share_collectpayloads_walkdir",
@@ -2642,7 +2659,7 @@
       "tools_skills_super_nlm_downloads_scripts_download_and_share_resolvesubjectfolder",
       "tools_skills_super_nlm_downloads_scripts_download_and_share_sharevialocalsend"
     ],
-    "122": [
+    "123": [
       "agents_1_default_github_workflow_github_workflow_maintainer_policy",
       "agents_1_git_workflow_ecosystem_automation_critical_strict_enforcement",
       "agents_2_knowledge_graph_codebase_navigation_graphify",
@@ -2653,18 +2670,6 @@
       "agents_6_github_development_workflow_commit_integrity_invariants",
       "agents_agent_rules_workflow_guidelines_brainstorm_ecosystem_orchestration",
       "agents_core_commands"
-    ],
-    "123": [
-      "ecosystem_architectural_brainstorm",
-      "report_economic_model",
-      "research_experiments_fleet_001",
-      "research_experiments_fleet_001_experiment_log_fleet_001_single_task_interruption_state_migration_benchmark",
-      "research_experiments_fleet_001_metrics_logged",
-      "research_experiments_fleet_001_task_specification",
-      "research_experiments_fleet_001_verification_checklist",
-      "research_experiments_fleet_003",
-      "research_experiments_gpu_ram_architecture_spec",
-      "research_experiments_inv_bmk_001"
     ],
     "124": [
       "image",
@@ -2691,18 +2696,6 @@
       "research_architectures_arch_rfc_005_memory_stratification_layer_3_ephemeral_task_state"
     ],
     "126": [
-      "research_experiments_fleet_002",
-      "research_experiments_fleet_002_1_problem_architectural_rationale",
-      "research_experiments_fleet_002_2_multi_tier_hybrid_fleet_topology",
-      "research_experiments_fleet_002_3_1_copilotheadlessadapter_completed_operational_scope_m1_m4",
-      "research_experiments_fleet_002_3_2_sandboxed_local_tool_executor_phase_2_target_specification_m6",
-      "research_experiments_fleet_002_3_3_memory_resource_footprint_benchmark_comparison",
-      "research_experiments_fleet_002_3_specification_component_contracts",
-      "research_experiments_fleet_002_4_verification_checklist_milestones",
-      "research_experiments_fleet_002_experiment_architecture_log_fleet_002_headless_multi_account_github_copilot_worker_fleet",
-      "research_experiments_fleet_002_role_capability_allocation"
-    ],
-    "127": [
       "research_experiments_gpu_ram_architecture_spec_1_executive_summary_problem_formulation",
       "research_experiments_gpu_ram_architecture_spec_2_core_architectural_bottlenecks_identified",
       "research_experiments_gpu_ram_architecture_spec_3_grounding_on_latest_open_source_predecessors",
@@ -2714,7 +2707,7 @@
       "research_experiments_gpu_ram_architecture_spec_the_capital_cost_matrix",
       "research_experiments_gpu_ram_architecture_spec_the_central_question"
     ],
-    "128": [
+    "127": [
       "research_notes_2026_10_02_ecosystem_skills_and_workflow_calibrated_evaluation",
       "research_notes_2026_10_02_ecosystem_skills_and_workflow_calibrated_evaluation_1_executive_summary",
       "research_notes_2026_10_02_ecosystem_skills_and_workflow_calibrated_evaluation_2_in_repo_skills_inventory_workflow_origin_matrix_39_mirrored_packages",
@@ -2726,19 +2719,7 @@
       "research_notes_2026_10_02_ecosystem_skills_and_workflow_calibrated_evaluation_calibrated_evaluation_architectural_audit_ecosystem_skills_developer_workflow",
       "research_notes_2026_10_02_ecosystem_skills_and_workflow_calibrated_evaluation_summary_breakdown_by_origin_39_in_repo_mirrored_packages"
     ],
-    "129": [
-      "research_plans_brl_support_and_sponsorship_1_purpose",
-      "research_plans_brl_support_and_sponsorship_2_general_brl_support",
-      "research_plans_brl_support_and_sponsorship_3_research_or_program_sponsorship",
-      "research_plans_brl_support_and_sponsorship_4_individual_led_project_sponsorship",
-      "research_plans_brl_support_and_sponsorship_5_sponsor_independence",
-      "research_plans_brl_support_and_sponsorship_6_contributor_participation",
-      "research_plans_brl_support_and_sponsorship_7_transparency_and_attribution",
-      "research_plans_brl_support_and_sponsorship_8_financial_and_legal_handling",
-      "research_plans_brl_support_and_sponsorship_9_separation_from_merit",
-      "research_plans_brl_support_and_sponsorship_brainstorm_research_laboratory_support_sponsorship_framework"
-    ],
-    "130": [
+    "128": [
       "research_plans_plan_cp_001_competitive_programming_archival",
       "research_plans_plan_cp_001_competitive_programming_archival_1_executive_summary_objective",
       "research_plans_plan_cp_001_competitive_programming_archival_2_extraction_pipeline_architecture_winpilot_driven",
@@ -2750,7 +2731,7 @@
       "research_plans_plan_cp_001_competitive_programming_archival_components",
       "research_plans_plan_cp_001_competitive_programming_archival_research_plan_competitive_programming_corpus_autonomous_extraction_pipeline"
     ],
-    "131": [
+    "129": [
       "research_plans_plan_nep_const_001_constitution_of_nepal_plain_explanation_engine",
       "research_plans_plan_nep_const_001_constitution_of_nepal_plain_explanation_engine_1_executive_summary_problem_formulation",
       "research_plans_plan_nep_const_001_constitution_of_nepal_plain_explanation_engine_2_multi_tier_cognitive_architecture",
@@ -2762,7 +2743,7 @@
       "research_plans_plan_nep_const_001_constitution_of_nepal_plain_explanation_engine_phase_3_packaging_digital_delivery",
       "research_plans_plan_nep_const_001_constitution_of_nepal_plain_explanation_engine_research_product_plan_constitution_of_nepal_plain_language_multi_tier_explanation_engine"
     ],
-    "132": [
+    "130": [
       "schemas_capability_contract_v1_args_type",
       "schemas_capability_contract_v1_command_description",
       "schemas_capability_contract_v1_command_type",
@@ -2774,7 +2755,7 @@
       "schemas_capability_contract_v1_properties_command",
       "schemas_capability_contract_v1_properties_port"
     ],
-    "133": [
+    "131": [
       "schemas_evidence_policy_1_motivation_policy_scope",
       "schemas_evidence_policy_2_the_six_evidence_tiers_e0_e5",
       "schemas_evidence_policy_3_1_formally_proven",
@@ -2786,7 +2767,7 @@
       "schemas_evidence_policy_5_external_reference_benchmark_citation_policy",
       "schemas_evidence_policy_calibrated_evidence_policy_epistemic_verification_standard"
     ],
-    "134": [
+    "132": [
       "scripts_readme",
       "scripts_readme_0_deterministic_environment_bootstrap_antigravity_setup",
       "scripts_readme_1_windows_environment_user_shell_folders_selective_onedrive_bypass",
@@ -2798,7 +2779,7 @@
       "scripts_readme_ecosystem_scripts_local_automation_suite",
       "scripts_readme_usage"
     ],
-    "135": [
+    "133": [
       "tools_skills_compliance_report_harmonizer_scripts_export_report_pdf",
       "tools_skills_compliance_report_harmonizer_scripts_export_report_pdf_compile_all_case_study_reports",
       "tools_skills_compliance_report_harmonizer_scripts_export_report_pdf_convert_html_to_pdf",
@@ -2810,7 +2791,7 @@
       "tools_skills_compliance_report_harmonizer_scripts_export_report_pdf_rationale_157",
       "tools_skills_compliance_report_harmonizer_scripts_export_report_pdf_rationale_26"
     ],
-    "136": [
+    "134": [
       "tools_skills_feature_dev_skill",
       "tools_skills_feature_dev_skill_core_principles",
       "tools_skills_feature_dev_skill_feature_development",
@@ -2822,7 +2803,7 @@
       "tools_skills_feature_dev_skill_phase_6_quality_review",
       "tools_skills_feature_dev_skill_phase_7_summary"
     ],
-    "137": [
+    "135": [
       "tools_skills_github_workflow_scripts_toggle_issue_task",
       "tools_skills_github_workflow_scripts_toggle_issue_task_get_issue_body",
       "tools_skills_github_workflow_scripts_toggle_issue_task_main",
@@ -2834,7 +2815,7 @@
       "tools_skills_github_workflow_scripts_toggle_issue_task_run_gh_command",
       "tools_skills_github_workflow_scripts_toggle_issue_task_update_issue_body"
     ],
-    "138": [
+    "136": [
       "tools_skills_google_classroom_skill",
       "tools_skills_google_classroom_skill_1_the_what_s_due_pending_homework_audit_most_common",
       "tools_skills_google_classroom_skill_2_assignment_deep_dive_requirements_extraction",
@@ -2846,7 +2827,7 @@
       "tools_skills_google_classroom_skill_google_classroom_agent_skill",
       "tools_skills_google_classroom_skill_when_to_activate_this_skill"
     ],
-    "139": [
+    "137": [
       "tools_skills_plugin_references_ui_extension_template_sidecars_panel_app",
       "tools_skills_plugin_references_ui_extension_template_sidecars_panel_app_callapi",
       "tools_skills_plugin_references_ui_extension_template_sidecars_panel_app_formatuptime",
@@ -2858,7 +2839,7 @@
       "tools_skills_plugin_references_ui_extension_template_sidecars_panel_app_showsaved",
       "tools_skills_plugin_references_ui_extension_template_sidecars_panel_app_toast"
     ],
-    "140": [
+    "138": [
       "tools_skills_plugin_skill",
       "tools_skills_plugin_skill_consolidating_loose_customizations",
       "tools_skills_plugin_skill_constraints_tips",
@@ -2870,31 +2851,7 @@
       "tools_skills_plugin_skill_step_3_author_the_bundle",
       "tools_skills_plugin_skill_step_4_verify_and_hand_back"
     ],
-    "141": [
-      "tools_skills_readme",
-      "tools_skills_readme_antigravity_custom_skills_registry_workflow_origin_matrix",
-      "tools_skills_readme_complete_master_skills_matrix_origin_workflow_usage_50_skills",
-      "tools_skills_readme_synchronization_protocol",
-      "tools_skills_ui_plugin_navigation_skill",
-      "tools_skills_ui_plugin_navigation_skill_constraints_tips",
-      "tools_skills_ui_plugin_navigation_skill_step_1_find_ui_plugin_panes_and_their_views",
-      "tools_skills_ui_plugin_navigation_skill_step_2_emit_the_pill_link",
-      "tools_skills_ui_plugin_navigation_skill_ui_plugin_navigation",
-      "tools_skills_ui_plugin_navigation_skill_when_to_surface_a_pill"
-    ],
-    "142": [
-      "tools_skills_super_nlm_downloads_skill",
-      "tools_skills_super_nlm_downloads_skill_automated_execution_workflow",
-      "tools_skills_super_nlm_downloads_skill_core_operational_principles",
-      "tools_skills_super_nlm_downloads_skill_option_1_direct_deterministic_script_recommended",
-      "tools_skills_super_nlm_downloads_skill_option_2_step_by_step_cli_execution",
-      "tools_skills_super_nlm_downloads_skill_step_1_identify_notebook_resolve_path",
-      "tools_skills_super_nlm_downloads_skill_step_2_download_outside_repository",
-      "tools_skills_super_nlm_downloads_skill_step_3_localsend_sharing_via_localsend_mcp",
-      "tools_skills_super_nlm_downloads_skill_super_nlm_studio_artifact_downloads_localsend_sharing_skill",
-      "tools_skills_super_nlm_downloads_skill_verification_safety_gates"
-    ],
-    "143": [
+    "139": [
       "tools_skills_ui_extension_references_template_sidecars_panel_app",
       "tools_skills_ui_extension_references_template_sidecars_panel_app_callapi",
       "tools_skills_ui_extension_references_template_sidecars_panel_app_formatuptime",
@@ -2906,7 +2863,7 @@
       "tools_skills_ui_extension_references_template_sidecars_panel_app_showsaved",
       "tools_skills_ui_extension_references_template_sidecars_panel_app_toast"
     ],
-    "144": [
+    "140": [
       "tools_skills_win_vault_skill",
       "tools_skills_win_vault_skill_1_core_architecture_location",
       "tools_skills_win_vault_skill_2_security_locking_primitives",
@@ -2918,7 +2875,30 @@
       "tools_skills_win_vault_skill_unlocking",
       "tools_skills_win_vault_skill_win_vault_windows_privacy_vault_access_control_engine"
     ],
-    "145": [
+    "141": [
+      "tools_skills_winpilot_skill",
+      "tools_skills_winpilot_skill_1_environment_python_runtime",
+      "tools_skills_winpilot_skill_2_core_modules_capabilities",
+      "tools_skills_winpilot_skill_3_cli_commands",
+      "tools_skills_winpilot_skill_4_mcp_tools_winpilot_mcp_server",
+      "tools_skills_winpilot_skill_a_window_management_winpilot_core_window",
+      "tools_skills_winpilot_skill_b_screen_perception_image_capture_winpilot_core_screen",
+      "tools_skills_winpilot_skill_c_ui_automation_text_extraction_winpilot_core_uia",
+      "tools_skills_winpilot_skill_d_input_simulation_winpilot_core_input",
+      "tools_skills_winpilot_skill_winpilot_windows_ui_automation_perception_engine"
+    ],
+    "142": [
+      "aaradhya_master_v165",
+      "research_notes_2026_09_27_biasaperture_research_dossier",
+      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry",
+      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_1_executive_summary",
+      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_2_personal_ecosystem_core_workspaces",
+      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_3_project_specific_workspaces_biasaperture_fuse_ai_fellowship",
+      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_4_mcp_super_nlm_tooling_integration",
+      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_5_privacy_repository_boundaries",
+      "research_notes_2026_10_01_gemini_notebooklm_workspace_registry_research_note_gemini_notebooklm_knowledge_base_registry"
+    ],
+    "143": [
       "modelref",
       "sim_invariant_engine_smt_encoder_py_any",
       "sim_invariant_engine_smt_encoder_py_boolref",
@@ -2929,7 +2909,7 @@
       "sim_invariant_engine_smt_encoder_smtinvariantprover_model_val",
       "sim_invariant_engine_smt_encoder_smtinvariantprover_verify_property"
     ],
-    "146": [
+    "144": [
       "ref_free_tier_api",
       "ref_heavy_compute",
       "ref_paid_api",
@@ -2940,7 +2920,7 @@
       "schemas_capability_contract_v1_cost_tier_type",
       "schemas_capability_contract_v1_properties_cost_tier"
     ],
-    "147": [
+    "145": [
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_1_1_the_core_operating_principle_high_ai_leverage_high_personal_comprehension",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_1_2_the_option_value_vs_realized_value_paradox",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_1_executive_context_identity_anchor",
@@ -2950,6 +2930,28 @@
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_8_epistemic_certification",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_arch_plan_003_intelligent_systems_engineering_research_conversion_roadmap",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_bridging_academic_breadth_beie_and_modern_ai_aif_into_verifiable_intelligent_systems"
+    ],
+    "146": [
+      "research_architectures_arch_spec_003_headless_orchestration_substrate",
+      "research_architectures_arch_spec_003_headless_orchestration_substrate_1_1_the_front_end_trap_in_autonomous_systems",
+      "research_architectures_arch_spec_003_headless_orchestration_substrate_1_2_the_architectural_invariant_substrate_decoupling",
+      "research_architectures_arch_spec_003_headless_orchestration_substrate_1_executive_philosophy_headless_engine_first_interface_second",
+      "research_architectures_arch_spec_003_headless_orchestration_substrate_2_1_the_cli_as_the_first_jarvis_prototype",
+      "research_architectures_arch_spec_003_headless_orchestration_substrate_2_the_deterministic_loop_compose_execute_verify",
+      "research_architectures_arch_spec_003_headless_orchestration_substrate_3_core_contract_data_boundaries",
+      "research_architectures_arch_spec_003_headless_orchestration_substrate_4_key_advantages_for_the_r_d_strategic_wedge",
+      "research_architectures_arch_spec_003_headless_orchestration_substrate_5_architectural_invariants_enforced"
+    ],
+    "147": [
+      "research_architectures_arch_spec_007_environment_reproducibility_bootstrap",
+      "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_1_executive_summary_problem_statement",
+      "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_2_environment_architecture_customization_layers",
+      "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_3_the_1_click_bootstrap_protocol_bootstrap_environment_ps1",
+      "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_4_skills_taxonomy_registry_reference",
+      "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_5_verification_acceptance_criteria",
+      "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_step_1_clone_repository",
+      "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_step_2_run_bootstrap_engine",
+      "research_architectures_arch_spec_007_environment_reproducibility_bootstrap_what_the_bootstrap_engine_executes"
     ],
     "148": [
       "research_daily_2026_09_28",
@@ -2963,6 +2965,17 @@
       "research_plans_plan_nisr_001_program_charter"
     ],
     "149": [
+      "research_experiments_fleet_002_1_problem_architectural_rationale",
+      "research_experiments_fleet_002_2_multi_tier_hybrid_fleet_topology",
+      "research_experiments_fleet_002_3_1_copilotheadlessadapter_completed_operational_scope_m1_m4",
+      "research_experiments_fleet_002_3_2_sandboxed_local_tool_executor_phase_2_target_specification_m6",
+      "research_experiments_fleet_002_3_3_memory_resource_footprint_benchmark_comparison",
+      "research_experiments_fleet_002_3_specification_component_contracts",
+      "research_experiments_fleet_002_4_verification_checklist_milestones",
+      "research_experiments_fleet_002_experiment_architecture_log_fleet_002_headless_multi_account_github_copilot_worker_fleet",
+      "research_experiments_fleet_002_role_capability_allocation"
+    ],
+    "150": [
       "research_experiments_inv_bmk_001_1_executive_summary_objective",
       "research_experiments_inv_bmk_001_2_1_inductive_invariant_property",
       "research_experiments_inv_bmk_001_2_2_replay_ground_truth_invariant",
@@ -2973,7 +2986,18 @@
       "research_experiments_inv_bmk_001_6_epistemic_certification",
       "research_experiments_inv_bmk_001_research_experiment_inv_bmk_001_headless_invariant_assurance_sandbox_replay_benchmark"
     ],
-    "150": [
+    "151": [
+      "research_invariants_inv_wsr_002_1_1_invariant_a_closed_loop_worker_dispatch_no_orphaned_leases",
+      "research_invariants_inv_wsr_002_1_2_invariant_b_strict_separation_of_real_execution_and_simulation",
+      "research_invariants_inv_wsr_002_1_3_invariant_c_telemetry_truthfulness_quota_headroom",
+      "research_invariants_inv_wsr_002_1_4_invariant_d_atomic_checkpoint_dag_advancement",
+      "research_invariants_inv_wsr_002_1_5_invariant_e_qa_authority_claim_token_isolation_for_state_transitions",
+      "research_invariants_inv_wsr_002_1_the_core_invariant_statements",
+      "research_invariants_inv_wsr_002_2_mathematical_formalization",
+      "research_invariants_inv_wsr_002_3_verification_compliance_gate",
+      "research_invariants_inv_wsr_002_architectural_invariant_inv_wsr_002_worker_protocol_completeness_truthful_telemetry"
+    ],
+    "152": [
       "research_notebooklm_ecosystem_sources_05_academic_fellowship_and_hardware_synergies",
       "research_notebooklm_ecosystem_sources_05_academic_fellowship_and_hardware_synergies_1_ioe_pulchowk_tu_engineering_coursework_integration",
       "research_notebooklm_ecosystem_sources_05_academic_fellowship_and_hardware_synergies_2_fusemachines_ai_fellowship_2026",
@@ -2984,7 +3008,7 @@
       "research_notebooklm_ecosystem_sources_05_academic_fellowship_and_hardware_synergies_makerspace_prototyping_laboratory",
       "research_notebooklm_ecosystem_sources_05_academic_fellowship_and_hardware_synergies_spark_hardware_architecture"
     ],
-    "151": [
+    "153": [
       "research_plans_brl_contributor_agreement_1_permanent_public_attribution_invariant",
       "research_plans_brl_contributor_agreement_2_tooling_boundary_tripartite_asset_classification",
       "research_plans_brl_contributor_agreement_3_epistemic_rigor_the_ai_trap_policy",
@@ -2995,7 +3019,7 @@
       "research_plans_brl_contributor_agreement_brainstorm_research_laboratory_brl_contributor_agreement",
       "research_plans_brl_contributor_agreement_preamble"
     ],
-    "152": [
+    "154": [
       "research_profile_1_spark_wearable_edge_ai_kinematics_fall_detection_architecture",
       "research_profile_2_headless_invariant_assurance_engine_inv_bmk_001",
       "research_profile_3_biasaperture_algorithmic_fairness_model_auditing_engine",
@@ -3006,7 +3030,7 @@
       "research_profile_research_profile_technical_capability_summary",
       "research_profile_target_research_domains_capabilities"
     ],
-    "153": [
+    "155": [
       "sim_transcript_archiver",
       "sim_transcript_archiver_evaluate_significance",
       "sim_transcript_archiver_export_verbatim",
@@ -3017,7 +3041,7 @@
       "sim_transcript_archiver_rationale_28",
       "sim_transcript_archiver_rationale_73"
     ],
-    "154": [
+    "156": [
       "templates_boilerplates_fluid_wordmark_navbar_readme",
       "templates_boilerplates_fluid_wordmark_navbar_readme_1_html_markup",
       "templates_boilerplates_fluid_wordmark_navbar_readme_2_calibrating_the_brand_slot_width",
@@ -3028,7 +3052,7 @@
       "templates_boilerplates_fluid_wordmark_navbar_readme_quick_integration",
       "templates_boilerplates_fluid_wordmark_navbar_readme_what_this_boilerplate_solves"
     ],
-    "155": [
+    "157": [
       "tools_skills_agy_customizations_docs_json_configs",
       "tools_skills_agy_customizations_docs_plugins",
       "tools_skills_agy_customizations_docs_plugins_directory_structure",
@@ -3039,7 +3063,7 @@
       "tools_skills_agy_customizations_docs_plugins_turning_plugins_on_and_off",
       "tools_skills_agy_customizations_skill"
     ],
-    "156": [
+    "158": [
       "tools_skills_agy_customizations_docs_mcp_servers",
       "tools_skills_agy_customizations_docs_mcp_servers_1_stdio_transport_local",
       "tools_skills_agy_customizations_docs_mcp_servers_2_sse_transport_remote",
@@ -3050,7 +3074,7 @@
       "tools_skills_agy_customizations_docs_mcp_servers_mcp_servers_mcp_config_json",
       "tools_skills_agy_customizations_docs_mcp_servers_scoping_and_scannability"
     ],
-    "157": [
+    "159": [
       "tools_skills_agy_customizations_skill_advanced_management_json_configs",
       "tools_skills_agy_customizations_skill_antigravity_customization_system_guide",
       "tools_skills_agy_customizations_skill_customization_discovery_and_locations",
@@ -3061,7 +3085,7 @@
       "tools_skills_agy_customizations_skill_loading_priority_and_precedence",
       "tools_skills_agy_customizations_skill_progressive_disclosure_skills_and_rules"
     ],
-    "158": [
+    "160": [
       "tools_skills_antigravity_guide_references_customizations_mcp_servers",
       "tools_skills_antigravity_guide_references_customizations_mcp_servers_1_stdio_transport_local",
       "tools_skills_antigravity_guide_references_customizations_mcp_servers_2_sse_transport_remote",
@@ -3072,7 +3096,7 @@
       "tools_skills_antigravity_guide_references_customizations_mcp_servers_mcp_servers_mcp_config_json",
       "tools_skills_antigravity_guide_references_customizations_mcp_servers_scoping_and_scannability"
     ],
-    "159": [
+    "161": [
       "tools_skills_cyber_forensics_skill",
       "tools_skills_cyber_forensics_skill_1_core_architecture_location",
       "tools_skills_cyber_forensics_skill_2_evasion_detection_primitives",
@@ -3083,7 +3107,7 @@
       "tools_skills_cyber_forensics_skill_c_run_regression_test_suite",
       "tools_skills_cyber_forensics_skill_cyber_forensics_windows_dfir_stealth_evasion_hunting_engine"
     ],
-    "160": [
+    "162": [
       "tools_skills_doc_archiver_skill",
       "tools_skills_doc_archiver_skill_1_save_to_current_working_directory_repo",
       "tools_skills_doc_archiver_skill_2_save_to_a_specific_folder_e_g_docs_or_research_transcripts",
@@ -3094,7 +3118,7 @@
       "tools_skills_doc_archiver_skill_execution_protocol",
       "tools_skills_doc_archiver_skill_headless_pdf_export_invariants_inv_pdf_001"
     ],
-    "161": [
+    "163": [
       "tools_skills_google_stitch_integration_skill",
       "tools_skills_google_stitch_integration_skill_1_overview_architectural_role",
       "tools_skills_google_stitch_integration_skill_1_stitch_get_project",
@@ -3105,7 +3129,7 @@
       "tools_skills_google_stitch_integration_skill_4_code_synthesis_refinement_pipeline",
       "tools_skills_google_stitch_integration_skill_google_stitch_mcp_integration_guide"
     ],
-    "162": [
+    "164": [
       "tools_skills_graphify_references_exports",
       "tools_skills_graphify_references_exports_graphify_reference_extra_exports_and_benchmark",
       "tools_skills_graphify_references_exports_step_6b_wiki_only_if_wiki_flag",
@@ -3116,7 +3140,7 @@
       "tools_skills_graphify_references_exports_step_7d_mcp_server_only_if_mcp_flag",
       "tools_skills_graphify_references_exports_step_8_token_reduction_benchmark_only_if_total_words_5000"
     ],
-    "163": [
+    "165": [
       "tools_skills_portfolio_project_manager_skill",
       "tools_skills_portfolio_project_manager_skill_1_quick_ingestion_workflow_zero_token_manifest_mode",
       "tools_skills_portfolio_project_manager_skill_2_cli_single_command_mode",
@@ -3127,18 +3151,7 @@
       "tools_skills_portfolio_project_manager_skill_portfolio_project_manager_skill",
       "tools_skills_portfolio_project_manager_skill_preview_with_dry_run_recommended_first"
     ],
-    "164": [
-      "tools_skills_shadcn_context_skill",
-      "tools_skills_shadcn_context_skill_1_core_architecture_utility_foundation",
-      "tools_skills_shadcn_context_skill_2_component_composition_schemas",
-      "tools_skills_shadcn_context_skill_3_anti_hallucination_customization_rules",
-      "tools_skills_shadcn_context_skill_class_variance_authority_cva",
-      "tools_skills_shadcn_context_skill_dialog_modal",
-      "tools_skills_shadcn_context_skill_form_field_react_hook_form_zod",
-      "tools_skills_shadcn_context_skill_shadcn_context_design_system_packs",
-      "tools_skills_shadcn_context_skill_the_cn_utility"
-    ],
-    "165": [
+    "166": [
       "tools_skills_skill_development_skill",
       "tools_skills_skill_development_skill_additional_resources",
       "tools_skills_skill_development_skill_best_practices_summary",
@@ -3149,7 +3162,7 @@
       "tools_skills_skill_development_skill_study_these_skills",
       "tools_skills_skill_development_skill_validation_checklist"
     ],
-    "166": [
+    "167": [
       "tools_skills_skill_development_skill_about_skills",
       "tools_skills_skill_development_skill_anatomy_of_a_skill",
       "tools_skills_skill_development_skill_assets_assets",
@@ -3160,7 +3173,7 @@
       "tools_skills_skill_development_skill_skill_md_required",
       "tools_skills_skill_development_skill_what_skills_provide"
     ],
-    "167": [
+    "168": [
       "tools_skills_skill_development_skill_skill_creation_process",
       "tools_skills_skill_development_skill_start_with_reusable_skill_contents",
       "tools_skills_skill_development_skill_step_1_understanding_the_skill_with_concrete_examples",
@@ -3171,7 +3184,7 @@
       "tools_skills_skill_development_skill_step_6_iterate",
       "tools_skills_skill_development_skill_update_skill_md"
     ],
-    "168": [
+    "169": [
       "ecosystem_architectural_brainstorm_7_18_1_empirical_productive_capital_baseline_ultra_low_cash_outlay",
       "ecosystem_architectural_brainstorm_7_18_2_technical_asset_base_valuation_replacement_labor_equivalent",
       "ecosystem_architectural_brainstorm_7_18_3_defensible_capital_ratios",
@@ -3181,7 +3194,7 @@
       "ecosystem_architectural_brainstorm_i_verified_feature_service_benefits_google_one_ai_pro_tier",
       "ecosystem_architectural_brainstorm_ii_financial_cost_avoidance_ledger"
     ],
-    "169": [
+    "170": [
       "ref_calm_authority",
       "ref_developer_documentation",
       "ref_formal_specification",
@@ -3191,7 +3204,7 @@
       "schemas_domain_lexicon_contract_v1_register_enum",
       "schemas_domain_lexicon_contract_v1_register_type"
     ],
-    "170": [
+    "171": [
       "ref_empirical_sandbox",
       "ref_formal_smt",
       "ref_heuristic_unverified",
@@ -3201,7 +3214,7 @@
       "schemas_capability_contract_v1_verification_tier_enum",
       "schemas_capability_contract_v1_verification_tier_type"
     ],
-    "171": [
+    "172": [
       "report_handoff_validation",
       "report_handoff_validation_1_validation_status_matrix",
       "report_handoff_validation_2_completed_deliverables",
@@ -3211,7 +3224,7 @@
       "report_handoff_validation_6_remaining_technical_debt",
       "report_handoff_validation_handoff_validation_verification_ledger"
     ],
-    "172": [
+    "173": [
       "research_architectures_arch_rfc_004_workflow_externalization_freeze_1_1_what_do_we_call_this_process",
       "research_architectures_arch_rfc_004_workflow_externalization_freeze_1_executive_summary_epistemic_terminology",
       "research_architectures_arch_rfc_004_workflow_externalization_freeze_2_the_tripartite_ecosystem_lifecycle",
@@ -3221,7 +3234,7 @@
       "research_architectures_arch_rfc_004_workflow_externalization_freeze_5_archival_verification",
       "research_architectures_arch_rfc_004_workflow_externalization_freeze_architectural_rfc_arch_rfc_004_the_workflow_externalization_freeze_utilization_pivot"
     ],
-    "173": [
+    "174": [
       "research_architectures_arch_spec_001_ecie_compute_memory_1_1_the_epistemic_dilemma",
       "research_architectures_arch_spec_001_ecie_compute_memory_1_2_the_resolution_the_systems_architect_paradigm",
       "research_architectures_arch_spec_001_ecie_compute_memory_1_executive_philosophy_the_architect_vs_the_technician",
@@ -3231,7 +3244,7 @@
       "research_architectures_arch_spec_001_ecie_compute_memory_5_architectural_invariants_enforced_in_this_space",
       "research_architectures_arch_spec_001_ecie_compute_memory_architectural_charter_the_ecie_systems_architect_paradigm_clean_slate_compute_memory_co_design"
     ],
-    "174": [
+    "175": [
       "research_experiments_exp_classroom_mcp_001",
       "research_experiments_exp_classroom_mcp_001_1_objective_hypothesis",
       "research_experiments_exp_classroom_mcp_001_2_method",
@@ -3241,7 +3254,7 @@
       "research_experiments_exp_classroom_mcp_001_6_provenance",
       "research_experiments_exp_classroom_mcp_001_research_experiment_exp_classroom_mcp_001_live_read_only_verification_of_the_google_classroom_mcp_server"
     ],
-    "175": [
+    "176": [
       "research_experiments_exp_nisr_001_recon_probe_1_experimental_rationale_objective",
       "research_experiments_exp_nisr_001_recon_probe_2_falsifiable_hypotheses",
       "research_experiments_exp_nisr_001_recon_probe_3_stratified_10_target_reconnaissance_matrix",
@@ -3250,16 +3263,6 @@
       "research_experiments_exp_nisr_001_recon_probe_6_success_completion_criteria",
       "research_experiments_exp_nisr_001_recon_probe_experiment_protocol_empirical_reconnaissance_of_nepal_s_public_information_substrate",
       "research_experiments_exp_nisr_001_recon_probe_primary_objective"
-    ],
-    "176": [
-      "research_experiments_fleet_003_1_system_topology_test_harness_configuration",
-      "research_experiments_fleet_003_2_test_suite_baseline_validation",
-      "research_experiments_fleet_003_3_physical_electron_process_telemetry_benchmark",
-      "research_experiments_fleet_003_4_real_world_engineering_problem_execution",
-      "research_experiments_fleet_003_5_artifacts_code_updates",
-      "research_experiments_fleet_003_experiment_verification_log_fleet_003_live_multi_worker_fleet_verification_physical_telemetry_benchmark",
-      "research_experiments_fleet_003_multi_stage_stage_execution_flow",
-      "research_experiments_fleet_003_telemetry_findings"
     ],
     "177": [
       "research_notebooklm_ecosystem_sources_06_graphify_knowledge_graph_and_ontology",
@@ -3452,6 +3455,15 @@
       "tools_skills_rf_link_budget_calc_scripts_rf_calc_rationale_47"
     ],
     "196": [
+      "ecosystem_architectural_brainstorm",
+      "report_repository_audit",
+      "report_repository_audit_1_executive_summary",
+      "report_repository_audit_3_corrective_actions_summary",
+      "report_repository_audit_comprehensive_repository_epistemic_claims_audit",
+      "report_repository_audit_epistemic_claim_type_distribution",
+      "research_experiments_gpu_ram_architecture_spec"
+    ],
+    "197": [
       "graphify",
       "graphify_remove_stalegraphifyartifacts",
       "graphify_resolve_graphifypython",
@@ -3460,7 +3472,7 @@
       "graphify_write_status",
       "graphify_write_success"
     ],
-    "197": [
+    "198": [
       "ref_http",
       "ref_sse",
       "ref_stdio",
@@ -3469,7 +3481,7 @@
       "schemas_capability_contract_v1_transport_enum",
       "schemas_capability_contract_v1_transport_type"
     ],
-    "198": [
+    "199": [
       "ref_tier_1_native_nepali",
       "ref_tier_2_phonetic_transliteration",
       "ref_tier_3_preserved_inline_english",
@@ -3478,7 +3490,7 @@
       "schemas_domain_lexicon_contract_v1_policy_tier_type",
       "schemas_domain_lexicon_contract_v1_properties_policy_tier"
     ],
-    "199": [
+    "200": [
       "research_architectures_arch_rfc_001_record_keeping_standard_1_executive_philosophy_inferior_to_none",
       "research_architectures_arch_rfc_001_record_keeping_standard_2_universal_artifact_taxonomy_addressing_matrix",
       "research_architectures_arch_rfc_001_record_keeping_standard_3_mandatory_frontmatter_metadata_standard",
@@ -3487,7 +3499,7 @@
       "research_architectures_arch_rfc_001_record_keeping_standard_architectural_rfc_arch_rfc_001_gold_standard_epistemic_record_keeping_taxonomy",
       "research_architectures_arch_rfc_001_record_keeping_standard_identifier_classification_schema"
     ],
-    "200": [
+    "201": [
       "research_architectures_arch_rfc_003_capstone_defense_standard_1_1_the_tragedy_of_the_typical_college_project_repo",
       "research_architectures_arch_rfc_003_capstone_defense_standard_1_2_the_dual_track_defense_strategy",
       "research_architectures_arch_rfc_003_capstone_defense_standard_1_executive_philosophy_the_college_capstone_reality_vs_the_industrial_standard",
@@ -3496,7 +3508,7 @@
       "research_architectures_arch_rfc_003_capstone_defense_standard_4_dual_track_academic_deliverables",
       "research_architectures_arch_rfc_003_capstone_defense_standard_architectural_rfc_arch_rfc_003_capstone_defense_academic_repository_standard"
     ],
-    "201": [
+    "202": [
       "research_plans_brl_c0_outreach_scripts",
       "research_plans_brl_c0_outreach_scripts_1_the_3_minute_casual_verbal_pitch_in_person_campus",
       "research_plans_brl_c0_outreach_scripts_2_the_1_paragraph_dm_template_whatsapp_telegram",
@@ -3505,7 +3517,7 @@
       "research_plans_brl_c0_outreach_scripts_5_the_graceful_pause_response",
       "research_plans_brl_c0_outreach_scripts_brainstorm_research_laboratory_cohort_0_outreach_communication_scripts"
     ],
-    "202": [
+    "203": [
       "tools_skills_agy_customizations_docs_hooks_1_pretooluse_contract",
       "tools_skills_agy_customizations_docs_hooks_2_posttooluse_contract",
       "tools_skills_agy_customizations_docs_hooks_3_preinvocation_contract",
@@ -3514,7 +3526,7 @@
       "tools_skills_agy_customizations_docs_hooks_common_input_fields",
       "tools_skills_agy_customizations_docs_hooks_input_output_contract"
     ],
-    "203": [
+    "204": [
       "tools_skills_agy_customizations_docs_json_configs_configuration_schema",
       "tools_skills_agy_customizations_docs_json_configs_explicitly_configured_paths",
       "tools_skills_agy_customizations_docs_json_configs_json_configuration_files",
@@ -3523,7 +3535,7 @@
       "tools_skills_agy_customizations_docs_json_configs_pro_tip_team_sharing_via_vcs",
       "tools_skills_agy_customizations_docs_json_configs_top_level_fields"
     ],
-    "204": [
+    "205": [
       "tools_skills_control_systems_sim_skill",
       "tools_skills_control_systems_sim_skill_1_operating_rules_control_principles",
       "tools_skills_control_systems_sim_skill_2_core_capabilities_workflows",
@@ -3532,7 +3544,7 @@
       "tools_skills_control_systems_sim_skill_capability_c_ziegler_nichols_closed_loop_tuning_rules",
       "tools_skills_control_systems_sim_skill_dynamic_control_systems_stability_simulator_control_systems_sim"
     ],
-    "205": [
+    "206": [
       "tools_skills_dsa_complexity_optimizer_skill",
       "tools_skills_dsa_complexity_optimizer_skill_1_operating_rules_asymptotic_standards",
       "tools_skills_dsa_complexity_optimizer_skill_2_core_capabilities_workflows",
@@ -3541,7 +3553,7 @@
       "tools_skills_dsa_complexity_optimizer_skill_capability_c_graph_algorithm_synthesis",
       "tools_skills_dsa_complexity_optimizer_skill_data_structures_algorithmic_complexity_optimizer_dsa_complexity_optimizer"
     ],
-    "206": [
+    "207": [
       "tools_skills_dsp_signal_engine_skill",
       "tools_skills_dsp_signal_engine_skill_1_operating_rules_mathematical_foundations",
       "tools_skills_dsp_signal_engine_skill_2_core_capabilities_workflows",
@@ -3550,7 +3562,16 @@
       "tools_skills_dsp_signal_engine_skill_capability_c_quantization_fixed_point_q_format_modeling",
       "tools_skills_dsp_signal_engine_skill_digital_signal_processing_filter_design_engine_dsp_signal_engine"
     ],
-    "207": [
+    "208": [
+      "tools_skills_electronics_circuit_synth_skill",
+      "tools_skills_electronics_circuit_synth_skill_1_operating_rules_analog_design_principles",
+      "tools_skills_electronics_circuit_synth_skill_2_core_capabilities_workflows",
+      "tools_skills_electronics_circuit_synth_skill_analog_electronics_circuit_synthesizer_electronics_circuit_synth",
+      "tools_skills_electronics_circuit_synth_skill_capability_a_analog_circuit_synthesis_cli",
+      "tools_skills_electronics_circuit_synth_skill_capability_b_2nd_order_sallen_key_lowpass_active_filter",
+      "tools_skills_electronics_circuit_synth_skill_capability_c_transistor_dc_biasing_small_signal_voltage_gain"
+    ],
+    "209": [
       "tools_skills_embedded_firmware_scaffold_skill",
       "tools_skills_embedded_firmware_scaffold_skill_1_operating_rules_embedded_discipline",
       "tools_skills_embedded_firmware_scaffold_skill_2_core_capabilities_workflows",
@@ -3559,7 +3580,7 @@
       "tools_skills_embedded_firmware_scaffold_skill_capability_c_freertos_multi_task_architecture",
       "tools_skills_embedded_firmware_scaffold_skill_embedded_systems_firmware_architect_embedded_firmware_scaffold"
     ],
-    "208": [
+    "210": [
       "tools_skills_generative_ui_skill",
       "tools_skills_generative_ui_skill_constraints_theming",
       "tools_skills_generative_ui_skill_deciding_on_placement_inline_vs_standalone",
@@ -3568,7 +3589,7 @@
       "tools_skills_generative_ui_skill_sizing_inline_embeds",
       "tools_skills_generative_ui_skill_workflow"
     ],
-    "209": [
+    "211": [
       "tools_skills_oose_architecture_modeler_skill",
       "tools_skills_oose_architecture_modeler_skill_1_operating_rules_modeling_guidelines",
       "tools_skills_oose_architecture_modeler_skill_2_core_capabilities_workflows",
@@ -3577,7 +3598,7 @@
       "tools_skills_oose_architecture_modeler_skill_capability_c_inter_class_test_case_design_matrix_oose_6_5",
       "tools_skills_oose_architecture_modeler_skill_object_oriented_software_engineering_architectural_modeler_oose_architecture_modeler"
     ],
-    "210": [
+    "212": [
       "tools_skills_plugin_references_ui_extension_template_sidecars_panel_main",
       "tools_skills_plugin_references_ui_extension_template_sidecars_panel_main_app",
       "tools_skills_plugin_references_ui_extension_template_sidecars_panel_main_here",
@@ -3586,16 +3607,7 @@
       "tools_skills_plugin_references_ui_extension_template_sidecars_panel_main_readlocal",
       "tools_skills_plugin_references_ui_extension_template_sidecars_panel_main_started_at"
     ],
-    "211": [
-      "tools_skills_rf_link_budget_calc_skill",
-      "tools_skills_rf_link_budget_calc_skill_1_operating_rules_rf_foundations",
-      "tools_skills_rf_link_budget_calc_skill_2_core_capabilities_workflows",
-      "tools_skills_rf_link_budget_calc_skill_capability_a_end_to_end_link_budget_cli",
-      "tools_skills_rf_link_budget_calc_skill_capability_b_antenna_array_pattern_multiplication",
-      "tools_skills_rf_link_budget_calc_skill_capability_c_quarter_wave_transformer_single_stub_matching",
-      "tools_skills_rf_link_budget_calc_skill_rf_wireless_link_budget_calculator_rf_link_budget_calc"
-    ],
-    "212": [
+    "213": [
       "tools_skills_split_to_prs_skill",
       "tools_skills_split_to_prs_skill_1_check_the_state",
       "tools_skills_split_to_prs_skill_2_propose_the_split",
@@ -3604,7 +3616,7 @@
       "tools_skills_split_to_prs_skill_hard_rules",
       "tools_skills_split_to_prs_skill_split_to_prs"
     ],
-    "213": [
+    "214": [
       "tools_skills_systems_concurrency_harness_skill",
       "tools_skills_systems_concurrency_harness_skill_1_operating_rules_concurrency_principles",
       "tools_skills_systems_concurrency_harness_skill_2_core_capabilities_workflows",
@@ -3613,7 +3625,7 @@
       "tools_skills_systems_concurrency_harness_skill_capability_c_windows_ntfs_acl_security_inspection",
       "tools_skills_systems_concurrency_harness_skill_systems_programming_concurrency_harness_systems_concurrency_harness"
     ],
-    "214": [
+    "215": [
       "tools_skills_ui_extension_references_template_sidecars_panel_main",
       "tools_skills_ui_extension_references_template_sidecars_panel_main_app",
       "tools_skills_ui_extension_references_template_sidecars_panel_main_here",
@@ -3622,7 +3634,7 @@
       "tools_skills_ui_extension_references_template_sidecars_panel_main_readlocal",
       "tools_skills_ui_extension_references_template_sidecars_panel_main_started_at"
     ],
-    "215": [
+    "216": [
       "ecosystem_architectural_brainstorm_4_emergent_compound_workflows_the_why",
       "ecosystem_architectural_brainstorm_pipeline_a_the_high_bandwidth_rapid_learning_loop",
       "ecosystem_architectural_brainstorm_pipeline_b_the_autonomous_heavy_compute_auditing_loop",
@@ -3630,7 +3642,7 @@
       "ecosystem_architectural_brainstorm_pipeline_d_the_autonomous_invariant_arbitrage_discovery_loop",
       "ecosystem_architectural_brainstorm_pipeline_e_the_autonomous_youtube_content_transformer_cluster"
     ],
-    "216": [
+    "217": [
       "ecosystem_architectural_brainstorm_5_1_the_4_tier_architectural_stack",
       "ecosystem_architectural_brainstorm_5_2_the_non_invasive_tool_manifest_pattern_tool_manifest_json",
       "ecosystem_architectural_brainstorm_5_3_upgrading_to_semantic_capability_contracts_capability_contract_v1_json",
@@ -3638,7 +3650,7 @@
       "ecosystem_architectural_brainstorm_5_5_domain_feasibility_matrix_commercial_framing",
       "ecosystem_architectural_brainstorm_5_architectural_blueprint_the_4_tier_jarvis_engine"
     ],
-    "217": [
+    "218": [
       "ecosystem_architectural_brainstorm_7_4_five_horizon_result_forecast_0_to_36_months",
       "ecosystem_architectural_brainstorm_horizon_1_the_synthetic_invariant_rediscovery_benchmark_months_0_3",
       "ecosystem_architectural_brainstorm_horizon_2_real_world_api_state_machine_assurance_months_3_9",
@@ -3646,7 +3658,7 @@
       "ecosystem_architectural_brainstorm_horizon_4_cross_domain_regulatory_terms_arbitrage_months_18_36",
       "ecosystem_architectural_brainstorm_horizon_5_the_autonomous_systems_researcher_months_36"
     ],
-    "218": [
+    "219": [
       "ref_canonical_rendering",
       "ref_policy_tier",
       "ref_transliteration_devanagari",
@@ -3654,21 +3666,13 @@
       "schemas_domain_lexicon_contract_v1_nepali_alignment_type",
       "schemas_domain_lexicon_contract_v1_properties_nepali_alignment"
     ],
-    "219": [
+    "220": [
       "research_architectures_arch_rfc_006_information_boundary",
       "research_architectures_arch_rfc_006_information_boundary_1_executive_summary_problem_statement",
       "research_architectures_arch_rfc_006_information_boundary_2_the_two_plane_security_partition",
       "research_architectures_arch_rfc_006_information_boundary_3_implementation_rules",
       "research_architectures_arch_rfc_006_information_boundary_4_verification_conformance",
       "research_architectures_arch_rfc_006_information_boundary_arch_rfc_006_public_private_information_boundary_security_architecture"
-    ],
-    "220": [
-      "research_daily_2026_09_19_1_schedule_priorities",
-      "research_daily_2026_09_19_2026_09_19_daily_log",
-      "research_daily_2026_09_19_2_active_projects_progress",
-      "research_daily_2026_09_19_3_meetings_transcripts",
-      "research_daily_2026_09_19_4_daily_learnings_conceptual_nodes",
-      "research_daily_2026_09_19_5_tomorrow_s_context_agent_primer"
     ],
     "221": [
       "research_notebooklm_ecosystem_sources_04_future_roadmap_and_strategic_research",
@@ -3783,14 +3787,6 @@
       "tools_skills_graphify_references_query_step_1_traversal"
     ],
     "235": [
-      "tools_skills_migrate_workflows_skill",
-      "tools_skills_migrate_workflows_skill_instructions_for_the_agent",
-      "tools_skills_migrate_workflows_skill_migrate_workflows_to_skills",
-      "tools_skills_migrate_workflows_skill_step_1_discover_existing_workflows",
-      "tools_skills_migrate_workflows_skill_step_2_convert_each_workflow_to_a_skill_idempotent_execution",
-      "tools_skills_migrate_workflows_skill_step_3_verify_and_confirm"
-    ],
-    "236": [
       "tools_skills_plugin_references_ui_extension_template_sidecars_panel_package",
       "tools_skills_plugin_references_ui_extension_template_sidecars_panel_package_description",
       "tools_skills_plugin_references_ui_extension_template_sidecars_panel_package_name",
@@ -3798,7 +3794,7 @@
       "tools_skills_plugin_references_ui_extension_template_sidecars_panel_package_type",
       "tools_skills_plugin_references_ui_extension_template_sidecars_panel_package_version"
     ],
-    "237": [
+    "236": [
       "tools_skills_ui_extension_references_template_sidecars_panel_package",
       "tools_skills_ui_extension_references_template_sidecars_panel_package_description",
       "tools_skills_ui_extension_references_template_sidecars_panel_package_name",
@@ -3806,68 +3802,75 @@
       "tools_skills_ui_extension_references_template_sidecars_panel_package_type",
       "tools_skills_ui_extension_references_template_sidecars_panel_package_version"
     ],
-    "238": [
+    "237": [
       "ecosystem_architectural_brainstorm_7_16_current_state_audit_phase_0_8_human_in_the_loop_to_phase_1_0_autonomous_walk_away",
       "ecosystem_architectural_brainstorm_phase_0_8_human_operated_distributed_cognition_where_you_are_today",
       "ecosystem_architectural_brainstorm_phase_1_0_machine_operated_distributed_cognition_the_immediate_target",
       "ecosystem_architectural_brainstorm_the_crossing_condition_the_walk_away_benchmark",
       "ecosystem_architectural_brainstorm_the_north_star_metric_the_autonomy_ratio"
     ],
-    "239": [
+    "238": [
       "ecosystem_architectural_brainstorm_7_17_capital_allocation_matrix_subscriptions_vs_machine_facing_api_credits",
       "ecosystem_architectural_brainstorm_the_10_task_diagnostic_benchmark",
       "ecosystem_architectural_brainstorm_the_fundamental_dichotomy_consumer_web_uis_vs_programmatic_api_sockets",
       "ecosystem_architectural_brainstorm_the_headstart_powerup_evaluation_where_to_invest_first",
       "ecosystem_architectural_brainstorm_the_systemic_r_d_vectorized_resource_model"
     ],
-    "240": [
+    "239": [
       "ecosystem_architectural_brainstorm_7_5_deviation_safeguards_the_4_critical_traps",
       "ecosystem_architectural_brainstorm_trap_1_the_grand_unified_platform_quagmire",
       "ecosystem_architectural_brainstorm_trap_2_the_formalization_hallucination_trap",
       "ecosystem_architectural_brainstorm_trap_3_the_mock_fidelity_mirage",
       "ecosystem_architectural_brainstorm_trap_4_the_legal_universal_open_texture_fallacy"
     ],
-    "241": [
+    "240": [
       "ref_transport",
       "schemas_capability_contract_v1_mcp_endpoint_description",
       "schemas_capability_contract_v1_mcp_endpoint_required",
       "schemas_capability_contract_v1_mcp_endpoint_type",
       "schemas_capability_contract_v1_properties_mcp_endpoint"
     ],
-    "242": [
-      "report_repository_audit",
-      "report_repository_audit_1_executive_summary",
-      "report_repository_audit_3_corrective_actions_summary",
-      "report_repository_audit_comprehensive_repository_epistemic_claims_audit",
-      "report_repository_audit_epistemic_claim_type_distribution"
-    ],
-    "243": [
+    "241": [
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap",
       "research_notes_brainstorm_1page",
       "research_notes_ku_lab_outreach_tracker",
       "research_notes_spark_1page",
       "research_profile"
     ],
-    "244": [
+    "242": [
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_5_1_local_research_lab_targets_kathmandu_valley",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_5_2_the_international_research_pipeline",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_5_3_reusable_research_application_pack_aaradhya_research_pack",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_5_4_datacamp_assessed_certification_engine",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_5_layer_3_execution_external_calibration_opportunity_pipeline"
     ],
-    "245": [
+    "243": [
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_7_phased_timeline_board_exam_defense_holiday_runway_semester_launch",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_phase_0a_research_pack_response_management_oct_5_oct_15_2026_priority_p1",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_phase_0b_epfl_e3_submission_systems_rebuild_sprint_oct_16_nov_1_2026_priority_p1",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_phase_1_post_holiday_semester_launch_nov_2026_onward_priority_p1",
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_phase_1_the_board_exam_defense_lockdown_sept_24_oct_4_2026_priority_p0"
     ],
-    "246": [
+    "244": [
       "research_architectures_arch_rfc_002_multi_model_council_1_executive_philosophy_the_multi_perspective_cognitive_council",
       "research_architectures_arch_rfc_002_multi_model_council_2_specialized_model_roles_comparative_advantages",
       "research_architectures_arch_rfc_002_multi_model_council_3_the_4_stage_council_consensus_protocol",
       "research_architectures_arch_rfc_002_multi_model_council_4_discrepancy_prevention_rules",
       "research_architectures_arch_rfc_002_multi_model_council_architectural_rfc_arch_rfc_002_the_model_plurality_multi_perspective_council_protocol"
+    ],
+    "245": [
+      "research_decisions_dec_001_memory_stratification",
+      "research_decisions_dec_001_memory_stratification_1_context_problem",
+      "research_decisions_dec_001_memory_stratification_2_decision",
+      "research_decisions_dec_001_memory_stratification_3_consequences_empirical_verification",
+      "research_decisions_dec_001_memory_stratification_decision_record_dec_001_memory_stratification_retrieval_pruning"
+    ],
+    "246": [
+      "research_decisions_dec_002_personal_rd_capstone_boundary_1_context_problem",
+      "research_decisions_dec_002_personal_rd_capstone_boundary_2_decisions",
+      "research_decisions_dec_002_personal_rd_capstone_boundary_3_consequences_downstream_actions_status_as_of_2026_09_23",
+      "research_decisions_dec_002_personal_rd_capstone_boundary_4_verification_anchors",
+      "research_decisions_dec_002_personal_rd_capstone_boundary_decision_record_dec_002_personal_r_d_duo_capstone_boundary_audit_evidence_discipline"
     ],
     "247": [
       "research_fellows_template_1_technical_competencies_toolchain",
@@ -3912,56 +3915,57 @@
       "scripts_clipboard_downloader_update_ytdlpnightly"
     ],
     "253": [
+      "templates_meeting_note_1_executive_summary",
+      "templates_meeting_note_2_core_concepts_takeaways",
+      "templates_meeting_note_3_action_items_decisions",
+      "templates_meeting_note_4_verification_check_before_finishing_slide_37_gate",
+      "templates_meeting_note_tp_date_now_yyyy_mm_dd_meeting_tp_file_title"
+    ],
+    "254": [
       "tools_skills_blog_writing_like_claude_references_vocabulary_cheatsheet",
       "tools_skills_blog_writing_like_claude_references_vocabulary_cheatsheet_1_banned_hype_words_replacements",
       "tools_skills_blog_writing_like_claude_references_vocabulary_cheatsheet_2_transforming_hedging_academic_bloat",
       "tools_skills_blog_writing_like_claude_references_vocabulary_cheatsheet_3_honesty_scope_markers",
       "tools_skills_blog_writing_like_claude_references_vocabulary_cheatsheet_calm_authority_vocabulary_cheatsheet"
     ],
-    "254": [
+    "255": [
       "tools_skills_skill_development_skill_auto_discovery",
       "tools_skills_skill_development_skill_no_packaging_needed",
       "tools_skills_skill_development_skill_plugin_specific_considerations",
       "tools_skills_skill_development_skill_skill_location_in_plugins",
       "tools_skills_skill_development_skill_testing_in_plugins"
     ],
-    "255": [
+    "256": [
       "tools_skills_skill_development_skill_common_mistakes_to_avoid",
       "tools_skills_skill_development_skill_mistake_1_weak_trigger_description",
       "tools_skills_skill_development_skill_mistake_2_too_much_in_skill_md",
       "tools_skills_skill_development_skill_mistake_3_second_person_writing",
       "tools_skills_skill_development_skill_mistake_4_missing_resource_references"
     ],
-    "256": [
+    "257": [
       "tools_skills_skill_development_skill_progressive_disclosure_in_practice",
       "tools_skills_skill_development_skill_what_goes_in_examples",
       "tools_skills_skill_development_skill_what_goes_in_references",
       "tools_skills_skill_development_skill_what_goes_in_scripts",
       "tools_skills_skill_development_skill_what_goes_in_skill_md"
     ],
-    "257": [
+    "258": [
       "ecosystem_architectural_brainstorm_7_14_externalized_epistemic_memory_falsifiable_hypothesis_card_schema",
       "ecosystem_architectural_brainstorm_epistemic_repository_architecture",
       "ecosystem_architectural_brainstorm_the_hypothesis_card_standard_research_hypotheses_hyp_template_yaml",
       "ecosystem_architectural_brainstorm_the_llm_consensus_trap"
     ],
-    "258": [
+    "259": [
       "ecosystem_architectural_brainstorm_7_15_the_worker_session_runtime_resolving_the_last_mile_consumer_fleet_bottleneck",
       "ecosystem_architectural_brainstorm_the_3_stage_implementation_sequencing",
       "ecosystem_architectural_brainstorm_the_5_part_control_loop_of_the_worker_session_runtime_wsr",
       "ecosystem_architectural_brainstorm_the_core_invariant_the_task_belongs_to_the_orchestrator_not_the_worker"
     ],
-    "259": [
+    "260": [
       "ecosystem_architectural_brainstorm_7_9_economic_strategy_zero_cost_bootstrapping_the_superlinear_compute_threshold",
       "ecosystem_architectural_brainstorm_economic_telemetry_metrics",
       "ecosystem_architectural_brainstorm_the_4_scaling_thresholds",
       "ecosystem_architectural_brainstorm_the_capital_asymmetry_why_constraints_breed_superior_architecture"
-    ],
-    "260": [
-      "report_economic_model_5_1_discovery_cost_efficiency_e_text_discovery",
-      "report_economic_model_5_2_human_intervention_ratio_i_text_human",
-      "report_economic_model_5_3_the_funnel_pruning_pipeline_invariant_tracking",
-      "report_economic_model_5_economic_research_direction_discovery_efficiency_funnel_pruning"
     ],
     "261": [
       "research_architectures_arch_plan_003_intelligent_systems_conversion_roadmap_4_the_three_project_sequential_execution_roadmap",
@@ -3982,196 +3986,190 @@
       "research_experiments_inv_template_quantitative_metrics"
     ],
     "264": [
-      "research_invariants_inv_mem_001_1_the_energy_chasm_invariant",
-      "research_invariants_inv_mem_001_2_the_uncoalesced_burst_penalty_invariant",
-      "research_invariants_inv_mem_001_3_the_isolated_scalar_reduction_boundary_bound",
-      "research_invariants_inv_mem_001_invariant_spec_inv_mem_001_the_von_neumann_chasm_coalescing_bounds"
-    ],
-    "265": [
       "research_notes_ku_lab_outreach_tracker_1_active_outreach_pipeline",
       "research_notes_ku_lab_outreach_tracker_2_preparedness_packet_collateral_ready_for_replies",
       "research_notes_ku_lab_outreach_tracker_3_protocol_for_responses",
       "research_notes_ku_lab_outreach_tracker_kathmandu_university_research_lab_outreach_tracker"
     ],
-    "266": [
+    "265": [
       "schemas_capability_contract_v1_additionalproperties_type",
       "schemas_capability_contract_v1_env_additionalproperties",
       "schemas_capability_contract_v1_env_type",
       "schemas_capability_contract_v1_properties_env"
     ],
-    "267": [
+    "266": [
       "schemas_capability_contract_v1_id_description",
       "schemas_capability_contract_v1_id_pattern",
       "schemas_capability_contract_v1_id_type",
       "schemas_capability_contract_v1_properties_id"
     ],
-    "268": [
+    "267": [
       "schemas_capability_contract_v1_properties_schema",
       "schemas_capability_contract_v1_schema_description",
       "schemas_capability_contract_v1_schema_format",
       "schemas_capability_contract_v1_schema_type"
     ],
-    "269": [
+    "268": [
       "schemas_domain_lexicon_contract_v1_id_description",
       "schemas_domain_lexicon_contract_v1_id_pattern",
       "schemas_domain_lexicon_contract_v1_id_type",
       "schemas_domain_lexicon_contract_v1_properties_id"
     ],
-    "270": [
+    "269": [
       "scripts_convert_media",
       "scripts_convert_media_get_clipboardmediatargets",
       "scripts_convert_media_get_ffmpegpath",
       "scripts_convert_media_show_notification"
     ],
-    "271": [
+    "270": [
       "templates_boilerplates_fluid_wordmark_navbar_navbar",
       "templates_boilerplates_fluid_wordmark_navbar_navbar_initscrollwatcher",
       "templates_boilerplates_fluid_wordmark_navbar_navbar_initscrollwatcher_updatenavstate",
       "templates_boilerplates_fluid_wordmark_navbar_navbar_renderdecomposedwordmark"
     ],
-    "272": [
+    "271": [
       "tools_skills_graphify_references_add_watch",
       "tools_skills_graphify_references_add_watch_for_graphify_add",
       "tools_skills_graphify_references_add_watch_for_watch",
       "tools_skills_graphify_references_add_watch_graphify_reference_add_a_url_and_watch_a_folder"
     ],
-    "273": [
+    "272": [
       "tools_skills_graphify_references_hooks",
       "tools_skills_graphify_references_hooks_for_git_commit_hook",
       "tools_skills_graphify_references_hooks_for_native_claude_md_integration",
       "tools_skills_graphify_references_hooks_graphify_reference_commit_hook_and_native_claude_md_integration"
     ],
-    "274": [
+    "273": [
       "tools_skills_graphify_references_update",
       "tools_skills_graphify_references_update_for_cluster_only",
       "tools_skills_graphify_references_update_for_update_incremental_re_extraction",
       "tools_skills_graphify_references_update_graphify_reference_incremental_update_and_cluster_only"
     ],
-    "275": [
+    "274": [
       "tools_skills_skill_development_skill_complete_skill",
       "tools_skills_skill_development_skill_minimal_skill",
       "tools_skills_skill_development_skill_quick_reference",
       "tools_skills_skill_development_skill_standard_skill_recommended"
     ],
-    "276": [
+    "275": [
       "tools_skills_skill_development_skill_imperative_infinitive_form",
       "tools_skills_skill_development_skill_objective_instructional_language",
       "tools_skills_skill_development_skill_third_person_in_description",
       "tools_skills_skill_development_skill_writing_style_requirements"
     ],
-    "277": [
+    "276": [
       "tools_validate_ecosystem",
       "tools_validate_ecosystem_fail",
       "tools_validate_ecosystem_rationale_1",
       "tools_validate_ecosystem_validate"
     ],
-    "278": [
+    "277": [
       "schemas_capability_contract_v1_description_description",
       "schemas_capability_contract_v1_description_type",
       "schemas_capability_contract_v1_properties_description"
     ],
-    "279": [
+    "278": [
       "schemas_capability_contract_v1_deterministic_description",
       "schemas_capability_contract_v1_deterministic_type",
       "schemas_capability_contract_v1_properties_deterministic"
     ],
-    "280": [
+    "279": [
       "schemas_capability_contract_v1_location_description",
       "schemas_capability_contract_v1_location_type",
       "schemas_capability_contract_v1_properties_location"
     ],
-    "281": [
+    "280": [
       "schemas_capability_contract_v1_outputs_description",
       "schemas_capability_contract_v1_outputs_type",
       "schemas_capability_contract_v1_properties_outputs"
     ],
-    "282": [
+    "281": [
       "schemas_capability_contract_v1_properties_side_effects",
       "schemas_capability_contract_v1_side_effects_description",
       "schemas_capability_contract_v1_side_effects_type"
     ],
-    "283": [
+    "282": [
       "schemas_capability_contract_v1_properties_tracking_branch",
       "schemas_capability_contract_v1_tracking_branch_description",
       "schemas_capability_contract_v1_tracking_branch_type"
     ],
-    "284": [
+    "283": [
       "scripts_create_c0_intake_form",
       "scripts_create_c0_intake_form_addcomfortquestion",
       "scripts_create_c0_intake_form_createbrlcohort0form"
     ],
-    "285": [
+    "284": [
       "sim_invariant_engine_sandbox_replay_py_any",
       "sim_invariant_engine_sandbox_replay_rationale_31",
       "sim_invariant_engine_sandbox_replay_sandboxreplayengine_replay_counterexample"
     ],
-    "286": [
+    "285": [
       "sim_readme",
       "sim_readme_strangler_ipu_pipeline_runner",
       "sim_readme_strangler_ipu_reproducibility_package"
     ],
-    "287": [
+    "286": [
       "tools_skills_fluid_wordmark_collapse_examples_react_tailwind",
       "tools_skills_fluid_wordmark_collapse_examples_react_tailwind_fluidwordmark",
       "tools_skills_fluid_wordmark_collapse_examples_react_tailwind_wordmarkprops"
     ],
-    "288": [
+    "287": [
       "tools_skills_graphify_references_github_and_merge",
       "tools_skills_graphify_references_github_and_merge_graphify_reference_github_clone_and_cross_repo_merge",
       "tools_skills_graphify_references_github_and_merge_step_0_clone_github_repo_s_only_if_a_github_url_was_given"
     ],
-    "289": [
+    "288": [
       "tools_skills_graphify_references_transcribe",
       "tools_skills_graphify_references_transcribe_graphify_reference_transcribe_video_and_audio",
       "tools_skills_graphify_references_transcribe_step_2_5_transcribe_video_audio_files_only_if_video_files_detected"
     ],
-    "290": [
+    "289": [
       "audit",
       "audit_sh__entry"
     ],
-    "291": [
+    "290": [
       "scripts_add_brl_to_google_calendar",
       "scripts_add_brl_to_google_calendar_addbrlcohort0calendar"
     ],
-    "292": [
+    "291": [
       "scripts_extract_fuse_notebook_plots",
       "scripts_extract_fuse_notebook_plots_inspect_notebook"
     ],
-    "293": [
+    "292": [
       "scripts_verify",
       "scripts_verify_main"
     ],
-    "294": [
+    "293": [
       "sim",
       "sim_sh__entry"
     ],
-    "295": [
+    "294": [
       "tools_preeti_converter_shuvayatra_preeti",
       "tools_preeti_converter_shuvayatra_preeti_preeti"
     ],
-    "296": [
+    "295": [
       "tools_skills_graphify_references_extraction_spec",
       "tools_skills_graphify_references_extraction_spec_graphify_reference_extraction_subagent_prompt"
     ],
-    "297": [
+    "296": [
       "scripts_bootstrap_environment"
     ],
-    "298": [
+    "297": [
       "scripts_list_portfolio_projects"
     ],
-    "299": [
+    "298": [
       "scripts_setup_hotkeys"
     ],
-    "300": [
+    "299": [
       "scripts_setup_user_shell_folders"
     ],
-    "301": [
+    "300": [
       "scripts_yt"
     ],
-    "302": [
+    "301": [
       "scripts_yt_music"
     ],
-    "303": [
+    "302": [
       "tk"
     ]
   },
@@ -4179,49 +4177,49 @@
     "0": 0.05548654244306418,
     "1": 0.04081632653061224,
     "2": 0.08687943262411348,
-    "3": 0.0398936170212766,
-    "4": 0.0425531914893617,
-    "5": 0.06262626262626263,
-    "6": 0.05263157894736842,
-    "7": 0.05405405405405406,
-    "8": 0.06417112299465241,
-    "9": 0.0625,
-    "10": 0.11827956989247312,
-    "11": 0.09655172413793103,
-    "12": 0.06666666666666667,
-    "13": 0.10837438423645321,
-    "14": 0.07142857142857142,
-    "15": 0.12698412698412698,
-    "16": 0.1282051282051282,
-    "17": 0.07407407407407407,
-    "18": 0.07692307692307693,
-    "19": 0.1076923076923077,
-    "20": 0.18461538461538463,
-    "21": 0.21,
-    "22": 0.08,
-    "23": 0.13333333333333333,
-    "24": 0.12648221343873517,
-    "25": 0.09090909090909091,
-    "26": 0.09090909090909091,
+    "3": 0.0425531914893617,
+    "4": 0.06262626262626263,
+    "5": 0.046341463414634146,
+    "6": 0.09388335704125178,
+    "7": 0.05263157894736842,
+    "8": 0.05405405405405406,
+    "9": 0.06417112299465241,
+    "10": 0.0625,
+    "11": 0.09885057471264368,
+    "12": 0.09655172413793103,
+    "13": 0.06666666666666667,
+    "14": 0.10837438423645321,
+    "15": 0.07142857142857142,
+    "16": 0.12698412698412698,
+    "17": 0.08831908831908832,
+    "18": 0.07407407407407407,
+    "19": 0.07692307692307693,
+    "20": 0.1076923076923077,
+    "21": 0.18461538461538463,
+    "22": 0.21,
+    "23": 0.08,
+    "24": 0.13333333333333333,
+    "25": 0.12648221343873517,
+    "26": 0.14285714285714285,
     "27": 0.09090909090909091,
     "28": 0.09090909090909091,
     "29": 0.09090909090909091,
-    "30": 0.12380952380952381,
-    "31": 0.09523809523809523,
-    "32": 0.09523809523809523,
+    "30": 0.09090909090909091,
+    "31": 0.09090909090909091,
+    "32": 0.12380952380952381,
     "33": 0.09523809523809523,
     "34": 0.09523809523809523,
     "35": 0.09523809523809523,
     "36": 0.09523809523809523,
-    "37": 0.10526315789473684,
-    "38": 0.18947368421052632,
-    "39": 0.1,
+    "37": 0.09523809523809523,
+    "38": 0.09523809523809523,
+    "39": 0.09523809523809523,
     "40": 0.1,
-    "41": 0.1631578947368421,
-    "42": 0.1,
+    "41": 0.1,
+    "42": 0.1631578947368421,
     "43": 0.1,
     "44": 0.1,
-    "45": 0.12631578947368421,
+    "45": 0.1,
     "46": 0.10526315789473684,
     "47": 0.10526315789473684,
     "48": 0.10526315789473684,
@@ -4236,51 +4234,51 @@
     "57": 0.1111111111111111,
     "58": 0.1111111111111111,
     "59": 0.1111111111111111,
-    "60": 0.1111111111111111,
+    "60": 0.14705882352941177,
     "61": 0.11764705882352941,
     "62": 0.11764705882352941,
     "63": 0.11764705882352941,
-    "64": 0.125,
-    "65": 0.11764705882352941,
-    "66": 0.14166666666666666,
+    "64": 0.11764705882352941,
+    "65": 0.125,
+    "66": 0.175,
     "67": 0.125,
-    "68": 0.175,
+    "68": 0.125,
     "69": 0.125,
     "70": 0.125,
-    "71": 0.125,
-    "72": 0.125,
-    "73": 0.25,
-    "74": 0.2,
+    "71": 0.25,
+    "72": 0.2,
+    "73": 0.125,
+    "74": 0.125,
     "75": 0.125,
-    "76": 0.125,
-    "77": 0.1523809523809524,
+    "76": 0.1523809523809524,
+    "77": 0.13333333333333333,
     "78": 0.13333333333333333,
-    "79": 0.13333333333333333,
-    "80": 0.13333333333333333,
-    "81": 0.20952380952380953,
-    "82": 0.2,
-    "83": 0.13333333333333333,
-    "84": 0.13333333333333333,
-    "85": 0.14285714285714285,
+    "79": 0.20952380952380953,
+    "80": 0.20952380952380953,
+    "81": 0.13333333333333333,
+    "82": 0.13333333333333333,
+    "83": 0.14285714285714285,
+    "84": 0.14285714285714285,
+    "85": 0.5054945054945055,
     "86": 0.14285714285714285,
-    "87": 0.5054945054945055,
-    "88": 0.14285714285714285,
-    "89": 0.14285714285714285,
+    "87": 0.14285714285714285,
+    "88": 0.15384615384615385,
+    "89": 0.15384615384615385,
     "90": 0.15384615384615385,
     "91": 0.15384615384615385,
     "92": 0.15384615384615385,
     "93": 0.15384615384615385,
-    "94": 0.15384615384615385,
+    "94": 0.3333333333333333,
     "95": 0.16666666666666666,
-    "96": 0.3484848484848485,
+    "96": 0.16666666666666666,
     "97": 0.16666666666666666,
     "98": 0.16666666666666666,
     "99": 0.16666666666666666,
     "100": 0.16666666666666666,
-    "101": 0.16666666666666666,
-    "102": 0.2727272727272727,
+    "101": 0.2727272727272727,
+    "102": 0.16666666666666666,
     "103": 0.16666666666666666,
-    "104": 0.16666666666666666,
+    "104": 0.18181818181818182,
     "105": 0.18181818181818182,
     "106": 0.18181818181818182,
     "107": 0.18181818181818182,
@@ -4295,11 +4293,11 @@
     "116": 0.18181818181818182,
     "117": 0.18181818181818182,
     "118": 0.18181818181818182,
-    "119": 0.2,
+    "119": 0.18181818181818182,
     "120": 0.2,
-    "121": 0.2909090909090909,
-    "122": 0.2,
-    "123": 0.2222222222222222,
+    "121": 0.2,
+    "122": 0.2909090909090909,
+    "123": 0.2,
     "124": 0.3333333333333333,
     "125": 0.2,
     "126": 0.2,
@@ -4309,19 +4307,19 @@
     "130": 0.2,
     "131": 0.2,
     "132": 0.2,
-    "133": 0.2,
+    "133": 0.3333333333333333,
     "134": 0.2,
-    "135": 0.3333333333333333,
+    "135": 0.3111111111111111,
     "136": 0.2,
-    "137": 0.3111111111111111,
+    "137": 0.4888888888888889,
     "138": 0.2,
     "139": 0.4888888888888889,
     "140": 0.2,
     "141": 0.2,
-    "142": 0.2,
-    "143": 0.4888888888888889,
-    "144": 0.2,
-    "145": 0.2777777777777778,
+    "142": 0.25,
+    "143": 0.2777777777777778,
+    "144": 0.2222222222222222,
+    "145": 0.2222222222222222,
     "146": 0.2222222222222222,
     "147": 0.2222222222222222,
     "148": 0.2777777777777778,
@@ -4329,11 +4327,11 @@
     "150": 0.2222222222222222,
     "151": 0.2222222222222222,
     "152": 0.2222222222222222,
-    "153": 0.3611111111111111,
+    "153": 0.2222222222222222,
     "154": 0.2222222222222222,
-    "155": 0.25,
+    "155": 0.3611111111111111,
     "156": 0.2222222222222222,
-    "157": 0.2222222222222222,
+    "157": 0.25,
     "158": 0.2222222222222222,
     "159": 0.2222222222222222,
     "160": 0.2222222222222222,
@@ -4344,7 +4342,7 @@
     "165": 0.2222222222222222,
     "166": 0.2222222222222222,
     "167": 0.2222222222222222,
-    "168": 0.25,
+    "168": 0.2222222222222222,
     "169": 0.25,
     "170": 0.25,
     "171": 0.25,
@@ -4372,8 +4370,8 @@
     "193": 0.39285714285714285,
     "194": 0.25,
     "195": 0.35714285714285715,
-    "196": 0.5714285714285714,
-    "197": 0.2857142857142857,
+    "196": 0.2857142857142857,
+    "197": 0.5714285714285714,
     "198": 0.2857142857142857,
     "199": 0.2857142857142857,
     "200": 0.2857142857142857,
@@ -4391,7 +4389,7 @@
     "212": 0.2857142857142857,
     "213": 0.2857142857142857,
     "214": 0.2857142857142857,
-    "215": 0.3333333333333333,
+    "215": 0.2857142857142857,
     "216": 0.3333333333333333,
     "217": 0.3333333333333333,
     "218": 0.3333333333333333,
@@ -4413,13 +4411,13 @@
     "234": 0.3333333333333333,
     "235": 0.3333333333333333,
     "236": 0.3333333333333333,
-    "237": 0.3333333333333333,
+    "237": 0.4,
     "238": 0.4,
     "239": 0.4,
     "240": 0.4,
-    "241": 0.4,
+    "241": 0.7,
     "242": 0.4,
-    "243": 0.7,
+    "243": 0.4,
     "244": 0.4,
     "245": 0.4,
     "246": 0.4,
@@ -4433,7 +4431,7 @@
     "254": 0.4,
     "255": 0.4,
     "256": 0.4,
-    "257": 0.5,
+    "257": 0.4,
     "258": 0.5,
     "259": 0.5,
     "260": 0.5,
@@ -4452,20 +4450,20 @@
     "273": 0.5,
     "274": 0.5,
     "275": 0.5,
-    "276": 0.5,
+    "276": 0.6666666666666666,
     "277": 0.6666666666666666,
     "278": 0.6666666666666666,
     "279": 0.6666666666666666,
     "280": 0.6666666666666666,
     "281": 0.6666666666666666,
     "282": 0.6666666666666666,
-    "283": 0.6666666666666666,
-    "284": 1.0,
+    "283": 1.0,
+    "284": 0.6666666666666666,
     "285": 0.6666666666666666,
     "286": 0.6666666666666666,
     "287": 0.6666666666666666,
     "288": 0.6666666666666666,
-    "289": 0.6666666666666666,
+    "289": 1.0,
     "290": 1.0,
     "291": 1.0,
     "292": 1.0,
@@ -4478,8 +4476,7 @@
     "299": 1.0,
     "300": 1.0,
     "301": 1.0,
-    "302": 1.0,
-    "303": 1.0
+    "302": 1.0
   },
   "gods": [
     {
@@ -4593,17 +4590,7 @@
   "questions": [
     {
       "type": "bridge_node",
-      "question": "Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `required` to `Contributor Profile: [Full Name]`, `STRANGLER-IPU Experiment Report`, `convert_html_to_pdf`, `🏛️ DECISION RECORD: DEC-002 (Personal R&D ⇄ Duo-Capstone Boundary & Audit Evidence Discipline)`?",
-      "why": "High betweenness centrality (0.022) - this node is a cross-community bridge."
-    },
-    {
-      "type": "bridge_node",
-      "question": "Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `STRANGLER-IPU Experiment Report` to `setup-hotkeys.ps1`, `setup-user-shell-folders.ps1`, `yt.ps1`, `win-vault.contract.json`, `validate_ecosystem.py`, `Community 239`, `description`, `📜 Architectural Invariant: INV-EPI-001 (Verbatim Conversational Logging)`, `required`?",
-      "why": "High betweenness centrality (0.016) - this node is a cross-community bridge."
-    },
-    {
-      "type": "bridge_node",
-      "question": "Why does `Program Charter: Brainstorm Research Laboratory (BRL) & Contributor Fellowship` connect `ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap` to `2026-09-24.md`?",
+      "question": "Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `required` to `Contributor Profile: [Full Name]`, `📜 Architectural Invariant: INV-EPI-001 (Verbatim Conversational Logging)`, `Document 4: Strategic Future Roadmap & Architectural Invariants`, `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis`?",
       "why": "High betweenness centrality (0.012) - this node is a cross-community bridge."
     },
     {
@@ -4625,6 +4612,16 @@
       "type": "low_cohesion",
       "question": "Should `4. Step-by-Step Implementation Timeline` be split into smaller, more focused modules?",
       "why": "Cohesion score 0.05548654244306418 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `run_all_reproducibility.py` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `generate_video.py` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.08687943262411348 - nodes in this community are weakly interconnected."
     }
   ]
 }

@@ -453,6 +453,25 @@ def unicode_to_preeti(text: str) -> str:
 #  ENCODING AUTO-DETECTION
 # ═══════════════════════════════════════════════════════════════════════════════
 
+COMMON_ENGLISH_WORDS = {
+    'lions', 'international', 'district', 'nepal', 'year', 'report', 'prepared',
+    'by', 'lion', 'date', 'zone', 'chairperson', 'region', 'meeting', 'location',
+    'city', 'time', 'called', 'to', 'order', 'adjourned', 'next', 'attendance',
+    'number', 'of', 'clubs', 'in', 'focus', 'service', 'membership', 'leadership',
+    'other', 'recap', 'challenges', 'what', 'were', 'the', 'main', 'shared',
+    'specify', 'if', 'pertinent', 'opportunities', 'and', 'solutions', 'discussed',
+    'plan', 'action', 'decided', 'upon', 'are', 'any', 'global', 'team',
+    'members', 'support', 'teams', 'going', 'assist', 'yes', 'no', 'success',
+    'stories', 'practices', 'best', 'can', 'do', 'further', 'officers',
+    'key', 'decisions', 'summarize', 'major', 'made', 'during', 'follow', 'up',
+    'outline', 'activities', 'planned', 'attachments', 'include', 'relevant',
+    'documents', 'such', 'as', 'minutes', 'presentations', 'or', 'sn', 'name',
+    'title', 'position', 'signature', 'remarks', 'total', 'page', 'status',
+    'for', 'with', 'from', 'an', 'at', 'on', 'is', 'it', 'this', 'that', 'we', 'you',
+    'our', 'their', 'club', 'president', 'secretary', 'treasurer'
+}
+
+
 def detect_encoding(text: str) -> str:
     """
     Detect whether a string is Unicode Devanagari or Preeti-encoded.
@@ -462,19 +481,51 @@ def detect_encoding(text: str) -> str:
         "preeti"  : ASCII text with high density of Preeti typing symbols
         "unknown" : generic English or digits
     """
-    if not text:
+    if not text or not text.strip():
         return "unknown"
 
-    has_devanagari = bool(re.search(r'[\u0900-\u097F]', text))
-    if has_devanagari:
+    # Check Devanagari Unicode codepoints U+0900..U+097F
+    if re.search(r'[\u0900-\u097F]', text):
         return "unicode"
 
-    # Preeti signatures: sequence of letters commonly occurring in Nepali typing
-    preeti_markers = set("sfgndtbvwxhkljzircoepqSFTWDNGKLZICH[]{}|;")
-    ascii_letters = [c for c in text if c.isalpha() or c in "[]{}|;~`^&*()_+="]
-    if len(ascii_letters) > 0:
-        matches = sum(1 for c in ascii_letters if c in preeti_markers)
-        if matches / len(ascii_letters) > 0.6:
+    words = re.findall(r'[a-zA-Z]+', text.lower())
+    if not words:
+        return "unknown"
+
+    # Check if string is predominantly English
+    eng_matches = sum(1 for w in words if w in COMMON_ENGLISH_WORDS)
+    if eng_matches / len(words) >= 0.25:
+        return "unknown"
+
+    # Strong Preeti indicators (symbols that never exist in normal English prose)
+    preeti_symbols = set("]}[{|\\~`^")
+    if any(c in preeti_symbols for c in text):
+        return "preeti"
+
+    # Common Preeti typing n-grams / matras (e.g. short-i before consonant, trailing f/]/}/')
+    preeti_patterns = [
+        r'l[sfgndtbvwxhkljzc]',   # short-i before consonant
+        r'[sfgndtbvwxhkljzc]f',   # aa matra
+        r'[sfgndtbvwxhkljzc]\]',  # e matra
+        r'[sfgndtbvwxhkljzc]\}',  # ai matra
+        r'[sfgndtbvwxhkljzc]\'',  # u matra
+        r';b:o',                  # सदस्य
+        r'pkl:yt',                # उपस्थित
+        r'gfd',                   # नाम
+        r'ePsf]',                 # भएको
+        r'sf]',                   # को
+        r'gsf]',                  # को
+    ]
+    matches = sum(1 for p in preeti_patterns if re.search(p, text))
+    if matches >= 1:
+        return "preeti"
+
+    # Weak fallback check: high proportion of typical Preeti characters AND low standard English structure
+    preeti_markers = set("sfgndtbvwxhkljzircoepqSFTWDNGKLZICH")
+    ascii_letters = [c for c in text if c.isalpha()]
+    if len(ascii_letters) >= 4:
+        char_matches = sum(1 for c in ascii_letters if c in preeti_markers)
+        if char_matches / len(ascii_letters) > 0.8 and eng_matches == 0:
             return "preeti"
 
     return "unknown"
@@ -546,12 +597,33 @@ def convert_docx(
     runs_converted = 0
     runs_total = 0
     fonts_detected = set()
+    w_ns = XML_NS["w"]
 
-    # Read and modify word/document.xml inside docx zip package
     with tempfile.TemporaryDirectory() as tmp_dir:
         # Extract archive
         with zipfile.ZipFile(input_path, 'r') as zin:
             zin.extractall(tmp_dir)
+
+        # 1. Parse styles.xml to resolve font inheritance
+        style_fonts: Dict[str, Set[str]] = {}
+        styles_xml_path = os.path.join(tmp_dir, "word", "styles.xml")
+        styles_tree = None
+        if os.path.exists(styles_xml_path):
+            styles_tree = ET.parse(styles_xml_path)
+            s_root = styles_tree.getroot()
+            for s_elem in s_root.findall(f".//{{{w_ns}}}style"):
+                sid = s_elem.attrib.get(f"{{{w_ns}}}styleId")
+                rpr = s_elem.find(f"{{{w_ns}}}rPr")
+                rfonts = rpr.find(f"{{{w_ns}}}rFonts") if rpr is not None else None
+                if rfonts is not None:
+                    fonts = {
+                        rfonts.attrib.get(f"{{{w_ns}}}ascii", "").lower(),
+                        rfonts.attrib.get(f"{{{w_ns}}}hAnsi", "").lower(),
+                        rfonts.attrib.get(f"{{{w_ns}}}cs", "").lower()
+                    }
+                    fonts.discard("")
+                    if sid:
+                        style_fonts[sid] = fonts
 
         # Candidate XML files containing user text: document.xml, headers, footers
         xml_targets = []
@@ -570,21 +642,24 @@ def convert_docx(
                 try:
                     tree = ET.parse(target_xml)
                     root = tree.getroot()
-                    for r_fonts in root.iter(f"{{{XML_NS['w']}}}rFonts"):
-                        ascii_f = r_fonts.attrib.get(f"{{{XML_NS['w']}}}ascii", "")
-                        hAnsi_f = r_fonts.attrib.get(f"{{{XML_NS['w']}}}hAnsi", "")
-                        cs_f = r_fonts.attrib.get(f"{{{XML_NS['w']}}}cs", "")
+                    for r_fonts in root.iter(f"{{{w_ns}}}rFonts"):
+                        ascii_f = r_fonts.attrib.get(f"{{{w_ns}}}ascii", "")
+                        hAnsi_f = r_fonts.attrib.get(f"{{{w_ns}}}hAnsi", "")
+                        cs_f = r_fonts.attrib.get(f"{{{w_ns}}}cs", "")
                         all_f = {ascii_f.lower(), hAnsi_f.lower(), cs_f.lower()}
                         if any(f in legacy_fonts_lower for f in all_f):
                             has_preeti = True
                         if any(f in unicode_fonts_lower for f in all_f):
                             has_unicode = True
-                    # Also check actual text content for Devanagari codepoints
-                    for t_elem in root.iter(f"{{{XML_NS['w']}}}t"):
+                    for t_elem in root.iter(f"{{{w_ns}}}t"):
                         if t_elem.text and re.search(r'[\u0900-\u097F]', t_elem.text):
                             has_unicode = True
                 except Exception:
                     pass
+
+            for sid, sfonts in style_fonts.items():
+                if any(f in legacy_fonts_lower for f in sfonts):
+                    has_preeti = True
 
             if has_preeti:
                 active_direction = "preeti_to_unicode"
@@ -595,76 +670,167 @@ def convert_docx(
         else:
             active_direction = direction
 
-        # Second pass: execute selective run-level font and text conversion
+        # Second pass: execute selective run-level font and text conversion with chunk merging
         for target_xml in xml_targets:
             tree = ET.parse(target_xml)
             root = tree.getroot()
 
-            for r_elem in root.iter(f"{{{XML_NS['w']}}}r"):
-                runs_total += 1
-                r_pr = r_elem.find(f"{{{XML_NS['w']}}}rPr")
-                t_elem = r_elem.find(f"{{{XML_NS['w']}}}t")
+            for p_elem in root.iter(f"{{{w_ns}}}p"):
+                # Determine paragraph's style and inherited font
+                p_pr = p_elem.find(f"{{{w_ns}}}pPr")
+                p_style_elem = p_pr.find(f"{{{w_ns}}}pStyle") if p_pr is not None else None
+                p_style = p_style_elem.attrib.get(f"{{{w_ns}}}val") if p_style_elem is not None else None
+                p_fonts = style_fonts.get(p_style, set())
 
-                if t_elem is None or not t_elem.text:
+                runs = p_elem.findall(f"{{{w_ns}}}r")
+                if not runs:
                     continue
 
-                original_text = t_elem.text
+                runs_total += len(runs)
+                run_info = []
 
-                # Inspect fonts in run properties
-                r_fonts = r_pr.find(f"{{{XML_NS['w']}}}rFonts") if r_pr is not None else None
-                ascii_f = r_fonts.attrib.get(f"{{{XML_NS['w']}}}ascii", "") if r_fonts is not None else ""
-                hAnsi_f = r_fonts.attrib.get(f"{{{XML_NS['w']}}}hAnsi", "") if r_fonts is not None else ""
-                cs_f = r_fonts.attrib.get(f"{{{XML_NS['w']}}}cs", "") if r_fonts is not None else ""
+                for r in runs:
+                    t_elem = r.find(f"{{{w_ns}}}t")
+                    text = t_elem.text if (t_elem is not None and t_elem.text) else ""
 
-                if ascii_f:
-                    fonts_detected.add(ascii_f)
-                if cs_f:
-                    fonts_detected.add(cs_f)
+                    r_pr = r.find(f"{{{w_ns}}}rPr")
+                    r_fonts = r_pr.find(f"{{{w_ns}}}rFonts") if r_pr is not None else None
+                    if r_fonts is not None:
+                        ascii_f = r_fonts.attrib.get(f"{{{w_ns}}}ascii", "")
+                        hAnsi_f = r_fonts.attrib.get(f"{{{w_ns}}}hAnsi", "")
+                        cs_f = r_fonts.attrib.get(f"{{{w_ns}}}cs", "")
+                        if ascii_f:
+                            fonts_detected.add(ascii_f)
+                        if cs_f:
+                            fonts_detected.add(cs_f)
+                        rf_set = {ascii_f.lower(), hAnsi_f.lower(), cs_f.lower()}
+                        rf_set.discard("")
+                    else:
+                        rf_set = set()
 
-                run_fonts = {ascii_f.lower(), hAnsi_f.lower(), cs_f.lower()}
+                    eff_fonts = rf_set if rf_set else p_fonts
 
+                    is_target_script = False
+                    if active_direction == "preeti_to_unicode":
+                        if any(f in legacy_fonts_lower for f in eff_fonts):
+                            is_target_script = True
+                        if re.search(r'[\u0900-\u097F]', text):
+                            is_target_script = False
+
+                    elif active_direction == "unicode_to_preeti":
+                        if any(f in unicode_fonts_lower for f in eff_fonts) or re.search(r'[\u0900-\u097F]', text):
+                            is_target_script = True
+
+                    run_info.append({
+                        'elem': r,
+                        'text': text,
+                        'is_target': is_target_script,
+                        'eff_fonts': eff_fonts,
+                        't_elem': t_elem,
+                        'r_pr': r_pr,
+                    })
+
+                # In preeti_to_unicode: evaluate contiguous spans without explicit fonts
                 if active_direction == "preeti_to_unicode":
-                    is_legacy_run = any(f in legacy_fonts_lower for f in run_fonts)
-                    if is_legacy_run:
-                        # Determine source font name
-                        src_font = ascii_f or hAnsi_f or "Preeti"
-                        converted = preeti_to_unicode(original_text, font=src_font)
-                        t_elem.text = converted
+                    span_idx = 0
+                    while span_idx < len(run_info):
+                        if run_info[span_idx]['is_target'] or not run_info[span_idx]['text']:
+                            span_idx += 1
+                            continue
 
-                        # Update run fonts to Target Unicode font (Nirmala UI)
-                        if r_pr is None:
-                            r_pr = ET.SubElement(r_elem, f"{{{XML_NS['w']}}}rPr")
-                        if r_fonts is None:
-                            r_fonts = ET.SubElement(r_pr, f"{{{XML_NS['w']}}}rFonts")
+                        # Skip runs with explicit non-legacy fonts (e.g. Cambria, Arial)
+                        if run_info[span_idx]['eff_fonts']:
+                            span_idx += 1
+                            continue
 
-                        r_fonts.attrib[f"{{{XML_NS['w']}}}ascii"] = target_unicode_font
-                        r_fonts.attrib[f"{{{XML_NS['w']}}}hAnsi"] = target_unicode_font
-                        r_fonts.attrib[f"{{{XML_NS['w']}}}cs"] = target_unicode_font
-                        runs_converted += 1
+                        span_start = span_idx
+                        while (span_idx < len(run_info) and
+                               not run_info[span_idx]['is_target'] and
+                               not run_info[span_idx]['eff_fonts'] and
+                               not re.search(r'[\u0900-\u097F]', run_info[span_idx]['text'])):
+                            span_idx += 1
+                        span_end = span_idx
 
-                elif active_direction == "unicode_to_preeti":
-                    # Check if run uses known Unicode font OR contains Devanagari characters
-                    is_unicode_run = (
-                        any(f in unicode_fonts_lower for f in run_fonts) or
-                        bool(re.search(r'[\u0900-\u097F]', original_text))
-                    )
-                    if is_unicode_run:
-                        converted = unicode_to_preeti(original_text)
-                        t_elem.text = converted
+                        span_text = "".join(run_info[k]['text'] for k in range(span_start, span_end))
+                        if detect_encoding(span_text) == "preeti":
+                            for k in range(span_start, span_end):
+                                run_info[k]['is_target'] = True
 
-                        # Update run fonts to Target Preeti font
-                        if r_pr is None:
-                            r_pr = ET.SubElement(r_elem, f"{{{XML_NS['w']}}}rPr")
-                        if r_fonts is None:
-                            r_fonts = ET.SubElement(r_pr, f"{{{XML_NS['w']}}}rFonts")
+                # Group contiguous target runs and convert as coherent chunks
+                idx = 0
+                while idx < len(run_info):
+                    if not run_info[idx]['is_target']:
+                        idx += 1
+                        continue
 
-                        r_fonts.attrib[f"{{{XML_NS['w']}}}ascii"] = target_preeti_font
-                        r_fonts.attrib[f"{{{XML_NS['w']}}}hAnsi"] = target_preeti_font
-                        r_fonts.attrib[f"{{{XML_NS['w']}}}cs"] = target_preeti_font
-                        runs_converted += 1
+                    start = idx
+                    while idx < len(run_info) and run_info[idx]['is_target']:
+                        idx += 1
+                    end = idx
 
-            # Write modified XML back to tmp directory
+                    chunk = run_info[start:end]
+                    combined_text = "".join(item['text'] for item in chunk)
+                    if not combined_text.strip():
+                        continue
+
+                    if active_direction == "preeti_to_unicode":
+                        converted = preeti_to_unicode(combined_text)
+                        target_font = target_unicode_font
+                    else:
+                        converted = unicode_to_preeti(combined_text)
+                        target_font = target_preeti_font
+
+                    # Place converted text in the first run of the chunk
+                    first_run = chunk[0]['elem']
+                    first_t = chunk[0]['t_elem']
+                    if first_t is None:
+                        first_t = ET.SubElement(first_run, f"{{{w_ns}}}t")
+                    first_t.text = converted
+                    if converted.startswith(" ") or converted.endswith(" "):
+                        first_t.attrib["{http://www.w3.org/XML/1998/namespace}space"] = "preserve"
+
+                    # Update font properties of first run
+                    r_pr = chunk[0]['r_pr']
+                    if r_pr is None:
+                        r_pr = ET.SubElement(first_run, f"{{{w_ns}}}rPr")
+                    r_fonts = r_pr.find(f"{{{w_ns}}}rFonts")
+                    if r_fonts is None:
+                        r_fonts = ET.SubElement(r_pr, f"{{{w_ns}}}rFonts")
+                    r_fonts.attrib[f"{{{w_ns}}}ascii"] = target_font
+                    r_fonts.attrib[f"{{{w_ns}}}hAnsi"] = target_font
+                    r_fonts.attrib[f"{{{w_ns}}}cs"] = target_font
+
+                    # Cleanly remove subsequent runs in chunk from paragraph
+                    for item in chunk[1:]:
+                        if item['elem'] in p_elem:
+                            p_elem.remove(item['elem'])
+
+                    runs_converted += 1
+
+            # Write modified XML back
             tree.write(target_xml, encoding="utf-8", xml_declaration=True)
+
+        # 3. Update legacy styles in styles.xml if needed
+        if styles_tree is not None and os.path.exists(styles_xml_path):
+            s_root = styles_tree.getroot()
+            styles_modified = False
+            for s_elem in s_root.findall(f".//{{{w_ns}}}style"):
+                rpr = s_elem.find(f"{{{w_ns}}}rPr")
+                rfonts = rpr.find(f"{{{w_ns}}}rFonts") if rpr is not None else None
+                if rfonts is not None:
+                    ascii_f = rfonts.attrib.get(f"{{{w_ns}}}ascii", "").lower()
+                    if active_direction == "preeti_to_unicode" and ascii_f in legacy_fonts_lower:
+                        rfonts.attrib[f"{{{w_ns}}}ascii"] = target_unicode_font
+                        rfonts.attrib[f"{{{w_ns}}}hAnsi"] = target_unicode_font
+                        rfonts.attrib[f"{{{w_ns}}}cs"] = target_unicode_font
+                        styles_modified = True
+                    elif active_direction == "unicode_to_preeti" and ascii_f in unicode_fonts_lower:
+                        rfonts.attrib[f"{{{w_ns}}}ascii"] = target_preeti_font
+                        rfonts.attrib[f"{{{w_ns}}}hAnsi"] = target_preeti_font
+                        rfonts.attrib[f"{{{w_ns}}}cs"] = target_preeti_font
+                        styles_modified = True
+            if styles_modified:
+                styles_tree.write(styles_xml_path, encoding="utf-8", xml_declaration=True)
 
         # Repackage docx zip
         os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)

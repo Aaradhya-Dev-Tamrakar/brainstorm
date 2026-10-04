@@ -1,7 +1,7 @@
 # Graph Report - brainstorm  (2026-10-04)
 
 ## Corpus Check
-- Large corpus: 375 files · ~774,861 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
+- Large corpus: 375 files · ~774,976 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
 
 ## Summary
 - 3563 nodes · 4234 edges · 303 communities (278 shown, 12 thin omitted)
@@ -313,6 +313,8 @@
 10. `2. Core Architectural & Systemic Limitations` - 17 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `NepalLawHarvesterTests` --uses--> `LegalChronology`  [INFERRED]
+  sim/test_nepal_law_harvester.py → sim/nepal_law_harvester.py
 - `InvariantAssuranceEngineTests` --uses--> `InvariantClassification`  [INFERRED]
   sim/test_invariant_engine.py → sim/invariant_engine/contract_types.py
 - `InvariantAssuranceEngineTests` --uses--> `SandboxReplayEngine`  [INFERRED]
@@ -321,8 +323,6 @@
   sim/test_invariant_engine.py → sim/invariant_engine/smt_encoder.py
 - `NepalLawHarvesterTests` --uses--> `LegalHarvesterDatabase`  [INFERRED]
   sim/test_nepal_law_harvester.py → sim/nepal_law_harvester.py
-- `SMTInvariantProver` --uses--> `InvariantProperty`  [INFERRED]
-  sim/invariant_engine/smt_encoder.py → sim/invariant_engine/contract_types.py
 
 ## Import Cycles
 - None detected.
@@ -1450,6 +1450,8 @@ Nodes (3): tracking_branch, description, type
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `required` to `Contributor Profile: [Full Name]`, `📜 Architectural Invariant: INV-EPI-001 (Verbatim Conversational Logging)`, `Document 4: Strategic Future Roadmap & Architectural Invariants`, `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis`?**
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+- **Why does `Program Charter: Brainstorm Research Laboratory (BRL) & Contributor Fellowship` connect `Program Charter: Brainstorm Research Laboratory (BRL) & Contributor Fellowship` to `KEC Makerspace — NVIDIA Jetson Orin Nano Developer Kit (8GB)`?**
   _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
@@ -1461,10 +1463,8 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.05548654244306418 - nodes in this community are weakly interconnected._
 - **Should `run_all_reproducibility.py` be split into smaller, more focused modules?**
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
-- **Should `generate_video.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.08687943262411348 - nodes in this community are weakly interconnected._
 
 ## Graph Freshness
-- **Built at commit:** `4aaa026878da0c561f100fb1f4c5acf2f3a7a809`
-- **Built timestamp:** `2026-10-04T16:16:34.502450+00:00`
+- **Built at commit:** `93cc403c6f3dfdb49beb4facba90b7252eec9ae4`
+- **Built timestamp:** `2026-10-04T16:33:22.885128+00:00`
 - **Lineage type:** `ancestor_snapshot`

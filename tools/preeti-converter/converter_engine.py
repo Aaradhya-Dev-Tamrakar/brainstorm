@@ -682,6 +682,13 @@ def convert_docx(
                 p_style = p_style_elem.attrib.get(f"{{{w_ns}}}val") if p_style_elem is not None else None
                 p_fonts = style_fonts.get(p_style, set())
 
+                # Prevent vertical clipping of Devanagari matras/reph in exact-line-height paragraphs
+                if p_pr is not None:
+                    spacing = p_pr.find(f"{{{w_ns}}}spacing")
+                    if spacing is not None and spacing.attrib.get(f"{{{w_ns}}}lineRule") == "exact":
+                        spacing.attrib[f"{{{w_ns}}}lineRule"] = "auto"
+                        spacing.attrib[f"{{{w_ns}}}line"] = "260"
+
                 runs = p_elem.findall(f"{{{w_ns}}}r")
                 if not runs:
                     continue
@@ -799,6 +806,27 @@ def convert_docx(
                     r_fonts.attrib[f"{{{w_ns}}}ascii"] = target_font
                     r_fonts.attrib[f"{{{w_ns}}}hAnsi"] = target_font
                     r_fonts.attrib[f"{{{w_ns}}}cs"] = target_font
+
+                    # Calibrate font size: Preeti typically used 14-16pt (val="28"-"32")
+                    # for visual parity with 11-12pt Latin. When converting to Unicode,
+                    # normalize inflated sizes down to 12pt (val="24") and set Complex Script szCs.
+                    if active_direction == "preeti_to_unicode":
+                        sz_elem = r_pr.find(f"{{{w_ns}}}sz")
+                        if sz_elem is not None:
+                            val_str = sz_elem.attrib.get(f"{{{w_ns}}}val", "24")
+                            try:
+                                if int(val_str) >= 28:
+                                    sz_elem.attrib[f"{{{w_ns}}}val"] = "24"
+                            except ValueError:
+                                pass
+                        else:
+                            sz_elem = ET.SubElement(r_pr, f"{{{w_ns}}}sz")
+                            sz_elem.attrib[f"{{{w_ns}}}val"] = "24"
+
+                        sz_cs_elem = r_pr.find(f"{{{w_ns}}}szCs")
+                        if sz_cs_elem is None:
+                            sz_cs_elem = ET.SubElement(r_pr, f"{{{w_ns}}}szCs")
+                        sz_cs_elem.attrib[f"{{{w_ns}}}val"] = sz_elem.attrib[f"{{{w_ns}}}val"]
 
                     # Cleanly remove subsequent runs in chunk from paragraph
                     for item in chunk[1:]:

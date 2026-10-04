@@ -534,97 +534,224 @@
 
     function unicodeToPreeti(text) {
       if (!text) return "";
-      let norm = text.replace(/क्+ष/g, 'क्ष')
-                     .replace(/त्+र/g, 'त्र')
-                     .replace(/ज्+ञ/g, 'ज्ञ')
-                     .replace(/श्+र/g, 'श्र')
-                     .replace(/ो/g, 'ाे')
-                     .replace(/ौ/g, 'ाै');
 
-      let converted = "";
-      let idx = -1;
-      const n = norm.length;
-      const halfKeys = new Set('WERTYUXASDGHJK:ZVNIi');
+      const HALANT = '्';
+      const CONSONANTS = new Set('कखगघङचछजझञटठडढणतथदधनपफबभमयरलवशषसह');
 
-      while (idx + 1 < n) {
-        idx++;
-        const ch = norm[idx];
-        if (ch === '\ufeff') continue;
+      const HALF_CHAR = {
+        'क': 'S', 'ख': 'V', 'ग': 'U', 'घ': '£',
+        'च': 'R', 'छ': '5\\', 'ज': 'H', 'झ': '‰', 'ञ': '~',
+        'ट': '6\\', 'ठ': '7\\', 'ड': '8\\', 'ढ': '9\\', 'ण': '0',
+        'त': 'T', 'थ': 'Y', 'द': 'b\\', 'ध': 'W', 'न': 'G',
+        'प': 'K', 'फ': 'ˆ', 'ब': 'A', 'भ': 'E', 'म': 'D',
+        'य': 'o\\', 'र': '/\\', 'ल': 'N', 'व': 'J',
+        'श': 'Z', 'ष': 'i', 'स': ':', 'ह': 'X',
+      };
 
-        try {
-          if (idx + 1 < n && norm[idx + 1] === 'ि') {
-            if (ch === 'q') {
-              converted += 'l' + ch;
-            } else {
-              converted += 'l' + (UNICODE_TO_PREETI_MAP[ch] || ch);
-            }
-            idx++;
+      const LIGATURES = [
+        { uni: 'क्ष्', preeti: 'I', full: false },
+        { uni: 'क्ष', preeti: 'If', full: true },
+        { uni: 'त्र', preeti: 'q', full: true },
+        { uni: 'त्त', preeti: 'Q', full: true },
+        { uni: 'ज्ञ', preeti: '1', full: true },
+        { uni: 'श्र', preeti: '>', full: true },
+        { uni: 'द्द', preeti: '2', full: true },
+        { uni: 'द्ध', preeti: '4', full: true },
+        { uni: 'द्व', preeti: 'å', full: true },
+        { uni: 'द्य', preeti: 'B', full: true },
+        { uni: 'द्म', preeti: 'ß', full: true },
+        { uni: 'द्र', preeti: '›', full: true },
+        { uni: 'ध्र', preeti: '„', full: true },
+        { uni: 'ट्ट', preeti: '§', full: true },
+        { uni: 'ट्ठ', preeti: 'Ý', full: true },
+        { uni: 'ठ्ठ', preeti: '¶', full: true },
+        { uni: 'ड्ड', preeti: '•', full: true },
+        { uni: 'ङ्क', preeti: 'Í', full: true },
+        { uni: 'ङ्ख', preeti: 'Î', full: true },
+        { uni: 'ङ्ग', preeti: 'Ë', full: true },
+        { uni: 'ङ्ढ', preeti: '°', full: true },
+        { uni: 'ङ्घ', preeti: '‹', full: true },
+        { uni: 'न्न', preeti: 'Ì', full: true },
+      ];
+
+      const FULL_CONS = {
+        'क': 's', 'ख': 'v', 'ग': 'u', 'घ': '3', 'ङ': 'ª',
+        'च': 'r', 'छ': '5', 'ज': 'h', 'झ': '´', 'ञ': '`',
+        'ट': '6', 'ठ': '7', 'ड': '8', 'ढ': '9', 'ण': '0f',
+        'त': 't', 'थ': 'y', 'द': 'b', 'ध': 'w', 'न': 'g',
+        'प': 'k', 'फ': 'km', 'ब': 'a', 'भ': 'e', 'म': 'd',
+        'य': 'o', 'र': '/', 'ल': 'n', 'व': 'j',
+        'श': 'z', 'ष': 'if', 'स': ';', 'ह': 'x',
+      };
+
+      const MATRA = {
+        'ा': 'f', 'ि': 'l', 'ी': 'L', 'ु': "'", 'ू': '"', 'ृ': '[',
+        'े': ']', 'ै': '}',
+        'ो': 'f]', 'ौ': 'f}',
+        'ं': '+', 'ँ': 'F', 'ः': 'M',
+      };
+
+      const VOWELS = {
+        'अ': 'c', 'आ': 'cf', 'इ': 'O', 'ई': 'O{', 'उ': 'p', 'ऊ': 'pm',
+        'ऋ': 'C', 'ए': 'P', 'ऐ': 'P]', 'ओ': 'cf]', 'औ': 'cf}',
+      };
+
+      const SPECIALS = {
+        '।': '.', '॥': '..', 'ॐ': 'ç', 'ऽ': '˜',
+        '०': ')', '१': '!', '२': '@', '३': '#', '४': '$', '५': '%',
+        '६': '^', '७': '&', '८': '*', '९': '(',
+        '(': '-', ')': '_', '?': '<', '=': 'Ö', '!': 'Û',
+        ':': 'Ù', '/': '÷',
+      };
+
+      function normalize(t) {
+        return t.replace(/क\u094Dष/g, 'क्ष')
+                .replace(/त\u094Dर/g, 'त्र')
+                .replace(/ज\u094Dञ/g, 'ज्ञ')
+                .replace(/श\u094Dर/g, 'श्र')
+                .replace(/ो/g, 'ाे')
+                .replace(/ौ/g, 'ाै');
+      }
+
+      function tryLigature(str, pos) {
+        for (const lig of LIGATURES) {
+          if (str.startsWith(lig.uni, pos)) {
+            return { preeti: lig.preeti, len: lig.uni.length, full: lig.full };
+          }
+        }
+        return null;
+      }
+
+      function convertCluster(str, start) {
+        let idxC = start;
+        const parts = [];
+        const nT = str.length;
+
+        while (idxC < nT && CONSONANTS.has(str[idxC])) {
+          const consCh = str[idxC];
+          const lig = tryLigature(str, idxC);
+          if (lig) {
+            parts.push(lig.preeti);
+            idxC += lig.len;
+            if (lig.full) break;
             continue;
           }
 
-          if (idx + 2 < n && norm[idx + 2] === 'ि') {
-            const mappedCh = UNICODE_TO_PREETI_MAP[ch] || ch;
-            if (halfKeys.has(mappedCh)) {
-              const nextCh = norm[idx + 1];
-              if (nextCh !== 'q') {
-                converted += 'l' + mappedCh + (UNICODE_TO_PREETI_MAP[nextCh] || nextCh);
-                idx += 2;
-                continue;
-              } else {
-                converted += 'l' + mappedCh + nextCh;
-                idx += 2;
-                continue;
-              }
+          if (idxC + 1 < nT && str[idxC + 1] === HALANT) {
+            if (idxC + 2 < nT && str[idxC + 2] === 'र') {
+              parts.push(FULL_CONS[consCh] || consCh);
+              parts.push('|');
+              idxC += 3;
+              continue;
+            } else {
+              parts.push(HALF_CHAR[consCh] || ((FULL_CONS[consCh] || consCh) + '\\'));
+              idxC += 2;
+              continue;
             }
+          } else {
+            parts.push(FULL_CONS[consCh] || consCh);
+            idxC += 1;
+            break;
           }
+        }
 
-          if (idx + 1 < n && ch === 'र' && norm[idx + 1] === '्') {
-            if (idx + 3 < n && ['ा', 'ो', 'ौ', 'े', 'ै', 'ी', 'ाे', 'ाै'].includes(norm[idx + 3])) {
-              converted += (UNICODE_TO_PREETI_MAP[norm[idx + 2]] || norm[idx + 2]) +
-                           (UNICODE_TO_PREETI_MAP[norm[idx + 3]] || norm[idx + 3]) + '{';
+        const hasI = (idxC < nT && str[idxC] === 'ि');
+        if (hasI) idxC += 1;
+
+        return { clusterStr: parts.join(''), newIdx: idxC, hasI };
+      }
+
+      const norm = normalize(text);
+      const n = norm.length;
+      const result = [];
+      let idx = 0;
+
+      while (idx < n) {
+        const ch = norm[idx];
+
+        if (ch === '\ufeff') {
+          idx++;
+          continue;
+        }
+
+        // Reph (र्) at start of syllable
+        if (ch === 'र' && idx + 1 < n && norm[idx + 1] === HALANT) {
+          if (idx + 2 < n && CONSONANTS.has(norm[idx + 2])) {
+            const { clusterStr, newIdx, hasI } = convertCluster(norm, idx + 2);
+            let matraParts = '';
+            let mIdx = newIdx;
+            while (mIdx < n && MATRA[norm[mIdx]]) {
+              matraParts += MATRA[norm[mIdx]];
+              mIdx++;
+            }
+            if (hasI) {
+              result.push('l' + clusterStr + matraParts + '{');
+            } else {
+              result.push(clusterStr + matraParts + '{');
+            }
+            idx = mIdx;
+            continue;
+          } else {
+            if (idx + 2 < n && norm[idx + 2] === 'ु') {
+              result.push('?');
               idx += 3;
               continue;
-            } else if (idx + 3 < n && norm[idx + 3] === 'ि') {
-              converted += (UNICODE_TO_PREETI_MAP[norm[idx + 3]] || norm[idx + 3]) +
-                           (UNICODE_TO_PREETI_MAP[norm[idx + 2]] || norm[idx + 2]) + '{';
+            } else if (idx + 2 < n && norm[idx + 2] === 'ू') {
+              result.push('¿');
               idx += 3;
               continue;
-            } else if (idx + 2 < n) {
-              converted += (UNICODE_TO_PREETI_MAP[norm[idx + 2]] || norm[idx + 2]) + '{';
+            } else {
+              result.push('/\\');
               idx += 2;
               continue;
             }
           }
+        }
 
-          if (idx + 3 < n && norm[idx + 3] === 'ि') {
-            const join = norm[idx + 2];
-            if (join === '|' || join === '«') {
-              const mappedCh = UNICODE_TO_PREETI_MAP[ch] || ch;
-              if (halfKeys.has(mappedCh)) {
-                converted += 'l' + mappedCh + (UNICODE_TO_PREETI_MAP[norm[idx + 1]] || norm[idx + 1]) + join;
-                idx += 3;
-                continue;
-              }
-            }
+        // Consonant cluster
+        if (CONSONANTS.has(ch)) {
+          const { clusterStr, newIdx, hasI } = convertCluster(norm, idx);
+          if (hasI) {
+            result.push('l' + clusterStr);
+          } else {
+            result.push(clusterStr);
           }
-        } catch (e) {}
+          idx = newIdx;
+          continue;
+        }
 
-        converted += UNICODE_TO_PREETI_MAP[ch] !== undefined ? UNICODE_TO_PREETI_MAP[ch] : ch;
+        if (MATRA[ch]) {
+          result.push(MATRA[ch]);
+          idx++;
+          continue;
+        }
+
+        if (VOWELS[ch]) {
+          result.push(VOWELS[ch]);
+          idx++;
+          continue;
+        }
+
+        if (SPECIALS[ch]) {
+          result.push(SPECIALS[ch]);
+          idx++;
+          continue;
+        }
+
+        if (ch === HALANT) {
+          result.push('\\');
+          idx++;
+          continue;
+        }
+
+        result.push(ch);
+        idx++;
       }
 
-      converted = converted.replace(/Si/g, 'I')
-                           .replace(/H`/g, '1')
-                           .replace(/b\\w/g, '4')
-                           .replace(/z\|/g, '>')
-                           .replace(/\/'/g, '?')
-                           .replace(/\/"/g, '¿')
-                           .replace(/Tt/g, 'Q')
-                           .replace(/b\\lj/g, 'lå')
-                           .replace(/b\\j/g, 'å')
-                           .replace(/0f\\/g, '0')
-                           .replace(/`\\/g, '~');
-
-      return converted;
+      let res = result.join('');
+      res = res.replace(/\/'/g, '?');
+      res = res.replace(/\/"/g, '¿');
+      return res;
     }
 
     function detectEncoding(text) {

@@ -201,11 +201,12 @@ def unicode_to_preeti(text: str) -> str:
     """
     Convert Unicode Devanagari text (e.g. from Nirmala UI) to Preeti encoding.
 
-    Accurately handles:
-      - Short-i matra (ि) reordered to precede the consonant/cluster ('l' + consonant)
-      - Complex conjunct clusters (स्ति, त्ति, ष्ट्रिय, etc.)
-      - Reph (र्) placed after following consonant/vowel mark with '{'
-      - Ligatures and half-characters (क्ष, त्र, ज्ञ, श्र, द्व, द्ध, etc.)
+    Authentic ligature synthesizer pipeline:
+      1. Unicode NFC normalization & decomposed matra fix
+      2. Longest-first multi-character ligature substitution (क्ष, त्र, ज्ञ, etc.)
+      3. Halant-aware cluster tokenization: Consonant+् → half-character Preeti code
+      4. Short-i (ि / 'l') extraction & reordering before consonant cluster
+      5. Reph (र् / '{') extraction & placement after following consonant+matra
 
     Args:
         text: Unicode Devanagari string.
@@ -216,94 +217,234 @@ def unicode_to_preeti(text: str) -> str:
     if not text:
         return ""
 
-    normalized = normalize_unicode(text)
-    converted: List[str] = []
-    idx = -1
-    n = len(normalized)
+    HALANT = '्'
 
-    half_char_keys = set('WERTYUXASDGHJK:ZVNIi')
+    # Devanagari consonant set
+    CONSONANTS = set('कखगघङचछजझञटठडढणतथदधनपफबभमयरलवशषसह')
 
-    while idx + 1 < n:
-        idx += 1
-        ch = normalized[idx]
-        if ch == '\ufeff':
-            continue
+    # Half-character codes (consonant + halant → Preeti shift key)
+    HALF_CHAR: Dict[str, str] = {
+        'क': 'S', 'ख': 'V', 'ग': 'U', 'घ': '£',
+        'च': 'R', 'छ': '5\\', 'ज': 'H', 'झ': '‰', 'ञ': '~',
+        'ट': '6\\', 'ठ': '7\\', 'ड': '8\\', 'ढ': '9\\', 'ण': '0',
+        'त': 'T', 'थ': 'Y', 'द': 'b\\', 'ध': 'W', 'न': 'G',
+        'प': 'K', 'फ': 'ˆ', 'ब': 'A', 'भ': 'E', 'म': 'D',
+        'य': 'o\\', 'र': '/\\', 'ल': 'N', 'व': 'J',
+        'श': 'Z', 'ष': 'i', 'स': ':', 'ह': 'X',
+    }
 
-        try:
-            # Check 1: Normal hraswa ikar (क + ि -> l + s)
-            if idx + 1 < n and normalized[idx + 1] == 'ि':
-                if ch == 'q':  # त्र
-                    converted.append('l' + ch)
-                else:
-                    mapped_ch = UNICODE_TO_PREETI_MAP.get(ch, ch)
-                    converted.append('l' + mapped_ch)
-                idx += 1
+    # Multi-character ligatures (longest-first greedy matching)
+    # (unicode_seq, preeti_output, is_full_form)
+    LIGATURES: List[Tuple[str, str, bool]] = [
+        ('क्ष्', 'I', False),       # half-ksha
+        ('क्ष', 'If', True),        # ksha
+        ('त्र', 'q', True),         # tra
+        ('त्त', 'Q', True),         # tta
+        ('ज्ञ', '1', True),         # gya
+        ('श्र', '>', True),         # shra
+        ('द्द', '2', True),         # dda
+        ('द्ध', '4', True),         # ddha
+        ('द्व', 'å', True),         # dva
+        ('द्य', 'B', True),         # dya
+        ('द्म', 'ß', True),         # dma
+        ('द्र', '›', True),         # dra
+        ('ध्र', '„', True),         # dhra
+        ('ट्ट', '§', True),         # tta
+        ('ट्ठ', 'Ý', True),         # ttha
+        ('ठ्ठ', '¶', True),         # tthha
+        ('ड्ड', '•', True),         # dda
+        ('ङ्क', 'Í', True),         # ngka
+        ('ङ्ख', 'Î', True),         # ngkha
+        ('ङ्ग', 'Ë', True),         # ngga
+        ('ङ्ढ', '°', True),         # ngdha
+        ('ङ्घ', '‹', True),         # nggha
+        ('न्न', 'Ì', True),         # nna
+    ]
+
+    # Full-consonant map (with inherent vowel)
+    FULL_CONS: Dict[str, str] = {
+        'क': 's', 'ख': 'v', 'ग': 'u', 'घ': '3', 'ङ': 'ª',
+        'च': 'r', 'छ': '5', 'ज': 'h', 'झ': '´', 'ञ': '`',
+        'ट': '6', 'ठ': '7', 'ड': '8', 'ढ': '9', 'ण': '0f',
+        'त': 't', 'थ': 'y', 'द': 'b', 'ध': 'w', 'न': 'g',
+        'प': 'k', 'फ': 'km', 'ब': 'a', 'भ': 'e', 'म': 'd',
+        'य': 'o', 'र': '/', 'ल': 'n', 'व': 'j',
+        'श': 'z', 'ष': 'if', 'स': ';', 'ह': 'x',
+    }
+
+    # Matra / vowel sign map
+    MATRA: Dict[str, str] = {
+        'ा': 'f', 'ि': 'l', 'ी': 'L', 'ु': "'", 'ू': '"', 'ृ': '[',
+        'े': ']', 'ै': '}',
+        'ो': 'f]', 'ौ': 'f}',
+        'ं': '+', 'ँ': 'F', 'ः': 'M',
+    }
+
+    # Independent vowels
+    VOWELS: Dict[str, str] = {
+        'अ': 'c', 'आ': 'cf', 'इ': 'O', 'ई': 'O{', 'उ': 'p', 'ऊ': 'pm',
+        'ऋ': 'C', 'ए': 'P', 'ऐ': 'P]', 'ओ': 'cf]', 'औ': 'cf}',
+    }
+
+    # Special symbols
+    SPECIALS: Dict[str, str] = {
+        '।': '.', '॥': '..', 'ॐ': 'ç', 'ऽ': '˜',
+        '०': ')', '१': '!', '२': '@', '३': '#', '४': '$', '५': '%',
+        '६': '^', '७': '&', '८': '*', '९': '(',
+        '(': '-', ')': '_', '?': '<', '=': 'Ö', '!': 'Û',
+        ':': 'Ù', '/': '÷',
+    }
+
+    # ── Helpers ──
+
+    def _try_ligature(text: str, pos: int) -> Optional[Tuple[str, int, bool]]:
+        """Try to match a ligature at pos. Returns (preeti, chars_consumed, is_full) or None."""
+        for lig_uni, lig_preeti, is_full in LIGATURES:
+            lig_len = len(lig_uni)
+            if text[pos:pos + lig_len] == lig_uni:
+                return (lig_preeti, lig_len, is_full)
+        return None
+
+    def _convert_cluster(text: str, start: int) -> Tuple[str, int, bool]:
+        """
+        Convert a consonant cluster starting at `start`.
+        Returns (preeti_cluster_string, new_index, has_short_i).
+        The cluster is: (half-consonants)* + final-consonant [+ optional short-i].
+        """
+        idx_c = start
+        parts: List[str] = []
+        n_t = len(text)
+
+        while idx_c < n_t and text[idx_c] in CONSONANTS:
+            cons_ch = text[idx_c]
+
+            # Try ligature match first
+            lig = _try_ligature(text, idx_c)
+            if lig:
+                lig_preeti, lig_len, lig_full = lig
+                parts.append(lig_preeti)
+                idx_c += lig_len
+                if lig_full:
+                    break
                 continue
 
-            # Check 2: Two-character cluster + ikar (e.g. स्ति, त्ति)
-            if idx + 2 < n and normalized[idx + 2] == 'ि':
-                mapped_ch = UNICODE_TO_PREETI_MAP.get(ch, ch)
-                if mapped_ch in half_char_keys:
-                    next_ch = normalized[idx + 1]
-                    if next_ch != 'q':
-                        converted.append('l' + mapped_ch + UNICODE_TO_PREETI_MAP.get(next_ch, next_ch))
-                        idx += 2
-                        continue
-                    else:
-                        converted.append('l' + mapped_ch + next_ch)
-                        idx += 2
-                        continue
+            # Check half-char: consonant + halant (not followed by र for ्र)
+            if idx_c + 1 < n_t and text[idx_c + 1] == HALANT:
+                if idx_c + 2 < n_t and text[idx_c + 2] == 'र':
+                    # Subscript-ra (्र = |)
+                    parts.append(FULL_CONS.get(cons_ch, cons_ch))
+                    parts.append('|')
+                    idx_c += 3
+                    continue
+                else:
+                    parts.append(HALF_CHAR.get(cons_ch, FULL_CONS.get(cons_ch, cons_ch) + '\\'))
+                    idx_c += 2
+                    continue
+            else:
+                # Full consonant (cluster end)
+                parts.append(FULL_CONS.get(cons_ch, cons_ch))
+                idx_c += 1
+                break
 
-            # Check 3: Reph (र + ् + consonant) e.g. कर्म, वार्ता
-            if idx + 1 < n and ch == 'र' and normalized[idx + 1] == '्':
-                if idx + 3 < n and normalized[idx + 3] in ('ा', 'ो', 'ौ', 'े', 'ै', 'ी', 'ाे', 'ाै'):
-                    cons = UNICODE_TO_PREETI_MAP.get(normalized[idx + 2], normalized[idx + 2])
-                    matra = UNICODE_TO_PREETI_MAP.get(normalized[idx + 3], normalized[idx + 3])
-                    converted.append(cons + matra + '{')
+        # Check short-i after cluster
+        has_i = (idx_c < n_t and text[idx_c] == 'ि')
+        if has_i:
+            idx_c += 1
+
+        return (''.join(parts), idx_c, has_i)
+
+    # ── Main conversion loop ──
+    normalized = normalize_unicode(text)
+    n = len(normalized)
+    result: List[str] = []
+    idx = 0
+
+    while idx < n:
+        ch = normalized[idx]
+
+        # Skip BOM
+        if ch == '\ufeff':
+            idx += 1
+            continue
+
+        # ── Reph: र + ् at start of cluster (followed by another consonant) ──
+        if ch == 'र' and idx + 1 < n and normalized[idx + 1] == HALANT:
+            if idx + 2 < n and normalized[idx + 2] in CONSONANTS:
+                # Reph: convert the following syllable, then append '{'
+                cluster_str, new_idx, has_i = _convert_cluster(normalized, idx + 2)
+
+                # Consume matras after cluster
+                matra_parts: List[str] = []
+                while new_idx < n and normalized[new_idx] in MATRA:
+                    matra_parts.append(MATRA[normalized[new_idx]])
+                    new_idx += 1
+                matra_str = ''.join(matra_parts)
+
+                if has_i:
+                    result.append('l' + cluster_str + matra_str + '{')
+                else:
+                    result.append(cluster_str + matra_str + '{')
+                idx = new_idx
+                continue
+            else:
+                # Word-final र् or र् before non-consonant
+                if idx + 2 < n and normalized[idx + 2] == 'ु':
+                    result.append('?')  # रु
                     idx += 3
                     continue
-                elif idx + 3 < n and normalized[idx + 3] == 'ि':
-                    matra = UNICODE_TO_PREETI_MAP.get(normalized[idx + 3], normalized[idx + 3])
-                    cons = UNICODE_TO_PREETI_MAP.get(normalized[idx + 2], normalized[idx + 2])
-                    converted.append(matra + cons + '{')
+                elif idx + 2 < n and normalized[idx + 2] == 'ू':
+                    result.append('¿')  # रू
                     idx += 3
                     continue
-                elif idx + 2 < n:
-                    cons = UNICODE_TO_PREETI_MAP.get(normalized[idx + 2], normalized[idx + 2])
-                    converted.append(cons + '{')
+                else:
+                    result.append('/\\')
                     idx += 2
                     continue
 
-            # Check 4: Three-character cluster + ikar (e.g. ष्ट्रिय)
-            if idx + 3 < n and normalized[idx + 3] == 'ि':
-                cluster_join = normalized[idx + 2]
-                if cluster_join in ('|', '«'):
-                    mapped_ch = UNICODE_TO_PREETI_MAP.get(ch, ch)
-                    if mapped_ch in half_char_keys:
-                        converted.append('l' + mapped_ch + UNICODE_TO_PREETI_MAP.get(normalized[idx + 1], normalized[idx + 1]) + cluster_join)
-                        idx += 3
-                        continue
+        # ── Consonant cluster ──
+        if ch in CONSONANTS:
+            cluster_str, new_idx, has_i = _convert_cluster(normalized, idx)
 
-        except IndexError:
-            pass
+            if has_i:
+                result.append('l' + cluster_str)
+            else:
+                result.append(cluster_str)
+            idx = new_idx
+            continue
 
-        # Standard mapping
-        converted.append(UNICODE_TO_PREETI_MAP.get(ch, ch))
+        # ── Matra ──
+        if ch in MATRA:
+            result.append(MATRA[ch])
+            idx += 1
+            continue
 
-    res = "".join(converted)
+        # ── Independent vowel ──
+        if ch in VOWELS:
+            result.append(VOWELS[ch])
+            idx += 1
+            continue
 
-    # Post-mapping fixes for Preeti ligatures & composites
-    res = res.replace('Si', 'I')       # half-ka + half-ssa -> half-ksha
-    res = res.replace('H`', '1')       # half-ja + nya -> jnya (ज्ञ)
-    res = res.replace('b\\w', '4')     # da + halant + dha -> ddha (द्ध)
-    res = res.replace('z|', '>')       # sha + ra -> shra (श्र)
-    res = res.replace("/'", '?')       # ra + u -> ru (रु)
-    res = res.replace('/"', '¿')       # ra + uu -> ruu (रू)
-    res = res.replace('Tt', 'Q')       # half-ta + ta -> tta (त्त)
-    res = res.replace('b\\lj', 'lå')   # da + halant + i-matra + va -> dvi (द्वि)
-    res = res.replace('b\\j', 'å')     # da + halant + va -> dva (द्व)
-    res = res.replace('0f\\', '0')     # nna + aa-matra + halant -> half-nna
-    res = res.replace('`\\', '~')      # nya + halant -> half-nya
+        # ── Special symbols ──
+        if ch in SPECIALS:
+            result.append(SPECIALS[ch])
+            idx += 1
+            continue
+
+        # ── Halant fallback ──
+        if ch == HALANT:
+            result.append('\\')
+            idx += 1
+            continue
+
+        # ── Pass-through (English, spaces, etc.) ──
+        result.append(ch)
+        idx += 1
+
+    res = ''.join(result)
+
+    # Post-processing: special ra+vowel composites
+    res = res.replace("/'", '?')   # र + u → रु
+    res = res.replace('/"', '¿')   # र + uu → रू
 
     return res
 

@@ -123,6 +123,16 @@ class PreetiConverterApp:
         ttk.Label(header, text="नेपाली फन्ट रूपान्तरक", style="Title.TLabel").pack(side="left")
         ttk.Label(header, text="Preeti ↔ Unicode (Nirmala UI / Mangal)", style="Subtitle.TLabel").pack(side="left", padx=(14, 0), pady=(4, 0))
 
+        # Quick Bridge companion launch button
+        self._qb_process = None
+        qb_btn = ttk.Button(
+            header,
+            text="⚡ Launch Quick Bridge (Ctrl+Alt+P)",
+            style="Secondary.TButton",
+            command=self._launch_quick_bridge,
+        )
+        qb_btn.pack(side="right")
+
         # ── Notebook (Tabs) ──
         self.notebook = ttk.Notebook(self.root)
         self.notebook.pack(fill="both", expand=True, padx=16, pady=(6, 16))
@@ -637,6 +647,35 @@ class PreetiConverterApp:
                     os.startfile(folder)
                 except Exception as e:
                     messagebox.showerror("Cannot Open", str(e))
+
+    def _launch_quick_bridge(self):
+        """Launch or focus the Quick Bridge companion background service."""
+        qb_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "quick_bridge.py")
+        if not os.path.exists(qb_path):
+            messagebox.showerror("Error", f"Quick Bridge file not found: {qb_path}")
+            return
+
+        if self._qb_process is not None and self._qb_process.poll() is None:
+            messagebox.showinfo(
+                "Quick Bridge Active",
+                "⚡ Quick Bridge is already running in the background!\n\n"
+                "• Press Ctrl+Alt+P anywhere to convert clipboard text into Preeti\n"
+                "• Press Ctrl+Alt+M to show/hide the floating mini-widget\n"
+                "• Look for the 'P' icon in your system tray"
+            )
+            return
+
+        try:
+            self._qb_process = subprocess.Popen([sys.executable, qb_path])
+            messagebox.showinfo(
+                "Quick Bridge Launched",
+                "⚡ Preeti Quick Bridge is now active!\n\n"
+                "• Press Ctrl+Alt+P to convert clipboard to Preeti anywhere\n"
+                "• Press Ctrl+Alt+M to toggle the floating mini-widget\n"
+                "• Look for the 'P' icon in your Windows system tray"
+            )
+        except Exception as e:
+            messagebox.showerror("Launch Error", f"Failed to launch Quick Bridge:\n{e}")
 
     def _bind_shortcuts(self):
         self.root.bind("<Control-Return>", lambda e: self._convert_text())

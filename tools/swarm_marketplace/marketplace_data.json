@@ -1,0 +1,118 @@
+{
+  "marketplace_name": "Brainstorm & Campus Swarm Marketplace",
+  "version": "1.0.0",
+  "node_origin": "F:\\Aaradhya-Dev-Tamrakar\\brainstorm",
+  "campus_hub": "IOE Pulchowk / Brainstorm Lab",
+  "announcements": [
+    {
+      "id": "ann-01",
+      "type": "campus_notice",
+      "badge": "Robotics Club",
+      "title": "Autonomous Drone & Edge AI Workshop — Registration Open",
+      "description": "3-day hands-on bootcamp covering ROS2, Jetson Nano edge deployment, and optical flow kinematics. Lab slots limited.",
+      "link_text": "View Schedule & Sign Up",
+      "link_url": "#"
+    },
+    {
+      "id": "ann-02",
+      "type": "lab_sponsor",
+      "badge": "Brainstorm R&D",
+      "title": "SPARK Kinematics Fall Detection Dataset v2 Released",
+      "description": "High-frequency 6-axis IMU accelerometer & gyroscope telemetry. Pre-calibrated for clinical machine learning pipelines.",
+      "link_text": "Direct Magnet Access Below",
+      "link_url": "#spark-v2"
+    }
+  ],
+  "items": [
+    {
+      "id": "spark-imu-v2",
+      "title": "SPARK Wearable Kinematics Fall Detection Dataset (v2)",
+      "category": "brainstorm_lab",
+      "department": "BRL / R&D",
+      "size": "1.42 GB",
+      "size_bytes": 1524629504,
+      "infohash": "b284e9c7a10fa72c3d19e5d48a6094b8e21f7c01",
+      "seeds": 14,
+      "peers": 8,
+      "verified": true,
+      "description": "Continuous 100 Hz tri-axial accelerometer, gyroscope, and magnetometer telemetry recorded across 25 subjects with labeled ground-truth fall events.",
+      "tags": ["Wearables", "Kinematics", "Fall Detection", "ESP32-S3", "SHAP"],
+      "magnet": "magnet:?xt=urn:btih:b284e9c7a10fa72c3d19e5d48a6094b8e21f7c01&dn=SPARK_Kinematics_v2&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=http%3A%2F%2Ftracker.academictorrents.com%3A8080%2Fannounce"
+    },
+    {
+      "id": "deepseek-coder-7b-gguf",
+      "title": "DeepSeek Coder 7B Instruct (Q5_K_M Quantized GGUF)",
+      "category": "deep_learning",
+      "department": "AI / Compute",
+      "size": "4.86 GB",
+      "size_bytes": 5218762752,
+      "infohash": "7e3b8a1c920f04e1b7c89f5d32a4e8c1b9f67a22",
+      "seeds": 42,
+      "peers": 19,
+      "verified": true,
+      "description": "Optimized coding LLM quantized for local inference in LM Studio / Ollama. 16k context window, high-precision C++/Python syntax generation.",
+      "tags": ["LLM", "GGUF", "DeepSeek", "Local AI", "LM Studio"],
+      "magnet": "magnet:?xt=urn:btih:7e3b8a1c920f04e1b7c89f5d32a4e8c1b9f67a22&dn=DeepSeek_Coder_7B_Q5KM&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.academictorrents.com%3A8080%2Fannounce"
+    },
+    {
+      "id": "ioe-dsa-ct552-pack",
+      "title": "CT 552: Data Structures & Algorithms Lab Archive & Visualizations",
+      "category": "college_coursework",
+      "department": "Computer / Electronics",
+      "size": "680 MB",
+      "size_bytes": 713031680,
+      "infohash": "4a18f7d9c2e0b513a89e67d2c34f19b8e05a3b44",
+      "seeds": 27,
+      "peers": 11,
+      "verified": true,
+      "description": "Comprehensive lab solutions, Big-O benchmark harnesses, C/C++ memory leak sanitizers, and past exam code solutions.",
+      "tags": ["CT552", "IOE Pulchowk", "Algorithms", "Graph Theory", "Lab Manuals"],
+      "magnet": "magnet:?xt=urn:btih:4a18f7d9c2e0b513a89e67d2c34f19b8e05a3b44&dn=IOE_CT552_DSA_LabPack&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce"
+    },
+    {
+      "id": "ioe-control-ex509-sim",
+      "title": "EX 509: Control Systems Simulation Models & Root Locus Pack",
+      "category": "college_coursework",
+      "department": "Electrical / Electronics",
+      "size": "890 MB",
+      "size_bytes": 933232640,
+      "infohash": "9c12e8b4f7a0d163e5b82c47a9f0e13d58a67c55",
+      "seeds": 19,
+      "peers": 6,
+      "verified": true,
+      "description": "MATLAB/Simulink models, Python control loop notebooks, 2nd-order step responses, Bode/Nyquist stability criteria, and PID tuning suites.",
+      "tags": ["EX509", "Control Systems", "Bode Plot", "Root Locus", "PID"],
+      "magnet": "magnet:?xt=urn:btih:9c12e8b4f7a0d163e5b82c47a9f0e13d58a67c55&dn=IOE_EX509_Control_SimPack&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce"
+    },
+    {
+      "id": "fusion360-cad-benchmarks",
+      "title": "Fusion 360 MCP Suite: 3D CAD Parametric Benchmarks & Assets",
+      "category": "brainstorm_lab",
+      "department": "BRL / R&D",
+      "size": "2.15 GB",
+      "size_bytes": 2308702208,
+      "infohash": "3d5f1a8e9c2b47e0a16d8f53c9e2b07a41f8c666",
+      "seeds": 11,
+      "peers": 4,
+      "verified": true,
+      "description": "High-poly robotic arm components, drone quadcopter airframes, and parametric JSON definitions for conversational 3D CAD modeling via MCP.",
+      "tags": ["Fusion 360", "CAD", "Parametric 3D", "Robotics", "MCP"],
+      "magnet": "magnet:?xt=urn:btih:3d5f1a8e9c2b47e0a16d8f53c9e2b07a41f8c666&dn=Fusion360_MCP_CAD_Assets&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.academictorrents.com%3A8080%2Fannounce"
+    },
+    {
+      "id": "dfir-kali-lab-vm",
+      "title": "Cyber-Forensics & DFIR Pre-Configured Live VM Image",
+      "category": "os_toolchains",
+      "department": "Security / DFIR",
+      "size": "8.40 GB",
+      "size_bytes": 9019431321,
+      "infohash": "8f21c9a4e0b73d61a8e52c79f0d1b4a683e2c777",
+      "seeds": 36,
+      "peers": 22,
+      "verified": true,
+      "description": "Hardened Linux VM image pre-loaded with NTFS Alternate Data Stream extractors, Volatility 3 memory analysis, PE header inspectors, and Ghidra.",
+      "tags": ["DFIR", "Forensics", "VMDK", "Cybersecurity", "Incident Response"],
+      "magnet": "magnet:?xt=urn:btih:8f21c9a4e0b73d61a8e52c79f0d1b4a683e2c777&dn=CyberForensics_DFIR_VM&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce"
+    }
+  ]
+}

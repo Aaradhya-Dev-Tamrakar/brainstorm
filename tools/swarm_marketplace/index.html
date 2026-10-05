@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brainstorm & Campus Swarm Marketplace</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Top Header -->
+    <header class="top-header">
+      <div class="brand-section">
+        <div class="brand-logo">⚡</div>
+        <div>
+          <h1 class="brand-title">Brainstorm Swarm Marketplace</h1>
+          <p class="brand-subtitle">IOE Pulchowk Campus & Brainstorm Lab P2P Mesh</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span>SWARM ONLINE</span>
+        </div>
+        <button id="cohortAuthBtn" class="pro-btn">
+          <span>🔒</span>
+          <span id="cohortBtnText">Cohort Pro Login</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Campus Notice / Ethical Ad Banner Slot (Hidden in Pro Mode) -->
+    <section id="campusNoticeBanner" class="campus-notice-card">
+      <div class="notice-meta">
+        <span class="notice-badge">Campus Notice</span>
+        <div>
+          <div class="notice-title">Autonomous Drone & Edge AI Workshop — Registration Open</div>
+          <div class="notice-desc">3-day hands-on bootcamp covering ROS2, Jetson Nano edge deployment, and optical flow kinematics. Lab slots limited.</div>
+        </div>
+      </div>
+      <div class="notice-action">
+        <a href="#spark-imu-v2">Explore Lab Datasets &rarr;</a>
+      </div>
+    </section>
+
+    <!-- Cohort Pro Publishing Panel (Hidden by default, unlocked in Pro Mode) -->
+    <section id="proAdminPanel" class="pro-admin-panel hidden">
+      <div class="admin-header">
+        <div class="admin-title">
+          <span>⚡</span>
+          <span>Cohort Pro: Publish New Magnet Dataset</span>
+        </div>
+        <button id="exportCatalogBtn" class="btn-secondary" style="padding: 6px 12px; font-size: 0.78rem;">
+          Export Catalog JSON
+        </button>
+      </div>
+      <form id="publishForm">
+        <div class="admin-form-grid">
+          <input type="text" id="newTitle" class="form-input" placeholder="Dataset Title (e.g. SPARK Telemetry v3)" required>
+          <select id="newCategory" class="form-select">
+            <option value="brainstorm_lab">Brainstorm Lab R&D</option>
+            <option value="college_coursework">College Courseware</option>
+            <option value="deep_learning">AI / Deep Learning</option>
+            <option value="os_toolchains">Toolchains & VMs</option>
+          </select>
+          <input type="text" id="newSize" class="form-input" placeholder="Size (e.g. 2.4 GB)" required>
+        </div>
+        <div style="display: flex; gap: 12px; margin-bottom: 12px;">
+          <input type="text" id="newMagnet" class="form-input" style="flex: 2;" placeholder="Magnet URI (magnet:?xt=urn:btih:...)" required>
+          <input type="text" id="newDepartment" class="form-input" style="flex: 1;" placeholder="Department (e.g. BRL / R&D)" required>
+        </div>
+        <div style="display: flex; gap: 12px; margin-bottom: 14px;">
+          <input type="text" id="newDesc" class="form-input" style="flex: 2;" placeholder="Brief Description" required>
+          <input type="text" id="newTags" class="form-input" style="flex: 1;" placeholder="Tags (comma-separated)">
+        </div>
+        <button type="submit" class="btn-primary" style="padding: 10px 24px;">Publish to Swarm Catalog</button>
+      </form>
+    </section>
+
+    <!-- Toolbar: Search & Filters -->
+    <section class="toolbar-section">
+      <div class="search-input-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search datasets by title, tag, department, or infohash...">
+      </div>
+      <div class="filter-pills-row">
+        <button class="filter-pill active" data-category="all">All Assets</button>
+        <button class="filter-pill" data-category="brainstorm_lab">Brainstorm Lab R&D</button>
+        <button class="filter-pill" data-category="college_coursework">IOE Courseware</button>
+        <button class="filter-pill" data-category="deep_learning">AI & Models</button>
+        <button class="filter-pill" data-category="os_toolchains">Toolchains & VMs</button>
+      </div>
+    </section>
+
+    <!-- Marketplace Grid -->
+    <main id="datasetGrid" class="marketplace-grid">
+      <!-- Populated dynamically by app.js -->
+    </main>
+  </div>
+
+  <!-- QR Code Modal (For Phone / Mobile Torrent Clients) -->
+  <div id="qrModal" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title" id="qrModalTitle">Scan Magnet Link</div>
+        <button class="modal-close-btn" id="qrCloseBtn">&times;</button>
+      </div>
+      <div class="qr-display-container">
+        <div id="qrCodeContainer" class="qr-box"></div>
+        <p style="font-size: 0.82rem; color: var(--text-muted); text-align: center;">
+          Scan with your phone's camera to open directly in Flud, tTorrent, or your mobile torrent client.
+        </p>
+      </div>
+      <button class="btn-primary" id="copyMagnetFromModal" style="width: 100%; margin-top: 12px;">
+        Copy Magnet Link
+      </button>
+    </div>
+  </div>
+
+  <!-- Cohort Pro Key Auth Modal -->
+  <div id="authModal" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title">Cohort Pro Authentication</div>
+        <button class="modal-close-btn" id="authCloseBtn">&times;</button>
+      </div>
+      <form id="authForm" style="display: flex; flex-direction: column; gap: 14px;">
+        <p style="font-size: 0.85rem; color: var(--text-muted);">
+          Enter the pre-shared Cohort Secret Token to unlock unmetered seeding, zero ads, and catalog publishing privileges.
+        </p>
+        <input type="password" id="authTokenInput" class="form-input" placeholder="Enter Cohort Secret Token" required>
+        <div style="display: flex; gap: 10px;">
+          <button type="submit" class="btn-primary" style="flex: 1;">Authenticate</button>
+          <button type="button" id="authLogoutBtn" class="btn-secondary" style="display: none;">Logout</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

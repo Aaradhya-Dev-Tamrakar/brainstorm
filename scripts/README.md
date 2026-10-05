@@ -55,6 +55,13 @@ This directory contains standalone PowerShell, Python, and Batch utilities that 
 
 ---
 
+### 5. P2P Dataset Packaging, Headless Seeding & Swarm Marketplace
+- **[`make_dataset_torrent.py`](make_dataset_torrent.py):** Standalone pure-Python (zero external dependencies) BitTorrent v1 packager and Magnet URI generator. Automatically computes optimal chunk sizes (512 KB–16 MB), embeds Tier-1 public trackers + AcademicTorrents announce tiers, and supports BEP 0019 HTTP web-seeds.
+- **[`seed_dataset.ps1`](seed_dataset.ps1):** Automated PowerShell seeder utilizing `aria2c` with DHT, PEX, and Local Peer Discovery (LPD) for high-speed local LAN/campus swarming.
+- **[`start_marketplace.ps1`](start_marketplace.ps1):** Launches the **Brainstorm & Campus Swarm Marketplace** web portal (`tools/swarm_marketplace/`) with automatic Wi-Fi/LAN IP detection for campus distribution, QR code generation, and Cohort Pro role gating (`cohort-pro-2026`).
+
+---
+
 ## 🚀 Usage
 
 ### Applying Shell Folders Setup

@@ -6,10 +6,10 @@
     "semantic_hash": "1f807d3a09fa490b7f5315226b97cf4b"
   },
   "schemas/ecosystem.registry.json": {
-    "mtime": 1791127969.0122027,
-    "seen": 1791127983.748848,
-    "ast_hash": "1c066ab227fe9047461dd12e8e473487",
-    "semantic_hash": "1c066ab227fe9047461dd12e8e473487"
+    "mtime": 1791165975.6331484,
+    "seen": 1791165994.117846,
+    "ast_hash": "b16ae38735280e22d1dc3da00d4e31b6",
+    "semantic_hash": "b16ae38735280e22d1dc3da00d4e31b6"
   },
   "schemas/examples/AI-Constraint-Solver.contract.json": {
     "mtime": 1790044861.17107,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791131602.5762863,
-    "seen": 1791131605.6161575,
-    "ast_hash": "fe253887ae27aa9424743143c7ffc236",
-    "semantic_hash": "fe253887ae27aa9424743143c7ffc236"
+    "mtime": 1791166117.806393,
+    "seen": 1791166121.4377759,
+    "ast_hash": "ee03dd84a4e0d71da0a2606db685c7d4",
+    "semantic_hash": "ee03dd84a4e0d71da0a2606db685c7d4"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1791131600.4840505,
-    "seen": 1791131605.6161554,
-    "ast_hash": "4126c6bae86f3bb098839cae581d0a4e",
-    "semantic_hash": "4126c6bae86f3bb098839cae581d0a4e"
+    "mtime": 1791166115.6241238,
+    "seen": 1791166121.4377732,
+    "ast_hash": "c625f97878e157492882a0b548f5660c",
+    "semantic_hash": "c625f97878e157492882a0b548f5660c"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -864,10 +864,10 @@
     "semantic_hash": "38de91e2c2e9f46dcf2f6cfecccc471c"
   },
   "scripts/README.md": {
-    "mtime": 1790920667.4306934,
-    "seen": 1790920697.641799,
-    "ast_hash": "b6cb4ca44fd5e4df4dfc528576a4d278",
-    "semantic_hash": "b6cb4ca44fd5e4df4dfc528576a4d278"
+    "mtime": 1791165935.2239282,
+    "seen": 1791165994.1184137,
+    "ast_hash": "19621554d99e9a36d0fbcf1698a1decd",
+    "semantic_hash": "19621554d99e9a36d0fbcf1698a1decd"
   },
   "tools/doc_archiver/SKILL.md": {
     "mtime": 1790233600.6808722,
@@ -2224,5 +2224,41 @@
     "seen": 1791129173.5093453,
     "ast_hash": "b145ff322eddeab283afbf2ec1998177",
     "semantic_hash": "b145ff322eddeab283afbf2ec1998177"
+  },
+  "scripts/make_dataset_torrent.py": {
+    "mtime": 1791165127.629328,
+    "seen": 1791165994.1179202,
+    "ast_hash": "043e99fd2fc572e13c14e8ad9c70a755",
+    "semantic_hash": "043e99fd2fc572e13c14e8ad9c70a755"
+  },
+  "scripts/seed_dataset.ps1": {
+    "mtime": 1791165269.000307,
+    "seen": 1791165994.117923,
+    "ast_hash": "596b661d72fb6896f0f8664c6384fa44",
+    "semantic_hash": "596b661d72fb6896f0f8664c6384fa44"
+  },
+  "scripts/start_marketplace.ps1": {
+    "mtime": 1791166105.3885725,
+    "seen": 1791166121.4378226,
+    "ast_hash": "81421d1831ceb739de1ff794d54cba28",
+    "semantic_hash": "81421d1831ceb739de1ff794d54cba28"
+  },
+  "tools/swarm_marketplace/app.js": {
+    "mtime": 1791166094.5389483,
+    "seen": 1791166121.437898,
+    "ast_hash": "3991360ec96b0a5b431c830787799d53",
+    "semantic_hash": "3991360ec96b0a5b431c830787799d53"
+  },
+  "tools/swarm_marketplace/marketplace_data.json": {
+    "mtime": 1791165741.172451,
+    "seen": 1791165994.1181276,
+    "ast_hash": "bd06163c5a1e87d828452d880d2026d5",
+    "semantic_hash": "bd06163c5a1e87d828452d880d2026d5"
+  },
+  "tools/swarm_marketplace/README.md": {
+    "mtime": 1791165941.5769458,
+    "seen": 1791165994.118714,
+    "ast_hash": "8548186193f3931e32926b28414434e8",
+    "semantic_hash": "8548186193f3931e32926b28414434e8"
   }
 }

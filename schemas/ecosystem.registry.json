@@ -9,17 +9,17 @@
     "role": "Central Architecture Registry, Verification Engine, and Orchestration Blueprint"
   },
   "statistics": {
-    "total_git_branches": 29,
+    "total_git_branches": 30,
     "orchestration_branches": 1,
-    "total_tool_modules": 25,
-    "computational_modules": 21,
+    "total_tool_modules": 26,
+    "computational_modules": 22,
     "presentation_and_educational_modules": 4,
     "special_and_research_branches": 2,
     "automation_branches": 1,
-    "research_artifacts": 34,
-    "notes": "Achieved 100% 1-to-1 module-to-branch cardinality across all 25 ecosystem tools on 2026-10-05 (1 main + 25 tool branches + 2 special/research branches + 1 automation branch = 29 total remote branches).",
+    "research_artifacts": 35,
+    "notes": "Achieved 100% 1-to-1 module-to-branch cardinality across all 26 ecosystem tools on 2026-10-05 (1 main + 26 tool branches + 2 special/research branches + 1 automation branch = 30 total remote branches).",
     "entity_classes": {
-      "ecosystem_modules": 21,
+      "ecosystem_modules": 22,
       "presentation_hubs": 4,
       "in_tree_research_engines": 2,
       "in_tree_research_proposals": 0
@@ -335,6 +335,19 @@
       "local_path": "F:\\Aaradhya-Dev-Tamrakar\\Cyber-Forensics",
       "core_superpower": "Deterministic Windows DFIR artifact triage, multi-layer stealth evasion detection (ADS, CLSID, RLO, MZ PE magic byte masquerades), and cryptographic chain of custody logging",
       "contract_ref": "schemas/examples/cyber-forensics.contract.json",
+      "entity_class": "ecosystem_module"
+    },
+    {
+      "index": 26,
+      "id": "omnivault",
+      "branch": "omnivault",
+      "name": "OmniVault",
+      "category": "computational_engine",
+      "tech_stack": "Python 3.14, SQLite FTS5, BLAKE3, FastAPI, Pillow, Watchdog",
+      "execution_context": "Local Desktop / Hybrid Storage",
+      "local_path": "F:\\Aaradhya-Dev-Tamrakar\\omnivault",
+      "core_superpower": "Tri-tier archival and sub-second retrieval engine bridging Mobile (LocalSend/Wired), Laptop NVMe shadow catalog, and External HDD cold vaults with automated storage bloat optimization",
+      "contract_ref": "schemas/examples/omnivault.contract.json",
       "entity_class": "ecosystem_module"
     }
   ]

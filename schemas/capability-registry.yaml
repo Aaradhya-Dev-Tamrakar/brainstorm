@@ -759,3 +759,38 @@ capabilities:
     confidence: 0.95
     last_verified: "2026-10-02"
 
+  - id: "omnivault"
+    entity_class: "ecosystem_module"
+    name: "OmniVault"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\omnivault"
+    category: "COMPUTATIONAL_ENGINE"
+    status: "IMPLEMENTED"
+    description: "Tri-tier archival and sub-second retrieval engine bridging Mobile (LocalSend/Wired), Laptop NVMe shadow catalog, and External HDD cold storage with automated storage bloat optimization."
+    inputs:
+      - "Full-text search queries (filename, category, tags)"
+      - "Mobile upload streams (LocalSend Wi-Fi or USB Cable)"
+      - "Storage optimization & cache purge triggers"
+    outputs:
+      - "Sub-3.5ms query results with offline WebP thumbnails"
+      - "Cryptographically verified cold archive files (BLAKE3)"
+      - "Disk volume health profiles and reclaimed cache space metrics"
+    interfaces:
+      - "CLI (omnivault.bat / python -m omnivault)"
+      - "REST API & Web UI Dashboard (FastAPI / Uvicorn on :7890)"
+      - "Watchdog Folder Listener (LocalSend)"
+    dependencies:
+      - "Python 3.14+"
+      - "SQLite 3 (FTS5 + WAL mode)"
+      - "BLAKE3"
+      - "FastAPI & Uvicorn"
+      - "Pillow"
+      - "Watchdog"
+    evidence: "E4"
+    benchmarks: "Sub-3.5ms retrieval latency across 23,308 files (144.4 GB), 13.9 GB cache bloat detected"
+    verification: "pytest tests/test_omnivault.py (6/6 passed)"
+    maintenance_cost: "0.5 hours/month"
+    development_hours: 14
+    confidence: 0.95
+    last_verified: "2026-10-05"
+
+

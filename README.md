@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Status: Evidence-Driven R&D](https://img.shields.io/badge/Status-Evidence--Driven%20R%26D-brightgreen)
-![Ontology: 25 Modules | 21 Computational](https://img.shields.io/badge/Ontology-25%20Modules%20%7C%2021%20Computational-indigo)
+![Ontology: 26 Modules | 22 Computational](https://img.shields.io/badge/Ontology-26%20Modules%20%7C%2022%20Computational-indigo)
 ![Evidence: Calibrated E0-E5](https://img.shields.io/badge/Evidence-Calibrated%20E0--E5-orange)
 ![Engine: sync.ps1](https://img.shields.io/badge/Engine-sync.ps1%20v2.0-cyan)
 
@@ -15,7 +15,7 @@
 To eliminate ambiguity between what is **implemented**, what is **experimentally demonstrated**, and what is **proposed research**, this repository adheres to formal governance standards:
 
 - 📖 **[Canonical Capability & Ecosystem Ontology](schemas/capability-ontology.md):** Formal definitions of Repository $\to$ Project $\to$ Capability $\to$ Interface $\to$ Workflow.  
-  _Canonical Inventory:_ **25 Tool Modules** | **21 Computational Engines** | **4 Presentation Hubs** | **6 Compound Workflows** | **34 Research Specs & Experiments**.
+  _Canonical Inventory:_ **26 Tool Modules** | **22 Computational Engines** | **4 Presentation Hubs** | **6 Compound Workflows** | **35 Research Specs & Experiments**.
 - 📜 **[Calibrated Evidence Policy (E0–E5)](schemas/evidence-policy.md):** Enforces evidence tiers and distinguishes formalization correctness, solver correctness, and empirical runtime correctness.
 - 🗂️ **[Machine-Readable Capability Registry (YAML)](schemas/capability-registry.yaml):** Single source of truth recording inputs, outputs, interfaces, benchmarks, maintenance overhead, and evidence tiers for every ecosystem capability.
 - 📋 **[Repository Epistemic Audit](report/repository-audit.md):** Granular audit classifying all major repository claims against traceable artifacts.
@@ -70,7 +70,7 @@ Rather than building an isolated chatbot, this repository models tools as **auto
 └───────────────────────────────────────┬────────────────────────────────────────┘
                                         │ Typed Capability Contracts
 ┌───────────────────────────────────────▼────────────────────────────────────────┐
-│ 3. CAPABILITY MESH (21 Computational Engines across 25 Modules)               │
+│ 3. CAPABILITY MESH (22 Computational Engines across 26 Modules)               │
 │    • Ingestion : Screen Q&A (DOM), Super-NLM (Notebooks), Google Classroom MCP │
 │    • Compute   : Fusion 360 MCP (CAD), BiasAperture (Fairness), SPARK (Edge AI)│
 │    • Solvers   : AI Constraint Solver (Cryptarithmetic & CSP)                  │
@@ -138,7 +138,7 @@ Rather than expanding the ecosystem by inventing new projects, the immediate eng
 
 ## 🗂️ Authoritative Ecosystem Catalog
 
-The ecosystem encompasses **25 tool modules** cataloged in `schemas/ecosystem.registry.json` and tracked across local tool repositories plus 1 orchestration root (`brainstorm`), with machine-readable contracts and interfaces (25 modules = 21 active computational engines + 4 presentation/educational hubs):
+The ecosystem encompasses **26 tool modules** cataloged in `schemas/ecosystem.registry.json` and tracked across local tool repositories plus 1 orchestration root (`brainstorm`), with machine-readable contracts and interfaces (26 modules = 22 active computational engines + 4 presentation/educational hubs):
 
 > 📖 **Machine-Readable Registry:** [`schemas/capability-registry.yaml`](schemas/capability-registry.yaml) | [`schemas/ecosystem.registry.json`](schemas/ecosystem.registry.json)  
 > 📜 **Ontology Standard:** [`schemas/capability-ontology.md`](schemas/capability-ontology.md)

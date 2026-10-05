@@ -6,10 +6,10 @@
     "semantic_hash": "1f807d3a09fa490b7f5315226b97cf4b"
   },
   "schemas/ecosystem.registry.json": {
-    "mtime": 1791165975.6331484,
-    "seen": 1791165994.117846,
-    "ast_hash": "b16ae38735280e22d1dc3da00d4e31b6",
-    "semantic_hash": "b16ae38735280e22d1dc3da00d4e31b6"
+    "mtime": 1791174999.907508,
+    "seen": 1791175164.3308172,
+    "ast_hash": "075196631a83c05580f0766fde56c04d",
+    "semantic_hash": "075196631a83c05580f0766fde56c04d"
   },
   "schemas/examples/AI-Constraint-Solver.contract.json": {
     "mtime": 1790044861.17107,
@@ -102,10 +102,10 @@
     "semantic_hash": "5b018a5335bcfda1d7e220f7b2eaa4d8"
   },
   "schemas/capability-ontology.md": {
-    "mtime": 1790948260.531454,
-    "seen": 1790948462.638171,
-    "ast_hash": "96c1b4a18eb1a9525fe0ded734e1e05d",
-    "semantic_hash": "96c1b4a18eb1a9525fe0ded734e1e05d"
+    "mtime": 1791175024.1902995,
+    "seen": 1791175164.3310494,
+    "ast_hash": "f0ee8c43229197c4120aec9cef87d084",
+    "semantic_hash": "f0ee8c43229197c4120aec9cef87d084"
   },
   "schemas/evidence-policy.md": {
     "mtime": 1790044861.17107,
@@ -138,10 +138,10 @@
     "semantic_hash": "361e8dd333417f7e3bcd00d97cd29842"
   },
   "README.md": {
-    "mtime": 1790994540.3235767,
-    "seen": 1790994581.5769162,
-    "ast_hash": "e9a3edc3d031f866c077ebe80b5c31ba",
-    "semantic_hash": "e9a3edc3d031f866c077ebe80b5c31ba"
+    "mtime": 1791175024.1811476,
+    "seen": 1791175164.3309488,
+    "ast_hash": "4ae4bc266d5498f18c3333efeeb5f35a",
+    "semantic_hash": "4ae4bc266d5498f18c3333efeeb5f35a"
   },
   "research/architectures/README.md": {
     "mtime": 1790240407.9593427,
@@ -192,10 +192,10 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1791167731.0730398,
-    "seen": 1791167842.5225554,
-    "ast_hash": "281913176d58ba93e7da3c1c8fdb4e64",
-    "semantic_hash": "281913176d58ba93e7da3c1c8fdb4e64"
+    "mtime": 1791175024.190799,
+    "seen": 1791175164.330944,
+    "ast_hash": "34aade7d8047ce6564eda60ce1a0d519",
+    "semantic_hash": "34aade7d8047ce6564eda60ce1a0d519"
   },
   "report/economic-model.md": {
     "mtime": 1790234914.4392133,
@@ -222,10 +222,10 @@
     "semantic_hash": "7f05ad0aeab58323fb428bb660a57c7f"
   },
   "report/repository-audit.md": {
-    "mtime": 1790923345.8409798,
-    "seen": 1790923418.87083,
-    "ast_hash": "b860d37c980ac9c2a132b6b703e96e35",
-    "semantic_hash": "b860d37c980ac9c2a132b6b703e96e35"
+    "mtime": 1791175024.1978104,
+    "seen": 1791175164.330956,
+    "ast_hash": "b01ed15952c7ea226e50f51e71b080e1",
+    "semantic_hash": "b01ed15952c7ea226e50f51e71b080e1"
   },
   "research/experiments/COMPOSE-001.md": {
     "mtime": 1790044861.1331217,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791170680.2652023,
-    "seen": 1791170688.591281,
-    "ast_hash": "75e78f89e21a2d7f81cf613816eff33f",
-    "semantic_hash": "75e78f89e21a2d7f81cf613816eff33f"
+    "mtime": 1791175160.8168824,
+    "seen": 1791175164.3308125,
+    "ast_hash": "c1255a2f1ff77dbf241e495d7945d1be",
+    "semantic_hash": "c1255a2f1ff77dbf241e495d7945d1be"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1791170676.7892413,
-    "seen": 1791170688.591279,
-    "ast_hash": "3bd20c516714473a67b4fbfdc70b2cdb",
-    "semantic_hash": "3bd20c516714473a67b4fbfdc70b2cdb"
+    "mtime": 1791175158.6398664,
+    "seen": 1791175164.3308108,
+    "ast_hash": "ecbb90472ab23b0eef1444c67aa9fc3f",
+    "semantic_hash": "ecbb90472ab23b0eef1444c67aa9fc3f"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -2302,5 +2302,17 @@
     "seen": 1791170688.5913382,
     "ast_hash": "f42db8985a19c276f06d27d7d3ac8a57",
     "semantic_hash": "f42db8985a19c276f06d27d7d3ac8a57"
+  },
+  "schemas/examples/omnivault.contract.json": {
+    "mtime": 1791174962.603241,
+    "seen": 1791175164.3308346,
+    "ast_hash": "e28b4048526bd47b9f47544b1b0d015d",
+    "semantic_hash": "e28b4048526bd47b9f47544b1b0d015d"
+  },
+  "research/architectures/ARCH-SPEC-009-OMNIVAULT-TRI-TIER-STORAGE.md": {
+    "mtime": 1791174976.3877747,
+    "seen": 1791175164.3309772,
+    "ast_hash": "3e6c14ae1c457d8c6fc2ce70f2b36292",
+    "semantic_hash": "3e6c14ae1c457d8c6fc2ce70f2b36292"
   }
 }

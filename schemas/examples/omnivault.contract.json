@@ -1,0 +1,119 @@
+{
+  "$schema": "../capability.contract.v1.json",
+  "module": "omnivault",
+  "version": "1.0.0",
+  "location": "F:\\Aaradhya-Dev-Tamrakar\\omnivault",
+  "tracking_branch": "omnivault",
+  "runtime": "python314",
+  "capabilities": [
+    {
+      "id": "instant_offline_search",
+      "description": "Sub-5ms full-text keyword and category search across disconnected external hard drives using SQLite FTS5 with cached WebP thumbnails.",
+      "category": "computation",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "deterministic_execution",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 5000,
+      "inputs": {
+        "type": "object",
+        "required": ["query"],
+        "properties": {
+          "query": { "type": "string" },
+          "category": { "type": "string" },
+          "volume": { "type": "string" },
+          "limit": { "type": "integer", "default": 25 }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["total", "items", "duration_ms"],
+        "properties": {
+          "total": { "type": "integer" },
+          "duration_ms": { "type": "number" },
+          "items": { "type": "array" }
+        }
+      }
+    },
+    {
+      "id": "dual_mobile_ingest",
+      "description": "Ingests files from Mobile via LocalSend (Wi-Fi P2P) or Wired USB connection with BLAKE3 differential deduplication.",
+      "category": "computation",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "deterministic_execution",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 60000,
+      "inputs": {
+        "type": "object",
+        "required": ["source_path", "stream"],
+        "properties": {
+          "source_path": { "type": "string" },
+          "stream": { "type": "string", "enum": ["localsend", "wired"] },
+          "skip_existing": { "type": "boolean", "default": true }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["imported", "skipped", "total_bytes"],
+        "properties": {
+          "imported": { "type": "integer" },
+          "skipped": { "type": "integer" },
+          "total_bytes": { "type": "integer" }
+        }
+      }
+    },
+    {
+      "id": "storage_health_and_purge",
+      "description": "Profiles storage volume capacities across all drives and provides safe dry-run/execute purging of temporary and developer build caches.",
+      "category": "computation",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "deterministic_execution",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 30000,
+      "inputs": {
+        "type": "object",
+        "properties": {
+          "execute": { "type": "boolean", "default": false }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["drives", "cache_bloat", "total_reclaimable_formatted"],
+        "properties": {
+          "drives": { "type": "array" },
+          "cache_bloat": { "type": "object" },
+          "total_reclaimable_formatted": { "type": "string" }
+        }
+      }
+    },
+    {
+      "id": "cold_vault_offload",
+      "description": "Transfers staged files to external hard drive partitions, verifies BLAKE3 cryptographic hashes, and reclaims staging SSD space.",
+      "category": "computation",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "deterministic_execution",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 120000,
+      "inputs": {
+        "type": "object",
+        "properties": {
+          "vault_mount": { "type": "string", "default": "I:/" },
+          "vault_label": { "type": "string", "default": "Main" },
+          "dry_run": { "type": "boolean", "default": false }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["offloaded", "bytes", "formatted"],
+        "properties": {
+          "offloaded": { "type": "integer" },
+          "bytes": { "type": "integer" },
+          "formatted": { "type": "string" }
+        }
+      }
+    }
+  ]
+}

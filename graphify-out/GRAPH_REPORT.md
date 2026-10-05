@@ -327,14 +327,14 @@
 ## Surprising Connections (you probably didn't know these)
 - `run_cli()` --calls--> `get_router()`  [EXTRACTED]
   tools/route_task.py → sim/routing_engine.py
-- `NepalLawHarvesterTests` --uses--> `LegalHarvesterDatabase`  [INFERRED]
-  sim/test_nepal_law_harvester.py → sim/nepal_law_harvester.py
 - `InvariantAssuranceEngineTests` --uses--> `InvariantClassification`  [INFERRED]
   sim/test_invariant_engine.py → sim/invariant_engine/contract_types.py
 - `InvariantAssuranceEngineTests` --uses--> `SandboxReplayEngine`  [INFERRED]
   sim/test_invariant_engine.py → sim/invariant_engine/sandbox_replay.py
 - `InvariantAssuranceEngineTests` --uses--> `SMTInvariantProver`  [INFERRED]
   sim/test_invariant_engine.py → sim/invariant_engine/smt_encoder.py
+- `NepalLawHarvesterTests` --uses--> `LegalHarvesterDatabase`  [INFERRED]
+  sim/test_nepal_law_harvester.py → sim/nepal_law_harvester.py
 
 ## Import Cycles
 - None detected.
@@ -1513,10 +1513,12 @@ Nodes (3): tracking_branch, description, type
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `🏛️ DECISION RECORD: DEC-003 (`main` Ruleset Enforcement Alignment — Verified Direct-Push Workflow)` connect `nepali-ocr-ai.contract.json` to `Jetson Orin Nano — Setup, Provisioning & Optimization Runbook`?**
-  _High betweenness centrality (0.016) - this node is a cross-community bridge._
 - **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `5. Core Architectural & Methodological Pillars` to `KU_LAB_OUTREACH_TRACKER.md`, `inspect_video`, `module`, `$schema`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
+- **Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `inspect_video` to `5. Core Architectural & Methodological Pillars`, `version`, `Community 271`, `Community 272`, `Community 273`, `Developer Workflows: Fast Implementation Search with Graphify`, `sim.sh`, `extraction-spec.md`, `bootstrap-environment.ps1`?**
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
+- **Why does `Skill Development for Claude Code Plugins` connect `Lifecycle Hooks (`hooks.json`)` to `Community 268`, `Community 269`, `Community 270`, `post_templates.md`, `Execution Protocol`, `Community 285`, `Community 286`?**
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 5 inferred relationships involving `NepalLawHarvesterTests` (e.g. with `CircuitBreaker` and `CrawlPolicy`) actually correct?**
@@ -1525,10 +1527,8 @@ _Questions this graph is uniquely positioned to answer:_
   _1975 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `4. Step-by-Step Implementation Timeline` be split into smaller, more focused modules?**
   _Cohesion score 0.05548654244306418 - nodes in this community are weakly interconnected._
-- **Should `run_all_reproducibility.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
 
 ## Graph Freshness
-- **Built at commit:** `57a50b066181c41306b4bf9c9a3167ae9664c4ef`
-- **Built timestamp:** `2026-10-05T13:33:47.929031+00:00`
+- **Built at commit:** `c7af7c3e15ca4ba008301657f1f8daeeb1c21fcf`
+- **Built timestamp:** `2026-10-05T13:54:52.881466+00:00`
 - **Lineage type:** `ancestor_snapshot`

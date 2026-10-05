@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791167838.0866408,
-    "seen": 1791167842.522403,
-    "ast_hash": "8617264f1e04063020340fbf9d0471bf",
-    "semantic_hash": "8617264f1e04063020340fbf9d0471bf"
+    "mtime": 1791168228.507131,
+    "seen": 1791168232.647587,
+    "ast_hash": "708151d642fbd9ef942ba908a4b88347",
+    "semantic_hash": "708151d642fbd9ef942ba908a4b88347"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1791167835.8142295,
-    "seen": 1791167842.5224001,
-    "ast_hash": "2daf14dd961553142ca109cec86d1410",
-    "semantic_hash": "2daf14dd961553142ca109cec86d1410"
+    "mtime": 1791168226.2703464,
+    "seen": 1791168232.647585,
+    "ast_hash": "968fb3141cfda76232b0cbe34f560fd0",
+    "semantic_hash": "968fb3141cfda76232b0cbe34f560fd0"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -2268,15 +2268,15 @@
     "semantic_hash": "1f778711b121c92947ea2837bec3cf07"
   },
   "research/datasets/MODEL_RECOMMENDATION_TABLE.md": {
-    "mtime": 1791167744.7770092,
-    "seen": 1791167842.5226045,
-    "ast_hash": "237e9c3a9b43fd222fddaf814a5807d9",
-    "semantic_hash": "237e9c3a9b43fd222fddaf814a5807d9"
+    "mtime": 1791168088.5580816,
+    "seen": 1791168232.6477745,
+    "ast_hash": "3efda4866ce2896ea6557e6a2ed2ebf7",
+    "semantic_hash": "3efda4866ce2896ea6557e6a2ed2ebf7"
   },
   "research/datasets/README.md": {
-    "mtime": 1791167758.3054976,
-    "seen": 1791167842.5226061,
-    "ast_hash": "9996c578d5889a4279dafcb946c33993",
-    "semantic_hash": "9996c578d5889a4279dafcb946c33993"
+    "mtime": 1791168099.08696,
+    "seen": 1791168232.647776,
+    "ast_hash": "c81a61d1f4a50db77cda018f2f6d247f",
+    "semantic_hash": "c81a61d1f4a50db77cda018f2f6d247f"
   }
 }

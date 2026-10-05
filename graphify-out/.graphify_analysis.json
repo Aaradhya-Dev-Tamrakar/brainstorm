@@ -1,6 +1,6 @@
 {
-  "built_at_commit": "a062643cdc4e84c275f084a78ba6815f8d9e6402",
-  "built_timestamp": "2026-10-05T14:47:45.524434+00:00",
+  "built_at_commit": "ab38d9eaa06ff0b20f57600923647eb18fef4b7e",
+  "built_timestamp": "2026-10-05T15:09:16.524694+00:00",
   "lineage_type": "ancestor_snapshot",
   "communities": {
     "0": [
@@ -4827,18 +4827,13 @@
   "questions": [
     {
       "type": "bridge_node",
-      "question": "Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `5. Core Architectural & Methodological Pillars` to `convert-media.ps1`, `graphify reference: add a URL and watch a folder`, `nepali-ocr-ai.contract.json`, `inspect_video`?",
-      "why": "High betweenness centrality (0.022) - this node is a cross-community bridge."
-    },
-    {
-      "type": "bridge_node",
-      "question": "Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `inspect_video` to `list_portfolio_projects.py`, `setup-hotkeys.ps1`, `setup-user-shell-folders.ps1`, `5. Core Architectural & Methodological Pillars`, `graphify reference: commit hook and native CLAUDE.md integration`, `graphify.ps1`, `Community 278`, `Community 279`, `Community 280`?",
-      "why": "High betweenness centrality (0.020) - this node is a cross-community bridge."
+      "question": "Why does `Engineering Profile & Technical Dossier: Aaradhya Dev Tamrakar (ADT)` connect `AI-Constraint-Solver.contract.json` to `nepali-ocr-ai.contract.json`?",
+      "why": "High betweenness centrality (0.015) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
       "question": "Why does `Skill Development for Claude Code Plugins` connect `post_templates.md` to `Community 292`, `Community 293`, `Execution Protocol`, `Multi-Remote Synchronization & Ecosystem Automation`, `Community 275`, `Community 276`, `Community 277`?",
-      "why": "High betweenness centrality (0.019) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.014) - this node is a cross-community bridge."
     },
     {
       "type": "verify_inferred",
@@ -4859,6 +4854,11 @@
       "type": "low_cohesion",
       "question": "Should `4. Step-by-Step Implementation Timeline` be split into smaller, more focused modules?",
       "why": "Cohesion score 0.05548654244306418 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `run_all_reproducibility.py` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected."
     }
   ]
 }

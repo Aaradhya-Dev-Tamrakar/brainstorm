@@ -1528,12 +1528,10 @@ Nodes (3): description, type, outputs
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `5. Core Architectural & Methodological Pillars` to `convert-media.ps1`, `graphify reference: add a URL and watch a folder`, `nepali-ocr-ai.contract.json`, `inspect_video`?**
-  _High betweenness centrality (0.022) - this node is a cross-community bridge._
-- **Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `inspect_video` to `list_portfolio_projects.py`, `setup-hotkeys.ps1`, `setup-user-shell-folders.ps1`, `5. Core Architectural & Methodological Pillars`, `graphify reference: commit hook and native CLAUDE.md integration`, `graphify.ps1`, `Community 278`, `Community 279`, `Community 280`?**
-  _High betweenness centrality (0.020) - this node is a cross-community bridge._
+- **Why does `Engineering Profile & Technical Dossier: Aaradhya Dev Tamrakar (ADT)` connect `AI-Constraint-Solver.contract.json` to `nepali-ocr-ai.contract.json`?**
+  _High betweenness centrality (0.015) - this node is a cross-community bridge._
 - **Why does `Skill Development for Claude Code Plugins` connect `post_templates.md` to `Community 292`, `Community 293`, `Execution Protocol`, `Multi-Remote Synchronization & Ecosystem Automation`, `Community 275`, `Community 276`, `Community 277`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 5 inferred relationships involving `NepalLawHarvesterTests` (e.g. with `CircuitBreaker` and `CrawlPolicy`) actually correct?**
@@ -1542,8 +1540,10 @@ _Questions this graph is uniquely positioned to answer:_
   _1982 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `4. Step-by-Step Implementation Timeline` be split into smaller, more focused modules?**
   _Cohesion score 0.05548654244306418 - nodes in this community are weakly interconnected._
+- **Should `run_all_reproducibility.py` be split into smaller, more focused modules?**
+  _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
 
 ## Graph Freshness
-- **Built at commit:** `a062643cdc4e84c275f084a78ba6815f8d9e6402`
-- **Built timestamp:** `2026-10-05T14:47:45.524434+00:00`
+- **Built at commit:** `ab38d9eaa06ff0b20f57600923647eb18fef4b7e`
+- **Built timestamp:** `2026-10-05T15:09:16.524694+00:00`
 - **Lineage type:** `ancestor_snapshot`

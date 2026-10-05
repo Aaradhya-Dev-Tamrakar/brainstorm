@@ -71,6 +71,74 @@ def fetch_with_retry(url: str, timeout: int = 15, max_retries: int = 3) -> Optio
     return None
 
 
+LAB_BLOG_FEEDS = {
+    "OpenAI": {
+        "url": "https://openai.com/news/rss.xml",
+        "type": "rss",
+        "org": "OpenAI",
+    },
+    "Google AI": {
+        "url": "https://blog.google/technology/ai/rss/",
+        "type": "rss",
+        "org": "Google",
+    },
+    "Qwen": {
+        "url": "https://qwenlm.github.io/blog/index.xml",
+        "type": "rss",
+        "org": "Alibaba",
+    },
+}
+
+
+def fetch_official_lab_announcements() -> List[Dict[str, str]]:
+    """Harvest official model release announcements from primary AI lab blogs."""
+    import xml.etree.ElementTree as ET
+    announcements = []
+
+    for lab_name, feed_info in LAB_BLOG_FEEDS.items():
+        raw = fetch_with_retry(feed_info["url"], timeout=10)
+        if not raw:
+            continue
+        try:
+            root = ET.fromstring(raw)
+            items = root.findall(".//item")
+            for it in items[:15]:
+                title_elem = it.find("title")
+                link_elem = it.find("link")
+                date_elem = it.find("pubDate")
+                title = title_elem.text.strip() if title_elem is not None and title_elem.text else ""
+                link = link_elem.text.strip() if link_elem is not None and link_elem.text else ""
+                date_str = date_elem.text.strip() if date_elem is not None and date_elem.text else ""
+
+                # Check for model announcement signals
+                model_patterns = [
+                    r"\b(Claude\s+[A-Za-z0-9\.\-]+)\b",
+                    r"\b(GPT\-[A-Za-z0-9\.\-]+)\b",
+                    r"\b(Gemini\s+[A-Za-z0-9\.\-]+)\b",
+                    r"\b(Qwen[A-Za-z0-9\.\-]*)\b",
+                    r"\b(DeepSeek\s+[A-Za-z0-9\.\-]+)\b",
+                    r"\b(Grok\s+[A-Za-z0-9\.\-]+)\b",
+                ]
+                detected_models = []
+                for pat in model_patterns:
+                    matches = re.findall(pat, title, re.IGNORECASE)
+                    detected_models.extend(matches)
+
+                if detected_models or any(k in title.lower() for k in ["model guide", "introducing", "release", "weights"]):
+                    announcements.append({
+                        "lab": lab_name,
+                        "org": feed_info["org"],
+                        "title": title,
+                        "link": link,
+                        "date": date_str,
+                        "detected_models": list(set(detected_models)),
+                    })
+        except Exception as e:
+            print(f"[WARN] Error parsing {lab_name} feed: {e}")
+
+    return announcements
+
+
 def fetch_live_openrouter_models() -> List[Dict[str, Any]]:
     """Fetch latest model list and real-time per-token pricing from OpenRouter."""
     raw = fetch_with_retry(OPENROUTER_MODELS_URL)
@@ -151,12 +219,22 @@ def sync_models(dry_run: bool = False) -> Tuple[int, int, List[str]]:
     existing_models: List[Dict[str, Any]] = data.get("models", [])
     model_by_id = {m["id"]: m for m in existing_models}
 
-    live_models = fetch_live_openrouter_models()
-    print(f"[*] Pulled {len(live_models)} models from live OpenRouter telemetry.")
-
     updates_count = 0
     new_models_count = 0
     change_logs: List[str] = []
+
+    # 0. Harvest official AI lab announcements (first-party blogs)
+    print("[*] Harvesting official first-party announcements from AI lab blogs...")
+    announcements = fetch_official_lab_announcements()
+    print(f"[*] Found {len(announcements)} recent official lab announcements.")
+    for ann in announcements:
+        for dm in ann["detected_models"]:
+            change_logs.append(
+                f"[OFFICIAL LAB ANNOUNCEMENT] {ann['lab']}: '{ann['title']}' mentions '{dm}' -> {ann['link']}"
+            )
+
+    live_models = fetch_live_openrouter_models()
+    print(f"[*] Pulled {len(live_models)} models from live OpenRouter telemetry.")
 
     # 1. Update pricing & context for existing models
     for lm in live_models:

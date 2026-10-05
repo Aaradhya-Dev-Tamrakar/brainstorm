@@ -1,0 +1,9 @@
+{
+  "bitwarden": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@bitwarden/mcp-server"
+    ]
+  }
+}

@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791208492.609281,
-    "seen": 1791208495.9396565,
-    "ast_hash": "00bfa6a2bf134c6a21cc3ec79c509779",
-    "semantic_hash": "00bfa6a2bf134c6a21cc3ec79c509779"
+    "mtime": 1791211665.215032,
+    "seen": 1791211668.6778574,
+    "ast_hash": "c501b18ea2cd20b3121dbfc2dc37a1bf",
+    "semantic_hash": "c501b18ea2cd20b3121dbfc2dc37a1bf"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1791208490.477659,
-    "seen": 1791208495.9396544,
-    "ast_hash": "ebb4c33d5a5e2ffd9af038ba022c8b77",
-    "semantic_hash": "ebb4c33d5a5e2ffd9af038ba022c8b77"
+    "mtime": 1791211662.9925997,
+    "seen": 1791211668.6778557,
+    "ast_hash": "ae2db2291238a8b7d9ddc9b636920d04",
+    "semantic_hash": "ae2db2291238a8b7d9ddc9b636920d04"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -876,10 +876,10 @@
     "semantic_hash": "7d778793512114b09a97e27b0d5c1e65"
   },
   "tools/skills/README.md": {
-    "mtime": 1790996662.859634,
-    "seen": 1790996695.81233,
-    "ast_hash": "785f9a2aaf41c9a2d5a17200a57da640",
-    "semantic_hash": "785f9a2aaf41c9a2d5a17200a57da640"
+    "mtime": 1791211642.9339087,
+    "seen": 1791211668.6780999,
+    "ast_hash": "88989bc5a5d24129d8278289b7d0e86f",
+    "semantic_hash": "88989bc5a5d24129d8278289b7d0e86f"
   },
   "tools/skills/agent-teams-orchestration/SKILL.md": {
     "mtime": 1789792377.3205128,
@@ -2314,5 +2314,17 @@
     "seen": 1791175164.3309772,
     "ast_hash": "3e6c14ae1c457d8c6fc2ce70f2b36292",
     "semantic_hash": "3e6c14ae1c457d8c6fc2ce70f2b36292"
+  },
+  ".mcp.json": {
+    "mtime": 1791211589.4039154,
+    "seen": 1791211668.6778333,
+    "ast_hash": "28136d52f8c466fd93e00c713b7fa4f6",
+    "semantic_hash": "28136d52f8c466fd93e00c713b7fa4f6"
+  },
+  "tools/skills/bitwarden/SKILL.md": {
+    "mtime": 1791211624.794008,
+    "seen": 1791211668.678122,
+    "ast_hash": "9026b58820d9b2d2623057daced6cf0f",
+    "semantic_hash": "9026b58820d9b2d2623057daced6cf0f"
   }
 }

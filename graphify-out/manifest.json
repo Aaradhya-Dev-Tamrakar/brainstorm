@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791168228.507131,
-    "seen": 1791168232.647587,
-    "ast_hash": "708151d642fbd9ef942ba908a4b88347",
-    "semantic_hash": "708151d642fbd9ef942ba908a4b88347"
+    "mtime": 1791169973.4627304,
+    "seen": 1791169977.1847196,
+    "ast_hash": "6e37bc5f0d8e870136f8e088126143e4",
+    "semantic_hash": "6e37bc5f0d8e870136f8e088126143e4"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1791168226.2703464,
-    "seen": 1791168232.647585,
-    "ast_hash": "968fb3141cfda76232b0cbe34f560fd0",
-    "semantic_hash": "968fb3141cfda76232b0cbe34f560fd0"
+    "mtime": 1791169971.1714082,
+    "seen": 1791169977.1847177,
+    "ast_hash": "b4f03495f679b87affc8c5fbfe984588",
+    "semantic_hash": "b4f03495f679b87affc8c5fbfe984588"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -2274,9 +2274,27 @@
     "semantic_hash": "3efda4866ce2896ea6557e6a2ed2ebf7"
   },
   "research/datasets/README.md": {
-    "mtime": 1791168099.08696,
-    "seen": 1791168232.647776,
-    "ast_hash": "c81a61d1f4a50db77cda018f2f6d247f",
-    "semantic_hash": "c81a61d1f4a50db77cda018f2f6d247f"
+    "mtime": 1791169949.192935,
+    "seen": 1791169977.1849685,
+    "ast_hash": "21920552b61906dd3a86860e551d2215",
+    "semantic_hash": "21920552b61906dd3a86860e551d2215"
+  },
+  "sim/routing_engine.py": {
+    "mtime": 1791169840.2190394,
+    "seen": 1791169977.1848185,
+    "ast_hash": "ed1a91938e54267f655be41436f7eb5c",
+    "semantic_hash": "ed1a91938e54267f655be41436f7eb5c"
+  },
+  "sim/test_routing_engine.py": {
+    "mtime": 1791169881.172956,
+    "seen": 1791169977.1848323,
+    "ast_hash": "360c6c911da682365adc8c732a872366",
+    "semantic_hash": "360c6c911da682365adc8c732a872366"
+  },
+  "tools/route_task.py": {
+    "mtime": 1791169905.9135654,
+    "seen": 1791169977.1848586,
+    "ast_hash": "ef77c39ded8e66d09e3b1d053c91cd2b",
+    "semantic_hash": "ef77c39ded8e66d09e3b1d053c91cd2b"
   }
 }

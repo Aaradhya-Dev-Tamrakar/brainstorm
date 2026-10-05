@@ -80,11 +80,54 @@ for m in sorted(fast_budget_models, key=lambda x: x["pricing"]["input_per_m"]):
 
 ---
 
-## 4. Maintenance & Ecosystem Synchronization
+## 4. Dynamic MoE & Cascade Router (`sim/routing_engine.py`)
 
-All changes must pass local automated schema verification prior to committing via `.\sync.bat`:
+The ecosystem provides an authoritative, deterministic execution engine for automated model selection and FrugalGPT-style tiered cascades:
+
+### Programmatic Python Usage
+
+```python
+from sim.routing_engine import route_task, cascade_task, TaskRequirements
+
+# 1. Direct single-model task routing
+result = route_task("refactor AST architecture in compiler with unit tests")
+print(f"Recommended Model: {result.primary_model.name} ({result.primary_model.id})")
+print(f"Assigned Complexity: {result.assigned_complexity} / 10.0")
+print(f"Estimated Cost: ${result.estimated_cost_usd:.5f}")
+
+# 2. 4-Tier FrugalGPT Cascade Execution Plan
+cascade = cascade_task("extract json keys and classify sentiment from user feedback stream")
+print(f"Recommended Entry : Tier {cascade.recommended_entry_tier}")
+print(f"Expected Savings  : {cascade.savings_pct:.1f}% vs unrouted Claude Opus 5.5")
+for stage in cascade.stages:
+    print(f"  [{stage.stage_name}] {stage.model.name:<25} | Exit Prob: {stage.exit_probability*100:.0f}% | Cost: ${stage.estimated_stage_cost_usd:.5f}")
+```
+
+### Command-Line Interface (`tools/route_task.py`)
 
 ```powershell
-python scratch/validate_dataset.py
-.\sync.bat -m "feat(datasets): update realtime 2026 LLM frontier catalog"
+# Quick task triage
+python tools/route_task.py "extract regex from 200 json files"
+
+# Multi-tier cascade plan with cost breakdown
+python tools/route_task.py "refactor AST architecture in compiler" --cascade
+
+# Constrained to 24GB local workstation GPU (RTX 3090/4090)
+python tools/route_task.py "offline code refactoring" --local --vram 24.0
+
+# JSON output for automated agent tooling
+python tools/route_task.py "verify distributed consensus proofs" --budget 10.0 --json
 ```
+
+---
+
+## 5. Maintenance & Ecosystem Synchronization
+
+All changes must pass local automated schema verification and behavioral regression tests prior to committing via `.\sync.bat`:
+
+```powershell
+python sim/test_routing_engine.py
+.\audit.bat
+.\sync.bat -m "feat(routing): update 2026 realtime LLM router and catalog"
+```
+

@@ -210,10 +210,10 @@
     "semantic_hash": "6d45e3daeb205a0ca782b9868e607e6b"
   },
   "report/limitations.md": {
-    "mtime": 1790234905.9289973,
-    "seen": 1790599964.4901247,
-    "ast_hash": "bc8eeb8f7210f714ccf64d47a9169d9b",
-    "semantic_hash": "bc8eeb8f7210f714ccf64d47a9169d9b"
+    "mtime": 1791207193.2551248,
+    "seen": 1791207230.924505,
+    "ast_hash": "b97edd289783d68fea6ffb1528ae3920",
+    "semantic_hash": "b97edd289783d68fea6ffb1528ae3920"
   },
   "report/quantitative-claims-audit.md": {
     "mtime": 1790044861.125093,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791175160.8168824,
-    "seen": 1791175164.3308125,
-    "ast_hash": "c1255a2f1ff77dbf241e495d7945d1be",
-    "semantic_hash": "c1255a2f1ff77dbf241e495d7945d1be"
+    "mtime": 1791207227.6142032,
+    "seen": 1791207230.9243746,
+    "ast_hash": "6de587c6026344e4a4c103beb929c164",
+    "semantic_hash": "6de587c6026344e4a4c103beb929c164"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -516,10 +516,10 @@
     "semantic_hash": "717b60d84bdce46355a1f58be37479d6"
   },
   "research/experiments/FLEET-002.md": {
-    "mtime": 1790044861.1351216,
-    "seen": 1790599964.490158,
-    "ast_hash": "5a80859b5c9b1b759f914d35ff4f5cd4",
-    "semantic_hash": "5a80859b5c9b1b759f914d35ff4f5cd4"
+    "mtime": 1791207183.9727008,
+    "seen": 1791207230.9245467,
+    "ast_hash": "c4e9f6f5365b84d398e7d616f487b8cc",
+    "semantic_hash": "c4e9f6f5365b84d398e7d616f487b8cc"
   },
   "report/reconciliation-2026-09-19.md": {
     "mtime": 1790044861.1255963,
@@ -558,10 +558,10 @@
     "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1791175158.6398664,
-    "seen": 1791175164.3308108,
-    "ast_hash": "ecbb90472ab23b0eef1444c67aa9fc3f",
-    "semantic_hash": "ecbb90472ab23b0eef1444c67aa9fc3f"
+    "mtime": 1791207225.4718955,
+    "seen": 1791207230.9243722,
+    "ast_hash": "87fdfe09d12d95619305075206776775",
+    "semantic_hash": "87fdfe09d12d95619305075206776775"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,

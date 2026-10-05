@@ -89,6 +89,17 @@ The current operational implementation (`client/adapters/copilot_headless.py`) p
 - [x] **M2 — Headless Adapter Prototype:** Implement `CopilotHeadlessAdapter` in Python with dynamic session token caching, 429 backoff, and unit test suite (`tests/test_copilot_headless.py`).
 - [x] **M3 — Orchestrator Integration:** Register `copilot_headless` provider in `client/fleet_supervisor.py`, `active_fleet_3x3.json`, and `server/core/scheduler.py` cross-provider tier overflow.
 - [x] **M4 — Dynamic Model & Telemetry Logging:** Capture and log `model_used` and `tokens_used` from Copilot response headers.
-- [ ] **M5 — Concurrent Stress Benchmark:** Run a 6-worker (3 Claude CDP + 3 Copilot Headless) live workflow test with empirical latency/throughput metrics.
-- [ ] **M6 — Autonomous Agent Mode with Local Sandbox Tools:** Implement iterative tool execution loop (`read_file`, `write_file`, `run_command`) on top of streaming Copilot directives.
+- [x] **M5 — Concurrent Hybrid Fleet Benchmark:** Built and executed `scripts/test_hybrid_copilot_fleet.py` validating a 3-tier pipeline (`research` → `draft` → `qa`) across `copilot_headless`, `copilot_cli`, and `claude_desktop_cdp` with atomic lease tokens (`outputs/HYBRID_COPILOT_FLEET_BENCHMARK_REPORT.md`).
+- [x] **M6 — Autonomous Agent Mode with Local Sandbox Tools:** Implemented iterative tool execution loop (`read_file`, `write_file`, `run_command`) on top of streaming Copilot directives in `CopilotHeadlessAdapter`, alongside the native `CopilotCLIAdapter` driving local `copilot.exe` autopilot execution (`tests/test_copilot_headless.py`, `tests/test_copilot_cli_adapter.py`).
+
+---
+
+## 5. Artifacts & Deliverables
+
+- **CLI Adapter**: `Claude-Desktop/client/adapters/copilot_cli_adapter.py`
+- **Headless Tool-Calling Adapter**: `Claude-Desktop/client/adapters/copilot_headless.py`
+- **Benchmark Runner**: `Claude-Desktop/scripts/test_hybrid_copilot_fleet.py`
+- **Benchmark Report**: `Claude-Desktop/outputs/HYBRID_COPILOT_FLEET_BENCHMARK_REPORT.md`
+- **Unit Test Suites**: `Claude-Desktop/tests/test_copilot_cli_adapter.py` (6/6 passing), `Claude-Desktop/tests/test_copilot_headless.py` (7/7 passing)
+- **Verified Commit**: `6ecd3e1` in `Claude-Desktop`
 

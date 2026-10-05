@@ -80,9 +80,9 @@ A hallmark of rigorous engineering is the explicit disclosure of boundaries, fai
 * **Mitigation:** Enforcing strict worker lease binding (`INV-WSR-002 Invariant E`): QA review submission requires the reviewer to hold the active lease and submit the cryptographically unique `claim_token`.
 
 ### 2.13 Headless Copilot API Contract Boundary vs Full Agent Tool-Calling
-* **Description:** The headless GitHub Copilot worker adapter (`FLEET-002`) automates session token exchange and non-GUI REST completions (`POST /chat/completions`) for text generation and formatting.
-* **Failure Mode:** Conflating the current REST text completion adapter (M1–M4) with fully autonomous agent mode that executes local sandboxed tools (`read_file`, `write_file`, `run_command`).
-* **Mitigation:** Explicitly bounding M1–M4 to REST Text-Completion and scheduling multi-turn tool-calling loop as Phase 2 / M6 target capability.
+* **Description:** The headless GitHub Copilot worker adapter (`FLEET-002`) automates session token exchange and non-GUI REST completions (`POST /chat/completions`) for text generation, while `CopilotCLIAdapter` drives local autopilot execution via `copilot.exe`.
+* **Failure Mode:** Conflating lightweight text generation mode with full autonomous agent mode that executes local sandboxed tools (`read_file`, `write_file`, `run_command`).
+* **Mitigation:** Dispatched Phase 2 / M6: implemented sandboxed tool execution loop within `CopilotHeadlessAdapter` and integrated native `CopilotCLIAdapter` in `fleet_supervisor.py` with stage affinity scoring in `scheduler.py`.
 
 ### 2.14 Multi-Worker Fleet Authentication Header Propagation
 * **Description:** In multi-provider fleet setups (`fleet_supervisor.py`), multiple worker loops run concurrently across different backends.

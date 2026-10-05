@@ -1,0 +1,2929 @@
+version: 1.0.0
+last_updated: '2026-10-05'
+schema_version: dataset.llm.v1
+author: Aaradhya Dev Tamrakar
+repository: brainstorm/research/datasets
+purpose: Comprehensive LLM Model Recommendation, Benchmarking & Dynamic MoE Routing
+  Dataset
+total_models: 34
+tiers_summary:
+  frontier_proprietary: 10
+  open_weight_frontier: 10
+  small_edge: 9
+  moe_reference: 5
+models:
+- id: claude-opus-4
+  name: Claude Opus 4
+  provider: Anthropic
+  family: Claude
+  tier: frontier_proprietary
+  release_date: '2025-06-25'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 200000
+    output_limit: 32000
+    training_cutoff: 2025-03
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 15.0
+    output_per_m: 75.0
+    cached_input_per_m: 1.5
+    batch_input_per_m: 7.5
+    batch_output_per_m: 37.5
+    free_tier: false
+    notes: Extended thinking tokens billed at standard output rate
+  benchmarks:
+    swe_bench_verified: 72.5
+    aider_polyglot: 86.2
+    gpqa_diamond: 74.9
+    math_500: 96.4
+    mmlu_pro: 84.1
+    arena_elo: 1362
+    arc_agi: 68.4
+    humaneval_plus: 91.2
+  capabilities:
+    extended_thinking: true
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: true
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 7
+    - 10
+    best_domains:
+    - complex_system_architecture
+    - multi_file_agentic_refactoring
+    - adversarial_formal_verification
+    - long_horizon_planning
+    avoid_domains:
+    - simple_json_extraction
+    - high_throughput_batch
+    - sub_second_latency_triage
+    cascade_role: tier_3_escalation
+    latency_tier: slow_cot
+    tool_calling_reliability: 0.99
+    instruction_drift_threshold_k: 180
+    cache_discount_pct: 90
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - World-class autonomous agentic code generation and multi-file coherence
+  - Nuanced understanding of complex architectural trade-offs and RFCs
+  - Deep extended thinking that dismantles subtle edge-case bugs
+  weaknesses:
+  - High cost floor ($75/M output)
+  - High latency when deep thinking budget is active (>15s TTFT)
+  - Conservative refusal triggers on borderline cybersecurity analysis
+  quirks:
+  - Will proactively rewrite surrounding scaffolding if it spots architectural flaws
+  - Thinking traces can spend thousands of tokens verifying invariants before typing
+    code
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: STATISTICALLY_OBSERVED
+    sources:
+    - https://www.anthropic.com/news
+    - https://aider.chat/docs/leaderboards/
+    - https://chat.lmsys.org/
+- id: claude-sonnet-4
+  name: Claude Sonnet 4
+  provider: Anthropic
+  family: Claude
+  tier: frontier_proprietary
+  release_date: '2025-05-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 200000
+    output_limit: 16000
+    training_cutoff: 2025-03
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 3.0
+    output_per_m: 15.0
+    cached_input_per_m: 0.3
+    batch_input_per_m: 1.5
+    batch_output_per_m: 7.5
+    free_tier: false
+    notes: 90% prompt caching discount active above 1024 tokens
+  benchmarks:
+    swe_bench_verified: 72.8
+    aider_polyglot: 84.5
+    gpqa_diamond: 71.2
+    math_500: 92.4
+    mmlu_pro: 82.5
+    arena_elo: 1350
+    arc_agi: 64.2
+    humaneval_plus: 89.8
+  capabilities:
+    extended_thinking: true
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: true
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 9
+    best_domains:
+    - ast_code_refactoring
+    - diff_editing
+    - full_stack_feature_development
+    - system_tool_orchestration
+    avoid_domains:
+    - raw_bulk_embeddings
+    - microsecond_latency_triage
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 128
+    cache_discount_pct: 90
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - Supreme diff-patch generation precision (rarely mangles line offsets)
+  - Industry reference for pair-programming and tool-augmented agent loops
+  - Exceptional price-to-performance sweet spot for daily engineering
+  weaknesses:
+  - Can still refuse benign system administration scripts that look like malware
+  - Occasional hesitation to execute very large destructive refactors in one pass
+  quirks:
+  - Naturally gravitates toward clean functional paradigms and structured comments
+  - Handles unified diff markers better than block search-replace formats
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://www.anthropic.com/pricing
+    - https://aider.chat/docs/leaderboards/
+- id: claude-sonnet-3-5-v2
+  name: Claude Sonnet 3.5 v2
+  provider: Anthropic
+  family: Claude
+  tier: frontier_proprietary
+  release_date: '2024-10-22'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 200000
+    output_limit: 8192
+    training_cutoff: 2024-04
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 3.0
+    output_per_m: 15.0
+    cached_input_per_m: 0.3
+    batch_input_per_m: 1.5
+    batch_output_per_m: 7.5
+    free_tier: false
+    notes: Historical benchmark leader for 2024-2025
+  benchmarks:
+    swe_bench_verified: 65.0
+    aider_polyglot: 82.0
+    gpqa_diamond: 65.0
+    math_500: 88.0
+    mmlu_pro: 78.0
+    arena_elo: 1330
+    arc_agi: 58.0
+    humaneval_plus: 88.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: true
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 3
+    - 8
+    best_domains:
+    - legacy_pipeline_maintenance
+    - code_editing
+    - tool_calling
+    avoid_domains:
+    - extended_reasoning_competitions
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.96
+    instruction_drift_threshold_k: 96
+    cache_discount_pct: 90
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - Extremely reliable and battle-tested across thousands of developer toolkits
+  - Fast time-to-first-token with zero thinking overhead
+  weaknesses:
+  - Superseded on complex reasoning by thinking-enabled models
+  - 8k output ceiling can choke very large file rewrites
+  quirks:
+  - Very strict on output markdown fencing
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://www.anthropic.com/news/claude-3-5-sonnet
+- id: claude-haiku-3-5
+  name: Claude Haiku 3.5
+  provider: Anthropic
+  family: Claude
+  tier: frontier_proprietary
+  release_date: '2024-11-04'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 200000
+    output_limit: 8192
+    training_cutoff: 2024-07
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.8
+    output_per_m: 4.0
+    cached_input_per_m: 0.08
+    batch_input_per_m: 0.4
+    batch_output_per_m: 2.0
+    free_tier: false
+    notes: Cost-effective high-volume API
+  benchmarks:
+    swe_bench_verified: 40.6
+    aider_polyglot: 68.0
+    gpqa_diamond: 41.6
+    math_500: 74.0
+    mmlu_pro: 69.2
+    arena_elo: 1250
+    arc_agi: 42.0
+    humaneval_plus: 75.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 4
+    best_domains:
+    - json_schema_validation
+    - classification_triage
+    - real_time_chat_assistants
+    - docstring_generation
+    avoid_domains:
+    - multi_step_deduction
+    - swe_bench_level_issue_fixing
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 48
+    cache_discount_pct: 90
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - Ultra-fast latency (<300ms TTFT)
+  - High schema adherence on compact JSON outputs
+  - 10x cheaper than Sonnet for volume workloads
+  weaknesses:
+  - Prone to shallow logic on complex algorithmic tasks
+  - Not suitable for full codebase refactoring
+  quirks:
+  - Very brief in responses unless explicitly prompted for verbosity
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://www.anthropic.com/pricing
+- id: gpt-4-1
+  name: GPT-4.1
+  provider: OpenAI
+  family: GPT
+  tier: frontier_proprietary
+  release_date: '2025-04-10'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1000000
+    output_limit: 16384
+    training_cutoff: 2025-01
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 2.5
+    output_per_m: 10.0
+    cached_input_per_m: 1.25
+    batch_input_per_m: 1.25
+    batch_output_per_m: 5.0
+    free_tier: false
+    notes: 1M context window standard
+  benchmarks:
+    swe_bench_verified: 55.0
+    aider_polyglot: 79.5
+    gpqa_diamond: 68.0
+    math_500: 89.2
+    mmlu_pro: 79.4
+    arena_elo: 1335
+    arc_agi: 60.1
+    humaneval_plus: 88.5
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: true
+    video_input: true
+    computer_use: false
+    code_execution: true
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 3
+    - 8
+    best_domains:
+    - long_document_analysis
+    - multimodal_reasoning
+    - strict_json_schema_enforcement
+    - enterprise_rag
+    avoid_domains:
+    - heavy_mathematical_proofs
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.97
+    instruction_drift_threshold_k: 256
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+  strengths:
+  - Native 1M token context with high needle recall
+  - Strict JSON schema mode guarantees zero parse failures
+  - Robust multi-turn tool calling
+  weaknesses:
+  - Noticeable attention softening at >500k context without explicit anchors
+  - Cached token discount is only 50% vs Anthropic/Google 75-90%
+  quirks:
+  - Tends to truncate boilerplate code unless told to output complete files
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: STATISTICALLY_OBSERVED
+    sources:
+    - https://openai.com/pricing
+    - https://chat.lmsys.org/
+- id: o3
+  name: o3
+  provider: OpenAI
+  family: Reasoning
+  tier: frontier_proprietary
+  release_date: '2025-01-31'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 200000
+    output_limit: 100000
+    training_cutoff: 2024-12
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 20.0
+    output_per_m: 80.0
+    cached_input_per_m: 10.0
+    batch_input_per_m: 10.0
+    batch_output_per_m: 40.0
+    free_tier: false
+    notes: Reasoning tokens billed at output rate
+  benchmarks:
+    swe_bench_verified: 71.7
+    aider_polyglot: 88.0
+    gpqa_diamond: 87.7
+    math_500: 96.7
+    mmlu_pro: 87.5
+    arena_elo: 1375
+    arc_agi: 75.7
+    humaneval_plus: 92.5
+  capabilities:
+    extended_thinking: true
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: true
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 8
+    - 10
+    best_domains:
+    - competitive_mathematics
+    - formal_smt_logic
+    - cryptographic_algorithm_design
+    - adversarial_edge_case_hunting
+    avoid_domains:
+    - casual_chat
+    - low_budget_automation
+    - latency_critical_apis
+    cascade_role: tier_3_escalation
+    latency_tier: slow_cot
+    tool_calling_reliability: 0.99
+    instruction_drift_threshold_k: 128
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+  strengths:
+  - Dominant SOTA on formal mathematics and Olympiad-level deduction
+  - Outstanding performance on hard ARC-AGI spatial reasoning
+  - Thorough self-correction loops before emitting final output
+  weaknesses:
+  - Extremely high latency (thinking chains can run 30-90 seconds)
+  - High token burn rate on reasoning traces
+  - System prompts cannot reliably force it to skip thinking
+  quirks:
+  - Internal reasoning trace is hidden/summarized by OpenAI
+  - Will occasionally reject trivial solutions in search of non-existent complexity
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: STATISTICALLY_OBSERVED
+    sources:
+    - https://openai.com/index/o3-announcement/
+    - https://chat.lmsys.org/
+- id: o4-mini
+  name: o4-mini
+  provider: OpenAI
+  family: Reasoning
+  tier: frontier_proprietary
+  release_date: '2025-03-20'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 128000
+    output_limit: 65536
+    training_cutoff: 2024-12
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 1.1
+    output_per_m: 4.4
+    cached_input_per_m: 0.55
+    batch_input_per_m: 0.55
+    batch_output_per_m: 2.2
+    free_tier: false
+    notes: Cost-optimized reasoning model
+  benchmarks:
+    swe_bench_verified: 49.0
+    aider_polyglot: 78.0
+    gpqa_diamond: 72.0
+    math_500: 90.0
+    mmlu_pro: 76.5
+    arena_elo: 1310
+    arc_agi: 61.0
+    humaneval_plus: 86.0
+  capabilities:
+    extended_thinking: true
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: true
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 5
+    - 8
+    best_domains:
+    - stem_homework_grading
+    - intermediate_algorithmic_reasoning
+    - budget_code_analysis
+    - unit_test_generation
+    avoid_domains:
+    - sub_second_customer_chat
+    - mega_repo_refactoring
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.95
+    instruction_drift_threshold_k: 64
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+  strengths:
+  - High math and reasoning scores at 1/15th the cost of o3
+  - Fast reasoning convergence for moderately complex problems
+  - Competitive STEM performance
+  weaknesses:
+  - Context window is 128k vs 1M on GPT-4.1
+  - Less capable at complex multi-file architectural refactoring
+  quirks:
+  - Can spend more tokens thinking than answering on deceptively simple math riddles
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: STATISTICALLY_OBSERVED
+    sources:
+    - https://openai.com/pricing
+- id: gpt-4o
+  name: GPT-4o
+  provider: OpenAI
+  family: GPT
+  tier: frontier_proprietary
+  release_date: '2024-05-13'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 128000
+    output_limit: 16384
+    training_cutoff: 2023-10
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 2.5
+    output_per_m: 10.0
+    cached_input_per_m: 1.25
+    batch_input_per_m: 1.25
+    batch_output_per_m: 5.0
+    free_tier: true
+    notes: Omni multimodal model
+  benchmarks:
+    swe_bench_verified: 38.8
+    aider_polyglot: 72.0
+    gpqa_diamond: 53.6
+    math_500: 76.6
+    mmlu_pro: 72.5
+    arena_elo: 1330
+    arc_agi: 52.0
+    humaneval_plus: 82.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: true
+    video_input: true
+    computer_use: false
+    code_execution: true
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 3
+    - 7
+    best_domains:
+    - real_time_multimodal_interaction
+    - voice_conversation
+    - image_inspection
+    - general_purpose_assistant
+    avoid_domains:
+    - deep_deductive_proofs
+    - complex_agentic_coding
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.96
+    instruction_drift_threshold_k: 64
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+  strengths:
+  - Native omni multimodal pipeline (real-time audio and vision)
+  - Fast generation speed and wide third-party tooling support
+  - Solid conversational warmth and tone adjustment
+  weaknesses:
+  - Coding and complex reasoning have fallen behind Claude Sonnet 4 and o3
+  - Can hallucinate subtle details when analyzing high-resolution diagrams
+  quirks:
+  - Enthusiastic tone defaults unless overridden by system prompt
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://openai.com/index/hello-gpt-4o/
+- id: gemini-2-5-pro
+  name: Gemini 2.5 Pro
+  provider: Google
+  family: Gemini
+  tier: frontier_proprietary
+  release_date: '2025-03-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1000000
+    output_limit: 65536
+    training_cutoff: 2025-01
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 1.25
+    output_per_m: 5.0
+    cached_input_per_m: 0.3125
+    batch_input_per_m: 0.625
+    batch_output_per_m: 2.5
+    free_tier: true
+    notes: 1M context default; rate increases to $2.50/$10.00 for prompts >128k tokens.
+      Free tier in Google AI Studio
+  benchmarks:
+    swe_bench_verified: 63.8
+    aider_polyglot: 81.0
+    gpqa_diamond: 73.0
+    math_500: 93.0
+    mmlu_pro: 81.0
+    arena_elo: 1345
+    arc_agi: 65.0
+    humaneval_plus: 88.0
+  capabilities:
+    extended_thinking: true
+    tool_use: true
+    vision: true
+    audio_input: true
+    video_input: true
+    computer_use: false
+    code_execution: true
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 5
+    - 9
+    best_domains:
+    - extreme_long_context_ingestion
+    - multimodal_video_audio_parsing
+    - scientific_literature_synthesis
+    - large_codebase_dependency_mapping
+    avoid_domains:
+    - raw_bash_terminal_interaction_without_verification
+    cascade_role: tier_2_verifier
+    latency_tier: standard
+    tool_calling_reliability: 0.97
+    instruction_drift_threshold_k: 500
+    cache_discount_pct: 75
+    cognitive_council_role: The Synthesizer & Living Repository
+  strengths:
+  - Undisputed leader in massive context needle recall (1M-2M tokens)
+  - First-class native video, audio, and PDF ingestion
+  - Generous free tier in Google AI Studio and attractive API pricing
+  - Integrated thinking process improves multi-step research synthesis
+  weaknesses:
+  - Can occasionally wrap code output in unsolicited narrative preamble
+  - Pricing jumps 2x once prompt exceeds 128,000 tokens
+  quirks:
+  - Excels at synthesizing whole textbooks and multi-hour recordings into clean Markdown
+  - Built-in Google Search grounding integration
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://ai.google.dev/pricing
+    - https://chat.lmsys.org/
+- id: gemini-2-5-flash
+  name: Gemini 2.5 Flash
+  provider: Google
+  family: Gemini
+  tier: frontier_proprietary
+  release_date: '2025-02-20'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1000000
+    output_limit: 65536
+    training_cutoff: 2025-01
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.15
+    output_per_m: 0.6
+    cached_input_per_m: 0.0375
+    batch_input_per_m: 0.075
+    batch_output_per_m: 0.3
+    free_tier: true
+    notes: Fastest multi-modal frontier model; 1M context; rate increases to $0.30/$1.20
+      above 128k
+  benchmarks:
+    swe_bench_verified: 48.0
+    aider_polyglot: 74.0
+    gpqa_diamond: 58.0
+    math_500: 85.0
+    mmlu_pro: 74.0
+    arena_elo: 1290
+    arc_agi: 53.0
+    humaneval_plus: 82.0
+  capabilities:
+    extended_thinking: true
+    tool_use: true
+    vision: true
+    audio_input: true
+    video_input: true
+    computer_use: false
+    code_execution: true
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 6
+    best_domains:
+    - high_volume_triage
+    - sub_second_multimodal_tagging
+    - background_batch_summarization
+    - cost_constrained_agent_workers
+    avoid_domains:
+    - top_tier_competitive_programming
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.95
+    instruction_drift_threshold_k: 200
+    cache_discount_pct: 75
+    cognitive_council_role: The Synthesizer & Living Repository
+  strengths:
+  - Unbeatable price/speed ratio ($0.15/M input, sub-250ms TTFT)
+  - Full 1M token context available even on budget tier
+  - Toggleable thinking mode adds reasoning power on demand
+  weaknesses:
+  - Can overlook negative constraints in deeply nested prompts
+  - Less precise on tight AST code refactoring than Claude Sonnet
+  quirks:
+  - Free tier via Google AI Studio allows rapid zero-cost prototyping
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://ai.google.dev/pricing
+- id: deepseek-r1
+  name: DeepSeek R1
+  provider: DeepSeek
+  family: DeepSeek
+  tier: open_weight_frontier
+  release_date: '2025-01-20'
+  architecture:
+    type: moe
+    total_params_b: 671.0
+    active_params_b: 37.0
+    num_experts: 256
+    top_k_experts: 8
+    context_window: 128000
+    output_limit: 65536
+    training_cutoff: 2024-07
+  access:
+    license: mit
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 1340.0
+    vram_q4_gb: 400.0
+    quantization_formats:
+    - gguf
+    - awq
+    - gptq
+    ollama_tag: deepseek-r1:671b
+    huggingface_id: deepseek-ai/DeepSeek-R1
+  pricing:
+    input_per_m: 0.55
+    output_per_m: 2.19
+    cached_input_per_m: 0.14
+    batch_input_per_m: null
+    batch_output_per_m: null
+    free_tier: false
+    notes: Off-peak pricing drops to $0.14 input / $0.55 output. MIT licensed open
+      weights
+  benchmarks:
+    swe_bench_verified: 49.2
+    aider_polyglot: 79.2
+    gpqa_diamond: 71.5
+    math_500: 97.3
+    mmlu_pro: 84.0
+    arena_elo: 1360
+    arc_agi: 67.0
+    humaneval_plus: 90.0
+  capabilities:
+    extended_thinking: true
+    tool_use: true
+    vision: false
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 7
+    - 10
+    best_domains:
+    - deep_mathematical_reasoning
+    - logic_puzzles
+    - code_debugging_via_trace
+    - cost_effective_complex_reasoning
+    avoid_domains:
+    - vision_tasks
+    - geopolitically_sensitive_chinese_history
+    - sub_second_latency_pipelines
+    cascade_role: tier_3_escalation
+    latency_tier: slow_cot
+    tool_calling_reliability: 0.92
+    instruction_drift_threshold_k: 96
+    cache_discount_pct: 75
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+  strengths:
+  - Open-weights frontier reasoning rivaling OpenAI o1/o3 at 1/30th the API price
+  - Completely open chain-of-thought tokens visible in the response
+  - SOTA open math performance (97.3% MATH 500)
+  - MIT license permits commercial deployment, distillation, and fine-tuning
+  weaknesses:
+  - Local hosting requires cluster infrastructure (8x 80GB H100s for FP8/Q4)
+  - Censorship triggers on Chinese political/historical queries
+  - Multi-language thinking sometimes mixes English and Chinese reasoning tokens
+  quirks:
+  - Will periodically 'talk to itself' inside <think> tags for hundreds of tokens
+    before arriving at an answer
+  - Distilled versions (1.5B to 70B) bring R1 reasoning patterns to consumer GPUs
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://github.com/deepseek-ai/DeepSeek-R1
+    - https://api-docs.deepseek.com
+- id: deepseek-v3
+  name: DeepSeek V3
+  provider: DeepSeek
+  family: DeepSeek
+  tier: open_weight_frontier
+  release_date: '2024-12-26'
+  architecture:
+    type: moe
+    total_params_b: 671.0
+    active_params_b: 37.0
+    num_experts: 256
+    top_k_experts: 8
+    context_window: 128000
+    output_limit: 8192
+    training_cutoff: 2024-07
+  access:
+    license: mit
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 1340.0
+    vram_q4_gb: 400.0
+    quantization_formats:
+    - gguf
+    - awq
+    - gptq
+    ollama_tag: deepseek-v3:671b
+    huggingface_id: deepseek-ai/DeepSeek-V3
+  pricing:
+    input_per_m: 0.14
+    output_per_m: 0.28
+    cached_input_per_m: 0.07
+    batch_input_per_m: null
+    batch_output_per_m: null
+    free_tier: false
+    notes: Cheapest frontier-tier API in existence
+  benchmarks:
+    swe_bench_verified: 42.0
+    aider_polyglot: 76.5
+    gpqa_diamond: 59.1
+    math_500: 90.2
+    mmlu_pro: 75.9
+    arena_elo: 1320
+    arc_agi: 56.0
+    humaneval_plus: 84.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: false
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 3
+    - 8
+    best_domains:
+    - cost_sensitive_general_coding
+    - large_scale_synthetic_data_generation
+    - multilingual_nlp
+    - high_throughput_agent_workers
+    avoid_domains:
+    - image_analysis
+    - strict_western_political_neutrality
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 80
+    cache_discount_pct: 50
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - Incredible price-to-performance ratio ($0.14 / $0.28 per million)
+  - Pioneered Multi-head Latent Attention (MLA) and DeepSeekMoE architecture
+  - Strong general coding and mathematical foundation
+  - MIT licensed weights
+  weaknesses:
+  - Text-only (no vision)
+  - Requires substantial VRAM for self-hosting (best consumed via API)
+  quirks:
+  - Multi-token prediction (MTP) objective speeds up speculative decoding
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://github.com/deepseek-ai/DeepSeek-V3
+- id: llama-4-maverick
+  name: Llama 4 Maverick
+  provider: Meta
+  family: Llama
+  tier: open_weight_frontier
+  release_date: '2025-07-15'
+  architecture:
+    type: moe
+    total_params_b: 400.0
+    active_params_b: 17.0
+    num_experts: 128
+    top_k_experts: 8
+    context_window: 128000
+    output_limit: 16384
+    training_cutoff: 2025-04
+  access:
+    license: llama-community
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 800.0
+    vram_q4_gb: 240.0
+    quantization_formats:
+    - gguf
+    - exl2
+    - awq
+    ollama_tag: llama4:maverick
+    huggingface_id: meta-llama/Llama-4-Maverick-17B-128E
+  pricing:
+    input_per_m: 0.4
+    output_per_m: 1.2
+    cached_input_per_m: 0.1
+    batch_input_per_m: 0.2
+    batch_output_per_m: 0.6
+    free_tier: false
+    notes: Hosted on Groq, Together, Fireworks; weights free for research/commercial
+      <700M users
+  benchmarks:
+    swe_bench_verified: 61.5
+    aider_polyglot: 80.2
+    gpqa_diamond: 67.4
+    math_500: 91.0
+    mmlu_pro: 81.2
+    arena_elo: 1340
+    arc_agi: 62.5
+    humaneval_plus: 88.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 9
+    best_domains:
+    - open_weight_enterprise_deployment
+    - custom_fine_tuning
+    - high_concurrency_tool_calling
+    - general_agentic_workflows
+    avoid_domains:
+    - air_gapped_single_consumer_gpu
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.96
+    instruction_drift_threshold_k: 110
+    cache_discount_pct: 75
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - Meta's flagship open MoE with only 17B active parameters per token
+  - Ultra-high inference throughput on LPUs (Groq/Cerebras) and modern GPU clusters
+  - Broad industry fine-tuning ecosystem and LoRA toolchain support
+  weaknesses:
+  - Total weights require 240GB VRAM at Q4 (requires multi-GPU server)
+  - Llama community license has user threshold limitations
+  quirks:
+  - Responds very cleanly to system prompts formatted with Llama 3/4 special header
+    tokens
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: STATISTICALLY_OBSERVED
+    sources:
+    - https://ai.meta.com/llama/
+- id: llama-4-scout
+  name: Llama 4 Scout
+  provider: Meta
+  family: Llama
+  tier: open_weight_frontier
+  release_date: '2025-08-01'
+  architecture:
+    type: moe
+    total_params_b: 109.0
+    active_params_b: 17.0
+    num_experts: 32
+    top_k_experts: 4
+    context_window: 10000000
+    output_limit: 32768
+    training_cutoff: 2025-04
+  access:
+    license: llama-community
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 220.0
+    vram_q4_gb: 65.0
+    quantization_formats:
+    - gguf
+    - exl2
+    ollama_tag: llama4:scout
+    huggingface_id: meta-llama/Llama-4-Scout-10M
+  pricing:
+    input_per_m: 0.3
+    output_per_m: 0.9
+    cached_input_per_m: 0.05
+    batch_input_per_m: 0.15
+    batch_output_per_m: 0.45
+    free_tier: false
+    notes: Features 10M context window
+  benchmarks:
+    swe_bench_verified: 52.0
+    aider_polyglot: 76.0
+    gpqa_diamond: 61.0
+    math_500: 85.0
+    mmlu_pro: 76.0
+    arena_elo: 1315
+    arc_agi: 55.0
+    humaneval_plus: 84.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 3
+    - 8
+    best_domains:
+    - extreme_length_repository_analysis
+    - multi_year_financial_filing_ingestion
+    - massive_corpus_synthesis
+    avoid_domains:
+    - latency_critical_sub_100ms_queries
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.95
+    instruction_drift_threshold_k: 2000
+    cache_discount_pct: 80
+    cognitive_council_role: The Synthesizer & Living Repository
+  strengths:
+  - Unprecedented 10 Million token context window in an open-weight model
+  - Compact footprint (109B total, 65GB Q4 VRAM can fit on a single workstation with
+    2x RTX 3090/4090 or Mac Studio)
+  - High needle-in-a-haystack accuracy across multiple megabytes of text
+  weaknesses:
+  - Lower raw coding score on SWE-bench compared to Claude Sonnet or o3
+  - KV cache memory footprint grows large if full 10M window is utilized
+  quirks:
+  - Optimized specifically for document navigation and repository-scale searches
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: STATISTICALLY_OBSERVED
+    sources:
+    - https://ai.meta.com/research/
+- id: qwen-2-5-72b-instruct
+  name: Qwen 2.5 72B Instruct
+  provider: Alibaba
+  family: Qwen
+  tier: open_weight_frontier
+  release_date: '2024-09-19'
+  architecture:
+    type: dense
+    total_params_b: 72.7
+    active_params_b: 72.7
+    num_experts: null
+    top_k_experts: null
+    context_window: 128000
+    output_limit: 8192
+    training_cutoff: 2024-06
+  access:
+    license: apache-2.0
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 145.0
+    vram_q4_gb: 42.0
+    quantization_formats:
+    - gguf
+    - awq
+    - gptq
+    - exl2
+    ollama_tag: qwen2.5:72b
+    huggingface_id: Qwen/Qwen2.5-72B-Instruct
+  pricing:
+    input_per_m: 0.35
+    output_per_m: 0.7
+    cached_input_per_m: 0.08
+    batch_input_per_m: 0.175
+    batch_output_per_m: 0.35
+    free_tier: false
+    notes: Hosted widely (Together, DeepInfra, OpenRouter). Apache 2.0 open weights
+  benchmarks:
+    swe_bench_verified: 46.5
+    aider_polyglot: 76.0
+    gpqa_diamond: 58.5
+    math_500: 83.1
+    mmlu_pro: 76.8
+    arena_elo: 1315
+    arc_agi: 56.0
+    humaneval_plus: 86.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: false
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 3
+    - 8
+    best_domains:
+    - multilingual_translation
+    - air_gapped_workstation_deployment
+    - math_and_logic
+    - structured_json_generation
+    avoid_domains:
+    - vision_reasoning
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.95
+    instruction_drift_threshold_k: 72
+    cache_discount_pct: 70
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - Best open dense model under 100B parameters
+  - Exceptional multilingual breadth (especially Asian and European languages)
+  - Permissive Apache 2.0 license
+  - Runs locally on dual 24GB GPUs (RTX 3090/4090) at Q4 quantization
+  weaknesses:
+  - Dense architecture means 72B active parameters per token, consuming more compute
+    per token than sparse MoEs
+  quirks:
+  - Very structured output formatting; rarely deviates from markdown tables when requested
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://qwenlm.github.io/blog/qwen2.5/
+- id: qwen-2-5-coder-32b
+  name: Qwen 2.5 Coder 32B
+  provider: Alibaba
+  family: Qwen
+  tier: open_weight_frontier
+  release_date: '2024-11-12'
+  architecture:
+    type: dense
+    total_params_b: 32.5
+    active_params_b: 32.5
+    num_experts: null
+    top_k_experts: null
+    context_window: 128000
+    output_limit: 8192
+    training_cutoff: 2024-09
+  access:
+    license: apache-2.0
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 65.0
+    vram_q4_gb: 19.5
+    quantization_formats:
+    - gguf
+    - awq
+    - gptq
+    - exl2
+    ollama_tag: qwen2.5-coder:32b
+    huggingface_id: Qwen/Qwen2.5-Coder-32B-Instruct
+  pricing:
+    input_per_m: 0.2
+    output_per_m: 0.4
+    cached_input_per_m: 0.05
+    batch_input_per_m: 0.1
+    batch_output_per_m: 0.2
+    free_tier: false
+    notes: Fits completely into a single 24GB consumer GPU (RTX 3090/4090) at Q4/Q5
+  benchmarks:
+    swe_bench_verified: 47.6
+    aider_polyglot: 73.7
+    gpqa_diamond: 51.0
+    math_500: 80.0
+    mmlu_pro: 71.0
+    arena_elo: 1285
+    arc_agi: 50.0
+    humaneval_plus: 88.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: false
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 3
+    - 7
+    best_domains:
+    - local_offline_ide_code_completion
+    - repo_level_code_generation
+    - dockerfile_and_ci_scripting
+    - single_gpu_developer_workstations
+    avoid_domains:
+    - creative_writing
+    - conversational_chit_chat
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 64
+    cache_discount_pct: 75
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - The community standard for local offline coding
+  - Fits comfortably inside a single 24GB GPU (RTX 3090/4090 or Mac with 32GB RAM)
+  - Scores on par with GPT-4o on HumanEval+ and RepoBench at zero API cost
+  - Apache 2.0 license
+  weaknesses:
+  - Context window is 128k, but performance begins degrading past 40k tokens without
+    careful prompting
+  - Not suited for non-coding conversational duties
+  quirks:
+  - Produces very clean, idiomatically documented code with zero conversational fluff
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://qwenlm.github.io/blog/qwen2.5-coder-32b/
+- id: mistral-large-2
+  name: Mistral Large 2
+  provider: Mistral AI
+  family: Mistral
+  tier: open_weight_frontier
+  release_date: '2024-07-24'
+  architecture:
+    type: dense
+    total_params_b: 123.0
+    active_params_b: 123.0
+    num_experts: null
+    top_k_experts: null
+    context_window: 128000
+    output_limit: 8192
+    training_cutoff: 2024-06
+  access:
+    license: mistral-research-license
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 250.0
+    vram_q4_gb: 75.0
+    quantization_formats:
+    - gguf
+    - exl2
+    ollama_tag: mistral-large:123b
+    huggingface_id: mistralai/Mistral-Large-Instruct-2407
+  pricing:
+    input_per_m: 2.0
+    output_per_m: 6.0
+    cached_input_per_m: null
+    batch_input_per_m: 1.0
+    batch_output_per_m: 3.0
+    free_tier: false
+    notes: European data sovereignty compliant
+  benchmarks:
+    swe_bench_verified: 45.0
+    aider_polyglot: 74.0
+    gpqa_diamond: 54.0
+    math_500: 78.0
+    mmlu_pro: 74.5
+    arena_elo: 1300
+    arc_agi: 52.0
+    humaneval_plus: 84.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: false
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 3
+    - 7
+    best_domains:
+    - european_multilingual_compliance
+    - strict_json_function_calling
+    - code_explanation
+    - gdpr_sensitive_processing
+    avoid_domains:
+    - vision_reasoning
+    - ultra_hard_math_proofs
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.96
+    instruction_drift_threshold_k: 64
+    cache_discount_pct: 0
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - High proficiency across dozens of European languages (French, German, Spanish,
+    Italian)
+  - Strict adherence to function calling schemas
+  - EU GDPR compliance and data sovereignty guarantees
+  weaknesses:
+  - Commercial self-hosting requires commercial agreement with Mistral
+  - No prompt caching discounts on standard Mistral API
+  quirks:
+  - Concise, neutral European tone with minimal disclaimers
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://mistral.ai/news/mistral-large-2407/
+- id: command-r-plus
+  name: Command R+
+  provider: Cohere
+  family: Command
+  tier: open_weight_frontier
+  release_date: '2024-04-04'
+  architecture:
+    type: dense
+    total_params_b: 104.0
+    active_params_b: 104.0
+    num_experts: null
+    top_k_experts: null
+    context_window: 128000
+    output_limit: 4096
+    training_cutoff: 2024-03
+  access:
+    license: cc-by-nc-4.0
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 210.0
+    vram_q4_gb: 62.0
+    quantization_formats:
+    - gguf
+    ollama_tag: command-r-plus:104b
+    huggingface_id: CohereForAI/c4ai-command-r-plus
+  pricing:
+    input_per_m: 2.5
+    output_per_m: 10.0
+    cached_input_per_m: 1.25
+    batch_input_per_m: 1.25
+    batch_output_per_m: 5.0
+    free_tier: true
+    notes: Free tier available for non-commercial prototyping
+  benchmarks:
+    swe_bench_verified: 32.0
+    aider_polyglot: 65.0
+    gpqa_diamond: 48.0
+    math_500: 68.0
+    mmlu_pro: 67.0
+    arena_elo: 1260
+    arc_agi: 46.0
+    humaneval_plus: 74.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: false
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 3
+    - 6
+    best_domains:
+    - retrieval_augmented_generation
+    - grounded_citation_verification
+    - enterprise_knowledge_base_search
+    - multi_step_tool_dispatch
+    avoid_domains:
+    - complex_mathematics
+    - autonomous_swe_bench_coding
+    cascade_role: tier_2_verifier
+    latency_tier: fast
+    tool_calling_reliability: 0.97
+    instruction_drift_threshold_k: 64
+    cache_discount_pct: 50
+    cognitive_council_role: The Empirical Fact-Checker & Grounder
+  strengths:
+  - Built specifically for RAG with native grounded citations linking back to chunk
+    indices
+  - Strong multi-step tool use connector architecture
+  - Enterprise friendly API with data privacy guarantees
+  weaknesses:
+  - Pure coding and competitive math benchmarks lag behind modern frontier models
+  - Non-commercial license on HuggingFace open weights (CC-BY-NC)
+  quirks:
+  - Will automatically insert [1], [2] citation markers mapped to source documents
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://cohere.com/blog/command-r-plus-grounded-rag
+- id: grok-3
+  name: Grok 3
+  provider: xAI
+  family: Grok
+  tier: open_weight_frontier
+  release_date: '2025-02-17'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 128000
+    output_limit: 16384
+    training_cutoff: 2025-01
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 3.0
+    output_per_m: 15.0
+    cached_input_per_m: 1.5
+    batch_input_per_m: 1.5
+    batch_output_per_m: 7.5
+    free_tier: false
+    notes: Access to real-time X/Twitter data streams
+  benchmarks:
+    swe_bench_verified: 62.0
+    aider_polyglot: 81.5
+    gpqa_diamond: 72.0
+    math_500: 92.5
+    mmlu_pro: 82.0
+    arena_elo: 1355
+    arc_agi: 64.0
+    humaneval_plus: 88.5
+  capabilities:
+    extended_thinking: true
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: true
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 5
+    - 9
+    best_domains:
+    - real_time_breaking_news_analysis
+    - contrarian_stress_testing
+    - unfiltered_philosophical_inquiry
+    - physics_boundary_checking
+    avoid_domains:
+    - corporate_safe_brand_compliance
+    cascade_role: tier_2_verifier
+    latency_tier: standard
+    tool_calling_reliability: 0.95
+    instruction_drift_threshold_k: 96
+    cache_discount_pct: 50
+    cognitive_council_role: The Unfiltered First-Principles Provocateur
+  strengths:
+  - Native real-time ingestion of live X posts and breaking world events
+  - Contrarian first-principles reasoning unburdened by standard corporate safety
+    disclaimers
+  - Strong extended thinking mode ('Think' toggle) competitive with o1/o3
+  weaknesses:
+  - API ecosystem is younger and less standardized than OpenAI or Anthropic
+  - Tone can veer into sarcastic or provocative if uncalibrated
+  quirks:
+  - Naturally queries social sentiment and live breaking news when answering temporal
+    queries
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: STATISTICALLY_OBSERVED
+    sources:
+    - https://x.ai/blog/grok-3
+    - https://chat.lmsys.org/
+- id: dbrx
+  name: DBRX
+  provider: Databricks
+  family: DBRX
+  tier: open_weight_frontier
+  release_date: '2024-03-27'
+  architecture:
+    type: moe
+    total_params_b: 132.0
+    active_params_b: 36.0
+    num_experts: 16
+    top_k_experts: 4
+    context_window: 32000
+    output_limit: 4096
+    training_cutoff: 2023-12
+  access:
+    license: databricks-open-model-license
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 264.0
+    vram_q4_gb: 80.0
+    quantization_formats:
+    - gguf
+    ollama_tag: dbrx:132b
+    huggingface_id: databricks/dbrx-instruct
+  pricing:
+    input_per_m: 0.75
+    output_per_m: 2.25
+    cached_input_per_m: null
+    batch_input_per_m: null
+    batch_output_per_m: null
+    free_tier: false
+    notes: Enterprise open MoE baseline
+  benchmarks:
+    swe_bench_verified: 30.0
+    aider_polyglot: 62.0
+    gpqa_diamond: 42.0
+    math_500: 64.0
+    mmlu_pro: 65.0
+    arena_elo: 1240
+    arc_agi: 42.0
+    humaneval_plus: 70.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: false
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 2
+    - 6
+    best_domains:
+    - enterprise_sql_generation
+    - databricks_lakehouse_queries
+    - internal_enterprise_reporting
+    avoid_domains:
+    - long_context_documents
+    - vision_tasks
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.91
+    instruction_drift_threshold_k: 24
+    cache_discount_pct: 0
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - Pioneered fine-grained 16-expert MoE design (top-4 active)
+  - High SQL and tabular data synthesis competence
+  weaknesses:
+  - 32k context window is small by contemporary standards
+  - Largely superseded by DeepSeek-V3 and Llama 4
+  quirks:
+  - Very terse in output by default
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://www.databricks.com/blog/introducing-dbrx-new-state-of-the-art-open-llm
+- id: phi-4
+  name: Phi-4
+  provider: Microsoft
+  family: Phi
+  tier: small_edge
+  release_date: '2024-12-12'
+  architecture:
+    type: dense
+    total_params_b: 14.7
+    active_params_b: 14.7
+    num_experts: null
+    top_k_experts: null
+    context_window: 16384
+    output_limit: 4096
+    training_cutoff: 2024-06
+  access:
+    license: mit
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 30.0
+    vram_q4_gb: 9.5
+    quantization_formats:
+    - gguf
+    - onnx
+    - awq
+    ollama_tag: phi4:14b
+    huggingface_id: microsoft/phi-4
+  pricing:
+    input_per_m: 0.1
+    output_per_m: 0.2
+    cached_input_per_m: null
+    batch_input_per_m: null
+    batch_output_per_m: null
+    free_tier: false
+    notes: MIT license. Exceptional reasoning density under 10GB VRAM
+  benchmarks:
+    swe_bench_verified: 34.0
+    aider_polyglot: 69.5
+    gpqa_diamond: 54.0
+    math_500: 80.4
+    mmlu_pro: 69.5
+    arena_elo: 1260
+    arc_agi: 48.0
+    humaneval_plus: 80.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: false
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 3
+    - 7
+    best_domains:
+    - edge_device_mathematical_reasoning
+    - local_synthetic_data_filtering
+    - stem_education_apps
+    - 12gb_vram_laptop_offline_use
+    avoid_domains:
+    - long_document_summarization
+    - large_codebase_multi_file_editing
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.92
+    instruction_drift_threshold_k: 12
+    cache_discount_pct: 0
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - Punches vastly above its parameter weight on pure reasoning and math
+  - Dense architecture ensures deterministic, predictable inference
+  - Fits cleanly inside 12GB VRAM consumer GPUs (RTX 3060/4070) at Q4 quantization
+  - Permissive MIT license
+  weaknesses:
+  - 16k context window is narrow
+  - Not optimized for extensive tool calling or JSON schema extraction
+  quirks:
+  - Trained heavily on synthetic textbook quality data; explains concepts like a professor
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://huggingface.co/microsoft/phi-4
+- id: gemma-3-27b
+  name: Gemma 3 27B
+  provider: Google
+  family: Gemma
+  tier: small_edge
+  release_date: '2025-03-01'
+  architecture:
+    type: dense
+    total_params_b: 27.2
+    active_params_b: 27.2
+    num_experts: null
+    top_k_experts: null
+    context_window: 128000
+    output_limit: 8192
+    training_cutoff: 2024-11
+  access:
+    license: gemma-terms
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 55.0
+    vram_q4_gb: 16.5
+    quantization_formats:
+    - gguf
+    - litert
+    - awq
+    ollama_tag: gemma3:27b
+    huggingface_id: google/gemma-3-27b-it
+  pricing:
+    input_per_m: 0.2
+    output_per_m: 0.4
+    cached_input_per_m: null
+    batch_input_per_m: null
+    batch_output_per_m: null
+    free_tier: true
+    notes: Native multimodal vision built into all Gemma 3 sizes
+  benchmarks:
+    swe_bench_verified: 41.0
+    aider_polyglot: 72.0
+    gpqa_diamond: 51.0
+    math_500: 79.0
+    mmlu_pro: 71.5
+    arena_elo: 1290
+    arc_agi: 50.0
+    humaneval_plus: 82.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 3
+    - 7
+    best_domains:
+    - offline_vision_ocr_and_diagram_parsing
+    - multilingual_summarization
+    - single_gpu_multimodal_agents
+    avoid_domains:
+    - competition_coding
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 64
+    cache_discount_pct: 0
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - Native high-resolution vision on an open-weight model
+  - Fits comfortably on a single RTX 4080 (16GB) or 3090/4090 at Q4
+  - Trained with Gemini 2.0 distillation techniques
+  weaknesses:
+  - Gemma license has usage restrictions
+  - Coding ability is slightly below specialized models like Qwen 2.5 Coder
+  quirks:
+  - Strong image description fidelity even without fine-tuning
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: STATISTICALLY_OBSERVED
+    sources:
+    - https://ai.google.dev/gemma
+- id: gemma-3-12b
+  name: Gemma 3 12B
+  provider: Google
+  family: Gemma
+  tier: small_edge
+  release_date: '2025-03-01'
+  architecture:
+    type: dense
+    total_params_b: 12.1
+    active_params_b: 12.1
+    num_experts: null
+    top_k_experts: null
+    context_window: 128000
+    output_limit: 8192
+    training_cutoff: 2024-11
+  access:
+    license: gemma-terms
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 25.0
+    vram_q4_gb: 7.5
+    quantization_formats:
+    - gguf
+    - litert
+    ollama_tag: gemma3:12b
+    huggingface_id: google/gemma-3-12b-it
+  pricing:
+    input_per_m: 0.08
+    output_per_m: 0.16
+    cached_input_per_m: null
+    batch_input_per_m: null
+    batch_output_per_m: null
+    free_tier: true
+    notes: Optimal balance for 8GB VRAM consumer laptops with vision
+  benchmarks:
+    swe_bench_verified: 32.0
+    aider_polyglot: 66.0
+    gpqa_diamond: 44.0
+    math_500: 72.0
+    mmlu_pro: 64.0
+    arena_elo: 1250
+    arc_agi: 44.0
+    humaneval_plus: 76.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 2
+    - 6
+    best_domains:
+    - laptop_local_copilot
+    - offline_vision_inspection
+    - structured_extraction
+    - edge_robotics
+    avoid_domains:
+    - deep_deductive_proofs
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.92
+    instruction_drift_threshold_k: 48
+    cache_discount_pct: 0
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - Runs on any modern laptop GPU (RTX 4060 8GB, Apple M-series) with vision support
+  - High token throughput (>60 tokens/sec on local hardware)
+  - Strong instruction following for its size
+  weaknesses:
+  - Cannot handle complex agentic SWE-bench issues autonomously
+  quirks:
+  - Handles multi-image prompts natively without resolution downsampling
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: STATISTICALLY_OBSERVED
+    sources:
+    - https://ai.google.dev/gemma
+- id: gemma-3-4b
+  name: Gemma 3 4B
+  provider: Google
+  family: Gemma
+  tier: small_edge
+  release_date: '2025-03-01'
+  architecture:
+    type: dense
+    total_params_b: 4.3
+    active_params_b: 4.3
+    num_experts: null
+    top_k_experts: null
+    context_window: 128000
+    output_limit: 4096
+    training_cutoff: 2024-11
+  access:
+    license: gemma-terms
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 9.0
+    vram_q4_gb: 2.8
+    quantization_formats:
+    - gguf
+    - litert
+    ollama_tag: gemma3:4b
+    huggingface_id: google/gemma-3-4b-it
+  pricing:
+    input_per_m: 0.04
+    output_per_m: 0.08
+    cached_input_per_m: null
+    batch_input_per_m: null
+    batch_output_per_m: null
+    free_tier: true
+    notes: Runs on phones and tablets
+  benchmarks:
+    swe_bench_verified: 22.0
+    aider_polyglot: 54.0
+    gpqa_diamond: 35.0
+    math_500: 60.0
+    mmlu_pro: 53.0
+    arena_elo: 1195
+    arc_agi: 36.0
+    humaneval_plus: 68.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 4
+    best_domains:
+    - on_device_mobile_ai
+    - lightweight_ui_ocr
+    - quick_classification
+    - json_field_extraction
+    avoid_domains:
+    - multi_turn_complex_reasoning
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.88
+    instruction_drift_threshold_k: 24
+    cache_discount_pct: 0
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - Extremely low memory footprint (<3GB VRAM at Q4)
+  - Native vision processing on mobile devices (Android/iOS via LiteRT)
+  - Fast cold-start time
+  weaknesses:
+  - Struggles with negative logic and multi-constraint generation
+  quirks:
+  - Excels as a first-line pre-filter router in MoE pipelines
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: STATISTICALLY_OBSERVED
+    sources:
+    - https://ai.google.dev/gemma
+- id: qwen-2-5-7b
+  name: Qwen 2.5 7B
+  provider: Alibaba
+  family: Qwen
+  tier: small_edge
+  release_date: '2024-09-19'
+  architecture:
+    type: dense
+    total_params_b: 7.6
+    active_params_b: 7.6
+    num_experts: null
+    top_k_experts: null
+    context_window: 128000
+    output_limit: 8192
+    training_cutoff: 2024-06
+  access:
+    license: apache-2.0
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 16.0
+    vram_q4_gb: 4.8
+    quantization_formats:
+    - gguf
+    - awq
+    - gptq
+    ollama_tag: qwen2.5:7b
+    huggingface_id: Qwen/Qwen2.5-7B-Instruct
+  pricing:
+    input_per_m: 0.05
+    output_per_m: 0.1
+    cached_input_per_m: null
+    batch_input_per_m: null
+    batch_output_per_m: null
+    free_tier: false
+    notes: Apache 2.0. The standard 7B-class all-rounder
+  benchmarks:
+    swe_bench_verified: 28.0
+    aider_polyglot: 62.0
+    gpqa_diamond: 41.0
+    math_500: 74.3
+    mmlu_pro: 62.0
+    arena_elo: 1240
+    arc_agi: 42.0
+    humaneval_plus: 76.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: false
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 2
+    - 5
+    best_domains:
+    - edge_multilingual_chat
+    - structured_json_formatting
+    - local_scripting_assistance
+    - embedding_reranking_triage
+    avoid_domains:
+    - multi_file_codebase_refactoring
+    cascade_role: tier_0_triage
+    latency_tier: fast
+    tool_calling_reliability: 0.91
+    instruction_drift_threshold_k: 32
+    cache_discount_pct: 0
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - Best generalist 7B-class model in the open ecosystem
+  - Runs effortlessly on any 6GB+ GPU or integrated Mac silicon
+  - Broad language support and solid structured JSON outputs
+  weaknesses:
+  - Context window past 32k tokens exhibits degraded attention retention
+  quirks:
+  - Surprisingly capable at regex generation and string parsing
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://qwenlm.github.io/blog/qwen2.5/
+- id: qwen-2-5-3b
+  name: Qwen 2.5 3B
+  provider: Alibaba
+  family: Qwen
+  tier: small_edge
+  release_date: '2024-09-19'
+  architecture:
+    type: dense
+    total_params_b: 3.1
+    active_params_b: 3.1
+    num_experts: null
+    top_k_experts: null
+    context_window: 32000
+    output_limit: 4096
+    training_cutoff: 2024-06
+  access:
+    license: apache-2.0
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 6.5
+    vram_q4_gb: 2.1
+    quantization_formats:
+    - gguf
+    ollama_tag: qwen2.5:3b
+    huggingface_id: Qwen/Qwen2.5-3B-Instruct
+  pricing:
+    input_per_m: 0.03
+    output_per_m: 0.06
+    cached_input_per_m: null
+    batch_input_per_m: null
+    batch_output_per_m: null
+    free_tier: false
+    notes: Micro-model for embedded and gateway classification
+  benchmarks:
+    swe_bench_verified: 16.0
+    aider_polyglot: 48.0
+    gpqa_diamond: 31.0
+    math_500: 58.0
+    mmlu_pro: 49.0
+    arena_elo: 1180
+    arc_agi: 32.0
+    humaneval_plus: 65.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: false
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - router_intent_classification
+    - entity_extraction
+    - spam_and_pii_detection
+    - edge_iot
+    avoid_domains:
+    - reasoning
+    - code_editing
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.86
+    instruction_drift_threshold_k: 16
+    cache_discount_pct: 0
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - Incredible speed (>120 tokens/sec on modern GPUs)
+  - VRAM footprint is barely 2GB, fitting alongside other processes
+  - Ideal for running RouteLLM-style query complexity triage
+  weaknesses:
+  - Cannot handle multi-step reasoning
+  quirks:
+  - Very high precision when outputting constrained categorical labels
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://qwenlm.github.io/blog/qwen2.5/
+- id: llama-3-2-3b
+  name: Llama 3.2 3B
+  provider: Meta
+  family: Llama
+  tier: small_edge
+  release_date: '2024-09-25'
+  architecture:
+    type: dense
+    total_params_b: 3.2
+    active_params_b: 3.2
+    num_experts: null
+    top_k_experts: null
+    context_window: 128000
+    output_limit: 4096
+    training_cutoff: 2024-06
+  access:
+    license: llama-community
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 6.8
+    vram_q4_gb: 2.2
+    quantization_formats:
+    - gguf
+    ollama_tag: llama3.2:3b
+    huggingface_id: meta-llama/Llama-3.2-3B-Instruct
+  pricing:
+    input_per_m: 0.03
+    output_per_m: 0.06
+    cached_input_per_m: null
+    batch_input_per_m: null
+    batch_output_per_m: null
+    free_tier: false
+    notes: Lightweight edge assistant
+  benchmarks:
+    swe_bench_verified: 15.0
+    aider_polyglot: 46.0
+    gpqa_diamond: 30.0
+    math_500: 52.0
+    mmlu_pro: 46.0
+    arena_elo: 1175
+    arc_agi: 30.0
+    humaneval_plus: 62.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: false
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - mobile_tool_calling
+    - lightweight_conversational_triage
+    - sentiment_analysis
+    - on_device_rewriting
+    avoid_domains:
+    - complex_deductive_logic
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.87
+    instruction_drift_threshold_k: 20
+    cache_discount_pct: 0
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - Native tool calling support tuned for mobile edge use-cases
+  - Low latency, high throughput on consumer CPUs and Snapdragon/Apple silicon
+  weaknesses:
+  - Limited knowledge depth on niche technical topics
+  quirks:
+  - Follows Llama 3 formatting tokens strictly
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://ai.meta.com/blog/llama-3-2-connect-2024/
+- id: mistral-small-3-1
+  name: Mistral Small 3.1
+  provider: Mistral AI
+  family: Mistral
+  tier: small_edge
+  release_date: '2025-01-29'
+  architecture:
+    type: dense
+    total_params_b: 24.0
+    active_params_b: 24.0
+    num_experts: null
+    top_k_experts: null
+    context_window: 32000
+    output_limit: 4096
+    training_cutoff: 2024-11
+  access:
+    license: apache-2.0
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 48.0
+    vram_q4_gb: 14.5
+    quantization_formats:
+    - gguf
+    ollama_tag: mistral-small:24b
+    huggingface_id: mistralai/Mistral-Small-24B-Instruct-2501
+  pricing:
+    input_per_m: 0.1
+    output_per_m: 0.3
+    cached_input_per_m: null
+    batch_input_per_m: 0.05
+    batch_output_per_m: 0.15
+    free_tier: false
+    notes: Apache 2.0 open weights. Fast and capable mid-range model
+  benchmarks:
+    swe_bench_verified: 38.0
+    aider_polyglot: 70.0
+    gpqa_diamond: 49.0
+    math_500: 74.0
+    mmlu_pro: 68.0
+    arena_elo: 1275
+    arc_agi: 48.0
+    humaneval_plus: 80.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: false
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 3
+    - 7
+    best_domains:
+    - offline_workstation_tool_use
+    - fast_code_review
+    - european_language_nlp
+    - cost_effective_batch_processing
+    avoid_domains:
+    - long_context_book_analysis
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 28
+    cache_discount_pct: 0
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - Punches significantly above Mistral Neemo 12B in reasoning and coding
+  - Fits comfortably into a 16GB VRAM GPU (RTX 4080) at Q4
+  - Apache 2.0 license allows full enterprise customization
+  weaknesses:
+  - 32k context window is moderate
+  quirks:
+  - Extremely fast TTFT (<150ms on modern endpoints)
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://mistral.ai/news/mistral-small-3/
+- id: smollm2-1-7b
+  name: SmolLM2 1.7B
+  provider: HuggingFace
+  family: SmolLM
+  tier: small_edge
+  release_date: '2024-11-01'
+  architecture:
+    type: dense
+    total_params_b: 1.7
+    active_params_b: 1.7
+    num_experts: null
+    top_k_experts: null
+    context_window: 8192
+    output_limit: 2048
+    training_cutoff: 2024-08
+  access:
+    license: apache-2.0
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 3.5
+    vram_q4_gb: 1.1
+    quantization_formats:
+    - gguf
+    - onnx
+    ollama_tag: smollm2:1.7b
+    huggingface_id: HuggingFaceTB/SmolLM2-1.7B-Instruct
+  pricing:
+    input_per_m: 0.02
+    output_per_m: 0.04
+    cached_input_per_m: null
+    batch_input_per_m: null
+    batch_output_per_m: null
+    free_tier: true
+    notes: Runs entirely in browser WebGPU or embedded hardware
+  benchmarks:
+    swe_bench_verified: 8.0
+    aider_polyglot: 35.0
+    gpqa_diamond: 24.0
+    math_500: 38.0
+    mmlu_pro: 36.0
+    arena_elo: 1120
+    arc_agi: 22.0
+    humaneval_plus: 50.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: false
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 2
+    best_domains:
+    - instant_in_memory_query_routing
+    - regex_string_formatting
+    - browser_client_side_parsing
+    - grammar_correction
+    avoid_domains:
+    - multi_step_logic
+    - programming
+    - research_synthesis
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.82
+    instruction_drift_threshold_k: 6
+    cache_discount_pct: 0
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - Can run in-process or client-side inside WebGPU with ~1GB RAM
+  - Blazing fast speed (>180 tokens/sec on CPU)
+  - Ideal zero-cost zero-latency classifier gate for MoE routers
+  weaknesses:
+  - Easily confused by complex instructions or ambiguous questions
+  quirks:
+  - Trained on Cosmopedia v2 synthetic data with high pedagogical clarity
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://huggingface.co/blog/smollm2
+- id: mixtral-8x22b
+  name: Mixtral 8x22B
+  provider: Mistral AI
+  family: Mixtral
+  tier: moe_reference
+  release_date: '2024-04-10'
+  architecture:
+    type: moe
+    total_params_b: 176.0
+    active_params_b: 39.0
+    num_experts: 8
+    top_k_experts: 2
+    context_window: 65536
+    output_limit: 4096
+    training_cutoff: 2024-03
+  access:
+    license: apache-2.0
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 350.0
+    vram_q4_gb: 105.0
+    quantization_formats:
+    - gguf
+    - exl2
+    ollama_tag: mixtral:8x22b
+    huggingface_id: mistralai/Mixtral-8x22B-Instruct-v0.1
+  pricing:
+    input_per_m: 0.6
+    output_per_m: 1.8
+    cached_input_per_m: null
+    batch_input_per_m: 0.3
+    batch_output_per_m: 0.9
+    free_tier: false
+    notes: Classic sparse MoE reference architecture. Apache 2.0
+  benchmarks:
+    swe_bench_verified: 36.0
+    aider_polyglot: 68.0
+    gpqa_diamond: 48.0
+    math_500: 72.0
+    mmlu_pro: 69.0
+    arena_elo: 1265
+    arc_agi: 48.0
+    humaneval_plus: 78.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: false
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 3
+    - 7
+    best_domains:
+    - moe_routing_architecture_research
+    - european_multilingual_text
+    - function_calling_pipelines
+    - high_throughput_generation
+    avoid_domains:
+    - deep_chain_of_thought_math
+    - vision
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.93
+    instruction_drift_threshold_k: 48
+    cache_discount_pct: 0
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - The quintessential 8-expert top-2 router baseline widely studied in academia
+  - High token throughput relative to total parameter size
+  - Fully open weights under Apache 2.0 license
+  weaknesses:
+  - VRAM requirement (105GB Q4) requires enterprise or dual/quad GPU server
+  - 64k context window is moderate by 2026 standards
+  quirks:
+  - Sparse activation mechanism routes tokens through expert routers based on semantic
+    clustering
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://mistral.ai/news/mixtral-8x22b/
+- id: mixtral-8x7b
+  name: Mixtral 8x7B
+  provider: Mistral AI
+  family: Mixtral
+  tier: moe_reference
+  release_date: '2023-12-11'
+  architecture:
+    type: moe
+    total_params_b: 46.7
+    active_params_b: 12.9
+    num_experts: 8
+    top_k_experts: 2
+    context_window: 32768
+    output_limit: 4096
+    training_cutoff: 2023-10
+  access:
+    license: apache-2.0
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 95.0
+    vram_q4_gb: 28.0
+    quantization_formats:
+    - gguf
+    - awq
+    - gptq
+    ollama_tag: mixtral:8x7b
+    huggingface_id: mistralai/Mixtral-8x7B-Instruct-v0.1
+  pricing:
+    input_per_m: 0.25
+    output_per_m: 0.5
+    cached_input_per_m: null
+    batch_input_per_m: 0.125
+    batch_output_per_m: 0.25
+    free_tier: false
+    notes: Pioneered modern sparse open MoE architectures
+  benchmarks:
+    swe_bench_verified: 24.0
+    aider_polyglot: 58.0
+    gpqa_diamond: 38.0
+    math_500: 58.0
+    mmlu_pro: 58.0
+    arena_elo: 1220
+    arc_agi: 40.0
+    humaneval_plus: 72.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: false
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 2
+    - 5
+    best_domains:
+    - moe_routing_benchmarks
+    - general_text_generation
+    - multilingual_chat
+    - local_server_hosting
+    avoid_domains:
+    - swe_bench_engineering
+    - formal_reasoning
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.89
+    instruction_drift_threshold_k: 20
+    cache_discount_pct: 0
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - Historic landmark model that proved MoE efficiency in open weights
+  - Only 12.9B active parameters per token enables rapid inference
+  - Can run on Mac Studio or dual consumer GPUs at Q4
+  weaknesses:
+  - Surpassed in raw reasoning by modern dense models like Qwen 2.5 32B and Phi-4
+  - Narrow 32k context window
+  quirks:
+  - Expert routing patterns correlate strongly with syntax categories (nouns vs verbs
+    vs punctuation)
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://mistral.ai/news/mixtral-of-experts/
+- id: deepseek-moe-16b
+  name: DeepSeek MoE 16B
+  provider: DeepSeek
+  family: DeepSeek
+  tier: moe_reference
+  release_date: '2024-01-15'
+  architecture:
+    type: moe
+    total_params_b: 16.4
+    active_params_b: 2.8
+    num_experts: 64
+    top_k_experts: 6
+    context_window: 4096
+    output_limit: 2048
+    training_cutoff: 2023-11
+  access:
+    license: deepseek-license
+    open_weights: true
+    api_available: false
+    local_runnable: true
+    vram_fp16_gb: 33.0
+    vram_q4_gb: 10.0
+    quantization_formats:
+    - gguf
+    ollama_tag: null
+    huggingface_id: deepseek-ai/deepseek-moe-16b-base
+  pricing:
+    input_per_m: null
+    output_per_m: null
+    cached_input_per_m: null
+    batch_input_per_m: null
+    batch_output_per_m: null
+    free_tier: true
+    notes: Research-grade model pioneering fine-grained expert segmentation
+  benchmarks:
+    swe_bench_verified: 12.0
+    aider_polyglot: 42.0
+    gpqa_diamond: 26.0
+    math_500: 45.0
+    mmlu_pro: 42.0
+    arena_elo: 1160
+    arc_agi: 30.0
+    humaneval_plus: 62.0
+  capabilities:
+    extended_thinking: false
+    tool_use: false
+    vision: false
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: false
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - fine_grained_moe_routing_research
+    - shared_vs_routed_expert_ablation
+    - custom_edge_expert_distillation
+    avoid_domains:
+    - production_agentic_workflows
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.75
+    instruction_drift_threshold_k: 4
+    cache_discount_pct: 0
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - Introduced shared expert isolation (2 shared + 64 routed experts)
+  - Extremely low compute per token (only 2.8B active parameters)
+  - Foundational paper for DeepSeek-V2 and V3 architectures
+  weaknesses:
+  - Early research model with limited 4k context window
+  - Not tuned for chat or instruction-following directly
+  quirks:
+  - Splits standard FFN experts into multiple fine-grained sub-experts to maximize
+    combinatorial expressivity
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://arxiv.org/abs/2401.06066
+- id: snowflake-arctic
+  name: Snowflake Arctic
+  provider: Snowflake
+  family: Arctic
+  tier: moe_reference
+  release_date: '2024-04-24'
+  architecture:
+    type: moe
+    total_params_b: 480.0
+    active_params_b: 17.0
+    num_experts: 128
+    top_k_experts: 1
+    context_window: 4096
+    output_limit: 2048
+    training_cutoff: 2024-02
+  access:
+    license: apache-2.0
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 960.0
+    vram_q4_gb: 280.0
+    quantization_formats:
+    - gguf
+    ollama_tag: arctic:latest
+    huggingface_id: Snowflake/snowflake-arctic-instruct
+  pricing:
+    input_per_m: 0.8
+    output_per_m: 2.4
+    cached_input_per_m: null
+    batch_input_per_m: null
+    batch_output_per_m: null
+    free_tier: false
+    notes: Enterprise SQL & tool use focus. Apache 2.0
+  benchmarks:
+    swe_bench_verified: 28.0
+    aider_polyglot: 58.0
+    gpqa_diamond: 39.0
+    math_500: 62.0
+    mmlu_pro: 60.0
+    arena_elo: 1230
+    arc_agi: 42.0
+    humaneval_plus: 72.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: false
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 2
+    - 6
+    best_domains:
+    - enterprise_sql_generation
+    - data_warehouse_schema_mapping
+    - dense_base_plus_sparse_expert_analysis
+    avoid_domains:
+    - long_text_summarization
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 4
+    cache_discount_pct: 0
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - Pioneered dense-base (10B dense) + sparse-MoE (128 experts, top-1) hybrid architecture
+  - Top-tier SQL coding efficiency on enterprise benchmarks
+  - Apache 2.0 license
+  weaknesses:
+  - Total 480B parameter size requires high storage/VRAM bandwidth to host
+  - 4k context window is obsolete for multi-file coding
+  quirks:
+  - Only activates 1 of 128 experts per token, relying heavily on its dense base transformer
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://www.snowflake.com/blog/arctic-open-efficient-foundation-language-models-snowflake/
+- id: jamba-1-5
+  name: Jamba 1.5 Large
+  provider: AI21 Labs
+  family: Jamba
+  tier: moe_reference
+  release_date: '2024-08-22'
+  architecture:
+    type: hybrid_ssm_moe
+    total_params_b: 398.0
+    active_params_b: 94.0
+    num_experts: 16
+    top_k_experts: 2
+    context_window: 256000
+    output_limit: 4096
+    training_cutoff: 2024-05
+  access:
+    license: open-jamba-license
+    open_weights: true
+    api_available: true
+    local_runnable: true
+    vram_fp16_gb: 800.0
+    vram_q4_gb: 230.0
+    quantization_formats:
+    - gguf
+    ollama_tag: jamba:latest
+    huggingface_id: ai21labs/AI21-Jamba-1.5-Large
+  pricing:
+    input_per_m: 2.0
+    output_per_m: 8.0
+    cached_input_per_m: null
+    batch_input_per_m: 1.0
+    batch_output_per_m: 4.0
+    free_tier: false
+    notes: Structured State Space (Mamba) + Transformer + MoE hybrid
+  benchmarks:
+    swe_bench_verified: 34.0
+    aider_polyglot: 66.0
+    gpqa_diamond: 46.0
+    math_500: 70.0
+    mmlu_pro: 67.0
+    arena_elo: 1255
+    arc_agi: 46.0
+    humaneval_plus: 75.0
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: false
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 3
+    - 7
+    best_domains:
+    - high_throughput_long_context_processing
+    - ssm_hybrid_architecture_benchmarks
+    - multi_document_qa
+    - enterprise_compliance_auditing
+    avoid_domains:
+    - vision
+    - complex_agentic_code_refactoring
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.93
+    instruction_drift_threshold_k: 180
+    cache_discount_pct: 0
+    cognitive_council_role: The Systems & Code Craftsman
+  strengths:
+  - Pioneering SSM-Transformer-MoE hybrid architecture (Mamba layers interleaving
+    attention layers)
+  - Linear time complexity on long sequences reduces KV cache footprint dramatically
+  - 256k context window with high throughput at sequence lengths >100k
+  weaknesses:
+  - Large total parameter size (398B) requires substantial hardware for local inference
+  quirks:
+  - Combines Mamba state-space recurrence with sparse expert routing
+  metadata:
+    data_snapshot_date: '2026-10-05'
+    evidence_tier: EMPIRICALLY_VERIFIED
+    sources:
+    - https://www.ai21.com/blog/announcing-jamba-1-5

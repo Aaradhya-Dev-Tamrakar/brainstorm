@@ -62,6 +62,29 @@ This directory contains standalone PowerShell, Python, and Batch utilities that 
 
 ---
 
+### 6. Repository Synchronization & BRL Automated PR Workflow Engine
+- **Files:**
+  - [`sync.ps1`](../sync.ps1) — Central multi-branch ecosystem synchronization hub and automated GitHub PR dispatch engine.
+  - [`sync.bat`](../sync.bat) — Zero-friction Windows execution wrapper automatically bypassing PowerShell ExecutionPolicy across fresh clones.
+- **Dual-Track Governance Architecture:**
+  - **Track A: Maintainer Velocity Bridge (`DEC-003-A`):**
+    ```powershell
+    .\sync.bat -m "docs(notes): update research notes"
+    ```
+    Direct local deterministic verification (`audit.bat`) + push to `origin/main` using authorized maintainer bypass.
+  - **Track B: BRL Cohort Automated PR Workflow (`-PR` / `-pr`):**
+    ```powershell
+    .\sync.bat -PR -m "feat(p2p): campus swarm marketplace" -Issue 42 -Reviewer teammate
+    ```
+    Automated standard GitHub flow:
+    1. **Branch Isolation**: Derives standardized branch slug (`feat/p2p-campus-swarm-marketplace-#42`) and checks out branch.
+    2. **Deterministic Pre-Commit Verification Gate**: Runs `sim/reconciliation_engine.py --fix`, Graphify update, staged secret scan, and full `audit.bat` (structural consistency + 26 behavioral regression tests + 12 Z3 SMT invariant benchmarks).
+    3. **Branch Push**: Pushes isolated feature branch to `origin`.
+    4. **PR Dispatch**: Creates Pull Request via GitHub CLI (`gh pr create`) with metadata, issue closure (`Closes #42`), and assigned reviewers.
+    5. **Peer Review & Clean-Room CI**: Ready for clean-room GitHub Actions verification and peer sign-off.
+
+---
+
 ## 🚀 Usage
 
 ### Applying Shell Folders Setup

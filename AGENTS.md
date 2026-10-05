@@ -26,6 +26,12 @@ To avoid breaking multi-branch tracking and prevent wasteful multi-step Git comm
   .\sync.bat -m "feat(arch): detailed architectural commit summary"
   ```
 
+- **BRL Automated Pull Request Workflow (Team & Cohort Standard)**:
+  ```powershell
+  .\sync.bat -PR -m "feat(p2p): campus swarm marketplace" -Issue 42 -Reviewer teammate
+  ```
+  _Enforces BRL institutional governance: automatically derives branch slug (`<type>/<scope>-<desc>-#<id>`), isolates branch from `main`, executes all deterministic local verification gates (`audit.bat`, `reconciliation_engine.py --fix`, secret scanner), pushes feature branch to origin, and opens a Pull Request via GitHub CLI (`gh pr create`) with issue linking and peer review assignment._
+
 - **Switch & Sync Tool Branch**:
   ```powershell
   .\sync.ps1 -b SPARK
@@ -149,15 +155,24 @@ Speculative text is never ground truth; deterministic execution is. Before final
 
 ## 6. GitHub Development Workflow & Commit Integrity Invariants
 
-### 1. Default GitHub Workflow (`github-workflow`) & Maintainer Policy
-Whenever implementing features, fixing bugs, refactoring, or managing version control across ecosystem repositories:
-1. **Issue Anchoring**: Formulate requirements with acceptance tasks (`- [ ]`) and create a tracked issue with full metadata (`gh issue create --assignee "AaradhyaDT" --label "<labels>"`).
-2. **Branch Isolation**: Branch off `main` via `<type>/<slug>-#<id>`, never committing multi-step changes directly to `main` for multi-contributor features.
-3. **Brainstorm Maintainer Exception (`DEC-003`)**: For the central `brainstorm` orchestration root, solo maintainer direct commits to `main` are authorized provided all changes pass local deterministic verification gates (`.\audit.bat` and `.\sim.bat`) prior to running `.\sync.bat`. (Note: The live GitHub Ruleset configures `required_status_checks: verify` with an explicit maintainer role bypass so local deterministic passes authorize direct `.\sync.bat` pushes).
-4. **Progressive Task Tracking**: Check off tasks as completed using `gh-task --issue <id> --task "..."`.
-5. **Verification Gate**: Enforce local test passes (`.\audit.bat`, `pytest`, `ruff`) before commits.
-6. **Ecosystem Synchronization**: Run all version control through `.\sync.bat` (or `.\sync.ps1`).
-7. **PR & Review Dispatch**: Open PR linking the issue (`Closes #<id>`) and document verification proof for team/ecosystem repos.
+### 1. Dual-Track Governance & Default GitHub Workflow (`github-workflow`)
+The repository enforces a calibrated dual-track development model balancing founder velocity with strict institutional governance for the Brainstorm Research Lab (BRL):
+
+- **Track A: Solo Maintainer Velocity Bridge (`DEC-003-A`)**:
+  Direct commits and pushes via `.\sync.bat -m "..."` are authorized strictly for the solo repository administrator, provided local deterministic verification gates (`.\audit.bat` and `.\sim.bat`) pass 100% prior to pushing with maintainer bypass.
+
+- **Track B: BRL Cohort & Contributor Standard (Automated PR Workflow)**:
+  All incoming cohort members and multi-contributor feature work **MUST** execute the automated Pull Request workflow:
+  ```powershell
+  .\sync.bat -PR -m "type(scope): summary" [-Issue <id>] [-Reviewer <handle>]
+  ```
+  _Enforced GitHub Flow lifecycle_:
+  1. **Issue Anchoring**: Formulate requirements with acceptance tasks (`- [ ]`) and create a tracked issue with full metadata (`gh issue create --assignee "AaradhyaDT" --label "<labels>"`).
+  2. **Automated Branch Isolation**: Automatically branches off updated `main` to `<type>/<scope>-<desc>[-#<id>]`.
+  3. **Local Verification Gate**: Runs staged secret scanner, dynamic documentation reconciliation (`sim/reconciliation_engine.py --fix`), and full regression audit (`audit.bat` certifying 300+ files, 26 behavioral tests, and 12 Z3 SMT invariants).
+  4. **Remote Branch Push**: Pushes isolated feature branch to `origin` (`git push -u origin <branch>`).
+  5. **Automated PR Dispatch**: Dispatches clean Pull Request via `gh pr create` with metadata, issue anchoring (`Closes #<id>`), and assigned reviewers.
+  6. **Clean-Room Remote CI & Peer Review**: Undergoes headless remote CI verification and peer review sign-off before merge. No fake auto-merges; PRs remain open for human review.
 
 ### 2. Release SHA & Commit Integrity Invariant
 Whenever referencing ecosystem milestones, portfolio releases (`releases.js`), or repository commit links:

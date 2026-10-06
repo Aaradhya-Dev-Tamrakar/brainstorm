@@ -7,7 +7,7 @@
 
 ---
 
-## 📊 Complete Master Skills Matrix (Origin & Workflow Usage) (51 Skills)
+## 📊 Complete Master Skills Matrix (Origin & Workflow Usage) (54 Skills)
 
 | Category | Skill Name | Path | Origin | Usage in Workflow Pipeline |
 | :--- | :--- | :--- | :--- | :--- |
@@ -22,6 +22,7 @@
 | | [`graphify-optimizer`](graphify-optimizer/SKILL.md) | `tools/skills/graphify-optimizer/` | Brainstorm Knowledge Core (`graphify.ps1`) | **Knowledge Optimization Phase:** Eliminates leaf-node spur noise, configures `.graphifyignore`, executes directed/code-only AST builds, and labels communities. |
 | | [`mcp-integration`](mcp-integration/SKILL.md) | `tools/skills/mcp-integration/` | Global Antigravity Config | **Integration Phase:** Guidelines for configuring, testing, and registering Model Context Protocol (MCP) servers (stdio, SSE, HTTP, WebSocket). |
 | | [`skill-development`](skill-development/SKILL.md) | `tools/skills/skill-development/` | Global Antigravity Config | **Meta-Authoring Phase:** Enforces progressive disclosure design, prompt scaffolding, and metadata schemas when creating new agent skills. |
+| | [`find-skills`](find-skills/SKILL.md) | `tools/skills/find-skills/` | Open Agent Skills Ecosystem (`skills` CLI) | **Skill Discovery Phase:** Discovers, searches, and installs community agent skills from GitHub via `npx skills find`. |
 | **Feature Scoping & Git Workflow** | [`feature-dev`](feature-dev/SKILL.md) | `tools/skills/feature-dev/` | Global Antigravity Config | **Scoping & Architecture Phase:** Interactively scopes feature requirements, clarifies ambiguities, and decomposes architecture before writing code. |
 | | [`github-workflow`](github-workflow/SKILL.md) | `tools/skills/github-workflow/` | Brainstorm Ecosystem Standard (`AGENTS.md`) | **Core Release Phase:** Enforces mandatory issue anchoring (`gh issue`), branch isolation (`type/slug-#id`), task checking (`gh-task`), `sync.bat`, and PR dispatch. |
 | | [`github-issue-pr-workflow`](github-issue-pr-workflow/SKILL.md) | `tools/skills/github-issue-pr-workflow/` | Ecosystem GitHub Standard | **Task Tracking Sub-Workflow:** Manages granular issue task checkboxes (`- [ ]`), branch slugging, and metadata cross-linking. |
@@ -39,6 +40,8 @@
 | | [`ui-ux-pro-max`](ui-ux-pro-max/SKILL.md) | `tools/skills/ui-ux-pro-max/` | Extended UI Design System | **Editorial Design Phase:** Advanced dark-mode first tokens, elevation scale vectors, visual hierarchy rules, and editorial typography. |
 | | [`portfolio-project-manager`](portfolio-project-manager/SKILL.md) | `tools/skills/portfolio-project-manager/` | `AaradhyaDT.github.io` (`scripts/add-project.js`) | **Portfolio Publishing Phase:** Token-Zero project onboarding engine for `AaradhyaDT.github.io` (auto IDs, AES-256-GCM encryption, verification). |
 | | [`fluid-wordmark-collapse`](fluid-wordmark-collapse/SKILL.md) | `tools/skills/fluid-wordmark-collapse/` | Portfolio UI Core (`AaradhyaDT.github.io`) | **Fluid Branding Phase:** Anthropic-style wordmark collapse into monograms in-place with 3-zone fixed-slot anti-displacement layout. |
+| | [`modern-web-guidance`](modern-web-guidance/SKILL.md) | `tools/skills/modern-web-guidance/` | Google Chrome DevRel (`modern-web-guidance`) | **Web Platform Standards Phase:** Enforces modern HTML/CSS/JS patterns (Anchor Positioning, Popovers, View Transitions, CWV). |
+| | [`chrome-extensions`](chrome-extensions/SKILL.md) | `tools/skills/chrome-extensions/` | Google Chrome DevRel (`modern-web-guidance`) | **Browser Extension Phase:** Manifest V3 reference patterns, service worker lifecycle, declarativeNetRequest, and WebStore publishing. |
 | **Technical Writing & Security** | [`blog-writing-like-claude`](blog-writing-like-claude/SKILL.md) | `tools/skills/blog-writing-like-claude/` | `BiasAperture` Project / Global Config | **Technical Publishing Phase:** Enforces calm-authority voice, zero-hype vocabulary, explicit scope boundaries, modeled after Claude engineering blog. |
 | | [`compliance-report-harmonizer`](compliance-report-harmonizer/SKILL.md) | `tools/skills/compliance-report-harmonizer/` | `BiasAperture` Project / Global Config | **Formal Audit Reporting Phase:** Harmonizes compliance & fairness audit reports across HTML/PDF with pre-calibrated regulatory terms & Blink rendering. |
 | | [`security-guidance`](security-guidance/SKILL.md) | `tools/skills/security-guidance/` | Global Antigravity Config | **Vulnerability Gate Phase:** Security audits preventing credential leaks, command injection, path traversal, XSS, SSRF, and unsafe deserialization. |

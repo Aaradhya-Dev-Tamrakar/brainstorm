@@ -1,0 +1,10 @@
+# Local CDP Router Manager - Privacy & Git Ignore
+node_modules/
+screenshots/
+*.conf
+*.bak
+*.log
+*.png
+*.json
+!package.json
+!package-lock.json

@@ -60,7 +60,7 @@ To eliminate ontological ambiguity between cataloged external repositories and i
 - `research_engine`: In-tree computational simulations or verification models hosted directly inside `brainstorm` (2 active: `STRANGLER-IPU`, `headless-invariant-assurance`).
 - `research_proposal`: Formal research specifications and future capability wedges (0 active).
 - `workflow`: Emergent compound pipelines composed of multiple capabilities (6 active).
-- `artifact`: Empirical result files, PDF certificates, or formal research specs in `research/` (35 active).
+- `artifact`: Empirical result files, PDF certificates, or formal research specs in `research/` (36 active).
 
 ### 2.4 Interface
 * **Definition:** The concrete communication protocol or boundary surface through which a capability is invoked.
@@ -95,7 +95,7 @@ To eliminate counting discrepancies across `README.md`, `PROFILE.md`, and `ECOSY
 | **In-Tree Research Proposals** | **0** | `research_proposal` | Active formal proposals awaiting initial prototype execution. |
 | **Total Capabilities in Registry** | **28** | All Capability Classes | 22 ecosystem modules + 4 presentation hubs + 2 in-tree engines in `schemas/capability-registry.yaml`. |
 | **Compound Workflows (Pipelines)** | **6** | `workflow` | Formal emergent pipelines (Pipelines A, B, C, D, E, and Pipeline F: Zero-Cloud Device Handoff). |
-| **Research Experiments, Specs & RFCs** | **35** | `artifact` | Formal architecture specs (`ARCH-SPEC-001` to `007`), RFCs (`ARCH-RFC-001` to `006`), business plans (`ARCH-PLAN-001`, `ARCH-PLAN-002`), invariants (`INV-EPI-001`, `INV-MEM-001`, `INV-WSR-002`), empirical sweeps & benchmarks (`EXP-001`, `EXP-DRIVE-SYNC-001`, `EXP-FUSION360-MCP-001`, `EXP-CLASSROOM-MCP-001`, `EXP-LOCALSEND-MCP-001`, `FLEET-001`, `FLEET-002`, `GPU_RAM_ARCHITECTURE_SPEC`, `BMK-MEMORY-001`, `INV-BMK-001`), and composition benchmarks (`COMPOSE-001`, `COMPOSE-002`). |
+| **Research Experiments, Specs & RFCs** | **36** | `artifact` | Formal architecture specs (`ARCH-SPEC-001` to `007`), RFCs (`ARCH-RFC-001` to `006`), business plans (`ARCH-PLAN-001`, `ARCH-PLAN-002`), invariants (`INV-EPI-001`, `INV-MEM-001`, `INV-WSR-002`), empirical sweeps & benchmarks (`EXP-001`, `EXP-DRIVE-SYNC-001`, `EXP-FUSION360-MCP-001`, `EXP-CLASSROOM-MCP-001`, `EXP-LOCALSEND-MCP-001`, `FLEET-001`, `FLEET-002`, `GPU_RAM_ARCHITECTURE_SPEC`, `BMK-MEMORY-001`, `INV-BMK-001`), and composition benchmarks (`COMPOSE-001`, `COMPOSE-002`). |
 
 ---
 

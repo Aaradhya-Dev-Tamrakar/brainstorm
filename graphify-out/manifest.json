@@ -6,10 +6,10 @@
     "semantic_hash": "1f807d3a09fa490b7f5315226b97cf4b"
   },
   "schemas/ecosystem.registry.json": {
-    "mtime": 1791306818.0731673,
-    "seen": 1791306860.045236,
-    "ast_hash": "4c551339ab75a8f9da7e1fb462e7cda8",
-    "semantic_hash": "4c551339ab75a8f9da7e1fb462e7cda8"
+    "mtime": 1791356887.9093902,
+    "seen": 1791359298.2458394,
+    "ast_hash": "c39e3d908396e9514f0fa1850a887139",
+    "semantic_hash": "c39e3d908396e9514f0fa1850a887139"
   },
   "schemas/examples/AI-Constraint-Solver.contract.json": {
     "mtime": 1790044861.17107,
@@ -102,10 +102,10 @@
     "semantic_hash": "5b018a5335bcfda1d7e220f7b2eaa4d8"
   },
   "schemas/capability-ontology.md": {
-    "mtime": 1791175024.1902995,
-    "seen": 1791175164.3310494,
-    "ast_hash": "f0ee8c43229197c4120aec9cef87d084",
-    "semantic_hash": "f0ee8c43229197c4120aec9cef87d084"
+    "mtime": 1791356887.9161813,
+    "seen": 1791359298.2462041,
+    "ast_hash": "80599bf48b1f808321eac6f498ccf1f3",
+    "semantic_hash": "80599bf48b1f808321eac6f498ccf1f3"
   },
   "schemas/evidence-policy.md": {
     "mtime": 1790044861.17107,
@@ -138,10 +138,10 @@
     "semantic_hash": "361e8dd333417f7e3bcd00d97cd29842"
   },
   "README.md": {
-    "mtime": 1791175024.1811476,
-    "seen": 1791175164.3309488,
-    "ast_hash": "4ae4bc266d5498f18c3333efeeb5f35a",
-    "semantic_hash": "4ae4bc266d5498f18c3333efeeb5f35a"
+    "mtime": 1791356887.9135087,
+    "seen": 1791359298.2460594,
+    "ast_hash": "fd245e3dec965464b54a0836ae69e2bb",
+    "semantic_hash": "fd245e3dec965464b54a0836ae69e2bb"
   },
   "research/architectures/README.md": {
     "mtime": 1790240407.9593427,
@@ -222,10 +222,10 @@
     "semantic_hash": "7f05ad0aeab58323fb428bb660a57c7f"
   },
   "report/repository-audit.md": {
-    "mtime": 1791175024.1978104,
-    "seen": 1791175164.330956,
-    "ast_hash": "b01ed15952c7ea226e50f51e71b080e1",
-    "semantic_hash": "b01ed15952c7ea226e50f51e71b080e1"
+    "mtime": 1791356887.918179,
+    "seen": 1791359298.2460692,
+    "ast_hash": "a7fa7757572f8178def6373999b05ce5",
+    "semantic_hash": "a7fa7757572f8178def6373999b05ce5"
   },
   "research/experiments/COMPOSE-001.md": {
     "mtime": 1790044861.1331217,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791306844.822736,
-    "seen": 1791306860.045231,
-    "ast_hash": "e452949ae620adcb90d0a2d367992f4a",
-    "semantic_hash": "e452949ae620adcb90d0a2d367992f4a"
+    "mtime": 1791359291.864329,
+    "seen": 1791359298.2458324,
+    "ast_hash": "ccb4459224525231fbd7722a650390ae",
+    "semantic_hash": "ccb4459224525231fbd7722a650390ae"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1791306842.652326,
-    "seen": 1791306860.0452292,
-    "ast_hash": "b8c08cce3b47876ed4e75a882f8b2a53",
-    "semantic_hash": "b8c08cce3b47876ed4e75a882f8b2a53"
+    "mtime": 1791359289.575338,
+    "seen": 1791359298.2458298,
+    "ast_hash": "cf0330f10e745b4bfc3d7b248d9e85ae",
+    "semantic_hash": "cf0330f10e745b4bfc3d7b248d9e85ae"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -3526,5 +3526,29 @@
     "seen": 1791306860.0457137,
     "ast_hash": "82ead473d9e2332c766bdaf33e947f40",
     "semantic_hash": "82ead473d9e2332c766bdaf33e947f40"
+  },
+  "tools/router_cdp/cdp_router_manager.js": {
+    "mtime": 1791356807.2965226,
+    "seen": 1791359298.2460046,
+    "ast_hash": "f280b31b3f12f16b56bb103302948dc8",
+    "semantic_hash": "f280b31b3f12f16b56bb103302948dc8"
+  },
+  "tools/router_cdp/package.json": {
+    "mtime": 1791356794.7843218,
+    "seen": 1791359298.246006,
+    "ast_hash": "1265cad3be11d6de48feee0cc6a986d9",
+    "semantic_hash": "1265cad3be11d6de48feee0cc6a986d9"
+  },
+  "research/experiments/EXP-011-BROADCOM-CPE-AUTH-BYPASS.md": {
+    "mtime": 1791356846.9075296,
+    "seen": 1791359298.2461212,
+    "ast_hash": "74a35f05fec01c9abe6cc975fe834784",
+    "semantic_hash": "74a35f05fec01c9abe6cc975fe834784"
+  },
+  "tools/router_cdp/README.md": {
+    "mtime": 1791356821.9078908,
+    "seen": 1791359298.2462215,
+    "ast_hash": "e2802ffff85e1719219c21a181b43e74",
+    "semantic_hash": "e2802ffff85e1719219c21a181b43e74"
   }
 }

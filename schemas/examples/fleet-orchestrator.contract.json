@@ -1,0 +1,95 @@
+{
+  "$schema": "../capability.contract.v1.json",
+  "module": "Fleet-Orchestrator",
+  "version": "1.0.0",
+  "location": "F:\\Aaradhya-Dev-Tamrakar\\Fleet-Orchestrator",
+  "tracking_branch": "Fleet-Orchestrator",
+  "runtime": "python312",
+  "capabilities": [
+    {
+      "id": "dispatch_task",
+      "description": "Queues a capability-tagged task specification into the SQLite WAL orchestrator state machine with priority, dependency DAG, and idempotency key.",
+      "category": "computation",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "deterministic_execution",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 5000,
+      "inputs": {
+        "type": "object",
+        "required": ["spec", "capabilities"],
+        "properties": {
+          "spec": { "type": "string" },
+          "capabilities": { "type": "array", "items": { "type": "string" } },
+          "priority": { "type": "integer", "default": 0 },
+          "lease_seconds": { "type": "integer", "default": 300 }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["task_id", "status"],
+        "properties": {
+          "task_id": { "type": "string" },
+          "status": { "type": "string" }
+        }
+      }
+    },
+    {
+      "id": "acquire_task",
+      "description": "Atomically claims an available pending task matching worker capability filters using SQLite WAL write transactions, generating a cryptographic claim token.",
+      "category": "computation",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "deterministic_execution",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 5000,
+      "inputs": {
+        "type": "object",
+        "required": ["worker_id", "capabilities"],
+        "properties": {
+          "worker_id": { "type": "string" },
+          "capabilities": { "type": "array", "items": { "type": "string" } },
+          "lease_seconds": { "type": "integer", "default": 300 }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["task_id", "claim_token", "spec"],
+        "properties": {
+          "task_id": { "type": "string" },
+          "claim_token": { "type": "string" },
+          "spec": { "type": "string" }
+        }
+      }
+    },
+    {
+      "id": "execute_copilot_cli",
+      "description": "Executes autonomous non-interactive code generation or refactoring tasks via child Copilot CLI runtimes with per-account token injection and quota pooling.",
+      "category": "computation",
+      "deterministic": false,
+      "side_effects": true,
+      "verification_tier": "empirical_benchmark",
+      "cost_tier": "metered_ai_credits",
+      "timeout_ms": 180000,
+      "inputs": {
+        "type": "object",
+        "required": ["prompt"],
+        "properties": {
+          "prompt": { "type": "string" },
+          "max_ai_credits": { "type": "integer", "default": 30 },
+          "worktree": { "type": "string" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["success", "model_used", "tokens_used"],
+        "properties": {
+          "success": { "type": "boolean" },
+          "model_used": { "type": "string" },
+          "tokens_used": { "type": "integer" },
+          "error": { "type": "string" }
+        }
+      }
+    }
+  ]
+}

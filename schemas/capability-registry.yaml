@@ -793,4 +793,37 @@ capabilities:
     confidence: 0.95
     last_verified: "2026-10-05"
 
+  - id: "Fleet-Orchestrator"
+    entity_class: "ecosystem_module"
+    name: "Fleet-Orchestrator"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\Fleet-Orchestrator"
+    category: "ORCHESTRATION_COGNITION"
+    status: "IMPLEMENTED"
+    description: "Distributed agent swarm task coordinator with SQLite WAL state machine, multi-account GitHub Copilot quota pooling, lease-based worker scheduling, and headless adapter execution."
+    inputs:
+      - "Task specifications and capability tags"
+      - "Multi-account Copilot tokens and session contexts"
+      - "Worker heartbeats and lease renewals"
+    outputs:
+      - "Executed code artifacts and refactoring diffs"
+      - "Task execution telemetry, token usage, and AI credit accounting"
+      - "SQLite WAL state machine lifecycle transitions"
+    interfaces:
+      - "FastAPI REST API"
+      - "Remote MCP Server (JSON-RPC over stdio / SSE)"
+      - "CLI Fleet Supervisor & Canary Controller"
+    dependencies:
+      - "Python 3.12+"
+      - "FastAPI & Uvicorn"
+      - "SQLite 3 (WAL mode)"
+      - "httpx"
+      - "GitHub Copilot CLI v1.0+"
+    evidence: "E4"
+    benchmarks: "111/111 unit tests passing, sub-20ms task lease acquisition under concurrent transactions"
+    verification: "pytest (111/111 passed), tools/copilot_fleet.py canary"
+    maintenance_cost: "1.0 hours/month"
+    development_hours: 32
+    confidence: 0.95
+    last_verified: "2026-10-07"
+
 

@@ -16,10 +16,9 @@
 
 The Headless Worker Fleet architecture specified in [`FLEET-002`](FLEET-002.md) established the mathematical and architectural rationale for zero-GUI, asynchronous GitHub Copilot agent runtimes operating at ~15 MB RAM per worker. 
 
-This experiment executes the empirical production scale-out of the fleet from an initial 13-account baseline to **27 concurrent GitHub accounts**, achieving **24 verified active canary workers** pooling **4,800 AI credits / month** of parallel, non-interactive execution capacity.
+This experiment executes the empirical production scale-out of the fleet from an initial 13-account baseline to **27 concurrent GitHub accounts**, achieving **27 verified active canary workers** pooling **5,400 AI credits / month** of parallel, non-interactive execution capacity following policy cooldown resolution.
 
 This protocol documents the empirical discovery of the **9-Step Account Activation Playbook**, token permission boundaries, runtime adapter credit constraints, and end-to-end task lease lifecycle verification.
-
 ---
 
 ## 2. Empirical Ground Truth & Capacity Metrics
@@ -27,12 +26,12 @@ This protocol documents the empirical discovery of the **9-Step Account Activati
 | Metric | Baseline (`FLEET-002`) | Empirical Result (`EXP-012`) | Variance / Scaling |
 | :--- | :--- | :--- | :--- |
 | **Registered GitHub Accounts** | 13 accounts | **27 accounts** | $+107.7\%$ |
-| **Active Canary Verified Workers** | 13 accounts | **24 accounts** | $+84.6\%$ |
-| **Pending Policy Cooldown** | 0 accounts | **3 accounts** | New Account Gate |
-| **Monthly Compute Capacity** | 2,600 AI credits | **4,800 AI credits** | $+84.6\%$ |
+| **Active Canary Verified Workers** | 13 accounts | **27 accounts** | $+107.7\%$ |
+| **Pending Policy Cooldown** | 0 accounts | **0 accounts** (Resolved) | Fully Cleared |
+| **Monthly Compute Capacity** | 2,600 AI credits | **5,400 AI credits** | $+107.7\%$ |
 | **Local Memory Footprint** | ~15 MB / worker | **~14.2 MB / worker** | $-5.3\%$ |
 | **Headless Concurrency Model** | Non-blocking `asyncio` | **`asyncio.gather` concurrent canary** | Zero-leakage verified |
-| **Test Suite Certification** | 100/100 pytest | **111/111 pytest (100%)** | 0 regressions (38.71s) |
+| **Test Suite Certification** | 100/100 pytest | **111/111 pytest (100%)** | 0 regressions (52.45s) |
 
 ---
 
@@ -67,7 +66,7 @@ Auxiliary fleet tokens execute code locally on the workstation filesystem via ch
 When configuring the headless execution runtime via `--max-ai-credits`, GitHub Copilot CLI rejected allocations $< 30$ with an input validation failure. The runtime adapter in `tools/copilot_fleet.py` and `client/fleet_supervisor.py` was patched to enforce $\text{max\_ai\_credits} \ge 30$, ensuring stable task execution without runtime CLI crashes.
 
 ### Invariant 3: Gateway Policy Cooldown on Fresh Accounts
-Three auxiliary worker accounts (`beie7923`, `Majorprj79039-Sankalpa`, `Majorprj79043-Sonia`) exhibited `Access denied by policy settings` despite valid token permissions and completed UI enrollment. Historical telemetry confirms that brand-new accounts encounter a ~12–24h asynchronous policy synchronization cooldown before GitHub API routing recognizes newly provisioned Free-tier Copilot entitlements.
+Three auxiliary worker accounts (`beie7923`, `Majorprj79039-Sankalpa`, `Majorprj79043-Sonia`) initially exhibited `Access denied by policy settings` despite valid token permissions and completed UI enrollment. Historical telemetry confirmed that brand-new accounts encounter a ~12–24h asynchronous policy synchronization cooldown before GitHub API routing recognizes newly provisioned Free-tier Copilot entitlements. *(Resolution Milestone: On 2026-10-07, the asynchronous policy synchronization window concluded; all 3 accounts passed API status verification, bringing the fleet to 27 / 27 active ready workers).*
 
 ### Invariant 4: Dual-File Configuration Architecture
 Worker configuration follows strict secret isolation:

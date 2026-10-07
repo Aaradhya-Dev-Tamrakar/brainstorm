@@ -18344,7 +18344,7 @@
       "node_kind": "heading",
       "norm_label": "2. empirical ground truth & capacity metrics",
       "source_file": "research/experiments/EXP-012-COPILOT-MULTI-ACCOUNT-FLEET-ACTIVATION.md",
-      "source_location": "L25"
+      "source_location": "L24"
     },
     {
       "id": "research_experiments_exp_012_copilot_multi_account_fleet_activation_3_the_9_step_account_activation_playbook",
@@ -18356,7 +18356,7 @@
       "node_kind": "heading",
       "norm_label": "3. the 9-step account activation playbook",
       "source_file": "research/experiments/EXP-012-COPILOT-MULTI-ACCOUNT-FLEET-ACTIVATION.md",
-      "source_location": "L39"
+      "source_location": "L38"
     },
     {
       "id": "research_experiments_exp_012_copilot_multi_account_fleet_activation_4_key_architectural_invariants_discoveries",
@@ -18368,7 +18368,7 @@
       "node_kind": "heading",
       "norm_label": "4. key architectural invariants & discoveries",
       "source_file": "research/experiments/EXP-012-COPILOT-MULTI-ACCOUNT-FLEET-ACTIVATION.md",
-      "source_location": "L58"
+      "source_location": "L57"
     },
     {
       "id": "research_experiments_exp_012_copilot_multi_account_fleet_activation_5_end_to_end_task_lease_lifecycle_verification",
@@ -18380,7 +18380,7 @@
       "node_kind": "heading",
       "norm_label": "5. end-to-end task lease lifecycle verification",
       "source_file": "research/experiments/EXP-012-COPILOT-MULTI-ACCOUNT-FLEET-ACTIVATION.md",
-      "source_location": "L79"
+      "source_location": "L78"
     },
     {
       "id": "research_experiments_exp_012_copilot_multi_account_fleet_activation_6_epistemic_provenance_audit_trail",
@@ -18392,7 +18392,7 @@
       "node_kind": "heading",
       "norm_label": "6. epistemic provenance & audit trail",
       "source_file": "research/experiments/EXP-012-COPILOT-MULTI-ACCOUNT-FLEET-ACTIVATION.md",
-      "source_location": "L92"
+      "source_location": "L91"
     },
     {
       "id": "research_experiments_exp_012_copilot_multi_account_fleet_activation_invariant_1_security_identity_separation_repository_none_scope",
@@ -18404,7 +18404,7 @@
       "node_kind": "heading",
       "norm_label": "invariant 1: security & identity separation (repository none scope)",
       "source_file": "research/experiments/EXP-012-COPILOT-MULTI-ACCOUNT-FLEET-ACTIVATION.md",
-      "source_location": "L60"
+      "source_location": "L59"
     },
     {
       "id": "research_experiments_exp_012_copilot_multi_account_fleet_activation_invariant_2_copilot_cli_minimum_ai_credits_boundary",
@@ -18416,7 +18416,7 @@
       "node_kind": "heading",
       "norm_label": "invariant 2: copilot cli minimum ai credits boundary",
       "source_file": "research/experiments/EXP-012-COPILOT-MULTI-ACCOUNT-FLEET-ACTIVATION.md",
-      "source_location": "L66"
+      "source_location": "L65"
     },
     {
       "id": "research_experiments_exp_012_copilot_multi_account_fleet_activation_invariant_3_gateway_policy_cooldown_on_fresh_accounts",
@@ -18428,7 +18428,7 @@
       "node_kind": "heading",
       "norm_label": "invariant 3: gateway policy cooldown on fresh accounts",
       "source_file": "research/experiments/EXP-012-COPILOT-MULTI-ACCOUNT-FLEET-ACTIVATION.md",
-      "source_location": "L69"
+      "source_location": "L68"
     },
     {
       "id": "research_experiments_exp_012_copilot_multi_account_fleet_activation_invariant_4_dual_file_configuration_architecture",
@@ -18440,7 +18440,7 @@
       "node_kind": "heading",
       "norm_label": "invariant 4: dual-file configuration architecture",
       "source_file": "research/experiments/EXP-012-COPILOT-MULTI-ACCOUNT-FLEET-ACTIVATION.md",
-      "source_location": "L72"
+      "source_location": "L71"
     },
     {
       "id": "research_experiments_exp_012_copilot_multi_account_fleet_activation_research_protocol_experiment_dossier_exp_012",
@@ -84086,7 +84086,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/EXP-012-COPILOT-MULTI-ACCOUNT-FLEET-ACTIVATION.md",
-      "source_location": "L60",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
@@ -84097,7 +84097,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/EXP-012-COPILOT-MULTI-ACCOUNT-FLEET-ACTIVATION.md",
-      "source_location": "L66",
+      "source_location": "L65",
       "weight": 1.0
     },
     {
@@ -84108,7 +84108,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/EXP-012-COPILOT-MULTI-ACCOUNT-FLEET-ACTIVATION.md",
-      "source_location": "L69",
+      "source_location": "L68",
       "weight": 1.0
     },
     {
@@ -84119,7 +84119,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/EXP-012-COPILOT-MULTI-ACCOUNT-FLEET-ACTIVATION.md",
-      "source_location": "L72",
+      "source_location": "L71",
       "weight": 1.0
     },
     {
@@ -84141,7 +84141,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/EXP-012-COPILOT-MULTI-ACCOUNT-FLEET-ACTIVATION.md",
-      "source_location": "L25",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -84152,7 +84152,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/EXP-012-COPILOT-MULTI-ACCOUNT-FLEET-ACTIVATION.md",
-      "source_location": "L39",
+      "source_location": "L38",
       "weight": 1.0
     },
     {
@@ -84163,7 +84163,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/EXP-012-COPILOT-MULTI-ACCOUNT-FLEET-ACTIVATION.md",
-      "source_location": "L58",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -84174,7 +84174,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/EXP-012-COPILOT-MULTI-ACCOUNT-FLEET-ACTIVATION.md",
-      "source_location": "L79",
+      "source_location": "L78",
       "weight": 1.0
     },
     {
@@ -84185,7 +84185,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/experiments/EXP-012-COPILOT-MULTI-ACCOUNT-FLEET-ACTIVATION.md",
-      "source_location": "L92",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
@@ -139068,5 +139068,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e2ed703ec47ab3be429921713299e4110157358e"
+  "built_at_commit": "1c51c6ad1a921f885b2a8176c6e4f9fe0947eaa5"
 }

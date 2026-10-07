@@ -1,7 +1,7 @@
 # Graph Report - brainstorm  (2026-10-07)
 
 ## Corpus Check
-- Large corpus: 601 files · ~981,821 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
+- Large corpus: 601 files · ~981,853 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
 
 ## Summary
 - 5733 nodes · 6373 edges · 520 communities (490 shown, 16 thin omitted)
@@ -531,14 +531,14 @@
 ## Surprising Connections (you probably didn't know these)
 - `run_cli()` --calls--> `get_router()`  [EXTRACTED]
   tools/route_task.py → sim/routing_engine.py
-- `NepalLawHarvesterTests` --uses--> `CrawlPolicy`  [INFERRED]
-  sim/test_nepal_law_harvester.py → sim/nepal_law_harvester.py
 - `InvariantAssuranceEngineTests` --uses--> `InvariantClassification`  [INFERRED]
   sim/test_invariant_engine.py → sim/invariant_engine/contract_types.py
 - `InvariantAssuranceEngineTests` --uses--> `SandboxReplayEngine`  [INFERRED]
   sim/test_invariant_engine.py → sim/invariant_engine/sandbox_replay.py
 - `InvariantAssuranceEngineTests` --uses--> `SMTInvariantProver`  [INFERRED]
   sim/test_invariant_engine.py → sim/invariant_engine/smt_encoder.py
+- `NepalLawHarvesterTests` --uses--> `CircuitBreaker`  [INFERRED]
+  sim/test_nepal_law_harvester.py → sim/nepal_law_harvester.py
 
 ## Import Cycles
 - None detected.
@@ -2513,11 +2513,9 @@ Nodes (3): tracking_branch, description, type
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Skill Development for Claude Code Plugins` connect `Community 273` to `Community 451`, `Community 484`, `Community 452`, `Community 453`, `Community 485`, `Community 274`, `Community 275`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
-- **Why does `Engineering Profile & Technical Dossier: Aaradhya Dev Tamrakar (ADT)` connect `NepalLawHarvesterTests` to `Gemini API Development Skill`?**
+- **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `2026-09-28.md` to `enum`, `Gemini API Development Skill`, `Community 373`, `Community 374`?**
   _High betweenness centrality (0.007) - this node is a cross-community bridge._
-- **Why does `Quantitative Claims Audit & Empirical Methodology Registry` connect `Community 457` to `Gemini API Development Skill`, `2. Harvester CLI Commands`?**
+- **Why does `Agent Rules & Workflow Guidelines — Brainstorm & Ecosystem Orchestration` connect `references/template/sidecars/panel/main.mjs` to `ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md`?**
   _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
@@ -2527,8 +2525,10 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.05548654244306418 - nodes in this community are weakly interconnected._
 - **Should `run_all_reproducibility.py` be split into smaller, more focused modules?**
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
+- **Should `generate_video.py` be split into smaller, more focused modules?**
+  _Cohesion score 0.08687943262411348 - nodes in this community are weakly interconnected._
 
 ## Graph Freshness
-- **Built at commit:** `e2ed703ec47ab3be429921713299e4110157358e`
-- **Built timestamp:** `2026-10-07T10:55:00.441784+00:00`
+- **Built at commit:** `1c51c6ad1a921f885b2a8176c6e4f9fe0947eaa5`
+- **Built timestamp:** `2026-10-07T11:02:42.521887+00:00`
 - **Lineage type:** `ancestor_snapshot`

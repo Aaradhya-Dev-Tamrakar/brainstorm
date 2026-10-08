@@ -1,7 +1,7 @@
 ---
 name: github-workflow
 description: Default, authoritative workflow for all GitHub development, feature work, bug fixes, refactoring, issue tracking, branch isolation, ecosystem multi-remote synchronization, and pull request reviews. This skill should be used whenever working on GitHub repositories, implementing features, fixing bugs, creating issues, switching branches, syncing code, opening pull requests, or following standard Git development lifecycles.
-version: 1.2.0
+version: 1.3.0
 ---
 
 # Default GitHub Development Workflow
@@ -17,11 +17,14 @@ This skill defines the canonical standard operating procedure (SOP) for all soft
 3. **Checkpoint Task Tracking**: Check off acceptance criteria in the issue body progressively as tasks complete (`gh-task --issue <ID> --task "<name>"` or `gh-task --issue <ID> --index <N>`).
 4. **Verification Gate**: Never commit or push without passing local linters (`ruff`, `eslint`), formatters, and test suites (`pytest`, `npm test`, `Invoke-Pester`). Universal Makefile entrypoints (`make test`, `make lint`, `make format`, `make verify`) are recommended wherever a `Makefile` is present. 100% pass rate required; zero errors tolerated.
 5. **Ecosystem Synchronization (`Makefile`, `sync.bat`, `sync.ps1`, `sync.sh`)**: When `sync.ps1`, `sync.bat`, `sync.sh`, `scripts/sync.ps1`, `scripts/sync.bat`, `scripts/sync.sh`, or a `Makefile` with a `sync` target is present in the repository, direct `git commit`, `git add`, or `git push` commands are **strictly forbidden**. All version control must run through `make sync` (or `.\sync.bat`, `.\scripts\sync.bat`, `./sync.sh`, or `pwsh -File ...`).
+   - **Zero-Friction Wrapper & Native Help**: Windows environments must prioritize `.\sync.bat` (or `make.bat`) to bypass PowerShell `ExecutionPolicy` on fresh clones. All `sync.bat` scripts must provide native help routing (`/?`, `-help`, `--help`) documenting common usage, `-SkipCI`, `-WhatIf`, `-PullOnly`, `-Status`, and BRL `-PR`.
    - **Root Decluttering Architecture**: To satisfy academic and open-source evaluation standards (TAs, external reviewers), keep the repository root clean by maintaining the root `Makefile` (canonical POSIX interface) and `make.bat` (zero-dependency Windows dispatcher) at root, while organizing underlying sync engines under `scripts/` (`scripts/sync.ps1`, `scripts/sync.bat`, `scripts/sync.sh`). Root `sync.bat` may be retained as a lightweight compatibility forwarder shim.
    - **Cross-Platform Parity**: Unix/Linux/macOS environments execute `make sync` or `./sync.sh` without requiring PowerShell dependencies.
-6. **Selective CI Runner Bypass (`-SkipCI` & Staged Auto-Detection)**:
-   - To eliminate wasteful runner consumption on high-churn operational states and documentation, use `.\sync.bat -SkipCI` (aliases `-NoCI`, `-SkipActions`).
-   - `sync.ps1` automatically inspects staged files and appends `[skip ci]` when only operational state (`orchestrator-state/**`), memory dumps (`team-memory.md`, `*.memory-appended`), dev logs (`dev-logs/**`, `*.log`), knowledge graph outputs (`graphify-out/**`), benchmarks/outputs, or markdown documentation (`*.md`) are staged.
+6. **Selective CI Runner Bypass & Workflow Hardening (`-SkipCI`, Path Whitelisting & Concurrency)**:
+   - **Path Whitelisting in Workflows**: All CI workflows (`.github/workflows/*.yml`) should enforce explicit `paths:` whitelisting for core executable assets (`src/**`, `sim/**`, `tools/**`, `schemas/**`, `scripts/**`, `requirements*.txt`, `audit.bat`, `sim.bat`, workflow files), preventing high-churn research, reports, dev-logs, and documentation files from needlessly consuming GitHub Actions runner quotas.
+   - **Concurrency Governance**: Enforce `concurrency: group: <workflow>-${{ github.ref }} cancel-in-progress: true` to instantly terminate redundant intermediate builds when rapid pushes occur. Always include `workflow_dispatch:` for manual on-demand triggers.
+   - **Selective Runner Bypass Switch (`-SkipCI`)**: To explicitly bypass remote runner execution for doc/state updates, use `.\sync.bat -SkipCI` (aliases `-NoCI`, `-SkipActions`) or `make sync ARGS="-SkipCI"`.
+   - **Staged Auto-Detection Engine**: `sync.ps1` automatically captures staged changes (`git diff --cached --name-only`) and appends `[skip ci]` when only non-code/operational assets (`research/**`, `report/**`, `graphify-out/**`, `orchestrator-state/**`, `dev-logs/**`, `*.md`, `.obsidian/**`, etc.) are staged.
 7. **Dry-Run Preview Safety Gate (`-WhatIf` / `-DryRun`)**:
    - Preview changes, staged file count, diff churn, auto-generated commit message, secret scans, and CI bypass evaluation without altering Git state via `.\sync.bat -WhatIf`.
 8. **Dual-Track Governance & PR Review Dispatch**:
@@ -211,6 +214,46 @@ npm test
 Invoke-Pester .\tests\launch_user_n.Tests.ps1 -Output Detailed
 ```
 
+#### CI/CD Workflow Hardening Standard (`.github/workflows/*.yml`)
+When configuring remote GitHub Actions pipelines, enforce selective executable asset triggers, concurrency cancellation, and manual dispatch:
+```yaml
+name: Deterministic verification
+
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "src/**"
+      - "sim/**"
+      - "tools/**"
+      - "schemas/**"
+      - "scripts/**"
+      - "requirements*.txt"
+      - "audit.bat"
+      - "sim.bat"
+      - ".github/workflows/verification.yml"
+  pull_request:
+    paths:
+      - "src/**"
+      - "sim/**"
+      - "tools/**"
+      - "schemas/**"
+      - "scripts/**"
+      - "requirements*.txt"
+      - "audit.bat"
+      - "sim.bat"
+      - ".github/workflows/verification.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: verification-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+```
+This guarantees that documentation commits, research transcripts, and operational state logs do not trigger unnecessary remote runner queues, while executable code and scripts undergo rigorous verification.
+
 ---
 
 ### Step 6: Multi-Remote Ecosystem Synchronization
@@ -237,6 +280,9 @@ make sync -PullOnly
 # Direct Windows Batch Wrapper (Root or scripts/)
 .\sync.bat -m "feat(fairness): add statistical parity metric (#28)"
 .\scripts\sync.bat -m "feat(fairness): add statistical parity metric (#28)"
+.\sync.bat -WhatIf -SkipCI                                                # Preview dry-run with CI suppression
+.\sync.bat -Status                                                        # Display ecosystem branch telemetry
+.\sync.bat /?                                                             # Native help dispatch (-help, --help)
 
 # Direct POSIX Shell Wrapper (Linux / macOS without PowerShell)
 ./scripts/sync.sh -m "feat(fairness): add statistical parity metric (#28)"
@@ -331,7 +377,13 @@ gh issue edit <ISSUE_NUMBER> --milestone "<Milestone Title>"
 1. **Addressing Review Feedback**:
    Make edits, rerun verification tests, and run `.\sync.bat -m "fix(fairness): address review comments (#28)"`. New commits automatically attach to the open PR.
 
-2. **After PR Merge**:
+2. **Closing Tracked Issues with Verifiable Evidence**:
+   When resolving an anchored issue (either upon PR merge or via maintainer Track A), always close with authentic verification proof and head commit SHA:
+   ```bash
+   gh issue close <ISSUE_NUMBER> --comment "Completed in commit <SHORT_SHA>. Verified 100% test pass (X tests passing, 0 lint errors, dual-layer verification certified)."
+   ```
+
+3. **After PR Merge**:
    Switch back to `main`, pull the merged changes, and prune stale local branches:
    ```powershell
    git switch main

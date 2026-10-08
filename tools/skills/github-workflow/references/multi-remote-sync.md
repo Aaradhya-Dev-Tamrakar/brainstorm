@@ -73,6 +73,9 @@ make sync -PullOnly
 :: Via direct sync.bat wrapper (root or scripts/):
 .\sync.bat -m "feat(scope): descriptive message (#26)"
 .\scripts\sync.bat -m "feat(scope): descriptive message (#26)"
+.\sync.bat -WhatIf -SkipCI
+.\sync.bat -Status
+.\sync.bat /?                                (native help routing via -help, --help, /?)
 ```
 
 ### POSIX Shell Wrapper (sync.sh)
@@ -93,28 +96,65 @@ For Linux/macOS environments where PowerShell is not installed:
 | `-SkipCI` | `-NoCI`, `-SkipActions` | Appends `[skip ci]` to bypass GitHub Actions runner matrices. Automatically auto-detected on operational/doc changes. |
 | `-WhatIf` | `-DryRun` | Previews changes, secret scan hits, and commit messages without altering local Git index or remote branches. |
 | `-PullOnly` | | Safely pulls remote updates (`--rebase --autostash`) and exits immediately. |
+| `-Status` | | Displays repository telemetry: branch health, unpushed commits, and working tree state. |
 
 ---
 
 ## 3. Selective CI Runner Bypass & Staged Auto-Detection
 
-Modern `sync.ps1` scripts implement an intelligent staged file inspection engine (`Test-ShouldSkipCI`):
+Modern `sync.ps1` scripts implement an intelligent staged file inspection engine (`Test-ShouldSkipCI` and `Test-IsNonCodeFile`):
 
 ### How Auto-Detection Works
 1. Staged changes are captured via `git diff --cached --name-only`.
-2. Paths are normalized and evaluated against the operational / documentation whitelist:
-   - Markdown documents: `*.md`
-   - Orchestrator state and runtime entities: `orchestrator-state/**`
-   - Development and diagnostic logs: `dev-logs/**`, `*.log`
-   - Knowledge graph artifacts: `graphify-out/**`
-   - Generated outputs and benchmark results: `outputs/**`, `benchmarks/**`
-   - Worker prompts and memory trackers: `worker-prompts/**`, `*.memory-appended`
-   - License and ignore files: `LICENSE`, `.gitignore`
+2. Paths are normalized and evaluated against the operational and documentation criteria:
+   - **Non-code Directories**: `research/**`, `report/**`, `graphify-out/**`, `orchestrator-state/**`, `dev-logs/**`, `.obsidian/**`, `templates/**`, `scratch/**`.
+   - **Non-code Extensions**: `*.md`, `*.markdown`, `*.tex`, `*.bib`, `*.pdf`, `*.png`, `*.jpg`, `*.svg`, `*.csv`, `*.drawio`, `*.docx`, `*.pptx`, `*.xlsx`, `*.txt`, `*.log`.
+   - **Non-code Configs**: `.gitignore`, `.graphifyignore`, `.syncignore-secrets`, `.mcp.json`, `.env.example`, `LICENSE`.
+   - **Code / Executable Assets (Never Non-Code)**: Any file under `src/**`, `sim/**`, `tools/**`, `schemas/**`, `scripts/**`, `.github/**`, matching `requirements*.txt`, or ending in `.py`, `.sh`, `.bat`, `.cmd`, `.ps1`, `.ts`, `.js`, `.c`, `.cpp`, etc.
 3. If **100%** of staged files match the operational/doc criteria, `sync.ps1` automatically appends `[skip ci]` to the commit message:
    ```
-   [09:42:40] CI Runner Bypass: auto-detected operational/doc-only changes. Appended [skip ci] to commit message.
+   [09:42:40] CI workflow suppression active: all staged files are non-code/documentation. Appended [skip ci] to commit message.
    ```
-4. If **any** source code, test spec, configuration, or critical script is staged (e.g. in `server/`, `client/`, `tests/`, `scripts/`), auto-detection yields to full CI execution.
+4. If **any** source code, test spec, configuration, or critical script is staged, auto-detection yields to full CI execution.
+
+### Remote Workflow Hardening Standard (`.github/workflows/*.yml`)
+To pair with client-side `-SkipCI`, server-side workflows must enforce:
+1. **Path Whitelisting (`paths:`)**:
+   Limit workflow runs strictly to executable code:
+   ```yaml
+   on:
+     push:
+       branches: ["**"]
+       paths:
+         - "src/**"
+         - "sim/**"
+         - "tools/**"
+         - "schemas/**"
+         - "scripts/**"
+         - "requirements*.txt"
+         - "audit.bat"
+         - "sim.bat"
+         - ".github/workflows/verification.yml"
+     pull_request:
+       paths:
+         - "src/**"
+         - "sim/**"
+         - "tools/**"
+         - "schemas/**"
+         - "scripts/**"
+         - "requirements*.txt"
+         - "audit.bat"
+         - "sim.bat"
+         - ".github/workflows/verification.yml"
+     workflow_dispatch:
+   ```
+2. **Concurrency Governance**:
+   Prevent redundant duplicate runner executions on rapid pushes:
+   ```yaml
+   concurrency:
+     group: verification-${{ github.ref }}
+     cancel-in-progress: true
+   ```
 
 ---
 

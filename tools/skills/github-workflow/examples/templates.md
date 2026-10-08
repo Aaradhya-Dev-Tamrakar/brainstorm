@@ -99,3 +99,74 @@ Closes #[ISSUE_NUMBER]
   - `sync.bat -WhatIf`: Verified dry-run status and CI bypass
 - **Tracking Anchor**: Completed subtasks [1-5] via `gh-task`. Ready for PR dispatch.
 ```
+
+---
+
+## 6. Hardened Deterministic CI Workflow Template (`.github/workflows/verification.yml`)
+
+Standard production template with path whitelisting, concurrency cancellation, and manual dispatch:
+
+```yaml
+name: Deterministic verification
+
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "src/**"
+      - "sim/**"
+      - "tools/**"
+      - "schemas/**"
+      - "scripts/**"
+      - "requirements*.txt"
+      - "audit.bat"
+      - "sim.bat"
+      - ".github/workflows/verification.yml"
+  pull_request:
+    paths:
+      - "src/**"
+      - "sim/**"
+      - "tools/**"
+      - "schemas/**"
+      - "scripts/**"
+      - "requirements*.txt"
+      - "audit.bat"
+      - "sim.bat"
+      - ".github/workflows/verification.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: verification-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Static linting and formatting gate
+        run: |
+          if command -v ruff &> /dev/null; then ruff check src/; fi
+      - name: Deterministic test suite regression
+        run: |
+          if [ -d tests ]; then pytest; fi
+      - name: Upload verification ledger artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verification-ledger
+          path: results/verification_ledger.json
+```

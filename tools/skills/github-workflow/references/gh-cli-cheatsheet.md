@@ -39,8 +39,10 @@ gh issue edit <ISSUE_NUMBER> --body "Updated body content"
 # Append progress update comment
 gh issue comment <ISSUE_NUMBER> --body "Completed refactor. Verified 116 tests passing."
 
-# Close or Reopen Issue
-gh issue close <ISSUE_NUMBER> --reason "completed"
+# Close Issue with Verification Comment & Commit Evidence
+gh issue close <ISSUE_NUMBER> --comment "Completed in commit <SHORT_SHA>. Verified 100% test pass (0 discrepancies)."
+
+# Reopen Issue
 gh issue reopen <ISSUE_NUMBER>
 ```
 
@@ -192,4 +194,29 @@ gh pr merge <PR_NUMBER> --squash --delete-branch
 
 # Rebase merge
 gh pr merge <PR_NUMBER> --rebase --delete-branch
+```
+
+---
+
+## 3. GitHub Actions & Workflow Telemetry
+
+### Inspect Workflow Runs
+```bash
+# List recent workflow runs across the repository
+gh run list
+
+# List runs for a specific workflow
+gh run list --workflow verification.yml
+
+# Watch an active run in real-time until completion
+gh run watch <RUN_ID>
+
+# View failure logs for a failed run
+gh run view <RUN_ID> --log-failed
+```
+
+### Manual Workflow Dispatch
+```bash
+# Trigger a workflow with workflow_dispatch enabled
+gh workflow run verification.yml --ref main
 ```

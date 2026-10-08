@@ -1,7 +1,7 @@
 # Graph Report - brainstorm  (2026-10-08)
 
 ## Corpus Check
-- Large corpus: 602 files · ~982,145 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
+- Large corpus: 602 files · ~982,184 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
 
 ## Summary
 - 5739 nodes · 6378 edges · 511 communities (481 shown, 16 thin omitted)
@@ -522,14 +522,14 @@
 ## Surprising Connections (you probably didn't know these)
 - `run_cli()` --calls--> `get_router()`  [EXTRACTED]
   tools/route_task.py → sim/routing_engine.py
+- `NepalLawHarvesterTests` --uses--> `CrawlPolicy`  [INFERRED]
+  sim/test_nepal_law_harvester.py → sim/nepal_law_harvester.py
 - `InvariantAssuranceEngineTests` --uses--> `InvariantClassification`  [INFERRED]
   sim/test_invariant_engine.py → sim/invariant_engine/contract_types.py
 - `InvariantAssuranceEngineTests` --uses--> `SandboxReplayEngine`  [INFERRED]
   sim/test_invariant_engine.py → sim/invariant_engine/sandbox_replay.py
 - `InvariantAssuranceEngineTests` --uses--> `SMTInvariantProver`  [INFERRED]
   sim/test_invariant_engine.py → sim/invariant_engine/smt_encoder.py
-- `NepalLawHarvesterTests` --uses--> `CircuitBreaker`  [INFERRED]
-  sim/test_nepal_law_harvester.py → sim/nepal_law_harvester.py
 
 ## Import Cycles
 - None detected.
@@ -2468,10 +2468,8 @@ Nodes (3): 1.1 The Revolutionary Fallacy vs. The Evolutionary Invariant, 1.2 The
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Skill Development for Claude Code Plugins` connect `Community 271` to `Community 480`, `Community 481`, `Community 452`, `Community 453`, `Community 454`, `Community 272`, `Community 273`?**
+- **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `1. The Core Invariant Statements` to `Community 371`, `Community 372`, `properties`, `nepal_law_harvester.py`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
-- **Why does `Program Charter: Brainstorm Research Laboratory (BRL) & Contributor Fellowship` connect `NotebookLM Grounding Source 07: BRL Fellowship, Guild Quest Engine & Onboarding` to `benchmark_runner.py`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `WordmarkProps`, `10. Key Lessons Learned`, `1. Problem Statement & Motivation` to the rest of the system?**
@@ -2482,8 +2480,10 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
 - **Should `generate_video.py` be split into smaller, more focused modules?**
   _Cohesion score 0.08687943262411348 - nodes in this community are weakly interconnected._
+- **Should `MCP Integration for Claude Code Plugins` be split into smaller, more focused modules?**
+  _Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected._
 
 ## Graph Freshness
-- **Built at commit:** `6d116c14bf4e8d22b755126677b8ba3c72d4d288`
-- **Built timestamp:** `2026-10-08T02:17:50.527498+00:00`
+- **Built at commit:** `77e23639bd119569ca2fd612d20168cb4171246a`
+- **Built timestamp:** `2026-10-08T02:31:07.334555+00:00`
 - **Lineage type:** `ancestor_snapshot`

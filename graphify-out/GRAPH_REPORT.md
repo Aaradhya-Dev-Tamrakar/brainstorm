@@ -1,4 +1,4 @@
-# Graph Report - brainstorm  (2026-10-07)
+# Graph Report - brainstorm  (2026-10-08)
 
 ## Corpus Check
 - Large corpus: 601 files · ~981,853 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
@@ -2514,8 +2514,8 @@ Nodes (3): tracking_branch, description, type
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `2026-09-28.md` to `enum`, `Gemini API Development Skill`, `Community 373`, `Community 374`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
-- **Why does `Agent Rules & Workflow Guidelines — Brainstorm & Ecosystem Orchestration` connect `references/template/sidecars/panel/main.mjs` to `ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md`?**
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+- **Why does `Research Program Charter: Nepal Information Systems Research (NISR)` connect `NotebookLM Grounding Source 07: BRL Fellowship, Guild Quest Engine & Onboarding` to `2. The 6 Flagship Compound Pipelines`?**
   _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
@@ -2529,6 +2529,6 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.08687943262411348 - nodes in this community are weakly interconnected._
 
 ## Graph Freshness
-- **Built at commit:** `1c51c6ad1a921f885b2a8176c6e4f9fe0947eaa5`
-- **Built timestamp:** `2026-10-07T11:02:42.521887+00:00`
+- **Built at commit:** `7078d5bbe86710fdaab94b9c791a1bc4d2eac978`
+- **Built timestamp:** `2026-10-08T02:16:24.612368+00:00`
 - **Lineage type:** `ancestor_snapshot`

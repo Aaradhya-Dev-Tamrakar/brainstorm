@@ -1,7 +1,7 @@
 # Graph Report - brainstorm  (2026-10-08)
 
 ## Corpus Check
-- Large corpus: 602 files · ~984,877 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
+- Large corpus: 602 files · ~984,833 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
 
 ## Summary
 - 5763 nodes · 6403 edges · 523 communities (493 shown, 16 thin omitted)
@@ -1106,7 +1106,7 @@ Nodes (12): 1. Executive Summary & The Core Breakthrough, 2. Tool Inventory: The
 
 ### Community 139 - "Document 5: Academic, Fellowship & Edge Hardware Synergies"
 Cohesion: 0.17
-Nodes (12): 🗂️ Authoritative Ecosystem Catalog, 📌 Authoritative Governance & Evidence Standards, 🧭 Core Architecture: Capability Mesh & Decoupled Cognition, 🛠️ Cross-Platform Zero-Token Verification & Simulation Launchers (`.bat` / `.sh`), ⚡ Emergent Compound Workflows, 🎯 Flagship Research Wedge: Headless Invariant Assurance Engine, 📄 License, `main` branch checks & verified enforcement (+4 more)
+Nodes (12): 🗂️ Authoritative Ecosystem Catalog, 📌 Authoritative Governance & Evidence Standards, Compound Capability Workflows, 🧭 Core Architecture: Capability Mesh & Decoupled Cognition, 🛠️ Cross-Platform Zero-Token Verification & Simulation Launchers (`.bat` / `.sh`), 🎯 Flagship Research Wedge: Headless Invariant Assurance Engine, 📄 License, `main` branch checks & verified enforcement (+4 more)
 
 ### Community 140 - "Brainstorm Research Laboratory (BRL) — Contributor Agreement"
 Cohesion: 0.17
@@ -2529,11 +2529,9 @@ Nodes (3): tracking_branch, description, type
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `1. The Core Invariant Statements` to `Community 332`, `properties`, `Community 374`, `Community 375`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
-- **Why does `Research & Product Plan: Nepal Sovereign Knowledge Graph & IDBFS Ingestion Engine` connect `sync.ps1` to `Master Frontend Design & Motion Engineering`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
 - **Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `properties` to `1. The Core Invariant Statements`, `Community 459`, `Community 460`, `Community 461`, `Community 435`, `Community 436`, `Community 437`, `Community 279`, `Community 376`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `WordmarkProps`, `10. Key Lessons Learned`, `1. Problem Statement & Motivation` to the rest of the system?**
@@ -2542,8 +2540,10 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.05548654244306418 - nodes in this community are weakly interconnected._
 - **Should `run_all_reproducibility.py` be split into smaller, more focused modules?**
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
+- **Should `generate_video.py` be split into smaller, more focused modules?**
+  _Cohesion score 0.08687943262411348 - nodes in this community are weakly interconnected._
 
 ## Graph Freshness
-- **Built at commit:** `d8982ebefa6249225e171dc3e48092f858ebda90`
-- **Built timestamp:** `2026-10-08T06:16:22.113776+00:00`
+- **Built at commit:** `b9d8a6fba85bf80a6b9262b22a7d4222e15866a4`
+- **Built timestamp:** `2026-10-08T06:22:48.341154+00:00`
 - **Lineage type:** `ancestor_snapshot`

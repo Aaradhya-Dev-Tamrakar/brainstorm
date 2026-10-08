@@ -55,38 +55,40 @@ PR-based gating remains enforced for external branches and pull requests.
 
 ## 🧭 Core Architecture: Capability Mesh & Decoupled Cognition
 
-Rather than building an isolated chatbot, this repository models tools as **autonomous, headless-callable capability modules** governed by deterministic contracts:
+The ecosystem decomposes engineering capabilities into **autonomous, headless-callable modules** governed by deterministic contracts and formal verification boundaries:
 
-```┌────────────────────────────────────────────────────────────────────────────────┐
-│ 1. EXECUTIVE ORCHESTRATION INTERFACE                                         │
-│    Vendor-Agnostic Interface │ Orchestration Root │ Verification Supervisor    │
-│    Jarvis: intended executive interface over the verified capability mesh     │
-└───────────────────────────────────────┬────────────────────────────────────────┘
-                                        │ High-Level Intent
-┌───────────────────────────────────────▼────────────────────────────────────────┐
-│ 2. ORCHESTRATION & STATE LAYER                                                 │
-│    Task Decomposition │ Worker Session Runtime (WSR) │ SQLite WAL Checkpointing │
-│    • Invariant: "The task belongs to the orchestrator, not the worker"         │
-└───────────────────────────────────────┬────────────────────────────────────────┘
-                                        │ Typed Capability Contracts
-┌───────────────────────────────────────▼────────────────────────────────────────┐
-│ 3. CAPABILITY MESH (23 Computational Engines across 27 Modules)               │
-│    • Ingestion : Screen Q&A (DOM), Super-NLM (Notebooks), Google Classroom MCP │
-│    • Compute   : Fusion 360 MCP (CAD), BiasAperture (Fairness), SPARK (Edge AI)│
-│    • Solvers   : AI Constraint Solver (Cryptarithmetic & CSP)                  │
-│    • Actuation : NovaOptimizer (Win32 NT Tuning), LocalSend MCP (mTLS P2P LAN) │
-│    • Publishing: md2pdf (LaTeX PDF), Typora MCP (HTML/CSS), RSVP Reader (HUD)   │
-└───────────────────────────────────────┬────────────────────────────────────────┘
-                                        │ Deterministic Verification & Reality
-┌───────────────────────────────────────▼────────────────────────────────────────┐
-│ 4. DETERMINISTIC VERIFICATION LAYER (The Ground Truth)                         │
-│    SMT / Z3 Solvers │ Executable Sandboxes │ Win32 NT APIs │ Automated Lints   │
-└────────────────────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    subgraph Executive ["1. Executive Orchestration Interface"]
+        Jarvis["Jarvis Supervisory Gateway<br/>Vendor-Agnostic Interface • Session Root • Verification Supervisor"]
+    end
+
+    subgraph StateLayer ["2. Orchestration & State Layer"]
+        Orch["Task Decomposition Engine<br/>Worker Session Runtime (WSR) • SQLite WAL Checkpointing"]
+        InvRule["Invariant: The task belongs to the orchestrator, not the worker"]
+        Orch --- InvRule
+    end
+
+    subgraph Mesh ["3. Capability Mesh (23 Computational Engines across 27 Modules)"]
+        Ingestion["Ingestion<br/>Screen Q&A (DOM)<br/>Super-NLM (Notebooks)<br/>Classroom MCP"]
+        Compute["Compute<br/>Fusion 360 MCP (CAD)<br/>BiasAperture (Fairness)<br/>SPARK (Edge Kinematics)"]
+        Solvers["Solvers<br/>AI Constraint Solver<br/>SMT Symbolic Verification"]
+        Actuation["Actuation & Transport<br/>NovaOptimizer (Win32 NT)<br/>LocalSend MCP (mTLS LAN)"]
+        Publishing["Publishing<br/>md2pdf (LaTeX PDF)<br/>Typora MCP (CSS/DOM)<br/>RSVP Reader (HUD)"]
+    end
+
+    subgraph GroundTruth ["4. Deterministic Verification Layer (Ground Truth)"]
+        SolversSMT["Z3 SMT Solvers • Executable Sandboxes • Win32 NT APIs • Dual-Layer Audit Gate"]
+    end
+
+    Executive -->|"High-Level Intent"| StateLayer
+    StateLayer -->|"Typed Capability Contracts"| Mesh
+    Mesh -->|"Deterministic Reality Feedback"| GroundTruth
 ```
 
-### ⚡ Emergent Compound Workflows
+### Compound Capability Workflows
 
-When autonomous modules are chained via MCP and Semantic Contracts, new workflows emerge dynamically:
+Autonomous modules combine dynamically across typed contracts and Model Context Protocol interfaces:
 
 - **Pipeline A (Rapid Learning):** `Screen Q&A` $\to$ `Super-NLM` $\to$ `md2pdf-desktop` $\to$ `RSVP Reader` (750 WPM synthesis).
 - **Pipeline B (Heavy Compute/Audit):** `Claude Fleet` $\to$ `NovaOptimizer` (RAM purge/priority) $\to$ `BiasAperture` $\to$ `Alpha-SuperApp`.
@@ -99,20 +101,22 @@ When autonomous modules are chained via MCP and Semantic Contracts, new workflow
 
 ## 🎯 Flagship Research Wedge: Headless Invariant Assurance Engine
 
-To avoid the "grand unified platform" trap, the ecosystem anchors its near-term research around a single high-leverage wedge: **Software, API & Protocol Invariant Assurance**.
+To avoid speculative platform sprawl, near-term research focuses on a specific engineering wedge: **Software, API & Protocol Invariant Assurance**.
 
-```text
-Natural-Language Specification / API Documentation
-                    ↓
-Formalization into Typed Capability Contract (E1)
-                    ↓
-Candidate Invariant Formulation
-                    ↓
-SMT Symbolic Verification (Z3 Solver)
-                    ↓
-Executable Sandbox Verification (Docker / Anvil)
-                    ↓
-Reproducible Counterexample or Evidence Dossier (E4/E5)
+```mermaid
+flowchart TD
+    NLSpec["Natural-Language Specification & API Documentation"]
+    FormalContract["Formalization into Typed Capability Contract (E1)"]
+    CandidateInv["Candidate Invariant Formulation"]
+    SMTVerify["SMT Symbolic Verification (Z3 Solver)"]
+    SandboxExec["Executable Sandbox Verification (Docker / Anvil / Win32)"]
+    EvidenceDossier["Reproducible Counterexample or Certified Ledger (E4/E5)"]
+
+    NLSpec --> FormalContract
+    FormalContract --> CandidateInv
+    CandidateInv --> SMTVerify
+    SMTVerify --> SandboxExec
+    SandboxExec --> EvidenceDossier
 ```
 
 - **Target Domain:** Software state machines, REST/FastAPI endpoints, and deterministic protocol rules.

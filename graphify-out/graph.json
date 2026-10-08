@@ -14492,7 +14492,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\uddc2\ufe0f authoritative ecosystem catalog",
       "source_file": "README.md",
-      "source_location": "L139"
+      "source_location": "L143"
     },
     {
       "id": "readme_authoritative_governance_evidence_standards",
@@ -14505,6 +14505,18 @@
       "norm_label": "\ud83d\udccc authoritative governance & evidence standards",
       "source_file": "README.md",
       "source_location": "L13"
+    },
+    {
+      "id": "readme_compound_capability_workflows",
+      "label": "Compound Capability Workflows",
+      "_origin": "ast",
+      "community": 139,
+      "community_name": "Document 5: Academic, Fellowship & Edge Hardware Synergies",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "compound capability workflows",
+      "source_file": "README.md",
+      "source_location": "L89"
     },
     {
       "id": "readme_core_architecture_capability_mesh_decoupled_cognition",
@@ -14528,19 +14540,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udee0\ufe0f cross-platform zero-token verification & simulation launchers (`.bat` / `.sh`)",
       "source_file": "README.md",
-      "source_location": "L204"
-    },
-    {
-      "id": "readme_emergent_compound_workflows",
-      "label": "\u26a1 Emergent Compound Workflows",
-      "_origin": "ast",
-      "community": 139,
-      "community_name": "Document 5: Academic, Fellowship & Edge Hardware Synergies",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\u26a1 emergent compound workflows",
-      "source_file": "README.md",
-      "source_location": "L87"
+      "source_location": "L208"
     },
     {
       "id": "readme_flagship_research_wedge_headless_invariant_assurance_engine",
@@ -14552,7 +14552,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83c\udfaf flagship research wedge: headless invariant assurance engine",
       "source_file": "README.md",
-      "source_location": "L100"
+      "source_location": "L102"
     },
     {
       "id": "readme_license",
@@ -14564,7 +14564,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udcc4 license",
       "source_file": "README.md",
-      "source_location": "L228"
+      "source_location": "L232"
     },
     {
       "id": "readme_main_branch_checks_verified_enforcement",
@@ -14588,7 +14588,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\uddd3\ufe0f near-term r&d roadmap",
       "source_file": "README.md",
-      "source_location": "L123"
+      "source_location": "L127"
     },
     {
       "id": "readme_operational_wing_brainstorm_research_laboratory_brl",
@@ -14600,7 +14600,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83c\udfdb\ufe0f operational wing: brainstorm research laboratory (brl)",
       "source_file": "README.md",
-      "source_location": "L217"
+      "source_location": "L221"
     },
     {
       "id": "readme_personal_engineering_ecosystem_r_d_infrastructure",
@@ -14624,7 +14624,7 @@
       "node_kind": "heading",
       "norm_label": "\u26a1 unified synchronization engine (`sync.ps1`)",
       "source_file": "README.md",
-      "source_location": "L176"
+      "source_location": "L180"
     },
     {
       "id": "tools_skills_modern_web_guidance_guides_built_in_ai_prompt_api",
@@ -80038,13 +80038,13 @@
     },
     {
       "source": "readme_core_architecture_capability_mesh_decoupled_cognition",
-      "target": "readme_emergent_compound_workflows",
+      "target": "readme_compound_capability_workflows",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L87",
+      "source_location": "L89",
       "weight": 1.0
     },
     {
@@ -80055,7 +80055,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L100",
+      "source_location": "L102",
       "weight": 1.0
     },
     {
@@ -80066,7 +80066,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L123",
+      "source_location": "L127",
       "weight": 1.0
     },
     {
@@ -80088,7 +80088,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L139",
+      "source_location": "L143",
       "weight": 1.0
     },
     {
@@ -80099,7 +80099,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L176",
+      "source_location": "L180",
       "weight": 1.0
     },
     {
@@ -80110,7 +80110,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L217",
+      "source_location": "L221",
       "weight": 1.0
     },
     {
@@ -80121,7 +80121,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L228",
+      "source_location": "L232",
       "weight": 1.0
     },
     {
@@ -80143,7 +80143,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L204",
+      "source_location": "L208",
       "weight": 1.0
     },
     {
@@ -136804,7 +136804,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L221",
+      "source_location": "L225",
       "weight": 1.0
     },
     {
@@ -136815,7 +136815,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L222",
+      "source_location": "L226",
       "weight": 1.0
     },
     {
@@ -136826,7 +136826,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L223",
+      "source_location": "L227",
       "weight": 1.0
     },
     {
@@ -136837,7 +136837,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L224",
+      "source_location": "L228",
       "weight": 1.0
     },
     {
@@ -139756,5 +139756,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d8982ebefa6249225e171dc3e48092f858ebda90"
+  "built_at_commit": "b9d8a6fba85bf80a6b9262b22a7d4222e15866a4"
 }

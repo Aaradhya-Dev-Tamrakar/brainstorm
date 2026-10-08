@@ -1,6 +1,6 @@
 # Issue & Pull Request Markdown Templates
 
-Standardized templates for structuring GitHub issues and pull requests to maintain high-agency team clarity.
+Standardized templates for structuring GitHub issues, milestone releases, and pull requests to maintain high-agency team clarity.
 
 ---
 
@@ -57,10 +57,45 @@ Standardized templates for structuring GitHub issues and pull requests to mainta
 Closes #[ISSUE_NUMBER]
 
 ## Verification
-- `[test command, e.g. uv run --extra dev pytest]`: [result, e.g. 85/85 passed]
-- `[lint command, e.g. uv run --extra dev ruff check src/]`: [result, e.g. 0 errors]
-- `[formatting command, e.g. uv run --extra dev ruff format --check src/]`: [result, e.g. Clean]
+| Verification Gate | Command Executed | Outcome | Status |
+| :--- | :--- | :--- | :--- |
+| **Unit / Invariant Tests** | `uv run --extra dev pytest` | 116 / 116 passed | `PASS` |
+| **Lint & Formatting** | `uv run --extra dev ruff check src/` | 0 errors | `PASS` |
+| **Self-Healing Audit** | `python scripts/ci_self_healing.py` | 0 violations, 0 secret hits | `PASS` |
 
 ## Notes for Reviewer
 [Optional notes pointing the reviewer to specific files, diffs, or design choices.]
+```
+
+---
+
+## 4. Milestone Release & SHA Integrity Template
+
+> [!IMPORTANT]
+> Never use placeholder or synthetic strings (e.g. `rel50`, `upg47`). All commit references must link to authentic 7–40 hex Git commit SHAs resolving directly on GitHub.
+
+```markdown
+## Release Summary: [Milestone Name / Version Tag]
+
+- **Target Repository**: `[Owner/Repo]`
+- **Head Commit SHA**: [`[7-char-sha]`](https://github.com/[Owner]/[Repo]/commit/[full-sha])
+- **Verified Invariants**: [e.g. 100% test pass, SMT Z3 verified, zero secret leaks]
+
+### Shipped Highlights
+- [Feature 1 with issue anchor #12]
+- [Bug fix 2 with issue anchor #15]
+```
+
+---
+
+## 5. Issue Progress Audit Comment Template
+
+```markdown
+### 🧪 Verification & Completion Summary
+- **Implementation**: [Brief summary of code additions/refactors]
+- **Verification Gates**:
+  - `pytest`: 100% pass (X tests passing)
+  - `ruff`: Clean pass (0 errors)
+  - `sync.bat -WhatIf`: Verified dry-run status and CI bypass
+- **Tracking Anchor**: Completed subtasks [1-5] via `gh-task`. Ready for PR dispatch.
 ```

@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791431877.108219,
-    "seen": 1791431883.0387938,
-    "ast_hash": "30df4c0ffa0ee9e5f3c03e368dd4db68",
-    "semantic_hash": "30df4c0ffa0ee9e5f3c03e368dd4db68"
+    "mtime": 1791437917.159099,
+    "seen": 1791437921.8542755,
+    "ast_hash": "585a1fc9371dd51f8c676617e5c9acac",
+    "semantic_hash": "585a1fc9371dd51f8c676617e5c9acac"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1791431874.693828,
-    "seen": 1791431883.0387905,
-    "ast_hash": "e512fb583b9b8d6f429b2ee0d6af536e",
-    "semantic_hash": "e512fb583b9b8d6f429b2ee0d6af536e"
+    "mtime": 1791437914.7080066,
+    "seen": 1791437921.854273,
+    "ast_hash": "fea2eaeac1f4a629e24b51ddb49ad9e1",
+    "semantic_hash": "fea2eaeac1f4a629e24b51ddb49ad9e1"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -1158,28 +1158,28 @@
     "semantic_hash": "dde485e0a985382fbbd85d1544a74653"
   },
   "tools/skills/github-workflow/SKILL.md": {
-    "mtime": 1790923941.6127644,
-    "seen": 1790928801.5749805,
-    "ast_hash": "063364c67dac3f2fe520b995622ee369",
-    "semantic_hash": "063364c67dac3f2fe520b995622ee369"
+    "mtime": 1791435731.918597,
+    "seen": 1791437921.8546355,
+    "ast_hash": "cbf11016b4255baf2b06e090a910747e",
+    "semantic_hash": "cbf11016b4255baf2b06e090a910747e"
   },
   "tools/skills/github-workflow/examples/templates.md": {
-    "mtime": 1790825797.6388931,
-    "seen": 1790828015.123524,
-    "ast_hash": "4eb615b28f3985419232b090bb15eca4",
-    "semantic_hash": "4eb615b28f3985419232b090bb15eca4"
+    "mtime": 1791432163.68247,
+    "seen": 1791437921.8546364,
+    "ast_hash": "4a40f38d96fa115bf68f506c0b2d87f1",
+    "semantic_hash": "4a40f38d96fa115bf68f506c0b2d87f1"
   },
   "tools/skills/github-workflow/references/gh-cli-cheatsheet.md": {
-    "mtime": 1790840906.3976095,
-    "seen": 1790841520.486586,
-    "ast_hash": "20e1f32b2cd1b4593dc956219cc004bc",
-    "semantic_hash": "20e1f32b2cd1b4593dc956219cc004bc"
+    "mtime": 1791432158.143733,
+    "seen": 1791437921.8546376,
+    "ast_hash": "0a1adb9b836a889e883f1d0d8c534146",
+    "semantic_hash": "0a1adb9b836a889e883f1d0d8c534146"
   },
   "tools/skills/github-workflow/references/multi-remote-sync.md": {
-    "mtime": 1790825791.5424824,
-    "seen": 1790828015.1235263,
-    "ast_hash": "b89b14a27b3236bf74b0f3502b34ffad",
-    "semantic_hash": "b89b14a27b3236bf74b0f3502b34ffad"
+    "mtime": 1791435793.618466,
+    "seen": 1791437921.8546383,
+    "ast_hash": "86e29a0605cb8ba322eec0b59b6f070a",
+    "semantic_hash": "86e29a0605cb8ba322eec0b59b6f070a"
   },
   "research/notes/2026-10-01_GEMINI_NOTEBOOKLM_WORKSPACE_REGISTRY.md": {
     "mtime": 1790828892.135625,

@@ -11,13 +11,12 @@ A concise operational reference for managing issues, branches, reviews, and pull
 # Interactive mode
 gh issue create
 
-# Direct flag-based creation
+# Direct flag-based creation with explicit assignee and labels
 gh issue create \
   --title "feat(scope): descriptive title" \
+  --assignee "AaradhyaDT" \
+  --label "enhancement" \
   --body "## Overview\nContext here...\n\n## Tasks\n- [ ] Task 1\n- [ ] Task 2"
-
-# Create with specific assignees or labels
-gh issue create --title "fix(data): bug title" --label "bug" --assignee "@me"
 ```
 
 ### View & Inspect Issues
@@ -38,7 +37,7 @@ gh issue view <ISSUE_NUMBER> --web
 gh issue edit <ISSUE_NUMBER> --body "Updated body content"
 
 # Append progress update comment
-gh issue comment <ISSUE_NUMBER> --body "Completed refactor of data ingestion pipeline. Verified 85 tests passing."
+gh issue comment <ISSUE_NUMBER> --body "Completed refactor. Verified 116 tests passing."
 
 # Close or Reopen Issue
 gh issue close <ISSUE_NUMBER> --reason "completed"
@@ -54,9 +53,18 @@ gh api -X PATCH repos/{owner}/{repo}/issues/<ISSUE_NUMBER> -f type="Task"
 ```
 
 ### Milestone & Label Management
+> [!NOTE]
+> `gh milestone` is not a native top-level command in GitHub CLI. Milestones must be queried/created via the REST API (`gh api`) or attached via `gh issue edit --milestone`.
+
 ```bash
+# List active milestones
+gh api repos/{owner}/{repo}/milestones --jq '.[] | "\(.number): \(.title) (\(.state))"'
+
+# Create a milestone
+gh api -X POST repos/{owner}/{repo}/milestones -f title="M1: Architecture Freeze" -f description="Milestone scope"
+
 # Attach issue to milestone
-gh issue edit <ISSUE_NUMBER> --milestone "M1: Schema Lock & Literature Matrix"
+gh issue edit <ISSUE_NUMBER> --milestone "M1: Architecture Freeze"
 
 # Add or remove labels
 gh issue edit <ISSUE_NUMBER> --add-label "WP4,enhancement"
@@ -115,20 +123,27 @@ gh project item-list <PROJECT_NUMBER> --owner @me --format json
 
 ---
 
-### Create a Pull Request
+## 2. Pull Request Management
+
+### Create a Pull Request (Manual CLI Standard)
 ```bash
-# Standard PR with full sidebar metadata (reviewer, assignee, labels, issue link)
 gh pr create \
   --base main \
   --head <FEATURE_BRANCH> \
   --title "feat(scope): descriptive title (#<ISSUE_NUMBER>)" \
-  --assignee "@me" \
-  --label "enhancement,WP4" \
-  --reviewer <COLLABORATOR_USERNAME> \
+  --assignee "AaradhyaDT" \
+  --reviewer "tiixsha" \
+  --label "enhancement" \
   --body "## Summary\n- Detailed changes...\n\nCloses #<ISSUE_NUMBER>\n\n## Verification\n- Tests passing."
 ```
 
-### Key GitHub Issue Linking Keywords
+### Automated BRL Pull Request Dispatch (Ecosystem Standard)
+When `sync.bat` is available in the repository root, avoid manual multi-step `git branch`, `git push`, and `gh pr create`:
+```powershell
+.\sync.bat -PR -m "feat(scope): summary" -Issue <ISSUE_NUMBER> -Reviewer <REVIEWER_HANDLE>
+```
+
+### Issue Linking Keywords
 Use any of these in the PR body to automatically close the issue upon merge:
 - `Closes #123`
 - `Fixes #123`
@@ -140,16 +155,18 @@ Use any of these in the PR body to automatically close the issue upon merge:
 gh pr view <PR_NUMBER>
 
 # View attached commits
-gh pr view <PR_NUMBER> --json commits
+gh pr view <PR_NUMBER> --json commits,assignees,reviewRequests,milestone
 
-# Check review and check runs status
+# Check status of CI workflow runs
 gh pr checks <PR_NUMBER>
+
+# Overall PR status across current branch
 gh pr status
 ```
 
 ### Request or Modify Reviewers
 ```bash
-# Add reviewer
+# Add peer reviewer
 gh pr edit <PR_NUMBER> --add-reviewer <COLLABORATOR_USERNAME>
 
 # Request team review

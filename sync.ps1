@@ -62,6 +62,11 @@
     Dry-run mode: previews changes, secret scan, and auto-generated commit message
     without modifying git repository state.
 
+.PARAMETER SkipCI
+    Appends [skip ci] to the commit message to suppress remote CI/CD workflow runs.
+    Aliases: -NoCI, -SkipActions. Automatically enabled if all staged changes are
+    non-code/documentation (e.g. research/, report/, graphify-out/, *.md).
+
 .PARAMETER PullRequest
     Automates the BRL Pull Request workflow: derives a branch slug from conventional commit
     message, creates an isolated feature branch, executes all local verification gates
@@ -83,6 +88,7 @@
 
 .EXAMPLE
     .\sync.ps1                               # Routine sync of active branch
+    .\sync.ps1 -SkipCI                       # Sync with [skip ci] to bypass remote GitHub Actions
     .\sync.ps1 -PR -m "feat(p2p): campus swarm marketplace" -Issue 42 # BRL PR workflow
     .\sync.ps1 -PR -m "fix(aria2): path detection" -Reviewer teammate # BRL PR with reviewer
     .\sync.ps1 -b SPARK                      # Switch to SPARK branch and sync
@@ -94,6 +100,7 @@
     .\sync.ps1 -NewTool "NovaVision"         # Provision a new tool branch across ecosystem
     .\sync.ps1 -m "docs: architecture notes" # Sync with custom commit message
     .\sync.ps1 -WhatIf                       # Dry-run preview
+    .\sync.ps1 -WhatIf -SkipCI               # Dry-run preview with CI suppression
     .\sync.ps1 -Status                       # Show full ecosystem telemetry
 #>
 
@@ -133,6 +140,9 @@ param (
     [switch]$NoReconcile,
 
     [switch]$NoGraphify,
+
+    [Alias("NoCI", "SkipActions")]
+    [switch]$SkipCI,
 
     [switch]$WhatIf,
 
@@ -359,6 +369,61 @@ function Find-StagedSecrets {
     return @($hits)
 }
 
+function Test-IsNonCodeFile {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$FilePath
+    )
+
+    $normalized = $FilePath.Replace('\', '/').Trim()
+
+    # Core code / CI-affecting assets: never non-code
+    if ($normalized -match '^(sim|tools|schemas|scripts|\.github)/') { return $false }
+    if ($normalized -match '(^|/)requirements.*\.txt$') { return $false }
+    if ($normalized -match '\.(py|sh|bat|cmd|ps1|ts|js|tsx|jsx|c|cpp|h|cs|rs|go)$') { return $false }
+
+    # Explicit non-code directories
+    if ($normalized -match '^(research|report|graphify-out|\.obsidian|\.agents|templates|scratch)/') { return $true }
+
+    # Non-code file extensions
+    if ($normalized -match '\.(md|markdown|tex|bib|pdf|png|jpe?g|gif|svg|csv|drawio|docx|pptx|xlsx|txt|log)$') { return $true }
+
+    # Non-code configuration / documentation root files
+    if ($normalized -match '(^|/)(\.gitignore|\.graphifyignore|\.syncignore-secrets|\.mcp\.json|\.env\.example|LICENSE)$') { return $true }
+
+    # Default to false for unrecognized files
+    return $false
+}
+
+function Test-ShouldSkipCI {
+    param(
+        [switch]$ExplicitSkipCI,
+        [string[]]$StagedFiles
+    )
+
+    if ($ExplicitSkipCI) {
+        return @{ Skip = $true; Reason = "explicit -SkipCI flag" }
+    }
+
+    if (-not $StagedFiles -or $StagedFiles.Count -eq 0) {
+        return @{ Skip = $false; Reason = "no staged files" }
+    }
+
+    $allNonCode = $true
+    foreach ($f in $StagedFiles) {
+        if (-not (Test-IsNonCodeFile -FilePath $f)) {
+            $allNonCode = $false
+            break
+        }
+    }
+
+    if ($allNonCode) {
+        return @{ Skip = $true; Reason = "all staged files are non-code/documentation" }
+    }
+
+    return @{ Skip = $false; Reason = "staged changes contain code/executable assets" }
+}
+
 function Get-AutoCommitMessage {
     param([string]$ActiveBranch = "main")
 
@@ -522,6 +587,8 @@ function Get-FeatureBranchSlug {
     )
 
     $cleanMsg = $Message.Trim()
+    # Strip [skip ci] / [ci skip] / [no ci] tags from branch slug
+    $cleanMsg = ($cleanMsg -replace '(?i)\s*\[(skip ci|ci skip|no ci)\]\s*', ' ').Trim()
 
     # Extract issue from message if not provided explicitly (e.g. "feat(p2p): campus swarm (#42)")
     if (-not $Issue -and $cleanMsg -match '\(#(?<iss>\d+)\)$') {
@@ -1164,6 +1231,9 @@ try {
             }
             $targetTitle = if ($Message) { $Message } else { (git log -1 --pretty=format:"%s" 2>$null) }
             if (-not $targetTitle) { $targetTitle = "docs($currentBranch): update workspace files" }
+            if ($SkipCI -and $targetTitle -notmatch '(?i)\[(skip ci|ci skip|no ci)\]') {
+                $targetTitle = "$targetTitle [skip ci]"
+            }
             Invoke-BrlPullRequest -FeatureBranch $currentBranch -Title $targetTitle -Issue $Issue -Reviewer $Reviewer
             exit 0
         }
@@ -1177,7 +1247,15 @@ try {
                 }
             }
             else {
-                Write-Success "Working directory clean and synchronized with origin. Nothing to commit."
+                if ($WhatIf) {
+                    Write-Success "[WhatIf] Working directory clean and synchronized with origin. Nothing to commit."
+                    if ($SkipCI) {
+                        Write-Notice "[WhatIf] CI Workflow Suppression : Active (-SkipCI)"
+                    }
+                }
+                else {
+                    Write-Success "Working directory clean and synchronized with origin. Nothing to commit."
+                }
             }
             exit 0
         }
@@ -1198,7 +1276,21 @@ try {
         }
         $candidateMsg = if ($Message) { $Message } else { Get-AutoCommitMessage -ActiveBranch $currentBranch }
         if (-not $candidateMsg) { $candidateMsg = "feat: update workspace files" }
+
+        # CI Skip check
+        $stagedFiles = @(git diff --cached --name-only 2>$null)
+        $ciCheck = Test-ShouldSkipCI -ExplicitSkipCI:$SkipCI -StagedFiles $stagedFiles
+        if ($ciCheck.Skip -and $candidateMsg -notmatch '(?i)\[(skip ci|ci skip|no ci)\]') {
+            $candidateMsg = "$candidateMsg [skip ci]"
+        }
+
         Write-Notice "[WhatIf] Commit message: '$candidateMsg'"
+        if ($ciCheck.Skip) {
+            Write-Notice "[WhatIf] CI Workflow       : Suppressed ([skip ci] active - $($ciCheck.Reason))"
+        }
+        else {
+            Write-Notice "[WhatIf] CI Workflow       : Enabled (executable/code assets present)"
+        }
 
         if ($PullRequest) {
             $previewBranch = if ($currentBranch -eq "main") { Get-FeatureBranchSlug -Message $candidateMsg -Issue $Issue } else { $currentBranch }
@@ -1325,6 +1417,16 @@ try {
             $Message = "docs($currentBranch): update workspace files"
         }
         Write-Notice "Auto-generated commit message: '$Message'"
+    }
+
+    # 5.1 CI/CD Workflow Suppression Check
+    $stagedFiles = @(git diff --cached --name-only 2>$null)
+    $ciCheck = Test-ShouldSkipCI -ExplicitSkipCI:$SkipCI -StagedFiles $stagedFiles
+    if ($ciCheck.Skip) {
+        Write-Notice "CI workflow suppression active: $($ciCheck.Reason)"
+        if ($Message -notmatch '(?i)\[(skip ci|ci skip|no ci)\]') {
+            $Message = "$Message [skip ci]"
+        }
     }
 
     # 6. Commit changes

@@ -3,7 +3,34 @@ name: Deterministic verification
 on:
   push:
     branches: ["**"]
+    paths:
+      - "sim/**"
+      - "tools/**"
+      - "schemas/**"
+      - "scripts/**"
+      - "requirements*.txt"
+      - "audit.bat"
+      - "audit.sh"
+      - "sim.bat"
+      - "sim.sh"
+      - ".github/workflows/verification.yml"
   pull_request:
+    paths:
+      - "sim/**"
+      - "tools/**"
+      - "schemas/**"
+      - "scripts/**"
+      - "requirements*.txt"
+      - "audit.bat"
+      - "audit.sh"
+      - "sim.bat"
+      - "sim.sh"
+      - ".github/workflows/verification.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: verification-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read

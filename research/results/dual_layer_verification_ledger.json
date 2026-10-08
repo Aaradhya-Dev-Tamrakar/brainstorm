@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-08T08:16:06.913001+05:45",
-  "evaluated_commit": "77e23639bd119569ca2fd612d20168cb4171246a",
+  "timestamp": "2026-10-08T09:42:57.070324+05:45",
+  "evaluated_commit": "669921fb7a6a0e8716a8c27e9d1a125fb4ea4cc0",
   "lineage_type": "ancestor_snapshot",
   "provenance_note": "Persisted snapshot from pre-commit reconciliation; automated CI generates per-run ledger matching exact tested HEAD.",
   "layer_1_structural_consistency": {

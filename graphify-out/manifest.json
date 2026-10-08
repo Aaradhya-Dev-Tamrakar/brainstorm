@@ -6,10 +6,10 @@
     "semantic_hash": "1f807d3a09fa490b7f5315226b97cf4b"
   },
   "schemas/ecosystem.registry.json": {
-    "mtime": 1791425780.389928,
-    "seen": 1791425789.618584,
-    "ast_hash": "ebfe27301c04b0cb01b2021815fad55e",
-    "semantic_hash": "ebfe27301c04b0cb01b2021815fad55e"
+    "mtime": 1791440564.0635467,
+    "seen": 1791440574.8846076,
+    "ast_hash": "df815ae55a9ccd7b3f49e4ab46057b7f",
+    "semantic_hash": "df815ae55a9ccd7b3f49e4ab46057b7f"
   },
   "schemas/examples/AI-Constraint-Solver.contract.json": {
     "mtime": 1790044861.17107,
@@ -102,10 +102,10 @@
     "semantic_hash": "5b018a5335bcfda1d7e220f7b2eaa4d8"
   },
   "schemas/capability-ontology.md": {
-    "mtime": 1791370473.0608819,
-    "seen": 1791370505.368901,
-    "ast_hash": "a22d00e104a7d6df73bc1a11f3ee1a76",
-    "semantic_hash": "a22d00e104a7d6df73bc1a11f3ee1a76"
+    "mtime": 1791440564.0685554,
+    "seen": 1791440574.88503,
+    "ast_hash": "801125f7741415c4f4eda711ab3748b1",
+    "semantic_hash": "801125f7741415c4f4eda711ab3748b1"
   },
   "schemas/evidence-policy.md": {
     "mtime": 1790044861.17107,
@@ -138,10 +138,10 @@
     "semantic_hash": "361e8dd333417f7e3bcd00d97cd29842"
   },
   "README.md": {
-    "mtime": 1791370473.0583835,
-    "seen": 1791370505.368746,
-    "ast_hash": "6a5705a22d01ac5e745fe89f7878c236",
-    "semantic_hash": "6a5705a22d01ac5e745fe89f7878c236"
+    "mtime": 1791440520.2239723,
+    "seen": 1791440574.8848298,
+    "ast_hash": "aeaa58dd2ad3324c6cad38cc41cad168",
+    "semantic_hash": "aeaa58dd2ad3324c6cad38cc41cad168"
   },
   "research/architectures/README.md": {
     "mtime": 1790240407.9593427,
@@ -192,10 +192,10 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1791362565.6340365,
-    "seen": 1791362770.6911712,
-    "ast_hash": "b642e7bbf69a96bddaaa61200d9d9048",
-    "semantic_hash": "b642e7bbf69a96bddaaa61200d9d9048"
+    "mtime": 1791440564.0695567,
+    "seen": 1791440574.8848214,
+    "ast_hash": "075f49798b4605756173ebcfde07d0b9",
+    "semantic_hash": "075f49798b4605756173ebcfde07d0b9"
   },
   "report/economic-model.md": {
     "mtime": 1790234914.4392133,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791440181.7035427,
-    "seen": 1791440187.196416,
-    "ast_hash": "2b1bf57536198cc315126f55e768382d",
-    "semantic_hash": "2b1bf57536198cc315126f55e768382d"
+    "mtime": 1791440567.9521942,
+    "seen": 1791440574.8846004,
+    "ast_hash": "954d9538c339081e7f4716051340d6d3",
+    "semantic_hash": "954d9538c339081e7f4716051340d6d3"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1791440179.2292564,
-    "seen": 1791440187.1964142,
-    "ast_hash": "461b22a38b6624fc7d573e9c5899888c",
-    "semantic_hash": "461b22a38b6624fc7d573e9c5899888c"
+    "mtime": 1791440565.586777,
+    "seen": 1791440574.8845975,
+    "ast_hash": "2f69e4831d13e91cd7a87f12c19c9228",
+    "semantic_hash": "2f69e4831d13e91cd7a87f12c19c9228"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,

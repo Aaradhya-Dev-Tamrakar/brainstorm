@@ -1,6 +1,6 @@
 {
-  "built_at_commit": "d8982ebefa6249225e171dc3e48092f858ebda90",
-  "built_timestamp": "2026-10-08T06:16:22.113776+00:00",
+  "built_at_commit": "b9d8a6fba85bf80a6b9262b22a7d4222e15866a4",
+  "built_timestamp": "2026-10-08T06:22:48.341154+00:00",
   "lineage_type": "ancestor_snapshot",
   "communities": {
     "0": [
@@ -3217,9 +3217,9 @@
     "139": [
       "readme_authoritative_ecosystem_catalog",
       "readme_authoritative_governance_evidence_standards",
+      "readme_compound_capability_workflows",
       "readme_core_architecture_capability_mesh_decoupled_cognition",
       "readme_cross_platform_zero_token_verification_simulation_launchers_bat_sh",
-      "readme_emergent_compound_workflows",
       "readme_flagship_research_wedge_headless_invariant_assurance_engine",
       "readme_license",
       "readme_main_branch_checks_verified_enforcement",
@@ -7451,17 +7451,12 @@
     {
       "type": "bridge_node",
       "question": "Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `1. The Core Invariant Statements` to `Community 332`, `properties`, `Community 374`, `Community 375`?",
-      "why": "High betweenness centrality (0.009) - this node is a cross-community bridge."
-    },
-    {
-      "type": "bridge_node",
-      "question": "Why does `Research & Product Plan: Nepal Sovereign Knowledge Graph & IDBFS Ingestion Engine` connect `sync.ps1` to `Master Frontend Design & Motion Engineering`?",
-      "why": "High betweenness centrality (0.007) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.014) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
       "question": "Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `properties` to `1. The Core Invariant Statements`, `Community 459`, `Community 460`, `Community 461`, `Community 435`, `Community 436`, `Community 437`, `Community 279`, `Community 376`?",
-      "why": "High betweenness centrality (0.007) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.010) - this node is a cross-community bridge."
     },
     {
       "type": "verify_inferred",
@@ -7482,6 +7477,11 @@
       "type": "low_cohesion",
       "question": "Should `run_all_reproducibility.py` be split into smaller, more focused modules?",
       "why": "Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `generate_video.py` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.08687943262411348 - nodes in this community are weakly interconnected."
     }
   ]
 }

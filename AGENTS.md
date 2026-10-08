@@ -1,6 +1,6 @@
 # Agent Rules & Workflow Guidelines — Brainstorm & Ecosystem Orchestration
 
-Welcome, Agent. This repository (`F:\Aaradhya-Dev-Tamrakar\brainstorm`) serves as the **central architectural brain, R&D incubator, and capability mesh root** for Aaradhya's personal tool ecosystem across 27 tool modules (23 computational engines, 4 presentation hubs) and 31 Git tracking branches.
+Welcome, Agent. This repository (`F:\Aaradhya-Dev-Tamrakar\brainstorm`) serves as the **central architectural brain, R&D incubator, and capability mesh root** for Aaradhya's personal tool ecosystem across 27 tool modules (23 computational engines, 4 presentation hubs) and 32 Git tracking branches.
 
 To preserve repository integrity, avoid merge collisions, eliminate hallucinated claims, and maintain zero-drift deterministic verification, you **MUST** strictly adhere to the following operating principles.
 

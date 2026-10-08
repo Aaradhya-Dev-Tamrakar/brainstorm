@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791443994.4544039,
-    "seen": 1791443999.8836129,
-    "ast_hash": "cd6bec0280e0a4650cfe8d4b47bf9122",
-    "semantic_hash": "cd6bec0280e0a4650cfe8d4b47bf9122"
+    "mtime": 1791469416.470868,
+    "seen": 1791469422.31407,
+    "ast_hash": "1ccbd14576ca4dc0f2eef8473d32a9ef",
+    "semantic_hash": "1ccbd14576ca4dc0f2eef8473d32a9ef"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1791443992.127865,
-    "seen": 1791443999.8836112,
-    "ast_hash": "822b5af6681c9f073f474f439ab7e805",
-    "semantic_hash": "822b5af6681c9f073f474f439ab7e805"
+    "mtime": 1791469414.0454974,
+    "seen": 1791469422.3140671,
+    "ast_hash": "1ba39fe5f0b157f7ac1a01a6db006a50",
+    "semantic_hash": "1ba39fe5f0b157f7ac1a01a6db006a50"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -876,10 +876,10 @@
     "semantic_hash": "7d778793512114b09a97e27b0d5c1e65"
   },
   "tools/skills/README.md": {
-    "mtime": 1791306813.6083732,
-    "seen": 1791306860.0454907,
-    "ast_hash": "00c5964582a0e1c3b3450648632168d0",
-    "semantic_hash": "00c5964582a0e1c3b3450648632168d0"
+    "mtime": 1791469373.1353023,
+    "seen": 1791469422.3146286,
+    "ast_hash": "33a444f900c0daed229dbaf39f21a13a",
+    "semantic_hash": "33a444f900c0daed229dbaf39f21a13a"
   },
   "tools/skills/agent-teams-orchestration/SKILL.md": {
     "mtime": 1791443948.1802576,
@@ -3568,5 +3568,59 @@
     "seen": 1791426673.580262,
     "ast_hash": "ffe546a458ab1db44352f317dd124fd8",
     "semantic_hash": "ffe546a458ab1db44352f317dd124fd8"
+  },
+  "tools/skills/academic-notebook-architect/scripts/batch_provision_fleet.py": {
+    "mtime": 1791467811.7246585,
+    "seen": 1791469422.3142962,
+    "ast_hash": "5caf6f98644c33c95875cd74d374643b",
+    "semantic_hash": "5caf6f98644c33c95875cd74d374643b"
+  },
+  "tools/skills/academic-notebook-architect/scripts/scaffold_semester.py": {
+    "mtime": 1791467807.4017088,
+    "seen": 1791469422.3142986,
+    "ast_hash": "4b5d4a1f6e21208a51912222a667e347",
+    "semantic_hash": "4b5d4a1f6e21208a51912222a667e347"
+  },
+  "tools/skills/academic-notebook-architect/SKILL.md": {
+    "mtime": 1791467802.4450574,
+    "seen": 1791469422.3146305,
+    "ast_hash": "227db416f8c9e154b5b61f03cb54106a",
+    "semantic_hash": "227db416f8c9e154b5b61f03cb54106a"
+  },
+  "tools/skills/academic-notebook-architect/references/fleet_integration.md": {
+    "mtime": 1791467821.7408364,
+    "seen": 1791469422.3146324,
+    "ast_hash": "09db5dccd01876d1797cd5c0f2bb3c68",
+    "semantic_hash": "09db5dccd01876d1797cd5c0f2bb3c68"
+  },
+  "tools/skills/academic-notebook-architect/references/scaffolding_invariants.md": {
+    "mtime": 1791467817.4482405,
+    "seen": 1791469422.3146338,
+    "ast_hash": "6334585e1fadb9b8bdefca8efd702027",
+    "semantic_hash": "6334585e1fadb9b8bdefca8efd702027"
+  },
+  "tools/skills/cold-storage-archiver/SKILL.md": {
+    "mtime": 1791205816.1541233,
+    "seen": 1791469422.314756,
+    "ast_hash": "960a2767d3c22c499e6f9a6517db7130",
+    "semantic_hash": "960a2767d3c22c499e6f9a6517db7130"
+  },
+  "tools/skills/fleet-orchestrator/SKILL.md": {
+    "mtime": 1791467834.406661,
+    "seen": 1791469422.3147817,
+    "ast_hash": "194816d55b5927328826b7e618242310",
+    "semantic_hash": "194816d55b5927328826b7e618242310"
+  },
+  "tools/skills/fleet-orchestrator/references/sku_dag_reference.md": {
+    "mtime": 1791467838.9468732,
+    "seen": 1791469422.3147836,
+    "ast_hash": "91cd20b8a566918b69f7013e94a67875",
+    "semantic_hash": "91cd20b8a566918b69f7013e94a67875"
+  },
+  "tools/skills/fleet-orchestrator/references/worker_architecture.md": {
+    "mtime": 1791467842.3669753,
+    "seen": 1791469422.3147852,
+    "ast_hash": "94508e883b16f662c33e499372f0474c",
+    "semantic_hash": "94508e883b16f662c33e499372f0474c"
   }
 }

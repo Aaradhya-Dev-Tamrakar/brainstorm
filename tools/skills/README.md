@@ -7,7 +7,7 @@
 
 ---
 
-## 📊 Complete Master Skills Matrix (Origin & Workflow Usage) (54 Skills)
+## 📊 Complete Master Skills Matrix (Origin & Workflow Usage) (57 Skills)
 
 | Category | Skill Name | Path | Origin | Usage in Workflow Pipeline |
 | :--- | :--- | :--- | :--- | :--- |
@@ -17,6 +17,8 @@
 | | [`google-classroom`](google-classroom/SKILL.md) | `tools/skills/google-classroom/` | Brainstorm Education Ecosystem | **Academic Task Tracking Phase:** Queries active courses, coursework assignments, due dates, submission grades, and student turn-ins via Classroom MCP. |
 | | [`super-nlm`](super-nlm/SKILL.md) | `tools/skills/super-nlm/` | `super-nlm` R&D Project (`95a79d26...` personal notebook) | **Research Synthesis Phase:** Multi-account rotation, NotebookLM MCP fleet querying, Drive folder sync, and cross-notebook synthesis. |
 | | [`super-nlm-downloads`](super-nlm-downloads/SKILL.md) | `tools/skills/super-nlm-downloads/` | `super-nlm` R&D Project | **Artifact Export Phase:** Automates URL downloads of Studio artifacts (audio overviews, mind maps, quizzes, videos) and dispatches LocalSend sharing. |
+| | [`academic-notebook-architect`](academic-notebook-architect/SKILL.md) | `tools/skills/academic-notebook-architect/` | `super-nlm` / IOE Curriculum | **Curriculum Provisioning Phase:** Scaffolds semester subject note folders, aggregates past exams, synthesizes `StudyHub.md`, provisions Super-NLM fleet notebooks, and registers auto-sync bindings. |
+| | [`cold-storage-archiver`](cold-storage-archiver/SKILL.md) | `tools/skills/cold-storage-archiver/` | OmniVault Ecosystem (`~/.omnivault`) | **Cold-Storage Archival Phase:** Autonomous Store Mode (`-m0`) packaging, recovery records (`-rr5%`), 10GB cloud volume slicing, and catalog SQLite indexing. |
 | **Codebase Graph & Systems** | [`graphify`](graphify/SKILL.md) | `tools/skills/graphify/` | Brainstorm Knowledge Core (`graphify-out/`) | **Exploration & Onboarding Phase:** Generates persistent codebase knowledge graph (`GRAPH_REPORT.md`), executing BFS (`query`), DFS, and shortest path (`path`). |
 | | [`graphify-code-search`](graphify-code-search/SKILL.md) | `tools/skills/graphify-code-search/` | Brainstorm Knowledge Core | **Implementation Reuse Phase:** Traces caller/callee AST chains, discovers existing helpers, and eliminates duplicate implementation work via graph queries. |
 | | [`graphify-optimizer`](graphify-optimizer/SKILL.md) | `tools/skills/graphify-optimizer/` | Brainstorm Knowledge Core (`graphify.ps1`) | **Knowledge Optimization Phase:** Eliminates leaf-node spur noise, configures `.graphifyignore`, executes directed/code-only AST builds, and labels communities. |
@@ -31,6 +33,7 @@
 | | [`pr-review-toolkit`](pr-review-toolkit/SKILL.md) | `tools/skills/pr-review-toolkit/` | Global Antigravity Config | **Code Review Phase:** Conducts specialized multi-perspective PR reviews (code simplification, silent failure hunting, test quality, type design audit). |
 | | [`review-bugbot`](review-bugbot/SKILL.md) | `tools/skills/review-bugbot/` | Ecosystem Automated QA | **Adversarial Audit Sub-Workflow:** Deep scan targeting subtle concurrency bugs, race conditions, edge-case null pointer dereferences, and regressions. |
 | **Multi-Agent Swarm Delegation** | [`agent-teams-orchestration`](agent-teams-orchestration/SKILL.md) | `tools/skills/agent-teams-orchestration/` | Brainstorm R&D (`FLEET-001` / `/teamwork-preview`) | **Autonomous Swarm Phase:** Activated by `/teamwork-preview`. Coordinates Scout-Reviewer-Writer-Lead roles, branch isolation, and Obsidian graph compilation. |
+| | [`fleet-orchestrator`](fleet-orchestrator/SKILL.md) | `tools/skills/fleet-orchestrator/` | `Fleet-Orchestrator` Swarm (`FLEET-001`) | **Headless Swarm Dispatch Phase:** Autonomous multi-model SKU task execution, worker pool git worktree isolation, task queue dispatching, and background synthesis. |
 | **Frontend, Motion & Design** | [`design-taste-frontend`](design-taste-frontend/SKILL.md) | `tools/skills/design-taste-frontend/` | Portfolio UI Core (`AaradhyaDT.github.io`) | **UI Engineering Phase:** Master design system for high-agency UI, typography, micro-contrast, calibrated color tokens, overriding generic AI defaults. |
 | | [`frontend-design`](frontend-design/SKILL.md) | `tools/skills/frontend-design/` | Portfolio UI Core | **Visual Framing Phase:** Sets aesthetic direction, layout visual hierarchy, spatial grid alignment, and typography selection for web apps. |
 | | [`antigravity-ui-motion-design-expert`](antigravity-ui-motion-design-expert/SKILL.md) | `tools/skills/antigravity-ui-motion-design-expert/` | Portfolio UI Core | **Motion Physics Phase:** Controls GSAP timelines, 3D spatial CSS transforms, tilt card interactions, and glassmorphic elevation layers. |

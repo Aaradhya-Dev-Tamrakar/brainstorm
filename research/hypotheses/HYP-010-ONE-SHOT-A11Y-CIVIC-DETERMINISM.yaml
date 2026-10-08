@@ -1,0 +1,36 @@
+id: HYP-010
+title: "Pre-Flight Multimodal Dossier Verification Guarantees One-Shot Public Administrative Task Completion for Persons with Disabilities in Nepal"
+author: "Aaradhya Dev Tamrakar"
+date: "2026-10-08"
+
+# Theoretical Justification
+hypothesis: >
+  In the public administrative ecosystem of Nepal, over 80% of procedural rejections and repeat counter visits
+  endured by citizens with disabilities (seeking Disability Identity Cards under the Act Relating to Rights of
+  Persons with Disabilities 2074, social security pensions, or assistive device subsidies) stem from pre-departure
+  document non-compliance (missing medical assessment stamps, uncertified hospital endorsements, and lack of ward
+  residence sifarish). By deploying a client-side multimodal pre-flight verification engine coupled with a deterministic
+  statutory Directed Acyclic Graph (DAG) and Devanagari auditory conversational navigation, first-visit completion rates
+  at municipal and ward desks can be elevated to >= 95%, effectively collapsing the average physical visit count from
+  3.4 trips to 1.0 trip and eliminating out-of-pocket transportation and intermediary exploitation costs.
+why_we_believe_it: >
+  Under Section 4 and 5 of the Act Relating to Rights of Persons with Disabilities 2074 and Rule 3 of Rules 2077,
+  prerequisite document arrays for the 4 disability tiers (Red, Blue, Yellow, White) are legally deterministic and finite.
+  Document rejection at public counters occurs primarily because citizens discover unwritten procedural conditions
+  (e.g., specific hospital committee endorsements, photo postures, or ward sifarish) only after arriving at the office.
+  By shifting document validation to home via computer vision and conversational audio guidance before travel begins,
+  administrative failure modes are caught and rectified in advance with zero travel cost.
+counterargument: >
+  Public counter decisions for disability card issuance in Nepal ultimately depend on physical evaluation by the
+  Local Level Coordination Committee (स्थानीय समन्वय समिति) headed by the Deputy Mayor/Vice-Chairperson.
+  Even if the documentation is 100% complete, committee quorum cancellations, arbitrary administrative discretion,
+  or disputes over disability classification tier (e.g., Red vs. Blue) may still force subsequent visits that software
+  cannot prevent.
+
+# Experimental Falsification Protocol
+target_experiment: "EXP-A11Y-001"
+success_metric: "Multimodal pre-flight triage achieves >= 98% precision and recall in detecting missing or invalid statutory prerequisites across a 50-dossier simulated test cohort, with 0 false-green approvals for defective documents"
+failure_condition: "Pre-flight vision model achieves < 90% recall on missing municipal stamps or uncertified medical reports, leading to false-positive travel authorization for incomplete dossiers"
+
+# Lifecycle State: proposed | active | verified | falsified | retired
+status: proposed

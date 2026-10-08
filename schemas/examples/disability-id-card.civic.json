@@ -1,0 +1,93 @@
+{
+  "$schema": "https://aaradhyadt.dev/schemas/nepal-civic-service.v1.json",
+  "service_id": "NEP-CIVIC-A11Y-001",
+  "canonical_name_ne": "अपाङ्गता परिचयपत्र सिफारिस तथा वितरण",
+  "canonical_name_en": "Disability Identity Card Recommendation and Issuance",
+  "category": "social_security",
+  "jurisdiction_level": "palika_headquarters",
+  "governing_statutes": [
+    {
+      "act_name_ne": "अपाङ्गता भएका व्यक्तिको अधिकार सम्बन्धी ऐन, २०७४",
+      "act_name_en": "Act Relating to Rights of Persons with Disabilities, 2074",
+      "section_clause": "दफा ४, ५ र ६",
+      "gazette_reference": "२०७४/०६/२९"
+    },
+    {
+      "act_name_ne": "अपाङ्गता भएका व्यक्तिको अधिकार सम्बन्धी नियमावली, २०७७",
+      "act_name_en": "Rules Relating to Rights of Persons with Disabilities, 2077",
+      "section_clause": "नियम ३ (स्थानीय समन्वय समिति)",
+      "gazette_reference": "२०७७/०९/२७"
+    },
+    {
+      "act_name_ne": "स्थानीय सरकार सञ्चालन ऐन, २०७४",
+      "act_name_en": "Local Government Operation Act, 2074",
+      "section_clause": "दफा १२ (२) ङ (३)",
+      "gazette_reference": "२०७४/०६/२९"
+    }
+  ],
+  "prerequisites": [
+    {
+      "document_name_ne": "अपाङ्गता भएका व्यक्तिको अधिकार सम्बन्धी नियमावली, २०७७ को अनुसूची १ बमोजिमको भरिएको निवेदन फाराम",
+      "document_name_en": "Filled Application Form pursuant to Schedule 1 of Disability Rules 2077",
+      "mandatory": true,
+      "issuing_authority_level": "palika_headquarters",
+      "digital_verification_available": true,
+      "notes_ne": "वडा कार्यालय वा पालिकाको सामाजिक विकास शाखाबाट निःशुल्क प्राप्त हुने फाराम"
+    },
+    {
+      "document_name_ne": "नेपाल सरकारबाट मान्यता प्राप्त स्वास्थ्य संस्था वा विशेषज्ञ चिकित्सकको अपाङ्गता प्रमाणित हुने स्वास्थ्य परीक्षण प्रतिवेदन वा सिफारिस",
+      "document_name_en": "Medical Assessment Report or Recommendation from Recognized Health Institution or Specialist Doctor",
+      "mandatory": true,
+      "issuing_authority_level": "health_institution",
+      "digital_verification_available": false,
+      "notes_ne": "चिकित्सकको नेपाल मेडिकल काउन्सिल (NMC) नम्बर, हस्ताक्षर र अस्पतालको आधिकारिक छाप अनिवार्य"
+    },
+    {
+      "document_name_ne": "सम्बन्धित वडा कार्यालयको स्थायी बसोबास तथा अपाङ्गता परिचयपत्रको लागि सिफारिस पत्र",
+      "document_name_en": "Permanent Residence and Disability ID Card Recommendation Letter from Concerned Ward Office",
+      "mandatory": true,
+      "issuing_authority_level": "ward_secretariat",
+      "digital_verification_available": true,
+      "notes_ne": "स्थानीय वडा सचिव वा वडा अध्यक्षको हस्ताक्षरसहितको सक्कल सिफारिस"
+    },
+    {
+      "document_name_ne": "नेपाली नागरिकताको प्रमाणपत्रको प्रतिलिपि (नाबालकको हकमा जन्मदर्ता र बाबु वा आमाको नागरिकताको प्रतिलिपि)",
+      "document_name_en": "Copy of Nepali Citizenship Certificate (Birth Certificate and Parents' Citizenship for Minors)",
+      "mandatory": true,
+      "issuing_authority_level": "district_administration_office",
+      "digital_verification_available": true,
+      "notes_ne": "सक्कल कागजात रुजु गर्न साथमा ल्याउनुपर्ने"
+    },
+    {
+      "document_name_ne": "अपाङ्गताको प्रकृति स्पष्ट देखिने हालसालै खिचिएको ३ प्रति पासपोर्ट साइजको फोटो",
+      "document_name_en": "3 Passport Size Photographs clearly showing the nature of disability (if visible)",
+      "mandatory": true,
+      "issuing_authority_level": "citizen",
+      "digital_verification_available": false,
+      "notes_ne": "दुवै कान स्पष्ट देखिने, सेतो पृष्ठभूमि भएको फोटो"
+    }
+  ],
+  "fee_structure": {
+    "is_statutory_free": true,
+    "standard_fee_npr": 0,
+    "grace_period_days": 0,
+    "late_fine_formula": "कुनै पनि विलम्ब शुल्क नलाग्ने (कानून बमोजिम पूर्णतः निःशुल्क)",
+    "legal_schedule_reference": "अपाङ्गता भएका व्यक्तिको अधिकार सम्बन्धी ऐन, २०७४ दफा ५"
+  },
+  "statutory_sla": {
+    "max_duration_unit": "working_days",
+    "max_duration_value": 1,
+    "sla_display_ne": "कागजात रुजु भई स्थानीय समन्वय समितिको बैठकबाट निर्णय भएको दिन सोही दिन"
+  },
+  "responsible_desk": {
+    "branch_name_ne": "सामाजिक विकास शाखा (महिला, बालबालिका तथा ज्येष्ठ नागरिक / अपाङ्गता फाँट)",
+    "branch_name_en": "Social Development Branch (Disability Section)",
+    "officer_title_ne": "महिला तथा बालबालिका अधिकृत / अपाङ्गता सम्पर्क व्यक्ति",
+    "appeal_officer_title_ne": "स्थानीय समन्वय समितिका संयोजक (नगर उपप्रमुख वा गाउँपालिका उपाध्यक्ष)"
+  },
+  "digital_integration": {
+    "nagarik_app_supported": true,
+    "versp_mis_integrated": true,
+    "portal_url": "https://socialsecurity.gov.np"
+  }
+}

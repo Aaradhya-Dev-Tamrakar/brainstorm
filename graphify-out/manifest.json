@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791469416.470868,
-    "seen": 1791469422.31407,
-    "ast_hash": "1ccbd14576ca4dc0f2eef8473d32a9ef",
-    "semantic_hash": "1ccbd14576ca4dc0f2eef8473d32a9ef"
+    "mtime": 1791469896.5691462,
+    "seen": 1791469900.8681092,
+    "ast_hash": "ba7c0e2a6555520dae001b8c11f44d4f",
+    "semantic_hash": "ba7c0e2a6555520dae001b8c11f44d4f"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1791469414.0454974,
-    "seen": 1791469422.3140671,
-    "ast_hash": "1ba39fe5f0b157f7ac1a01a6db006a50",
-    "semantic_hash": "1ba39fe5f0b157f7ac1a01a6db006a50"
+    "mtime": 1791469894.3525033,
+    "seen": 1791469900.8681073,
+    "ast_hash": "5dd46a76e4b62f4ed1991eec5a7a4f2d",
+    "semantic_hash": "5dd46a76e4b62f4ed1991eec5a7a4f2d"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -3622,5 +3622,17 @@
     "seen": 1791469422.3147852,
     "ast_hash": "94508e883b16f662c33e499372f0474c",
     "semantic_hash": "94508e883b16f662c33e499372f0474c"
+  },
+  "schemas/examples/disability-id-card.civic.json": {
+    "mtime": 1791469858.459476,
+    "seen": 1791469900.8681235,
+    "ast_hash": "05d7a4ab957c18e0814708db6410ffec",
+    "semantic_hash": "05d7a4ab957c18e0814708db6410ffec"
+  },
+  "research/plans/PLAN-A11Y-001_ONE_SHOT_CIVIC_ACCESS_ENGINE_FOR_DISABILITIES.md": {
+    "mtime": 1791469848.5144289,
+    "seen": 1791469900.8683474,
+    "ast_hash": "78ae33393ebc087652bfe35d960f7269",
+    "semantic_hash": "78ae33393ebc087652bfe35d960f7269"
   }
 }

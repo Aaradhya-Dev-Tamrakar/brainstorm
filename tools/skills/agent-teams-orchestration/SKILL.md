@@ -14,38 +14,92 @@ Activate this skill whenever the user asks to:
 - Run bounded overnight work ("I sleep, the machine stays awake").
 - Perform multi-role research or refactoring with adversarial review.
 - Follow the Ayush Kumar Shah / Claude Code Agent Teams pattern.
+- Execute or delegate via `/agent-teams-orchestration` or `/teamwork-preview`.
 
 ---
 
-## 1. The Core Agent Team Architecture
+## 1. Concrete Subagent Mapping (Antigravity Runtime)
 
-Whenever orchestrating non-trivial research, architecture review, or deep refactoring, decompose the workflow into four specialized roles:
+In Antigravity, subagents are spawned via the native `invoke_subagent` tool using registered types (`research` and `self`). 
+
+> [!IMPORTANT]
+> **Do NOT use `TypeName: "teamwork_preview"`**. In standard Antigravity environments, `teamwork_preview` is an unregistered or disabled preview engine (`subagent "teamwork_preview" not found or not allowed`). Always spawn native Antigravity subagent types directly:
+
+| Role | Antigravity Type | Model | Capabilities & Sandbox | Target Scratch Buffer |
+| :--- | :--- | :--- | :--- | :--- |
+| **Scout** | `research` | `flash` | Read-only codebase explorer, file reader, web/URL search. High speed, zero speculation. | `research/scratch/scout_<task>.md` |
+| **Reviewer** | `self` | `pro` | Adversarial skeptic. Runs tests, audits edge cases, checks SMT invariants, hunts unearned claims. | `research/scratch/review_<task>.md` |
+| **Writer** | `self` (or Lead) | `inherit` | Synthesizes strictly from reviewed evidence. Drafts final target deliverables. | `research/notes/<task>.md` |
+| **Lead** | *Main Session* | *Current* | Orchestrator. Dispatches subagents, arbitrates conflicts, enforces token/step budgets, compiles graph links. | Final delivery & git tracking |
+
+---
+
+## 2. Mandatory Autonomous Execution Protocol
+
+**When this skill is activated to execute a task, the Lead agent MUST NOT perform the entire exploration and review serially in the main thread.** The Lead agent must execute the following dispatch lifecycle:
 
 ```mermaid
 flowchart TD
-    Lead["👑 Lead Agent (Orchestrator)<br/>Owns final synthesis, enforces bounds & budget, resolves conflicts"]
-    Scout["🔍 Scout Agent (Model: flash)<br/>Finds papers, repos, source IDs, and extracts raw data"]
-    Reviewer["⚔️ Reviewer Agent (Model: pro)<br/>Adversarial skeptic: challenges claims, hunts silent bugs & edge cases"]
-    Writer["✍️ Writer Agent (Model: inherit)<br/>Drafts strictly from reviewed evidence into isolated files"]
+    Lead["👑 Lead Agent (Main Thread)<br/>1. Creates research/scratch/<br/>2. Dispatches Scout via invoke_subagent"]
+    Scout["🔍 Scout Subagent (research, Model: flash)<br/>Extracts raw symbols, paths, citations<br/>Writes to research/scratch/scout_<task>.md"]
+    Reviewer["⚔️ Reviewer Subagent (self, Model: pro)<br/>Adversarial audit & edge cases<br/>Writes to research/scratch/review_<task>.md"]
+    Delivery["✍️ Synthesis & Delivery<br/>Compiles into target notes + [[wikilinks]]<br/>Cleans scratch buffers or links daily note"]
 
-    Lead -->|Dispatches prompt with budget| Scout
-    Scout -->|Outputs sources & citations| Reviewer
-    Reviewer -->|Stress-tested & vetted claims| Writer
-    Writer -->|Working draft| Lead
-    Lead -->|Commit & link| KnowledgeGraph["Obsidian Vault / Git Branch"]
+    Lead -->|invoke_subagent| Scout
+    Scout -->|Reactive Wakeup Message| Lead
+    Lead -->|invoke_subagent with Scout Output| Reviewer
+    Reviewer -->|Reactive Wakeup Message| Lead
+    Lead --> Delivery
 ```
 
-### Role Invariants:
-1. **Scout (`Model: 'flash'`):** Fast, high-throughput information retrieval. Must output explicit source IDs, DOIs, URLs, or file paths. Never theorizes.
-2. **Reviewer (`Model: 'pro'`):** The adversarial skeptic. Searches for methodology flaws, unearned claims, performance traps, and edge cases. Applies epistemic governance (`ARCH-RFC-001`).
-3. **Writer (`Model: 'inherit'`):** Synthesizes exclusively from *reviewed* evidence. **Rule:** If a claim was not validated by the Reviewer, it cannot enter the draft.
-4. **Lead (The Primary Agent):** Owns final delivery, arbitrates deadlocks, and enforces stopping criteria.
+### Step 1: Pre-flight Isolation Setup
+Ensure the scratch directory exists before dispatching:
+- Create `research/scratch/` if it does not exist.
+- Ensure subagents are assigned strictly disjoint file targets.
+
+### Step 2: Dispatch the Scout Subagent
+Call `invoke_subagent` with `TypeName: "research"`, `Model: "flash"`, and a bounded prompt:
+```json
+{
+  "Subagents": [
+    {
+      "TypeName": "research",
+      "Model": "flash",
+      "Role": "Scout: <Domain Task>",
+      "Prompt": "You are the Scout agent. Find relevant sources, symbol definitions, file paths, and empirical data for <task>. Write your raw findings to research/scratch/scout_<task>.md. Never theorize or speculate. Stop once complete."
+    }
+  ]
+}
+```
+*Stop calling tools to wait for the runtime's reactive wakeup upon Scout completion.*
+
+### Step 3: Dispatch the Reviewer Subagent
+Upon receiving the Scout's report, dispatch the Reviewer via `invoke_subagent` with `TypeName: "self"` and `Model: "pro"`:
+```json
+{
+  "Subagents": [
+    {
+      "TypeName": "self",
+      "Model": "pro",
+      "Role": "Reviewer: <Domain Task>",
+      "Prompt": "You are the Reviewer agent (Adversarial Skeptic). Audit the Scout's findings in research/scratch/scout_<task>.md. Verify claims, test edge cases, and run relevant validation scripts. Record approved findings and flagged risks in research/scratch/review_<task>.md."
+    }
+  ]
+}
+```
+*Stop calling tools to wait for reactive completion.*
+
+### Step 4: Final Synthesis & Knowledge Graph Grounding
+The Lead agent (or a dispatched Writer) compiles the approved findings into the permanent target document:
+1. Every claim must have a verbatim source link beside it.
+2. Ground the document into the Obsidian knowledge base using `[[Concept]]` and `[[Project]]` wikilinks.
+3. Classify claims using `ARCH-RFC-001` epistemic tiers: `FORMALLY_PROVEN`, `EMPIRICALLY_VERIFIED`, or `HEURISTIC_HYPOTHESIS`.
 
 ---
 
-## 2. Concurrency & Isolation Invariants (CRITICAL)
+## 3. Concurrency & Isolation Invariants (CRITICAL)
 
-To avoid race conditions, file corruption, and infinite loops:
+To prevent race conditions, file corruption, and multi-agent merge collisions:
 
 1. **Strict File Separation:**
    Subagents **MUST NEVER** edit the same file concurrently. 
@@ -53,20 +107,20 @@ To avoid race conditions, file corruption, and infinite loops:
    - Reviewer writes to: `research/scratch/review_<task>.md`
    - Writer compiles to the target note: `research/notes/<YYYY-MM-DD>_<task>.md`
 2. **Workspace Isolation (`invoke_subagent`):**
-   When subagents perform code refactors or deep tests, specify `Workspace: 'branch'` to fork an isolated git worktree so concurrent workers do not collide.
+   When subagents perform code refactoring or test runs, specify `Workspace: 'branch'` to fork an isolated git worktree so concurrent workers do not collide.
 3. **Reactive Wakeups (Zero-Polling):**
    Never spin up an agent and poll in a `while` loop. Let the subagent complete asynchronously; the runtime automatically wakes the Lead agent upon completion.
 
 ---
 
-## 3. Bounded Execution Safeguards ("I sleep, the machine stays awake")
+## 4. Bounded Execution Safeguards ("I sleep, the machine stays awake")
 
 For long-running or overnight tasks, **NEVER launch unbounded loops**. Always establish:
 
 1. **Explicit Stop Criteria:**
-   - E.g., *"Stop after evaluating 3 papers"* or *"Halt when all 5 unit tests pass"*.
+   - E.g., *"Stop after evaluating 3 papers"* or *"Halt when all unit tests pass"*.
 2. **Budget & Iteration Caps:**
-   - Cap tool calls and subagent recursions to prevent runaway API spend.
+   - Cap subagent recursions to prevent runaway token spend.
 3. **Pre-flight Sandbox:**
    - Commit work to an isolated feature branch (`git checkout -b feature/...`).
    - Never push unverified overnight code directly to `main`.
@@ -78,36 +132,11 @@ For long-running or overnight tasks, **NEVER launch unbounded loops**. Always es
 
 ---
 
-## 4. Grounding & Obsidian Knowledge Graph Integration
+## 5. Integration with `/teamwork-preview`
 
-Every team output must link into the user's permanent knowledge base:
-1. **Source Links Beside Claims:** Include verbatim citations beside every finding.
-2. **Obsidian Wikilinks:** Use `[[Concept]]` and `[[Project]]` links to attach the note to existing graph nodes (e.g. `[[README]]`, `[[PROFILE]]`, or project specifications).
-3. **Epistemic Classification:** Tag findings as `FORMALLY_PROVEN`, `EMPIRICALLY_VERIFIED`, or `HEURISTIC_HYPOTHESIS`.
-
----
-
-## 5. Automatic Hook into `/teamwork-preview` Slash Command
-
-Whenever the user invokes `/teamwork-preview` or asks to delegate a project to a teamwork swarm, **this skill automatically binds into the 9-step prompt drafting process (`prompt_draft.md`)**:
-
-1. **Step 2 (Ambiguity, Roles & Scale):**
-   - Structure the project request around the **Scout**, **Reviewer**, **Writer**, and **Lead** cognitive division of labor.
-   - For research/audits, explicitly open the prompt with:
-     ```text
-     Create a team with specialized roles:
-     Scout: find relevant sources, papers, and code symbols.
-     Reviewer: challenge claims, audit edge cases, and stress-test assumptions.
-     Writer: draft strictly from reviewed evidence.
-     Lead: owns the final brief, enforces budget, and resolves conflicts.
-     ```
-2. **Step 3 (Integrity Mode):**
-   - Automatically configure integrity with `ARCH-RFC-001` epistemic provenance: *"Source links stay beside imported claims."*
-3. **Step 4 & 5 (Requirements & Verification):**
-   - Mandate concurrency isolation: *"Use separate working files."* or `Workspace: 'branch'`.
-   - Never allow agents to edit the same file simultaneously.
-4. **Step 6 (Acceptance Criteria & Hard Bounding):**
-   - Enforce bounded stopping criteria: *"Stop after N items or agreed step budget."*
-   - Require passing deterministic tests or reconciliation before self-certifying.
-5. **Step 8 & 9 (Working Directory & Delivery):**
-   - Ensure the final deliverable compiles into the Obsidian knowledge graph (`[[wikilinks]]`) and writes a summary into today's daily log (`daily-note.md`).
+When the user invokes `/teamwork-preview` or requests an interactive multi-agent project plan:
+1. Use `prompt_draft.md` to elicit requirements and define acceptance criteria.
+2. In Step 2 (Requested team), configure the Scout-Reviewer-Writer division of labor.
+3. When the user approves ("go" / "launch"):
+   - **Do NOT** call `invoke_subagent(TypeName: "teamwork_preview")`.
+   - **DO** execute the Autonomous Execution Protocol above: call `invoke_subagent(TypeName: "research", Model: "flash")` for the Scout phase, followed by the Reviewer phase.

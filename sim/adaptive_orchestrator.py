@@ -1179,6 +1179,7 @@ class FleetFirstBridge:
         output_dir: Optional[str] = None,
         kind: str = "code",
         parent_id: Optional[str] = None,
+        timeout: float = 420.0,
     ) -> Dict[str, Any]:
         """Generates declarative Fleet-Orchestrator task JSON conforming to SCHEMA.md."""
         slug = re.sub(r"[^a-zA-Z0-9_\-]+", "-", title.lower()).strip("-")[:40]
@@ -1207,6 +1208,7 @@ class FleetFirstBridge:
             "priority": priority,
             "assigned_worker": None,
             "max_retries": 3,
+            "timeout": timeout,
         }
 
         target_dir = output_dir or r"F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator\orchestrator-state\tasks"

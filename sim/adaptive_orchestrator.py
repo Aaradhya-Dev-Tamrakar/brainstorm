@@ -1027,7 +1027,7 @@ class FleetFirstBridge:
         try:
             flags = 0
             if sys.platform == "win32":
-                flags = subprocess.CREATE_NEW_PROCESS_GROUP | 0x00000008  # DETACHED_PROCESS
+                flags = subprocess.CREATE_NEW_PROCESS_GROUP | subprocess.CREATE_NO_WINDOW
 
             with open(log_file, "a", encoding="utf-8") as out_f:
                 subprocess.Popen(

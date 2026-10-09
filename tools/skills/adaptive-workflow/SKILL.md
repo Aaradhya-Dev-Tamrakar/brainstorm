@@ -2,6 +2,9 @@
 name: adaptive-workflow
 description: This skill should be used when the user asks to "plan a workflow", "orchestrate my task", "run standard development workflow", "coordinate my project", "execute workflow", "adapt workflow to task", "orchestrate multi-skill task", or mentions managing end-to-end tasks across engineering, research, frontend, systems, or academic domains.
 version: 3.5.0
+created_date: 2026-10-09
+locked_date: 2026-10-09
+status: LOCKED_BASELINE
 ---
 
 # Adaptive Workflow Orchestrator (`adaptive-workflow`)
@@ -217,3 +220,14 @@ Consult these dedicated documents for detailed matrices, protocols, and working 
 - **[`references/cross-tool-chains.md`](references/cross-tool-chains.md)**: 6 high-value cross-repository execution pipelines.
 - **[`references/skill-matrix.md`](references/skill-matrix.md)**: Complete archetype lookup table mapping domains to physical repositories, primary skills, and verification commands.
 - **[`examples/routing-scenarios.md`](examples/routing-scenarios.md)**: 8 concrete walkthroughs including Commander-marshaled Fleet Army execution and multi-repo synchronization.
+
+---
+
+## 10. Baseline Lock & Historical Provenance
+
+> **Day of Creation & Version Lock Invariant (`INV-EPI-002`)**:
+> - **Creation Date**: 2026-10-09
+> - **Baseline Lock**: 2026-10-09
+> - **Specification Version**: `v3.5.0-locked`
+> - **Principal Architect**: Aaradhya Dev Tamrakar
+> - **Historical Description**: Locked on 2026-10-09 as the official Day of Creation of the Adaptive Workflow meta-orchestrator. Establishes the authoritative operational baseline governing all 28 personal tool modules, the Sovereign-Commander-Fleet hierarchy, the 2D Orthogonal Execution Matrix, and cross-IDE customization state synchronization.

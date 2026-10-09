@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791531316.4058726,
-    "seen": 1791531320.6791666,
-    "ast_hash": "1a53036ae3cee3c8d5687142f68582f9",
-    "semantic_hash": "1a53036ae3cee3c8d5687142f68582f9"
+    "mtime": 1791532094.3276582,
+    "seen": 1791532101.883368,
+    "ast_hash": "98cf8925e5e73e0af68f3db7ce74d51e",
+    "semantic_hash": "98cf8925e5e73e0af68f3db7ce74d51e"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1791531314.251489,
-    "seen": 1791531320.679165,
-    "ast_hash": "c425bc072b71d86da996396ca13c317c",
-    "semantic_hash": "c425bc072b71d86da996396ca13c317c"
+    "mtime": 1791532091.4979632,
+    "seen": 1791532101.8833656,
+    "ast_hash": "b02faf7747d54d55a5ad222ecc7be25b",
+    "semantic_hash": "b02faf7747d54d55a5ad222ecc7be25b"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -3780,10 +3780,10 @@
     "semantic_hash": ""
   },
   "tools/skills/adaptive-workflow/SKILL.md": {
-    "mtime": 1791530017.799946,
-    "seen": 1791530271.7422888,
-    "ast_hash": "c598796552aab6df9040177bef5ccae2",
-    "semantic_hash": "c598796552aab6df9040177bef5ccae2"
+    "mtime": 1791531992.196,
+    "seen": 1791532101.8837483,
+    "ast_hash": "f127daab650f952233b0b715d1213646",
+    "semantic_hash": "f127daab650f952233b0b715d1213646"
   },
   "tools/skills/adaptive-workflow/examples/routing-scenarios.md": {
     "mtime": 1791528099.560626,
@@ -3892,5 +3892,11 @@
     "seen": 1791531320.6794765,
     "ast_hash": "ea53b69d9313f2520faf55f48547eabd",
     "semantic_hash": "ea53b69d9313f2520faf55f48547eabd"
+  },
+  "research/notes/2026-10-09_MILESTONE_ADAPTIVE_WORKFLOW_CREATION.md": {
+    "mtime": 1791532051.5050802,
+    "seen": 1791532101.8836875,
+    "ast_hash": "f8c33d432493f693b2c94ea4bae19022",
+    "semantic_hash": "f8c33d432493f693b2c94ea4bae19022"
   }
 }

@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791547891.9362512,
-    "seen": 1791547898.7548535,
-    "ast_hash": "27985f955227373aed3467b9c4d7b4bd",
-    "semantic_hash": "27985f955227373aed3467b9c4d7b4bd"
+    "mtime": 1791547975.6205304,
+    "seen": 1791547983.3276165,
+    "ast_hash": "a1f2109994c76f3725ff43ac0142b05a",
+    "semantic_hash": "a1f2109994c76f3725ff43ac0142b05a"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -2299,9 +2299,9 @@
   },
   ".mcp.json": {
     "mtime": 1791211589.4039154,
-    "seen": 1791547498.575132,
-    "ast_hash": "",
-    "semantic_hash": ""
+    "seen": 1791547983.3275704,
+    "ast_hash": "28136d52f8c466fd93e00c713b7fa4f6",
+    "semantic_hash": "28136d52f8c466fd93e00c713b7fa4f6"
   },
   "tools/skills/bitwarden/SKILL.md": {
     "mtime": 1791211624.794008,

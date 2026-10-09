@@ -971,16 +971,21 @@ class FleetFirstBridge:
         "notebook-architect": "academic-notebook-architect",
         "academic-notebook": "academic-notebook-architect",
         "embedded-firmware-compiler": "embedded-firmware-scaffold",
+        "embedded-firmware-processor": "embedded-firmware-scaffold",
+        "embedded-firmware-driver": "embedded-firmware-scaffold",
+        "firmware-driver": "embedded-firmware-scaffold",
         "firmware-scaffold": "embedded-firmware-scaffold",
         "embedded-firmware": "embedded-firmware-scaffold",
         "embedded-firmware-adapter": "embedded-firmware-scaffold",
         "embedded-firmware-scaffolder": "embedded-firmware-scaffold",
+        "embedded-firmware-processor": "embedded-firmware-scaffold",
         "academic-workflow": "adaptive-workflow",
         "adaptive-orchestrator": "adaptive-workflow",
         "colab": "colab-cloud-accelerator",
         "colab-accelerator": "colab-cloud-accelerator",
         "colab-cloud": "colab-cloud-accelerator",
         "colab-mcp": "colab-cloud-accelerator",
+        "super-nlm-quantum": "colab-cloud-accelerator",
     }
 
     @classmethod
@@ -1086,22 +1091,69 @@ class FleetFirstBridge:
         }
 
     @classmethod
-    def route_intent(cls, prompt: str) -> Dict[str, Any]:
+    def _compute_fallback_time_allocation(cls, prompt: str, archetype: str, tier: str, policy: str) -> Dict[str, Any]:
+        """Computes deterministic duration and timeout allocation bounds from prompt semantics."""
+        p = prompt.lower()
+        word_count = len(prompt.split())
+
+        if policy == "FLEET_SWARM" or any(k in p for k in ["batch", "swarm", "fleet", "worker pool"]):
+            duration_s = 240
+            time_tier = "T3_LONG"
+            route = "FLEET_WORKER"
+        elif policy == "STAR_SUBAGENTS" or any(k in p for k in ["scaffold", "pipeline", "syllabus"]):
+            duration_s = 120
+            time_tier = "T2_MEDIUM"
+            route = "SUBAGENT"
+        elif policy == "SURGICAL_LOCK" or any(k in p for k in ["refactor", "audit", "access.js"]):
+            duration_s = 75
+            time_tier = "T2_MEDIUM"
+            route = "SUBAGENT"
+        elif tier == "Tier 2" or word_count > 25:
+            duration_s = 50
+            time_tier = "T1_FAST"
+            route = "SUBAGENT"
+        elif word_count < 8 and policy == "DIRECT_FAST":
+            duration_s = 12
+            time_tier = "T0_MICRO"
+            route = "DIRECT_FAST"
+        else:
+            duration_s = 35
+            time_tier = "T1_FAST"
+            route = "DIRECT_FAST"
+
+        timeout_s = min(1200, max(30, int(duration_s * 2.2)))
+        cpm_w = round(max(0.5, duration_s / 30.0), 2)
+
+        return {
+            "tier": time_tier,
+            "estimated_duration_s": duration_s,
+            "timeout_ceiling_s": timeout_s,
+            "cpm_weight": cpm_w,
+            "execution_route": route,
+        }
+
+    @classmethod
+    def route_intent(cls, prompt: str, force_heuristic: bool = False) -> Dict[str, Any]:
         """Routes intent through LM Studio port 1234 if active, else uses deterministic fallback."""
         start = time.perf_counter()
 
-        if cls.is_lm_studio_online():
+        if not force_heuristic and not os.environ.get("FORCE_HEURISTIC_ROUTING") and cls.is_lm_studio_online():
             payload = {
                 "model": "qwen-intent-router",
                 "messages": [
                     {
                         "role": "system",
-                        "content": "Classify user intent into archetype, tier, matrix_cell, policy, primary_skill in JSON.",
+                        "content": (
+                            "You are the high-speed Intent, Skill, and Task Time Allocation Router for the Aaradhya development ecosystem. "
+                            "Classify the incoming user intent into the exact lifecycle archetype, tier, 2D matrix cell, "
+                            "primary skill, supporting skills, velocity profile, and task time allocation (tier, estimated_duration_s, "
+                            "timeout_ceiling_s, cpm_weight, execution_route) in strict JSON format."
+                        ),
                     },
                     {"role": "user", "content": prompt},
                 ],
                 "temperature": 0.0,
-                "max_tokens": 150,
+                "max_tokens": 220,
             }
             try:
                 data = json.dumps(payload).encode("utf-8")
@@ -1125,6 +1177,14 @@ class FleetFirstBridge:
                     ps = result.get("primary_skill")
                     if ps in cls.SKILL_ALIASES:
                         result["primary_skill"] = cls.SKILL_ALIASES[ps]
+
+                    if "time_allocation" not in result:
+                        result["time_allocation"] = cls._compute_fallback_time_allocation(
+                            prompt,
+                            result.get("archetype", "ENGINEERING_DEV"),
+                            result.get("tier", "Tier 1"),
+                            result.get("policy", "DIRECT_FAST"),
+                        )
                     return result
             except Exception:
                 pass
@@ -1137,61 +1197,27 @@ class FleetFirstBridge:
 
         p = prompt.lower()
         if any(k in p for k in ["iv-ii", "iv-i", "syllabus", "semester", "super-nlm", "notebooklm", "notes"]):
-            return {
-                "archetype": "RESEARCH_ACADEMIC",
-                "tier": "Tier 2",
-                "matrix_cell": "(V1, R1)",
-                "policy": "STAR_SUBAGENTS",
-                "primary_skill": "academic-notebook-architect",
-                "latency_ms": round(elapsed, 2),
-                "source": "deterministic_heuristic",
-            }
+            arch, tier, cell, pol, pskill = "RESEARCH_ACADEMIC", "Tier 2", "(V1, R1)", "STAR_SUBAGENTS", "academic-notebook-architect"
         elif any(k in p for k in ["firmware", "dsp", "radar", "stm32", "freertos", "filter"]):
-            return {
-                "archetype": "DOMAIN_HARDWARE",
-                "tier": "Tier 2",
-                "matrix_cell": "(V0, R1)",
-                "policy": "BRANCH_GUARD",
-                "primary_skill": "embedded-firmware-scaffold",
-                "latency_ms": round(elapsed, 2),
-                "source": "deterministic_heuristic",
-            }
+            arch, tier, cell, pol, pskill = "DOMAIN_HARDWARE", "Tier 2", "(V0, R1)", "BRANCH_GUARD", "embedded-firmware-scaffold"
         elif any(k in p for k in ["portfolio", "aaradhyadt.github.io", "access.js", "navbar", "css"]):
-            return {
-                "archetype": "FRONTEND_PRODUCT",
-                "tier": "Tier 1",
-                "matrix_cell": "(V0, R2)" if "access.js" in p else "(V0, R1)",
-                "policy": "SURGICAL_LOCK" if "access.js" in p else "BRANCH_GUARD",
-                "primary_skill": "portfolio-project-manager",
-                "latency_ms": round(elapsed, 2),
-                "source": "deterministic_heuristic",
-            }
+            arch, tier, cell, pol, pskill = "FRONTEND_PRODUCT", "Tier 1", "(V0, R2)" if "access.js" in p else "(V0, R1)", "SURGICAL_LOCK" if "access.js" in p else "BRANCH_GUARD", "portfolio-project-manager"
         elif any(k in p for k in ["swarm", "fleet", "worker", "copilot-w"]):
-            return {
-                "archetype": "SWARM_ORCHESTRATION",
-                "tier": "Tier 2",
-                "matrix_cell": "(V2, R0)",
-                "policy": "FLEET_SWARM",
-                "primary_skill": "fleet-orchestrator",
-                "latency_ms": round(elapsed, 2),
-                "source": "deterministic_heuristic",
-            }
+            arch, tier, cell, pol, pskill = "SWARM_ORCHESTRATION", "Tier 2", "(V2, R0)", "FLEET_SWARM", "fleet-orchestrator"
         elif any(k in p for k in ["colab", "gpu", "tpu", "fine-tune", "unsloth", "cuda"]):
-            return {
-                "archetype": "SWARM_ORCHESTRATION",
-                "tier": "Tier 1",
-                "matrix_cell": "(V1, R1)",
-                "policy": "STAR_SUBAGENTS",
-                "primary_skill": "colab-cloud-accelerator",
-                "latency_ms": round(elapsed, 2),
-                "source": "deterministic_heuristic",
-            }
+            arch, tier, cell, pol, pskill = "SWARM_ORCHESTRATION", "Tier 1", "(V1, R1)", "STAR_SUBAGENTS", "colab-cloud-accelerator"
+        else:
+            arch, tier, cell, pol, pskill = "ENGINEERING_DEV", "Tier 1", "(V0, R0)", "DIRECT_FAST", "github-workflow"
+
+        time_alloc = cls._compute_fallback_time_allocation(prompt, arch, tier, pol)
+
         return {
-            "archetype": "ENGINEERING_DEV",
-            "tier": "Tier 1",
-            "matrix_cell": "(V0, R0)",
-            "policy": "DIRECT_FAST",
-            "primary_skill": "github-workflow",
+            "archetype": arch,
+            "tier": tier,
+            "matrix_cell": cell,
+            "policy": pol,
+            "primary_skill": pskill,
+            "time_allocation": time_alloc,
             "latency_ms": round(elapsed, 2),
             "source": "deterministic_heuristic",
         }
@@ -1208,12 +1234,17 @@ class FleetFirstBridge:
         parent_id: Optional[str] = None,
         timeout: float = 420.0,
     ) -> Dict[str, Any]:
-        """Generates declarative Fleet-Orchestrator task JSON conforming to SCHEMA.md."""
+        """Generates declarative Fleet-Orchestrator task JSON conforming to SCHEMA.md with dynamic time allocation."""
         slug = re.sub(r"[^a-zA-Z0-9_\-]+", "-", title.lower()).strip("-")[:40]
         timestamp = int(time.time())
         iso_now = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
         canonical_id = f"task_{timestamp}_{slug}"
         legacy_task_id = f"TASK-{timestamp}-{slug}"
+
+        # Route through local SLM or fallback to resolve dynamic timeout
+        routing = cls.route_intent(prompt)
+        time_alloc = routing.get("time_allocation", {})
+        dynamic_timeout = float(time_alloc.get("timeout_ceiling_s", timeout)) if timeout == 420.0 else timeout
 
         task_data = {
             "id": canonical_id,
@@ -1235,7 +1266,15 @@ class FleetFirstBridge:
             "priority": priority,
             "assigned_worker": None,
             "max_retries": 3,
-            "timeout": timeout,
+            "timeout": dynamic_timeout,
+            "time_allocation": time_alloc,
+            "routing": {
+                "archetype": routing.get("archetype"),
+                "tier": routing.get("tier"),
+                "matrix_cell": routing.get("matrix_cell"),
+                "policy": routing.get("policy"),
+                "primary_skill": routing.get("primary_skill"),
+            },
         }
 
         target_dir = output_dir or r"F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator\orchestrator-state\tasks"

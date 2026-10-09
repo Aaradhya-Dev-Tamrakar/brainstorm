@@ -12,6 +12,7 @@ import sys
 import stat
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 
 # Add brainstorm root to sys.path
@@ -37,6 +38,13 @@ from sim.adaptive_orchestrator import (
 
 class TestAdaptiveOrchestrator(unittest.TestCase):
     """Test suite certifying deterministic invariants for adaptive orchestration."""
+
+    def setUp(self):
+        # Isolate regression tests to deterministic heuristic ground truth
+        os.environ["FORCE_HEURISTIC_ROUTING"] = "1"
+
+    def tearDown(self):
+        os.environ.pop("FORCE_HEURISTIC_ROUTING", None)
 
     def test_01_antigravity_memory_guard(self):
         """Validates 2.5 GB free headroom assertion and 500 MB model ceiling."""
@@ -492,7 +500,8 @@ class TestAdaptiveOrchestrator(unittest.TestCase):
         self.assertEqual(rpg_violations, [], f"RPG terms found in adaptive-workflow docs: {rpg_violations}")
         self.assertEqual(emoji_violations, [], f"Emojis found in adaptive-workflow docs: {emoji_violations}")
 
-    def test_19_colab_intent_routing_and_aliases(self):
+    @mock.patch.object(FleetFirstBridge, "is_lm_studio_online", return_value=False)
+    def test_19_colab_intent_routing_and_aliases(self, _mock_online):
         """Verifies Colab Cloud Accelerator heuristic routing and skill aliases."""
         # Test alias resolution
         self.assertEqual(FleetFirstBridge.SKILL_ALIASES.get("colab"), "colab-cloud-accelerator")

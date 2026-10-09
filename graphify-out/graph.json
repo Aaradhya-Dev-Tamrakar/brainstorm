@@ -35196,8 +35196,8 @@
       "file_type": "document",
       "frontmatter": {
         "name": "slm-router-forge",
-        "description": "Autonomous end-to-end Small Language Model (SLM) forge and local routing engine. Use whenever asked to &quot;tune an intent router&quot;, &quot;train a local classifier&quot;, &quot;fine-tune Qwen on Colab&quot;, &quot;export GGUF for local inference&quot;, &quot;upload model to Google Drive&quot;, &quot;run model in LM Studio&quot;, or mentions training sub-1B parameter models (e.g., Qwen 0.5B/0.8B LoRA via Unsloth) for low-latency (&lt;50ms) intent discovery and skill routing.",
-        "version": "1.0.0"
+        "description": "Autonomous end-to-end Small Language Model (SLM) forge, local routing engine, and task time allocation synthesizer. Use whenever asked to &quot;tune an intent router&quot;, &quot;train a local classifier&quot;, &quot;fine-tune Qwen on Colab&quot;, &quot;export GGUF for local inference&quot;, &quot;harvest task time dataset&quot;, &quot;allocate task execution timeout&quot;, &quot;upload model to Google Drive&quot;, &quot;run model in LM Studio&quot;, or mentions training sub-1B parameter models (e.g., Qwen ",
+        "version": "1.2.0"
       },
       "node_kind": "page",
       "norm_label": "slm-router-forge/skill.md",
@@ -35205,14 +35205,14 @@
       "source_location": "L1"
     },
     {
-      "id": "tools_skills_slm_router_forge_skill_1_architectural_philosophy_the_decoupled_router_pattern",
-      "label": "1. Architectural Philosophy: The Decoupled Router Pattern",
+      "id": "tools_skills_slm_router_forge_skill_1_architectural_philosophy_the_decoupled_router_time_allocation_pattern",
+      "label": "1. Architectural Philosophy: The Decoupled Router & Time Allocation Pattern",
       "_origin": "ast",
       "community": 260,
       "community_name": "ARCH-PLAN-003: Intelligent Systems Engineering & Research Conversion Roadmap",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "1. architectural philosophy: the decoupled router pattern",
+      "norm_label": "1. architectural philosophy: the decoupled router & time allocation pattern",
       "source_file": "tools/skills/slm-router-forge/SKILL.md",
       "source_location": "L13"
     },
@@ -35238,17 +35238,17 @@
       "node_kind": "heading",
       "norm_label": "3. core invariants (zero-drift standards)",
       "source_file": "tools/skills/slm-router-forge/SKILL.md",
-      "source_location": "L122"
+      "source_location": "L136"
     },
     {
-      "id": "tools_skills_slm_router_forge_skill_slm_router_forge_slm_router_forge",
-      "label": "SLM Router Forge (`slm-router-forge`)",
+      "id": "tools_skills_slm_router_forge_skill_slm_router_time_allocation_forge_slm_router_forge",
+      "label": "SLM Router & Time Allocation Forge (`slm-router-forge`)",
       "_origin": "ast",
       "community": 260,
       "community_name": "ARCH-PLAN-003: Intelligent Systems Engineering & Research Conversion Roadmap",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "slm router forge (`slm-router-forge`)",
+      "norm_label": "slm router & time allocation forge (`slm-router-forge`)",
       "source_file": "tools/skills/slm-router-forge/SKILL.md",
       "source_location": "L7"
     },
@@ -35265,28 +35265,28 @@
       "source_location": "L31"
     },
     {
-      "id": "tools_skills_slm_router_forge_skill_stage_2_grounded_dataset_synthesis",
-      "label": "Stage 2: Grounded Dataset Synthesis",
+      "id": "tools_skills_slm_router_forge_skill_stage_2_grounded_dataset_synthesis_empirical_time_harvesting",
+      "label": "Stage 2: Grounded Dataset Synthesis & Empirical Time Harvesting",
       "_origin": "ast",
       "community": 260,
       "community_name": "ARCH-PLAN-003: Intelligent Systems Engineering & Research Conversion Roadmap",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "stage 2: grounded dataset synthesis",
+      "norm_label": "stage 2: grounded dataset synthesis & empirical time harvesting",
       "source_file": "tools/skills/slm-router-forge/SKILL.md",
       "source_location": "L41"
     },
     {
-      "id": "tools_skills_slm_router_forge_skill_stage_3_cloud_gpu_fine_tuning_unsloth_on_colab",
-      "label": "Stage 3: Cloud GPU Fine-Tuning (Unsloth on Colab)",
+      "id": "tools_skills_slm_router_forge_skill_stage_3_cloud_gpu_fine_tuning_unsloth_on_colab_pro_free",
+      "label": "Stage 3: Cloud GPU Fine-Tuning (Unsloth on Colab Pro / Free)",
       "_origin": "ast",
       "community": 260,
       "community_name": "ARCH-PLAN-003: Intelligent Systems Engineering & Research Conversion Roadmap",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "stage 3: cloud gpu fine-tuning (unsloth on colab)",
+      "norm_label": "stage 3: cloud gpu fine-tuning (unsloth on colab pro / free)",
       "source_file": "tools/skills/slm-router-forge/SKILL.md",
-      "source_location": "L60"
+      "source_location": "L65"
     },
     {
       "id": "tools_skills_slm_router_forge_skill_stage_4_binary_isolation_resumable_cloud_archiving",
@@ -35298,19 +35298,19 @@
       "node_kind": "heading",
       "norm_label": "stage 4: binary isolation & resumable cloud archiving",
       "source_file": "tools/skills/slm-router-forge/SKILL.md",
-      "source_location": "L80"
+      "source_location": "L89"
     },
     {
-      "id": "tools_skills_slm_router_forge_skill_stage_5_local_silicon_serving_execution_gate",
-      "label": "Stage 5: Local Silicon Serving & Execution Gate",
+      "id": "tools_skills_slm_router_forge_skill_stage_5_local_silicon_serving_orchestrator_integration_gate",
+      "label": "Stage 5: Local Silicon Serving & Orchestrator Integration Gate",
       "_origin": "ast",
       "community": 260,
       "community_name": "ARCH-PLAN-003: Intelligent Systems Engineering & Research Conversion Roadmap",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "stage 5: local silicon serving & execution gate",
+      "norm_label": "stage 5: local silicon serving & orchestrator integration gate",
       "source_file": "tools/skills/slm-router-forge/SKILL.md",
-      "source_location": "L106"
+      "source_location": "L115"
     },
     {
       "id": "tools_skills_super_nlm_downloads_skill",
@@ -144380,7 +144380,7 @@
     },
     {
       "source": "tools_skills_slm_router_forge_skill",
-      "target": "tools_skills_slm_router_forge_skill_slm_router_forge_slm_router_forge",
+      "target": "tools_skills_slm_router_forge_skill_slm_router_time_allocation_forge_slm_router_forge",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -144391,13 +144391,13 @@
     },
     {
       "source": "tools_skills_slm_router_forge_skill_2_the_5_stage_forge_lifecycle",
-      "target": "tools_skills_slm_router_forge_skill_stage_5_local_silicon_serving_execution_gate",
+      "target": "tools_skills_slm_router_forge_skill_stage_5_local_silicon_serving_orchestrator_integration_gate",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/slm-router-forge/SKILL.md",
-      "source_location": "L106",
+      "source_location": "L115",
       "weight": 1.0
     },
     {
@@ -144413,7 +144413,7 @@
     },
     {
       "source": "tools_skills_slm_router_forge_skill_2_the_5_stage_forge_lifecycle",
-      "target": "tools_skills_slm_router_forge_skill_stage_2_grounded_dataset_synthesis",
+      "target": "tools_skills_slm_router_forge_skill_stage_2_grounded_dataset_synthesis_empirical_time_harvesting",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -144424,13 +144424,13 @@
     },
     {
       "source": "tools_skills_slm_router_forge_skill_2_the_5_stage_forge_lifecycle",
-      "target": "tools_skills_slm_router_forge_skill_stage_3_cloud_gpu_fine_tuning_unsloth_on_colab",
+      "target": "tools_skills_slm_router_forge_skill_stage_3_cloud_gpu_fine_tuning_unsloth_on_colab_pro_free",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/slm-router-forge/SKILL.md",
-      "source_location": "L60",
+      "source_location": "L65",
       "weight": 1.0
     },
     {
@@ -144441,23 +144441,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/slm-router-forge/SKILL.md",
-      "source_location": "L80",
+      "source_location": "L89",
       "weight": 1.0
     },
     {
-      "source": "tools_skills_slm_router_forge_skill_slm_router_forge_slm_router_forge",
-      "target": "tools_skills_slm_router_forge_skill_3_core_invariants_zero_drift_standards",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tools/skills/slm-router-forge/SKILL.md",
-      "source_location": "L122",
-      "weight": 1.0
-    },
-    {
-      "source": "tools_skills_slm_router_forge_skill_slm_router_forge_slm_router_forge",
-      "target": "tools_skills_slm_router_forge_skill_1_architectural_philosophy_the_decoupled_router_pattern",
+      "source": "tools_skills_slm_router_forge_skill_slm_router_time_allocation_forge_slm_router_forge",
+      "target": "tools_skills_slm_router_forge_skill_1_architectural_philosophy_the_decoupled_router_time_allocation_pattern",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -144467,7 +144456,18 @@
       "weight": 1.0
     },
     {
-      "source": "tools_skills_slm_router_forge_skill_slm_router_forge_slm_router_forge",
+      "source": "tools_skills_slm_router_forge_skill_slm_router_time_allocation_forge_slm_router_forge",
+      "target": "tools_skills_slm_router_forge_skill_3_core_invariants_zero_drift_standards",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tools/skills/slm-router-forge/SKILL.md",
+      "source_location": "L136",
+      "weight": 1.0
+    },
+    {
+      "source": "tools_skills_slm_router_forge_skill_slm_router_time_allocation_forge_slm_router_forge",
       "target": "tools_skills_slm_router_forge_skill_2_the_5_stage_forge_lifecycle",
       "relation": "contains",
       "_origin": "ast",
@@ -157877,5 +157877,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "35c7385f1ba7dac65f9548b8604e61b2d8237e3c"
+  "built_at_commit": "4df0f59158dd2d7a8d4df5e36fb87813799cbf7c"
 }

@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791560803.7331502,
-    "seen": 1791560808.5639443,
-    "ast_hash": "a3015124ee24eeb85afc490ebce4fff0",
-    "semantic_hash": "a3015124ee24eeb85afc490ebce4fff0"
+    "mtime": 1791561619.2950451,
+    "seen": 1791561624.0783734,
+    "ast_hash": "d2a5d76e32fb2b483f2df06704d18e69",
+    "semantic_hash": "d2a5d76e32fb2b483f2df06704d18e69"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -3918,10 +3918,10 @@
     "semantic_hash": "56d8376ab55550be2feea9d98e8125d0"
   },
   "tools/skills/slm-router-forge/SKILL.md": {
-    "mtime": 1791547823.3983262,
-    "seen": 1791547898.7559736,
-    "ast_hash": "49695c9613fd08586ca60365a84497bc",
-    "semantic_hash": "49695c9613fd08586ca60365a84497bc"
+    "mtime": 1791561531.3991957,
+    "seen": 1791561624.078891,
+    "ast_hash": "d580a0637dab7873ae0c43c77ebcf7b3",
+    "semantic_hash": "d580a0637dab7873ae0c43c77ebcf7b3"
   },
   "sim/adaptive_orchestrator.py": {
     "mtime": 1791560727.8044827,

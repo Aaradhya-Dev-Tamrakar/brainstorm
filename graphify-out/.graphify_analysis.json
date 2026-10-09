@@ -1,6 +1,6 @@
 {
-  "built_at_commit": "35c7385f1ba7dac65f9548b8604e61b2d8237e3c",
-  "built_timestamp": "2026-10-09T15:46:44.077680+00:00",
+  "built_at_commit": "4df0f59158dd2d7a8d4df5e36fb87813799cbf7c",
+  "built_timestamp": "2026-10-09T16:00:19.623943+00:00",
   "lineage_type": "ancestor_snapshot",
   "communities": {
     "0": [
@@ -4935,15 +4935,15 @@
     ],
     "260": [
       "tools_skills_slm_router_forge_skill",
-      "tools_skills_slm_router_forge_skill_1_architectural_philosophy_the_decoupled_router_pattern",
+      "tools_skills_slm_router_forge_skill_1_architectural_philosophy_the_decoupled_router_time_allocation_pattern",
       "tools_skills_slm_router_forge_skill_2_the_5_stage_forge_lifecycle",
       "tools_skills_slm_router_forge_skill_3_core_invariants_zero_drift_standards",
-      "tools_skills_slm_router_forge_skill_slm_router_forge_slm_router_forge",
+      "tools_skills_slm_router_forge_skill_slm_router_time_allocation_forge_slm_router_forge",
       "tools_skills_slm_router_forge_skill_stage_1_hardware_profiling_architecture_selection",
-      "tools_skills_slm_router_forge_skill_stage_2_grounded_dataset_synthesis",
-      "tools_skills_slm_router_forge_skill_stage_3_cloud_gpu_fine_tuning_unsloth_on_colab",
+      "tools_skills_slm_router_forge_skill_stage_2_grounded_dataset_synthesis_empirical_time_harvesting",
+      "tools_skills_slm_router_forge_skill_stage_3_cloud_gpu_fine_tuning_unsloth_on_colab_pro_free",
       "tools_skills_slm_router_forge_skill_stage_4_binary_isolation_resumable_cloud_archiving",
-      "tools_skills_slm_router_forge_skill_stage_5_local_silicon_serving_execution_gate"
+      "tools_skills_slm_router_forge_skill_stage_5_local_silicon_serving_orchestrator_integration_gate"
     ],
     "261": [
       "tools_skills_super_nlm_downloads_skill",
@@ -8260,6 +8260,17 @@
   ],
   "surprises": [
     {
+      "source": "cmd_flight_check()",
+      "target": "AntigravityMemoryGovernor",
+      "source_files": [
+        "tools/adaptive_engine.py",
+        "sim/adaptive_orchestrator.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
       "source": "cmd_cpm()",
       "target": "DAGCycleError",
       "source_files": [
@@ -8271,8 +8282,19 @@
       "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
     },
     {
-      "source": "cmd_fast_path()",
-      "target": "DeterministicTriageEngine",
+      "source": "cmd_rollback()",
+      "target": "DeterministicTransactionalRecovery",
+      "source_files": [
+        "tools/adaptive_engine.py",
+        "sim/adaptive_orchestrator.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "cmd_snapshot()",
+      "target": "DeterministicTransactionalRecovery",
       "source_files": [
         "tools/adaptive_engine.py",
         "sim/adaptive_orchestrator.py"
@@ -8291,45 +8313,13 @@
       "confidence": "INFERRED",
       "relation": "uses",
       "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
-    },
-    {
-      "source": "cmd_flight_check()",
-      "target": "AntigravityMemoryGovernor",
-      "source_files": [
-        "tools/adaptive_engine.py",
-        "sim/adaptive_orchestrator.py"
-      ],
-      "confidence": "INFERRED",
-      "relation": "uses",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
-    },
-    {
-      "source": "cmd_flight_check()",
-      "target": "FleetFirstBridge",
-      "source_files": [
-        "tools/adaptive_engine.py",
-        "sim/adaptive_orchestrator.py"
-      ],
-      "confidence": "INFERRED",
-      "relation": "uses",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
     }
   ],
   "questions": [
     {
       "type": "bridge_node",
-      "question": "Why does `Brainstorm Research Laboratory — How Cohort 0 Works` connect `Out-of-Order (OOO) HTML Streaming` to `Agent Teams Orchestration Skill`?",
-      "why": "High betweenness centrality (0.007) - this node is a cross-community bridge."
-    },
-    {
-      "type": "bridge_node",
       "question": "Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `save_chat.py` to `PLAN-GCP-001: Google Classroom Pilot Architectural Plan & Roadmap 🎓🧭`, `2. Cross-Session Handoff Prompts`, `Performance`, `Multi-Remote Synchronization & Ecosystem Automation`?",
-      "why": "High betweenness centrality (0.006) - this node is a cross-community bridge."
-    },
-    {
-      "type": "bridge_node",
-      "question": "Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `Multi-Remote Synchronization & Ecosystem Automation` to `fleet-orchestrator.contract.json`, `Fleet Integration Reference: Super-NLM & Fleet-Orchestrator`, `Declarative SKU DAG Pipeline Reference`, `.route_intent`, `🏛️ ARCHITECTURAL RFC: ARCH-RFC-002 (The Model Plurality & Multi-Perspective Council Protocol)`, `invariants_checked`, `Brainstorm Research Ecosystem: Capability Mesh & Verification Engine`, `Fleet-Orchestrator Worker Architecture & Concurrency`, `save_chat.py`?",
-      "why": "High betweenness centrality (0.005) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.007) - this node is a cross-community bridge."
     },
     {
       "type": "verify_inferred",
@@ -8350,6 +8340,16 @@
       "type": "low_cohesion",
       "question": "Should `4. Step-by-Step Implementation Timeline` be split into smaller, more focused modules?",
       "why": "Cohesion score 0.051228070175438595 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `generate_video.py` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `MCP Integration for Claude Code Plugins` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected."
     }
   ]
 }

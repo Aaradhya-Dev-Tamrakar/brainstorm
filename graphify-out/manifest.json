@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791526780.92087,
-    "seen": 1791526787.0916698,
-    "ast_hash": "b34a5ca8aa09352d7098fa859a04addc",
-    "semantic_hash": "b34a5ca8aa09352d7098fa859a04addc"
+    "mtime": 1791526982.5148945,
+    "seen": 1791526988.6327457,
+    "ast_hash": "cef56fbe0c7a79cba5599c3f55c8ae15",
+    "semantic_hash": "cef56fbe0c7a79cba5599c3f55c8ae15"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1791526778.645751,
-    "seen": 1791526787.0916688,
-    "ast_hash": "bd03aa60a056470b5bb29765d1a69001",
-    "semantic_hash": "bd03aa60a056470b5bb29765d1a69001"
+    "mtime": 1791526980.1521304,
+    "seen": 1791526988.6327434,
+    "ast_hash": "32b80686e58113a41233a9d77105fd27",
+    "semantic_hash": "32b80686e58113a41233a9d77105fd27"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -876,10 +876,10 @@
     "semantic_hash": "7d778793512114b09a97e27b0d5c1e65"
   },
   "tools/skills/README.md": {
-    "mtime": 1791526723.1794925,
-    "seen": 1791526787.0919447,
-    "ast_hash": "ed9e7f6d89f2aedc491a79074748abd9",
-    "semantic_hash": "ed9e7f6d89f2aedc491a79074748abd9"
+    "mtime": 1791526915.628904,
+    "seen": 1791526988.6332502,
+    "ast_hash": "496fe0cbc1582921808ccaec93b50c5f",
+    "semantic_hash": "496fe0cbc1582921808ccaec93b50c5f"
   },
   "tools/skills/agent-teams-orchestration/SKILL.md": {
     "mtime": 1791443948.1802576,
@@ -1504,24 +1504,6 @@
     "seen": 1790945792.1331546,
     "ast_hash": "af3ce4d499fa11f076aae3c43396a6b6",
     "semantic_hash": "af3ce4d499fa11f076aae3c43396a6b6"
-  },
-  "tools/skills/blog-writing-like-claude/SKILL.md": {
-    "mtime": 1791526674.8250153,
-    "seen": 1791526787.0919719,
-    "ast_hash": "cd905e6a1918e0436dace8a03d0b0265",
-    "semantic_hash": "cd905e6a1918e0436dace8a03d0b0265"
-  },
-  "tools/skills/blog-writing-like-claude/examples/post_templates.md": {
-    "mtime": 1790945741.940152,
-    "seen": 1790945792.1333501,
-    "ast_hash": "f58de35922a8fab1427006a6ea8f1b46",
-    "semantic_hash": "f58de35922a8fab1427006a6ea8f1b46"
-  },
-  "tools/skills/blog-writing-like-claude/references/vocabulary_cheatsheet.md": {
-    "mtime": 1790945734.1283906,
-    "seen": 1790945792.1333508,
-    "ast_hash": "abb7f29339f8d3fb12efdd8cf7cf43bd",
-    "semantic_hash": "abb7f29339f8d3fb12efdd8cf7cf43bd"
   },
   "tools/skills/ui-extension/references/template/plugin.json": {
     "mtime": 1790821502.1646357,
@@ -2317,7 +2299,7 @@
   },
   ".mcp.json": {
     "mtime": 1791211589.4039154,
-    "seen": 1791526787.0916486,
+    "seen": 1791526988.6327112,
     "ast_hash": "28136d52f8c466fd93e00c713b7fa4f6",
     "semantic_hash": "28136d52f8c466fd93e00c713b7fa4f6"
   },

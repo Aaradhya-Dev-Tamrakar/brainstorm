@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791529585.1454268,
-    "seen": 1791529591.4802413,
-    "ast_hash": "224aa054f43d56716540217ad1a49292",
-    "semantic_hash": "224aa054f43d56716540217ad1a49292"
+    "mtime": 1791530264.835186,
+    "seen": 1791530271.7420359,
+    "ast_hash": "b7d7dae9b2056c6ba2d3b0095ea76129",
+    "semantic_hash": "b7d7dae9b2056c6ba2d3b0095ea76129"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1791529582.6636505,
-    "seen": 1791529591.4802394,
-    "ast_hash": "86e2d9e952c38ac1e30d103cc3bdd32e",
-    "semantic_hash": "86e2d9e952c38ac1e30d103cc3bdd32e"
+    "mtime": 1791530262.4122152,
+    "seen": 1791530271.7420344,
+    "ast_hash": "d4226f9d698935d5db8e7ee257ddc2b7",
+    "semantic_hash": "d4226f9d698935d5db8e7ee257ddc2b7"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -876,10 +876,10 @@
     "semantic_hash": "7d778793512114b09a97e27b0d5c1e65"
   },
   "tools/skills/README.md": {
-    "mtime": 1791526915.628904,
-    "seen": 1791526988.6332502,
-    "ast_hash": "496fe0cbc1582921808ccaec93b50c5f",
-    "semantic_hash": "496fe0cbc1582921808ccaec93b50c5f"
+    "mtime": 1791530123.9069624,
+    "seen": 1791530271.7422845,
+    "ast_hash": "769ab020ddb83e59b44126b8efe4f180",
+    "semantic_hash": "769ab020ddb83e59b44126b8efe4f180"
   },
   "tools/skills/agent-teams-orchestration/SKILL.md": {
     "mtime": 1791443948.1802576,
@@ -2299,7 +2299,7 @@
   },
   ".mcp.json": {
     "mtime": 1791211589.4039154,
-    "seen": 1791526988.6327112,
+    "seen": 1791530271.7420156,
     "ast_hash": "28136d52f8c466fd93e00c713b7fa4f6",
     "semantic_hash": "28136d52f8c466fd93e00c713b7fa4f6"
   },
@@ -3778,5 +3778,101 @@
     "seen": 1791526749.5818226,
     "ast_hash": "374d8aaedfa1a9c2629d7060ee999980",
     "semantic_hash": ""
+  },
+  "tools/skills/adaptive-workflow/SKILL.md": {
+    "mtime": 1791530017.799946,
+    "seen": 1791530271.7422888,
+    "ast_hash": "c598796552aab6df9040177bef5ccae2",
+    "semantic_hash": "c598796552aab6df9040177bef5ccae2"
+  },
+  "tools/skills/adaptive-workflow/examples/routing-scenarios.md": {
+    "mtime": 1791528099.560626,
+    "seen": 1791530271.7422903,
+    "ast_hash": "0d7fcd0884af3b7556d689466fdc8068",
+    "semantic_hash": "0d7fcd0884af3b7556d689466fdc8068"
+  },
+  "tools/skills/adaptive-workflow/references/antigravity-chat-context-injection.md": {
+    "mtime": 1791529942.8565376,
+    "seen": 1791530271.7422912,
+    "ast_hash": "2fb53b369bf3e6cae87540173dc7a6fe",
+    "semantic_hash": "2fb53b369bf3e6cae87540173dc7a6fe"
+  },
+  "tools/skills/adaptive-workflow/references/calm-authority-writing.md": {
+    "mtime": 1791528072.387292,
+    "seen": 1791530271.742292,
+    "ast_hash": "ed9804a5d57b800d3922a25a4103d043",
+    "semantic_hash": "ed9804a5d57b800d3922a25a4103d043"
+  },
+  "tools/skills/adaptive-workflow/references/cpm-concurrency-dispatch.md": {
+    "mtime": 1791528046.4617717,
+    "seen": 1791530271.742293,
+    "ast_hash": "ee0d872f10b2fbbcf994f4a15d47ce57",
+    "semantic_hash": "ee0d872f10b2fbbcf994f4a15d47ce57"
+  },
+  "tools/skills/adaptive-workflow/references/cross-tool-chains.md": {
+    "mtime": 1791528084.9333725,
+    "seen": 1791530271.742294,
+    "ast_hash": "3796f30efb22fe109597e34dea057609",
+    "semantic_hash": "3796f30efb22fe109597e34dea057609"
+  },
+  "tools/skills/adaptive-workflow/references/dynamic-flight-envelope.md": {
+    "mtime": 1791529429.3867195,
+    "seen": 1791530271.742295,
+    "ast_hash": "2640fe9f97a930f2735c626162329daa",
+    "semantic_hash": "2640fe9f97a930f2735c626162329daa"
+  },
+  "tools/skills/adaptive-workflow/references/ecosystem-repos.md": {
+    "mtime": 1791528055.98908,
+    "seen": 1791530271.7422957,
+    "ast_hash": "284807235c35bd76d79d08fc75272ad2",
+    "semantic_hash": "284807235c35bd76d79d08fc75272ad2"
+  },
+  "tools/skills/adaptive-workflow/references/fleet-command-architecture.md": {
+    "mtime": 1791529954.3834267,
+    "seen": 1791530271.742297,
+    "ast_hash": "f0f342e28b006ba223fb6c40852d0048",
+    "semantic_hash": "f0f342e28b006ba223fb6c40852d0048"
+  },
+  "tools/skills/adaptive-workflow/references/lifecycle-stages.md": {
+    "mtime": 1791529964.4126666,
+    "seen": 1791530271.7422976,
+    "ast_hash": "66c5a135ece5294ccbb49b31539d35f4",
+    "semantic_hash": "66c5a135ece5294ccbb49b31539d35f4"
+  },
+  "tools/skills/adaptive-workflow/references/orthogonal-execution-matrix.md": {
+    "mtime": 1791529020.9774299,
+    "seen": 1791530271.7422986,
+    "ast_hash": "840d200c936353a884dac1b03ca6f510",
+    "semantic_hash": "840d200c936353a884dac1b03ca6f510"
+  },
+  "tools/skills/adaptive-workflow/references/quota-velocity-acceleration.md": {
+    "mtime": 1791529400.4692154,
+    "seen": 1791530271.7422993,
+    "ast_hash": "3b1a111862948fde0c17e3280c1e3178",
+    "semantic_hash": "3b1a111862948fde0c17e3280c1e3178"
+  },
+  "tools/skills/adaptive-workflow/references/skill-matrix.md": {
+    "mtime": 1791529973.1657233,
+    "seen": 1791530271.7423005,
+    "ast_hash": "86d2f22b168fa7f4429da0144cf47894",
+    "semantic_hash": "86d2f22b168fa7f4429da0144cf47894"
+  },
+  "tools/skills/adaptive-workflow/references/transactional-recovery.md": {
+    "mtime": 1791529036.65793,
+    "seen": 1791530271.7423012,
+    "ast_hash": "274f30c864b46b2e03a5f246996ec9cb",
+    "semantic_hash": "274f30c864b46b2e03a5f246996ec9cb"
+  },
+  "tools/skills/adaptive-workflow/references/verification-gates.md": {
+    "mtime": 1791524218.670838,
+    "seen": 1791530271.7423022,
+    "ast_hash": "6e05fff73c4eec19b7de194426b8afde",
+    "semantic_hash": "6e05fff73c4eec19b7de194426b8afde"
+  },
+  "tools/skills/adaptive-workflow/references/worker-availability-ledger.md": {
+    "mtime": 1791529408.9053445,
+    "seen": 1791530271.742303,
+    "ast_hash": "e2d521470c064d66472bff4bdecf6c53",
+    "semantic_hash": "e2d521470c064d66472bff4bdecf6c53"
   }
 }

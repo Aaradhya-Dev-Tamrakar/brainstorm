@@ -2,7 +2,7 @@
 
 This directory catalogs all repositories, computational engines, and presentation hubs across Aaradhya's personal tool ecosystem. 
 
-Ground truth is anchored in [`schemas/ecosystem.registry.json`](file:///f:/Aaradhya-Dev-Tamrakar/brainstorm/schemas/ecosystem.registry.json). All physical paths and test commands are classified under `ARCH-RFC-001` epistemic evidence tiers.
+Ground truth is anchored in [`schemas/ecosystem.registry.json`](../../../../schemas/ecosystem.registry.json). All physical paths and test commands are classified under `ARCH-RFC-001` epistemic evidence tiers.
 
 ---
 
@@ -24,7 +24,7 @@ To ensure multi-device portability across laptops, external storage, and seconda
 
 ---
 
-## 3. Computational Engines (23 Authoritative Modules)
+## 3. Computational Engines (24 Authoritative Modules)
 
 | Index | ID | Name | Canonical Path | Tech Stack | Execution Context | Core Superpower | Test / Execution Command |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -51,6 +51,7 @@ To ensure multi-device portability across laptops, external storage, and seconda
 | **21** | `Cyber-Forensics` | Cyber-Forensics | `F:\Aaradhya-Dev-Tamrakar\Cyber-Forensics` | PowerShell 7, Win32 NT APIs | Bare Metal Desktop | DFIR artifact triage & stealth evasion hunting | `pwsh tests\*.ps1` `[EMPIRICALLY_VERIFIED]` |
 | **22** | `omnivault` | OmniVault | `F:\Aaradhya-Dev-Tamrakar\omnivault` | Python 3.14, SQLite FTS5, BLAKE3 | Desktop / Hybrid | Tri-tier archival engine (Mobile, NVMe, Cold HDD) | `pytest` `[EMPIRICALLY_VERIFIED]` |
 | **23** | `Fleet-Orchestrator` | Fleet-Orchestrator | `F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator` | Python 3.12+, FastAPI, SQLite | Local Fleet Cluster | Swarm task coordinator, 27x Copilot quota pooling | `copilot_fleet.py` `[EMPIRICALLY_VERIFIED]` |
+| **24** | `agent-customization-sync` | Agent-Customization-Sync | `F:\Aaradhya-Dev-Tamrakar\Agent-Customization-Sync` | Python 3.14, Win32 NTFS | Local Desktop / Cross-IDE | Cross-IDE agent customization sync, cryptographic state snapshots, and lossless transpilation | `pytest` `[EMPIRICALLY_VERIFIED]` |
 
 ---
 
@@ -58,10 +59,10 @@ To ensure multi-device portability across laptops, external storage, and seconda
 
 | Index | ID | Name | Canonical Path | Tech Stack | Role & Canonical Superpower |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-| **24** | `AaradhyaDT.github.io` | Primary Authoritative Portfolio | `F:\AaradhyaDT\AaradhyaDT.github.io` | Static Web, Vanilla JS, CSS | Canonical portfolio website, interactive radar, 26-category verification gate |
-| **25** | `Aaradhya-Dev-Tamrakar.github.io` | Portfolio Profile Mirror | `F:\Aaradhya-Dev-Tamrakar\Aaradhya-Dev-Tamrakar.github.io` | Static Web | Secondary public organization mirror |
-| **26** | `makerspace` | Makerspace Hub | `F:\Aaradhya-Dev-Tamrakar\makerspace` | CAD / Hardware Assets | Physical maker laboratory, fabrication assets, 3D printing staging |
-| **27** | `react-workshop-ieeekecktm` | React Workshop Hub | `F:\AaradhyaDT\react-workshop-ieeekecktm` | React, TypeScript, Vite | Hands-on curriculum and modern frontend architecture reference |
+| **25** | `AaradhyaDT.github.io` | Primary Authoritative Portfolio | `F:\AaradhyaDT\AaradhyaDT.github.io` | Static Web, Vanilla JS, CSS | Canonical portfolio website, interactive radar, 26-category verification gate |
+| **26** | `Aaradhya-Dev-Tamrakar.github.io` | Portfolio Profile Mirror | `F:\Aaradhya-Dev-Tamrakar\Aaradhya-Dev-Tamrakar.github.io` | Static Web | Secondary public organization mirror |
+| **27** | `makerspace` | Makerspace Hub | `F:\Aaradhya-Dev-Tamrakar\makerspace` | CAD / Hardware Assets | Physical maker laboratory, fabrication assets, 3D printing staging |
+| **28** | `react-workshop-ieeekecktm` | React Workshop Hub | `F:\AaradhyaDT\react-workshop-ieeekecktm` | React, TypeScript, Vite | Hands-on curriculum and modern frontend architecture reference |
 
 ---
 
@@ -82,6 +83,6 @@ To ensure multi-device portability across laptops, external storage, and seconda
 
 ## 6. Local Utility Extras & Experimental Archives (Non-Registry)
 
-These utilities are tracked locally on disk but remain outside the formal 27-module ecosystem registry:
+These utilities are tracked locally on disk but remain outside the formal 28-module ecosystem registry:
 - **`windows-pilot`** (`F:\Aaradhya-Dev-Tamrakar\Utility\windows-pilot`): Native UI Automation (UIA) tree inspector, screenshot perception, desktop driver.
 - **`IEEE-Xtreme-Archive`** (`F:\Aaradhya-Dev-Tamrakar\IEEE-Xtreme-Archive`): Competitive programming task and solution repository.

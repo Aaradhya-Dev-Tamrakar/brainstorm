@@ -43,7 +43,34 @@ make verify     # Combined verification gate
 
 ## 2. Central Ecosystem Verification (`brainstorm`)
 
-The brainstorm repository maintains specific verification engines to ensure consistency across 27 modules, 31 branches, and formal LaTeX research reports.
+The brainstorm repository maintains specific verification engines to ensure consistency across 28 modules, 32 branches, and formal LaTeX research reports.
+
+### The Mandatory Verification Sequence (`INV-AUDIT-ORDER`)
+Before committing or syncing architectural updates, always execute the deterministic verification sequence in exact order:
+1. **Behavioral Test Suite**:
+   ```powershell
+   python -m unittest discover -s sim -p "test_*.py"
+   ```
+2. **Knowledge Graph Refresh**:
+   ```powershell
+   graphify update .
+   ```
+3. **Physical Metric & Inventory Reconciliation**:
+   ```powershell
+   python sim/reconciliation_engine.py --fix
+   ```
+4. **Staged Zero-Leak & Path Format Gate**:
+   ```powershell
+   git grep --untracked "file:///" tools/skills/adaptive-workflow/
+   ```
+   *(Must return 0 matches; all links must be relative).*
+5. **Context Budget Enforcement**:
+   Assert `tools/skills/adaptive-workflow/SKILL.md` file size $\le 8,192\text{ bytes}$.
+6. **Full Deterministic Audit Gate**:
+   ```powershell
+   .\audit.bat
+   ```
+   *(Must exit with 0 errors across Layer 1 Structural and Layer 2 Behavioral).*
 
 ### 1. Structural Consistency & Audit Gate (`audit.bat`)
 ```powershell

@@ -1,6 +1,6 @@
 # Quota Velocity Acceleration & Compute-for-Speed Exchange
 
-This document specifies the protocols for trading pooled monthly AI credits for wall-clock latency reductions in [`adaptive-workflow`](../SKILL.md) and [`Fleet-Orchestrator`](file:///F:/Aaradhya-Dev-Tamrakar/Fleet-Orchestrator).
+This document specifies the protocols for trading pooled monthly AI credits for wall-clock latency reductions in [`adaptive-workflow`](../SKILL.md) and `Fleet-Orchestrator`.
 
 ---
 

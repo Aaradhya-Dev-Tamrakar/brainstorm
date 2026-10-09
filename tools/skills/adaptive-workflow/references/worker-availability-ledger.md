@@ -1,6 +1,6 @@
 # The Worker Availability Ledger & Quota Depletion Tracking
 
-This document specifies the real-time tracking mechanics for monitoring worker account exhaustion, cooldown quarantines, and dynamic fleet availability in [`adaptive-workflow`](../SKILL.md) and [`Fleet-Orchestrator`](file:///F:/Aaradhya-Dev-Tamrakar/Fleet-Orchestrator).
+This document specifies the real-time tracking mechanics for monitoring worker account exhaustion, cooldown quarantines, and dynamic fleet availability in [`adaptive-workflow`](../SKILL.md) and `Fleet-Orchestrator`.
 
 ---
 
@@ -33,18 +33,25 @@ flowchart TD
 
 ## 2. Worker State Classifications
 
-The ledger categorizes each of the 27 pooled accounts into one of three operational states:
+The ledger categorizes each of the 27 pooled accounts into one of three operational states mapped to Fleet SQLite DB states:
 
+| Ledger State | Fleet SQLite DB State | Scheduling Availability | Transition / Exit Trigger |
+| :--- | :--- | :--- | :--- |
+| **`ACTIVE`** | `idle` / `busy` | Available / In-flight | Claiming task or task completion |
+| **`COOLDOWN`** | `cooldown` | Quarantined | Expiration of exponential backoff (5–60 min) |
+| **`EXHAUSTED`** | `offline` | Permanently excluded | Monthly billing cycle reset (`reset_at`) |
+
+### State Operational Definitions:
 1. **`ACTIVE`**:
    - The account possesses a verified PAT token, `credits_used < 200`, and no active cooldown timer (`cooldown_until` is null or expired).
    - Eligible for immediate task dispatch and worktree assignment.
 2. **`COOLDOWN`**:
    - The account encountered an HTTP 429 rate limit or network transport timeout.
-   - Quarantined until the `cooldown_until` timestamp expires (standard window: 15–60 minutes).
+   - Quarantined under exponential backoff (5 min initial, doubling to 10, 20, 40, capped at 60 minutes).
    - Ineligible for new task assignment; running tasks are reclaimed.
 3. **`EXHAUSTED` (Burnt Out)**:
    - The account has consumed all 200 monthly AI credits (`credits_used >= 200`).
-   - Quarantined until the monthly billing cycle reset.
+   - Quarantined until the monthly billing cycle reset date (`reset_at`).
    - Ineligible for scheduling; permanently excluded from $N_{\text{avail}}$ for the remainder of the billing period.
 
 ---

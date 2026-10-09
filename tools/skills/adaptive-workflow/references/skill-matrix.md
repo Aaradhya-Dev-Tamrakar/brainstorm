@@ -13,9 +13,9 @@ This matrix provides deterministic routing rules mapping incoming task archetype
 | **`DOMAIN_AEC_CAD`** | 3D CAD modeling, BIM, FEM structural frames, pipe flow, GIS | `fusion360-mcp`<br>`makerspace` | `AEC-MCP Suite`<br>`makerspace` | `revit-mcp`<br>`autocad-mcp`<br>`rhino-mcp`<br>`etabs-mcp`<br>`qgis-mcp` | Viewport render<br>MCP response check |
 | **`RESEARCH_ACADEMIC`** | University curriculum, BE ECIE notes, literature survey, paper dossiers | `academic-notebook-architect`<br>`super-nlm`<br>`writing-like-claude` | `brainstorm`<br>`super-nlm`<br>`BiasAperture` | `google-classroom-mcp`<br>`super-nlm-downloads`<br>`doc-archiver`<br>`chat-archiver` | `audit.bat`<br>`audit_calm_writing.py` |
 | **`FRONTEND_PRODUCT`** | Web applications, UI components, styling, portfolio onboarding | `design-taste-frontend`<br>`modern-web-guidance`<br>`portfolio-project-manager` | `AaradhyaDT.github.io`<br>`Aaradhya-Dev-Tamrakar.github.io`<br>`react-workshop-ieeekecktm` | `shadcn-context`<br>`fluid-wordmark-collapse`<br>`google-stitch-integration`<br>`chrome-extensions` | `python scripts/verify.py`<br>(26 categories) |
-| **`SWARM_ORCHESTRATION`** | Autonomous teams, batch background workers, multi-account fleet pooling | `agent-teams-orchestration`<br>`fleet-orchestrator`<br>`pm-workflow-orchestrator` | `Fleet-Orchestrator`<br>`omnivault` | `automation`<br>`cold-storage-archiver`<br>`systems-concurrency-harness` | `copilot_fleet.py status`<br>(27/27 ready) |
+| **`SWARM_ORCHESTRATION`** | Autonomous teams, batch background workers, multi-account fleet pooling | `agent-teams-orchestration`<br>`fleet-orchestrator`<br>`pm-workflow-orchestrator`<br>`slm-router-forge` | `Fleet-Orchestrator`<br>`omnivault` | `automation`<br>`cold-storage-archiver`<br>`systems-concurrency-harness` | `copilot_fleet.py status`<br>(27/27 ready) |
 | **`SYSADMIN_SECURITY`** | Windows DFIR artifact triage, NTFS ACL locks, desktop automation | `cyber-forensics`<br>`win-vault`<br>`winpilot` | `Cyber-Forensics`<br>`Win-Vault`<br>`system-optimizer` | `bitwarden`<br>`downloader-scripts`<br>`security-guidance` | `pwsh tests\*.ps1`<br>`.\Vault.bat` |
-| **`ECOSYSTEM_META`** | Skills creation, agent rules, plugin authoring, graphify knowledge base | `skill-development`<br>`agy-customizations`<br>`graphify` | `brainstorm`<br>`~/.gemini/config/skills/` | `graphify-optimizer`<br>`mcp-integration`<br>`find-skills`<br>`migrate-workflows` | `.\audit.bat --fix`<br>`graphify update .` |
+| **`ECOSYSTEM_META`** | Skills creation, agent rules, plugin authoring, SLM forge, graphify | `skill-development`<br>`slm-router-forge`<br>`agy-customizations`<br>`graphify` | `brainstorm`<br>`Fleet-Orchestrator`<br>`~/.gemini/config/skills/` | `graphify-optimizer`<br>`mcp-integration`<br>`find-skills`<br>`migrate-workflows` | `.\audit.bat --fix`<br>`graphify update .` |
 
 ---
 
@@ -46,7 +46,7 @@ flowchart TD
     
     Scale -- "Focused / Micro (<= 2 files)\nor immediate turn response" --> B1["Backend 1: LOCAL_INTERACTIVE\n- Executed directly in main turn\n- Verify and sync inline"]
     
-    Scale -- "Multi-agent research, adversarial\naudit, or complex refactor" --> B2["Backend 2: SUBAGENT_TEAM\n- agent-teams-orchestration\n- High Lord + Domain Commanders\n- Disjoint scratch files (scout_*.md)"]
+    Scale -- "Multi-agent research, adversarial\naudit, or complex refactor" --> B2["Backend 2: SUBAGENT_TEAM\n- agent-teams-orchestration\n- Lead Agent + Domain Commanders\n- Disjoint scratch files (scout_*.md)"]
     
     Scale -- "High-volume batch generation,\n50+ docs, multi-file codebases,\nor repetitive tasks" --> B3["Backend 3: FLEET_SWARM\n- Fleet-Orchestrator\n- 27x Copilot workers (5,400 credits/mo)\n- Isolated .worktrees/<task_id>"]
 ```

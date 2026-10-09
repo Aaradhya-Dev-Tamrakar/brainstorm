@@ -1,6 +1,6 @@
 # Antigravity Scope Expansion & Living Chat Context Injection
 
-This document specifies the protocols for extending Antigravity's cognitive app scope, living chat transcripts, active plans, and governing customization rules into [`Fleet-Orchestrator`](file:///F:/Aaradhya-Dev-Tamrakar/Fleet-Orchestrator) and headless worker runtimes.
+This document specifies the protocols for extending Antigravity's cognitive app scope, living chat transcripts, active plans, and governing customization rules into `Fleet-Orchestrator` and headless worker runtimes.
 
 ---
 
@@ -12,18 +12,18 @@ Every headless worker executing inside an ephemeral Git worktree operates under 
 
 ```mermaid
 flowchart TD
-    subgraph Cockpit["🧠 Antigravity Cockpit (Interactive Agent IDE)"]
+    subgraph Cockpit["Antigravity Cockpit (Interactive Agent IDE)"]
         User["User Intent & High-Level Directives"] --> Chat["Active Conversation Session\n(ID, Chat History, Epistemic Constraints)"]
         Chat --> Brain["Brain State (<appDataDir>/brain/<conversation_id>/)\n- transcript.jsonl\n- plan_*.md / walkthrough.md"]
         Custom["Antigravity Customizations\n- Global & Workspace Skills\n- AGENTS.md / GEMINI.md Invariants"]
     end
 
-    subgraph Bridge["🌉 Antigravity Context Bridge (client/antigravity_bridge.py)"]
+    subgraph Bridge["Antigravity Context Bridge (client/antigravity_bridge.py)"]
         Harvest["Context Harvester\n- Auto-discovers active conversation ID\n- Distills recent requests, approved plans\n- Extracts invariant rules (< 1,500 tokens)"]
         Synthesize["Construct antigravity_scope JSON"]
     end
 
-    subgraph Runtime["🛡️ Fleet-Orchestrator (Extended Physical Execution Runtime)"]
+    subgraph Runtime["Fleet-Orchestrator (Extended Physical Execution Runtime)"]
         Queue["Task Queue (orchestrator-state/tasks/<task_id>.json)"]
         Worktree[".worktrees/<task_id>/\n- TASK_CONTEXT.md (Projected Session State)\n- .github/copilot-instructions.md (Projected Rules)"]
         Adapter["CopilotCLIAdapter\n- Prompt Header Injection\n- Custom Instructions Enabled (AGENTS.md active)"]

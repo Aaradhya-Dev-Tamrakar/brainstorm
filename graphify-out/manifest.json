@@ -174,9 +174,9 @@
     "semantic_hash": ""
   },
   "schemas/capability-registry.yaml": {
-    "mtime": 1791362532.2323768,
-    "seen": 1791526749.5508802,
-    "ast_hash": "e5c77a137b3406c2180c6782f2fbf5f1",
+    "mtime": 1791531204.556965,
+    "seen": 1791547490.3414695,
+    "ast_hash": "c4f18c395687a72812bc26bf1039c30b",
     "semantic_hash": ""
   },
   "research/experiments/INV-template.md": {
@@ -348,9 +348,9 @@
     "semantic_hash": ""
   },
   ".github/workflows/verification.yml": {
-    "mtime": 1791440321.5999298,
-    "seen": 1791526749.5415277,
-    "ast_hash": "e165ee5374e8b301e8126899a81f4952",
+    "mtime": 1791533802.9094899,
+    "seen": 1791547490.305215,
+    "ast_hash": "f2310f59abc9a7c0fcafdf0d1e9bf35b",
     "semantic_hash": ""
   },
   "research/experiments/EXP-DRIVE-SYNC-001.md": {
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791536506.252772,
-    "seen": 1791536512.0122414,
-    "ast_hash": "1747a1fec8f78451e7f3d2a3a48cd343",
-    "semantic_hash": "1747a1fec8f78451e7f3d2a3a48cd343"
+    "mtime": 1791547605.0208173,
+    "seen": 1791547614.374869,
+    "ast_hash": "bbdd402787186abb93ed7fc9d9945149",
+    "semantic_hash": "bbdd402787186abb93ed7fc9d9945149"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -1614,9 +1614,9 @@
     "semantic_hash": "cfc27f355a865723c06918605915da04"
   },
   "requirements.txt": {
-    "mtime": 1790498947.45865,
-    "seen": 1790952635.7088518,
-    "ast_hash": "19bc4d0a690b7568c4bdccc6b3a6fd8e",
+    "mtime": 1791533006.2037227,
+    "seen": 1791547490.3077433,
+    "ast_hash": "3f01e1b44fdd1ff7c1db2e3fa7a12f59",
     "semantic_hash": ""
   },
   "research/hypotheses/HYP-006-DIRECT-L2-TRANSPORT-PARITY.yaml": {
@@ -2299,7 +2299,7 @@
   },
   ".mcp.json": {
     "mtime": 1791211589.4039154,
-    "seen": 1791530271.7420156,
+    "seen": 1791547498.575132,
     "ast_hash": "28136d52f8c466fd93e00c713b7fa4f6",
     "semantic_hash": "28136d52f8c466fd93e00c713b7fa4f6"
   },
@@ -3780,22 +3780,22 @@
     "semantic_hash": ""
   },
   "tools/skills/adaptive-workflow/SKILL.md": {
-    "mtime": 1791531992.196,
-    "seen": 1791532101.8837483,
-    "ast_hash": "f127daab650f952233b0b715d1213646",
-    "semantic_hash": "f127daab650f952233b0b715d1213646"
+    "mtime": 1791547199.5150275,
+    "seen": 1791547498.5757568,
+    "ast_hash": "ab76f73785e230805c3101e4566dbdca",
+    "semantic_hash": "ab76f73785e230805c3101e4566dbdca"
   },
   "tools/skills/adaptive-workflow/examples/routing-scenarios.md": {
-    "mtime": 1791528099.560626,
-    "seen": 1791530271.7422903,
-    "ast_hash": "0d7fcd0884af3b7556d689466fdc8068",
-    "semantic_hash": "0d7fcd0884af3b7556d689466fdc8068"
+    "mtime": 1791547300.6506703,
+    "seen": 1791547498.575759,
+    "ast_hash": "6fdb2d444fc1679e2c728a7f94e920a0",
+    "semantic_hash": "6fdb2d444fc1679e2c728a7f94e920a0"
   },
   "tools/skills/adaptive-workflow/references/antigravity-chat-context-injection.md": {
-    "mtime": 1791529942.8565376,
-    "seen": 1791530271.7422912,
-    "ast_hash": "2fb53b369bf3e6cae87540173dc7a6fe",
-    "semantic_hash": "2fb53b369bf3e6cae87540173dc7a6fe"
+    "mtime": 1791547310.20111,
+    "seen": 1791547498.5757601,
+    "ast_hash": "98f2932fd5079bb9df59d1f34db3911a",
+    "semantic_hash": "98f2932fd5079bb9df59d1f34db3911a"
   },
   "tools/skills/adaptive-workflow/references/calm-authority-writing.md": {
     "mtime": 1791528072.387292,
@@ -3804,34 +3804,34 @@
     "semantic_hash": "ed9804a5d57b800d3922a25a4103d043"
   },
   "tools/skills/adaptive-workflow/references/cpm-concurrency-dispatch.md": {
-    "mtime": 1791528046.4617717,
-    "seen": 1791530271.742293,
-    "ast_hash": "ee0d872f10b2fbbcf994f4a15d47ce57",
-    "semantic_hash": "ee0d872f10b2fbbcf994f4a15d47ce57"
+    "mtime": 1791547270.108808,
+    "seen": 1791547498.575763,
+    "ast_hash": "0b8a4307f84dae1b1d0d29c9ecf1cd67",
+    "semantic_hash": "0b8a4307f84dae1b1d0d29c9ecf1cd67"
   },
   "tools/skills/adaptive-workflow/references/cross-tool-chains.md": {
-    "mtime": 1791528084.9333725,
-    "seen": 1791530271.742294,
-    "ast_hash": "3796f30efb22fe109597e34dea057609",
-    "semantic_hash": "3796f30efb22fe109597e34dea057609"
+    "mtime": 1791547293.669178,
+    "seen": 1791547498.575764,
+    "ast_hash": "9d3f044b50d809d4f4ebb3ce8196c3de",
+    "semantic_hash": "9d3f044b50d809d4f4ebb3ce8196c3de"
   },
   "tools/skills/adaptive-workflow/references/dynamic-flight-envelope.md": {
-    "mtime": 1791529429.3867195,
-    "seen": 1791530271.742295,
-    "ast_hash": "2640fe9f97a930f2735c626162329daa",
-    "semantic_hash": "2640fe9f97a930f2735c626162329daa"
+    "mtime": 1791547252.3757696,
+    "seen": 1791547498.575767,
+    "ast_hash": "dfbe926b340ad25cddb115a26019c29e",
+    "semantic_hash": "dfbe926b340ad25cddb115a26019c29e"
   },
   "tools/skills/adaptive-workflow/references/ecosystem-repos.md": {
-    "mtime": 1791528055.98908,
-    "seen": 1791530271.7422957,
-    "ast_hash": "284807235c35bd76d79d08fc75272ad2",
-    "semantic_hash": "284807235c35bd76d79d08fc75272ad2"
+    "mtime": 1791547349.7405448,
+    "seen": 1791547498.5757682,
+    "ast_hash": "84415235c2a1b210932f405d28789311",
+    "semantic_hash": "84415235c2a1b210932f405d28789311"
   },
   "tools/skills/adaptive-workflow/references/fleet-command-architecture.md": {
-    "mtime": 1791529954.3834267,
-    "seen": 1791530271.742297,
-    "ast_hash": "f0f342e28b006ba223fb6c40852d0048",
-    "semantic_hash": "f0f342e28b006ba223fb6c40852d0048"
+    "mtime": 1791547280.5823107,
+    "seen": 1791547498.57577,
+    "ast_hash": "3aa3a7de3d4d3ac6d46432e979b77565",
+    "semantic_hash": "3aa3a7de3d4d3ac6d46432e979b77565"
   },
   "tools/skills/adaptive-workflow/references/lifecycle-stages.md": {
     "mtime": 1791529964.4126666,
@@ -3840,40 +3840,40 @@
     "semantic_hash": "66c5a135ece5294ccbb49b31539d35f4"
   },
   "tools/skills/adaptive-workflow/references/orthogonal-execution-matrix.md": {
-    "mtime": 1791529020.9774299,
-    "seen": 1791530271.7422986,
-    "ast_hash": "840d200c936353a884dac1b03ca6f510",
-    "semantic_hash": "840d200c936353a884dac1b03ca6f510"
+    "mtime": 1791547235.46464,
+    "seen": 1791547498.5757737,
+    "ast_hash": "9583110a4846c3f156a2b5bff4df3657",
+    "semantic_hash": "9583110a4846c3f156a2b5bff4df3657"
   },
   "tools/skills/adaptive-workflow/references/quota-velocity-acceleration.md": {
-    "mtime": 1791529400.4692154,
-    "seen": 1791530271.7422993,
-    "ast_hash": "3b1a111862948fde0c17e3280c1e3178",
-    "semantic_hash": "3b1a111862948fde0c17e3280c1e3178"
+    "mtime": 1791547316.983984,
+    "seen": 1791547498.575775,
+    "ast_hash": "5f0869bfcb51cc4658183fd3c8167fb2",
+    "semantic_hash": "5f0869bfcb51cc4658183fd3c8167fb2"
   },
   "tools/skills/adaptive-workflow/references/skill-matrix.md": {
-    "mtime": 1791529973.1657233,
-    "seen": 1791530271.7423005,
-    "ast_hash": "86d2f22b168fa7f4429da0144cf47894",
-    "semantic_hash": "86d2f22b168fa7f4429da0144cf47894"
+    "mtime": 1791547288.2734516,
+    "seen": 1791547498.5757763,
+    "ast_hash": "860957ded50e5c573fbbb6ab548fefe3",
+    "semantic_hash": "860957ded50e5c573fbbb6ab548fefe3"
   },
   "tools/skills/adaptive-workflow/references/transactional-recovery.md": {
-    "mtime": 1791529036.65793,
-    "seen": 1791530271.7423012,
-    "ast_hash": "274f30c864b46b2e03a5f246996ec9cb",
-    "semantic_hash": "274f30c864b46b2e03a5f246996ec9cb"
+    "mtime": 1791547570.5701976,
+    "seen": 1791547614.3752966,
+    "ast_hash": "19e39149be3759f2046d844d16c705f5",
+    "semantic_hash": "19e39149be3759f2046d844d16c705f5"
   },
   "tools/skills/adaptive-workflow/references/verification-gates.md": {
-    "mtime": 1791524218.670838,
-    "seen": 1791530271.7423022,
-    "ast_hash": "6e05fff73c4eec19b7de194426b8afde",
-    "semantic_hash": "6e05fff73c4eec19b7de194426b8afde"
+    "mtime": 1791547218.367378,
+    "seen": 1791547498.5757785,
+    "ast_hash": "25313216cf4411241180d98bbdc812d3",
+    "semantic_hash": "25313216cf4411241180d98bbdc812d3"
   },
   "tools/skills/adaptive-workflow/references/worker-availability-ledger.md": {
-    "mtime": 1791529408.9053445,
-    "seen": 1791530271.742303,
-    "ast_hash": "e2d521470c064d66472bff4bdecf6c53",
-    "semantic_hash": "e2d521470c064d66472bff4bdecf6c53"
+    "mtime": 1791547363.0771646,
+    "seen": 1791547498.5757797,
+    "ast_hash": "48ac078c7f7c4f80f24d52f48e36c575",
+    "semantic_hash": "48ac078c7f7c4f80f24d52f48e36c575"
   },
   "research/notes/2026-10-09_HANDOFF_CUSTOMIZATION_STATE_SYNC.md": {
     "mtime": 1791530565.803102,
@@ -3922,5 +3922,35 @@
     "seen": 1791536512.0128758,
     "ast_hash": "d416c381e72db6d3e4beb53e72c5e510",
     "semantic_hash": "d416c381e72db6d3e4beb53e72c5e510"
+  },
+  "sim/adaptive_orchestrator.py": {
+    "mtime": 1791547564.1092484,
+    "seen": 1791547614.374952,
+    "ast_hash": "cb7264373bdcf77444a5f325b880ead6",
+    "semantic_hash": "cb7264373bdcf77444a5f325b880ead6"
+  },
+  "sim/test_adaptive_orchestrator.py": {
+    "mtime": 1791547094.5275733,
+    "seen": 1791547498.575437,
+    "ast_hash": "ca9ad8d1a6985847e8f55b887aa458a0",
+    "semantic_hash": "ca9ad8d1a6985847e8f55b887aa458a0"
+  },
+  "tools/adaptive_engine.py": {
+    "mtime": 1791540518.2955863,
+    "seen": 1791547498.5754845,
+    "ast_hash": "73f2dc560fb255cd60815a82e520848a",
+    "semantic_hash": "73f2dc560fb255cd60815a82e520848a"
+  },
+  "tools/skills/adaptive-workflow/references/deterministic-zero-ai-protocol.md": {
+    "mtime": 1791547132.1402316,
+    "seen": 1791547498.5757651,
+    "ast_hash": "db96c434b916c093c435dd6d4219be37",
+    "semantic_hash": "db96c434b916c093c435dd6d4219be37"
+  },
+  "tools/skills/adaptive-workflow/references/historical-provenance.md": {
+    "mtime": 1791547142.675522,
+    "seen": 1791547498.5757709,
+    "ast_hash": "e44912d1db7cf10b1720d4054455a602",
+    "semantic_hash": "e44912d1db7cf10b1720d4054455a602"
   }
 }

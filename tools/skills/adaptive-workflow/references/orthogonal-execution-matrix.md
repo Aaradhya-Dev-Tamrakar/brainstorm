@@ -15,11 +15,11 @@ Quantified by affected file count and dependency depth:
 - **`V2_BATCH`**: $> 15$ target files. High-volume migrations, curriculum scaffolding, bulk documentation, dataset transformations.
 
 ### Dimension 2: Blast Criticality ($R$)
-Quantified by Knowledge Graph node centrality ($C$) via [`graphify`](file:///C:/Users/Aaradhya/.gemini/config/skills/graphify):
-$$C = \frac{\text{Direct Dependents} + 2 \times \text{Transitive Dependents}}{\text{Total Ecosystem Modules}}$$
+Quantified by Knowledge Graph node centrality ($C$) via `graphify`:
+$$C = \min\left(1.0, \max\left(0.0, \frac{2|D| + |T_{\text{ind}}|}{2(N - 1)}\right)\right), \quad N = 28$$
 
 - **`R0_LEAF`** ($C \le 0.10$): Standalone scripts, doc archives, curriculum study guides, isolated presentations.
-- **`R1_COMPONENT`** ($0.10 < C \le 0.35$): Standard domain repositories ([`SPARK`](file:///f:/Aaradhya-Dev-Tamrakar/SPARK), [`BiasAperture`](file:///f:/Aaradhya-Dev-Tamrakar/BiasAperture), [`Nexus`](file:///f:/AaradhyaDT/Nexus)).
+- **`R1_COMPONENT`** ($0.10 < C \le 0.35$): Standard domain repositories (`SPARK`, `BiasAperture`, `Nexus`).
 - **`R2_CORE`** ($C > 0.35$): Foundational registries (`ecosystem.registry.json`), capability contracts (`capability.contract.v1.json`), and central audit gates (`audit.bat`).
 
 ---
@@ -81,7 +81,7 @@ flowchart TD
 
 ### Cell `(V1, R1)` — `STAR_SUBAGENTS`
 - **Application**: Multi-domain feature additions spanning firmware, DSP, and UI.
-- **Concurrency**: Lead Agent + 3 Domain Commanders commissioned at Depth 1 via [`agent-teams-orchestration`](file:///C:/Users/Aaradhya/.gemini/config/skills/agent-teams-orchestration).
+- **Concurrency**: Lead Agent + 3 Domain Commanders commissioned at Depth 1 via `agent-teams-orchestration`.
 - **Workspace**: Isolated Git worktrees (`.worktrees/<task_id>`).
 - **Scheduling**: Macro-CPM float allocation ($TS_i = LF_i - EF_i$). Critical path ($TS = 0$) held sequentially; slack tasks ($TS > 0$) run concurrently.
 - **Recovery**: Rolling snapshot + BLAKE3 hash audit.
@@ -90,7 +90,7 @@ flowchart TD
 ### Cell `(V1, R2)` — `DECOUPLED_SLICES`
 - **Application**: Architectural refactor touching multiple core interfaces.
 - **Concurrency**: 1 Lead Agent + 1 Adversarial Reviewer (`self, pro`).
-- **Workspace**: Decoupled micro-PR branches sliced via [`split-to-prs`](file:///C:/Users/Aaradhya/.gemini/config/skills/split-to-prs). Monolithic feature branches are forbidden.
+- **Workspace**: Decoupled micro-PR branches sliced via `split-to-prs`. Monolithic feature branches are forbidden.
 - **Recovery**: Independent snapshot per micro-PR slice.
 - **Verification**: Full regression suite pass per slice before next slice base is merged.
 

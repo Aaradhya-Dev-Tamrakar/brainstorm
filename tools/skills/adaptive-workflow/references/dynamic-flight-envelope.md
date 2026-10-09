@@ -12,11 +12,12 @@ While the 2D Orthogonal Execution Matrix defines static policy limits, runtime c
 
 ```mermaid
 flowchart LR
-    Telemetry["Live Operational Telemetry\n- API Response Latency (ms)\n- Rate-Limit Responses (429s)\n- Host Memory / CPU Pressure\n- Worker Heartbeats & Stale Leases\n- Fleet Health Ratio H = Navail / Ntotal"] --> Governor{"Fly-By-Wire Governor\n(Envelope Boundary Monitor)"}
+    Telemetry["Live Operational Telemetry\n- API Response Latency (ms)\n- Rate-Limit Responses (429s)\n- Antigravity WorkingSet RAM Reserve (>=2048MB)\n- Worker Heartbeats & Stale Leases\n- Fleet Health Ratio H = Navail / Ntotal"] --> Governor{"Fly-By-Wire Governor\n(Envelope Boundary Monitor)"}
     
     Governor -- "Nominal (Within Envelope)" --> Steady["Maintain Matrix Concurrency Policy"]
-    Governor -- "Latency Drift (> 2000ms)" --> Damping["PID Concurrency Damping\n(Halve Active Worker Pool)"]
+    Governor -- "Latency Drift (> 2500ms)" --> Damping["PID Concurrency Damping\n(Halve Active Worker Pool)"]
     Governor -- "Rate Limit Spike (429) or Lease Timeout" --> Stall["Stall Recovery\n(Pause Queue, Evict Stale Leases)"]
+    Governor -- "RAM Pressure (< 2048MB)" --> Throttle["RAM Emergency Guard\n(Block Local Models >500MB, Run NovaOptimizer)"]
     Governor -- "Fleet Depletion (H < 0.70)" --> Downshift["Velocity Downshift\n(Throttle Turbo -> Damped -> Fallback)"]
     Governor -- "Verification Regression" --> Abort["Transaction Abort\n(Microsecond Rollback via refs/backup/)"]
 ```
@@ -31,7 +32,8 @@ The governor ingests telemetry across five continuous channels:
 | :--- | :--- | :--- | :--- | :--- |
 | **API Call Latency** | $\le 1200\text{ ms}$ | $1200 - 2500\text{ ms}$ | $> 2500\text{ ms}$ | Step down concurrency via PID damping ($K_d$) |
 | **HTTP 429 Rate Limits** | 0 responses | 1 response / 60s | $\ge 2$ responses / 60s | Pause queue dispatch for 60s; halve pool |
-| **Host System RAM** | $> 4\text{ GB}$ available | $2 - 4\text{ GB}$ available | $< 2\text{ GB}$ available | Block new worktrees via Banker's algorithm |
+| **Host System RAM** | $\ge 11.0\text{ GB}$ (NovaOptimizer Steady State) | $2048 - 4096\text{ MB}$ available | $< 2048\text{ MB}$ available | Assert Antigravity reserve; block local models; run NovaOptimizer |
+| **Local Model Footprint** | $\le 500\text{ MB}$ (Qwen-0.5B GGUF) | $400 - 500\text{ MB}$ | $> 500\text{ MB}$ | Reject on-device execution; delegate to Fleet Cloud Swarm |
 | **Worker Lease Age** | $< 300\text{ s}$ | $300 - 600\text{ s}$ | $> 900\text{ s}$ | Stale lease eviction; task rollover |
 | **Fleet Health Ratio ($H$)** | $H \ge 0.70$ ($N_{\text{avail}} \ge 19$) | $0.35 \le H < 0.70$ ($10 \le N_{\text{avail}} < 19$) | $H < 0.35$ ($N_{\text{avail}} < 10$) | Throttle velocity profile; disable speculative racing |
 
@@ -56,19 +58,19 @@ Where:
 
 ---
 
-## 4. Banker's Deadlock Avoidance Validator
+## 4. Banker's Deadlock Avoidance & Antigravity Memory Guard
 
-Before allocating resources for additional subagents or claiming new Git worktrees, the orchestrator executes the Banker's safety check matching [`systems-concurrency-harness`](file:///C:/Users/Aaradhya/.gemini/config/skills/systems-concurrency-harness):
+Before allocating resources for additional subagents or claiming new Git worktrees, the orchestrator executes the Banker's safety check matching `systems-concurrency-harness` and `AntigravityMemoryGovernor` in [`sim/adaptive_orchestrator.py`](../../../../sim/adaptive_orchestrator.py):
 
 ```python
 def is_safe_allocation(available_ram_mb: int, active_worktrees: int, requested_workers: int) -> bool:
     """
-    Banker's Algorithm Safety Check for Host Resources.
-    Guarantees that claiming new workers will not exhaust host resources.
+    Banker's Algorithm Safety Check for Host Resources & Antigravity Headroom.
+    Guarantees that claiming new workers preserves >= 2,048 MB free headroom for Antigravity.
     """
-    RAM_PER_WORKER_MB = 256
+    RAM_PER_WORKER_MB = 30  # Lightweight CLI worker process in worktree
     MAX_CONCURRENT_WORKTREES = 4
-    MIN_HEADROOM_RAM_MB = 2048
+    MIN_HEADROOM_RAM_MB = 2048  # Strict Antigravity WorkingSet reserve
 
     if active_worktrees + requested_workers > MAX_CONCURRENT_WORKTREES:
         return False
@@ -83,7 +85,7 @@ If the safety check returns `False`, worker dispatch is queued until active work
 
 ## 5. Earned Value Management (EVM) Velocity Monitoring
 
-Milestone progress within the flight envelope is audited via EVM metrics matching [`pm-workflow-orchestrator`](file:///C:/Users/Aaradhya/.gemini/config/skills/pm-workflow-orchestrator):
+Milestone progress within the flight envelope is audited via EVM metrics matching `pm-workflow-orchestrator`:
 
 - **Cost Performance Index ($CPI = EV / AC$)**: Efficiency of token and credit expenditure.
 - **Schedule Performance Index ($SPI = EV / PV$)**: Progress velocity against planned WBS schedule.

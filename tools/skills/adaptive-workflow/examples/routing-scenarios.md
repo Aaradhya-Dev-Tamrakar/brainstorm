@@ -120,21 +120,21 @@ This document contains end-to-end walkthroughs demonstrating how `adaptive-workf
 
 ---
 
-## Scenario 8: Autonomous Sovereign-Commander-Fleet Multi-Agent Swarm
+## Scenario 8: Autonomous Multi-Agent Swarm Orchestration
 
 **User Objective**: Full multi-front ecosystem audit and documentation synchronization.
 
 1. **Stage 1 (Scope)**: Macro-endeavor spanning research, code, and standards.
-2. **Stage 2 (Route)**: High Lord computes Macro-CPM graph, identifying 3 parallel slack branches ($TS > 0$).
+2. **Stage 2 (Route)**: Lead Agent computes Macro-CPM graph, identifying 3 parallel slack branches ($TS > 0$).
 3. **Stage 3 (Plan)**:
-   - High Lord dispatches 3 concurrent Domain Commanders in a single `invoke_subagent` call:
+   - Lead Agent dispatches 3 concurrent Domain Commanders in a single `invoke_subagent` call:
      - Commander 1 (Core Repos) $\to$ `scout_core.md`.
      - Commander 2 (Aux & AEC) $\to$ `scout_aux.md`.
      - Commander 3 (Calm Writing) $\to$ `scout_calm.md`.
    - Each Commander strictly respects the $\le 1,200$-word budget.
-   - High Lord tracks conversation IDs in the Active Commander Ledger.
+   - Lead Agent tracks conversation IDs in the Active Commander Ledger.
 4. **Stage 4 (Verify)**:
-   - High Lord unlocks Milestone Convergence Gate upon 3/3 completions.
+   - Lead Agent unlocks Milestone Convergence Gate upon 3/3 completions.
    - Dispatches Adversarial Reviewer on Critical Path (`Model: "pro"`).
    - Reviewer audits physical paths, checks schema consistency, verifies epistemic badges, and runs `audit_calm_writing.py`.
-5. **Stage 5 (Sync)**: High Lord writes final verified documents symmetrically across global and workspace repositories, certifying clean status via `.\audit.bat --fix`.
+5. **Stage 5 (Sync)**: Lead Agent writes final verified documents symmetrically across global and workspace repositories, certifying clean status via `.\audit.bat --fix`.

@@ -1,25 +1,25 @@
 # Fleet Command Architecture: Marshaling the 27-Worker Swarm
 
-This document specifies the operational protocols for Domain Commanders marshaling the **Fleet Army** (`F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator`) to execute high-volume, batch, or long-running tasks in parallel.
+This document specifies the operational protocols for Domain Commanders marshaling the **Fleet-Orchestrator pool** (`F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator`) to execute high-volume, batch, or long-running tasks in parallel.
 
 ---
 
-## 1. The Commander-to-Fleet Marshalling Model
+## 1. The Commander-to-Fleet Marshalling Model (`INV-CTX-FIREBREAK`)
 
-In the Sovereign-Commander-Fleet Army hierarchy, Domain Commanders (autonomous subagents) delegate execution-heavy tasks to the headless Copilot worker pool rather than executing hundreds of repetitive steps in-turn.
+In the Lead-Commander-Worker command hierarchy, the Lead Agent delegates execution-heavy tasks to ephemeral Domain Commanders (`invoke_subagent`). Domain Commanders marshal the headless Copilot worker pool rather than executing hundreds of repetitive steps in-turn. The subagent absorbs all queue polling, worktree logs, and retries, returning **only a <300 word executive manifest** back to the primary chat (`INV-CTX-FIREBREAK`).
 
 ```mermaid
 flowchart TD
-    Cmdr["⚔️ Domain Commander (Subagent)"] --> Preflight{"Check Fleet Health\n& Worker PID"}
+    Cmdr["Domain Commander (Subagent)"] --> Preflight{"Check Fleet Health\n& Worker PID"}
     
     Preflight -- "PID Inactive" --> Spawn["Spawn Managed Worker Daemon\n(tools/copilot_queue_worker.py --workers 4)"]
     Preflight -- "PID Active" --> Batch["Partition Workload into Task JSONs"]
     Spawn --> Batch
     
     Batch --> Enqueue["Write Task JSONs to\norchestrator-state/tasks/<task_id>.json"]
-    Enqueue --> Workers["🛡️ 27x Copilot Workers (5,400 Credits/Mo)\n- Ephemeral Worktrees (.worktrees/<task_id>)\n- 15-Minute Stale Lease Eviction"]
+    Enqueue --> Workers["27x Copilot Workers (5,400 Credits/Mo)\n- Ephemeral Worktrees (.worktrees/<task_id>)\n- 15-Minute Stale Lease Eviction"]
     
-    Workers --> Checkpoints["📋 Write Checkpoints to\norchestrator-state/checkpoints/<task_id>.json"]
+    Workers --> Checkpoints["Write Checkpoints to\norchestrator-state/checkpoints/<task_id>.json"]
     Checkpoints --> Monitor["Commander Polls / Awaits Checkpoints"]
     Monitor --> Verdict{"Checkpoint Status == 'done'?"}
     

@@ -10,11 +10,11 @@ Derived from **CT 658 (Project Management)** and **CE 615 (Engineering Economics
 
 Execution scheduling operates across two distinct hierarchical layers:
 
-1. **Macro-CPM (High Lord $\leftrightarrow$ Domain Commanders)**:
+1. **Macro-CPM (Lead Agent $\leftrightarrow$ Domain Commanders)**:
    - Governs strategic milestones across major architectural domains.
-   - Operated by the High Lord (Lead Agent) using Antigravity's native `invoke_subagent`.
+   - Operated by the Lead Agent using Antigravity's native `invoke_subagent`.
    - Communication follows a strict **Star Network (Hub-and-Spoke)** topology.
-2. **Micro-CPM (Domain Commanders $\leftrightarrow$ Fleet Army)**:
+2. **Micro-CPM (Domain Commanders $\leftrightarrow$ Headless Workers)**:
    - Governs batch task queues and work package execution across the 27 pooled Copilot workers.
    - Operated by Domain Commanders via task JSONs in `Fleet-Orchestrator/orchestrator-state/tasks/`.
 
@@ -24,18 +24,21 @@ Execution scheduling operates across two distinct hierarchical layers:
 
 ### 1. Float / Slack Formulas
 For any work package $i$:
-- **Early Start ($ES_i$)**: Earliest time an activity can start based on predecessors.
+- **Early Start ($ES_i$)**: Earliest time an activity can start based on predecessors:
+  $$ES_i = \max_{p \in \text{Predecessors}(i)}(EF_p) \quad (\text{or } 0 \text{ if no predecessors})$$
 - **Early Finish ($EF_i$)**: $ES_i + \text{Duration}_i$.
-- **Late Finish ($LF_i$)**: Latest time an activity can finish without delaying the overall project.
+- **Project Duration ($T$)**: $T = \max_i(EF_i)$.
+- **Late Finish ($LF_i$)**: Latest time an activity can finish without delaying the overall project:
+  $$LF_i = \min_{s \in \text{Successors}(i)}(LS_s) \quad (\text{or } T \text{ if no successors})$$
 - **Late Start ($LS_i$)**: $LF_i - \text{Duration}_i$.
 - **Total Slack ($TS_i$)**:
   $$TS_i = LF_i - EF_i = LS_i - ES_i$$
 - **Free Slack ($FS_i$)**:
-  $$FS_i = \min_{j \in \text{Successors}(i)}(ES_j) - EF_i$$
+  $$FS_i = \min_{s \in \text{Successors}(i)}(ES_s) - EF_i \quad (\text{or } T - EF_i \text{ if no successors})$$
 
 ### 2. Concurrency Invariants
 1. **Critical Path Invariant ($TS = 0$)**:
-   Activities with zero total slack dictate the completion milestone. These activities are held tightly and managed sequentially by the High Lord and the Adversarial Reviewer.
+   Activities with zero total slack dictate the completion milestone. These activities are held tightly and managed sequentially by the Lead Agent and the Adversarial Reviewer.
 2. **Concurrency Eligibility Invariant ($TS > 0$)**:
    Any activity with positive slack ($TS > 0$) whose immediate dependency predecessors are fully satisfied is eligible for **immediate parallel execution** via concurrent subagents or fleet workers.
 3. **Disjoint Workspace Invariant**:
@@ -45,13 +48,50 @@ For any work package $i$:
 
 ---
 
-## 3. The Active Completion Ledger Algorithm
+## 3. Deterministic Python DAG Solver (`INV-CPM-SOLVER`)
+
+Rather than hallucinating schedule dates via prompt arithmetic, the engine executes an exact topological sort DAG solver implemented in [`sim/adaptive_orchestrator.py`](../../../../sim/adaptive_orchestrator.py):
+
+```python
+from sim.adaptive_orchestrator import DeterministicCPMScheduler
+
+tasks = [
+    {"id": "A", "duration": 3, "predecessors": []},
+    {"id": "B", "duration": 2, "predecessors": ["A"]},
+    {"id": "C", "duration": 4, "predecessors": ["A"]},
+    {"id": "D", "duration": 3, "predecessors": ["B", "C"]},
+]
+
+schedule = DeterministicCPMScheduler.calculate_schedule(tasks)
+# Returns:
+#   project_duration: 10.0
+#   critical_path: ["A", "C", "D"]  (TS = 0)
+#   parallel_slack: ["B"]           (TS = 2.0, FS = 2.0)
+```
+
+CLI Invocation:
+```powershell
+python tools/adaptive_engine.py cpm --dag-json path/to/dag.json
+```
+
+### Dynamic Cycle Detection & Diagnostics (`DAGCycleError`)
+If a task specification contains circular dependencies (e.g. $A \to B \to A$), Kahn's algorithm topological sort stalls on the unresolved subgraph. Rather than failing with a generic error, the engine executes an iterative DFS back-edge detection pass and raises `DAGCycleError` (subclassing `ValueError`).
+
+The structured error reports:
+- **`cycle`**: Exact closed-loop dependency path (e.g. `['Alpha', 'Gamma', 'Beta', 'Alpha']`).
+- **`unresolved_tasks`**: Complete list of tasks stalled by the cycle.
+- **`remediation`**: Deterministic suggestion identifying which dependency edge to prune to restore acyclic execution.
+
+When invoked via `tools/adaptive_engine.py cpm`, cyclic graphs return a structured JSON diagnostic payload with exit code 1.
+
+---
+
+## 4. The Active Completion Ledger Algorithm
 
 In multi-agent environments, asynchronous child processes report completion independently. If the parent agent wakes up upon the first child completion and advances prematurely, remaining workers are orphaned.
 
 ### The Ledger State Machine:
 ```python
-# Conceptual Ledger Implementation
 class CompletionLedger:
     def __init__(self, expected_ids: list[str]):
         self.pending = set(expected_ids)
@@ -75,16 +115,16 @@ class CompletionLedger:
 
 ---
 
-## 4. Star-Topology Governance Invariant
+## 5. Star-Topology Governance Invariant
 
-Subagents in Antigravity cannot horizontally discover or communicate with peer subagents. All horizontal cross-domain coordination must flow through the High Lord:
+Subagents in Antigravity cannot horizontally discover or communicate with peer subagents. All horizontal cross-domain coordination must flow through the Lead Agent:
 
 ```mermaid
 flowchart TD
-    Lead["👑 High Lord (Hub)"]
-    CmdrA["⚔️ Domain Commander A"]
-    CmdrB["⚔️ Domain Commander B"]
-    CmdrC["⚔️ Domain Commander C"]
+    Lead["Lead Agent (Hub)"]
+    CmdrA["Domain Commander A"]
+    CmdrB["Domain Commander B"]
+    CmdrC["Domain Commander C"]
     
     Lead <-->|Bidirectional Turn Communication| CmdrA
     Lead <-->|Bidirectional Turn Communication| CmdrB
@@ -94,4 +134,4 @@ flowchart TD
     CmdrB -.-x|Direct Peer-to-Peer Blocked| CmdrC
 ```
 
-Commanders must synthesize domain findings independently and return them to the High Lord, who arbitrates conflicts and enforces global schema invariants.
+Commanders must synthesize domain findings independently and return them to the Lead Agent, who arbitrates conflicts and enforces global schema invariants.

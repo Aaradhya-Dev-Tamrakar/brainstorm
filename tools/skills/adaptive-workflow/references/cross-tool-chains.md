@@ -10,7 +10,7 @@ Connects high-throughput autonomous batch generation to living Google Drive mani
 
 ```mermaid
 flowchart LR
-    Task["High Lord / Commander\nDecomposes SKU Batch"] --> Queue["Fleet-Orchestrator\n(orchestrator-state/tasks/)"]
+    Task["Lead Agent / Commander\nDecomposes SKU Batch"] --> Queue["Fleet-Orchestrator\n(orchestrator-state/tasks/)"]
     Queue --> Pool["27x Copilot Workers\n(.worktrees/<task_id>)"]
     Pool --> Checkpoints["orchestrator-state/checkpoints/"]
     Checkpoints --> DriveSync["scripts/sync_drive.py --push"]

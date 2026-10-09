@@ -69,7 +69,7 @@ git reset --hard refs/backup/snapshot-1
 
 ## 3. Cryptographic Integrity Triage (`cyber-forensics`)
 
-To verify that multi-agent execution did not cause collateral damage to neighboring files, the orchestrator captures pre- and post-flight file hashes matching [`cyber-forensics`](file:///C:/Users/Aaradhya/.gemini/config/skills/cyber-forensics):
+To verify that multi-agent execution did not cause collateral damage to neighboring files, the orchestrator captures pre- and post-flight file hashes matching `cyber-forensics`:
 
 1. **Pre-Flight Hash Manifest**:
    - Computes BLAKE3 (or SHA-256) hashes of all declared target files and critical sibling files.
@@ -110,3 +110,30 @@ Before the convergence gate unlocks to allow commits or PR creation, two special
 2. **`pr-test-analyzer`**:
    - Evaluates behavioral test coverage for all modified business logic branches.
    - *Pass Requirement*: $\ge 80\%$ test coverage on new or altered routines.
+
+---
+
+## 6. Windows NTFS File-Locking Resilience & Cleanup
+
+On Windows NTFS filesystems, background antivirus engines (such as Windows Defender real-time protection) or search indexers can hold transient file handles on freshly generated worktrees or projected context files. Furthermore, Git operations frequently mark internal objects read-only (`stat.S_IREAD`).
+
+To eliminate transient `PermissionError` (`[WinError 32]` and `[WinError 5]`), cleanup operations in [`sim/adaptive_orchestrator.py`](../../../../sim/adaptive_orchestrator.py) and `Fleet-Orchestrator` execute via resilient helpers:
+
+1. **Read-Only Attribute Stripping**: Automatically sets `stat.S_IWRITE` via `os.chmod` prior to `unlink()` or inside `shutil.rmtree`'s `onerror` callback.
+2. **Exponential Backoff with Jitter**: Retries unlinking across 4 attempts ($50\text{ms}, 150\text{ms}, 350\text{ms}, 700\text{ms}$ with $\pm 30\%$ random jitter) to allow external processes to release locks.
+3. **Kernel Shell Fallback**: Employs native `cmd.exe /c rmdir /s /q` as an ultimate fallback on Windows if Python handles remain temporarily blocked.
+
+---
+
+## 7. Fencing Tokens & Pre-Existing File Protection
+
+### 1. Monotonic Fencing Tokens (`INV-FENCE-TOKEN`)
+To reject split-brain writes from evicted or stale workers that wake up after their lease expired, `OrchestratorFencingManager` issues monotonic integer tokens per task. During branch integration or merge verification:
+- Commits carrying expired worker epochs ($e_{\text{worker}} < e_{\text{active}}$) are strictly rejected.
+- Only the latest lease owner ($e_{\text{worker}} == e_{\text{active}}$) can merge worktree changes.
+
+### 2. Pre-Existing File Guard (`INV-PRE-EXIST-GUARD`)
+When projecting tasks into Git worktrees:
+- The orchestrator resolves the canonical common directory via `git rev-parse --path-format=absolute --git-common-dir`.
+- Pre-existing files are archived to `<git_common_dir>/projection_backups/<task_id>/` outside worktree git tracking.
+- Upon task teardown, ephemeral files are deleted and pre-existing files are restored cleanly from backup.

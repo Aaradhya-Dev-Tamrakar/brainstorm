@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791547605.0208173,
-    "seen": 1791547614.374869,
-    "ast_hash": "bbdd402787186abb93ed7fc9d9945149",
-    "semantic_hash": "bbdd402787186abb93ed7fc9d9945149"
+    "mtime": 1791547616.8503017,
+    "seen": 1791547623.758788,
+    "ast_hash": "f6e3ebe3972b3a489cbd40dddd65bf22",
+    "semantic_hash": "f6e3ebe3972b3a489cbd40dddd65bf22"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,

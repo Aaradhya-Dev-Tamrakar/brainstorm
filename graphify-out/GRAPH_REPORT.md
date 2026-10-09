@@ -576,15 +576,15 @@
 10. `How to implement` - 20 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `cmd_cpm()` --uses--> `DAGCycleError`  [INFERRED]
-  tools/adaptive_engine.py → sim/adaptive_orchestrator.py
-- `cmd_cpm()` --uses--> `DeterministicCPMScheduler`  [INFERRED]
-  tools/adaptive_engine.py → sim/adaptive_orchestrator.py
-- `cmd_fast_path()` --uses--> `DeterministicTriageEngine`  [INFERRED]
-  tools/adaptive_engine.py → sim/adaptive_orchestrator.py
 - `cmd_flight_check()` --uses--> `AntigravityMemoryGovernor`  [INFERRED]
   tools/adaptive_engine.py → sim/adaptive_orchestrator.py
 - `cmd_rollback()` --uses--> `DeterministicTransactionalRecovery`  [INFERRED]
+  tools/adaptive_engine.py → sim/adaptive_orchestrator.py
+- `cmd_snapshot()` --uses--> `DeterministicTransactionalRecovery`  [INFERRED]
+  tools/adaptive_engine.py → sim/adaptive_orchestrator.py
+- `cmd_fast_path()` --uses--> `DeterministicTriageEngine`  [INFERRED]
+  tools/adaptive_engine.py → sim/adaptive_orchestrator.py
+- `cmd_triage()` --uses--> `DeterministicTriageEngine`  [INFERRED]
   tools/adaptive_engine.py → sim/adaptive_orchestrator.py
 
 ## Import Cycles
@@ -2741,9 +2741,9 @@ Nodes (3): fail(), Dependency-free validation for the canonical ecosystem verifi
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `TestAdaptiveOrchestrator` to `ARCH-RFC-006: Public/Private Information Boundary & Security Architecture`, `create_dataset_torrent`, `skills/README.md`, `required`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
-- **Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `skills/README.md` to `2026-09-19 — Daily Log`, `README.md`, `2. Core Capabilities & Workflows`, `PULL_REQUEST_TEMPLATE.md`, `TestAdaptiveOrchestrator`, `7.15 The Worker Session Runtime: Resolving the Last-Mile Consumer Fleet Bottleneck`, `7.9 Economic Strategy: Zero-Cost Bootstrapping & The Superlinear Compute Threshold`, `Incident / Failure Report: Headless PDF Rendering Race Condition & 404 Capture`, `🏛️ ARCHITECTURAL CHARTER: The ECIE Systems Architect Paradigm & Clean-Slate Compute-Memory Co-Design`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+- **Why does `Research & Product Plan: Nepal Sovereign Knowledge Graph & IDBFS Ingestion Engine` connect `Agentic JavaScript Tools` to `Implementation`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Are the 9 inferred relationships involving `TestAdaptiveOrchestrator` (e.g. with `AdaptiveRateGovernor` and `AntigravityMemoryGovernor`) actually correct?**
   _`TestAdaptiveOrchestrator` has 9 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `WordmarkProps`, `10. Key Lessons Learned`, `1. Problem Statement & Motivation` to the rest of the system?**
@@ -2757,5 +2757,5 @@ _Questions this graph is uniquely positioned to answer:_
 
 ## Graph Freshness
 - **Built at commit:** `a7776a86cff24f99ae22916aecd60de3f689927f`
-- **Built timestamp:** `2026-10-09T12:06:45.470142+00:00`
+- **Built timestamp:** `2026-10-09T12:06:57.510232+00:00`
 - **Lineage type:** `ancestor_snapshot`

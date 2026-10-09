@@ -7,7 +7,7 @@
 
 ---
 
-## 📊 Complete Master Skills Matrix (Origin & Workflow Usage) (59 Skills)
+## 📊 Complete Master Skills Matrix (Origin & Workflow Usage) (60 Skills)
 
 | Category | Skill Name | Path | Origin | Usage in Workflow Pipeline |
 | :--- | :--- | :--- | :--- | :--- |
@@ -34,6 +34,7 @@
 | | [`review-bugbot`](review-bugbot/SKILL.md) | `tools/skills/review-bugbot/` | Ecosystem Automated QA | **Adversarial Audit Sub-Workflow:** Deep scan targeting subtle concurrency bugs, race conditions, edge-case null pointer dereferences, and regressions. |
 | **Multi-Agent Swarm Delegation** | [`agent-teams-orchestration`](agent-teams-orchestration/SKILL.md) | `tools/skills/agent-teams-orchestration/` | Brainstorm R&D (`FLEET-001` / `/teamwork-preview`) | **Autonomous Swarm Phase:** Activated by `/teamwork-preview`. Coordinates Scout-Reviewer-Writer-Lead roles, branch isolation, and Obsidian graph compilation. |
 | | [`fleet-orchestrator`](fleet-orchestrator/SKILL.md) | `tools/skills/fleet-orchestrator/` | `Fleet-Orchestrator` Swarm (`FLEET-001`) | **Headless Swarm Dispatch Phase:** Autonomous multi-model SKU task execution, worker pool git worktree isolation, task queue dispatching, and background synthesis. |
+| | [`slm-router-forge`](slm-router-forge/SKILL.md) | `tools/skills/slm-router-forge/` | `Fleet-Orchestrator` / `brainstorm` | **SLM Intent & Routing Phase:** Synthesizes intent datasets, fine-tunes sub-1B parameter models (Qwen 0.5B LoRA) on cloud GPU, exports GGUF, streams binaries to Google Drive, and deploys local <50ms LM Studio routing. |
 | **Frontend, Motion & Design** | [`design-taste-frontend`](design-taste-frontend/SKILL.md) | `tools/skills/design-taste-frontend/` | Portfolio UI Core (`AaradhyaDT.github.io`) | **UI Engineering Phase:** Master design system for high-agency UI, typography, micro-contrast, calibrated color tokens, overriding generic AI defaults. |
 | | [`frontend-design`](frontend-design/SKILL.md) | `tools/skills/frontend-design/` | Portfolio UI Core | **Visual Framing Phase:** Sets aesthetic direction, layout visual hierarchy, spatial grid alignment, and typography selection for web apps. |
 | | [`antigravity-ui-motion-design-expert`](antigravity-ui-motion-design-expert/SKILL.md) | `tools/skills/antigravity-ui-motion-design-expert/` | Portfolio UI Core | **Motion Physics Phase:** Controls GSAP timelines, 3D spatial CSS transforms, tilt card interactions, and glassmorphic elevation layers. |

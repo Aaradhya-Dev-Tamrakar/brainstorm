@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791534093.4466915,
-    "seen": 1791534099.647293,
-    "ast_hash": "f549a54597e10d2adfb1eb63affe4b34",
-    "semantic_hash": "f549a54597e10d2adfb1eb63affe4b34"
+    "mtime": 1791536506.252772,
+    "seen": 1791536512.0122414,
+    "ast_hash": "1747a1fec8f78451e7f3d2a3a48cd343",
+    "semantic_hash": "1747a1fec8f78451e7f3d2a3a48cd343"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -876,10 +876,10 @@
     "semantic_hash": "7d778793512114b09a97e27b0d5c1e65"
   },
   "tools/skills/README.md": {
-    "mtime": 1791531293.179576,
-    "seen": 1791531320.6793892,
-    "ast_hash": "bf98ee07b7e8d93465cebca19ce3a604",
-    "semantic_hash": "bf98ee07b7e8d93465cebca19ce3a604"
+    "mtime": 1791536435.2107253,
+    "seen": 1791536512.0125482,
+    "ast_hash": "323b8b0bd25a86a8ed3add1ec4b0d8ac",
+    "semantic_hash": "323b8b0bd25a86a8ed3add1ec4b0d8ac"
   },
   "tools/skills/agent-teams-orchestration/SKILL.md": {
     "mtime": 1791443948.1802576,
@@ -3916,5 +3916,11 @@
     "seen": 1791534099.6474147,
     "ast_hash": "56d8376ab55550be2feea9d98e8125d0",
     "semantic_hash": "56d8376ab55550be2feea9d98e8125d0"
+  },
+  "tools/skills/slm-router-forge/SKILL.md": {
+    "mtime": 1791535917.7114007,
+    "seen": 1791536512.0128758,
+    "ast_hash": "d416c381e72db6d3e4beb53e72c5e510",
+    "semantic_hash": "d416c381e72db6d3e4beb53e72c5e510"
   }
 }

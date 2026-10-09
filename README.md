@@ -69,7 +69,7 @@ flowchart TD
         Orch --- InvRule
     end
 
-    subgraph Mesh ["3. Capability Mesh (24 Computational Engines across 27 Modules)"]
+    subgraph Mesh ["3. Capability Mesh (24 Computational Engines across 28 Modules)"]
         Ingestion["Ingestion<br/>Screen Q&A (DOM)<br/>Super-NLM (Notebooks)<br/>Classroom MCP"]
         Compute["Compute<br/>Fusion 360 MCP (CAD)<br/>BiasAperture (Fairness)<br/>SPARK (Edge Kinematics)"]
         Solvers["Solvers<br/>AI Constraint Solver<br/>SMT Symbolic Verification"]

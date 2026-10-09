@@ -138,10 +138,10 @@
     "semantic_hash": "361e8dd333417f7e3bcd00d97cd29842"
   },
   "README.md": {
-    "mtime": 1791533927.4232988,
-    "seen": 1791534099.647508,
-    "ast_hash": "ca34d272ba4367ab1f754f989c08cd75",
-    "semantic_hash": "ca34d272ba4367ab1f754f989c08cd75"
+    "mtime": 1791547832.993913,
+    "seen": 1791547898.7551968,
+    "ast_hash": "2954cc5b7d19a9f54d035b71ec55ca86",
+    "semantic_hash": "2954cc5b7d19a9f54d035b71ec55ca86"
   },
   "research/architectures/README.md": {
     "mtime": 1790240407.9593427,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791547616.8503017,
-    "seen": 1791547623.758788,
-    "ast_hash": "f6e3ebe3972b3a489cbd40dddd65bf22",
-    "semantic_hash": "f6e3ebe3972b3a489cbd40dddd65bf22"
+    "mtime": 1791547891.9362512,
+    "seen": 1791547898.7548535,
+    "ast_hash": "27985f955227373aed3467b9c4d7b4bd",
+    "semantic_hash": "27985f955227373aed3467b9c4d7b4bd"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -876,10 +876,10 @@
     "semantic_hash": "7d778793512114b09a97e27b0d5c1e65"
   },
   "tools/skills/README.md": {
-    "mtime": 1791536435.2107253,
-    "seen": 1791536512.0125482,
-    "ast_hash": "323b8b0bd25a86a8ed3add1ec4b0d8ac",
-    "semantic_hash": "323b8b0bd25a86a8ed3add1ec4b0d8ac"
+    "mtime": 1791547847.555651,
+    "seen": 1791547898.7555063,
+    "ast_hash": "bd4de1cbd93e704c4dd67d20532d7b80",
+    "semantic_hash": "bd4de1cbd93e704c4dd67d20532d7b80"
   },
   "tools/skills/agent-teams-orchestration/SKILL.md": {
     "mtime": 1791443948.1802576,
@@ -2300,8 +2300,8 @@
   ".mcp.json": {
     "mtime": 1791211589.4039154,
     "seen": 1791547498.575132,
-    "ast_hash": "28136d52f8c466fd93e00c713b7fa4f6",
-    "semantic_hash": "28136d52f8c466fd93e00c713b7fa4f6"
+    "ast_hash": "",
+    "semantic_hash": ""
   },
   "tools/skills/bitwarden/SKILL.md": {
     "mtime": 1791211624.794008,
@@ -3588,10 +3588,10 @@
     "semantic_hash": "960a2767d3c22c499e6f9a6517db7130"
   },
   "tools/skills/fleet-orchestrator/SKILL.md": {
-    "mtime": 1791467834.406661,
-    "seen": 1791469422.3147817,
-    "ast_hash": "194816d55b5927328826b7e618242310",
-    "semantic_hash": "194816d55b5927328826b7e618242310"
+    "mtime": 1791547831.8786652,
+    "seen": 1791547898.7556376,
+    "ast_hash": "7c96a981adfe406df41450da294b544b",
+    "semantic_hash": "7c96a981adfe406df41450da294b544b"
   },
   "tools/skills/fleet-orchestrator/references/sku_dag_reference.md": {
     "mtime": 1791467838.9468732,
@@ -3918,10 +3918,10 @@
     "semantic_hash": "56d8376ab55550be2feea9d98e8125d0"
   },
   "tools/skills/slm-router-forge/SKILL.md": {
-    "mtime": 1791535917.7114007,
-    "seen": 1791536512.0128758,
-    "ast_hash": "d416c381e72db6d3e4beb53e72c5e510",
-    "semantic_hash": "d416c381e72db6d3e4beb53e72c5e510"
+    "mtime": 1791547823.3983262,
+    "seen": 1791547898.7559736,
+    "ast_hash": "49695c9613fd08586ca60365a84497bc",
+    "semantic_hash": "49695c9613fd08586ca60365a84497bc"
   },
   "sim/adaptive_orchestrator.py": {
     "mtime": 1791547564.1092484,
@@ -3952,5 +3952,11 @@
     "seen": 1791547498.5757709,
     "ast_hash": "e44912d1db7cf10b1720d4054455a602",
     "semantic_hash": "e44912d1db7cf10b1720d4054455a602"
+  },
+  "research/notes/2026-10-09_MILESTONE_ADAPTIVE_WORKFLOW_CALIBRATION_V3_7_0.md": {
+    "mtime": 1791547858.918387,
+    "seen": 1791547898.7554252,
+    "ast_hash": "c5f6df73535a4c7442cfc12fa42f8584",
+    "semantic_hash": "c5f6df73535a4c7442cfc12fa42f8584"
   }
 }

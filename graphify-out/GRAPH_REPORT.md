@@ -1,10 +1,10 @@
 # Graph Report - brainstorm  (2026-10-09)
 
 ## Corpus Check
-- Large corpus: 659 files · ~1,024,693 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
+- Large corpus: 660 files · ~1,025,464 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
 
 ## Summary
-- 6399 nodes · 7189 edges · 568 communities (535 shown, 18 thin omitted)
+- 6412 nodes · 7206 edges · 560 communities (527 shown, 18 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 90 edges (avg confidence: 0.89)
 - Token cost: 0 input · 0 output
 
@@ -493,13 +493,13 @@
 - 7.5 Deviation Safeguards & The 4 Critical Traps
 - README.md
 - 2. Core Capabilities & Workflows
-- PULL_REQUEST_TEMPLATE.md
 - 🛡️ ARCHITECTURAL SPECIFICATION: OmniVault Tri-Tier Archival & Storage Optimization Engine
 - .route_intent
 - 🏛️ ARCHITECTURAL RFC: ARCH-RFC-002 (The Model Plurality & Multi-Perspective Council Protocol)
 - Brainstorm Research Ecosystem: Capability Mesh & Verification Engine
 - SPARK: Smart Protection & Alerting Resilient Kit
 - banned_alternatives
+- clipboard-downloader.ps1
 - Scaffolding Invariants & Standardized Conventions
 - Use the CSS :autofill pseudo-class to highlight form fields that have been autofilled by the browser and not edited by the user
 - Break Up Long Tasks
@@ -512,7 +512,6 @@
 - Progressive Disclosure in Practice
 - Tier L1 Worked Examples: Portfolio Manifest & Pull Request
 - Introducing Claude Haiku 5.5
-- Vocabulary Calibration & Banned Hype Cheatsheet
 - 7.14 Externalized Epistemic Memory & Falsifiable Hypothesis Card Schema
 - 7.15 The Worker Session Runtime: Resolving the Last-Mile Consumer Fleet Bottleneck
 - 7.9 Economic Strategy: Zero-Cost Bootstrapping & The Superlinear Compute Threshold
@@ -520,6 +519,7 @@
 - Experiment Log: INV-[ID]
 - Contributor Profile: [Full Name]
 - timeout_ms
+- id
 - convert-media.ps1
 - navbar.js
 - Fleet Integration Reference: Super-NLM & Fleet-Orchestrator
@@ -541,7 +541,6 @@
 - Group Element Transitions
 - How to implement
 - Motion
-- Persistent Top Layer UI
 - Quick Reference
 - Writing Style Requirements
 - audit_file
@@ -549,19 +548,12 @@
 - create_c0_intake_form.js
 - STRANGLER-IPU reproducibility package
 - 5. Cohort 0 Launch Quest Catalog
-- react-tailwind.tsx
-- graphify reference: GitHub clone and cross-repo merge
 - graphify reference: transcribe video and audio
-- Form-Associated Custom Elements
 - Anchor Positioning Tab Underline
 - Platform Controls Dismiss Dialog
 - audit.sh
-- sim.sh
-- chromewebstore-template.md
-- extraction-spec.md
-- accessible-generated-content.md
-- Baseline Lock & Historical Provenance
-- .verify_integrity
+- bootstrap-environment.ps1
+- list_portfolio_projects.py
 
 ## God Nodes (most connected - your core abstractions)
 1. `TestAdaptiveOrchestrator` - 29 edges
@@ -590,7 +582,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (568 total, 18 thin omitted)
+## Communities (560 total, 18 thin omitted)
 
 ### Community 0 - "4. Step-by-Step Implementation Timeline"
 Cohesion: 0.05
@@ -613,12 +605,12 @@ Cohesion: 0.06
 Nodes (37): BoundedBlockingRingBuffer, ClosedLoopPIDSystem, DeterministicFiniteAutomaton, dft(), earned_value_metrics(), fft(), multilateration_tdoa_2d(), net_present_value() (+29 more)
 
 ### Community 5 - "bei_foundation_sim.py"
-Cohesion: 0.05
-Nodes (37): ARCHITECTURAL_REVIEW_SESSION, COHORT_1_QUEST_LEAD_ELIGIBLE, COMPUTE_GUIDANCE_KAGGLE_GPU, METRIC_BACKED_LOR_ELIGIBLE, PAPER_CO_AUTHORSHIP_PRIORITY, PORTFOLIO_AUTHORSHIP, PUBLIC_GIT_COMMIT_CREDIT, RANK_D_BADGE (+29 more)
+Cohesion: 0.06
+Nodes (32): 1.1 The Revolutionary Fallacy vs. The Evolutionary Invariant, 1.2 The Core Thesis: Ingress Boundary Reduction, 1. Executive Philosophy: The "Strangler Fig" Evolutionary Transition, 2. IPU System Topology & Channel Decomposition, 3. High-Velocity Ingress Stress Scenarios: Telecom & AI Workloads, 4. Hardware Realization & Open Predecessors, 5. Architectural Invariants for the IPU, 1. Schedule & Priorities (+24 more)
 
 ### Community 6 - "merit_ledger.json"
-Cohesion: 0.06
-Nodes (34): 10. Prompt API: available in service workers, popup, and side panel, 11. `chrome.action` API requires `action` in manifest, 12. `activeTab` only works on direct user gestures — not from side panels, 13. DevTools panel URLs are relative to the extension root, 14. Offscreen documents have NO access to most chrome.* APIs, 15. Notifications and badge icons must reference real image files, 16. Tab capture: guard against double-start with state locking, 17. `chrome.desktopCapture` requires a target tab with URL access (+26 more)
+Cohesion: 0.05
+Nodes (37): ARCHITECTURAL_REVIEW_SESSION, COHORT_1_QUEST_LEAD_ELIGIBLE, COMPUTE_GUIDANCE_KAGGLE_GPU, METRIC_BACKED_LOR_ELIGIBLE, PAPER_CO_AUTHORSHIP_PRIORITY, PORTFOLIO_AUTHORSHIP, PUBLIC_GIT_COMMIT_CREDIT, RANK_D_BADGE (+29 more)
 
 ### Community 7 - "Mandatory Rules"
 Cohesion: 0.06
@@ -630,675 +622,675 @@ Nodes (31): playwright, broadcom, cdp, gpon-ont, network-audit, router-automatio
 
 ### Community 9 - "cdp_router_manager.js"
 Cohesion: 0.06
-Nodes (28): 1. Unified Interface Surfaces, 2. Agent Settings & Permissions, 3. Further Reading, Antigravity 2.0 Reference, Chat Canvas, Global Settings, Left-hand Sidebar, Project-Level Settings (+20 more)
+Nodes (27): 1. Operating Rules & Avionics Principles, 2. Core Capabilities & Workflows, Aeronautical Telecommunication & Navigation Analyzer (`avionic-telecom-analyzer`), Capability A: Radar Range Equation CLI, Capability B: Multilateration (MLAT) TDOA Hyperbolic Positioning, Capability C: VOR & DME Radio Navigation Geometry, 1. Operating Rules & Control Principles, 2. Core Capabilities & Workflows (+19 more)
 
 ### Community 10 - "antigravity-guide/SKILL.md"
+Cohesion: 0.06
+Nodes (28): 1. Unified Interface Surfaces, 2. Agent Settings & Permissions, 3. Further Reading, Antigravity 2.0 Reference, Chat Canvas, Global Settings, Left-hand Sidebar, Project-Level Settings (+20 more)
+
+### Community 11 - "datetime"
+Cohesion: 0.08
+Nodes (13): 1. Schedule & Priorities, 2026-09-23 — Daily Log, 2. Active Projects Progress, 3. Daily Learnings & Conceptual Nodes, 4. Tomorrow's Context (Agent Primer), Experiment Log: FLEET-001 (Single-Task Interruption & State Migration Benchmark), Metrics Logged, Task Specification (+5 more)
+
+### Community 12 - "Companion policies (deploy in parallel)"
 Cohesion: 0.12
 Nodes (30): argparse_duration_type(), argparse_resolution_type(), download_video_file(), generate_video(), get_api_key(), is_file_uri(), main(), normalize_file_uri() (+22 more)
 
-### Community 11 - "datetime"
+### Community 13 - "Dos and Don'ts"
 Cohesion: 0.06
 Nodes (31): 1.1 Secure Contexts, 1.2 Avoid Dangerous DOM Sinks, 1.3 Secure Cookies, 1.4 Clickjacking Protection (Frame-Ancestors & X-Frame-Options), 1.5 Secure Window Messaging (postMessage), 2.1 Inspect the Application, 2.2 Deploy Report-Only Policies, 2.3 Data Hygiene for Reports (+23 more)
 
-### Community 12 - "Companion policies (deploy in parallel)"
+### Community 14 - "Dos and Don'ts"
+Cohesion: 0.07
+Nodes (23): Antigravity IDE & Gemini Agent Rules — Brainstorm & Ecosystem Orchestration, 1.1 What Do We Call This Process?, 1. Executive Summary & Epistemic Terminology, 2. The Tripartite Ecosystem Lifecycle, 3.1 Rules of the Freeze (`GOV-FREEZE-V1`), 3. The 2026-09-16 Milestone Declaration: "The Long Pause", 4. Authoritative Ecosystem Matrix at Baseline v1.0, 5. Archival & Verification (+15 more)
+
+### Community 15 - "2. Core Capabilities & Workflows"
 Cohesion: 0.11
 Nodes (27): datetime, calculate_ascendant(), calculate_gmst_hours(), calculate_julian_day(), calculate_lahiri_ayanamsha(), calculate_nakshatra(), calculate_obliquity(), calculate_planetary_positions() (+19 more)
 
-### Community 13 - "Dos and Don'ts"
-Cohesion: 0.10
-Nodes (15): 1.1 The Revolutionary Fallacy vs. The Evolutionary Invariant, 1.2 The Core Thesis: Ingress Boundary Reduction, 1. Executive Philosophy: The "Strangler Fig" Evolutionary Transition, 2. IPU System Topology & Channel Decomposition, 3. High-Velocity Ingress Stress Scenarios: Telecom & AI Workloads, 4. Hardware Realization & Open Predecessors, 5. Architectural Invariants for the IPU, 1. Description of the Incident (+7 more)
-
-### Community 14 - "Dos and Don'ts"
+### Community 16 - "Gemini Live API Development Skill"
 Cohesion: 0.11
 Nodes (24): analyze_statute_status(), detect_statute_status(), is_internet_available(), LegalStatusEvidence, normalize_devanagari(), nepal_law_harvester.py ---------------------- Safety-First Iterative Deepening…, Evidence-backed statutory status classification. Distinguishes confirmed…, Normalizes Devanagari text into canonical Unicode NFC form, cleaning invisible… (+16 more)
 
-### Community 15 - "2. Core Capabilities & Workflows"
-Cohesion: 0.06
-Nodes (30): 1. Getting Started and Hardware Requirements, 2. Core Prompting Capabilities, 3. Advanced Session Management, 4. Structured Output with JSON Schema, 5. Best Practices and Safety, 6. Fallback strategies, Align with the user's mental model of time and work, Allow users to quickly navigate and undo AI edits (+22 more)
-
-### Community 16 - "Gemini Live API Development Skill"
-Cohesion: 0.06
-Nodes (30): 1. Getting Started and Hardware Requirements, 2. Core Prompting Capabilities, 3. Advanced Session Management, 4. Structured Output with JSON Schema, 5. Best Practices and Safety, 6. Fallback strategies, Align with the user's mental model of time and work, Allow users to quickly navigate and undo AI edits (+22 more)
-
 ### Community 17 - "3. Step-by-Step Procedure"
+Cohesion: 0.06
+Nodes (30): 1. Getting Started and Hardware Requirements, 2. Core Prompting Capabilities, 3. Advanced Session Management, 4. Structured Output with JSON Schema, 5. Best Practices and Safety, 6. Fallback strategies, Align with the user's mental model of time and work, Allow users to quickly navigate and undo AI edits (+22 more)
+
+### Community 18 - "Specialized Reviewer Perspectives"
+Cohesion: 0.06
+Nodes (30): 1. Getting Started and Hardware Requirements, 2. Core Prompting Capabilities, 3. Advanced Session Management, 4. Structured Output with JSON Schema, 5. Best Practices and Safety, 6. Fallback strategies, Align with the user's mental model of time and work, Allow users to quickly navigate and undo AI edits (+22 more)
+
+### Community 19 - "LegalHarvesterDatabase"
+Cohesion: 0.08
+Nodes (25): 1. Executive Philosophy: "Inferior to None", 2. Universal Artifact Taxonomy & Addressing Matrix, 3. Mandatory Frontmatter Metadata Standard, 4. The Calibrated Evidence Hierarchy (Preventing Pseudo-Science), 5. The Invariant of Negative Results (`FAIL-xxx`), 🏛️ ARCHITECTURAL RFC: ARCH-RFC-001 (Gold-Standard Epistemic Record-Keeping & Taxonomy), Identifier Classification Schema, 1. Executive Philosophy: The Multi-Perspective Cognitive Council (+17 more)
+
+### Community 20 - "birth-registration-ward.civic.json"
 Cohesion: 0.10
 Nodes (29): Audio Formats, Authentication, Best Practices, Configuration (`TranslationConfig`), Connecting to the Live API, Documentation Lookup, Gemini Live API Development Skill, JavaScript (+21 more)
 
-### Community 18 - "Specialized Reviewer Perspectives"
+### Community 21 - "disability-id-card.civic.json"
 Cohesion: 0.07
 Nodes (28): 1. Feature / Refactor Issue Template, 2. Bug Fix Issue Template, 3. Pull Request Template, 4. Milestone Release & SHA Integrity Template, 5. Issue Progress Audit Comment Template, 6. Hardened Deterministic CI Workflow Template (`.github/workflows/verification.yml`), Issue & Pull Request Markdown Templates, 1. Golden Rules & Invariants (+20 more)
 
-### Community 19 - "LegalHarvesterDatabase"
+### Community 22 - "PreetiConverterApp"
 Cohesion: 0.07
 Nodes (29): 1. Identify All Error Handling Code, 2. Scrutinize Each Error Handler, 3. Examine Error Messages, 4. Check for Hidden Failures, 5. Validate Against Project Standards, 7. Bugbot Subagent Automated Review Protocol, Agent Descriptions:, Comprehensive PR Review (+21 more)
 
-### Community 20 - "birth-registration-ward.civic.json"
+### Community 23 - "DEC-003-MAIN-BRANCH-ENFORCEMENT-ALIGNMENT.md"
+Cohesion: 0.09
+Nodes (18): 📦 Deliverable Summary, 🎯 Quest & Contributor Information, 🔍 Verification & Audit Gate Checklist, 📊 Verification Log Output (Snippet), Brainstorm Research Laboratory — Fellows & Contributors Directory, Contributor Ranks & Progression, Onboarding Procedure, 1. Technical Competencies & Toolchain (+10 more)
+
+### Community 24 - "2. Granular Module Specifications"
 Cohesion: 0.11
 Nodes (13): LegalHarvesterDatabase, Any, SQLite WAL-backed local task ledger, provenance registry, and statutory entity-…, Enqueues a newly discovered URL into the task pool., Atomically claims the highest-priority pending task following IDBFS ordering…, Extends worker lease for long-running extractions (e.g. large PDF OCR)., Marks a claimed task as completed or skipped., Handles failure with bounded retry backoff. If retry_count < max_retries,… (+5 more)
 
-### Community 21 - "disability-id-card.civic.json"
+### Community 25 - "Gemini API Development Skill"
 Cohesion: 0.08
 Nodes (23): 1. Architectural Mission, 2. Dual-Layer Deterministic Verification Gate, 3. Quantitative Verification Benchmark (`INV-BMK-001`), 4. What This Demonstrates to Research Labs, Brainstorm Research Ecosystem: Capability Mesh & Verification Engine, 1. Active Outreach Pipeline, 2. Preparedness Packet (Collateral Ready for Replies), 3. Protocol for Responses (+15 more)
 
-### Community 22 - "PreetiConverterApp"
+### Community 26 - "GraphIndex"
 Cohesion: 0.07
 Nodes (27): canonical_name_en, canonical_name_ne, category, digital_integration, nagarik_app_supported, portal_url, versp_mis_integrated, fee_structure (+19 more)
 
-### Community 23 - "DEC-003-MAIN-BRANCH-ENFORCEMENT-ALIGNMENT.md"
+### Community 27 - "What You Must Do When Invoked"
 Cohesion: 0.07
 Nodes (27): canonical_name_en, canonical_name_ne, category, digital_integration, nagarik_app_supported, portal_url, versp_mis_integrated, fee_structure (+19 more)
 
-### Community 24 - "2. Granular Module Specifications"
+### Community 28 - "Dark mode"
 Cohesion: 0.13
 Nodes (6): PreetiConverterApp, Tk, Build the complete UI with 3 functional tabs., Main application window., Launch or focus the Quick Bridge companion background service., Configure ttk styles for the dark theme.
 
-### Community 25 - "Gemini API Development Skill"
+### Community 29 - "statistics"
 Cohesion: 0.11
 Nodes (17): Path, DeterministicTransactionalRecovery, get_git_common_dir(), PreExistingFileGuard, Manages Git snapshot ring buffer (refs/backup/snapshot-1..3) and pre/post…, Calculates cryptographic SHA-256 digests for target files., Verifies that only intended files were modified and zero collateral corruption…, Captures atomic Git recovery reference in refs/backup/snapshot-1. (+9 more)
 
-### Community 26 - "GraphIndex"
-Cohesion: 0.07
-Nodes (27): 1. Archetype Classification, 1. Progressive Skill Activation, 1. Synchronized Version Control, 1. WBS Decomposition (`pm-workflow-orchestrator`), 1. Worktree Context Projection & Native Instruction Loading, 2. Complexity Tier Assessment, 2. Dynamic Flight Envelope Pre-Flight Check, 2. Epistemic Calibrations (`ARCH-RFC-001`) (+19 more)
-
-### Community 27 - "What You Must Do When Invoked"
+### Community 30 - "ExprRef"
 Cohesion: 0.13
 Nodes (22): Namespace, FleetFirstBridge, Generates declarative Fleet-Orchestrator task JSON conforming to SCHEMA.md., Interfaces with local Qwen router (LM Studio port 1234) and marshals Fleet-…, Sub-millisecond socket check to verify LM Studio port 1234., Returns live router telemetry and state transitions., cmd_cpm(), cmd_fast_path() (+14 more)
 
-### Community 28 - "Dark mode"
+### Community 31 - "run_experiments.py"
 Cohesion: 0.08
 Nodes (25): 10. `md2pdf-desktop` (md2pdf-desktop & FastMCP Server), 11. `yt-dlp-live` (yt-dlp-live Capture & DSP Cluster), 12. `AI` (AI Constraint Solver), 13. `rsvp-reading` (RSVP Reader), 14. `Aaradhya-Dev-Tamrakar.github.io` & 15. `AaradhyaDT.github.io`, 16. `makerspace` (Makerspace Fabrication Hub), 17. `react-workshop-ieeekecktm` (React Workshop Reference), 18. `github-pilot` (GitHub Pilot Fleet Auditor) (+17 more)
 
-### Community 29 - "statistics"
+### Community 32 - "properties"
 Cohesion: 0.11
 Nodes (25): Antigravity Agent, Content types (inside `content` array on `model_output` and `user_input` steps), Critical Rules (Always Apply), Current Agents, Current Models (Use These), Current SDKs, Custom Agents, Data Model (+17 more)
 
-### Community 30 - "ExprRef"
+### Community 33 - "TaskRequirements"
 Cohesion: 0.18
 Nodes (18): extract_code_snippet(), find_graph_path(), format_node_badge(), GraphIndex, main(), parse_line_number(), print_search_results(), Any (+10 more)
 
-### Community 31 - "run_experiments.py"
+### Community 34 - "How to implement"
 Cohesion: 0.08
 Nodes (26): For /graphify add and --watch, For /graphify query, For the commit hook and native CLAUDE.md integration, For --update and --cluster-only, /graphify, Honesty Rules, Interpreter guard for subcommands, Part A - Structural extraction for code files (+18 more)
 
-### Community 32 - "properties"
+### Community 35 - "benchmark_runner.py"
 Cohesion: 0.08
 Nodes (23): 1. Declare supported schemes in HTML, 2. Apply page-wide color scheme to CSS :root or html, 3. Define light and dark color tokens, 4. Varying images for light and dark mode, Alternative: one custom property per image, Dark mode, Fallback strategies, Fallbacks & browser support for color-scheme (+15 more)
 
-### Community 33 - "TaskRequirements"
+### Community 36 - "PLAN-BRL-001_BRAINSTORM_RESEARCH_LAB_CHARTER.md"
 Cohesion: 0.21
 Nodes (17): Enum, build_benchmark_testbed(), benchmark_runner.py ------------------- Synthetic Invariant Discovery, SMT…, Defines 12 comprehensive benchmark scenarios across 4 formal state machines., run_benchmark(), BenchmarkEvaluationRecord, InvariantClassification, InvariantProperty (+9 more)
 
-### Community 34 - "How to implement"
+### Community 37 - "Research & Product Plan: One-Shot Assistive Civic Navigator & Pre-Flight Dossier Verifier for Persons with Disabilities (Sahaj-Sewa / Nagarik-Access)"
 Cohesion: 0.08
 Nodes (24): ecosystem_modules, in_tree_research_engines, in_tree_research_proposals, presentation_hubs, modules, name, orchestration_root, branch (+16 more)
 
-### Community 35 - "benchmark_runner.py"
+### Community 38 - "properties"
 Cohesion: 0.13
 Nodes (7): CXLMemoryAllocatorMachine, BoolRef, ExprRef, Z3 initial state predicate I(s)., Z3 transition relation T(s, action, s_prime)., SequenceNonceTrackerMachine, WorkerSessionRuntimeMachine
 
-### Community 36 - "PLAN-BRL-001_BRAINSTORM_RESEARCH_LAB_CHARTER.md"
-Cohesion: 0.08
-Nodes (21): 1. Save to Current Working Directory / Repo, 2. Save to a Specific Folder (e.g. `docs` or `research/transcripts`), 3. Save to Brainstorm Knowledge Base, 4. Custom Filename / Output Path, 5. Append Mode (Continuation of Last / Specified Document), Document Archiver Skill, Execution Protocol, Headless PDF Export Invariants (`INV-PDF-001`) (+13 more)
-
-### Community 37 - "Research & Product Plan: One-Shot Assistive Civic Navigator & Pre-Flight Dossier Verifier for Persons with Disabilities (Sahaj-Sewa / Nagarik-Access)"
-Cohesion: 0.08
-Nodes (19): 1. Operating Rules & Control Principles, 2. Core Capabilities & Workflows, Capability A: Second-Order Plant Transient Analysis CLI, Capability B: State-Space Representation & Conversion, Capability C: Ziegler-Nichols Closed-Loop Tuning Rules, Dynamic Control Systems & Stability Simulator (`control-systems-sim`), 1. Operating Rules & Workflow Principles, 2. Core Capabilities & Workflows (+11 more)
-
-### Community 38 - "properties"
-Cohesion: 0.08
-Nodes (24): description, type, type, description, pattern, type, properties, location (+16 more)
-
 ### Community 39 - "Gemini Interactions API Skill"
-Cohesion: 0.11
-Nodes (15): Requirements and constraints for an agentic or user task., TaskRequirements, Verify code engineering tasks route to Tier 1 worker specialists., Verify extreme complexity tasks route to Tier 3 Escalation models., Verify tasks requiring >1M tokens strictly resolve to Gemini 4 Argon., Verify local_only tasks with 24GB VRAM ceiling reject cloud models., Verify strict price ceilings reject expensive frontier models., Verify resolution of ARCH-RFC-002 Cognitive Council roles. (+7 more)
+Cohesion: 0.08
+Nodes (20): 1. Executive Summary, 2. Granular Reconciliation Matrix, 3. Epistemic Certification, Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19), 1.1 The Front-End Trap in Autonomous Systems, 1.2 The Architectural Invariant: Substrate Decoupling, 1. Executive Philosophy: "Headless Engine First, Interface Second", 2.1 The CLI as the First Jarvis Prototype (+12 more)
 
 ### Community 40 - "🧠 RESEARCH BENCHMARK: BMK-MEMORY-001 (Memory Stratification & Graph Density)"
 Cohesion: 0.08
-Nodes (23): Allow password pasting, Build a sign-up form that follows best practice, Don't double up inputs, Enable the browser to suggest a strong password, Fallback strategies, Give mobile users the right keyboard, Help save users from accidentally missing inputs, Help users avoid re-entering sign-up data (+15 more)
+Nodes (24): description, type, type, description, pattern, type, properties, location (+16 more)
 
 ### Community 41 - "Jetson Orin Nano — Setup, Provisioning & Optimization Runbook"
-Cohesion: 0.10
-Nodes (15): Antigravity IDE & Gemini Agent Rules — Brainstorm & Ecosystem Orchestration, 1. Context & Problem, 2. Decision, 3. Consequences & Empirical Verification, 🏛️ DECISION RECORD: DEC-001 (Memory Stratification & Retrieval Pruning), 1. Context & Problem, 2. Decisions, 3. Consequences & Downstream Actions (Status as of 2026-09-23) (+7 more)
+Cohesion: 0.11
+Nodes (15): Requirements and constraints for an agentic or user task., TaskRequirements, Verify code engineering tasks route to Tier 1 worker specialists., Verify extreme complexity tasks route to Tier 3 Escalation models., Verify tasks requiring >1M tokens strictly resolve to Gemini 4 Argon., Verify local_only tasks with 24GB VRAM ceiling reject cloud models., Verify strict price ceilings reject expensive frontier models., Verify resolution of ARCH-RFC-002 Cognitive Council roles. (+7 more)
 
 ### Community 42 - "KEC Makerspace — NVIDIA Jetson Orin Nano Developer Kit (8GB)"
-Cohesion: 0.09
-Nodes (23): 1.1 The Core Operating Principle: "High AI Leverage + High Personal Comprehension", 1.2 The "Option Value vs. Realized Value" Paradox, 1. Executive Context & Identity Anchor, 2. The 3-Layer Semester Attention Budget, 3. Five-Level Competence Benchmark, 4. The Three-Project Sequential Execution Roadmap, 5.1 Local Research Lab Targets (Kathmandu Valley), 5.2 The International Research Pipeline (+15 more)
+Cohesion: 0.08
+Nodes (20): 1. Save to Current Working Directory / Repo, 2. Save to a Specific Folder (e.g. `docs/chat_history` or custom path), 3. Save to Brainstorm Knowledge Base, 4. Custom Filename / Output Path, 5. Append Mode (Continuation of Last / Specified Transcript), Chat Archiver Skill, Execution Protocol, Instructions for the Agent (+12 more)
 
 ### Community 43 - "adaptive_engine.py"
-Cohesion: 0.10
-Nodes (18): 1. Executive Philosophy: The Multi-Perspective Cognitive Council, 2. Specialized Model Roles & Comparative Advantages, 3. The 4-Stage Council Consensus Protocol, 4. Discrepancy Prevention Rules, 🏛️ ARCHITECTURAL RFC: ARCH-RFC-002 (The Model Plurality & Multi-Perspective Council Protocol), Active Architectural Charters, Methodological Invariants, 🏛️ Research Architectures Hub (+10 more)
+Cohesion: 0.08
+Nodes (23): Allow password pasting, Build a sign-up form that follows best practice, Don't double up inputs, Enable the browser to suggest a strong password, Fallback strategies, Give mobile users the right keyboard, Help save users from accidentally missing inputs, Help users avoid re-entering sign-up data (+15 more)
 
 ### Community 44 - "CSS: Modern Architecture"
 Cohesion: 0.09
-Nodes (19): 1. Executive Summary & Problem Space, 2. System Architecture: Lipikaar-AI Pipeline, 3. Core Functional Invariants, 4. Verification & Milestone Roadmap, ARCH-SPEC-005: Nepali OCR, Grammar Checker & Font-Agnostic Word Substrate (Lipikaar-AI), 1. Executive Summary & Problem Space, 2. Multi-Layer System Architecture, 3.1 Geospatial & Administrative Spine (Where) (+11 more)
+Nodes (23): 1.1 The Core Operating Principle: "High AI Leverage + High Personal Comprehension", 1.2 The "Option Value vs. Realized Value" Paradox, 1. Executive Context & Identity Anchor, 2. The 3-Layer Semester Attention Budget, 3. Five-Level Competence Benchmark, 4. The Three-Project Sequential Execution Roadmap, 5.1 Local Research Lab Targets (Kathmandu Valley), 5.2 The International Research Pipeline (+15 more)
 
 ### Community 45 - "How to implement"
 Cohesion: 0.09
-Nodes (23): properties, description, type, description, type, description, type, description (+15 more)
+Nodes (19): 1. Executive Summary & Problem Space, 2. System Architecture: Lipikaar-AI Pipeline, 3. Core Functional Invariants, 4. Verification & Milestone Roadmap, ARCH-SPEC-005: Nepali OCR, Grammar Checker & Font-Agnostic Word Substrate (Lipikaar-AI), 1. Executive Summary & Problem Space, 2. Multi-Layer System Architecture, 3.1 Geospatial & Administrative Spine (Where) (+11 more)
 
 ### Community 46 - "Examples"
-Cohesion: 0.13
-Nodes (22): Antigravity Agent, Content types (inside `content` array on `model_output` and `user_input` steps), Critical Rules (Always Apply), Current Agents, Current Models (Use These), Current SDKs, Custom Agents, Data Model (+14 more)
+Cohesion: 0.09
+Nodes (21): 1. Architectural Transition & Motivation, 2. Calibrated Architectural Pillars, 3. Verification & Invariant Proofs, A. Strict Context Budget & Frontmatter Compliance, B. Mathematical Criticality Metric ($N=28$), C. Continuous Adaptive Rate Governor, D. Memory Reserve Floor & Concurrency Ceiling, E. Worktree Gitlink & Fencing Protection (+13 more)
 
 ### Community 47 - "BaseStateMachine"
 Cohesion: 0.09
-Nodes (22): 1. Executive Summary, 2. Granular Claims Audit Register, 3. Corrective Actions Summary, Comprehensive Repository Epistemic & Claims Audit, Epistemic Claim Type Distribution, Item 01: Hardware Interrupt Gating & Microcontroller Fall Detection, Item 02: Fall Detection Model Footprint & Accuracy, Item 03: STRANGLER-IPU 4.12x Tail-Latency Reduction & 68% Contention Relief (+14 more)
+Nodes (23): properties, description, type, description, type, description, type, description (+15 more)
 
 ### Community 48 - "ARCH-RFC-003-CAPSTONE-DEFENSE-STANDARD.md"
-Cohesion: 0.09
-Nodes (21): 1.1 Objective, 1.2 Core Hypothesis (HYP-MEM-001), 1. Objective & Hypothesis, 2.1 Baseline State (Recorded from `graphify-out/GRAPH_REPORT.md` @ commit `2a70bcd6`), 2.2 Top Baseline God Nodes (Pathological Clutter), 2. Experimental Topology & Baseline Snapshot (Pre-Stratification), 3.1 Layer Partitioning, 3.2 Execution Commands (+13 more)
+Cohesion: 0.13
+Nodes (22): Antigravity Agent, Content types (inside `content` array on `model_output` and `user_input` steps), Critical Rules (Always Apply), Current Agents, Current Models (Use These), Current SDKs, Custom Agents, Data Model (+14 more)
 
 ### Community 49 - "google-classroom-mcp.contract.json"
 Cohesion: 0.09
-Nodes (21): 1.1 Physical Port & Jumper Layout, 1. Verified Physical Hardware Inventory (Inspected & Confirmed), 2.1 Method 1: The Unified Jetson ISO / USB Flow (Recommended — No Linux Host PC Required), 2.2 Method 2: NVIDIA SDK Manager (Requires Ubuntu Host PC), 2. Flashing & Initial Provisioning, 3.1 Initial System Updates & Packages, 3.2 Install `jetson-stats` (jtop), 3.3 Power Mode & Maximum Performance Tuning (+13 more)
+Nodes (22): 1. Executive Summary, 2. Granular Claims Audit Register, 3. Corrective Actions Summary, Comprehensive Repository Epistemic & Claims Audit, Epistemic Claim Type Distribution, Item 01: Hardware Interrupt Gating & Microcontroller Fall Detection, Item 02: Fall Detection Model Footprint & Accuracy, Item 03: STRANGLER-IPU 4.12x Tail-Latency Reduction & 68% Contention Relief (+14 more)
 
 ### Community 50 - "Defensible Economic Accounting & R&D Resource Allocation Model"
 Cohesion: 0.09
-Nodes (21): 1. Executive Summary & Hardware Inventory, 1. Via Command Line / PowerShell / Terminal:, 2. System Specifications & Firmware Baseline, 2. Via VS Code (Recommended for Development):, 3. Network Access & Remote Connection Coordinates, 4. Operational Best Practices for Makerspace Members, 5.1 Python Virtual Environments (PEP 668 Compliant), 5.2 GPU-Accelerated Docker Containers (+13 more)
+Nodes (21): 1.1 Objective, 1.2 Core Hypothesis (HYP-MEM-001), 1. Objective & Hypothesis, 2.1 Baseline State (Recorded from `graphify-out/GRAPH_REPORT.md` @ commit `2a70bcd6`), 2.2 Top Baseline God Nodes (Pathological Clutter), 2. Experimental Topology & Baseline Snapshot (Pre-Stratification), 3.1 Layer Partitioning, 3.2 Execution Commands (+13 more)
 
 ### Community 51 - "ARCH-PLAN-001: Commercial Business Plan & Technical Roadmap"
-Cohesion: 0.10
-Nodes (13): _find_directed_cycle(), Routes intent through LM Studio port 1234 if active, else uses deterministic…, Finds one directed cycle in the graph using iterative DFS., Computes ES, EF, LS, LF, Total Slack (TS), and Free Slack (FS)., Validates exact DAG early/late dates, critical path, and slack calculations., Verifies local intent routing and deterministic heuristic fallback., Tests that cyclic task graphs raise ValueError in CPM scheduler., Asserts that cyclic task graphs raise DAGCycleError with cycle path and… (+5 more)
+Cohesion: 0.09
+Nodes (21): 1.1 Physical Port & Jumper Layout, 1. Verified Physical Hardware Inventory (Inspected & Confirmed), 2.1 Method 1: The Unified Jetson ISO / USB Flow (Recommended — No Linux Host PC Required), 2.2 Method 2: NVIDIA SDK Manager (Requires Ubuntu Host PC), 2. Flashing & Initial Provisioning, 3.1 Initial System Updates & Packages, 3.2 Install `jetson-stats` (jtop), 3.3 Power Mode & Maximum Performance Tuning (+13 more)
 
 ### Community 52 - "ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md"
 Cohesion: 0.09
-Nodes (21): 10. Transitions & animations, 11. Generated content, 1. Foundations, 2. Inheritance and The Cascade, 3. Selectors and scoping, 4. Interactivity, 5. Design Tokens and Theming, 6. Responsive design (+13 more)
+Nodes (21): 1. Executive Summary & Hardware Inventory, 1. Via Command Line / PowerShell / Terminal:, 2. System Specifications & Firmware Baseline, 2. Via VS Code (Recommended for Development):, 3. Network Access & Remote Connection Coordinates, 4. Operational Best Practices for Makerspace Members, 5.1 Python Virtual Environments (PEP 668 Compliant), 5.2 GPU-Accelerated Docker Containers (+13 more)
 
 ### Community 53 - "Program Charter: Brainstorm Research Laboratory (BRL) & Contributor Fellowship"
-Cohesion: 0.09
-Nodes (21): Allow password pasting, Build a sign-in form that follows best practice, Don't double up inputs, Enable the browser to suggest a strong password, Fallback strategies, Give mobile users the right keyboard, Help save users from accidentally missing inputs, Help users avoid re-entering sign-in data (+13 more)
+Cohesion: 0.10
+Nodes (13): _find_directed_cycle(), Routes intent through LM Studio port 1234 if active, else uses deterministic…, Finds one directed cycle in the graph using iterative DFS., Computes ES, EF, LS, LF, Total Slack (TS), and Free Slack (FS)., Validates exact DAG early/late dates, critical path, and slack calculations., Verifies local intent routing and deterministic heuristic fallback., Tests that cyclic task graphs raise ValueError in CPM scheduler., Asserts that cyclic task graphs raise DAGCycleError with cycle path and… (+5 more)
 
 ### Community 54 - "Research Program Charter: Nepal Information Systems Research (NISR)"
 Cohesion: 0.09
-Nodes (21): Asking for Permissions, Example 10: Searching Pull Requests, Example 11: Searching Commits, Example 12: Searching Code, Example 13: Searching Issues, Example 14: Running (Dispatching) a Workflow, Example 15: Listing, Viewing, or Watching Workflow Runs, Example 1: Creating an Issue (+13 more)
+Nodes (21): 10. Transitions & animations, 11. Generated content, 1. Foundations, 2. Inheritance and The Cascade, 3. Selectors and scoping, 4. Interactivity, 5. Design Tokens and Theming, 6. Responsive design (+13 more)
 
 ### Community 55 - "task_telemetry.py"
+Cohesion: 0.09
+Nodes (21): Allow password pasting, Build a sign-in form that follows best practice, Don't double up inputs, Enable the browser to suggest a strong password, Fallback strategies, Give mobile users the right keyboard, Help save users from accidentally missing inputs, Help users avoid re-entering sign-in data (+13 more)
+
+### Community 56 - "Stage 3: Plan & Decompose (Zero-Waste)"
+Cohesion: 0.09
+Nodes (21): Asking for Permissions, Example 10: Searching Pull Requests, Example 11: Searching Commits, Example 12: Searching Code, Example 13: Searching Issues, Example 14: Running (Dispatching) a Workflow, Example 15: Listing, Viewing, or Watching Workflow Runs, Example 1: Creating an Issue (+13 more)
+
+### Community 57 - "Prompting Gemini Omni Flash"
 Cohesion: 0.12
 Nodes (8): ABC, BaseStateMachine, Any, state_machine.py ---------------- Formal state machine implementations and…, Reset state to canonical initial state., Execute a state transition. Returns (new_state, transition_successful)., Generate Z3 symbolic variables for state., TokenBucketRateLimiterMachine
 
-### Community 56 - "Stage 3: Plan & Decompose (Zero-Waste)"
+### Community 58 - "1. Issue Management"
 Cohesion: 0.14
 Nodes (12): Any, DeterministicTriageEngine, Returns live governor status., Decouples Workload Volume (V) from Blast Criticality (R) and identifies zero-AI…, Derives N from schemas/ecosystem.registry.json dynamically (default: 28)., Identifies routine deterministic development mechanics that require 0 AI tokens., Calculates Workload Volume V0 (<=2), V1 (3-15), V2 (>15)., Aggregates graph nodes to ecosystem modules, filtering strictly to dependency… (+4 more)
 
-### Community 57 - "Prompting Gemini Omni Flash"
+### Community 59 - "5. Core Architectural & Methodological Pillars"
 Cohesion: 0.10
 Nodes (20): F:\\Aaradhya-Dev-Tamrakar\\Utility-MCPs\\google-classroom-mcp\\index.mjs, capabilities, CLASSROOM_CREDENTIALS_PATH, CLASSROOM_OAUTH_PATH, location, mcp_endpoint, args, command (+12 more)
 
-### Community 58 - "1. Issue Management"
+### Community 60 - "github-pilot.contract.json"
 Cohesion: 0.10
 Nodes (21): 1. Executive Summary & Epistemic Correction, 2.1 Pillar 1: Productive Capital Expenditure (CAPEX), 2.2 Pillar 2: Productive Operating Expenditure (OPEX), 2.3 Pillar 3: Academic Tuition & Cost of Living (Separated Baseline), 2.4 Pillar 4: Human Capital (Engineering Labor Invested), 2.5 Pillar 5: Estimated Replacement-Equivalent Labor Cost, 2. Five-Pillar Financial & Capital Decomposition, 3.1 Replacement-Cost to Direct-Cash-Spend Ratio ($\rho_{\text{cash}}$) (+13 more)
 
-### Community 59 - "5. Core Architectural & Methodological Pillars"
+### Community 61 - "2. Core Architectural & Systemic Limitations"
 Cohesion: 0.10
 Nodes (20): 1. Executive Summary, 2.1 The Engineering Bottleneck, 2.2 Why AEC is the Perfect Beachhead, 2. Market Opportunity & Problem Statement, 3.1 Live Repository Fleet (100% Passing Tests), 3. Product Architecture & Fleet Inventory, 4. The 4 Universal Engineering Driver Patterns, 5.1 Pricing Strategy & Packages (+12 more)
 
-### Community 60 - "github-pilot.contract.json"
+### Community 62 - "sync_manifest"
 Cohesion: 0.10
 Nodes (19): 1. Executive Summary & Problem Context, 2.1 INV-FUS-001: Main-Thread Single-Ownership Lock, 2.2 INV-FUS-002: Zero External Python Dependency, 2.3 INV-FUS-003: Graceful Teardown & Port Recycling, 2. Core Architectural Invariants, 3. Architecture & Data Flow, 4.1 Methods Handled, 4.2 Standard Built-in Toolset (+11 more)
 
-### Community 61 - "2. Core Architectural & Systemic Limitations"
-Cohesion: 0.10
-Nodes (21): 1. Program Mission & Paradigm Shift, 2. Decoupling from SPARK (Academic vs. Research Lab), 3. The 6 Emergent Contribution Tracks, 4. The 5-Phase Execution Sequence, 5. Bounded Architectural Invariants, 6. Component Architecture Boundary, 7. Immediate Phase 2 Deliverable: Step 0 Protocol, `INV-DOC-ROUTER-001`: Font-Table Inspection Before Visual OCR (+13 more)
-
-### Community 62 - "sync_manifest"
-Cohesion: 0.12
-Nodes (9): atomic_write_file(), LegalChronology, Writes data to a temporary file (.tmp), flushes and fsyncs to physical disk,…, Multidimensional statutory temporal grounding. Distinguishes ingestion…, Polite, safety-guarded crawler and ingestion engine for Nepal's statutory legal…, Executes atomic storage with post-write disk read verification, normalizes…, Executes one complete IDBFS task lifecycle step: 1. Reclaims expired worker…, SafeLegalCrawler (+1 more)
-
 ### Community 63 - "3. Execution & Results"
-Cohesion: 0.29
-Nodes (15): cmd_close(), cmd_log_dispatch(), cmd_log_intervention(), cmd_log_rework(), cmd_scorecard(), cmd_start(), ensure_telemetry_dir(), get_utc_now() (+7 more)
+Cohesion: 0.10
+Nodes (21): 10. Operational Infrastructure & Master Artifact Index, 1. Executive Summary & Paradigm Shift, 2. Institutional Positioning & Operational Substrates, 3. The Guild & Quest Progression Engine, 4. Cohort 0 (C0) Execution Blueprint, 5. Cohort 0 Launch Quest Catalog, 6. Objective Evaluation Rubric, 7. Zero-Cost Merit Reward Protocol & Metric-Backed LOR Engine (+13 more)
 
 ### Community 64 - "🏛️ DECISION RECORD: DEC-003 (`main` Ruleset Enforcement Alignment — Verified Direct-Push Workflow)"
 Cohesion: 0.10
-Nodes (20): Audio handling in video editing, Available scripts, Core capabilities, Declaring sources and references, Dependencies and Prerequisites, Gemini Omni Flash Skill, Meta prompting, Prompting Gemini Omni Flash (+12 more)
+Nodes (21): 1. Program Mission & Paradigm Shift, 2. Decoupling from SPARK (Academic vs. Research Lab), 3. The 6 Emergent Contribution Tracks, 4. The 5-Phase Execution Sequence, 5. Bounded Architectural Invariants, 6. Component Architecture Boundary, 7. Immediate Phase 2 Deliverable: Step 0 Protocol, `INV-DOC-ROUTER-001`: Font-Table Inspection Before Visual OCR (+13 more)
 
 ### Community 65 - "Research Plan: Deterministic Horoscope Evaluation Engine & Ground Truth Benchmark"
-Cohesion: 0.10
-Nodes (20): 1. Issue Management, 2. Pull Request Management, 3. GitHub Actions & Workflow Telemetry, Automated BRL Pull Request Dispatch (Ecosystem Standard), Create a Pull Request (Manual CLI Standard), Create an Issue, Edit PR Body & Link Issues (Retroactive / Active), GitHub CLI (`gh`) Workflow Cheatsheet (+12 more)
+Cohesion: 0.12
+Nodes (9): atomic_write_file(), LegalChronology, Writes data to a temporary file (.tmp), flushes and fsyncs to physical disk,…, Multidimensional statutory temporal grounding. Distinguishes ingestion…, Polite, safety-guarded crawler and ingestion engine for Nepal's statutory legal…, Executes atomic storage with post-write disk read verification, normalizes…, Executes one complete IDBFS task lifecycle step: 1. Reclaims expired worker…, SafeLegalCrawler (+1 more)
 
 ### Community 66 - "create_dataset_torrent"
-Cohesion: 0.11
-Nodes (12): Experiment Log: FLEET-001 (Single-Task Interruption & State Migration Benchmark), Metrics Logged, Task Specification, Verification Checklist, 1. System Topology & Test Harness Configuration, 2. Test Suite & Baseline Validation, 3. Physical Electron Process Telemetry Benchmark, 4. Real-World Engineering Problem Execution (+4 more)
+Cohesion: 0.29
+Nodes (15): cmd_close(), cmd_log_dispatch(), cmd_log_intervention(), cmd_log_rework(), cmd_scorecard(), cmd_start(), ensure_telemetry_dir(), get_utc_now() (+7 more)
 
 ### Community 67 - "sync.ps1"
 Cohesion: 0.10
-Nodes (19): pilot.cli, status, capabilities, -m, location, mcp_endpoint, args, command (+11 more)
+Nodes (21): 1. Archetype Classification, 1. Progressive Skill Activation, 1. Synchronized Version Control, 1. WBS Decomposition (`pm-workflow-orchestrator`), 2. Complexity Tier Assessment, 2. Dynamic Flight Envelope Pre-Flight Check, 2. Governance Track Selection (`github-workflow`), 2. Snapshot Ring Buffer Rotation (+13 more)
 
 ### Community 68 - "Engineering Profile & Technical Dossier: Aaradhya Dev Tamrakar (ADT)"
 Cohesion: 0.10
-Nodes (19): 1. Motivation & Policy, 2.10 Main-Thread Synchronization Boundary in CAD Actuation, 2.11 LAN Peer Discovery and Multicast Broadcast Limits, 2.12 QA Authorization & Lease Mutation Boundary, 2.13 Headless Copilot API Contract Boundary vs Full Agent Tool-Calling, 2.14 Multi-Worker Fleet Authentication Header Propagation, 2.15 Telemetry Failure Semantics vs Synthetic Placeholders, 2.16 Knowledge Graph Semantic Retrieval Evaluation Boundaries (+11 more)
+Nodes (21): 10. Prompt API: available in service workers, popup, and side panel, 11. `chrome.action` API requires `action` in manifest, 12. `activeTab` only works on direct user gestures — not from side panels, 13. DevTools panel URLs are relative to the extension root, 14. Offscreen documents have NO access to most chrome.* APIs, 15. Notifications and badge icons must reference real image files, 16. Tab capture: guard against double-start with state locking, 17. `chrome.desktopCapture` requires a target tab with URL access (+13 more)
 
 ### Community 69 - "nepali-ocr-ai.contract.json"
-Cohesion: 0.16
-Nodes (19): Request, create_drive_file(), find_drive_file_by_name(), get_oauth_credentials(), main(), obtain_access_token(), Path, Exchanges refresh token for a fresh Google OAuth2 access token with retry. (+11 more)
+Cohesion: 0.10
+Nodes (20): Audio handling in video editing, Available scripts, Core capabilities, Declaring sources and references, Dependencies and Prerequisites, Gemini Omni Flash Skill, Meta prompting, Prompting Gemini Omni Flash (+12 more)
 
 ### Community 70 - "AI-Constraint-Solver.contract.json"
 Cohesion: 0.10
-Nodes (20): 1. Context & Problem, 2. Decisions, 3.1 Pre-state (live read-back, 2026-09-21 16:16 +05:45), 3.2 Post-state (live read-back after the alignment `PUT`), 3.3 Observed push behaviour — before alignment, 3.4 Observed push behaviour — after alignment (probe passed), 3. Empirical Verification (E4), 4. Consequences & Non-Goals (+12 more)
+Nodes (20): 1. Issue Management, 2. Pull Request Management, 3. GitHub Actions & Workflow Telemetry, Automated BRL Pull Request Dispatch (Ecosystem Standard), Create a Pull Request (Manual CLI Standard), Create an Issue, Edit PR Body & Link Issues (Retroactive / Active), GitHub CLI (`gh`) Workflow Cheatsheet (+12 more)
 
 ### Community 71 - "properties"
 Cohesion: 0.10
-Nodes (19): 1. Executive Summary & Problem Formulation, 2. System Architecture & Layer Decomposition, 3. Data Collection Strategy & Stratification, 4.1 Ascendant (Lagna) Trigonometric Derivation, 4.2 Barnum Ambiguity Index ($I_{\text{Barnum}}$), 4.3 Event Window Alignment & Brier Score, 4.4 Monte Carlo Permutation Null Hypothesis Test, 4. Mathematical Formulations & Scoring Metrics (+11 more)
+Nodes (19): pilot.cli, status, capabilities, -m, location, mcp_endpoint, args, command (+11 more)
 
 ### Community 72 - "2. Quantitative Claims Register"
+Cohesion: 0.10
+Nodes (19): 1. Motivation & Policy, 2.10 Main-Thread Synchronization Boundary in CAD Actuation, 2.11 LAN Peer Discovery and Multicast Broadcast Limits, 2.12 QA Authorization & Lease Mutation Boundary, 2.13 Headless Copilot API Contract Boundary vs Full Agent Tool-Calling, 2.14 Multi-Worker Fleet Authentication Header Propagation, 2.15 Telemetry Failure Semantics vs Synthetic Placeholders, 2.16 Knowledge Graph Semantic Retrieval Evaluation Boundaries (+11 more)
+
+### Community 73 - "2. Key Frameworks & Architecture Covered"
+Cohesion: 0.16
+Nodes (19): Request, create_drive_file(), find_drive_file_by_name(), get_oauth_credentials(), main(), obtain_access_token(), Path, Exchanges refresh token for a fresh Google OAuth2 access token with retry. (+11 more)
+
+### Community 74 - "Research Plan: Zero-Router Direct Transport Engine (AirDrop/Quick Share Parity)"
+Cohesion: 0.10
+Nodes (20): 1. Context & Problem, 2. Decisions, 3.1 Pre-state (live read-back, 2026-09-21 16:16 +05:45), 3.2 Post-state (live read-back after the alignment `PUT`), 3.3 Observed push behaviour — before alignment, 3.4 Observed push behaviour — after alignment (probe passed), 3. Empirical Verification (E4), 4. Consequences & Non-Goals (+12 more)
+
+### Community 75 - "Research & Product Plan: Nepal Sovereign Knowledge Graph & IDBFS Ingestion Engine"
+Cohesion: 0.10
+Nodes (19): 1. Executive Summary & Problem Formulation, 2. System Architecture & Layer Decomposition, 3. Data Collection Strategy & Stratification, 4.1 Ascendant (Lagna) Trigonometric Derivation, 4.2 Barnum Ambiguity Index ($I_{\text{Barnum}}$), 4.3 Event Window Alignment & Brier Score, 4.4 Monte Carlo Permutation Null Hypothesis Test, 4. Mathematical Formulations & Scoring Metrics (+11 more)
+
+### Community 76 - "automate_all_captures.py"
 Cohesion: 0.17
 Nodes (19): bdecode(), bencode(), calculate_optimal_piece_length(), collect_dataset_files(), create_dataset_torrent(), format_bytes(), hash_dataset_pieces(), main() (+11 more)
 
-### Community 73 - "2. Key Frameworks & Architecture Covered"
+### Community 77 - "routing_engine.py"
 Cohesion: 0.20
 Nodes (14): Confirm-RemoteConfigured(), Get-EcosystemToolRepos(), Invoke-BrlPullRequest(), Invoke-CrossSync(), Invoke-PythonScript(), New-EcosystemTool(), Resolve-PythonInterpreter(), Switch-ToBranch() (+6 more)
 
-### Community 74 - "Research Plan: Zero-Router Direct Transport Engine (AirDrop/Quick Share Parity)"
+### Community 78 - "ToastNotification"
 Cohesion: 0.11
 Nodes (19): 1. Engineering Identity, 2. Current Academic & Professional Snapshot, 3. Four-Tier Status Classification & Technical Proficiencies, 4. Systems Philosophy, 5. Selected Projects, 6. Technical Toolchain, 7. Current R&D Directions, 8. Verification Philosophy (+11 more)
 
-### Community 75 - "Research & Product Plan: Nepal Sovereign Knowledge Graph & IDBFS Ingestion Engine"
+### Community 79 - "Common Rejection Reasons"
 Cohesion: 0.11
 Nodes (18): nepali_ocr_ai.mcp_server, capabilities, -m, location, mcp_endpoint, args, command, transport (+10 more)
 
-### Community 76 - "automate_all_captures.py"
+### Community 80 - "Agentic JavaScript Tools"
 Cohesion: 0.11
 Nodes (18): solver.mcp_server, capabilities, -m, location, mcp_endpoint, args, command, transport (+10 more)
 
-### Community 77 - "routing_engine.py"
+### Community 81 - "localsend-mcp.contract.json"
 Cohesion: 0.11
 Nodes (19): transport, type, type, description, type, additionalProperties, type, description (+11 more)
 
-### Community 78 - "ToastNotification"
+### Community 82 - "typora-mcp.contract.json"
 Cohesion: 0.11
 Nodes (19): 1. Executive Summary, 2026-09-19 — Guest Lecture: Agentic AI in Industry (Ayush Kumar Shah, Meta), 2. Key Frameworks & Architecture Covered, 3. Integration into the `brainstorm` Capability Mesh, 4. Q&A Exchange: Aaradhya Dev Tamrakar & Ayush Kumar Shah, A. Karpathy's LLM-Maintained Personal Wiki (Slide 32), Aaradhya's Question:, Ayush's Ground-Truth Answer & Core Takeaways: (+11 more)
 
-### Community 79 - "Common Rejection Reasons"
+### Community 83 - "md2pdf-desktop.contract.json"
 Cohesion: 0.11
 Nodes (17): 1. Problem Statement & Motivation, 2.1 Scope Decision: Excluding Apple iOS Native AWDL, 2.2 Scope Decision: Android $\leftrightarrow$ Windows $\leftrightarrow$ Linux Focus, 2. Technical Feasibility & Platform Scope, 3.1 Next Actions, 3. Core Architectural Strategy, Research Note: LocalSend Zero-Router Direct Transport & AirDrop Parity Architecture, 1. Executive Summary & Objective (+9 more)
 
-### Community 80 - "Agentic JavaScript Tools"
+### Community 84 - "2. Granular Claims Audit Register"
 Cohesion: 0.11
 Nodes (19): 10.1 Canonical Markdown Specification, 10.2 Relational & FTS Database Extensions, 10.3 Bidirectional Synchronization Engine (`MD` $\longleftrightarrow$ `DB`), 10. Dual-Representation Storage Architecture: Canonical Markdown & Relational/FTS Database Substrate, 1-Click Autonomous Worker (`worker.bat`):, 1. Executive Summary & Master Vision, 2. Ingestion Engine Architecture (IDBFS), 3. The `nepali-ocr-ai` Synthetic Training Flywheel (+11 more)
 
-### Community 81 - "localsend-mcp.contract.json"
+### Community 85 - "Implementation"
 Cohesion: 0.20
 Nodes (18): capture_chrome_local(), capture_cli_runner(), capture_custom_terminal(), capture_pdf(), capture_video_poster(), main(), optimize_image_to_webp(), Path (+10 more)
 
-### Community 82 - "typora-mcp.contract.json"
+### Community 86 - "ARCH-PLAN-002: Dual-Track Systems Engineering & Software Mastery Roadmap"
 Cohesion: 0.15
 Nodes (15): cascade_task(), CascadePlan, ComplexityAnalyzer, get_router(), Dynamic Mixture-of-Experts (MoE) & Cascade Routing Engine. Grounded in ARCH-…, Outcome of model routing evaluation., Full 4-tier FrugalGPT execution cascade., Heuristic task complexity classifier calibrating tasks on a 1.0 to 10.0 scale. (+7 more)
 
-### Community 83 - "md2pdf-desktop.contract.json"
+### Community 87 - "2026-09-28.md"
 Cohesion: 0.18
 Nodes (15): convert_clipboard(), _create_tray_icon_image(), main(), Tk, Preeti Quick Bridge — Global Hotkey Converter & Floating Widget…, Read clipboard, convert Unicode Devanagari → Preeti, write back, and show a…, Generate a simple 64×64 tray icon (purple circle with 'P' glyph)., Start the system tray icon in a background thread. Returns the Icon. (+7 more)
 
-### Community 84 - "2. Granular Claims Audit Register"
+### Community 88 - "3. The 10 Master Engineering Competency Domains"
 Cohesion: 0.11
 Nodes (18): 1. Excessive Permissions, 2. Missing or Inadequate Single Purpose, 3. Misleading Description or Functionality, 4. Privacy Policy Issues, 5. Trademark Violation, 6. Code Readability, 7. Remote Code Execution, 8. User Data Disclosure Mismatch (+10 more)
 
-### Community 85 - "Implementation"
+### Community 89 - "CircuitBreaker"
 Cohesion: 0.11
 Nodes (18): Agentic JavaScript Tools, API Notes, Cancelling in-flight executions, Controlling cross-origin tool exposure with `exposedTo`, Defining Parameters, Discovering available tools with `getTools()`, Execution Patterns, Fallback strategies (+10 more)
 
-### Community 86 - "ARCH-PLAN-002: Dual-Track Systems Engineering & Software Mastery Roadmap"
+### Community 90 - "Graphify Optimizer & Relevancy Engine"
 Cohesion: 0.11
 Nodes (17): F:\\Aaradhya-Dev-Tamrakar\\Utility-MCPs\\localsend-mcp\\dist\\index.js, capabilities, location, mcp_endpoint, args, command, transport, metadata (+9 more)
 
-### Community 87 - "2026-09-28.md"
+### Community 91 - "Forms"
 Cohesion: 0.11
 Nodes (17): F:\\Aaradhya-Dev-Tamrakar\\Utility-MCPs\\typora-mcp\\dist\\index.js, capabilities, location, mcp_endpoint, args, command, transport, metadata (+9 more)
 
-### Community 88 - "3. The 10 Master Engineering Competency Domains"
+### Community 92 - "Performance"
 Cohesion: 0.11
 Nodes (17): F:\\Aaradhya-Dev-Tamrakar\\Utility\\md2pdf-desktop\\mcp_server\\server.py, capabilities, location, mcp_endpoint, args, command, transport, metadata (+9 more)
 
-### Community 89 - "CircuitBreaker"
+### Community 93 - "Implementation"
 Cohesion: 0.11
 Nodes (18): 10. Central Technical Asset Replacement Valuation, 11. COMPOSE-001 Cross-Document Synthesis to LaTeX PDF, 12. COMPOSE-002 Combinatorial CSP Solving & Verification Loop, 13. LocalSend MCP Peer Discovery & LAN Transfer, 1. Fall Detection Classification AUC-ROC, 1. Scope & Audit Invariant, 2. Edge Neural Network Footprint (INT8), 2. Quantitative Claims Register (+10 more)
 
-### Community 90 - "Graphify Optimizer & Relevancy Engine"
-Cohesion: 0.11
-Nodes (16): 1.1 The Front-End Trap in Autonomous Systems, 1.2 The Architectural Invariant: Substrate Decoupling, 1. Executive Philosophy: "Headless Engine First, Interface Second", 2.1 The CLI as the First Jarvis Prototype, 2. The Deterministic Loop: Compose → Execute → Verify, 3. Core Contract & Data Boundaries, 4. Key Advantages for the R&D Strategic Wedge, 5. Architectural Invariants Enforced (+8 more)
-
-### Community 91 - "Forms"
+### Community 94 - "security-guidance"
 Cohesion: 0.11
 Nodes (17): 1. Markup, 2. Styles, 3. Module state, 4. Drill down, 5. Click and back-button handling, 6. Sync from history (popstate), 7. `scrollsnapchange`: the single source of truth, 8. Initialization (including deep links) (+9 more)
 
-### Community 92 - "Performance"
+### Community 95 - "7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis"
 Cohesion: 0.12
 Nodes (16): 1.1 Cognitive Profile Evaluation, 1.2 The Semantic Gap & Strategic Risk, 1. Executive Context & Verified Baseline, 2. Strategic Strategy: The 70 / 30 Hybrid Learning Model, 3. Detailed Execution Tracks, 4. Verification & Milestone Scorecard, 5. Epistemic Governance & Invariants, ARCH-PLAN-002: Dual-Track Systems Engineering & Software Mastery Roadmap (+8 more)
 
-### Community 93 - "Implementation"
+### Community 96 - "FloatingWidget"
 Cohesion: 0.13
 Nodes (13): 1. Schedule & Priorities, 2026-09-28 — Daily Log, 2. Active Projects Progress, 3. Daily Learnings & Conceptual Nodes, 4. Tomorrow's Context (Agent Primer), 1. Experimental Rationale & Objective, 2. Falsifiable Hypotheses, 3. Stratified 10-Target Reconnaissance Matrix (+5 more)
 
-### Community 94 - "security-guidance"
+### Community 97 - "adaptive_orchestrator.py"
 Cohesion: 0.12
 Nodes (17): 1. Executive Summary & Epistemic Framework, 2. Curriculum Architecture & Semester Breakdown, 3. The 10 Master Engineering Competency Domains, 4. The 10 Derived Agent Skills Inventory (`tools/skills/`), 5. Deterministic Foundation Verification Harness (`sim/bei_foundation_sim.py`), 6. Authoritative Conclusion & Epistemic Standing, Domain 10: Software Engineering, Data Architecture, Project Management, Economics & Professional Ethics, Domain 1: Physical Foundations, Workshop Fabrication & Engineering Graphics (+9 more)
 
-### Community 95 - "7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis"
+### Community 98 - "Research & Product Plan: Bilingual Domain Ontology & Precision Writing Engine (English → Nepali)"
 Cohesion: 0.16
 Nodes (13): DAGCycleError, DeterministicCPMScheduler, sim/adaptive_orchestrator.py ---------------------------- Deterministic, Zero-…, Error handler for shutil.rmtree that clears read-only flags on Windows., Removes a directory tree with exponential backoff and read-only flag clearing., Raised when a task DAG contains a directed cycle., Exact topological DAG solver in pure Python with zero prompt arithmetic., Deletes a single file with exponential backoff and read-only flag clearing.… (+5 more)
 
-### Community 96 - "FloatingWidget"
+### Community 99 - "fusion360-mcp.contract.json"
 Cohesion: 0.12
 Nodes (5): CircuitBreaker, PoliteFetcher, Three-state Circuit Breaker (CLOSED, OPEN, HALF_OPEN) for polite web…, Polite HTTP Fetcher with per-domain jittered rate limiting and circuit breaker…, Applies randomized jitter delay between manual requests.
 
-### Community 97 - "adaptive_orchestrator.py"
+### Community 100 - "ValueError"
 Cohesion: 0.19
 Nodes (15): format_size(), inspect_video(), main(), parse_fps(), print_terminal_report(), Prints an aligned terminal report., Parses fractional frame rates like '30/1' or '24000/1001' into floats., Runs ffprobe on the video file and returns parsed metadata dictionary. (+7 more)
 
-### Community 98 - "Research & Product Plan: Bilingual Domain Ontology & Precision Writing Engine (English → Nepali)"
+### Community 101 - "Multi-Remote Synchronization & Ecosystem Automation"
 Cohesion: 0.12
 Nodes (16): 1. When to Use This Skill, 2. Core Operational Workflow, 3. Diagnostic Commands: Measuring Graph Health, 4. Ingestion Hygiene: Rules for `.graphifyignore`, 5. Execution Flags & Playbooks, 6. Semantic Community Labeling, 7. Dynamic Output Directory Resolution (`graphify-out` Placement), Agent & Tool Inspection Pattern: (+8 more)
 
-### Community 99 - "fusion360-mcp.contract.json"
+### Community 102 - "2. Quick Command Reference"
 Cohesion: 0.26
 Nodes (16): 10. Usability Testing and Analytics, 11. Multi-Page Forms, 1. Semantic Structure and Form Element, 2. Accessible Labeling and State, 3. Autofill and Input Hints, 4. Constraints and Validation, 5. Responsive Design and Typography, 6. Styling Form Controls (+8 more)
 
-### Community 100 - "ValueError"
+### Community 103 - "skills/README.md"
 Cohesion: 0.31
 Nodes (16): Code Examples, Critical Rendering Path (CRP) Optimization, CSS Rendering & Containment Optimization, DON'Ts, DOs, Interaction to Next Paint (INP) & Main Thread Unblocking, JavaScript Code-Splitting, Largest Contentful Paint (LCP) & Resource Fetching (+8 more)
 
-### Community 101 - "Multi-Remote Synchronization & Ecosystem Automation"
+### Community 104 - "How to implement"
 Cohesion: 0.12
 Nodes (16): 1. Markup, 2. Styles, 3. Open and close the drawer, 4. Detect open and closed state, 5. Wire up the trigger and dismissal handlers, Backdrop fade fallback (no `animation-timeline` support):, Build the swipe surface with scroll snap, Fallback strategies (+8 more)
 
-### Community 102 - "2. Quick Command Reference"
+### Community 105 - "Consistent Cross-Document Transitions"
 Cohesion: 0.12
 Nodes (16): Configuration, Enabling/disabling layers, Fail loudly at import time if a pattern is added without a RuleId., Higher-recall mode, Install, Limitations, Org-specific policies, Prerequisites (+8 more)
 
-### Community 103 - "skills/README.md"
+### Community 106 - "CrawlPolicy"
 Cohesion: 0.12
 Nodes (16): 7.10 The $5/mo Operating Baseline & Cognitive Worker Decoupling, 7.11 The Formal Experiment Protocol & INV Telemetry Specification, 7.12 Meta-Engineering: Escaping Recursive Planning via The Three-Output Rule, 7.13 The Multi-Agent Bootstrap Protocol ($0 Cognitive Council), 7.19 Foundational Brainstorming Transcripts & Conversational Provenance, 7.1 The Research Thesis: Why Continue as an R&D Direction, 7.2 The Research Director Paradigm: Neutralizing Non-Pro Coding, 7.3 The 5 Compounding Personal & Technical Benefits (+8 more)
 
-### Community 104 - "How to implement"
+### Community 107 - "Research Plan: Ecosystem Project Working Screenshot & Visual Proof Capture Pipeline"
 Cohesion: 0.17
 Nodes (4): Event, FloatingWidget, Small always-on-top borderless widget with: • Text entry for typing/pasting…, Display a toast; safe to call from any thread.
 
-### Community 105 - "Consistent Cross-Document Transitions"
+### Community 108 - "sync_realtime_models.py"
 Cohesion: 0.12
 Nodes (16): 1. Executive Summary & Problem Space, 2. Central Research Questions (CRQs), 3. Multi-Layer System Architecture, 4.1 Subsystem A: Voice-First Devanagari Conversational Interface, 4.2 Subsystem B: Multimodal Pre-Flight Dossier Verifier, 4.3 Subsystem C: Disability Rights Statutory State Machine (`schemas/nepal-civic-service.v1.json`), 4.4 Subsystem D: Spatial & Architectural Accessibility Telemetry, 4. Key Subsystems & Technical Implementation (+8 more)
 
-### Community 106 - "CrawlPolicy"
-Cohesion: 0.12
-Nodes (16): 10. Operational Infrastructure & Master Artifact Index, 1. Executive Summary & Paradigm Shift, 2. Institutional Positioning & Operational Substrates, 3. The Guild & Quest Progression Engine, 4. Cohort 0 (C0) Execution Blueprint, 6. Objective Evaluation Rubric, 7. Zero-Cost Merit Reward Protocol & Metric-Backed LOR Engine, 8. Governance, IP Boundary & Contributor Agreement (+8 more)
-
-### Community 107 - "Research Plan: Ecosystem Project Working Screenshot & Visual Proof Capture Pipeline"
+### Community 109 - "ModelRouter"
 Cohesion: 0.12
 Nodes (15): 1. Executive Summary & Problem Formulation, 2. Architectural Viability Evaluation: Model Training vs. Ontology/Skill Layer, 3. The English → Nepali Trajectory, 4. Devanagari Tokenizer Fertility & Compression, 5. SWOT Analysis, 6. Execution Roadmap & Verification Milestones, 7. Falsifiable Hypotheses & Success Criteria, Comparative Trade-Off Matrix (+7 more)
 
-### Community 108 - "sync_realtime_models.py"
+### Community 110 - "save_doc.py"
 Cohesion: 0.12
 Nodes (15): capabilities, location, mcp_endpoint, port, transport, metadata, author, last_updated (+7 more)
 
-### Community 109 - "ModelRouter"
+### Community 111 - "unicode_to_preeti"
 Cohesion: 0.12
 Nodes (15): 1. The Orthogonal Dimensions, 2. The 9-Cell Master Policy Matrix, 3. Cell Specifications & Operational Policies, Cell `(V0, R0)` — `DIRECT_FAST`, Cell `(V0, R1)` — `BRANCH_GUARD`, Cell `(V0, R2)` — `SURGICAL_LOCK`, Cell `(V1, R0)` — `CONCURRENT_LOCAL`, Cell `(V1, R1)` — `STAR_SUBAGENTS` (+7 more)
 
-### Community 110 - "save_doc.py"
+### Community 112 - "Deterministic Verification Gates & Reality Layer"
 Cohesion: 0.12
 Nodes (15): 1. Local Language & Runtime Verification, 1. Structural Consistency & Audit Gate (`audit.bat`), 2. Central Ecosystem Verification (`brainstorm`), 2. Numerical Queue Simulation (`sim.bat`), 3. LaTeX Research Dossier Compilation (`build_report.bat`), 3. Portfolio Repository Verification (`AaradhyaDT.github.io`), 4. Formal SMT / Z3 Verification Gates, 5. CI Runner Bypass & Quota Protection (+7 more)
 
-### Community 111 - "unicode_to_preeti"
+### Community 113 - "Input/Output Contract"
 Cohesion: 0.26
 Nodes (14): detect_mime_type(), get_api_key(), main(), Performs an upload using google-genai SDK, with automatic pre-processing for…, Polls the file status until state is ACTIVE or FAILED using exponential backoff…, Strips query parameters from URL for clean logging and security., Custom ArgumentParser that ensures any error output is sanitized to prevent…, Sanitizes error messages by redacting API keys, tokens, query parameters,… (+6 more)
 
-### Community 112 - "Deterministic Verification Gates & Reality Layer"
+### Community 114 - "Plugins"
 Cohesion: 0.12
 Nodes (15): 1. Architectural Role & Invariants, 2. Command Reference, 3. Selective CI Runner Bypass & Staged Auto-Detection, 4. Conflict Prevention & Hygiene Built-Ins, 5. Root Decluttering & Evaluator Best Practices, Decluttered Directory Topology, How Auto-Detection Works, Invariant Rule (+7 more)
 
-### Community 113 - "Input/Output Contract"
+### Community 115 - "HTML"
 Cohesion: 0.12
 Nodes (15): 1. Purpose & Core Advantage, 2. Quick Command Reference, 3. Standard Agent Workflow for Coding Tasks, 4. Graph Availability & Freshness Gate, 5. Additional Documentation, Explain Component Context, Graphify Code Search: Implementation Discovery Engine, Machine-Readable JSON Output (For Agents & Automation) (+7 more)
 
-### Community 114 - "Plugins"
+### Community 116 - "Implementation Steps"
 Cohesion: 0.12
 Nodes (15): Allow for a variety of address formats, Build a payment form that follows best practice, Fallback strategies, Help save users from accidentally missing data fields, Help users avoid re-entering payment data, How to implement, Make buttons helpful, Make the most of HTML attributes (+7 more)
 
-### Community 115 - "HTML"
+### Community 117 - "capability.contract.v1.json"
 Cohesion: 0.12
 Nodes (15): Best Practices, Consistent Cross-Document Transitions, Fallback Strategies, Implementation Guide, Implementation Strategy, Other Considerations, Step 1: Opt in to Cross-Document View Transitions, Step 2: Block Rendering Until Critical Scripts Execute (+7 more)
 
-### Community 116 - "Implementation Steps"
-Cohesion: 0.13
-Nodes (13): 1. Executive Summary, 2. Granular Reconciliation Matrix, 3. Epistemic Certification, Comprehensive Multi-Model Ecosystem Reconciliation Report (2026-09-19), 1.1 Invariant A: Closed-Loop Worker Dispatch (No Orphaned Leases), 1.2 Invariant B: Strict Separation of Real Execution and Simulation, 1.3 Invariant C: Telemetry Truthfulness & Quota Headroom, 1.4 Invariant D: Atomic Checkpoint & DAG Advancement (+5 more)
-
-### Community 117 - "capability.contract.v1.json"
+### Community 118 - "2. The 6 Flagship Compound Pipelines"
 Cohesion: 0.13
 Nodes (14): 1. Executive Summary & Objective, 2. Capture Architecture & Multi-Modality Engine, 3. Comprehensive Project Capture Matrix (39 Projects), 4.1 WinPilot Native Screen Capture Harness, 4.2 Standard Visual Specifications, 4. Execution Pipeline & Automation Tooling, 5. Phased Implementation Roadmap, 6. Epistemic Invariants & Quality Gates (+6 more)
 
-### Community 118 - "2. The 6 Flagship Compound Pipelines"
+### Community 119 - "InvariantAssuranceEngineTests"
 Cohesion: 0.21
 Nodes (14): fetch_live_openrouter_models(), fetch_official_lab_announcements(), fetch_with_retry(), infer_routing_profile(), main(), Any, Fetch latest model list and real-time per-token pricing from OpenRouter., Derive calibrated 6-dimension routing profile for a newly detected model. (+6 more)
 
-### Community 119 - "InvariantAssuranceEngineTests"
+### Community 120 - "DeterministicTriageEngine"
 Cohesion: 0.16
 Nodes (9): ModelEntry, ModelRouter, Any, Path, Calculate total dollar cost for given token volumes., Authoritative Dynamic MoE & Cascade Router for the Brainstorm Ecosystem., Strongly typed representation of a 2026 LLM catalog record., Find models fulfilling a specific ARCH-RFC-002 Cognitive Council role. (+1 more)
 
-### Community 120 - "DeterministicTriageEngine"
+### Community 121 - "Master Frontend Design & Motion Engineering"
 Cohesion: 0.21
 Nodes (14): extract_gdoc_id(), fetch_gdoc_html(), fetch_generic_html(), find_last_doc(), format_document(), main(), parse_html_to_markdown(), Extract Google Doc / Drive file ID from various URL patterns. (+6 more)
 
-### Community 121 - "Master Frontend Design & Motion Engineering"
+### Community 122 - "Find Skills"
 Cohesion: 0.21
 Nodes (13): convert_docx(), detect_encoding(), normalize_unicode(), preeti_to_unicode(), Preeti ↔ Unicode Nepali Font Converter Engine…, Normalize Devanagari Unicode sequences before mapping., Convert Preeti (or Kantipur) encoded text to Unicode Devanagari. Args: text:…, Convert Unicode Devanagari text (e.g. from Nirmala UI) to Preeti encoding.… (+5 more)
 
-### Community 122 - "Find Skills"
+### Community 123 - "Accessible Error Announcement"
 Cohesion: 0.13
 Nodes (14): 1. `PreToolUse` Contract, 2. `PostToolUse` Contract, 3. `PreInvocation` Contract, 4. `PostInvocation` Contract, 5. `Stop` Contract, Common Input Fields, Current Limitations, File Format (+6 more)
 
-### Community 123 - "Accessible Error Announcement"
+### Community 124 - "Calculate With Intrinsic Sizes"
 Cohesion: 0.13
 Nodes (13): Configuration Schema, Explicitly Configured Paths, JSON Configuration Files, Path Entry Fields, Path Resolution Rules, Pro-Tip: Team Sharing via VCS, Top-Level Fields, Directory Structure (+5 more)
 
-### Community 124 - "Calculate With Intrinsic Sizes"
+### Community 125 - "CSS Layouts and Responsive Design"
 Cohesion: 0.29
 Nodes (14): 1. Fundamental Semantics and Validation, 2. Content Grouping and Attribution, 3. Resource Prioritization and Performance, 4. Native Overlays: Dialogs and Popovers, 5. Disclosures: Details and Summary, 6. Focus Boundaries and Visibility, 7. HTML APIs and Forms Grouping, 8. Native Media Elements (+6 more)
 
-### Community 125 - "CSS Layouts and Responsive Design"
+### Community 126 - "Required Field Feedback"
 Cohesion: 0.13
 Nodes (14): 1. Abort Prior Autofill Actions, 2. Feature Detection, 3. Create a passkey with Conditional Create, 4. Silent Error Handling, 5. Server-Side User Presence Verification, 6. Handle Failed Server Verification gracefully, Code Example, Easy JSON Serialization Fallback (+6 more)
 
-### Community 126 - "Required Field Feedback"
+### Community 127 - "Detailed Guidelines"
 Cohesion: 0.14
 Nodes (13): capabilities, location, module, runtime, $schema, version, additionalProperties, description (+5 more)
 
-### Community 127 - "Detailed Guidelines"
+### Community 128 - "How to implement"
 Cohesion: 0.14
 Nodes (13): 1. Objective & Hypothesis, 2. Experimental Setup & Environment, 3.1 Server Status (`localsend_status`), 3.2 LAN Peer Discovery (`localsend_devices`), 3.3 Text Payload Transfer (`localsend_send`), 3.4 File Payload Transfer (`localsend_send`), 3.5 Inbox & History Query (`localsend_history`), 3.6 Multi-File Recursive Directory Hierarchy Verification (`localsend_send`) (+5 more)
 
-### Community 128 - "How to implement"
+### Community 129 - "Super-NLM Orchestrator & Fleet Management Skill"
 Cohesion: 0.14
 Nodes (13): 1. Overview of Autonomous Compound Pipelines, 2. The 6 Flagship Compound Pipelines, 3. Unified Repository Synchronization Engine (`sync.ps1`), 4. Zero-Token Deterministic Verification Batch Gates, 5. Autonomous Multi-Agent Teamwork Orchestration (`/teamwork-preview`), Core Automation Commands, Document 2: Operational Workflows & Autonomous Compound Pipelines, Pipeline A: Rapid Learning & Cognitive Absorption (+5 more)
 
-### Community 129 - "Super-NLM Orchestrator & Fleet Management Skill"
+### Community 130 - "swarm_marketplace/app.js"
 Cohesion: 0.20
 Nodes (8): AdaptiveRateGovernor, Closed-loop rate governor regulating concurrency based on normalized latency…, Resets governor state (primarily for isolated test assertions)., Calculates continuous latency damping factor alpha: e_L = (observed_latency_ms…, Computes regulated concurrency u(t) = max(1, floor(base_workers * alpha * M))., Processes an HTTP 429 response. - If M == 1.0 (nominal): isolated single 429…, Ramps multiplier back up by +0.1 after every successful batch checkpoint once…, Validates rate governor alpha damping, hysteresis M halving, 120s recovery, and…
 
-### Community 130 - "swarm_marketplace/app.js"
+### Community 131 - "required"
 Cohesion: 0.18
 Nodes (8): AntigravityMemoryGovernor, Monitors live host RAM to protect Antigravity's WorkingSet and enforce Banker's…, Samples current system RAM using psutil or Win32 GlobalMemoryStatusEx fallback., Asserts that system preserves minimum required RAM headroom., Calculates safe worker concurrency using strict Banker's formula: raw_workers =…, Asserts that on-device models do not exceed the 500 MB budget., Verifies Antigravity memory headroom, reserve floor (2048 MB), and Banker's…, Validates 2.5 GB free headroom assertion and 500 MB model ceiling.
 
-### Community 131 - "required"
-Cohesion: 0.14
-Nodes (13): 1. Active Baseline Configuration, 2. Token Systems & Material Architecture, 3. Typography & Structural Layout, 4. Google Material Design 3 (M3) Fluidity & Curves, 5. State Handling & Copywriting Restraint, A. Dark-Mode Canvas & Elevation Layers, A. Expressive Font Pairing, A. Timing Tokens (+5 more)
-
 ### Community 132 - "3. Four Core Subsystems Designed in Plan"
 Cohesion: 0.14
-Nodes (13): Common Skill Categories, Find Skills, How to Help Users Find Skills, Step 1: Understand What They Need, Step 2: Check the Leaderboard First, Step 3: Search for Skills, Step 4: Verify Quality Before Recommending, Step 5: Present Options to the User (+5 more)
+Nodes (13): Always Manifest V3, Chrome Extensions, CHROMEWEBSTORE.md Sections, Core Workflow, How to fill it out, Output Checklist, Part 1 — Building Extensions, Part 2 — Publishing to the Chrome Web Store (+5 more)
 
 ### Community 133 - "Setup Guide: Antigravity Customization Token Budget & Overhead Optimization"
 Cohesion: 0.14
-Nodes (13): 1. HTML Structure, 2. CSS, 3. JavaScript, Accessible Error Announcement, CSS for Fallback, Fallback Logic, Fallbacking & Browser Support, Feature Detection (+5 more)
+Nodes (13): 1. Active Baseline Configuration, 2. Token Systems & Material Architecture, 3. Typography & Structural Layout, 4. Google Material Design 3 (M3) Fluidity & Curves, 5. State Handling & Copywriting Restraint, A. Dark-Mode Canvas & Elevation Layers, A. Expressive Font Pairing, A. Timing Tokens (+5 more)
 
 ### Community 134 - "Brainstorm Research Laboratory — How Cohort 0 Works"
 Cohesion: 0.14
-Nodes (13): Animating to and from Intrinsic Sizes, Animation and Transition Fallbacks, Applying Constraints to Intrinsic Sizes, Basic Syntax, Calculate With Intrinsic Sizes, Choosing the Right Tool for Animations, Critical Considerations, Fallback strategies (+5 more)
+Nodes (13): Common Skill Categories, Find Skills, How to Help Users Find Skills, Step 1: Understand What They Need, Step 2: Check the Leaderboard First, Step 3: Search for Skills, Step 4: Verify Quality Before Recommending, Step 5: Present Options to the User (+5 more)
 
 ### Community 135 - "properties"
 Cohesion: 0.14
-Nodes (13): 1.1 Which layout mode to use?, 1.2 Working principles, 1 Fundamentals, 2 Flexbox, 3.1 Code example: grid and subgrid, 3 Grid and subgrid, 4.1 Code example: fluid typography using container query units, 4 Container queries (+5 more)
+Nodes (13): 1. HTML Structure, 2. CSS, 3. JavaScript, Accessible Error Announcement, CSS for Fallback, Fallback Logic, Fallbacking & Browser Support, Feature Detection (+5 more)
 
 ### Community 136 - "properties"
 Cohesion: 0.14
-Nodes (13): 1. HTML Structure, 2. CSS, 3. JavaScript State Synchronization, CSS for Fallback, Fallbacking & Browser Support, Fallbacks & browser support for :user-valid and :user-invalid, Implementation Guide, Implementation Strategy (+5 more)
+Nodes (13): Animating to and from Intrinsic Sizes, Animation and Transition Fallbacks, Applying Constraints to Intrinsic Sizes, Basic Syntax, Calculate With Intrinsic Sizes, Choosing the Right Tool for Animations, Critical Considerations, Fallback strategies (+5 more)
 
 ### Community 137 - "Fleet Command Architecture: Marshaling the 27-Worker Swarm"
-Cohesion: 0.32
-Nodes (13): 1. Data Minimization and Purpose Limitation, 2. Transparency and Trust, 3. Security and Data Handling for Privacy, 4. Third-Party Audits and Mitigations, 5. Privacy-Preserving Headers, 6. Fingerprinting and User-Agent Reduction, 7. Data Rights and User Control, Code Examples: (+5 more)
+Cohesion: 0.14
+Nodes (13): 1.1 Which layout mode to use?, 1.2 Working principles, 1 Fundamentals, 2 Flexbox, 3.1 Code example: grid and subgrid, 3 Grid and subgrid, 4.1 Code example: fluid typography using container query units, 4 Container queries (+5 more)
 
 ### Community 138 - "Message Passing"
 Cohesion: 0.14
-Nodes (13): Best practices and pitfalls, Different actions per swipe direction, Fallback for `overscroll-behavior`, Fallback for `scroll-initial-target`, Fallback for `scrollbar-width`, Fallback strategies, How to implement, Step 1: Mark up the list with track and content (+5 more)
+Nodes (13): 1. HTML Structure, 2. CSS, 3. JavaScript State Synchronization, CSS for Fallback, Fallbacking & Browser Support, Fallbacks & browser support for :user-valid and :user-invalid, Implementation Guide, Implementation Strategy (+5 more)
 
 ### Community 139 - "Summarizer"
+Cohesion: 0.32
+Nodes (13): 1. Data Minimization and Purpose Limitation, 2. Transparency and Trust, 3. Security and Data Handling for Privacy, 4. Third-Party Audits and Mitigations, 5. Privacy-Preserving Headers, 6. Fingerprinting and User-Agent Reduction, 7. Data Rights and User Control, Code Examples: (+5 more)
+
+### Community 140 - "How to Implement"
+Cohesion: 0.14
+Nodes (13): Best practices and pitfalls, Different actions per swipe direction, Fallback for `overscroll-behavior`, Fallback for `scroll-initial-target`, Fallback for `scrollbar-width`, Fallback strategies, How to implement, Step 1: Mark up the list with track and content (+5 more)
+
+### Community 141 - "Select Menu Interaction"
 Cohesion: 0.14
 Nodes (13): 1. Architectural Overview, 2. Model Context Protocol (MCP) Reference, 3. Direct CLI Workflows (`nlm`), 4. Academic Course Mappings & Notebook IDs, 5. Ingestion Rules & Adapters, Calendar & Sharing, Core Engine Capabilities, Folder Mapping & Ingestion (+5 more)
 
-### Community 140 - "How to Implement"
+### Community 142 - "Validate Input After Interaction"
 Cohesion: 0.26
 Nodes (12): catalogItems, checkCohortAuth(), COHORT_ROLE_FLAG, drawFinderPattern(), escapeHtml(), generateMicroQrSvg(), openQrModal(), renderCatalog() (+4 more)
 
-### Community 141 - "Select Menu Interaction"
+### Community 143 - "Flicker-Free Client-Side A/B Testing"
 Cohesion: 0.18
 Nodes (5): callable, RobotFileParser, CrawlPolicy, Centralized decision and governance layer for web ingestion: - Domain…, Allows injecting or pre-caching robots.txt for testing or offline environments.
 
-### Community 142 - "Validate Input After Interaction"
+### Community 144 - "Out-of-Order (OOO) HTML Streaming"
 Cohesion: 0.15
 Nodes (12): banned_alternatives, definition_en, domain, nepali_alignment, register, term_en, description, id (+4 more)
 
-### Community 143 - "Flicker-Free Client-Side A/B Testing"
+### Community 145 - "Client-Side Logic"
 Cohesion: 0.15
 Nodes (12): 1. State Snapshot & Rollback Engine (`snapshot_engine.py`), 1. Verified Session Achievements & Ground Truth, 2. Cross-IDE Format Transpiler (`transpilers/`), 2. The New Initiative: Customization State Saving & Cross-IDE Syncing Engine, 3. Drift & Token Budget Auditor (`auditor.py`), 3. Four Core Subsystems Designed in Plan, 4. New Chat Prompt (Copy & Paste to Resume), 4. Zero-Friction Automation Wrapper (`custom_sync.bat`) (+4 more)
 
-### Community 144 - "Out-of-Order (OOO) HTML Streaming"
+### Community 146 - "Animate Elements To and From Top Layer"
 Cohesion: 0.15
 Nodes (12): 1. Executive Summary, 2. Empirical Overhead Breakdown, 3. Financial & AI Credit Impact, 4. Operational Degradation (The Hidden Tax), 5. Standard Operating Procedure (SOP) for Setup, Before vs. After Optimization, Estimated Waste per 100 Turns (Overhead Only), Rule 1: On-Demand Plugin Installation (+4 more)
 
-### Community 145 - "Client-Side Logic"
+### Community 147 - "Building UI Extensions"
 Cohesion: 0.15
 Nodes (13): 1. Read the short introduction, 2. Complete the intake form, 3. Receive your first assignment, 4. Learn while doing the Quest, 5. Submit your work, 6. Progress, After the intake, Brainstorm Research Laboratory — How Cohort 0 Works (+5 more)
 
-### Community 146 - "Animate Elements To and From Top Layer"
+### Community 148 - "Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log"
 Cohesion: 0.15
 Nodes (13): description, type, description, type, description, type, properties, archaic_sanskrit_anti_pattern (+5 more)
 
-### Community 147 - "Building UI Extensions"
+### Community 149 - "🧠 Personal Engineering Ecosystem & R&D Infrastructure"
 Cohesion: 0.15
 Nodes (13): description, type, description, type, properties, canonical_usage_en, definition_en, scope_boundary_en (+5 more)
 
-### Community 148 - "Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log"
-Cohesion: 0.19
-Nodes (6): 1. Unified Runtime Architecture, 2. The `antigravity_scope` Task Schema, 3. Worktree Context Projection Protocol, 4. Prompt Payload Synthesis & Native Custom Instructions, 5. Teardown Sanitization & Commit Integrity Invariant, Antigravity Scope Expansion & Living Chat Context Injection
-
-### Community 149 - "🧠 Personal Engineering Ecosystem & R&D Infrastructure"
+### Community 150 - "enum"
 Cohesion: 0.15
 Nodes (12): 1. The Commander-to-Fleet Marshalling Model (`INV-CTX-FIREBREAK`), 2. Multi-Account Quota Pool & Fleet Health, 3. Task Schema & Enqueue Protocol, 4. Hardened Invariants for Fleet Operations, 5. Google Drive & NotebookLM Synchronization, Canonical Task Schema (with Antigravity Scope Projection):, Fleet Command Architecture: Marshaling the 27-Worker Swarm, Fleet Health Verification Command: (+4 more)
 
-### Community 150 - "enum"
+### Community 151 - "enum"
 Cohesion: 0.15
 Nodes (13): 1. Monotonic Fencing Tokens (`INV-FENCE-TOKEN`), 1. Transactional Recovery Model, 2. Pre-Existing File Guard (`INV-PRE-EXIST-GUARD`), 2. The Rolling 3-Snapshot Ring Buffer, 3. Cryptographic Integrity Triage (`cyber-forensics`), 4. Headless Worker Lease Eviction (`fleet-orchestrator`), 5. Pre-Convergence Sentinels (`pr-review-toolkit`), 6. Windows NTFS File-Locking Resilience & Cleanup (+5 more)
 
-### Community 151 - "enum"
+### Community 152 - "ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md"
 Cohesion: 0.15
 Nodes (12): Basic patterns, Common mistakes, Content script ↔ service worker, Long-lived connections (ports), Message Passing, Missing `return true` causes response to never arrive, Multiple listeners responding, One-way message (fire and forget) (+4 more)
 
-### Community 152 - "ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md"
+### Community 153 - "Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet)"
 Cohesion: 0.15
 Nodes (12): 1. Batch Summarization, 2. Stream Summarization, API Functions & Configuration, Example Configuration, Fallback Strategy, Getting Started, Hardware & Software Requirements, Language Support (+4 more)
 
-### Community 153 - "Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet)"
+### Community 154 - "NotebookLM Grounding Source 07: BRL Fellowship, Guild Quest Engine & Onboarding"
 Cohesion: 0.15
 Nodes (12): 1. Activate Base Styling, 2. Style the Picker Container, 3. Style the Options, 4. Style the selected option, 5. (Optional) Style the selected option checkmark, 6. (Optional) Customize the selected option display, Accessibility, Best practices (+4 more)
 
-### Community 154 - "NotebookLM Grounding Source 07: BRL Fellowship, Guild Quest Engine & Onboarding"
+### Community 155 - "📋 BRL Engineering Handoff: Automated PR Workflow & Ecosystem Sync (`sync.ps1`)"
 Cohesion: 0.15
 Nodes (12): 1. HTML Structure, 2. CSS, CSS for Fallback, Fallbacking & Browser Support, Fallbacks & browser support for :user-valid and :user-invalid, Implementation Guide, Implementation Strategy, JavaScript Fallback (+4 more)
 
-### Community 155 - "📋 BRL Engineering Handoff: Automated PR Workflow & Ecosystem Sync (`sync.ps1`)"
+### Community 156 - "2. Frozen Operational Pillars"
 Cohesion: 0.15
 Nodes (12): CSS for Fallback, Fallbacking & Browser Support, Fallbacks & browser support for :user-valid and :user-invalid, Implementation Guide, Implementation Strategy, JavaScript Fallback, Other Considerations, The Problem (+4 more)
 
-### Community 156 - "2. Frozen Operational Pillars"
+### Community 157 - "2. The Canonical Hierarchy"
 Cohesion: 0.15
 Nodes (12): Basic Setup, Best Practices, Fallback: Anti-Flicker Snippet, Fallback Strategies, Flicker-Free Client-Side A/B Testing, Implementation Guide, Implementation Strategy, Inline Experiment Script (+4 more)
 
-### Community 157 - "2. The Canonical Hierarchy"
+### Community 158 - "📂 Catalog of Scripts"
 Cohesion: 0.15
 Nodes (12): 1. Declarative HTML Markers, 2. Imperative JS Streaming, Anti-Patterns & Warnings (DO NOT DO THIS), API Reference Matrix, Best Practices, Example: Streaming a Fetch Response, Fallback strategies, Implementation Details (+4 more)
 
-### Community 158 - "📂 Catalog of Scripts"
+### Community 159 - "save_chat.py"
 Cohesion: 0.15
 Nodes (12): Client-Side Logic, Conditional Mediation Flow (Form Autofill), Easy JSON Serialization Fallback, Explicit Button Flow, Fallback Strategies, HTML Form Annotation, Options Generation, Passkey Authentication (+4 more)
 
-### Community 159 - "save_chat.py"
+### Community 160 - "Preeti ↔ Unicode (Nirmala UI) Nepali Font Converter & Quick Bridge"
 Cohesion: 0.15
 Nodes (12): 1. Enable Discrete Transitions, 2. The `overlay` Property, 3. Entry Animations with `@starting-style`, 4. Animating the Backdrop, Animate Elements To and From Top Layer, Constraints & Accessibility, Example, Fallback strategies (+4 more)
 
-### Community 160 - "Preeti ↔ Unicode (Nirmala UI) Nepali Font Converter & Quick Bridge"
+### Community 161 - "TestAdaptiveOrchestrator"
 Cohesion: 0.15
 Nodes (12): Backend: `SidecarApp`, Building UI Extensions, Frontend: `preload.js` and `window.sidecar`, Manifests, `plugin.json`, Reference implementation, Runtime environment, `sidecars/<sidecar>/sidecar.json` (+4 more)
 
-### Community 161 - "TestAdaptiveOrchestrator"
+### Community 162 - "Adaptive Workflow Orchestrator (`adaptive-workflow`)"
 Cohesion: 0.17
 Nodes (12): 1. Executive Summary & The Core Breakthrough, 2. Tool Inventory: The 13 Foundational Computational Capabilities, 3. The 4 Functional Module Archetypes, 6. Next Steps & Tactical Sequencing, 8.1 Context & Intent, 8.2 Architectural Grounding, 8.3 The "Saner for Longer" Incremental Methodology, 8. Clean-Slate GPU & RAM Architecture Research Vector (2026-09-13) (+4 more)
 
-### Community 162 - "Adaptive Workflow Orchestrator (`adaptive-workflow`)"
+### Community 163 - "Interactive Creation Workflow"
 Cohesion: 0.17
 Nodes (12): 🗂️ Authoritative Ecosystem Catalog, 📌 Authoritative Governance & Evidence Standards, Compound Capability Workflows, 🧭 Core Architecture: Capability Mesh & Decoupled Cognition, 🛠️ Cross-Platform Zero-Token Verification & Simulation Launchers (`.bat` / `.sh`), 🎯 Flagship Research Wedge: Headless Invariant Assurance Engine, 📄 License, `main` branch checks & verified enforcement (+4 more)
 
-### Community 163 - "Interactive Creation Workflow"
+### Community 164 - "Side Panel"
 Cohesion: 0.17
 Nodes (12): actuation, cognition, compute, formal_verification, hardware_interop, ingestion, orchestration, presentation (+4 more)
 
-### Community 164 - "Side Panel"
+### Community 165 - "User Scripts API"
 Cohesion: 0.17
 Nodes (12): audit, execute, find_counterexample, maximize, minimize, synthesize, transform, verify_invariant (+4 more)
 
-### Community 165 - "User Scripts API"
+### Community 166 - "Translator"
 Cohesion: 0.17
 Nodes (11): 1.1 The YouTube Cold-Start Dilemma, 1.2 The Two-Pronged Audience Seeding Wedge, 1. Strategic Rationale & Algorithmic Cold-Start Invariant, 2. End-to-End Cluster Architecture, 3.1 Subsystem A: Normal -> Nightcore DSP Transformer Engine, 3.2 Subsystem B: Dynamic Lyrical Typography & Alignment Engine, 3.3 Subsystem C: Hardware-Accelerated Video Compositor (Intel Arc QSV), 3.4 Subsystem D: Content Schedulers & Autonomous Distribution (+3 more)
 
-### Community 166 - "Translator"
+### Community 167 - "Style Parent with :has"
 Cohesion: 0.17
 Nodes (12): 1. Laboratory Philosophy & The Artifact Standard, 2. The Guild Rank & Quest Engine, 3. Git Workflow & The Branch Protection Invariant, 4. Communication & The "No-Guilt" Pause Protocol, 5. Zero-Cost Merit Rewards & Progression Rights, 6. Frequently Asked Questions (FAQ), NotebookLM Grounding Source 07: BRL Fellowship, Guild Quest Engine & Onboarding, Q: Are we required to be physically present at KEC Makerspace? (+4 more)
 
-### Community 167 - "Style Parent with :has"
+### Community 168 - "Defer rendering heavy content"
 Cohesion: 0.17
 Nodes (11): 1. Context & Architectural Rationale, 2. Technical State of the Repository, 3. Detailed Specifications for `sync.ps1` Updates, 4. Key Files to Modify in the Next Session, 5. Ready-to-Paste Prompt for the Next Chat, A. New Parameters in `sync.ps1`, B. Automated Branch Slug Derivation (`Get-FeatureBranchSlug`), 📋 BRL Engineering Handoff: Automated PR Workflow & Ecosystem Sync (`sync.ps1`) (+3 more)
 
-### Community 168 - "Defer rendering heavy content"
-Cohesion: 0.17
-Nodes (11): 1. Historic Significance & Baseline Definition, 2. Frozen Operational Pillars, 3. Epistemic Verification & Invariant Inscription, A. Sovereign-Commander-Fleet Army Hierarchy, B. 2D Orthogonal Execution Matrix, C. Dynamic Flight Envelope, D. Quota-for-Speed Acceleration & Availability Ledger, E. Antigravity Scope Expansion into Headless Workers (+3 more)
-
 ### Community 169 - "Creating Persistent App Tours"
-Cohesion: 0.17
-Nodes (11): 1. Motivation & Purpose, 2.1 Repository, 2.2 Project, 2.3.1 Explicit Entity Classes (ONT-002 Machine-Derived Partition), 2.3 Capability, 2.4 Interface, 2.5 Workflow, 2. The Canonical Hierarchy (+3 more)
-
-### Community 170 - "Implementation"
 Cohesion: 0.17
 Nodes (11): 0. Deterministic Environment Bootstrap & Antigravity Setup, 1. Windows Environment & User Shell Folders (Selective OneDrive Bypass), 2. Media Ingestion & YouTube Automation, 3. Media Transcoding & Stream Copying (FFmpeg Engine), 4. Local Cloud & Device Sync, 5. P2P Dataset Packaging, Headless Seeding & Swarm Marketplace, 6. Repository Synchronization & BRL Automated PR Workflow Engine, Applying Shell Folders Setup (+3 more)
 
-### Community 171 - "Alternative CSS Fallbacks"
+### Community 170 - "Implementation"
 Cohesion: 0.27
 Nodes (11): clean_text(), find_last_transcript_doc(), format_appendix(), format_markdown(), main(), parse_chatgpt_share(), Normalize text and remove citation markers / artifacts., Finds the most recently modified or committed markdown transcript in target_dir. (+3 more)
 
-### Community 172 - "Precise Text Alignment"
+### Community 171 - "Alternative CSS Fallbacks"
 Cohesion: 0.17
 Nodes (11): 🚀 4 Ways to Use This Toolkit, 🔤 Authentic Ligature Synthesizer & Rules, ⚙️ Dependencies, 📂 Non-Destructive Word (.docx) Conversion, Option 1: Quick-Correction Companion (Best for Fast Editing in Word), Option 2: Full Desktop Application (Best for Long Text & Documents), Option 3: Zero-Install Standalone Web App (Best for Restricted Office PCs), Option 4: Command Line (CLI) & Python Automation (+3 more)
 
-### Community 173 - "Writing Like Claude — The Calm Authority Engineering Standard"
+### Community 172 - "Precise Text Alignment"
 Cohesion: 0.17
 Nodes (11): 1. Dual-Layer CPM Architecture, 1. Float / Slack Formulas, 2. Concurrency Invariants, 2. Mathematical Slack Formulas & Concurrency Invariants, 3. Deterministic Python DAG Solver (`INV-CPM-SOLVER`), 4. The Active Completion Ledger Algorithm, 5. Star-Topology Governance Invariant, Critical Path Method (CPM) Concurrency Scheduling (+3 more)
 
-### Community 174 - "upload_file.py"
+### Community 173 - "Writing Like Claude — The Calm Authority Engineering Standard"
 Cohesion: 0.17
 Nodes (11): 1. Translate Schedule & Author Self-Contained Run Prompt, 2. Announce Automation Creation & Write `<configDir>/sidecars/<sidecar-id>/sidecar.json`, 3. Point to the Dashboard (with Automation Name) & Ask to Test-Run for Reliable Permissions, Example `sidecar.json`, Interactive Creation Workflow, Scheduled Automations, Step 4: Create `sidecar.json` & Offer a Test Run to Configure Permissions, Step 5: If the User Chooses to Test-Run the Task Now (+3 more)
 
-### Community 175 - "enum"
+### Community 174 - "upload_file.py"
 Cohesion: 0.17
 Nodes (11): ⚠️ `activeTab` does NOT work from side panel interactions, Alternative triggers, Communication with Side Panel, Important Notes, Most common: Open on action icon click, Opening the Side Panel — REQUIRED, Setting Panel Per-Tab, Setup (+3 more)
 
-### Community 176 - "required"
+### Community 175 - "enum"
 Cohesion: 0.17
 Nodes (11): Complete Script Manager Pattern, `configureWorld()` — CSP and Messaging, Execution Worlds, Key Differences from Content Scripts, Manifest, Messaging from User Scripts, One-Off Injection (Chrome 135+), Persistence: Restore on Extension Update (+3 more)
+
+### Community 176 - "required"
+Cohesion: 0.17
+Nodes (11): 1. Architectural Highlights, 2. Operational Workflows & CLI Commands, 3. Best Practices & Invariants, Checking Fleet Health & Account Quotas, Context-Firebreak Swarm Execution with Fleet Commander, Core Capabilities, Fleet-Orchestrator Swarm Control Skill, Launching the Autonomous Queue Worker (+3 more)
 
 ### Community 177 - "Experiment Log: FLEET-001 (Single-Task Interruption & State Migration Benchmark)"
 Cohesion: 0.17
@@ -1357,28 +1349,28 @@ Cohesion: 0.18
 Nodes (10): 1. Executive Summary, 2. Root Cause Analysis of the Five Hitches, 3. Corrective Actions & Mitigations, 4. Architectural Invariants Enacted, Hitch 1: Filesystem Relocation Mismatch (Path Desynchronization), Hitch 2: MCP Daemon Client Process Memory Caching, Hitch 3: Dual OAuth Scope Partitioning (Classroom API vs Drive Media Download), Hitch 4: Windows Console Character Encoding (`cp1252`) (+2 more)
 
 ### Community 191 - "Bitwarden MCP Assistant Skill"
-Cohesion: 0.35
-Nodes (3): Brainstorm Research Laboratory — Fellows & Contributors Directory, Contributor Ranks & Progression, Onboarding Procedure
-
-### Community 192 - "Service Worker Lifetime & State Management"
 Cohesion: 0.18
 Nodes (10): 1. Executive Summary & Foundational Vision, 2. 4-Tier Decoupled Architectural Model, 3. Epistemic Governance & Evidence Standards, Document 1: Master Ecosystem Architecture & Capability Mesh, The Multi-Model Cognitive Council (`ARCH-RFC-002`), Tier 1: Executive Orchestration Interface, Tier 2: Orchestration & State Layer (Worker Session Runtime - WSR), Tier 3: Capability Mesh (18 Computational Engines) (+2 more)
 
-### Community 193 - "Compliance Report Harmonizer"
+### Community 192 - "Service Worker Lifetime & State Management"
 Cohesion: 0.18
 Nodes (11): 1. Executive Summary & Authorship, 2. Milestone Architecture & GitHub Project Anchoring (2026-10-01), 3. Modularity & Single Responsibility Architecture Refactor (Issue #32, PR #33), 4. Collaborative Peer Review & Git Governance Protocol, 5. Core Architectural & Methodological Pillars, I. The Core Four Disparity Metrics, II. Dual Harmonization Engine (Fairlearn + AIF360), III. Statistical Rigour & Guardrails (+3 more)
 
-### Community 194 - "2026-10-03_BEI_CURRICULUM_SKILLS_AND_CAPABILITY_ONTOLOGY.md"
+### Community 193 - "Compliance Report Harmonizer"
 Cohesion: 0.18
 Nodes (11): Brainstorm Research Laboratory — Cohort 0 Overview, Equal opportunity, Examples of C0 work, How the system works, Support and sponsorship, Time and cost, What happens next?, What is Brainstorm Research Laboratory? (+3 more)
 
-### Community 195 - "Migration Reference"
+### Community 194 - "2026-10-03_BEI_CURRICULUM_SKILLS_AND_CAPABILITY_ONTOLOGY.md"
 Cohesion: 0.18
 Nodes (11): 1. Objective, 2. Step-by-Step Execution Protocol, 3. Evaluation & Rank Advancement, Quest C0-00: The Onboarding Litmus Test (Quest 0), Step 1: Clone or Fork the Repository, Step 2: Configure Git Identity, Step 3: Create an Isolated Contributor Branch, Step 4: Create Your Fellow Profile (+3 more)
 
-### Community 196 - "Migration Reference"
+### Community 195 - "Migration Reference"
 Cohesion: 0.18
 Nodes (11): type, format, type, type, properties, author, last_updated, license (+3 more)
+
+### Community 196 - "Migration Reference"
+Cohesion: 0.18
+Nodes (11): 1. Motivation & Purpose, 2.1 Repository, 2.2 Project, 2.3.1 Explicit Entity Classes (ONT-002 Machine-Derived Partition), 2.3 Capability, 2.4 Interface, 2.5 Workflow, 2. The Canonical Hierarchy (+3 more)
 
 ### Community 197 - "Implementation"
 Cohesion: 0.18
@@ -1386,11 +1378,11 @@ Nodes (6): InvariantAssuranceEngineTests, Verifies that 100% of planted violatio
 
 ### Community 198 - "How to implement"
 Cohesion: 0.18
-Nodes (9): 1. Executive Summary, 2. Core Concepts & Takeaways, 3. Action Items & Decisions, 4. Verification Check Before Finishing (Slide 37 Gate), <% tp.date.now("YYYY-MM-DD") %> — Meeting: <% tp.file.title %>, 1. Document & Note Templates (Obsidian Knowledge Core), 2. Frontend Component Boilerplates, 📑 Ecosystem Templates & Code Boilerplates Registry (+1 more)
+Nodes (10): 1. Architectural Overview & Scaffolding Invariants, 2. Four-Stage Operational Protocol, 3. Bundled Reusable Scripts, 4. References & Cheat Sheets, Academic Notebook Architect Skill, Stage 1: Local Filesystem Scaffolding, Stage 2: High-Yield Study Hub Synthesis, Stage 3: Super-NLM Multi-Account Fleet Provisioning (+2 more)
 
 ### Community 199 - "SMS OTP form verification"
-Cohesion: 0.18
-Nodes (10): 1. Architectural Overview & Scaffolding Invariants, 2. Four-Stage Operational Protocol, 3. Bundled Reusable Scripts, 4. References & Cheat Sheets, Academic Notebook Architect Skill, Stage 1: Local Filesystem Scaffolding, Stage 2: High-Yield Study Hub Synthesis, Stage 3: Super-NLM Multi-Account Fleet Provisioning (+2 more)
+Cohesion: 0.24
+Nodes (4): 1. Provenance & Version Lifecycle, 2. Invariant Registry, 3. Style & Tone Standards, Baseline Lock & Historical Provenance
 
 ### Community 200 - "Improve next page load performance"
 Cohesion: 0.18
@@ -1565,164 +1557,164 @@ Cohesion: 0.20
 Nodes (9): Core Principles, Feature Development, Phase 1: Discovery, Phase 2: Codebase Exploration, Phase 3: Clarifying Questions, Phase 4: Architecture Design, Phase 5: Implementation, Phase 6: Quality Review (+1 more)
 
 ### Community 243 - "Carousel Snap Highlights"
-Cohesion: 0.20
-Nodes (9): 1. Architectural Highlights, 2. Operational Workflows & CLI Commands, 3. Best Practices & Invariants, Checking Fleet Health & Account Quotas, Core Capabilities, Fleet-Orchestrator Swarm Control Skill, Launching the Autonomous Queue Worker, Running Google Drive & NotebookLM Sync (+1 more)
-
-### Community 244 - "Implementation"
 Cohesion: 0.31
 Nodes (9): get_issue_body(), main(), parse_tasks(), Execute a gh CLI command and return stdout as string., Fetch issue title and body markdown via gh issue view., Extract all checkbox tasks with line numbers and completion status., Update checkboxes at specified line indices to the target state., run_gh_command() (+1 more)
 
-### Community 245 - "Same Document Transitions"
+### Community 244 - "Implementation"
 Cohesion: 0.20
 Nodes (9): 1. The "What's Due / Pending Homework" Audit (Most Common), 2. Assignment Deep-Dive & Requirements Extraction, 3. Submission Grade & Feedback Review, 4. Turn-In & Reclaim Safety Protocol, 🧰 Available MCP Tools Mapping, 💡 Best Practices & Performance Rules, 📋 Core Orchestration Workflows, Google Classroom Agent Skill (+1 more)
 
-### Community 246 - "Expose canvas content to browser features"
+### Community 245 - "Same Document Transitions"
 Cohesion: 0.20
 Nodes (9): 1. HTML Structure, 2. CSS Fallback, Brand-Consistent Forms, Dynamic Range Progress in Webkit Fallback, Example Code: Brand-Consistent Form Controls, Fallback Strategy, How to Implement, Progressive Enhancement with `@supports not` (+1 more)
 
-### Community 247 - "Implementation"
+### Community 246 - "Expose canvas content to browser features"
 Cohesion: 0.20
 Nodes (9): Fallback strategies, Forwarding styles to a wrapped native element, `:host`, `:host()`, `:host-context()`, Inherited properties and custom properties cross the boundary, `@layer` and container queries inside components, `::part()` and `exportparts`: expose internals for theming, `::slotted()`: styling projected Light DOM, `:state()`: style the component's own states (+1 more)
 
-### Community 248 - "Modern Web Guidance"
+### Community 247 - "Implementation"
 Cohesion: 0.20
 Nodes (9): Client-Side Logic, Database Requirements, Easy JSON Serialization Fallback, Fallback Strategies, Options Generation, Passkey Registration, Server-Side, Signal API Synchronization Fallback (+1 more)
 
-### Community 249 - "ui-extension/template/sidecars/panel/app.js"
+### Community 248 - "Modern Web Guidance"
 Cohesion: 0.20
 Nodes (9): 1. Creating a Policy, 2. Using the Policy, 3. Transitioning sinks to use Trusted Types, 4. Enforcing Trusted Types with CSP, Fallback strategies, Key Implementation Details, Prerequisites, Prevent DOM-based XSS attacks with Trusted Types (+1 more)
 
-### Community 250 - "Plugins"
+### Community 249 - "ui-extension/template/sidecars/panel/app.js"
 Cohesion: 0.20
 Nodes (9): 1. Establish the Scroll Container, 2. Style the Floating Element, 3. Respond to the Scroll State, Advanced Fallback (Intersection Observer), Basic Fallback, Fallback strategies, Implementation, Overview (+1 more)
 
-### Community 251 - "2. The 5-Stage Forge Lifecycle"
+### Community 250 - "Plugins"
 Cohesion: 0.20
 Nodes (9): 1. Establish the Scroll Container, 2. Style the Indicators, 3. Query the Scroll State, Advanced Fallback (Intersection Observer), Basic Fallback, Fallback strategies, Implementation, Overview (+1 more)
 
-### Community 252 - "Option 2: Step-by-Step CLI Execution"
+### Community 251 - "2. The 5-Stage Forge Lifecycle"
 Cohesion: 0.20
 Nodes (9): 1. Establish the scroll snap container, 2. Define snap targets as scroll-state containers, 3. Query the `snapped` state, Accessibility, Carousel Snap Highlights, Core implementation, Fallback strategies, Feature detection (+1 more)
 
-### Community 253 - "references/template/sidecars/panel/app.js"
+### Community 252 - "Option 2: Step-by-Step CLI Execution"
 Cohesion: 0.20
 Nodes (9): 1. Register Custom Properties, 2. Define the Masking Layer, 3. Update Coordinates with JavaScript, 4. Accessibility and Interaction, Basic Mask Support, Fallback strategies, Implementation, Interactive Content Reveal (+1 more)
 
-### Community 254 - "Win-Vault — Windows Privacy Vault & Access Control Engine"
+### Community 253 - "references/template/sidecars/panel/app.js"
 Cohesion: 0.20
 Nodes (9): Best Practices, Fallback Strategies, Implementation Guide, Same Document Transitions, Step 1: Wrap State Changes in `startViewTransition`, Step 2: Assign Shared Transition Names, Step 3: Fix Aspect Ratio "Stretching", The Problem (+1 more)
 
-### Community 255 - "2. Core Modules & Capabilities"
+### Community 254 - "Win-Vault — Windows Privacy Vault & Access Control Engine"
 Cohesion: 0.20
 Nodes (9): 2D Canvas, Best Practices, Example code, Expose canvas content to browser features, Fallback strategies, How to implement, HTML-in-Canvas polyfills, WebGL Canvas (+1 more)
 
-### Community 256 - "Adaptive Depth Guide: Calibrating Tiers L1 Through L5"
+### Community 255 - "2. Core Modules & Capabilities"
 Cohesion: 0.20
 Nodes (9): 1. **Identify text elements**:, 2. **Apply the chosen wrapping**:, Choosing the Right Wrapping Method, Critical Constraints and Performance, Fallback strategies, Implementation, Improve Text Layout and Legibility, text-wrap: balance (+1 more)
 
-### Community 257 - "Frontier Model Launch Reports & Benchmark Methodology (Register 4)"
+### Community 256 - "Adaptive Depth Guide: Calibrating Tiers L1 Through L5"
 Cohesion: 0.20
 Nodes (9): Guidelines, Interpreting Browser Support & Fallbacks, Modern Web Guidance, Step 1. Search Use Cases, Step 2. Retrieve Best Practices, Step 3. Verify Guidance Compliance, Usage Instructions, Using npx / pnpx (+1 more)
 
-### Community 258 - "1. Mode 2: Multi-Agent Team Capability (`/agent-teams-orchestration`)"
+### Community 257 - "Frontier Model Launch Reports & Benchmark Methodology (Register 4)"
 Cohesion: 0.49
 Nodes (9): callApi(), formatUptime(), init(), loadNotes(), refreshStatus(), saveNotes(), sendToAgent(), showSaved() (+1 more)
 
-### Community 259 - "enum"
+### Community 258 - "1. Mode 2: Multi-Agent Team Capability (`/agent-teams-orchestration`)"
 Cohesion: 0.20
 Nodes (9): Consolidating loose customizations, Constraints & Tips, Plugins, Step 0: Preflight and inventory, Step 1: Decide the kind, Step 2A: Lifecycle operations, Step 2B: Decide where the functionality belongs, Step 3: Author the bundle (+1 more)
 
-### Community 260 - "ARCH-PLAN-003: Intelligent Systems Engineering & Research Conversion Roadmap"
+### Community 259 - "enum"
 Cohesion: 0.20
 Nodes (9): 1. Architectural Philosophy: The Decoupled Router Pattern, 2. The 5-Stage Forge Lifecycle, 3. Core Invariants (Zero-Drift Standards), SLM Router Forge (`slm-router-forge`), Stage 1: Hardware Profiling & Architecture Selection, Stage 2: Grounded Dataset Synthesis, Stage 3: Cloud GPU Fine-Tuning (Unsloth on Colab), Stage 4: Binary Isolation & Resumable Cloud Archiving (+1 more)
 
-### Community 261 - "ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md"
+### Community 260 - "ARCH-PLAN-003: Intelligent Systems Engineering & Research Conversion Roadmap"
 Cohesion: 0.20
 Nodes (9): 🛠️ Automated Execution Workflow, ⚡ Core Operational Principles, Option 1: Direct Deterministic Script (Recommended), Option 2: Step-by-Step CLI Execution, Step 1: Identify Notebook & Resolve Path, Step 2: Download Outside Repository, Step 3: LocalSend Sharing via `localsend-mcp`, Super-NLM Studio Artifact Downloads & LocalSend Sharing Skill (+1 more)
 
-### Community 262 - "AdaptiveRateGovernor"
+### Community 261 - "ARCH-SPEC-003-HEADLESS-ORCHESTRATION-SUBSTRATE.md"
 Cohesion: 0.49
 Nodes (9): callApi(), formatUptime(), init(), loadNotes(), refreshStatus(), saveNotes(), sendToAgent(), showSaved() (+1 more)
 
-### Community 263 - "🧭 2026 Realtime LLM Model Recommendation, Benchmarking & MoE Routing Matrix"
-Cohesion: 0.20
-Nodes (9): 1. Core Architecture & Location, 2. Security & Locking Primitives, 3. Usage & Operations, 4. Repository Synchronization, Interactive GUI Mode, Locking a Folder via .NET ACL:, Programmatic CLI Locking & Unlocking, Unlocking: (+1 more)
-
-### Community 264 - "📦 2026 Realtime LLM Models Dataset & Routing Infrastructure"
+### Community 262 - "AdaptiveRateGovernor"
 Cohesion: 0.20
 Nodes (9): 1. Environment & Python Runtime, 2. Core Modules & Capabilities, 3. CLI Commands, 4. MCP Tools (`winpilot.mcp_server`), A. Window Management (`winpilot.core.window`), B. Screen Perception & Image Capture (`winpilot.core.screen`), C. UI Automation & Text Extraction (`winpilot.core.uia`), D. Input Simulation (`winpilot.core.input`) (+1 more)
 
-### Community 265 - "Experiment Dossier: Empirical Security Audit of Embedded Broadcom CPE Firmware"
+### Community 263 - "🧭 2026 Realtime LLM Model Recommendation, Benchmarking & MoE Routing Matrix"
 Cohesion: 0.27
 Nodes (9): 1. Tier L1: Micro-Surface Specification (100–300 Words), 2. Tier L2: Editorial Narrative Specification (800–1,500 Words), 3. Tier L3: Developer Technical Spec & Migration Guide (1,000–3,000 Words), 4. Tier L4: Frontier Model Launch Dossier (2,000–5,000 Words), 5. Tier L5: Exhaustive System Card & Safety Evaluation (5,000–30,000+ Words), Adaptive Depth Guide: Calibrating Tiers L1 Through L5, Structural Recipe:, Structural Recipe (The 9-Part Safety Blueprint): (+1 more)
 
-### Community 266 - "🏛️ RESEARCH EXPERIMENT: INV-BMK-001 (Headless Invariant Assurance & Sandbox Replay Benchmark)"
+### Community 264 - "📦 2026 Realtime LLM Models Dataset & Routing Infrastructure"
 Cohesion: 0.20
 Nodes (9): 1. Cost vs. Accuracy on Log Scale, 1. Pinned Benchmark Comparison Grid Standard, 2. Effort Setting Scaling Curves, 2. Multi-Objective Tradeoff & Pareto Frontier Disclosure, 3. Pricing & Token Economics Breakdown, 4. Mandatory System Card Citation & Footnote Standard, Frontier Model Launch Reports & Benchmark Methodology (Register 4), Mandatory Evaluation Qualifiers: (+1 more)
 
-### Community 267 - "1. The Core Invariant Statements"
+### Community 265 - "Experiment Dossier: Empirical Security Audit of Embedded Broadcom CPE Firmware"
 Cohesion: 0.20
 Nodes (9): 1. Dispatch Scout:, 1. Mode 2: Multi-Agent Team Capability (`/agent-teams-orchestration`), 2. Dispatch Reviewer (Upon Scout Completion):, 2. Mode 3: Fleet Swarm Capability (`/fleet-orchestrator`), Declarative SKU Pipeline DAG, Execution Steps, Step-by-Step Subagent Dispatch Commands, Swarm & Fleet Capabilities: Multi-Agent Delegation Workflows (+1 more)
 
-### Community 268 - "Document 5: Academic, Fellowship & Edge Hardware Synergies"
-Cohesion: 0.25
-Nodes (6): 1. Executive Summary, 2. Personal & Ecosystem Core Workspaces, 3. Project-Specific Workspaces: BiasAperture (Fuse AI Fellowship), 4. MCP & Super-NLM Tooling Integration, 5. Privacy & Repository Boundaries, Research Note: Gemini & NotebookLM Knowledge Base Registry
-
-### Community 269 - "Brainstorm Research Laboratory (BRL) — Contributor Agreement"
+### Community 266 - "🏛️ RESEARCH EXPERIMENT: INV-BMK-001 (Headless Invariant Assurance & Sandbox Replay Benchmark)"
 Cohesion: 0.28
 Nodes (6): ModelRef, Any, BoolRef, ExprRef, Verify candidate invariant property against machine transitions. Returns…, SMTInvariantProver
 
-### Community 270 - "Research Profile & Technical Capability Summary"
+### Community 267 - "1. The Core Invariant Statements"
 Cohesion: 0.22
 Nodes (9): free_tier_api, heavy_compute, paid_api, zero_token_local, default, description, enum, type (+1 more)
 
-### Community 271 - "transcript_archiver.py"
+### Community 268 - "Document 5: Academic, Fellowship & Edge Hardware Synergies"
 Cohesion: 0.22
 Nodes (9): 1. Overview, 📦 2026 Realtime LLM Models Dataset & Routing Infrastructure, 2. File Organization, 3. Programmatic Query Examples, 4. Dynamic MoE & Cascade Router (`sim/routing_engine.py`), 5. Maintenance & Ecosystem Synchronization, Command-Line Interface (`tools/route_task.py`), Finding Sub-$1.00 Frontier Models with >100 Tokens/Sec Speed (+1 more)
 
-### Community 272 - "🌊 Fluid Wordmark Navbar — Production Boilerplate"
+### Community 269 - "Brainstorm Research Laboratory (BRL) — Contributor Agreement"
 Cohesion: 0.22
 Nodes (8): 1. Executive Summary & Objective, 2. Empirical Findings & Vulnerability Surface, 3. Root Cause Analysis, 4. Defense-in-Depth & Remediation Architecture, 5. Artifact Provenance & Sanitization Notice, Experiment Dossier: Empirical Security Audit of Embedded Broadcom CPE Firmware, Finding 1: Unauthenticated Binary Configuration Disclosure, Finding 2: Unauthenticated Telemetry & Subnet Topology Bleed
 
-### Community 273 - "Standardized Cross-Tool Ecosystem Pipelines"
+### Community 270 - "Research Profile & Technical Capability Summary"
 Cohesion: 0.22
 Nodes (9): 1. Executive Summary & Objective, 2.1 Inductive Invariant Property, 2.2 Replay Ground Truth Invariant, 2. Formal Architecture & Mathematical Formulation, 3. Benchmark Testbed Composition, 4. Empirical Evaluation Results, 5. Falsification & Key Findings, 6. Epistemic Certification (+1 more)
 
-### Community 274 - "The Dynamic Flight Envelope & Fly-By-Wire Governor"
+### Community 271 - "transcript_archiver.py"
+Cohesion: 0.22
+Nodes (9): 1.1 Invariant A: Closed-Loop Worker Dispatch (No Orphaned Leases), 1.2 Invariant B: Strict Separation of Real Execution and Simulation, 1.3 Invariant C: Telemetry Truthfulness & Quota Headroom, 1.4 Invariant D: Atomic Checkpoint & DAG Advancement, 1.5 Invariant E: QA Authority & Claim-Token Isolation for State Transitions, 1. The Core Invariant Statements, 2. Mathematical Formalization, 3. Verification & Compliance Gate (+1 more)
+
+### Community 272 - "🌊 Fluid Wordmark Navbar — Production Boilerplate"
 Cohesion: 0.22
 Nodes (8): 1. IOE Pulchowk / TU Engineering Coursework Integration, 2. Fusemachines AI Fellowship 2026, 3. Physical Fabrication & Embedded Edge Hardware, Automated Academic Pipeline via Super-NLM & Classroom MCP, Core Mapped Coursework & Synergies, Document 5: Academic, Fellowship & Edge Hardware Synergies, Makerspace Prototyping Laboratory, SPARK Hardware Architecture
 
-### Community 275 - "Transactional Recovery & The Rolling Snapshot Ring Buffer"
+### Community 273 - "Standardized Cross-Tool Ecosystem Pipelines"
 Cohesion: 0.22
 Nodes (9): 1. Permanent Public Attribution Invariant, 2. Tooling Boundary & Tripartite Asset Classification, 3. Epistemic Rigor & The "AI Trap" Policy, 4. Conduct, Meritocracy & Culture, 5. Bandwidth, Communication & The "No-Guilt" Pause, 6. Zero-Cost Merit Rewards & Progression Rights, 7. Acknowledgment & Sign-Off, Brainstorm Research Laboratory (BRL) — Contributor Agreement (+1 more)
 
-### Community 276 - "agy-customizations/SKILL.md"
+### Community 274 - "The Dynamic Flight Envelope & Fly-By-Wire Governor"
 Cohesion: 0.36
 Nodes (8): evaluate_significance(), export_verbatim(), find_latest_transcript_path(), get_most_recent_conversation(), main(), transcript_archiver.py ---------------------- Deterministic utility to identify…, Auto-discover the latest active or completed conversation in APPDATA_DIR., Evaluates whether a transcript meets the criteria for permanent archival.…
 
-### Community 277 - "MCP Servers (`mcp_config.json`)"
+### Community 275 - "Transactional Recovery & The Rolling Snapshot Ring Buffer"
 Cohesion: 0.22
 Nodes (8): 1. HTML Markup, 2. Calibrating the Brand Slot Width, 3. Client Scroll Script, 📂 Boilerplate Structure, ⚠️ Critical CSS Invariant Rules, 🌊 Fluid Wordmark Navbar — Production Boilerplate, 🚀 Quick Integration, ⚡ What This Boilerplate Solves
 
-### Community 278 - "Antigravity Customization System Guide"
+### Community 276 - "agy-customizations/SKILL.md"
 Cohesion: 0.36
 Nodes (8): Pipeline 1: Fleet Batch Swarm to Google Drive & NotebookLM, Pipeline 2: Academic & Coursework Knowledge Pipeline, Pipeline 3: Edge AI, Demographics & Calm Publishing, Pipeline 4: Windows Host Security & Optimization, Pipeline 5: Conversational CAD & Physical Fabrication, Pipeline 6: Ecosystem Cross-Sync & Invariant Reconciliation, Protocol:, Standardized Cross-Tool Ecosystem Pipelines
 
-### Community 279 - "MCP Servers (`mcp_config.json`)"
+### Community 277 - "MCP Servers (`mcp_config.json`)"
 Cohesion: 0.22
 Nodes (8): 1. Executive Mandate & Architectural Invariants, 2. Four-Tier Execution Hierarchy, 3. Hardware & Antigravity Memory Guard Invariants, 4. Deterministic Zero-AI Fast Paths Table, 5. The Context Firebreak Subagent Protocol (`INV-CTX-FIREBREAK`), 6. CLI Usage & Verification Commands, Core Invariants:, Deterministic Zero-AI & Fleet-First Adaptive Workflow Protocol
 
-### Community 280 - "Content Scripts & DOM Manipulation"
+### Community 278 - "Antigravity Customization System Guide"
 Cohesion: 0.22
 Nodes (9): 1. Flight Envelope Concept & Architecture, 2. Telemetry Channels & Envelope Boundaries, 3. Closed-Loop PID Concurrency Regulation, 4. Banker's Deadlock Avoidance & Antigravity Memory Guard, 5. Earned Value Management (EVM) Velocity Monitoring, 6. Dynamic Velocity Downshifting & Quota Protection Rules, Envelope Damping Rules:, The Dynamic Flight Envelope & Fly-By-Wire Governor (+1 more)
 
-### Community 281 - "Media Capture (Tab & Desktop)"
+### Community 279 - "MCP Servers (`mcp_config.json`)"
 Cohesion: 0.22
 Nodes (9): 1. Command Hierarchy & Context Firebreak, 2. 4-Tier Execution Hierarchy & Fast Paths, 3. Mathematical CPM Concurrency, 4. 2D Orthogonal Execution Matrix, 5. Memory Guard & Flight Envelope, 6. Transactional Recovery & Fencing, 7. Supporting References & Verification, Adaptive Workflow Orchestrator (`adaptive-workflow`) (+1 more)
 
-### Community 282 - "Tab Management & Groups"
+### Community 280 - "Content Scripts & DOM Manipulation"
 Cohesion: 0.25
 Nodes (6): Directory Structure, How Plugins Work, Manifest (`plugin.json`), Plugins, Registering Plugins, Turning Plugins On and Off
+
+### Community 281 - "Media Capture (Tab & Desktop)"
+Cohesion: 0.22
+Nodes (8): 1. Stdio Transport (Local), 2. SSE Transport (Remote), Configuration File (`mcp_config.json`), Configuration Schema, How the Agent Uses MCP, Location, MCP Servers (`mcp_config.json`), Scoping and Scannability
+
+### Community 282 - "Tab Management & Groups"
+Cohesion: 0.22
+Nodes (9): Advanced Management: JSON Configs, Antigravity Customization System Guide, Customization Discovery and Locations, Customization Types: Quick Reference, Deduplication, Discovery Locations, How Customizations are Applied, Loading Priority and Precedence (+1 more)
 
 ### Community 283 - "Privacy Policy Guidance"
 Cohesion: 0.22
@@ -1730,167 +1722,167 @@ Nodes (8): 1. Stdio Transport (Local), 2. SSE Transport (Remote), Configuration 
 
 ### Community 284 - "2. Standard Packaging Pipeline"
 Cohesion: 0.22
-Nodes (9): Advanced Management: JSON Configs, Antigravity Customization System Guide, Customization Discovery and Locations, Customization Types: Quick Reference, Deduplication, Discovery Locations, How Customizations are Applied, Loading Priority and Precedence (+1 more)
-
-### Community 285 - "Agent-Customization-Sync Reference Specification"
-Cohesion: 0.22
-Nodes (8): 1. Stdio Transport (Local), 2. SSE Transport (Remote), Configuration File (`mcp_config.json`), Configuration Schema, How the Agent Uses MCP, Location, MCP Servers (`mcp_config.json`), Scoping and Scannability
-
-### Community 286 - "Cyber-Forensics — Windows DFIR & Stealth Evasion Hunting Engine"
-Cohesion: 0.22
 Nodes (8): 1. Static (manifest declaration), 2. Programmatic (from service worker or popup), Content Scripts & DOM Manipulation, DOM Manipulation Best Practices, Isolated World, Message Passing from Content Scripts, `run_at` Timing, Two Ways to Inject
 
-### Community 287 - "Execution Protocol"
+### Community 285 - "Agent-Customization-Sync Reference Specification"
 Cohesion: 0.28
 Nodes (8): Choosing the Right API, Desktop Capture, Media Capture (Tab & Desktop), Pattern, Permissions, Saving Recordings, State Locking — Prevent Double-Start Errors, Tab Capture
 
-### Community 288 - "Google Stitch MCP Integration Guide"
+### Community 286 - "Cyber-Forensics — Windows DFIR & Stealth Evasion Hunting Engine"
 Cohesion: 0.22
 Nodes (8): Events, Grouping by Domain, Permissions, Querying Tabs, Tab Groups, Tab Management & Groups, Tab Operations, Windows
 
-### Community 289 - "graphify reference: extra exports and benchmark"
+### Community 287 - "Execution Protocol"
 Cohesion: 0.22
 Nodes (8): Common Mistakes, Minimal Policy (No Data Collection), Privacy Policy Guidance, Standard Policy (Some Data Collection), Template, What to Include, When is a Privacy Policy Required?, Where to Host It
 
-### Community 290 - "Language Detection"
+### Community 288 - "Google Stitch MCP Integration Guide"
 Cohesion: 0.22
 Nodes (8): 1. Core Operating Invariants, 2. Standard Packaging Pipeline, 3. OmniVault Integration, A. Pre-Flight Headroom Check, B. High-Speed Headless CLI Packaging (WinRAR `Rar.exe`), C. 7-Zip Alternative (`7z.exe` Store Mode), Cold Storage Archiver — Large Payload & Game Repack Packaging Engine, Post-Upload Lifecycle:
 
-### Community 291 - "Fallback strategies"
+### Community 289 - "graphify reference: extra exports and benchmark"
 Cohesion: 0.22
 Nodes (8): 1. Architectural Foundations, 2. Operational Invariants & Scope Boundaries, 3. Command Line Interface, 4. Verification Protocol, Agent-Customization-Sync Reference Specification, Core Subsystems, Manifest Schema Payload, Programmatic Python Interface
 
-### Community 292 - "Overflow Clipping Control"
+### Community 290 - "Language Detection"
 Cohesion: 0.22
 Nodes (8): 1. Core Architecture & Location, 2. Evasion Detection Primitives, 3. Operational CLI Commands, 4. Repository Synchronization, A. Run Comprehensive Evasion Scan, B. Harvest Windows Execution Artifacts (Prefetch), C. Run Regression Test Suite, Cyber-Forensics — Windows DFIR & Stealth Evasion Hunting Engine
 
-### Community 293 - "Reduce Style Repetition with CSS Functions"
+### Community 291 - "Fallback strategies"
+Cohesion: 0.22
+Nodes (8): 1. Save to Current Working Directory / Repo, 2. Save to a Specific Folder (e.g. `docs` or `research/transcripts`), 3. Save to Brainstorm Knowledge Base, 4. Custom Filename / Output Path, 5. Append Mode (Continuation of Last / Specified Document), Document Archiver Skill, Execution Protocol, Headless PDF Export Invariants (`INV-PDF-001`)
+
+### Community 292 - "Overflow Clipping Control"
 Cohesion: 0.22
 Nodes (8): 1. Overview & Architectural Role, 1. `stitch_get_project`, 2. MCP Server Configuration, 2. `stitch_get_tokens`, 3. `stitch_export_component`, 3. Stitch MCP Tool Call Patterns, 4. Code Synthesis & Refinement Pipeline, Google Stitch MCP Integration Guide
 
-### Community 294 - "Implementation Examples"
+### Community 293 - "Reduce Style Repetition with CSS Functions"
 Cohesion: 0.22
 Nodes (8): graphify reference: extra exports and benchmark, Step 6b - Wiki (only if --wiki flag), Step 7 - Neo4j export (only if --neo4j or --neo4j-push flag), Step 7a - FalkorDB export (only if --falkordb or --falkordb-push flag), Step 7b - SVG export (only if --svg flag), Step 7c - GraphML export (only if --graphml flag), Step 7d - MCP server (only if --mcp flag), Step 8 - Token reduction benchmark (only if total_words > 5000)
 
-### Community 295 - "Implementation"
+### Community 294 - "Implementation Examples"
 Cohesion: 0.22
 Nodes (8): 1. Model Management & User Activation, 2. Running Detection, Fallback Strategy, Hardware & System Requirements, Implementation Guide, Key Use Cases, Language Detection, Security and Environment
 
-### Community 296 - "Animate Element Entry and Exit"
+### Community 295 - "Implementation"
 Cohesion: 0.22
 Nodes (8): Background & Overview, Design Token Reactivity, Fallback strategies, Feature-checking with JavaScript, Feature-checking with just CSS, How to implement, Using selectors instead, Using style queries as a progressive enhancement
 
-### Community 297 - "Fallback strategies"
+### Community 296 - "Animate Element Entry and Exit"
 Cohesion: 0.22
 Nodes (8): Block Containers: Child Element Shadow Bleed, Block Containers: Nested Rounded Curves, Complete Progressive Enhancement Fallback Implementation, Example Code, Fallback Strategies, How to Implement, Overflow Clipping Control, Strategic Implementation & Best Practices
 
-### Community 298 - "Directional Navigation Transitions"
+### Community 297 - "Fallback strategies"
 Cohesion: 0.22
 Nodes (8): 1. Design System Tokens (Gradients), 2. Conditional Layout Logic, Best Practices, Fallback strategies, Key Concepts, Practical Examples, Reduce Style Repetition with CSS Functions, The `@function` Syntax
 
-### Community 299 - "Core implementation"
+### Community 298 - "Directional Navigation Transitions"
 Cohesion: 0.22
 Nodes (8): Annual Recurring Dates (Birthdays, Renewals), Fallback Strategy, Fallbacks & browser support for Temporal, Implementation Examples, Modeling Partial Time Concepts with Temporal, Monthly Expirations (Credit Cards, Billing Cycles), Strategic Implementation & Best Practices, Wall-Clock Time (Alarms, Store Hours)
 
-### Community 300 - "Physics Based Easing"
+### Community 299 - "Core implementation"
 Cohesion: 0.22
 Nodes (8): 1. Configure View Containers, 2. Manage Focus, Fallback strategies, Faster SPA View Transitions via State Caching, Implementation, Overview, The CPU vs. RAM Trade-off, When This Trade-off Becomes Dangerous
 
-### Community 301 - "2. Styles"
+### Community 300 - "Physics Based Easing"
 Cohesion: 0.22
 Nodes (8): 1. Animating `display: none` Toggles, 2. Animating DOM Insertion and Removal, Animate Element Entry and Exit, Constraints & Accessibility, Exit fallback when discrete `display` transitions are unsupported, Fallback strategies, Fallbacks & browser support for transition-behavior, Implementation
 
-### Community 302 - "Equal-Width Text Lines"
+### Community 301 - "2. Styles"
 Cohesion: 0.22
 Nodes (8): Declarative Dialog and Popover Control, Dynamic Import (Performance Optimization), Fallback strategies, Fallbacks & browser support for Popover, Implementing Declarative Modal Dialogs, Implementing Declarative Popovers, Manual fallback (Traditional pattern), Polyfilling Invoker Commands
 
-### Community 303 - "Shaped Cutouts"
+### Community 302 - "Equal-Width Text Lines"
 Cohesion: 0.22
 Nodes (8): Accessibility, Applying Directional Animations, Defining Keyframes, Directional Navigation Transitions, Fallback strategies, Implementation Steps, Set up shared animation settings, Triggering the Transition
 
-### Community 304 - "Compiling C and C++ to WebAssembly with Emscripten"
+### Community 303 - "Shaped Cutouts"
 Cohesion: 0.22
 Nodes (8): 1. Collect text nodes and create ranges, 2. Create a Highlight from the ranges, 3. Register the highlight in the registry, 4. Style with `::highlight()`, Accessibility, Core implementation, Fallback strategies, Highlight Text Ranges
 
-### Community 305 - "Portfolio Project Manager Skill"
+### Community 304 - "Compiling C and C++ to WebAssembly with Emscripten"
 Cohesion: 0.22
 Nodes (8): CSS Fallback, Example: Bounce Easing, Example: Spring Easing, Fallback strategies, Implementation Steps, JavaScript Library Fallback (Motion/GSAP), Key Considerations, Physics Based Easing
 
-### Community 306 - "Shadcn-Context & Design System Packs"
+### Community 305 - "Portfolio Project Manager Skill"
 Cohesion: 0.22
 Nodes (8): 1. Markup, 2. Styles, Fallback strategies, Hiding Native UI, Implementation, Loading spinner, Respecting Motion Preferences, Spinner Ring and Trail
 
-### Community 307 - "Skill Development for Claude Code Plugins"
+### Community 306 - "Shadcn-Context & Design System Packs"
 Cohesion: 0.22
 Nodes (8): Basic implementation, Equal-Width Text Lines, Fallback strategies, For `text-box`, For `text-fit`, For `text-wrap: balance`, Spacing, Visual design
 
-### Community 308 - "About Skills"
+### Community 307 - "Skill Development for Claude Code Plugins"
 Cohesion: 0.22
 Nodes (8): Adjacent Element SVG Masking, Direct Element SVG Masking, Fallback strategies, Implementation, Overview, Shaped Cutouts, Using a Single CSS Gradient for Simple Cutouts, Using an SVG Mask
 
-### Community 309 - "Skill Creation Process"
+### Community 308 - "About Skills"
 Cohesion: 0.22
 Nodes (8): 1. Modern Emscripten Compilation Flags, 2. Avoid blocking the main thread, 3. Pay attention for runtime warnings and errors, 4. Avoid dynamic linking if possible, 5. Porting Existing C/C++ Libraries, Autoconf / Make Projects, CMake Projects, Compiling C and C++ to WebAssembly with Emscripten
 
-### Community 310 - "Migrating from Claude Haiku 4.5 to Claude Haiku 5.5"
+### Community 309 - "Skill Creation Process"
 Cohesion: 0.22
 Nodes (8): 1. Quick Ingestion Workflow (Zero-Token Manifest Mode), 2. CLI Single-Command Mode, 3. What the Engine Executes Automatically, 4. Release SHA & What's New Integrity Invariant, 5. Finalizing Deployment, Apply Live:, Portfolio Project Manager Skill, Preview with Dry Run (Recommended first):
 
-### Community 311 - "⚡ Brainstorm & Campus Swarm Marketplace"
+### Community 310 - "Migrating from Claude Haiku 4.5 to Claude Haiku 5.5"
 Cohesion: 0.22
 Nodes (8): 1. Core Architecture & Utility Foundation, 2. Component Composition Schemas, 3. Anti-Hallucination & Customization Rules, Class Variance Authority (CVA), Dialog / Modal, Form Field (React Hook Form + Zod), Shadcn-Context & Design System Packs, The `cn()` Utility
 
-### Community 312 - "7.18 Economic Balance Sheet: Capital Accounting & Resource Efficiency Audit"
+### Community 311 - "⚡ Brainstorm & Campus Swarm Marketplace"
 Cohesion: 0.22
 Nodes (8): Additional Resources, Best Practices Summary, Examples from Plugin-Dev, Implementation Workflow, Reference Files, Skill Development for Claude Code Plugins, Study These Skills, Validation Checklist
 
-### Community 313 - "enum"
+### Community 312 - "7.18 Economic Balance Sheet: Capital Accounting & Resource Efficiency Audit"
 Cohesion: 0.22
 Nodes (9): About Skills, Anatomy of a Skill, Assets (`assets/`), Bundled Resources (optional), Progressive Disclosure Design Principle, References (`references/`), Scripts (`scripts/`), SKILL.md (required) (+1 more)
 
-### Community 314 - "enum"
+### Community 313 - "enum"
 Cohesion: 0.22
 Nodes (9): Skill Creation Process, Start with Reusable Skill Contents, Step 1: Understanding the Skill with Concrete Examples, Step 2: Planning the Reusable Skill Contents, Step 3: Create Skill Structure, Step 4: Edit the Skill, Step 5: Validate and Test, Step 6: Iterate (+1 more)
 
-### Community 315 - "Handoff Validation & Verification Ledger"
+### Community 314 - "enum"
 Cohesion: 0.22
 Nodes (8): 1. Model Identifiers & Cost Comparison, 2. Breaking Changes & Parameter Modifications, 3. Request Payload Before & After, 4. Python SDK Implementation, 5. Migration Checklist, After: Haiku 5.5 Request Payload, Before: Haiku 4.5 Request Payload, Migrating from Claude Haiku 4.5 to Claude Haiku 5.5
 
-### Community 316 - "🏛️ ARCHITECTURAL RFC: ARCH-RFC-004 (The Workflow Externalization Freeze & Utilization Pivot)"
+### Community 315 - "Handoff Validation & Verification Ledger"
 Cohesion: 0.22
 Nodes (8): 1. Launch the Server, 2. Package a Dataset into a Torrent, 3. Start Seeding, ⚡ Brainstorm & Campus Swarm Marketplace, 📁 File Structure, Key Features, 🌟 Overview, 🚀 Quick Start
 
-### Community 317 - "🏛️ ARCHITECTURAL CHARTER: The ECIE Systems Architect Paradigm & Clean-Slate Compute-Memory Co-Design"
+### Community 316 - "🏛️ ARCHITECTURAL RFC: ARCH-RFC-004 (The Workflow Externalization Freeze & Utilization Pivot)"
 Cohesion: 0.25
 Nodes (8): 7.18.1 Empirical Productive Capital Baseline: Ultra-Low Cash Outlay, 7.18.2 Technical Asset Base Valuation (Replacement-Labor Equivalent), 7.18.3 Defensible Capital Ratios, 7.18.4 Strategic Assessment of the $5/mo Gemini Student Purchase, 7.18.5 The Google Family Multiplier & Capacity Expansion (Super-NLM Backbone), 7.18 Economic Balance Sheet: Capital Accounting & Resource Efficiency Audit, I. Verified Feature & Service Benefits (Google One AI Pro Tier), II. Financial Cost-Avoidance Ledger
 
-### Community 318 - "🏛️ RESEARCH EXPERIMENT: EXP-CLASSROOM-MCP-001 (Live Read-Only Verification of the Google Classroom MCP Server)"
+### Community 317 - "🏛️ ARCHITECTURAL CHARTER: The ECIE Systems Architect Paradigm & Clean-Slate Compute-Memory Co-Design"
 Cohesion: 0.25
 Nodes (8): calm_authority, developer_documentation, formal_specification, peer_reviewed_academic, register, description, enum, type
 
-### Community 319 - "1. Graphify Knowledge Graph Topology"
+### Community 318 - "🏛️ RESEARCH EXPERIMENT: EXP-CLASSROOM-MCP-001 (Live Read-Only Verification of the Google Classroom MCP Server)"
 Cohesion: 0.25
 Nodes (8): empirical_sandbox, formal_smt, heuristic_unverified, statistical_audit, verification_tier, description, enum, type
 
-### Community 320 - "agent-customization-sync.contract.json"
+### Community 319 - "1. Graphify Knowledge Graph Topology"
 Cohesion: 0.25
 Nodes (7): 1. Validation Status Matrix, 2. Completed Deliverables, 3. Changed Existing Documents, 4. Not Yet Verified (Empirical Follow-Ups), 5. Known Conflicts (Resolved), 6. Remaining Technical Debt, Handoff Validation & Verification Ledger
 
-### Community 321 - "cyber-forensics.contract.json"
-Cohesion: 0.25
-Nodes (8): 1.1 What Do We Call This Process?, 1. Executive Summary & Epistemic Terminology, 2. The Tripartite Ecosystem Lifecycle, 3.1 Rules of the Freeze (`GOV-FREEZE-V1`), 3. The 2026-09-16 Milestone Declaration: "The Long Pause", 4. Authoritative Ecosystem Matrix at Baseline v1.0, 5. Archival & Verification, 🏛️ ARCHITECTURAL RFC: ARCH-RFC-004 (The Workflow Externalization Freeze & Utilization Pivot)
-
-### Community 322 - "downloader-scripts.contract.json"
+### Community 320 - "agent-customization-sync.contract.json"
 Cohesion: 0.25
 Nodes (8): 1.1 The Epistemic Dilemma, 1.2 The Resolution: The Systems Architect Paradigm, 1. Executive Philosophy: The Architect vs. The Technician, 2. Reframing Hardware Architecture as an Information & Communication Channel, 3. The 3-Tier Research & Development Roadmap, 4. Current Architectural Proofs Established, 5. Architectural Invariants Enforced in this Space, 🏛️ ARCHITECTURAL CHARTER: The ECIE Systems Architect Paradigm & Clean-Slate Compute-Memory Co-Design
 
-### Community 323 - "fleet-orchestrator.contract.json"
+### Community 321 - "cyber-forensics.contract.json"
 Cohesion: 0.25
 Nodes (7): 1. Objective & Hypothesis, 2. Method, 3. Results, 4. Claim Reconciliation, 5. Limitations, 6. Provenance, 🏛️ RESEARCH EXPERIMENT: EXP-CLASSROOM-MCP-001 (Live Read-Only Verification of the Google Classroom MCP Server)
 
-### Community 324 - "omnivault.contract.json"
+### Community 322 - "downloader-scripts.contract.json"
+Cohesion: 0.25
+Nodes (8): 1. System Topology & Test Harness Configuration, 2. Test Suite & Baseline Validation, 3. Physical Electron Process Telemetry Benchmark, 4. Real-World Engineering Problem Execution, 5. Artifacts & Code Updates, Experiment & Verification Log: FLEET-003 (Live Multi-Worker Fleet Verification & Physical Telemetry Benchmark), Multi-Stage Stage Execution Flow:, Telemetry Findings:
+
+### Community 323 - "fleet-orchestrator.contract.json"
 Cohesion: 0.25
 Nodes (7): 1. Graphify Knowledge Graph Topology, 2. Formal Capability Contracts Specification, Contract Structure, Document 6: Graphify Knowledge Graph & Capability Contracts, Dynamic Reconciliation Mechanics, God Nodes & Central Bridges, Knowledge Graph Traversal & Querying
+
+### Community 324 - "omnivault.contract.json"
+Cohesion: 0.25
+Nodes (7): capabilities, location, module, runtime, $schema, tracking_branch, version
 
 ### Community 325 - "win-vault.contract.json"
 Cohesion: 0.25
@@ -1917,845 +1909,813 @@ Cohesion: 0.25
 Nodes (7): capabilities, location, module, runtime, $schema, tracking_branch, version
 
 ### Community 331 - "Calm Authority Engineering Standard"
-Cohesion: 0.25
-Nodes (7): capabilities, location, module, runtime, $schema, tracking_branch, version
-
-### Community 332 - "Authoritative Ecosystem Repository & Capability Directory"
 Cohesion: 0.36
 Nodes (7): cmd_capture_window(), cmd_scaffold(), cmd_status(), main(), Capture a live window using WinPilot BitBlt and save to project folder., Scaffold directory tree for all 39 projects in portfolio assets., Print capture completion status across all 39 projects.
 
-### Community 333 - "Lifecycle Hooks (`hooks.json`)"
+### Community 332 - "Authoritative Ecosystem Repository & Capability Directory"
 Cohesion: 0.43
 Nodes (7): evaluate_conventional_pipeline(), evaluate_ipu_pipeline(), sweep_ipu_breakeven.py ---------------------- Implementation of EXP-001:…, Ingress -> Bus -> Host DRAM -> Host GPU -> Compute -> Result, Ingress -> IPU (In-Flight Stream Transform) -> Interconnect (rho * data) -> Host, run_parameter_sweep(), SweepConfig
 
-### Community 334 - "aero_calc.py"
+### Community 333 - "Lifecycle Hooks (`hooks.json`)"
 Cohesion: 0.25
 Nodes (7): 1. Save to Current Working Directory / Repo, 2. Save to a Specific Folder (e.g. `docs/chat_history` or custom path), 3. Save to Brainstorm Knowledge Base, 4. Custom Filename / Output Path, 5. Append Mode (Continuation of Last / Specified Transcript), Chat Archiver Skill, Execution Protocol
 
-### Community 335 - "Execution Protocol"
+### Community 334 - "aero_calc.py"
 Cohesion: 0.25
 Nodes (7): 1. Save to Current Working Directory / Repo, 2. Save to a Specific Folder (e.g. `docs` or `research/transcripts`), 3. Save to Brainstorm Knowledge Base, 4. Custom Filename / Output Path, 5. Append Mode (Continuation of Last / Specified Document), Document Archiver Skill, Execution Protocol
 
-### Community 336 - "Context Menus"
+### Community 335 - "Execution Protocol"
 Cohesion: 0.25
 Nodes (7): 1. Core Philosophy: The Whiteboard Test & Empirical Proof, 2. Fast-Path Pre-Flight Decision Gate (Tiers L1–L5), 3. The 10 Universal Invariant Writing Rules, 4. Banned Hype Blacklist & Calibrated Substitutions, 5. Deterministic Verification CLI, Calm Authority Engineering Standard, The Three Pillars:
 
-### Community 337 - "DevTools Panels"
+### Community 336 - "Context Menus"
 Cohesion: 0.25
 Nodes (7): 1. Dynamic Path Resolution Invariant, 2. Central Architectural Root, 3. Computational Engines (24 Authoritative Modules), 4. Presentation & Educational Hubs (4 Authoritative Hubs), 5. Specialized AEC-MCP Suite (`F:\Aaradhya-Dev-Tamrakar\AEC-MCP Suite`), 6. Local Utility Extras & Experimental Archives (Non-Registry), Authoritative Ecosystem Repository & Capability Directory
 
-### Community 338 - "Omnibox Integration"
+### Community 337 - "DevTools Panels"
 Cohesion: 0.25
 Nodes (8): 1. Fleet Availability Ledger Architecture, 2. Worker State Classifications, 3. Mathematical Availability Formulations, 4. Silent Rollover & Notification Protocol, 5. Automatic Cooldown Expiration & Resurgence, Live-Status Schema (`orchestrator-state/live-status/<worker_id>.json`):, State Operational Definitions:, The Worker Availability Ledger & Quota Depletion Tracking
 
-### Community 339 - "Popup UI"
+### Community 338 - "Omnibox Integration"
 Cohesion: 0.25
 Nodes (7): Current Limitations, File Format, Hook Handler Fields, Hook Spec Fields, Lifecycle Hooks (`hooks.json`), Supported Event Types, The Matcher
 
-### Community 340 - "Chrome Prompt API (LanguageModel) — Extension-Specific Notes"
+### Community 339 - "Popup UI"
 Cohesion: 0.36
 Nodes (7): calculate_ils_glide_slope(), calculate_radar_range(), main(), Computes maximum radar detection range R_max (km). Pt: Peak transmit power (kW)…, Solves 2D target position (x, y) in meters from 3 TDOA receiver stations.…, Computes vertical glide slope angle in degrees from altitude (ft) and DME…, solve_tdoa_2d()
 
-### Community 341 - "Chrome Storage API"
-Cohesion: 0.25
-Nodes (7): 1. Save to Current Working Directory / Repo, 2. Save to a Specific Folder (e.g. `docs/chat_history` or custom path), 3. Save to Brainstorm Knowledge Base, 4. Custom Filename / Output Path, 5. Append Mode (Continuation of Last / Specified Transcript), Chat Archiver Skill, Execution Protocol
-
-### Community 342 - "circuit_calc.py"
+### Community 340 - "Chrome Prompt API (LanguageModel) — Extension-Specific Notes"
 Cohesion: 0.25
 Nodes (7): Context Menus, Context Types, Creating Menus, Dynamic Updates, Handling Clicks, Setup, Submenus
 
-### Community 343 - "Developer Workflows: Fast Implementation Search with Graphify"
+### Community 341 - "Chrome Storage API"
 Cohesion: 0.25
 Nodes (7): Accessing DevTools APIs, Communication Architecture, Creating a Panel, DevTools Panels, Important Notes, Panel Content, Setup
 
-### Community 344 - "Animate to Intrinsic Sizes"
+### Community 342 - "circuit_calc.py"
 Cohesion: 0.25
 Nodes (7): Default Suggestion, Description Formatting, Handling Selection, Omnibox Integration, Providing Suggestions, Required host_permissions, Setup
 
-### Community 345 - "Detecting support for at-rules when `@supports at-rule()` isn’t appropriate { #detecting-at-rules-without-supports-at-rule }"
+### Community 343 - "Developer Workflows: Fast Implementation Search with Graphify"
 Cohesion: 0.25
 Nodes (7): Communicating with Service Worker, Dynamic Popup vs No Popup, Key Constraints, Persistence, Popup HTML Template, Popup UI, Setup
 
-### Community 346 - "Implementation"
+### Community 344 - "Animate to Intrinsic Sizes"
 Cohesion: 0.25
 Nodes (7): Chrome Prompt API (LanguageModel) — Extension-Specific Notes, Complete extension example: page summarizer, Deprecated namespace, Extension-only: `LanguageModel.params()`, manifest.json, service-worker.js, sidepanel/sidepanel.js
 
-### Community 347 - "Implementation"
+### Community 345 - "Detecting support for at-rules when `@supports at-rule()` isn’t appropriate { #detecting-at-rules-without-supports-at-rule }"
 Cohesion: 0.25
 Nodes (7): Basic Operations, Change Listener (Works Across All Contexts), Chrome Storage API, Storage Areas, storage.session Notes, storage.sync Quotas, Why Not localStorage?
 
-### Community 348 - "Custom Elements"
+### Community 346 - "Implementation"
 Cohesion: 0.36
 Nodes (7): calculate_ne555_astable(), calculate_sallen_key_lowpass(), calculate_wheatstone_bridge(), main(), Computes resistor values R1, R2 for a unity-gain 2nd-order Sallen-Key lowpass…, Computes R1 and R2 for NE555 astable multivibrator. T_high = 0.693 * (R1 + R2)…, Computes differential output voltage from a single-element active Wheatstone…
 
-### Community 349 - "Fallback strategies"
+### Community 347 - "Implementation"
 Cohesion: 0.39
 Nodes (7): Developer Workflows: Fast Implementation Search with Graphify, Procedure:, Workflow 1: "Before Writing New Code" (Zero-Duplicate Rule), Workflow 2: "Understanding How to Call an API" (Usage Pattern Discovery), Workflow 3: "Safe Refactoring & Signature Modification" (Impact Analysis), Workflow 4: "Tracing Control / Data Flow Between Two Points", Workflow 5: "Deep Component Analysis"
 
-### Community 350 - "Implementation"
+### Community 348 - "Custom Elements"
 Cohesion: 0.25
 Nodes (7): Animate to Intrinsic Sizes, Example: Calculated Intrinsic Inline-Size, Example: Generic Expansion Pattern, Example: Transition from Intrinsic to Fixed, Fallback strategies, Implementation steps, Key constraints
 
-### Community 351 - "How to implement"
+### Community 349 - "Fallback strategies"
 Cohesion: 0.25
 Nodes (7): Conditionally Apply CSS Based on At-Rule Support, Detecting container query types { #supports-container-types }, Detecting support for at-rules when `@supports at-rule()` isn’t appropriate { #detecting-at-rules-without-supports-at-rule }, Fallback strategies, Registered custom properties (`@property`) { #supports-atproperty }, Try properties, values, or selectors first, Using JavaScript as a last resort
 
-### Community 352 - "Implementation"
+### Community 350 - "Implementation"
 Cohesion: 0.25
 Nodes (7): 1. Define a container, 2. Use container query units, 3. Constrain values with `clamp()`, Fallback strategies, Fluid Scaling, Implementation, Overview
 
-### Community 353 - "Lazy load video and audio"
+### Community 351 - "How to implement"
 Cohesion: 0.25
 Nodes (7): 1. Define the container, 2. Apply styles based on container size, 3. Conditionally show content, Fallback strategies, Implementation, Overview, Size Aware Styling
 
-### Community 354 - "Implementation Steps"
+### Community 352 - "Implementation"
 Cohesion: 0.25
 Nodes (7): Attribute ⇄ property reflection, Custom Elements, Custom states, Lifecycle: the parts that get implemented wrong, Naming conventions, Upgrade timing and `:defined`, Where the value lives
 
-### Community 355 - "Implementation Steps"
+### Community 353 - "Lazy load video and audio"
 Cohesion: 0.25
 Nodes (7): Best Practices, Example: Balancing and Localized Formatting, Fallback strategies, Fallbacks & browser support for Temporal, Formatting Human-Readable Durations with Temporal, How to Implement, Intl.DurationFormat
 
-### Community 356 - "Custom Button Actions"
+### Community 354 - "Implementation Steps"
 Cohesion: 0.25
 Nodes (7): 1. Apply CSS Content Visibility, 2. Listen for State Changes, `contentvisibilityautostatechange` vs. `IntersectionObserver`, Efficient Background Processing, Fallback strategies, Implementation, Overview
 
-### Community 357 - "Creating the tooltip"
+### Community 355 - "Implementation Steps"
 Cohesion: 0.25
 Nodes (7): 1. Observe contentful paints triggered by interactions, 2. Measure Largest Contentful Paint (LCP) for SPA soft navigations, 3. Measure Core Web Vitals across soft navigations with `web-vitals`, Best practices, Fallback strategies, How to implement, Measure interaction and soft-navigation paint timing
 
-### Community 358 - "Light-Dismiss a Dialog"
+### Community 356 - "Custom Button Actions"
 Cohesion: 0.25
 Nodes (7): 1. Identify Containment Regions, 2. Manage Interactions, Fallback strategies, Implementation, Mechanism for On-Screen Elements, Optimizing Interactions in Complex Layouts, Overview
 
-### Community 359 - "Implementation"
+### Community 357 - "Creating the tooltip"
 Cohesion: 0.25
 Nodes (7): Best practices, Custom code fallback (`IntersectionObserver`), Example code, Fallback strategy, How to implement, Lazy load video and audio, Progressive enhancement (recommended default)
 
-### Community 360 - "Creating Toast Notifications"
+### Community 358 - "Light-Dismiss a Dialog"
 Cohesion: 0.25
 Nodes (7): 1. Pre-Check Granular Permission State and Gate on User Gesture, 2. Declare `targetAddressSpace` in `fetch()` and `Request`, 3. Real-Time Connections with `WebSocket` and `WebTransport`, 4. Delegate Access to Cross-Origin Iframes via `Permissions-Policy`, Fallback Strategies, Implementation Steps, Local Network Access
 
-### Community 361 - "Implementation steps"
+### Community 359 - "Implementation"
 Cohesion: 0.25
 Nodes (7): 1. Create the Sticky Container, 2. Apply CSS for Sticky Behavior and Container Type, 3. Target the Stuck State, Fallback strategies, Implementation Steps, Notes on Dimension Changes, State-Aware Sticky Headers
 
-### Community 362 - "Implementation"
+### Community 360 - "Creating Toast Notifications"
 Cohesion: 0.25
 Nodes (7): Custom Button Actions, Dynamic Import (Performance Optimization), Example: Custom Animation Controls, Fallback strategies, Implementation steps, Key constraints, Manual fallback (Traditional pattern)
 
-### Community 363 - "2. Core Capabilities & Workflows"
+### Community 361 - "Implementation steps"
 Cohesion: 0.25
 Nodes (7): Accessibility built in to `interestfor`, Accessibility Constraints (WCAG 1.4.13), Creating the tooltip, Fallback strategies, Fallbacks & browser support for Popover, Positioning the tooltip, Show a tooltip when hovering
 
-### Community 364 - "rf_calc.py"
+### Community 362 - "Implementation"
 Cohesion: 0.25
 Nodes (7): Attribute Values, Constraints & Accessibility, Example, Fallback strategies, Implementation, Light-Dismiss a Dialog, Styling the Backdrop
 
-### Community 365 - "Ecosystem Compatibility & Cross-Skill Integration SOP"
+### Community 363 - "2. Core Capabilities & Workflows"
 Cohesion: 0.25
 Nodes (7): 1. Listen for `scrollsnapchanging`, 2. Listen for `scrollsnapchange`, 3. Sync initial state, Fallback strategies, Implementation, Overview, Scroll Snap Real-Time Feedback
 
-### Community 366 - "AntigravityMemoryGovernor"
+### Community 364 - "rf_calc.py"
 Cohesion: 0.25
 Nodes (6): anchor-positioning, Creating Toast Notifications, Fallback Strategies, Fallbacks & browser support for Popover, Implementation Guidelines, transition-behavior
 
-### Community 367 - "graphify.ps1"
+### Community 365 - "Ecosystem Compatibility & Cross-Skill Integration SOP"
 Cohesion: 0.25
 Nodes (7): 1. Identify the aspect ratio of your preferred font, 2. Apply font-size-adjust to the text container, 3. (Optional) Adjust for specific metrics, 4. Verify visual stability, Fallback strategies, Implementation steps, Visually Stable Font Fallbacks
 
-### Community 368 - "enum"
+### Community 366 - "AntigravityMemoryGovernor"
 Cohesion: 0.25
 Nodes (7): Alpha vs Luminance Masking Modes, Fallback strategies, Implementation, Method 1: Using a repeating raster image (Recommended for realistic textures), Method 2: Using CSS Gradients for geometric patterns, Overview, Visually Texture Content
 
-### Community 369 - "enum"
+### Community 367 - "graphify.ps1"
+Cohesion: 0.25
+Nodes (7): 1. Operating Rules & Workflow Principles, 2. Core Capabilities & Workflows, Capability A: Work Breakdown Structure (WBS) Generation, Capability B: Critical Path Method (CPM/PERT) Modeling, Capability C: Earned Value Management (EVM) Health Check, Capability D: GitHub Issue Task Decomposition Template, Project Management & Workflow Orchestrator (`pm-workflow-orchestrator`)
+
+### Community 368 - "enum"
 Cohesion: 0.36
 Nodes (7): calculate_free_space_path_loss(), calculate_link_budget(), calculate_vswr_and_reflection(), main(), Computes Free Space Path Loss (FSPL) in dB. FSPL (dB) = 20*log10(d) +…, Computes complete end-to-end RF link budget and link margin (dB)., Computes transmission line reflection coefficient Gamma, return loss (dB), and…
 
-### Community 370 - "🏛️ ARCHITECTURAL RFC: ARCH-RFC-001 (Gold-Standard Epistemic Record-Keeping & Taxonomy)"
+### Community 369 - "enum"
 Cohesion: 0.39
 Nodes (7): 1. Integration with `compliance-report-harmonizer`, 2. Integration with `portfolio-project-manager`, 3. Integration with `github-workflow`, 4. Integration with `super-nlm` & Knowledge Fleets, 5. Integration with `graphify`, Compatibility Requirements:, Ecosystem Compatibility & Cross-Skill Integration SOP
 
-### Community 371 - "🏛️ ARCHITECTURAL RFC: ARCH-RFC-003 (Capstone Defense & Academic Repository Standard)"
+### Community 370 - "🏛️ ARCHITECTURAL RFC: ARCH-RFC-001 (Gold-Standard Epistemic Record-Keeping & Taxonomy)"
 Cohesion: 0.57
 Nodes (5): Remove-StaleGraphifyArtifacts(), Write-Fail(), Write-Notice(), Write-Status(), Write-Success()
 
-### Community 372 - "🏛️ RESEARCH PROTOCOL: EXP-001 (Ingress-Boundary Reduction Break-Even Parameter Sweep)"
+### Community 371 - "🏛️ ARCHITECTURAL RFC: ARCH-RFC-003 (Capstone Defense & Academic Repository Standard)"
 Cohesion: 0.29
 Nodes (7): http, sse, stdio, stream, transport, enum, type
 
-### Community 373 - "Unified & Adaptive Anthropic Technical Writing Standard (`writing-like-claude`)"
+### Community 372 - "🏛️ RESEARCH PROTOCOL: EXP-001 (Ingress-Boundary Reduction Break-Even Parameter Sweep)"
 Cohesion: 0.29
 Nodes (7): tier_1_native_nepali, tier_2_phonetic_transliteration, tier_3_preserved_inline_english, description, enum, type, policy_tier
 
-### Community 374 - "Brainstorm Research Laboratory — Cohort 0 Outreach & Communication Scripts"
-Cohesion: 0.29
-Nodes (7): 1. Executive Philosophy: "Inferior to None", 2. Universal Artifact Taxonomy & Addressing Matrix, 3. Mandatory Frontmatter Metadata Standard, 4. The Calibrated Evidence Hierarchy (Preventing Pseudo-Science), 5. The Invariant of Negative Results (`FAIL-xxx`), 🏛️ ARCHITECTURAL RFC: ARCH-RFC-001 (Gold-Standard Epistemic Record-Keeping & Taxonomy), Identifier Classification Schema
-
-### Community 375 - "STRANGLER-IPU Experiment Report"
+### Community 373 - "Unified & Adaptive Anthropic Technical Writing Standard (`writing-like-claude`)"
 Cohesion: 0.29
 Nodes (7): 1.1 The Tragedy of the Typical College Project Repo, 1.2 The "Dual-Track" Defense Strategy, 1. Executive Philosophy: The College Capstone Reality vs. The Industrial Standard, 2. University Standards & Curricular Mapping (ABET & IEEE), 3. The "Anti-Plagiarism / Defensibility" Shield, 4. Dual-Track Academic Deliverables, 🏛️ ARCHITECTURAL RFC: ARCH-RFC-003 (Capstone Defense & Academic Repository Standard)
 
-### Community 376 - ".route"
+### Community 374 - "Brainstorm Research Laboratory — Cohort 0 Outreach & Communication Scripts"
 Cohesion: 0.29
 Nodes (7): 1. Research Questions Addressed, 2. Parameter Sweep Matrix, 3. Measured Metrics, Evaluated Architectural Topologies, Independent Variables, Reproducible pipeline package, 🏛️ RESEARCH PROTOCOL: EXP-001 (Ingress-Boundary Reduction Break-Even Parameter Sweep)
 
-### Community 377 - "adaptive-workflow/SKILL.md"
+### Community 375 - "STRANGLER-IPU Experiment Report"
 Cohesion: 0.29
 Nodes (6): 1. Executive Summary & Epistemic Calibration, 2. Decoupled Architecture: Fundamentality vs. Capability, 3. The 5-Register Continuum & 5-Tier Depth Dial, 4. Ecosystem Interoperability & Cross-Links, 5. Verification & Reproducibility Gate, Unified & Adaptive Anthropic Technical Writing Standard (`writing-like-claude`)
 
-### Community 378 - "The Worker Availability Ledger & Quota Depletion Tracking"
-Cohesion: 0.29
-Nodes (6): 1. The 3-Minute Casual Verbal Pitch (In-Person / Campus), 2. The 1-Paragraph DM Template (WhatsApp / Telegram), 3. The Follow-Up (Sending the Intake Form), 4. The WhatsApp Group Pinned Message (`BRL — Cohort 0`), 5. The Graceful Pause Response, Brainstorm Research Laboratory — Cohort 0 Outreach & Communication Scripts
-
-### Community 379 - "Input/Output Contract"
+### Community 376 - ".route"
 Cohesion: 0.29
 Nodes (7): Causal interpretation and limits, Distributional robustness, Falsification probes, Formal model and assumptions, STRANGLER-IPU Experiment Report, What was tested, Why the mechanism should help
 
-### Community 380 - "JSON Configuration Files"
+### Community 377 - "adaptive-workflow/SKILL.md"
 Cohesion: 0.29
 Nodes (3): Filter out models that violate hard operational constraints., Deterministically route a task to the optimal primary model and fallback., Verify heuristic complexity calibration across task archetypes.
 
-### Community 381 - "Part 2 — Publishing to the Chrome Web Store"
+### Community 378 - "The Worker Availability Ledger & Quota Depletion Tracking"
+Cohesion: 0.29
+Nodes (6): 1. Unified Runtime Architecture, 2. The `antigravity_scope` Task Schema, 3. Worktree Context Projection Protocol, 4. Prompt Payload Synthesis & Native Custom Instructions, 5. Teardown Sanitization & Commit Integrity Invariant, Antigravity Scope Expansion & Living Chat Context Injection
+
+### Community 379 - "Input/Output Contract"
 Cohesion: 0.29
 Nodes (7): 1. `PreToolUse` Contract, 2. `PostToolUse` Contract, 3. `PreInvocation` Contract, 4. `PostInvocation` Contract, 5. `Stop` Contract, Common Input Fields, Input/Output Contract
 
-### Community 382 - "Calling External APIs from Extensions"
+### Community 380 - "JSON Configuration Files"
 Cohesion: 0.29
 Nodes (7): Configuration Schema, Explicitly Configured Paths, JSON Configuration Files, Path Entry Fields, Path Resolution Rules, Pro-Tip: Team Sharing via VCS, Top-Level Fields
 
-### Community 383 - "Generating Extension Icons"
-Cohesion: 0.29
-Nodes (6): 1. Operating Rules & Avionics Principles, 2. Core Capabilities & Workflows, Aeronautical Telecommunication & Navigation Analyzer (`avionic-telecom-analyzer`), Capability A: Radar Range Equation CLI, Capability B: Multilateration (MLAT) TDOA Hyperbolic Positioning, Capability C: VOR & DME Radio Navigation Geometry
-
-### Community 384 - "Permissions"
+### Community 381 - "Part 2 — Publishing to the Chrome Web Store"
 Cohesion: 0.29
 Nodes (6): API Keys, Calling External APIs from Extensions, Error Handling Pattern, Permissions, Service Worker Considerations, Where to Make API Calls
 
-### Community 385 - "2. Core Capabilities & Workflows"
+### Community 382 - "Calling External APIs from Extensions"
 Cohesion: 0.29
 Nodes (6): Generate with Node.js (canvas), Generate with pure SVG (no dependencies), Generate with Python (Pillow), Generating Extension Icons, Manifest reference, Quick: Omit icons
 
-### Community 386 - "2. Core Capabilities & Workflows"
+### Community 383 - "Generating Extension Icons"
 Cohesion: 0.29
 Nodes (6): `activeTab` only works on direct user gestures — not from side panels, Checking and removing permissions, `chrome.permissions.request()` needs a user gesture — the gesture survives one `sendMessage` hop, but not an `await` after that, Permissions, `permissions` vs `host_permissions`, `tab.url` requires the `tabs` permission
 
-### Community 387 - "OrchestratorFencingManager"
+### Community 384 - "Permissions"
 Cohesion: 0.29
 Nodes (6): 1. Operating Rules & Asymptotic Standards, 2. Core Capabilities & Workflows, Capability A: Asymptotic Complexity Audit & Profiling, Capability B: Abstract Data Type (ADT) Selection Matrix, Capability C: Graph Algorithm Synthesis, Data Structures & Algorithmic Complexity Optimizer (`dsa-complexity-optimizer`)
 
-### Community 388 - "Selector & @-rule Combinations"
+### Community 385 - "2. Core Capabilities & Workflows"
 Cohesion: 0.29
 Nodes (6): 1. Operating Rules & Mathematical Foundations, 2. Core Capabilities & Workflows, Capability A: FIR Filter Synthesis CLI, Capability B: Discrete Fourier Transform (FFT) Spectral Analysis, Capability C: Quantization & Fixed-Point Q-Format Modeling, Digital Signal Processing & Filter Design Engine (`dsp-signal-engine`)
 
-### Community 389 - "Semantic Component Adaptation"
+### Community 386 - "2. Core Capabilities & Workflows"
 Cohesion: 0.29
 Nodes (6): 1. Operating Rules & Analog Design Principles, 2. Core Capabilities & Workflows, Analog Electronics & Circuit Synthesizer (`electronics-circuit-synth`), Capability A: Analog Circuit Synthesis CLI, Capability B: 2nd-Order Sallen-Key Lowpass Active Filter, Capability C: Transistor DC Biasing & Small-Signal Voltage Gain
 
-### Community 390 - "Animated Select Picker"
+### Community 387 - "OrchestratorFencingManager"
 Cohesion: 0.29
 Nodes (6): 1. Operating Rules & Embedded Discipline, 2. Core Capabilities & Workflows, Capability A: Bare-Metal Non-Blocking State Machine Scaffold, Capability B: ISR Circular Ring Buffer (Lock-Free SPSC), Capability C: FreeRTOS Multi-Task Architecture, Embedded Systems & Firmware Architect (`embedded-firmware-scaffold`)
 
-### Community 391 - "Branded Select Styling"
+### Community 388 - "Selector & @-rule Combinations"
 Cohesion: 0.29
 Nodes (6): Constraints & Theming, Deciding on Placement (Inline vs. Standalone), Designing Inline Widgets (Cards & Transparency), Generative UI, Sizing Inline Embeds, Workflow
 
-### Community 392 - "IME-safe enter-to-submit"
+### Community 389 - "Semantic Component Adaptation"
 Cohesion: 0.29
 Nodes (6): 1. Decouple selection logic from applied rules, 2. Key on the custom property for applied rules, 3. OPTIONAL: Utility classes for toggling visibility, Fallbacks, The problem, What to do instead
 
-### Community 393 - "Rich Media Picker (Customizable Select)"
+### Community 390 - "Animated Select Picker"
 Cohesion: 0.29
 Nodes (6): Choosing the right tool, Fallback Strategies, Implementation Directives, Implementation Example, Semantic Component Adaptation, When to use this guide
 
-### Community 394 - "Calculating Event Differentials with Temporal"
+### Community 391 - "Branded Select Styling"
 Cohesion: 0.29
 Nodes (6): Animated Select Picker, Example Code: Smooth Select Scale and Fade, Fallback strategies, Fallbacks & browser support for Customizable <select>, How to Implement, Strategic Implementation & Best Practices
 
-### Community 395 - "Capturing Location-Agnostic Data with Temporal"
+### Community 392 - "IME-safe enter-to-submit"
 Cohesion: 0.29
 Nodes (6): Branded Select Styling, Example Code: Branded Courier Select, Fallback strategies, Fallbacks & browser support for Customizable <select>, How to Implement, Strategic Implementation & Best Practices
 
-### Community 396 - "Debounce and batch multiple analytics events"
+### Community 393 - "Rich Media Picker (Customizable Select)"
 Cohesion: 0.29
 Nodes (6): Accessibility and testing, Fallback strategies, IME-safe enter-to-submit, Implementation strategy, Strategy 1: Add a `keyCode === 229` check (recommended), Strategy 2: The `event.timeStamp` window workaround (alternative)
 
-### Community 397 - "Reliably measure full-session analytics and telemetry"
+### Community 394 - "Calculating Event Differentials with Temporal"
 Cohesion: 0.29
 Nodes (6): Example Code: Rich Role Picker, Fallback Strategies, Fallbacks & browser support for Customizable <select>, How to Implement, Rich Media Picker (Customizable Select), Strategic Implementation & Best Practices
 
-### Community 398 - "Resilient Context Menus And Nested Dropdowns"
+### Community 395 - "Capturing Location-Agnostic Data with Temporal"
 Cohesion: 0.29
 Nodes (6): Calculating Event Differentials with Temporal, Example: Trial Expiration Calculation, Fallback Strategy, Fallbacks & browser support for Temporal, How to Implement, Strategic Implementation & Best Practices
 
-### Community 399 - "Implementation Steps"
+### Community 396 - "Debounce and batch multiple analytics events"
 Cohesion: 0.29
 Nodes (6): Capturing Location-Agnostic Data with Temporal, Example: Capturing a Birthdate, Fallback Strategy, Fallbacks & browser support for Temporal, How to Implement, Strategic Implementation & Best Practices
 
-### Community 400 - "Scroll Snap State Sync"
+### Community 397 - "Reliably measure full-session analytics and telemetry"
 Cohesion: 0.29
 Nodes (6): Best Practices, Browser support and fallback strategies, Debounce and batch multiple analytics events, Example code, `fetchLater()` polyfill, How to implement
 
-### Community 401 - "Apply WebGL shaders to HTML content"
+### Community 398 - "Resilient Context Menus And Nested Dropdowns"
 Cohesion: 0.29
 Nodes (6): Best Practices, Browser support and fallback strategies, Example code, `fetchLater()` polyfill, How to implement, Reliably measure full-session analytics and telemetry
 
-### Community 402 - "Accessible color"
+### Community 399 - "Implementation Steps"
 Cohesion: 0.29
 Nodes (6): 1. Define the Button and Panel Relationship, 2. Positioning with `position-area`, 3. Implement Edge-Resilience (Fallbacks), Fallback strategies, Fallbacks & browser support for Popover, Resilient Context Menus And Nested Dropdowns
 
-### Community 403 - "Implementation"
+### Community 400 - "Scroll Snap State Sync"
 Cohesion: 0.29
 Nodes (6): 1. Opt-in to Cross-Document View Transitions, 2. Customize Transition Animations (Optional), 3. Create Directional Transitions (Optional), Cross-Document Transitions, Fallback strategies, Implementation Steps
 
-### Community 404 - "Soft Edge Content Fade"
+### Community 401 - "Apply WebGL shaders to HTML content"
 Cohesion: 0.29
 Nodes (6): 1. Configure Scroll Snap in CSS, 2. Listen for Snap Changes, Accessibility, Fallback strategies, Implementation, Scroll Snap State Sync
 
-### Community 405 - "WebMCP (Web Model Context Protocol)"
+### Community 402 - "Accessible color"
 Cohesion: 0.29
 Nodes (6): Apply WebGL shaders to HTML content, Best Practices, Example code, Fallback strategies, How to implement, HTML-in-Canvas polyfill
 
-### Community 406 - "2. Core Capabilities & Workflows"
+### Community 403 - "Implementation"
 Cohesion: 0.29
 Nodes (6): Accessible color, Color, Contrast, Forced Colors Mode, Generating tints, Light and dark color schemes
 
-### Community 407 - "ui-extension/template/sidecars/panel/main.mjs"
+### Community 404 - "Soft Edge Content Fade"
 Cohesion: 0.29
 Nodes (6): Complex Shapes, Fallback strategies, Implementation, Overview, Using an SVG element in HTML, Using transparency from an image
 
-### Community 408 - "Split to PRs"
+### Community 405 - "WebMCP (Web Model Context Protocol)"
 Cohesion: 0.29
 Nodes (6): Fading both top and bottom edges, Fading the bottom edge of a container, Fallback strategies, Implementation, Overview, Soft Edge Content Fade
 
-### Community 409 - "2. Core Capabilities & Workflows"
+### Community 406 - "2. Core Capabilities & Workflows"
 Cohesion: 0.29
 Nodes (6): Anti-Patterns & Warnings (DO NOT DO THIS), Best Practices, Implementation Status, Quick Overview, WebMCP (Web Model Context Protocol), When to Discourage WebMCP
 
-### Community 410 - "references/template/sidecars/panel/main.mjs"
+### Community 407 - "ui-extension/template/sidecars/panel/main.mjs"
 Cohesion: 0.29
 Nodes (6): 1. Operating Rules & Modeling Guidelines, 2. Core Capabilities & Workflows, Capability A: Structural UML Modeling (Class & Component Diagrams), Capability B: Behavioral & Interaction Modeling (Sequence & Statechart), Capability C: Inter-Class Test Case Design Matrix (OOSE 6.5), Object-Oriented Software Engineering & Architectural Modeler (`oose-architecture-modeler`)
+
+### Community 408 - "Split to PRs"
+Cohesion: 0.29
+Nodes (4): app, HERE, NOTES_FILE, STARTED_AT
+
+### Community 409 - "2. Core Capabilities & Workflows"
+Cohesion: 0.29
+Nodes (6): 1. Check the state, 2. Propose the split, 3. Execute the split, 4. Report back, Hard rules, Split to PRs
+
+### Community 410 - "references/template/sidecars/panel/main.mjs"
+Cohesion: 0.29
+Nodes (6): 1. Operating Rules & Concurrency Principles, 2. Core Capabilities & Workflows, Capability A: Banker's Deadlock Avoidance Validator, Capability B: Thread-Safe Bounded Ring Buffer Scaffold (C/C++ Pattern), Capability C: Windows NTFS ACL Security Inspection, Systems Programming & Concurrency Harness (`systems-concurrency-harness`)
 
 ### Community 411 - "expand_dataset"
 Cohesion: 0.29
 Nodes (4): app, HERE, NOTES_FILE, STARTED_AT
 
 ### Community 412 - "4. Emergent Compound Workflows (The "Why")"
-Cohesion: 0.29
-Nodes (6): 1. Check the state, 2. Propose the split, 3. Execute the split, 4. Report back, Hard rules, Split to PRs
-
-### Community 413 - "5. Architectural Blueprint: The 4-Tier Jarvis Engine"
-Cohesion: 0.29
-Nodes (6): 1. Operating Rules & Concurrency Principles, 2. Core Capabilities & Workflows, Capability A: Banker's Deadlock Avoidance Validator, Capability B: Thread-Safe Bounded Ring Buffer Scaffold (C/C++ Pattern), Capability C: Windows NTFS ACL Security Inspection, Systems Programming & Concurrency Harness (`systems-concurrency-harness`)
-
-### Community 414 - "7.4 Five-Horizon Result Forecast (0 to 36+ Months)"
-Cohesion: 0.29
-Nodes (4): app, HERE, NOTES_FILE, STARTED_AT
-
-### Community 415 - "required"
 Cohesion: 0.33
 Nodes (6): 4. Emergent Compound Workflows (The "Why"), Pipeline A: The High-Bandwidth Rapid Learning Loop, Pipeline B: The Autonomous Heavy Compute & Auditing Loop, Pipeline C: The Physical Prototype Design Loop, Pipeline D: The Autonomous Invariant & Arbitrage Discovery Loop, Pipeline E: The Autonomous YouTube Content & Transformer Cluster
 
-### Community 416 - "ARCH-RFC-006: Public/Private Information Boundary & Security Architecture"
+### Community 413 - "5. Architectural Blueprint: The 4-Tier Jarvis Engine"
 Cohesion: 0.33
 Nodes (6): 5.1 The 4-Tier Architectural Stack, 5.2 The Non-Invasive Tool Manifest Pattern (`tool.manifest.json`), 5.3 Upgrading to Semantic Capability Contracts (`capability.contract.v1.json`), 5.4 The Strategic Wedge vs. Platform Vision, 5.5 Domain Feasibility Matrix & Commercial Framing, 5. Architectural Blueprint: The 4-Tier Jarvis Engine
 
-### Community 417 - "2026-09-19 — Daily Log"
+### Community 414 - "7.4 Five-Horizon Result Forecast (0 to 36+ Months)"
 Cohesion: 0.33
 Nodes (6): 7.4 Five-Horizon Result Forecast (0 to 36+ Months), Horizon 1: The Synthetic Invariant Rediscovery Benchmark (Months 0–3), Horizon 2: Real-World API & State Machine Assurance (Months 3–9), Horizon 3: Multi-Contract & Protocol Invariant Auditing (Months 9–18), Horizon 4: Cross-Domain Regulatory & Terms Arbitrage (Months 18–36), Horizon 5: The Autonomous Systems Researcher (Months 36+)
 
-### Community 418 - "Document 4: Strategic Future Roadmap & Architectural Invariants"
-Cohesion: 0.33
-Nodes (4): 📦 Deliverable Summary, 🎯 Quest & Contributor Information, 🔍 Verification & Audit Gate Checklist, 📊 Verification Log Output (Snippet)
-
-### Community 419 - "2. Cross-Session Handoff Prompts"
+### Community 415 - "required"
 Cohesion: 0.33
 Nodes (6): canonical_rendering, policy_tier, transliteration_devanagari, required, type, nepali_alignment
 
-### Community 420 - "PLAN-GCP-001: Google Classroom Pilot Architectural Plan & Roadmap 🎓🧭"
+### Community 416 - "ARCH-RFC-006: Public/Private Information Boundary & Security Architecture"
 Cohesion: 0.33
 Nodes (5): 1. Executive Summary & Problem Statement, 2. The Two-Plane Security Partition, 3. Implementation Rules, 4. Verification & Conformance, ARCH-RFC-006: Public/Private Information Boundary & Security Architecture
 
-### Community 421 - "invariants_checked"
-Cohesion: 0.33
-Nodes (6): 1. Schedule & Priorities, 2026-09-19 — Daily Log, 2. Active Projects Progress, 3. Meetings & Transcripts, 4. Daily Learnings & Conceptual Nodes, 5. Tomorrow's Context (Agent Primer)
-
-### Community 422 - "capabilities"
+### Community 417 - "2026-09-19 — Daily Log"
 Cohesion: 0.33
 Nodes (5): 1. Flagship Research Wedge: Headless Invariant Assurance Engine, 2. The 9-Stage Engineering & R&D Sequence, 3. Defensible Economic Model & Capital Accounting, 4. Transparent Limitations & Known Failure Modes, Document 4: Strategic Future Roadmap & Architectural Invariants
 
-### Community 423 - "ecosystem.verification.json"
+### Community 418 - "Document 4: Strategic Future Roadmap & Architectural Invariants"
+Cohesion: 0.33
+Nodes (6): 1. Executive Summary, 2. Personal & Ecosystem Core Workspaces, 3. Project-Specific Workspaces: BiasAperture (Fuse AI Fellowship), 4. MCP & Super-NLM Tooling Integration, 5. Privacy & Repository Boundaries, Research Note: Gemini & NotebookLM Knowledge Base Registry
+
+### Community 419 - "2. Cross-Session Handoff Prompts"
 Cohesion: 0.33
 Nodes (5): 1. Executive Summary & Verified Ground Truth, 2. Cross-Session Handoff Prompts, Epistemic Record & Session Handoff: Decoupled File-Based Orchestrator & Copilot Fleet, Session A: Claude-Desktop Update, Session B: Fleet-Orchestrator Update
 
-### Community 424 - ".build_cascade"
+### Community 420 - "PLAN-GCP-001: Google Classroom Pilot Architectural Plan & Roadmap 🎓🧭"
 Cohesion: 0.33
 Nodes (5): 1. Executive Summary & Core Philosophy, 2. Directory Layout & Module Specifications, 3. Invariants & Safety Protocols, 4. Phased Implementation Roadmap, Key Architectural Pillars
 
-### Community 425 - "Research Note: Gemini & NotebookLM Knowledge Base Registry"
+### Community 421 - "invariants_checked"
 Cohesion: 0.33
 Nodes (6): items, description, items, type, type, invariants_checked
 
-### Community 426 - "Deterministic Zero-AI & Fleet-First Adaptive Workflow Protocol"
+### Community 422 - "capabilities"
 Cohesion: 0.33
 Nodes (6): description, items, minItems, type, $ref, capabilities
 
-### Community 427 - "2. Core Capabilities & Workflows"
+### Community 423 - "ecosystem.verification.json"
 Cohesion: 0.33
 Nodes (5): generated_by, manifest_kind, projects, $schema, schema_version
 
-### Community 428 - "Adaptive Skill & Repository Routing Matrix"
+### Community 424 - ".build_cascade"
 Cohesion: 0.40
 Nodes (5): expand_dataset(), main(), Any, Synthetic & Historical Dataset Generator for Ecosystem Intent & Skill Router.…, Synthesizes rich variations while preserving structural ground truth.
 
-### Community 429 - "Workspace Rules"
+### Community 425 - "Research Note: Gemini & NotebookLM Knowledge Base Registry"
 Cohesion: 0.33
 Nodes (4): CascadeStage, Single stage in a multi-model cascade pipeline., Lookup model entry by exact ID., Construct a 4-tier FrugalGPT cascade for progressive triage and escalation.
 
-### Community 430 - "Workspace Skills"
+### Community 426 - "Deterministic Zero-AI & Fleet-First Adaptive Workflow Protocol"
 Cohesion: 0.33
-Nodes (6): 1. Schedule & Priorities, 2. Active Projects Progress, 3. Meetings & Transcripts, 4. Daily Learnings & Conceptual Nodes, 5. Tomorrow's Context (Agent Primer), {{date:YYYY-MM-DD}} — Daily Log
+Nodes (6): 1. Worktree Context Projection & Native Instruction Loading, 2. Epistemic Calibrations (`ARCH-RFC-001`), 3. Deterministic Verification Gate, 4. Silent Rollover & Quota Tracking (`worker-availability-ledger.md`), 5. Automated Rollback on Verification Failure, Stage 4: Calibrated Execution & Verification Gate
 
-### Community 431 - "Workspace Rules"
+### Community 427 - "2. Core Capabilities & Workflows"
 Cohesion: 0.33
 Nodes (5): 1. Master Routing & Repository Mapping Table, 2. Auxiliary Governance & Protection Skills, 3. Execution Backend Selection Decision Tree, 4. Editorial & Writing Standard Routing, Adaptive Skill & Repository Routing Matrix
 
+### Community 428 - "Adaptive Skill & Repository Routing Matrix"
+Cohesion: 0.33
+Nodes (5): Rule Format, Rule Locations, Rule Merging and Deduplication, Size Limits and Context Budget, Workspace Rules
+
+### Community 429 - "Workspace Rules"
+Cohesion: 0.33
+Nodes (5): Best Practices for Writing Skills, Directory Structure, Frontmatter Fields, Main Instruction File (`SKILL.md`), Workspace Skills
+
+### Community 430 - "Workspace Skills"
+Cohesion: 0.33
+Nodes (5): Rule Format, Rule Locations, Rule Merging and Deduplication, Size Limits and Context Budget, Workspace Rules
+
+### Community 431 - "Workspace Rules"
+Cohesion: 0.33
+Nodes (5): Best Practices for Writing Skills, Directory Structure, Frontmatter Fields, Main Instruction File (`SKILL.md`), Workspace Skills
+
 ### Community 432 - "Workspace Skills"
-Cohesion: 0.33
-Nodes (5): Rule Format, Rule Locations, Rule Merging and Deduplication, Size Limits and Context Budget, Workspace Rules
-
-### Community 433 - "control_analyzer.py"
-Cohesion: 0.33
-Nodes (5): Best Practices for Writing Skills, Directory Structure, Frontmatter Fields, Main Instruction File (`SKILL.md`), Workspace Skills
-
-### Community 434 - "filter_synth.py"
-Cohesion: 0.33
-Nodes (5): Rule Format, Rule Locations, Rule Merging and Deduplication, Size Limits and Context Budget, Workspace Rules
-
-### Community 435 - "Advanced Graph Query Recipes"
-Cohesion: 0.33
-Nodes (5): Best Practices for Writing Skills, Directory Structure, Frontmatter Fields, Main Instruction File (`SKILL.md`), Workspace Skills
-
-### Community 436 - "graphify reference: query, path, explain"
 Cohesion: 0.47
 Nodes (5): analyze_second_order_system(), main(), Computes analytical characteristics of standard 2nd-order transfer function:…, Simulates closed-loop PID control of the plant: d^2y/dt^2 + 2*zeta*wn*(dy/dt) +…, simulate_pid_step_response()
 
-### Community 437 - "Styling siblings based on count and index"
+### Community 433 - "control_analyzer.py"
 Cohesion: 0.47
 Nodes (5): compute_magnitude_response(), generate_sinc_fir_lowpass(), main(), Generates an FIR Lowpass filter using windowed sinc method. cutoff_norm: Cutoff…, Computes frequency response H(e^jw) at discrete frequencies from 0 to Nyquist.…
 
-### Community 438 - "Individual Transform Properties"
+### Community 434 - "filter_synth.py"
 Cohesion: 0.33
 Nodes (5): 1. Finding God Nodes (Architectural Hubs), 2. Finding Isolated or Dead Implementations, 3. Extracting All Functions in a Specific Community / Module, 4. Exporting Subgraph as Markdown Documentation, Advanced Graph Query Recipes
 
-### Community 439 - "Accessible Web Components"
+### Community 435 - "Advanced Graph Query Recipes"
 Cohesion: 0.33
 Nodes (5): For /graphify explain, For /graphify path, graphify reference: query, path, explain, Step 0 — Constrained query expansion (REQUIRED before traversal), Step 1 — Traversal
 
-### Community 440 - "Pre-rendering custom elements"
+### Community 436 - "graphify reference: query, path, explain"
 Cohesion: 0.33
 Nodes (5): Circular and complex positioning, Dynamic color systems, Fallback strategies, Styling siblings based on count and index, Symmetrical layout and fan effects
 
-### Community 441 - "Shadow DOM, Templates & Slots"
+### Community 437 - "Styling siblings based on count and index"
 Cohesion: 0.33
 Nodes (5): Fallback strategies, Independent Animation and Transitions, Individual Transform Properties, Key Implementation Details, Preventing Unexpected Changes in Stacking Contexts and Containing Blocks
 
-### Community 442 - "Web Components Orientation"
+### Community 438 - "Individual Transform Properties"
 Cohesion: 0.33
 Nodes (5): Accessible Web Components, ARIA relationships across shadow roots, Default semantics via the ElementInternals ARIA mixin, Fallback strategies, Focus management and `delegatesFocus`
 
-### Community 443 - "Coordinating Global Events with Temporal"
+### Community 439 - "Accessible Web Components"
 Cohesion: 0.33
 Nodes (5): Authoring a declarative shadow root, Avoiding FOUC, Fallback strategies, Hydration timing, Pre-rendering custom elements
 
-### Community 444 - "Managing Recurring Intervals with Temporal"
+### Community 440 - "Pre-rendering custom elements"
 Cohesion: 0.33
 Nodes (5): Attaching a shadow root, Loading stylesheets into a shadow root, Shadow DOM, Templates & Slots, Slots: the parts that surprise people, Templates: construct the tree efficiently
 
-### Community 445 - "Stabilize Reactive State with Temporal"
+### Community 441 - "Shadow DOM, Templates & Slots"
 Cohesion: 0.33
 Nodes (5): Cross-cutting rules, Decide whether you even need a custom element, Match the tool to the codebase, Use-case guide matrix, Web Components Orientation
 
-### Community 446 - "Supporting Global Calendar Systems with Temporal"
+### Community 442 - "Web Components Orientation"
 Cohesion: 0.33
 Nodes (5): Coordinating Global Events with Temporal, Example: Scheduling and Conflict Detection, Fallback strategies, How to Implement, Strategic Implementation & Best Practices
 
-### Community 447 - "Defer Work Until Scroll Ends"
+### Community 443 - "Coordinating Global Events with Temporal"
 Cohesion: 0.33
 Nodes (5): Example: Subscription Billing Cycle, Fallback strategies, How to Implement, Managing Recurring Intervals with Temporal, Strategic Implementation & Best Practices
 
-### Community 448 - "Deprioritize background fetches"
+### Community 444 - "Managing Recurring Intervals with Temporal"
 Cohesion: 0.33
 Nodes (5): Example Code: Temporal vs Legacy Date in State, Fallback strategies, How to Implement, Stabilize Reactive State with Temporal, Strategic Implementation & Best Practices
 
-### Community 449 - "Identify heavy-running JavaScript"
+### Community 445 - "Stabilize Reactive State with Temporal"
 Cohesion: 0.33
 Nodes (5): Example Code: Converting and Iterating Calendars, Fallback Strategy, How to Implement, Strategic Implementation & Best Practices, Supporting Global Calendar Systems with Temporal
 
-### Community 450 - "Identify causes of poor INP"
+### Community 446 - "Supporting Global Calendar Systems with Temporal"
 Cohesion: 0.33
 Nodes (5): Defer Work Until Scroll Ends, Example Code, Fallback Strategy, How to Implement, Strategic Implementation & Best Practices
 
-### Community 451 - "Optimize image priority"
+### Community 447 - "Defer Work Until Scroll Ends"
 Cohesion: 0.33
 Nodes (5): Best practices, Deprioritize background fetches, Example code, Fallback strategy, How to implement
 
-### Community 452 - "Optimize preload priority"
+### Community 448 - "Deprioritize background fetches"
 Cohesion: 0.33
 Nodes (5): Best Practices, Browser support and fallback strategies, Example of identifying the longest running scripts that contribute to long animation frames, How to implement, Identify heavy-running JavaScript
 
-### Community 453 - "Optimize script priority"
+### Community 449 - "Identify heavy-running JavaScript"
 Cohesion: 0.33
 Nodes (5): Best Practices, Browser support and fallback strategies, Get attributions for INP interactions using web-vitals library, How to implement, Identify causes of poor INP
 
-### Community 454 - "Sequencing Distributed Events"
+### Community 450 - "Identify causes of poor INP"
 Cohesion: 0.33
 Nodes (5): Best practices, Example code, Fallback strategy, How to implement, Optimize image priority
 
-### Community 455 - "Passkeys Orientation"
+### Community 451 - "Optimize image priority"
 Cohesion: 0.33
 Nodes (5): Best Practices, Example code, Fallback strategy, How to implement, Optimize preload priority
 
-### Community 456 - "Sanitizing Untrusted HTML"
+### Community 452 - "Optimize preload priority"
 Cohesion: 0.33
 Nodes (5): Best Practices, Example code, Fallback strategy, How to implement, Optimize script priority
 
-### Community 457 - "Build Carousel Slide Effects"
+### Community 453 - "Optimize script priority"
 Cohesion: 0.33
 Nodes (5): Example Code: High-Frequency Event Sequencing, Fallback strategies, How to Implement, Sequencing Distributed Events, Strategic Implementation & Best Practices
 
-### Community 458 - "Pull to Reveal"
+### Community 454 - "Sequencing Distributed Events"
 Cohesion: 0.33
 Nodes (5): 1. Core Prerequisites for Passkeys, 2. The AAGUID UX Caveat, 3. Decoupled Library Recommendations, 4. Use Case Reference Matrix, Passkeys Orientation
 
-### Community 459 - "Implementation Steps"
+### Community 455 - "Passkeys Orientation"
 Cohesion: 0.33
 Nodes (5): 1. Safely Inserting HTML with `setHTML()`, 2. Using Custom Sanitizer Configurations, 3. Parsing User Input with `Document.parseHTML()`, Fallbacks & browser support for Sanitizer API, Sanitizing Untrusted HTML
 
-### Community 460 - "Build a Scroll Progress Indicator"
+### Community 456 - "Sanitizing Untrusted HTML"
 Cohesion: 0.33
 Nodes (5): Best Practices, Browser support and fallback strategies, Build Carousel Slide Effects, Example code, How to implement
 
-### Community 461 - "Shrinking header on scroll"
+### Community 457 - "Build Carousel Slide Effects"
 Cohesion: 0.33
 Nodes (5): Example Code: Pull to Reveal Search, Fallback Strategy, How to Implement, Pull to Reveal, Strategic Implementation & Best Practices
 
-### Community 462 - "Build a Parallax Effect on Scroll"
+### Community 458 - "Pull to Reveal"
 Cohesion: 0.33
 Nodes (5): 1. Markup and Layout, 2. Configure Sticky Headers, 3. Responsive Stacked Layout, Implementation Steps, Recommended Approach
 
-### Community 463 - "Add entry and exit effects to elements as they enter or exit the scrollport"
+### Community 459 - "Implementation Steps"
 Cohesion: 0.33
 Nodes (5): Best Practices, Build a Scroll Progress Indicator, Example code, Fallback strategies, How to implement
 
-### Community 464 - "Set a scroll target for the initial render"
+### Community 460 - "Build a Scroll Progress Indicator"
 Cohesion: 0.33
 Nodes (5): Best Practices, Browser support and fallback strategies, Example code, How to implement, Shrinking header on scroll
 
-### Community 465 - "Scrollytelling"
+### Community 461 - "Shrinking header on scroll"
 Cohesion: 0.33
 Nodes (5): Best Practices, Browser support and fallback strategies, Build a Parallax Effect on Scroll, Example code, How to implement
 
-### Community 466 - "Spatial Navigation (Directional Keypad Focus)"
+### Community 462 - "Build a Parallax Effect on Scroll"
 Cohesion: 0.33
 Nodes (5): Add entry and exit effects to elements as they enter or exit the scrollport, Best Practices, Browser support and fallback strategies, Example code, How to implement
 
-### Community 467 - "Build a Scrollspy Navigation"
+### Community 463 - "Add entry and exit effects to elements as they enter or exit the scrollport"
 Cohesion: 0.33
 Nodes (5): Example Code: Vertical Media Feed, Fallback Strategy, How to Implement, Set a scroll target for the initial render, Strategic Implementation & Best Practices
 
-### Community 468 - "Adapt scrollbar to high-contrast preferences"
+### Community 464 - "Set a scroll target for the initial render"
 Cohesion: 0.33
 Nodes (5): Best Practices, Example code, Fallback strategies, How to implement, Scrollytelling
 
-### Community 469 - "Export HTML content from canvas"
+### Community 465 - "Scrollytelling"
 Cohesion: 0.33
 Nodes (5): Accessible Focus Management, Core Architectural Principles, Keypress Integration & Scroll Cooperation, Spatial Navigation (Directional Keypad Focus), Visual Candidate Selection
 
-### Community 470 - "Typography"
+### Community 466 - "Spatial Navigation (Directional Keypad Focus)"
 Cohesion: 0.33
 Nodes (5): Best Practices, Build a Scrollspy Navigation, Example code, Fallback strategies, How to implement
 
-### Community 471 - "Visual effects"
+### Community 467 - "Build a Scrollspy Navigation"
 Cohesion: 0.33
 Nodes (5): Adapt scrollbar to high-contrast preferences, Enhance Legibility, Fallbacks & Browser Support, Fallbacks & browser support for scrollbar-color, Issues to be aware of when using scrollbar-color
 
-### Community 472 - "Visually Stable Mixed Fonts"
+### Community 468 - "Adapt scrollbar to high-contrast preferences"
 Cohesion: 0.33
 Nodes (5): Best Practices, Example code, Export HTML content from canvas, Fallback strategies, How to implement
 
-### Community 473 - "ui-extension/template/sidecars/panel/package.json"
+### Community 469 - "Export HTML content from canvas"
 Cohesion: 0.33
 Nodes (5): Overall best practices, Readability, Responsive Typography, Text wrapping, Typography
 
-### Community 474 - "references/template/sidecars/panel/package.json"
+### Community 470 - "Typography"
 Cohesion: 0.33
 Nodes (5): Depth and texture, Fallback, Gradients and `color-mix()`, Patterns, Visual effects
 
-### Community 475 - "How Our Team Rebuilt Inbound Triage with Claude Managed Agents"
+### Community 471 - "Visual effects"
 Cohesion: 0.33
 Nodes (5): Example: Normalizing x-height automatically, Example: Specifying a specific x-height, Fallback strategies, Implementation Steps, Visually Stable Mixed Fonts
 
-### Community 476 - "6. Alignment Assessment & Automated Behavioral Audits"
+### Community 472 - "Visually Stable Mixed Fonts"
 Cohesion: 0.33
 Nodes (5): description, name, private, type, version
 
-### Community 477 - "Governance, Threat Modeling & Safe Access Protocols"
+### Community 473 - "ui-extension/template/sidecars/panel/package.json"
 Cohesion: 0.33
 Nodes (5): description, name, private, type, version
 
-### Community 478 - "Narrative Engineering & Case Studies (Registers 1 & 2)"
+### Community 474 - "references/template/sidecars/panel/package.json"
 Cohesion: 0.33
 Nodes (5): Early Failure Modes & Adaptations, Getting Started, How It Changed How We Work, How Our Team Rebuilt Inbound Triage with Claude Managed Agents, The System Architecture
 
-### Community 479 - "7.16 Current State Audit: Phase 0.8 (Human-in-the-Loop) to Phase 1.0 (Autonomous Walk-Away)"
+### Community 475 - "How Our Team Rebuilt Inbound Triage with Claude Managed Agents"
 Cohesion: 0.33
 Nodes (5): 6.1 Harmlessness Refusals vs. False Refusal Tradeoffs, 6.2 Propensity to Violate Sandbox Boundaries, 6.3 Grader Awareness & Evaluation Gaming, 6. Alignment Assessment & Automated Behavioral Audits, System Card Excerpt: Alignment Assessment & Behavioral Audits
 
-### Community 480 - "7.17 Capital Allocation Matrix: Subscriptions vs. Machine-Facing API Credits"
+### Community 476 - "6. Alignment Assessment & Automated Behavioral Audits"
 Cohesion: 0.33
 Nodes (5): 1. The Shared Responsibility Trust Architecture, 2. Access Grant Tiers (Standard vs. High-Risk), 3. Threat Vector Decomposition, 4. Offline Monitoring vs. Real-Time Blocking, Governance, Threat Modeling & Safe Access Protocols
 
-### Community 481 - "7.5 Deviation Safeguards & The 4 Critical Traps"
+### Community 477 - "Governance, Threat Modeling & Safe Access Protocols"
 Cohesion: 0.33
 Nodes (5): 1. Register 1: The Internal Case Study / Dog-Fooding Formula, 2. Register 2: Product & Feature GA Announcements, Narrative Engineering & Case Studies (Registers 1 & 2), The Narrative Arc, The Structural Blueprint
 
-### Community 482 - "README.md"
+### Community 478 - "Narrative Engineering & Case Studies (Registers 1 & 2)"
 Cohesion: 0.40
 Nodes (5): 7.16 Current State Audit: Phase 0.8 (Human-in-the-Loop) to Phase 1.0 (Autonomous Walk-Away), Phase 0.8: Human-Operated Distributed Cognition (Where You Are Today), Phase 1.0: Machine-Operated Distributed Cognition (The Immediate Target), The Crossing Condition: The "Walk-Away" Benchmark, The North Star Metric: The Autonomy Ratio
 
-### Community 483 - "2. Core Capabilities & Workflows"
+### Community 479 - "7.16 Current State Audit: Phase 0.8 (Human-in-the-Loop) to Phase 1.0 (Autonomous Walk-Away)"
 Cohesion: 0.40
 Nodes (5): 7.17 Capital Allocation Matrix: Subscriptions vs. Machine-Facing API Credits, The 10-Task Diagnostic Benchmark, The Fundamental Dichotomy: Consumer Web UIs vs. Programmatic API Sockets, The "Headstart Powerup" Evaluation: Where to Invest First, The Systemic R&D Vectorized Resource Model
 
-### Community 484 - "PULL_REQUEST_TEMPLATE.md"
+### Community 480 - "7.17 Capital Allocation Matrix: Subscriptions vs. Machine-Facing API Credits"
 Cohesion: 0.40
 Nodes (5): 7.5 Deviation Safeguards & The 4 Critical Traps, Trap 1: The "Grand Unified Platform" Quagmire, Trap 2: The "Formalization Hallucination" Trap, Trap 3: The "Mock Fidelity Mirage", Trap 4: The Legal & "Universal" Open-Texture Fallacy
 
-### Community 485 - "🛡️ ARCHITECTURAL SPECIFICATION: OmniVault Tri-Tier Archival & Storage Optimization Engine"
+### Community 481 - "7.5 Deviation Safeguards & The 4 Critical Traps"
 Cohesion: 0.40
 Nodes (4): 1. Executive Summary & Problem Statement, 2. Tri-Tier Storage Stratification, 3. Empirical Verification & Benchmarks, 🛡️ ARCHITECTURAL SPECIFICATION: OmniVault Tri-Tier Archival & Storage Optimization Engine
 
-### Community 486 - ".route_intent"
-Cohesion: 0.40
-Nodes (5): 1. Schedule & Priorities, 2026-09-23 — Daily Log, 2. Active Projects Progress, 3. Daily Learnings & Conceptual Nodes, 4. Tomorrow's Context (Agent Primer)
-
-### Community 487 - "🏛️ ARCHITECTURAL RFC: ARCH-RFC-002 (The Model Plurality & Multi-Perspective Council Protocol)"
+### Community 482 - "README.md"
 Cohesion: 0.40
 Nodes (5): 1. Schedule & Priorities, 2026-09-24 — Daily Log, 2. Active Projects Progress, 3. Daily Learnings & Conceptual Nodes, 4. Tomorrow's Context (Agent Primer)
 
-### Community 488 - "Brainstorm Research Ecosystem: Capability Mesh & Verification Engine"
-Cohesion: 0.40
-Nodes (5): 1. Technical Competencies & Toolchain, 2. Active Quest Assignments & Deliverables, 3. Verified Artifacts & Authorship Ledger, 4. Contributor Agreement Sign-Off, Contributor Profile: [Full Name]
-
-### Community 489 - "SPARK: Smart Protection & Alerting Resilient Kit"
-Cohesion: 0.40
-Nodes (5): 5. Cohort 0 Launch Quest Catalog, Quest C0-01: Baseline Reproduction & Execution Verification (Rank E), Quest C0-02: Sovereign Source Census & Accessibility Probing (Rank E/D), Quest C0-03: Devanagari Legacy Glyph Transcoding Test Harness (Rank D), Quest C0-04: Tool Module Telemetry & Latency Profiling (Rank D/C)
-
-### Community 490 - "banned_alternatives"
+### Community 483 - "2. Core Capabilities & Workflows"
 Cohesion: 0.40
 Nodes (5): description, items, type, type, banned_alternatives
 
-### Community 492 - "Scaffolding Invariants & Standardized Conventions"
+### Community 485 - "🛡️ ARCHITECTURAL SPECIFICATION: OmniVault Tri-Tier Archival & Storage Optimization Engine"
 Cohesion: 0.40
 Nodes (4): 1. Directory Structure Standards, 2. File Naming Patterns, 3. Mathematical Formula Standards, Scaffolding Invariants & Standardized Conventions
 
-### Community 493 - "Use the CSS :autofill pseudo-class to highlight form fields that have been autofilled by the browser and not edited by the user"
-Cohesion: 0.40
-Nodes (4): 1. Provenance & Version Lifecycle, 2. Invariant Registry, 3. Style & Tone Standards, Baseline Lock & Historical Provenance
-
-### Community 494 - "Break Up Long Tasks"
+### Community 486 - ".route_intent"
 Cohesion: 0.40
 Nodes (4): Fallback strategies, How to implement, Use the correct CSS pseudo-class name, Use the CSS :autofill pseudo-class to highlight form fields that have been autofilled by the browser and not edited by the user
 
-### Community 495 - "Conditional Async Dependencies"
+### Community 487 - "🏛️ ARCHITECTURAL RFC: ARCH-RFC-002 (The Model Plurality & Multi-Perspective Council Protocol)"
 Cohesion: 0.40
 Nodes (4): Break Up Long Tasks, Breaking up long tasks, Fallback for `scheduler.yield()`, Fallback strategies
 
-### Community 496 - "Move DOM Element Without Losing State"
+### Community 488 - "Brainstorm Research Ecosystem: Capability Mesh & Verification Engine"
 Cohesion: 0.40
 Nodes (4): Avoiding the Safari top-level `await` bug, Conditional Async Dependencies, Conditional polyfill pattern, Fallback strategies
 
-### Community 497 - "Theming browser-generated UI"
+### Community 489 - "SPARK: Smart Protection & Alerting Resilient Kit"
 Cohesion: 0.40
 Nodes (4): Fallback strategies, Move DOM Element Without Losing State, Moving an element with state, Moving custom elements (Web Components)
 
-### Community 498 - "Customize the color or thickness of a scrollbar"
+### Community 490 - "banned_alternatives"
 Cohesion: 0.40
 Nodes (4): Multiple choice controls (select, radios, checkboxes), Non-textual `<input>`s (buttons, sliders, file inputs etc.), Styling textual fields (`<input>` & `<textarea>`), Theming browser-generated UI
 
-### Community 499 - "Plugin-Specific Considerations"
+### Community 491 - "clipboard-downloader.ps1"
 Cohesion: 0.40
 Nodes (4): Apply `scrollbar-color` and `scrollbar-width`, Customize the color or thickness of a scrollbar, Fallback strategies, Fallbacks & browser support for scrollbar-color
 
-### Community 500 - "Common Mistakes to Avoid"
+### Community 492 - "Scaffolding Invariants & Standardized Conventions"
 Cohesion: 0.40
 Nodes (5): Auto-Discovery, No Packaging Needed, Plugin-Specific Considerations, Skill Location in Plugins, Testing in Plugins
 
-### Community 501 - "Progressive Disclosure in Practice"
+### Community 493 - "Use the CSS :autofill pseudo-class to highlight form fields that have been autofilled by the browser and not edited by the user"
 Cohesion: 0.40
 Nodes (5): Common Mistakes to Avoid, Mistake 1: Weak Trigger Description, Mistake 2: Too Much in SKILL.md, Mistake 3: Second Person Writing, Mistake 4: Missing Resource References
 
-### Community 502 - "Tier L1 Worked Examples: Portfolio Manifest & Pull Request"
+### Community 494 - "Break Up Long Tasks"
 Cohesion: 0.40
 Nodes (5): Progressive Disclosure in Practice, What Goes in examples/, What Goes in references/, What Goes in scripts/, What Goes in SKILL.md
 
-### Community 503 - "Introducing Claude Haiku 5.5"
+### Community 495 - "Conditional Async Dependencies"
 Cohesion: 0.40
 Nodes (4): 26 passed in 1.42s, Example 1: Portfolio Project Manifest (`portfolio-project-manager`), Example 2: GitHub Pull Request Description (`github-workflow`), Tier L1 Worked Examples: Portfolio Manifest & Pull Request
 
-### Community 504 - "Vocabulary Calibration & Banned Hype Cheatsheet"
+### Community 496 - "Move DOM Element Without Losing State"
 Cohesion: 0.40
 Nodes (4): Benchmark Performance, Introducing Claude Haiku 5.5, Pareto Frontier: Accuracy vs. Operating Cost, Pricing & Availability
 
-### Community 505 - "7.14 Externalized Epistemic Memory & Falsifiable Hypothesis Card Schema"
+### Community 497 - "Theming browser-generated UI"
 Cohesion: 0.40
 Nodes (4): 1. The Banned Hype Blacklist, 2. Active Verb Transformations, 3. Scientific, Benchmark & Regulatory Lexicon, Vocabulary Calibration & Banned Hype Cheatsheet
 
-### Community 506 - "7.15 The Worker Session Runtime: Resolving the Last-Mile Consumer Fleet Bottleneck"
+### Community 498 - "Customize the color or thickness of a scrollbar"
 Cohesion: 0.50
 Nodes (4): 7.14 Externalized Epistemic Memory & Falsifiable Hypothesis Card Schema, Epistemic Repository Architecture, The Hypothesis Card Standard (`research/hypotheses/HYP-template.yaml`), The LLM Consensus Trap
 
-### Community 507 - "7.9 Economic Strategy: Zero-Cost Bootstrapping & The Superlinear Compute Threshold"
+### Community 499 - "Plugin-Specific Considerations"
 Cohesion: 0.50
 Nodes (4): 7.15 The Worker Session Runtime: Resolving the Last-Mile Consumer Fleet Bottleneck, The 3-Stage Implementation Sequencing, The 5-Part Control Loop of the Worker Session Runtime (WSR), The Core Invariant: "The Task Belongs to the Orchestrator, Not the Worker"
 
-### Community 508 - "Incident / Failure Report: Headless PDF Rendering Race Condition & 404 Capture"
+### Community 500 - "Common Mistakes to Avoid"
 Cohesion: 0.50
 Nodes (4): 7.9 Economic Strategy: Zero-Cost Bootstrapping & The Superlinear Compute Threshold, Economic Telemetry Metrics, The 4 Scaling Thresholds, The Capital Asymmetry: Why Constraints Breed Superior Architecture
 
-### Community 509 - "Experiment Log: INV-[ID]"
+### Community 501 - "Progressive Disclosure in Practice"
 Cohesion: 0.50
 Nodes (3): Experiment Log: INV-[ID], Findings & Epistemic Classification, Quantitative Metrics
 
-### Community 510 - "Contributor Profile: [Full Name]"
+### Community 502 - "Tier L1 Worked Examples: Portfolio Manifest & Pull Request"
 Cohesion: 0.50
 Nodes (4): timeout_ms, description, minimum, type
 
-### Community 511 - "timeout_ms"
+### Community 503 - "Introducing Claude Haiku 5.5"
 Cohesion: 0.50
 Nodes (4): description, pattern, type, id
 
-### Community 515 - "Fleet Integration Reference: Super-NLM & Fleet-Orchestrator"
+### Community 507 - "7.9 Economic Strategy: Zero-Cost Bootstrapping & The Superlinear Compute Threshold"
 Cohesion: 0.50
 Nodes (3): 1. Super-NLM Multi-Account Fleet Schema, 2. Fleet-Orchestrator Swarm SKU Reference, Fleet Integration Reference: Super-NLM & Fleet-Orchestrator
 
-### Community 516 - "Declarative SKU DAG Pipeline Reference"
+### Community 508 - "Incident / Failure Report: Headless PDF Rendering Race Condition & 404 Capture"
 Cohesion: 0.50
 Nodes (3): 1. SKU Template Schema (`sku-templates/*.json`), 2. Pipeline Stage Semantics, Declarative SKU DAG Pipeline Reference
 
-### Community 517 - "Fleet-Orchestrator Worker Architecture & Concurrency"
+### Community 509 - "Experiment Log: INV-[ID]"
 Cohesion: 0.50
 Nodes (3): 1. Multi-Account Credit Pooling ($N \times 200$), 2. Worktree Sandboxing, Fleet-Orchestrator Worker Architecture & Concurrency
 
-### Community 518 - "graphify reference: add a URL and watch a folder"
+### Community 510 - "Contributor Profile: [Full Name]"
 Cohesion: 0.50
 Nodes (3): For /graphify add, For --watch, graphify reference: add a URL and watch a folder
 
-### Community 519 - "graphify reference: commit hook and native CLAUDE.md integration"
+### Community 511 - "timeout_ms"
 Cohesion: 0.50
 Nodes (3): For git commit hook, For native CLAUDE.md integration, graphify reference: commit hook and native CLAUDE.md integration
 
-### Community 520 - "graphify reference: incremental update and cluster-only"
+### Community 512 - "id"
 Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
-### Community 521 - "Child State Based Styling"
+### Community 513 - "convert-media.ps1"
 Cohesion: 0.50
 Nodes (3): Child State Based Styling, Fallback strategies, Implementing state-based container styling
 
-### Community 522 - "Content Based Styling"
+### Community 514 - "navbar.js"
 Cohesion: 0.50
 Nodes (3): Content Based Styling, Fallback strategies, Implementing content-based container styling
 
-### Community 523 - "Responsive design"
+### Community 515 - "Fleet Integration Reference: Super-NLM & Fleet-Orchestrator"
 Cohesion: 0.50
 Nodes (3): Overall best practices, Responsive design, Responsive typography
 
-### Community 524 - "Form Fields Automatically Fit Contents"
+### Community 516 - "Declarative SKU DAG Pipeline Reference"
 Cohesion: 0.50
 Nodes (3): Auto-sizing form controls, Fallback strategies, Form Fields Automatically Fit Contents
 
-### Community 525 - "Calculate total foreground time"
+### Community 517 - "Fleet-Orchestrator Worker Architecture & Concurrency"
 Cohesion: 0.50
 Nodes (3): Calculate total foreground time, Fallbacks & browser support, Implementing foreground time calculation
 
-### Community 526 - "Deliver Optimized Decorative Images"
+### Community 518 - "graphify reference: add a URL and watch a folder"
 Cohesion: 0.50
 Nodes (3): Deliver Optimized Decorative Images, Fallback strategies, Implementation
 
-### Community 527 - "Detect Initial Visibility State"
+### Community 519 - "graphify reference: commit hook and native CLAUDE.md integration"
 Cohesion: 0.50
 Nodes (3): Detect Initial Visibility State, Detecting initial visibility and background time, Fallback strategies
 
-### Community 528 - "Resolution Optimized Pseudo Elements"
+### Community 520 - "graphify reference: incremental update and cluster-only"
 Cohesion: 0.50
 Nodes (3): Fallback strategies, Implementation, Resolution Optimized Pseudo Elements
 
-### Community 529 - "Schedule Tasks By Priority"
+### Community 521 - "Child State Based Styling"
 Cohesion: 0.50
 Nodes (3): Fallback strategies, Schedule Tasks By Priority, Scheduling tasks by priority
 
-### Community 530 - "Creating a stagger animation"
+### Community 522 - "Content Based Styling"
 Cohesion: 0.50
 Nodes (3): Creating a stagger animation, Fallback strategies, Stagger animations with `sibling-index()`
 
-### Community 531 - "Group Element Transitions"
+### Community 523 - "Responsive design"
 Cohesion: 0.50
 Nodes (3): Fallback strategies, Group Element Transitions, Implementation steps
 
-### Community 532 - "How to implement"
+### Community 524 - "Form Fields Automatically Fit Contents"
 Cohesion: 0.50
 Nodes (3): Fallback strategies, How to implement, Interest Triggered Action Previews
 
-### Community 533 - "Motion"
+### Community 525 - "Calculate total foreground time"
 Cohesion: 0.50
 Nodes (3): Accessibility, Motion, Performance
 
-### Community 534 - "Persistent Top Layer UI"
+### Community 526 - "Deliver Optimized Decorative Images"
 Cohesion: 0.50
 Nodes (3): Fallback strategies, Persistent Top Layer UI, Reparenting open top-layer elements
 
-### Community 535 - "Quick Reference"
+### Community 527 - "Detect Initial Visibility State"
 Cohesion: 0.50
 Nodes (4): Complete Skill, Minimal Skill, Quick Reference, Standard Skill (Recommended)
 
-### Community 536 - "Writing Style Requirements"
+### Community 528 - "Resolution Optimized Pseudo Elements"
 Cohesion: 0.50
 Nodes (4): Imperative/Infinitive Form, Objective, Instructional Language, Third-Person in Description, Writing Style Requirements
 
-### Community 537 - "audit_file"
+### Community 529 - "Schedule Tasks By Priority"
 Cohesion: 0.83
 Nodes (3): audit_file(), main(), Path
 
-### Community 538 - "validate_ecosystem.py"
+### Community 530 - "Creating a stagger animation"
 Cohesion: 0.67
 Nodes (3): fail(), Dependency-free validation for the canonical ecosystem verification manifest., validate()
 
 ## Knowledge Gaps
-- **3537 isolated node(s):** `WordmarkProps`, `10. Key Lessons Learned`, `1. Problem Statement & Motivation`, `3.1 Drive Manifest (`drive-manifest.json`)`, `3.2 Sync Engine (`scripts/sync_drive.py`)` (+3532 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 4239 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **3547 isolated node(s):** `WordmarkProps`, `10. Key Lessons Learned`, `1. Problem Statement & Motivation`, `3.1 Drive Manifest (`drive-manifest.json`)`, `3.2 Sync Engine (`scripts/sync_drive.py`)` (+3542 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 4246 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `TestAdaptiveOrchestrator` to `ARCH-RFC-006: Public/Private Information Boundary & Security Architecture`, `create_dataset_torrent`, `skills/README.md`, `required`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
-- **Why does `Research & Product Plan: Nepal Sovereign Knowledge Graph & IDBFS Ingestion Engine` connect `Agentic JavaScript Tools` to `Implementation`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Are the 9 inferred relationships involving `TestAdaptiveOrchestrator` (e.g. with `AdaptiveRateGovernor` and `AntigravityMemoryGovernor`) actually correct?**
   _`TestAdaptiveOrchestrator` has 9 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `WordmarkProps`, `10. Key Lessons Learned`, `1. Problem Statement & Motivation` to the rest of the system?**
-  _3537 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _3547 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `4. Step-by-Step Implementation Timeline` be split into smaller, more focused modules?**
   _Cohesion score 0.051228070175438595 - nodes in this community are weakly interconnected._
 - **Should `generate_video.py` be split into smaller, more focused modules?**
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
 - **Should `MCP Integration for Claude Code Plugins` be split into smaller, more focused modules?**
   _Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected._
+- **Should `Accessibility Coding Guidelines` be split into smaller, more focused modules?**
+  _Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected._
+- **Should `nepal_law_harvester.py` be split into smaller, more focused modules?**
+  _Cohesion score 0.06262626262626263 - nodes in this community are weakly interconnected._
 
 ## Graph Freshness
-- **Built at commit:** `a7776a86cff24f99ae22916aecd60de3f689927f`
-- **Built timestamp:** `2026-10-09T12:06:57.510232+00:00`
+- **Built at commit:** `b5aa64cedf797c74cae41f5f5cfdce667e91843f`
+- **Built timestamp:** `2026-10-09T12:11:32.689022+00:00`
 - **Lineage type:** `ancestor_snapshot`

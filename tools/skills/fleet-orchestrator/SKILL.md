@@ -50,6 +50,19 @@ Inspect live Copilot pooled accounts, credit burn rate, and active worker status
 python F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator\tools\copilot_fleet.py status
 ```
 
+### Reconciling Quotas & Viewing Live Burn Rate
+Harvest authentic session logs and view the live multi-account credit burn rate:
+```powershell
+python F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator\tools\copilot_fleet.py reconcile
+python F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator\tools\copilot_fleet.py dashboard
+```
+
+### Context-Firebreak Swarm Execution with Fleet Commander
+Run autonomous batch tasks with child output redirected to logs and a bounded $\le 300$-word manifest:
+```powershell
+python F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator\tools\fleet_commander.py --specs "Task 1" "Task 2" --concurrency 2
+```
+
 ### Launching the Autonomous Queue Worker
 To start polling `orchestrator-state/tasks/` and claiming tasks:
 ```powershell

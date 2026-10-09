@@ -20,8 +20,8 @@ flowchart TD
     
     FastRouter --> RoutingJSON["Structured Ecosystem Payload\n{\n  'archetype': 'ENGINEERING_DEV',\n  'tier': 'Tier 1',\n  'matrix_cell': '(V0, R1)',\n  'policy': 'BRANCH_GUARD',\n  'primary_skill': 'github-workflow',\n  'velocity': 'BALANCED'\n}"]
     
-    RoutingJSON --> Orchestrator["🏰 Lead Orchestrator (adaptive-workflow)"]
-    Orchestrator --> FleetWorkers["🛡️ Fleet Army (Copilot Workers in Git Worktrees)"]
+    RoutingJSON --> Orchestrator["Lead Agent (adaptive-workflow)"]
+    Orchestrator --> FleetWorkers["Headless Worker Pool (Copilot Workers in Git Worktrees)"]
 ```
 
 ---

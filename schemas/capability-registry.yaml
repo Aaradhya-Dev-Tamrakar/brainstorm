@@ -826,4 +826,33 @@ capabilities:
     confidence: 0.95
     last_verified: "2026-10-07"
 
+  - id: "agent-customization-sync"
+    entity_class: "ecosystem_module"
+    name: "Agent-Customization-Sync"
+    repository: "F:\\Aaradhya-Dev-Tamrakar\\Agent-Customization-Sync"
+    category: "ORCHESTRATION_COGNITION"
+    status: "IMPLEMENTED"
+    description: "Antigravity customization state saving, snapshotting, and cross-IDE syncing engine projecting rules, skills, and MCP configs into Cursor, Claude Code, Copilot, and Codex while enforcing an 8,000 token overhead ceiling."
+    inputs:
+      - "Antigravity canonical state (~/.gemini/config/)"
+      - "CLI commands (snapshot, restore, push, audit, status)"
+    outputs:
+      - "Timestamped cryptographic state snapshots (.zip)"
+      - "Transpiled IDE configs (.cursor/rules/*.mdc, CLAUDE.md, copilot-instructions.md)"
+      - "Drift and token budget audit telemetry reports"
+    interfaces:
+      - "CLI (custom_sync.bat / python -m agent_customization_sync.cli)"
+      - "PowerShell wrapper (custom_sync.ps1)"
+    dependencies:
+      - "Python 3.14+"
+      - "Windows NTFS Junctions (mklink /J)"
+      - "Pytest"
+    evidence: "E4"
+    benchmarks: "24/24 unit tests passing, sub-second snapshot creation, 100% byte verification on rollback"
+    verification: "pytest (24/24 passed), custom_sync.bat audit"
+    maintenance_cost: "0.5 hours/month"
+    development_hours: 18
+    confidence: 0.95
+    last_verified: "2026-10-09"
+
 

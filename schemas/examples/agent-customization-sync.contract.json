@@ -1,0 +1,119 @@
+{
+  "$schema": "../capability.contract.v1.json",
+  "module": "Agent-Customization-Sync",
+  "version": "1.0.0",
+  "location": "F:\\Aaradhya-Dev-Tamrakar\\Agent-Customization-Sync",
+  "tracking_branch": "customization-sync",
+  "runtime": "python3.14",
+  "capabilities": [
+    {
+      "id": "create_state_snapshot",
+      "description": "Captures canonical Antigravity configuration (~/.gemini/config/), computes cryptographic SHA-256 Merkle root hash, archives compressed bundle, and enforces rolling 5-slot ring buffer eviction.",
+      "category": "computation",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "deterministic_execution",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 30000,
+      "inputs": {
+        "type": "object",
+        "properties": {
+          "tag": { "type": "string" },
+          "source_dir": { "type": "string" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["snapshot_id", "sha256_root", "token_overhead", "filepath"],
+        "properties": {
+          "snapshot_id": { "type": "string" },
+          "sha256_root": { "type": "string" },
+          "token_overhead": { "type": "integer" },
+          "filepath": { "type": "string" }
+        }
+      }
+    },
+    {
+      "id": "restore_state_snapshot",
+      "description": "Safely restores configuration from a designated snapshot archive, executes automated pre-restore backup, and verifies byte-level hash integrity of all restored items.",
+      "category": "computation",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "deterministic_execution",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 30000,
+      "inputs": {
+        "type": "object",
+        "properties": {
+          "snapshot_id": { "type": "string" },
+          "latest": { "type": "boolean", "default": false },
+          "target_dir": { "type": "string" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["status", "restored_count", "verification_passed"],
+        "properties": {
+          "status": { "type": "string" },
+          "restored_count": { "type": "integer" },
+          "verification_passed": { "type": "boolean" },
+          "pre_backup_path": { "type": "string" }
+        }
+      }
+    },
+    {
+      "id": "transpile_rules_and_mcp",
+      "description": "Transpiles canonical AGENTS.md and mcp_config.json into Cursor modular .cursor/rules/*.mdc, Claude Code CLAUDE.md, VS Code / Copilot .github/copilot-instructions.md, and OpenAI Codex directives.",
+      "category": "computation",
+      "deterministic": true,
+      "side_effects": true,
+      "verification_tier": "deterministic_execution",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 15000,
+      "inputs": {
+        "type": "object",
+        "properties": {
+          "target_ides": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["cursor", "claude", "vscode", "codex", "all"] }
+          },
+          "scrub_env": { "type": "boolean", "default": false }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["success", "projected_targets"],
+        "properties": {
+          "success": { "type": "boolean" },
+          "projected_targets": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    {
+      "id": "audit_drift_and_token_budget",
+      "description": "Performs cross-IDE configuration discrepancy analysis and verifies compliance with the 8,000-token static overhead ceiling and 60% context headroom invariant.",
+      "category": "analysis",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "deterministic_execution",
+      "cost_tier": "zero_token_local",
+      "timeout_ms": 10000,
+      "inputs": {
+        "type": "object",
+        "properties": {
+          "source_dir": { "type": "string" }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "required": ["overall_status", "in_sync", "total_tokens", "is_compliant"],
+        "properties": {
+          "overall_status": { "type": "string" },
+          "in_sync": { "type": "boolean" },
+          "total_tokens": { "type": "integer" },
+          "is_compliant": { "type": "boolean" }
+        }
+      }
+    }
+  ]
+}

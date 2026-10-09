@@ -146,6 +146,9 @@ param (
 
     [switch]$WhatIf,
 
+    [Alias("SyncCustomizations")]
+    [switch]$Customizations,
+
     [switch]$Status
 )
 
@@ -1020,22 +1023,29 @@ function New-EcosystemTool {
     Write-Status "Provisioning new ecosystem tool branch: [$ToolName]..."
     $localBranches = @(git branch --format="%(refname:short)")
 
-    if ($localBranches -notcontains $ToolName) {
-        git fetch origin main 2>$null
-        git branch $ToolName origin/main 2>$null
-        if ($LASTEXITCODE -ne 0) {
-            git branch $ToolName main
+    $origEA = $ErrorActionPreference
+    $ErrorActionPreference = "Continue"
+    try {
+        if ($localBranches -notcontains $ToolName) {
+            & git fetch origin main 2>&1 | Out-Null
+            & git branch $ToolName origin/main 2>&1 | Out-Null
+            if ($LASTEXITCODE -ne 0) {
+                & git branch $ToolName main 2>&1 | Out-Null
+            }
+            Write-Success "Created branch [$ToolName] in brainstorm repo from origin/main base."
         }
-        Write-Success "Created branch [$ToolName] in brainstorm repo from origin/main base."
-    }
-    else {
-        Write-Notice "Branch [$ToolName] already exists in brainstorm repo."
-    }
+        else {
+            Write-Notice "Branch [$ToolName] already exists in brainstorm repo."
+        }
 
-    Write-Status "Pushing branch [$ToolName] to origin..."
-    git push origin $ToolName
-    if ($LASTEXITCODE -eq 0) {
-        Write-Success "Branch [$ToolName] pushed to origin successfully."
+        Write-Status "Pushing branch [$ToolName] to origin..."
+        & git push origin $ToolName 2>&1 | Out-Null
+        if ($LASTEXITCODE -eq 0) {
+            Write-Success "Branch [$ToolName] pushed to origin successfully."
+        }
+    }
+    finally {
+        $ErrorActionPreference = $origEA
     }
 
     # Check if a matching directory exists on disk
@@ -1119,6 +1129,17 @@ try {
     if ($CrossSync -or $CrossPull) {
         Invoke-CrossSync -Pull:$CrossPull
         exit 0
+    }
+
+    if ($Customizations) {
+        Write-Status "Invoking Agent-Customization-Sync snapshot and cross-IDE push..." -Color ([System.ConsoleColor]::Cyan)
+        $customSyncBat = "F:\Aaradhya-Dev-Tamrakar\Agent-Customization-Sync\custom_sync.bat"
+        if (Test-Path $customSyncBat) {
+            & $customSyncBat snapshot --tag "brainstorm_sync"
+            & $customSyncBat push --all
+        } else {
+            Write-Notice "Agent-Customization-Sync wrapper not found at $customSyncBat"
+        }
     }
 
     if ($Reconcile) {

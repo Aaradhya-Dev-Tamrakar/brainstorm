@@ -1,7 +1,7 @@
 # Graph Report - brainstorm  (2026-10-09)
 
 ## Corpus Check
-- Large corpus: 661 files · ~1,027,898 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
+- Large corpus: 661 files · ~1,027,938 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
 
 ## Summary
 - 6460 nodes · 7282 edges · 580 communities (547 shown, 17 thin omitted)
@@ -2799,8 +2799,12 @@ Nodes (3): 1.1 The Revolutionary Fallacy vs. The Evolutionary Invariant, 1.2 The
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `Brainstorm Research Laboratory — How Cohort 0 Works` connect `Out-of-Order (OOO) HTML Streaming` to `Agent Teams Orchestration Skill`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `save_chat.py` to `PLAN-GCP-001: Google Classroom Pilot Architectural Plan & Roadmap 🎓🧭`, `2. Cross-Session Handoff Prompts`, `Performance`, `Multi-Remote Synchronization & Ecosystem Automation`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `Multi-Remote Synchronization & Ecosystem Automation` to `fleet-orchestrator.contract.json`, `Fleet Integration Reference: Super-NLM & Fleet-Orchestrator`, `Declarative SKU DAG Pipeline Reference`, `.route_intent`, `🏛️ ARCHITECTURAL RFC: ARCH-RFC-002 (The Model Plurality & Multi-Perspective Council Protocol)`, `invariants_checked`, `Brainstorm Research Ecosystem: Capability Mesh & Verification Engine`, `Fleet-Orchestrator Worker Architecture & Concurrency`, `save_chat.py`?**
+  _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **Are the 9 inferred relationships involving `TestAdaptiveOrchestrator` (e.g. with `AdaptiveRateGovernor` and `AntigravityMemoryGovernor`) actually correct?**
   _`TestAdaptiveOrchestrator` has 9 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 21 inferred relationships involving `ValueError` (e.g. with `extract_plot_from_notebook()` and `bdecode()`) actually correct?**
@@ -2809,12 +2813,8 @@ _Questions this graph is uniquely positioned to answer:_
   _3556 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `4. Step-by-Step Implementation Timeline` be split into smaller, more focused modules?**
   _Cohesion score 0.051228070175438595 - nodes in this community are weakly interconnected._
-- **Should `generate_video.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
-- **Should `MCP Integration for Claude Code Plugins` be split into smaller, more focused modules?**
-  _Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected._
 
 ## Graph Freshness
-- **Built at commit:** `724ff2e53560706682bdd23e264c0a06be75418b`
-- **Built timestamp:** `2026-10-09T15:16:21.295710+00:00`
+- **Built at commit:** `35c7385f1ba7dac65f9548b8604e61b2d8237e3c`
+- **Built timestamp:** `2026-10-09T15:46:44.077680+00:00`
 - **Lineage type:** `ancestor_snapshot`

@@ -1,6 +1,6 @@
 {
-  "built_at_commit": "724ff2e53560706682bdd23e264c0a06be75418b",
-  "built_timestamp": "2026-10-09T15:16:21.295710+00:00",
+  "built_at_commit": "35c7385f1ba7dac65f9548b8604e61b2d8237e3c",
+  "built_timestamp": "2026-10-09T15:46:44.077680+00:00",
   "lineage_type": "ancestor_snapshot",
   "communities": {
     "0": [
@@ -675,14 +675,14 @@
       "sim_adaptive_orchestrator_rationale_1",
       "sim_adaptive_orchestrator_rationale_108",
       "sim_adaptive_orchestrator_rationale_117",
-      "sim_adaptive_orchestrator_rationale_1281",
+      "sim_adaptive_orchestrator_rationale_1294",
       "sim_adaptive_orchestrator_rationale_46",
       "sim_adaptive_orchestrator_rationale_679",
       "sim_adaptive_orchestrator_rationale_81",
-      "sim_adaptive_orchestrator_rationale_830",
-      "sim_adaptive_orchestrator_rationale_837",
-      "sim_adaptive_orchestrator_rationale_851",
-      "sim_adaptive_orchestrator_rationale_878",
+      "sim_adaptive_orchestrator_rationale_843",
+      "sim_adaptive_orchestrator_rationale_850",
+      "sim_adaptive_orchestrator_rationale_864",
+      "sim_adaptive_orchestrator_rationale_891",
       "sim_adaptive_orchestrator_resilient_rmtree",
       "sim_adaptive_orchestrator_resilient_unlink",
       "sim_adaptive_orchestrator_rmtree_onerror",
@@ -2012,7 +2012,7 @@
       "sim_adaptive_orchestrator_deterministiccpmscheduler_calculate_schedule",
       "sim_adaptive_orchestrator_find_directed_cycle",
       "sim_adaptive_orchestrator_fleetfirstbridge_format_context_firebreak_manifest",
-      "sim_adaptive_orchestrator_rationale_1238",
+      "sim_adaptive_orchestrator_rationale_1251",
       "sim_adaptive_orchestrator_rationale_694",
       "sim_adaptive_orchestrator_rationale_733",
       "sim_test_adaptive_orchestrator_rationale_103",
@@ -2038,13 +2038,13 @@
       "sim_adaptive_orchestrator_fleetfirstbridge_is_lm_studio_online",
       "sim_adaptive_orchestrator_fleetfirstbridge_is_queue_worker_active",
       "sim_adaptive_orchestrator_fleetfirstbridge_route_intent",
-      "sim_adaptive_orchestrator_rationale_1004",
-      "sim_adaptive_orchestrator_rationale_1048",
-      "sim_adaptive_orchestrator_rationale_1073",
-      "sim_adaptive_orchestrator_rationale_1184",
-      "sim_adaptive_orchestrator_rationale_942",
-      "sim_adaptive_orchestrator_rationale_971",
-      "sim_adaptive_orchestrator_rationale_980",
+      "sim_adaptive_orchestrator_rationale_1017",
+      "sim_adaptive_orchestrator_rationale_1061",
+      "sim_adaptive_orchestrator_rationale_1086",
+      "sim_adaptive_orchestrator_rationale_1197",
+      "sim_adaptive_orchestrator_rationale_955",
+      "sim_adaptive_orchestrator_rationale_984",
+      "sim_adaptive_orchestrator_rationale_993",
       "sim_test_adaptive_orchestrator_rationale_160",
       "sim_test_adaptive_orchestrator_rationale_241",
       "sim_test_adaptive_orchestrator_rationale_257",
@@ -3776,10 +3776,10 @@
       "sim_adaptive_orchestrator_deterministictransactionalrecovery_create_snapshot",
       "sim_adaptive_orchestrator_deterministictransactionalrecovery_rollback",
       "sim_adaptive_orchestrator_deterministictransactionalrecovery_verify_integrity",
-      "sim_adaptive_orchestrator_rationale_1277",
-      "sim_adaptive_orchestrator_rationale_1300",
-      "sim_adaptive_orchestrator_rationale_1324",
-      "sim_adaptive_orchestrator_rationale_1368",
+      "sim_adaptive_orchestrator_rationale_1290",
+      "sim_adaptive_orchestrator_rationale_1313",
+      "sim_adaptive_orchestrator_rationale_1337",
+      "sim_adaptive_orchestrator_rationale_1381",
       "sim_test_adaptive_orchestrator_rationale_184",
       "sim_test_adaptive_orchestrator_rationale_354",
       "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_07_transactional_integrity_and_hashing",
@@ -4626,10 +4626,10 @@
       "sim_adaptive_orchestrator_orchestratorfencingmanager_acquire_lease",
       "sim_adaptive_orchestrator_orchestratorfencingmanager_evict_stale_lease",
       "sim_adaptive_orchestrator_orchestratorfencingmanager_verify_branch_merge",
-      "sim_adaptive_orchestrator_rationale_906",
-      "sim_adaptive_orchestrator_rationale_915",
-      "sim_adaptive_orchestrator_rationale_922",
-      "sim_adaptive_orchestrator_rationale_929",
+      "sim_adaptive_orchestrator_rationale_919",
+      "sim_adaptive_orchestrator_rationale_928",
+      "sim_adaptive_orchestrator_rationale_935",
+      "sim_adaptive_orchestrator_rationale_942",
       "sim_test_adaptive_orchestrator_rationale_456",
       "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_17_orchestrator_fencing_manager"
     ],
@@ -8318,8 +8318,18 @@
   "questions": [
     {
       "type": "bridge_node",
+      "question": "Why does `Brainstorm Research Laboratory — How Cohort 0 Works` connect `Out-of-Order (OOO) HTML Streaming` to `Agent Teams Orchestration Skill`?",
+      "why": "High betweenness centrality (0.007) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
       "question": "Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `save_chat.py` to `PLAN-GCP-001: Google Classroom Pilot Architectural Plan & Roadmap 🎓🧭`, `2. Cross-Session Handoff Prompts`, `Performance`, `Multi-Remote Synchronization & Ecosystem Automation`?",
-      "why": "High betweenness centrality (0.010) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.006) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `Multi-Remote Synchronization & Ecosystem Automation` to `fleet-orchestrator.contract.json`, `Fleet Integration Reference: Super-NLM & Fleet-Orchestrator`, `Declarative SKU DAG Pipeline Reference`, `.route_intent`, `🏛️ ARCHITECTURAL RFC: ARCH-RFC-002 (The Model Plurality & Multi-Perspective Council Protocol)`, `invariants_checked`, `Brainstorm Research Ecosystem: Capability Mesh & Verification Engine`, `Fleet-Orchestrator Worker Architecture & Concurrency`, `save_chat.py`?",
+      "why": "High betweenness centrality (0.005) - this node is a cross-community bridge."
     },
     {
       "type": "verify_inferred",
@@ -8340,16 +8350,6 @@
       "type": "low_cohesion",
       "question": "Should `4. Step-by-Step Implementation Timeline` be split into smaller, more focused modules?",
       "why": "Cohesion score 0.051228070175438595 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `generate_video.py` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `MCP Integration for Claude Code Plugins` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected."
     }
   ]
 }

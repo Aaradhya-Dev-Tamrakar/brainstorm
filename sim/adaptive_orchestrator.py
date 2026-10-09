@@ -766,10 +766,23 @@ class DeterministicCPMScheduler:
 
             raise DAGCycleError(cycle=cycle, unresolved_tasks=unresolved, remediation=edge_to_break)
 
+        def _get_task_duration(t: Dict[str, Any]) -> float:
+            if "duration" in t:
+                return float(t["duration"])
+            if "cpm_weight" in t:
+                return float(t["cpm_weight"])
+            if "time_allocation" in t and isinstance(t["time_allocation"], dict):
+                ta = t["time_allocation"]
+                if "cpm_weight" in ta:
+                    return float(ta["cpm_weight"])
+                if "estimated_duration_s" in ta:
+                    return float(ta["estimated_duration_s"])
+            return 1.0
+
         es: Dict[str, float] = {}
         ef: Dict[str, float] = {}
         for u in topo_order:
-            duration = float(task_dict[u].get("duration", 1))
+            duration = _get_task_duration(task_dict[u])
             u_preds = preds[u]
             es[u] = max([ef[p] for p in u_preds], default=0.0)
             ef[u] = es[u] + duration
@@ -779,7 +792,7 @@ class DeterministicCPMScheduler:
         ls: Dict[str, float] = {}
         lf: Dict[str, float] = {}
         for u in reversed(topo_order):
-            duration = float(task_dict[u].get("duration", 1))
+            duration = _get_task_duration(task_dict[u])
             u_succs = succs[u]
             lf[u] = min([ls[s] for s in u_succs], default=project_duration)
             ls[u] = lf[u] - duration

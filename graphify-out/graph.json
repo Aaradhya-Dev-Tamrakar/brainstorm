@@ -235,7 +235,7 @@
       "file_type": "code",
       "norm_label": "preexistingfileguard",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L829"
+      "source_location": "L842"
     },
     {
       "id": "sim_adaptive_orchestrator_deterministictransactionalrecovery",
@@ -248,7 +248,7 @@
       "file_type": "code",
       "norm_label": "deterministictransactionalrecovery",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1276"
+      "source_location": "L1289"
     },
     {
       "id": "sim_test_invariant_engine_invariantassuranceenginetests",
@@ -287,7 +287,7 @@
       "file_type": "code",
       "norm_label": "orchestratorfencingmanager",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L905"
+      "source_location": "L918"
     },
     {
       "id": "tools_preeti_converter_converter_gui_preeticonverterapp",
@@ -677,7 +677,7 @@
       "file_type": "code",
       "norm_label": "fleetfirstbridge",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L941"
+      "source_location": "L954"
     },
     {
       "id": "sim_nepal_law_harvester_circuitbreaker",
@@ -2761,7 +2761,7 @@
       "file_type": "code",
       "norm_label": ".compute_file_hashes()",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1280"
+      "source_location": "L1293"
     },
     {
       "id": "sim_adaptive_orchestrator_get_git_common_dir",
@@ -2785,7 +2785,7 @@
       "file_type": "code",
       "norm_label": ".get_backup_dir()",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L836"
+      "source_location": "L849"
     },
     {
       "id": "sim_adaptive_orchestrator_preexistingfileguard_prepare_projection",
@@ -2797,7 +2797,7 @@
       "file_type": "code",
       "norm_label": ".prepare_projection()",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L844"
+      "source_location": "L857"
     },
     {
       "id": "sim_adaptive_orchestrator_preexistingfileguard_teardown_projection",
@@ -2809,7 +2809,7 @@
       "file_type": "code",
       "norm_label": ".teardown_projection()",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L871"
+      "source_location": "L884"
     },
     {
       "id": "sim_adaptive_orchestrator_resilient_rmtree",
@@ -2881,7 +2881,7 @@
       "file_type": "code",
       "norm_label": ".create_snapshot()",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1321"
+      "source_location": "L1334"
     },
     {
       "id": "sim_adaptive_orchestrator_deterministictransactionalrecovery_rollback",
@@ -2893,7 +2893,7 @@
       "file_type": "code",
       "norm_label": ".rollback()",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1365"
+      "source_location": "L1378"
     },
     {
       "id": "sim_adaptive_orchestrator_deterministictransactionalrecovery_verify_integrity",
@@ -2905,7 +2905,7 @@
       "file_type": "code",
       "norm_label": ".verify_integrity()",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1294"
+      "source_location": "L1307"
     },
     {
       "id": "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_07_transactional_integrity_and_hashing",
@@ -3445,7 +3445,7 @@
       "file_type": "code",
       "norm_label": ".acquire_lease()",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L914"
+      "source_location": "L927"
     },
     {
       "id": "sim_adaptive_orchestrator_orchestratorfencingmanager_evict_stale_lease",
@@ -3457,7 +3457,7 @@
       "file_type": "code",
       "norm_label": ".evict_stale_lease()",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L921"
+      "source_location": "L934"
     },
     {
       "id": "sim_adaptive_orchestrator_orchestratorfencingmanager_verify_branch_merge",
@@ -3469,7 +3469,7 @@
       "file_type": "code",
       "norm_label": ".verify_branch_merge()",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L928"
+      "source_location": "L941"
     },
     {
       "id": "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_17_orchestrator_fencing_manager",
@@ -6841,7 +6841,7 @@
       "file_type": "code",
       "norm_label": ".format_context_firebreak_manifest()",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1229"
+      "source_location": "L1242"
     },
     {
       "id": "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_03_zero_ai_fast_path_detection",
@@ -6925,7 +6925,7 @@
       "file_type": "code",
       "norm_label": ".create_fleet_task_manifest()",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1173"
+      "source_location": "L1186"
     },
     {
       "id": "sim_adaptive_orchestrator_fleetfirstbridge_ensure_queue_worker_running",
@@ -6937,7 +6937,7 @@
       "file_type": "code",
       "norm_label": ".ensure_queue_worker_running()",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L999"
+      "source_location": "L1012"
     },
     {
       "id": "sim_adaptive_orchestrator_fleetfirstbridge_get_router_telemetry",
@@ -6949,7 +6949,7 @@
       "file_type": "code",
       "norm_label": ".get_router_telemetry()",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1047"
+      "source_location": "L1060"
     },
     {
       "id": "sim_adaptive_orchestrator_fleetfirstbridge_is_lm_studio_online",
@@ -6961,7 +6961,7 @@
       "file_type": "code",
       "norm_label": ".is_lm_studio_online()",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L970"
+      "source_location": "L983"
     },
     {
       "id": "sim_adaptive_orchestrator_fleetfirstbridge_is_queue_worker_active",
@@ -6973,7 +6973,7 @@
       "file_type": "code",
       "norm_label": ".is_queue_worker_active()",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L979"
+      "source_location": "L992"
     },
     {
       "id": "sim_adaptive_orchestrator_fleetfirstbridge_route_intent",
@@ -6985,7 +6985,7 @@
       "file_type": "code",
       "norm_label": ".route_intent()",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1072"
+      "source_location": "L1085"
     },
     {
       "id": "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_05_local_router_integration",
@@ -19471,7 +19471,7 @@
       "source_location": "L117"
     },
     {
-      "id": "sim_adaptive_orchestrator_rationale_1281",
+      "id": "sim_adaptive_orchestrator_rationale_1294",
       "label": "Calculates cryptographic SHA-256 digests for target files.",
       "_origin": "ast",
       "community": 16,
@@ -19479,7 +19479,7 @@
       "file_type": "rationale",
       "norm_label": "calculates cryptographic sha-256 digests for target files.",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1281"
+      "source_location": "L1294"
     },
     {
       "id": "sim_adaptive_orchestrator_rationale_46",
@@ -19515,7 +19515,7 @@
       "source_location": "L81"
     },
     {
-      "id": "sim_adaptive_orchestrator_rationale_830",
+      "id": "sim_adaptive_orchestrator_rationale_843",
       "label": "Guarantees that worktree projection never overwrites or unlinks pre-existing\u2026",
       "_origin": "ast",
       "community": 16,
@@ -19523,10 +19523,10 @@
       "file_type": "rationale",
       "norm_label": "guarantees that worktree projection never overwrites or unlinks pre-existing...",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L830"
+      "source_location": "L843"
     },
     {
-      "id": "sim_adaptive_orchestrator_rationale_837",
+      "id": "sim_adaptive_orchestrator_rationale_850",
       "label": "Resolves backup directory inside the git common directory.",
       "_origin": "ast",
       "community": 16,
@@ -19534,10 +19534,10 @@
       "file_type": "rationale",
       "norm_label": "resolves backup directory inside the git common directory.",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L837"
+      "source_location": "L850"
     },
     {
-      "id": "sim_adaptive_orchestrator_rationale_851",
+      "id": "sim_adaptive_orchestrator_rationale_864",
       "label": "Backs up any declared file that already exists on disk before projection.\u2026",
       "_origin": "ast",
       "community": 16,
@@ -19545,10 +19545,10 @@
       "file_type": "rationale",
       "norm_label": "backs up any declared file that already exists on disk before projection....",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L851"
+      "source_location": "L864"
     },
     {
-      "id": "sim_adaptive_orchestrator_rationale_878",
+      "id": "sim_adaptive_orchestrator_rationale_891",
       "label": "Restores backed up pre-existing files and unlinks only ephemerally created\u2026",
       "_origin": "ast",
       "community": 16,
@@ -19556,7 +19556,7 @@
       "file_type": "rationale",
       "norm_label": "restores backed up pre-existing files and unlinks only ephemerally created...",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L878"
+      "source_location": "L891"
     },
     {
       "id": "sim_test_adaptive_orchestrator_rationale_1",
@@ -20864,7 +20864,7 @@
       "source_location": "L88"
     },
     {
-      "id": "sim_adaptive_orchestrator_rationale_1277",
+      "id": "sim_adaptive_orchestrator_rationale_1290",
       "label": "Manages Git snapshot ring buffer (refs/backup/snapshot-1..3) and pre/post\u2026",
       "_origin": "ast",
       "community": 169,
@@ -20872,10 +20872,10 @@
       "file_type": "rationale",
       "norm_label": "manages git snapshot ring buffer (refs/backup/snapshot-1..3) and pre/post...",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1277"
+      "source_location": "L1290"
     },
     {
-      "id": "sim_adaptive_orchestrator_rationale_1300",
+      "id": "sim_adaptive_orchestrator_rationale_1313",
       "label": "Verifies that only intended files were modified and zero collateral corruption\u2026",
       "_origin": "ast",
       "community": 169,
@@ -20883,10 +20883,10 @@
       "file_type": "rationale",
       "norm_label": "verifies that only intended files were modified and zero collateral corruption...",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1300"
+      "source_location": "L1313"
     },
     {
-      "id": "sim_adaptive_orchestrator_rationale_1324",
+      "id": "sim_adaptive_orchestrator_rationale_1337",
       "label": "Captures atomic Git recovery reference in refs/backup/snapshot-1.",
       "_origin": "ast",
       "community": 169,
@@ -20894,10 +20894,10 @@
       "file_type": "rationale",
       "norm_label": "captures atomic git recovery reference in refs/backup/snapshot-1.",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1324"
+      "source_location": "L1337"
     },
     {
-      "id": "sim_adaptive_orchestrator_rationale_1368",
+      "id": "sim_adaptive_orchestrator_rationale_1381",
       "label": "Restores git state from snapshot reference.",
       "_origin": "ast",
       "community": 169,
@@ -20905,7 +20905,7 @@
       "file_type": "rationale",
       "norm_label": "restores git state from snapshot reference.",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1368"
+      "source_location": "L1381"
     },
     {
       "id": "sim_test_adaptive_orchestrator_rationale_184",
@@ -31889,7 +31889,7 @@
       "source_location": "L1"
     },
     {
-      "id": "sim_adaptive_orchestrator_rationale_906",
+      "id": "sim_adaptive_orchestrator_rationale_919",
       "label": "Maintains monotonic lease fencing tokens per task to reject split-brain writes\u2026",
       "_origin": "ast",
       "community": 234,
@@ -31897,10 +31897,10 @@
       "file_type": "rationale",
       "norm_label": "maintains monotonic lease fencing tokens per task to reject split-brain writes...",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L906"
+      "source_location": "L919"
     },
     {
-      "id": "sim_adaptive_orchestrator_rationale_915",
+      "id": "sim_adaptive_orchestrator_rationale_928",
       "label": "Acquires a lease, generating or maintaining current fencing epoch.",
       "_origin": "ast",
       "community": 234,
@@ -31908,10 +31908,10 @@
       "file_type": "rationale",
       "norm_label": "acquires a lease, generating or maintaining current fencing epoch.",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L915"
+      "source_location": "L928"
     },
     {
-      "id": "sim_adaptive_orchestrator_rationale_922",
+      "id": "sim_adaptive_orchestrator_rationale_935",
       "label": "Evicts a stale lease, bumping the monotonic fencing epoch.",
       "_origin": "ast",
       "community": 234,
@@ -31919,10 +31919,10 @@
       "file_type": "rationale",
       "norm_label": "evicts a stale lease, bumping the monotonic fencing epoch.",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L922"
+      "source_location": "L935"
     },
     {
-      "id": "sim_adaptive_orchestrator_rationale_929",
+      "id": "sim_adaptive_orchestrator_rationale_942",
       "label": "Verifies that worker epoch equals active orchestrator fencing epoch. Rejects\u2026",
       "_origin": "ast",
       "community": 234,
@@ -31930,7 +31930,7 @@
       "file_type": "rationale",
       "norm_label": "verifies that worker epoch equals active orchestrator fencing epoch. rejects...",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L929"
+      "source_location": "L942"
     },
     {
       "id": "sim_test_adaptive_orchestrator_rationale_456",
@@ -69586,7 +69586,7 @@
       "source_location": "L67"
     },
     {
-      "id": "sim_adaptive_orchestrator_rationale_1238",
+      "id": "sim_adaptive_orchestrator_rationale_1251",
       "label": "Formats an executive delivery manifest strictly bounded to <300 words to\u2026",
       "_origin": "ast",
       "community": 68,
@@ -69594,7 +69594,7 @@
       "file_type": "rationale",
       "norm_label": "formats an executive delivery manifest strictly bounded to <300 words to...",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1238"
+      "source_location": "L1251"
     },
     {
       "id": "sim_adaptive_orchestrator_rationale_694",
@@ -69696,7 +69696,7 @@
       "source_location": "L471"
     },
     {
-      "id": "sim_adaptive_orchestrator_rationale_1004",
+      "id": "sim_adaptive_orchestrator_rationale_1017",
       "label": "Ensures copilot_queue_worker.py is actively processing tasks. Spawns headless\u2026",
       "_origin": "ast",
       "community": 69,
@@ -69704,10 +69704,10 @@
       "file_type": "rationale",
       "norm_label": "ensures copilot_queue_worker.py is actively processing tasks. spawns headless...",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1004"
+      "source_location": "L1017"
     },
     {
-      "id": "sim_adaptive_orchestrator_rationale_1048",
+      "id": "sim_adaptive_orchestrator_rationale_1061",
       "label": "Returns live router telemetry and state transitions.",
       "_origin": "ast",
       "community": 69,
@@ -69715,10 +69715,10 @@
       "file_type": "rationale",
       "norm_label": "returns live router telemetry and state transitions.",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1048"
+      "source_location": "L1061"
     },
     {
-      "id": "sim_adaptive_orchestrator_rationale_1073",
+      "id": "sim_adaptive_orchestrator_rationale_1086",
       "label": "Routes intent through LM Studio port 1234 if active, else uses deterministic\u2026",
       "_origin": "ast",
       "community": 69,
@@ -69726,10 +69726,10 @@
       "file_type": "rationale",
       "norm_label": "routes intent through lm studio port 1234 if active, else uses deterministic...",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1073"
+      "source_location": "L1086"
     },
     {
-      "id": "sim_adaptive_orchestrator_rationale_1184",
+      "id": "sim_adaptive_orchestrator_rationale_1197",
       "label": "Generates declarative Fleet-Orchestrator task JSON conforming to SCHEMA.md.",
       "_origin": "ast",
       "community": 69,
@@ -69737,10 +69737,10 @@
       "file_type": "rationale",
       "norm_label": "generates declarative fleet-orchestrator task json conforming to schema.md.",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1184"
+      "source_location": "L1197"
     },
     {
-      "id": "sim_adaptive_orchestrator_rationale_942",
+      "id": "sim_adaptive_orchestrator_rationale_955",
       "label": "Interfaces with local Qwen router (LM Studio port 1234) and marshals Fleet-\u2026",
       "_origin": "ast",
       "community": 69,
@@ -69748,10 +69748,10 @@
       "file_type": "rationale",
       "norm_label": "interfaces with local qwen router (lm studio port 1234) and marshals fleet-...",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L942"
+      "source_location": "L955"
     },
     {
-      "id": "sim_adaptive_orchestrator_rationale_971",
+      "id": "sim_adaptive_orchestrator_rationale_984",
       "label": "Sub-millisecond socket check to verify LM Studio port 1234.",
       "_origin": "ast",
       "community": 69,
@@ -69759,10 +69759,10 @@
       "file_type": "rationale",
       "norm_label": "sub-millisecond socket check to verify lm studio port 1234.",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L971"
+      "source_location": "L984"
     },
     {
-      "id": "sim_adaptive_orchestrator_rationale_980",
+      "id": "sim_adaptive_orchestrator_rationale_993",
       "label": "Checks whether an active copilot_queue_worker process is running.",
       "_origin": "ast",
       "community": 69,
@@ -69770,7 +69770,7 @@
       "file_type": "rationale",
       "norm_label": "checks whether an active copilot_queue_worker process is running.",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L980"
+      "source_location": "L993"
     },
     {
       "id": "sim_test_adaptive_orchestrator_rationale_160",
@@ -77438,7 +77438,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1284",
+      "source_location": "L1297",
       "weight": 1.0
     },
     {
@@ -77450,7 +77450,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1301",
+      "source_location": "L1314",
       "weight": 1.0
     },
     {
@@ -77534,7 +77534,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1222",
+      "source_location": "L1235",
       "weight": 1.0
     },
     {
@@ -77546,7 +77546,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1008",
+      "source_location": "L1021",
       "weight": 1.0
     },
     {
@@ -77558,7 +77558,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1011",
+      "source_location": "L1024",
       "weight": 1.0
     },
     {
@@ -77570,7 +77570,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1049",
+      "source_location": "L1062",
       "weight": 1.0
     },
     {
@@ -77582,7 +77582,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1076",
+      "source_location": "L1089",
       "weight": 1.0
     },
     {
@@ -77606,7 +77606,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L838",
+      "source_location": "L851",
       "weight": 1.0
     },
     {
@@ -77618,7 +77618,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L855",
+      "source_location": "L868",
       "weight": 1.0
     },
     {
@@ -77630,7 +77630,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L881",
+      "source_location": "L894",
       "weight": 1.0
     },
     {
@@ -77642,7 +77642,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L887",
+      "source_location": "L900",
       "weight": 1.0
     },
     {
@@ -77654,7 +77654,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L896",
+      "source_location": "L909",
       "weight": 1.0
     },
     {
@@ -83570,7 +83570,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1294",
+      "source_location": "L1307",
       "weight": 1.0
     },
     {
@@ -83654,7 +83654,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1173",
+      "source_location": "L1186",
       "weight": 1.0
     },
     {
@@ -83666,7 +83666,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1047",
+      "source_location": "L1060",
       "weight": 1.0
     },
     {
@@ -83678,7 +83678,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1072",
+      "source_location": "L1085",
       "weight": 1.0
     },
     {
@@ -83690,7 +83690,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L844",
+      "source_location": "L857",
       "weight": 1.0
     },
     {
@@ -83702,7 +83702,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L871",
+      "source_location": "L884",
       "weight": 1.0
     },
     {
@@ -88322,7 +88322,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L836",
+      "source_location": "L849",
       "weight": 1.0
     },
     {
@@ -108262,7 +108262,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1276",
+      "source_location": "L1289",
       "weight": 1.0
     },
     {
@@ -108361,7 +108361,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L829",
+      "source_location": "L842",
       "weight": 1.0
     },
     {
@@ -108372,7 +108372,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L905",
+      "source_location": "L918",
       "weight": 1.0
     },
     {
@@ -108383,7 +108383,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L941",
+      "source_location": "L954",
       "weight": 1.0
     },
     {
@@ -147279,7 +147279,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1280",
+      "source_location": "L1293",
       "weight": 1.0
     },
     {
@@ -147290,7 +147290,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1294",
+      "source_location": "L1307",
       "weight": 1.0
     },
     {
@@ -147301,7 +147301,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1321",
+      "source_location": "L1334",
       "weight": 1.0
     },
     {
@@ -147312,7 +147312,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1365",
+      "source_location": "L1378",
       "weight": 1.0
     },
     {
@@ -147383,13 +147383,24 @@
     },
     {
       "source": "sim_adaptive_orchestrator_fleetfirstbridge",
+      "target": "sim_adaptive_orchestrator_fleetfirstbridge_ensure_queue_worker_running",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "sim/adaptive_orchestrator.py",
+      "source_location": "L1012",
+      "weight": 1.0
+    },
+    {
+      "source": "sim_adaptive_orchestrator_fleetfirstbridge",
       "target": "sim_adaptive_orchestrator_fleetfirstbridge_get_router_telemetry",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1047",
+      "source_location": "L1060",
       "weight": 1.0
     },
     {
@@ -147400,7 +147411,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1072",
+      "source_location": "L1085",
       "weight": 1.0
     },
     {
@@ -147411,7 +147422,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1173",
+      "source_location": "L1186",
       "weight": 1.0
     },
     {
@@ -147422,7 +147433,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1229",
+      "source_location": "L1242",
       "weight": 1.0
     },
     {
@@ -147433,7 +147444,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L970",
+      "source_location": "L983",
       "weight": 1.0
     },
     {
@@ -147444,18 +147455,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L979",
-      "weight": 1.0
-    },
-    {
-      "source": "sim_adaptive_orchestrator_fleetfirstbridge",
-      "target": "sim_adaptive_orchestrator_fleetfirstbridge_ensure_queue_worker_running",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L999",
+      "source_location": "L992",
       "weight": 1.0
     },
     {
@@ -147466,7 +147466,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L914",
+      "source_location": "L927",
       "weight": 1.0
     },
     {
@@ -147477,7 +147477,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L921",
+      "source_location": "L934",
       "weight": 1.0
     },
     {
@@ -147488,7 +147488,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L928",
+      "source_location": "L941",
       "weight": 1.0
     },
     {
@@ -147499,7 +147499,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L836",
+      "source_location": "L849",
       "weight": 1.0
     },
     {
@@ -147510,7 +147510,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L844",
+      "source_location": "L857",
       "weight": 1.0
     },
     {
@@ -147521,7 +147521,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L871",
+      "source_location": "L884",
       "weight": 1.0
     },
     {
@@ -150330,36 +150330,25 @@
       "weight": 1.0
     },
     {
-      "source": "sim_adaptive_orchestrator_rationale_1004",
+      "source": "sim_adaptive_orchestrator_rationale_1017",
       "target": "sim_adaptive_orchestrator_fleetfirstbridge_ensure_queue_worker_running",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1004",
+      "source_location": "L1017",
       "weight": 1.0
     },
     {
-      "source": "sim_adaptive_orchestrator_rationale_1048",
+      "source": "sim_adaptive_orchestrator_rationale_1061",
       "target": "sim_adaptive_orchestrator_fleetfirstbridge_get_router_telemetry",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1048",
-      "weight": 1.0
-    },
-    {
-      "source": "sim_adaptive_orchestrator_rationale_1073",
-      "target": "sim_adaptive_orchestrator_fleetfirstbridge_route_intent",
-      "relation": "rationale_for",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1073",
+      "source_location": "L1061",
       "weight": 1.0
     },
     {
@@ -150374,6 +150363,17 @@
       "weight": 1.0
     },
     {
+      "source": "sim_adaptive_orchestrator_rationale_1086",
+      "target": "sim_adaptive_orchestrator_fleetfirstbridge_route_intent",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "sim/adaptive_orchestrator.py",
+      "source_location": "L1086",
+      "weight": 1.0
+    },
+    {
       "source": "sim_adaptive_orchestrator_rationale_117",
       "target": "sim_adaptive_orchestrator_resilient_rmtree",
       "relation": "rationale_for",
@@ -150385,80 +150385,80 @@
       "weight": 1.0
     },
     {
-      "source": "sim_adaptive_orchestrator_rationale_1184",
+      "source": "sim_adaptive_orchestrator_rationale_1197",
       "target": "sim_adaptive_orchestrator_fleetfirstbridge_create_fleet_task_manifest",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1184",
+      "source_location": "L1197",
       "weight": 1.0
     },
     {
-      "source": "sim_adaptive_orchestrator_rationale_1238",
+      "source": "sim_adaptive_orchestrator_rationale_1251",
       "target": "sim_adaptive_orchestrator_fleetfirstbridge_format_context_firebreak_manifest",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1238",
+      "source_location": "L1251",
       "weight": 1.0
     },
     {
-      "source": "sim_adaptive_orchestrator_rationale_1277",
+      "source": "sim_adaptive_orchestrator_rationale_1290",
       "target": "sim_adaptive_orchestrator_deterministictransactionalrecovery",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1277",
+      "source_location": "L1290",
       "weight": 1.0
     },
     {
-      "source": "sim_adaptive_orchestrator_rationale_1281",
+      "source": "sim_adaptive_orchestrator_rationale_1294",
       "target": "sim_adaptive_orchestrator_deterministictransactionalrecovery_compute_file_hashes",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1281",
+      "source_location": "L1294",
       "weight": 1.0
     },
     {
-      "source": "sim_adaptive_orchestrator_rationale_1300",
+      "source": "sim_adaptive_orchestrator_rationale_1313",
       "target": "sim_adaptive_orchestrator_deterministictransactionalrecovery_verify_integrity",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1300",
+      "source_location": "L1313",
       "weight": 1.0
     },
     {
-      "source": "sim_adaptive_orchestrator_rationale_1324",
+      "source": "sim_adaptive_orchestrator_rationale_1337",
       "target": "sim_adaptive_orchestrator_deterministictransactionalrecovery_create_snapshot",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1324",
+      "source_location": "L1337",
       "weight": 1.0
     },
     {
-      "source": "sim_adaptive_orchestrator_rationale_1368",
+      "source": "sim_adaptive_orchestrator_rationale_1381",
       "target": "sim_adaptive_orchestrator_deterministictransactionalrecovery_rollback",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L1368",
+      "source_location": "L1381",
       "weight": 1.0
     },
     {
@@ -150737,96 +150737,85 @@
       "weight": 1.0
     },
     {
-      "source": "sim_adaptive_orchestrator_rationale_830",
+      "source": "sim_adaptive_orchestrator_rationale_843",
       "target": "sim_adaptive_orchestrator_preexistingfileguard",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L830",
+      "source_location": "L843",
       "weight": 1.0
     },
     {
-      "source": "sim_adaptive_orchestrator_rationale_837",
+      "source": "sim_adaptive_orchestrator_rationale_850",
       "target": "sim_adaptive_orchestrator_preexistingfileguard_get_backup_dir",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L837",
+      "source_location": "L850",
       "weight": 1.0
     },
     {
-      "source": "sim_adaptive_orchestrator_rationale_851",
+      "source": "sim_adaptive_orchestrator_rationale_864",
       "target": "sim_adaptive_orchestrator_preexistingfileguard_prepare_projection",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L851",
+      "source_location": "L864",
       "weight": 1.0
     },
     {
-      "source": "sim_adaptive_orchestrator_rationale_878",
+      "source": "sim_adaptive_orchestrator_rationale_891",
       "target": "sim_adaptive_orchestrator_preexistingfileguard_teardown_projection",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L878",
+      "source_location": "L891",
       "weight": 1.0
     },
     {
-      "source": "sim_adaptive_orchestrator_rationale_906",
+      "source": "sim_adaptive_orchestrator_rationale_919",
       "target": "sim_adaptive_orchestrator_orchestratorfencingmanager",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L906",
+      "source_location": "L919",
       "weight": 1.0
     },
     {
-      "source": "sim_adaptive_orchestrator_rationale_915",
+      "source": "sim_adaptive_orchestrator_rationale_928",
       "target": "sim_adaptive_orchestrator_orchestratorfencingmanager_acquire_lease",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L915",
+      "source_location": "L928",
       "weight": 1.0
     },
     {
-      "source": "sim_adaptive_orchestrator_rationale_922",
+      "source": "sim_adaptive_orchestrator_rationale_935",
       "target": "sim_adaptive_orchestrator_orchestratorfencingmanager_evict_stale_lease",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L922",
-      "weight": 1.0
-    },
-    {
-      "source": "sim_adaptive_orchestrator_rationale_929",
-      "target": "sim_adaptive_orchestrator_orchestratorfencingmanager_verify_branch_merge",
-      "relation": "rationale_for",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L929",
+      "source_location": "L935",
       "weight": 1.0
     },
     {
       "source": "sim_adaptive_orchestrator_rationale_942",
-      "target": "sim_adaptive_orchestrator_fleetfirstbridge",
+      "target": "sim_adaptive_orchestrator_orchestratorfencingmanager_verify_branch_merge",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -150836,25 +150825,36 @@
       "weight": 1.0
     },
     {
-      "source": "sim_adaptive_orchestrator_rationale_971",
+      "source": "sim_adaptive_orchestrator_rationale_955",
+      "target": "sim_adaptive_orchestrator_fleetfirstbridge",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "sim/adaptive_orchestrator.py",
+      "source_location": "L955",
+      "weight": 1.0
+    },
+    {
+      "source": "sim_adaptive_orchestrator_rationale_984",
       "target": "sim_adaptive_orchestrator_fleetfirstbridge_is_lm_studio_online",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L971",
+      "source_location": "L984",
       "weight": 1.0
     },
     {
-      "source": "sim_adaptive_orchestrator_rationale_980",
+      "source": "sim_adaptive_orchestrator_rationale_993",
       "target": "sim_adaptive_orchestrator_fleetfirstbridge_is_queue_worker_active",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sim/adaptive_orchestrator.py",
-      "source_location": "L980",
+      "source_location": "L993",
       "weight": 1.0
     },
     {
@@ -157877,5 +157877,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "724ff2e53560706682bdd23e264c0a06be75418b"
+  "built_at_commit": "35c7385f1ba7dac65f9548b8604e61b2d8237e3c"
 }

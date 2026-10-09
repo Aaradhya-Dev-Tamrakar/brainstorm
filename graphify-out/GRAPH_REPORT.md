@@ -549,12 +549,12 @@
   tools/route_task.py → sim/routing_engine.py
 - `NepalLawHarvesterTests` --uses--> `CrawlPolicy`  [INFERRED]
   sim/test_nepal_law_harvester.py → sim/nepal_law_harvester.py
-- `NepalLawHarvesterTests` --uses--> `CircuitBreaker`  [INFERRED]
-  sim/test_nepal_law_harvester.py → sim/nepal_law_harvester.py
-- `NepalLawHarvesterTests` --uses--> `LegalHarvesterDatabase`  [INFERRED]
-  sim/test_nepal_law_harvester.py → sim/nepal_law_harvester.py
 - `InvariantAssuranceEngineTests` --uses--> `InvariantClassification`  [INFERRED]
   sim/test_invariant_engine.py → sim/invariant_engine/contract_types.py
+- `InvariantAssuranceEngineTests` --uses--> `SandboxReplayEngine`  [INFERRED]
+  sim/test_invariant_engine.py → sim/invariant_engine/sandbox_replay.py
+- `InvariantAssuranceEngineTests` --uses--> `SMTInvariantProver`  [INFERRED]
+  sim/test_invariant_engine.py → sim/invariant_engine/smt_encoder.py
 
 ## Import Cycles
 - None detected.
@@ -2597,9 +2597,11 @@ Nodes (3): side_effects, description, type
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `/graphify` connect `GraphIndex` to `ExprRef`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+- **Why does `Skill Development for Claude Code Plugins` connect `Migrating from Claude Haiku 4.5 to Claude Haiku 5.5` to `⚡ Brainstorm & Campus Swarm Marketplace`, `7.18 Economic Balance Sheet: Capital Accounting & Resource Efficiency Audit`, `Conditional Async Dependencies`, `Move DOM Element Without Losing State`, `Theming browser-generated UI`, `Resolution Optimized Pseudo Elements`, `Schedule Tasks By Priority`?**
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md` to `statistics`, `2. Core Capabilities & Workflows`, `references/template/sidecars/panel/main.mjs`, `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+- **Why does `🧠 Personal Engineering Ecosystem & R&D Infrastructure` connect `Experiment & Architecture Log: FLEET-002 (Headless Multi-Account GitHub Copilot Worker Fleet)` to `statistics`?**
   _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
@@ -2609,10 +2611,8 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.05548654244306418 - nodes in this community are weakly interconnected._
 - **Should `4. Step-by-Step Implementation Timeline` be split into smaller, more focused modules?**
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
-- **Should `generate_video.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.08687943262411348 - nodes in this community are weakly interconnected._
 
 ## Graph Freshness
-- **Built at commit:** `d4d17b9d0cb19e37d98b1ff11ab14f919540535f`
-- **Built timestamp:** `2026-10-09T06:23:02.802418+00:00`
+- **Built at commit:** `365109be581b82f3c3cacb98c4ab8231b5673224`
+- **Built timestamp:** `2026-10-09T06:43:46.576243+00:00`
 - **Lineage type:** `ancestor_snapshot`

@@ -7,16 +7,16 @@ This document records the architectural baseline lock, historical provenance, an
 ## 1. Provenance & Version Lifecycle
 
 - **Origin Baseline**: `v3.5.0-adaptive-workflow` (Initial meta-orchestrator specification).
-- **Current Calibration**: `v3.7.0-calibrated` (Zero-AI deterministic engine, Anthropic Calm Authority, bounded mathematical scheduling).
+- **Current Calibration**: `v3.8.0-calibrated` (Cloud GPU/TPU Compute Accelerator, Dual Colab Gateway, Task Time Allocation, and 207-test Fleet-Orchestrator Adapter Mesh).
 - **Date of Inception**: 2026-10-09 (Official Day of Creation of the Adaptive Workflow meta-orchestrator).
 - **Architectural Scope**: Central meta-orchestration root for Aaradhya's personal ecosystem across **28 tool modules** (24 computational engines and 4 presentation hubs) across **32 Git tracking branches**.
-- **Execution Fleet**: $W = 27$ pooled GitHub Copilot worker accounts managed via `Fleet-Orchestrator`.
+- **Execution Fleet**: $W = 27$ pooled GitHub Copilot worker accounts, Copilot Headless REST, Claude CDP, and Colab Cloud GPU/TPU Accelerator managed via `Fleet-Orchestrator` (207 tests, 100% pass rate).
 
 ---
 
 ## 2. Invariant Registry
 
-The adaptive workflow engine guarantees deterministic execution through seven non-negotiable architectural invariants:
+The adaptive workflow engine guarantees deterministic execution through eight non-negotiable architectural invariants:
 
 1. **`INV-FAST-PATH`**:
    Routine development mechanics (`audit.bat`, `sync.bat`, formatters, linters, unittests, simulation runs, git status) execute natively via pure Python and shell commands in <20 ms with 0 AI tokens and <10 MB RAM.
@@ -36,7 +36,10 @@ The adaptive workflow engine guarantees deterministic execution through seven no
 6. **`INV-PRE-EXIST-GUARD`**:
    Worktree projections resolve the canonical Git common directory and back up any pre-existing files before projection, ensuring clean restoration upon teardown.
 
-7. **`INV-AUDIT-ORDER`**:
+7. **`INV-COLAB-LIFECYCLE`**:
+   All Colab cloud execution tasks must execute non-interactively without TTY prompts, tear down rented VMs upon completion (`colab stop` in finally handler), and uphold the Jupyter Notebook Invariant (zero local headless `.ipynb` execution).
+
+8. **`INV-AUDIT-ORDER`**:
    Deterministic verification sequence enforced before every commit:
    1. Unittest discovery (`python -m unittest discover -s sim -p "test_*.py"`)
    2. Graph update (`graphify update .`)

@@ -29,18 +29,24 @@ flowchart TD
 
 ---
 
-## 2. Multi-Account Quota Pool & Fleet Health
+## 2. Multi-Provider Adapter Mesh & Fleet Health
 
-Fleet-Orchestrator aggregates 27 GitHub Copilot CLI accounts into a pooled monthly capacity:
-- **Total Workers**: 27 verified accounts (`copilot-w1` through `copilot-w27`).
-- **Pooled Capacity**: $27 \times 200 = 5,400\text{ AI credits/month}$.
+Fleet-Orchestrator aggregates heterogeneous compute providers into a unified execution mesh:
+- **Copilot CLI Workers**: 27 verified accounts (`copilot-w1` through `copilot-w27`) pooling $27 \times 200 = 5,400\text{ AI credits/month}$.
+- **Copilot Headless REST**: Low-overhead asynchronous HTTP REST adapter (~15 MB RAM per worker).
+- **Claude Desktop CDP**: Chrome DevTools Protocol adapter for adversarial QA review and architectural arbitration.
+- **Gemini 3.8 Flash API**: High-speed contextual analysis via `google-genai` SDK v2.25.0.
+- **Groq & Ollama Local**: Zero-latency classification and lightweight format translation.
+- **ColabCloudAdapter (`client/adapters/colab_adapter.py`)**: Remote execution on Google Colab GPU (NVIDIA T4, L4 24GB, A100) and TPU (v5e/v6e) runtimes for heavy ML fine-tuning, CUDA compilation, and notebook pipelines.
 - **Credential Isolation**: Separate session home directories under `C:\Users\Aaradhya\.copilot-workers\worker_<N>_<username>`.
 
-### Fleet Health Verification Command:
+### Fleet Health Verification Commands:
 ```powershell
 python "F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator\tools\copilot_fleet.py" status
+colab whoami                                    # Verify Colab OAuth2 / ADC credentials
+pytest "F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator\tests\"  # 207 automated tests (100% pass rate)
 ```
-*Empirical Verification*: Confirmed 27/27 active ready workers with exit code 0.
+*Empirical Verification*: Confirmed 27/27 active ready Copilot workers and authenticated Google Colab cloud gateway (`aaradhyadevtmr@gmail.com`, quota project `agent-valley-2610`).
 
 ---
 
@@ -108,12 +114,20 @@ If a headless worker crashes or hits an API timeout, tasks must not remain perma
   1. The Commander must output an **Execution Manifest Preview** (target repositories, file count, estimated credit burn).
   2. The Commander must pause and request user confirmation before writing task JSONs into the queue.
 
+### Invariant 5: Strict VM Lifecycle & Non-TTY Cloud Execution (`INV-COLAB-LIFECYCLE`)
+- All Colab tasks routed via `ColabCloudAdapter` or `colab-cloud-accelerator` must run non-interactively (`colab exec` with piped stdin or `colab run` with forwarded file args).
+- Never invoke interactive TTY commands (`colab console`, `colab repl`, `colab drivemount`) inside automated worker daemons or headless agent turns.
+- Rented VMs must be torn down immediately upon task completion (`colab stop -s <name>` in a strict finally block) to eliminate compute unit burn.
+- Jupyter Notebook Invariant: Notebooks (`.ipynb`) are executed exclusively in the cloud via Google Colab, never headlessly on the local host.
+
 ---
 
-## 5. Google Drive & NotebookLM Synchronization
+## 5. Google Drive, Colab Notebooks & NotebookLM Synchronization
 
-Completed deliverables in `Fleet-Orchestrator` can be pushed directly to Google Drive preserving file IDs:
+Deliverables and model pipelines in `Fleet-Orchestrator` sync directly with Google Drive folder `1wGq53okV7ZaFGSw2fWilEfxL4FEIVeIF` while preserving file IDs:
 ```powershell
 python "F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator\scripts\sync_drive.py" --push
 ```
-This updates the living cloud manifests without requiring manual file uploads.
+- **Tracked Training Notebook**: [colab_train_intent_router](https://colab.research.google.com/drive/1xlweNlXJ4maBCfUJVkReZLHMTWwKsYGh) (ID: `1xlweNlXJ4maBCfUJVkReZLHMTWwKsYGh`) mirrored at `notebooks/slm_time_router_forge.ipynb`.
+- **GGUF Model Artifacts**: Quantized model binaries (`qwen_intent_router_q4_k_m.gguf`) stream to Google Drive via resumable chunked upload (`upload_large_model_to_drive.py`) with zero Git repository bloat.
+

@@ -1,11 +1,11 @@
 ---
 name: adaptive-workflow
-description: Universal meta-orchestrator for Aaradhya's 28-tool ecosystem. Enforces context firebreaks, routes tasks across a 2D matrix, executes zero-AI fast paths, solves CPM DAGs mathematically, and delegates batch workloads to 27 pooled Copilot workers.
+description: Universal meta-orchestrator for Aaradhya's 28-tool ecosystem. Enforces context firebreaks, routes tasks across a 2D matrix, executes zero-AI fast paths, solves CPM DAGs mathematically, and marshals 27 pooled Copilot workers and Cloud GPU accelerators.
 ---
 
 # Adaptive Workflow Orchestrator (`adaptive-workflow`)
 
-Universal meta-orchestrator governing Aaradhya's tool ecosystem (28 modules, 32 tracking branches). Enforces an absolute context firebreak (`INV-CTX-FIREBREAK`), schedules tasks via mathematical Critical Path Method (CPM), marshals the 27-worker Fleet-Orchestrator pool, protects IDE memory via the Antigravity Memory Guard, and guarantees zero-drift deterministic execution across all repositories.
+Universal meta-orchestrator governing Aaradhya's tool ecosystem (28 modules, 32 tracking branches). Enforces an absolute context firebreak (`INV-CTX-FIREBREAK`), schedules tasks via mathematical Critical Path Method (CPM), marshals the 27-worker Fleet pool and Colab accelerators, protects IDE memory via the Antigravity Memory Guard, and guarantees zero-drift deterministic execution across all repositories.
 
 ---
 
@@ -32,21 +32,22 @@ flowchart TD
 ```
 
 ### Hierarchy Responsibilities:
-1. **Lead Agent**: Triages intent via `python tools/adaptive_engine.py triage`. Runs Tier 0 fast paths instantly ($0 tokens). Solves CPM critical path ($TS = 0$). Never manages queues or polls logs directly; delegates batch workloads to an ephemeral Fleet Commander subagent (`invoke_subagent`), keeping chat history $<5,000$ tokens (`INV-CTX-FIREBREAK`).
-2. **Domain Commanders**: Flattened at Depth 1 (no child subagents). Writes task JSONs to `orchestrator-state/tasks/`. Absorbs raw CLI output, logs, and retries. Returns **only a <300 word delivery manifest** to the Lead Agent.
-3. **Headless Worker Pool**: 27 pooled accounts executing in `.worktrees/<task_id>`, committing to task branches without polluting `main`.
+1. **Lead Agent**: Triages intent via `adaptive_engine.py triage`. Runs Tier 0 fast paths ($0 tokens). Solves CPM critical path ($TS = 0$). Delegates batch workloads to ephemeral Fleet Commander (`invoke_subagent`), keeping context $<5,000$ tokens (`INV-CTX-FIREBREAK`).
+2. **Domain Commanders**: Depth 1. Writes task JSONs to `orchestrator-state/tasks/`. Absorbs raw logs and retries. Returns **only a <300 word manifest** to Lead Agent.
+3. **Headless Workers & Cloud Accelerator**: 27 pooled accounts in `.worktrees/<task_id>` + `ColabCloudAdapter` for GPU/TPU runs (zero local `.ipynb` execution).
 
 Protocols: [`references/fleet-command-architecture.md`](references/fleet-command-architecture.md).
 
 ---
 
-## 2. 4-Tier Execution Hierarchy & Fast Paths
+## 2. 5-Tier Execution Hierarchy & Fast Paths
 
 | Tier | Target Workload | Backend | Cost | Latency / RAM |
 | :--- | :--- | :--- | :--- | :--- |
 | **Tier 0** | Routine: `audit.bat`, `sync.bat`, lint, test, DAG math, git status | Native Python / shell | **$0.00** | **<20 ms** / **<10 MB** |
-| **Tier 1A** | Intent triage, matrix cell routing | `qwen-intent-router` (port 1234) | **$0.00** | **30-50 ms** / **380 MB** |
+| **Tier 1A** | Intent triage, time allocation, matrix routing | `qwen-intent-router` (port 1234) | **$0.00** | **30-50 ms** / **380 MB** |
 | **Tier 1B** | Multi-file coding, refactoring, batch tests | `Fleet-Orchestrator` (27 workers) | **$0.00** | Cloud / **<30 MB** |
+| **Tier 1C** | Cloud GPU/TPU training, CUDA, remote `.ipynb` | `colab-cloud-accelerator` | Compute units | Cloud VM / **0 MB** |
 | **Tier 2** | Interactive conversational reasoning | Gemini 3.8 Flash / Flash-Lite API | **<$0.001** | Sub-second / **0 MB** |
 | **Tier 3** | Complex deadlocks after test failure | Claude Opus/Sonnet, Gemini Pro | Standard API | Gated on test failure |
 
@@ -56,7 +57,7 @@ Fast-path triggers: [`references/deterministic-zero-ai-protocol.md`](references/
 
 ## 3. Mathematical CPM Concurrency
 
-Schedule dates, critical paths, and slacks are computed mathematically via pure Python in [`sim/adaptive_orchestrator.py`](../../sim/adaptive_orchestrator.py) with zero prompt arithmetic:
+Schedule dates, critical paths, and slacks are solved in Python in [`sim/adaptive_orchestrator.py`](../../sim/adaptive_orchestrator.py) with zero prompt arithmetic:
 
 ```powershell
 python tools/adaptive_engine.py cpm --dag-json path/to/dag.json
@@ -111,7 +112,7 @@ Envelope reference: [`references/dynamic-flight-envelope.md`](references/dynamic
 
 ## 6. Transactional Recovery & Fencing
 
-- **Rolling Snapshots**: `python tools/adaptive_engine.py snapshot --tag <name>` captures recovery refs in `refs/backup/snapshot-1..3`. Rollback: `python tools/adaptive_engine.py rollback --tag <name>`.
+- **Rolling Snapshots**: `python tools/adaptive_engine.py snapshot --tag <name>` (refs in `refs/backup/`). Rollback: `python tools/adaptive_engine.py rollback --tag <name>`.
 - **Pre-Existing File Guard (`INV-PRE-EXIST-GUARD`)**: Backs up pre-existing files to `<git_common_dir>/projection_backups/<task_id>/` outside git tracking, restoring them upon teardown.
 - **Orchestrator Fencing (`INV-FENCE-TOKEN`)**: Monotonic integer tokens reject split-brain writes from stale or evicted workers.
 
@@ -121,7 +122,7 @@ Recovery reference: [`references/transactional-recovery.md`](references/transact
 
 ## 7. Supporting References & Verification
 
-- **[`references/historical-provenance.md`](references/historical-provenance.md)**: Baseline lock ($v3.5.0 \to v3.7.0$) and invariant registry.
+- **[`references/historical-provenance.md`](references/historical-provenance.md)**: Baseline lock ($v3.5.0 \to v3.8.0$) and invariant registry.
 - **[`references/verification-gates.md`](references/verification-gates.md)**: Verification sequence (`INV-AUDIT-ORDER`) and ecosystem audit standards.
 - **[`references/worker-availability-ledger.md`](references/worker-availability-ledger.md)**: Worker exhaustion tracking and 3-to-4 state mapping table.
 - **[`references/quota-velocity-acceleration.md`](references/quota-velocity-acceleration.md)**: Credit trading for velocity acceleration.

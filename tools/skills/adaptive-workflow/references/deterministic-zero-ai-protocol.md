@@ -47,6 +47,7 @@ flowchart TD
 | **Tier 0** | **Pure Deterministic Fast Path** | Routine mechanics: `audit.bat`, `sync.bat`, formatters, linters, tests, DAG math, git status | Native Python scripts & shell commands | **$0.00** | **<20 ms** latency<br>**<10 MB** RAM |
 | **Tier 1A** | **Ultralight Local SLM Router** | Intent classification, matrix cell triage, skill routing | `qwen-intent-router` (494M, 380 MB RAM on LM Studio port 1234) | **$0.00** | **30–50 ms** latency<br>**380 MB** RAM (safe for Antigravity) |
 | **Tier 1B** | **Fleet-First Cloud Swarm via Subagent** | Multi-file coding, refactoring, feature builds, test generation, study packs | `Fleet-Orchestrator` 27 pooled Copilot workers supervised by **Fleet Commander Subagent** | **$0.00** (pooled credits) | Cloud compute<br>**<30 MB** local CLI RAM<br>**0** main context bloat |
+| **Tier 1C** | **Cloud Compute Accelerator** | GPU/TPU fine-tuning (Unsloth LoRA), CUDA compilation, remote `.ipynb` execution | `colab-cloud-accelerator` & `ColabCloudAdapter` (T4, L4 24GB, A100, TPU v5e/v6e) | **Compute units** | Cloud VM<br>**0 MB** local compute RAM<br>**Zero** local `.ipynb` execution |
 | **Tier 2** | **Frugal Cloud API** | Single-turn conversational reasoning, interactive architectural queries | Gemini 3.8 Flash / Flash-Lite API | **<$0.001** | Sub-second latency<br>**0 MB** local RAM |
 | **Tier 3** | **Frontier Cloud Escalation** | Complex architectural deadlocks verified by test failure | Claude Opus/Sonnet, Gemini Pro | Standard API | Gated on verified failure |
 
@@ -63,7 +64,7 @@ flowchart TD
    - If free RAM drops below $4,096\text{ MB}$, the governor flags warning band throttling (`WARNING_BAND_THROTTLED`).
 3. **Local Model Ceiling ($\le 500\text{ MB}$)**:
    - To prevent Windows pagefile thrashing (`pagefile.sys`), local inference is strictly restricted to models $\le 500\text{ MB}$ (such as `qwen-intent-router` at 397 MB).
-   - Monolithic local models (>3B) are strictly forbidden on-device.
+   - Monolithic local models (>3B) are strictly forbidden on-device. Heavy ML training and large model evaluations are offloaded to **Tier 1C Cloud Accelerators** (`colab-cloud-accelerator`).
 
 ---
 
@@ -80,6 +81,7 @@ When a user or agent prompt matches routine development mechanics, bypass genera
 | **Repository Status** | `git status`, `status` | `git status` | **0** | <20 ms | <10 MB |
 | **Simulation Sanity** | `sim`, `simulation`, `run sim` | `.\sim.bat` | **0** | <20 ms | <10 MB |
 | **Dossier Compilation** | `build report`, `compile report`, `report.pdf` | `.\build_report.bat` | **0** | <20 ms | <10 MB |
+| **Cloud Accelerator** | `colab whoami`, `colab sessions`, `colab status` | `colab whoami` | **0** | Sub-second | <10 MB |
 
 ---
 

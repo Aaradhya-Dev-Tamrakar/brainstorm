@@ -492,6 +492,22 @@ class TestAdaptiveOrchestrator(unittest.TestCase):
         self.assertEqual(rpg_violations, [], f"RPG terms found in adaptive-workflow docs: {rpg_violations}")
         self.assertEqual(emoji_violations, [], f"Emojis found in adaptive-workflow docs: {emoji_violations}")
 
+    def test_19_colab_intent_routing_and_aliases(self):
+        """Verifies Colab Cloud Accelerator heuristic routing and skill aliases."""
+        # Test alias resolution
+        self.assertEqual(FleetFirstBridge.SKILL_ALIASES.get("colab"), "colab-cloud-accelerator")
+        self.assertEqual(FleetFirstBridge.SKILL_ALIASES.get("colab-mcp"), "colab-cloud-accelerator")
+        self.assertEqual(FleetFirstBridge.SKILL_ALIASES.get("colab-accelerator"), "colab-cloud-accelerator")
+
+        # Test heuristic intent routing when LM Studio is offline
+        res1 = FleetFirstBridge.route_intent("Fine-tune Qwen LoRA model on Colab L4 GPU")
+        self.assertEqual(res1["primary_skill"], "colab-cloud-accelerator")
+        self.assertEqual(res1["archetype"], "SWARM_ORCHESTRATION")
+
+        res2 = FleetFirstBridge.route_intent("Run CUDA benchmark in cloud TPU accelerator")
+        self.assertEqual(res2["primary_skill"], "colab-cloud-accelerator")
+
 
 if __name__ == "__main__":
     unittest.main()
+

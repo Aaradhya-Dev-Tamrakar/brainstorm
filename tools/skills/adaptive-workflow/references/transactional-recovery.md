@@ -129,8 +129,8 @@ To eliminate transient `PermissionError` (`[WinError 32]` and `[WinError 5]`), c
 
 ### 1. Monotonic Fencing Tokens (`INV-FENCE-TOKEN`)
 To reject split-brain writes from evicted or stale workers that wake up after their lease expired, `OrchestratorFencingManager` issues monotonic integer tokens per task. During branch integration or merge verification:
-- Commits carrying expired worker epochs ($e_{\text{worker}} < e_{\text{active}}$) are strictly rejected.
-- Only the latest lease owner ($e_{\text{worker}} == e_{\text{active}}$) can merge worktree changes.
+- Commits carrying expired worker tokens ($t_{\text{worker}} < t_{\text{active}}$) are strictly rejected.
+- Only the latest lease owner ($t_{\text{worker}} == t_{\text{active}}$) can merge worktree changes.
 
 ### 2. Pre-Existing File Guard (`INV-PRE-EXIST-GUARD`)
 When projecting tasks into Git worktrees:

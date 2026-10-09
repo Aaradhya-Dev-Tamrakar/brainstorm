@@ -138,3 +138,24 @@ This document contains end-to-end walkthroughs demonstrating how `adaptive-workf
    - Dispatches Adversarial Reviewer on Critical Path (`Model: "pro"`).
    - Reviewer audits physical paths, checks schema consistency, verifies epistemic badges, and runs `audit_calm_writing.py`.
 5. **Stage 5 (Sync)**: Lead Agent writes final verified documents symmetrically across global and workspace repositories, certifying clean status via `.\audit.bat --fix`.
+
+---
+
+## Scenario 9: Cloud GPU Model Fine-Tuning & Remote Notebook Execution
+
+**User Objective**: Fine-tune the Qwen intent router LoRA on a cloud GPU and inspect training metrics in Google Colab.
+
+1. **Stage 1 (Scope)**: Classified as `SWARM_ORCHESTRATION` / `CLOUD_ACCELERATOR`, Tier 1C. Local headless `.ipynb` execution strictly forbidden.
+2. **Stage 2 (Route)**: Routed to `colab-cloud-accelerator`, `ColabCloudAdapter`, `slm-router-forge`.
+3. **Stage 3 (Plan)**:
+   - Identify tracked Colab notebook: `colab_train_intent_router` (ID `1xlweNlXJ4maBCfUJVkReZLHMTWwKsYGh`), mirrored at `notebooks/slm_time_router_forge.ipynb`.
+   - Ephemeral batch route: Allocate Colab VM with NVIDIA L4 GPU via `colab new -s router-forge --gpu L4`.
+   - Interactive route: Use `colab-mcp` (`open_colab_browser_connection`) to inspect live training loss in the browser.
+4. **Stage 4 (Verify)**:
+   - Execute fine-tuning: `colab exec -s router-forge -f train_router.py`.
+   - Export quantized `q4_k_m` GGUF (~397 MB) to cloud storage.
+   - Enforce teardown: `colab stop -s router-forge` (`INV-COLAB-LIFECYCLE`), releasing compute units.
+   - Verify health: `colab sessions` confirms 0 remaining active VMs.
+5. **Stage 5 (Sync)**:
+   - Push updated model metadata to `drive-manifest.json`.
+   - Mount local GGUF in LM Studio on port 1234, verifying sub-50ms intent and task time allocation.

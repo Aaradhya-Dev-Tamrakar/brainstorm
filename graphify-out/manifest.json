@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791561619.2950451,
-    "seen": 1791561624.0783734,
-    "ast_hash": "d2a5d76e32fb2b483f2df06704d18e69",
-    "semantic_hash": "d2a5d76e32fb2b483f2df06704d18e69"
+    "mtime": 1791562648.308897,
+    "seen": 1791562654.961958,
+    "ast_hash": "d7a2ada6d06ed3e78d32cbe70e3d9584",
+    "semantic_hash": "d7a2ada6d06ed3e78d32cbe70e3d9584"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -2299,7 +2299,7 @@
   },
   ".mcp.json": {
     "mtime": 1791211589.4039154,
-    "seen": 1791547983.3275704,
+    "seen": 1791562552.040422,
     "ast_hash": "28136d52f8c466fd93e00c713b7fa4f6",
     "semantic_hash": "28136d52f8c466fd93e00c713b7fa4f6"
   },
@@ -3780,16 +3780,16 @@
     "semantic_hash": ""
   },
   "tools/skills/adaptive-workflow/SKILL.md": {
-    "mtime": 1791547199.5150275,
-    "seen": 1791547498.5757568,
-    "ast_hash": "ab76f73785e230805c3101e4566dbdca",
-    "semantic_hash": "ab76f73785e230805c3101e4566dbdca"
+    "mtime": 1791562432.2214575,
+    "seen": 1791562552.0407248,
+    "ast_hash": "52cdfd69adddc9a3e36a05b7e3d118cb",
+    "semantic_hash": "52cdfd69adddc9a3e36a05b7e3d118cb"
   },
   "tools/skills/adaptive-workflow/examples/routing-scenarios.md": {
-    "mtime": 1791547300.6506703,
-    "seen": 1791547498.575759,
-    "ast_hash": "6fdb2d444fc1679e2c728a7f94e920a0",
-    "semantic_hash": "6fdb2d444fc1679e2c728a7f94e920a0"
+    "mtime": 1791562329.8959343,
+    "seen": 1791562552.040726,
+    "ast_hash": "7b03db73a7ff72a4c1c7c62db317c95a",
+    "semantic_hash": "7b03db73a7ff72a4c1c7c62db317c95a"
   },
   "tools/skills/adaptive-workflow/references/antigravity-chat-context-injection.md": {
     "mtime": 1791547310.20111,
@@ -3810,10 +3810,10 @@
     "semantic_hash": "0b8a4307f84dae1b1d0d29c9ecf1cd67"
   },
   "tools/skills/adaptive-workflow/references/cross-tool-chains.md": {
-    "mtime": 1791547293.669178,
-    "seen": 1791547498.575764,
-    "ast_hash": "9d3f044b50d809d4f4ebb3ce8196c3de",
-    "semantic_hash": "9d3f044b50d809d4f4ebb3ce8196c3de"
+    "mtime": 1791562302.397931,
+    "seen": 1791562552.0407312,
+    "ast_hash": "783413fad21abde5c6dbacd7351cee6a",
+    "semantic_hash": "783413fad21abde5c6dbacd7351cee6a"
   },
   "tools/skills/adaptive-workflow/references/dynamic-flight-envelope.md": {
     "mtime": 1791547252.3757696,
@@ -3828,10 +3828,10 @@
     "semantic_hash": "84415235c2a1b210932f405d28789311"
   },
   "tools/skills/adaptive-workflow/references/fleet-command-architecture.md": {
-    "mtime": 1791547280.5823107,
-    "seen": 1791547498.57577,
-    "ast_hash": "3aa3a7de3d4d3ac6d46432e979b77565",
-    "semantic_hash": "3aa3a7de3d4d3ac6d46432e979b77565"
+    "mtime": 1791562266.5241928,
+    "seen": 1791562552.0407352,
+    "ast_hash": "b5423acb4ce2fcf8f63b92958fce03a8",
+    "semantic_hash": "b5423acb4ce2fcf8f63b92958fce03a8"
   },
   "tools/skills/adaptive-workflow/references/lifecycle-stages.md": {
     "mtime": 1791529964.4126666,
@@ -3852,16 +3852,16 @@
     "semantic_hash": "5f0869bfcb51cc4658183fd3c8167fb2"
   },
   "tools/skills/adaptive-workflow/references/skill-matrix.md": {
-    "mtime": 1791547288.2734516,
-    "seen": 1791547498.5757763,
-    "ast_hash": "860957ded50e5c573fbbb6ab548fefe3",
-    "semantic_hash": "860957ded50e5c573fbbb6ab548fefe3"
+    "mtime": 1791562277.300195,
+    "seen": 1791562552.04074,
+    "ast_hash": "cce31d591006c67338d2b67eebb32d5b",
+    "semantic_hash": "cce31d591006c67338d2b67eebb32d5b"
   },
   "tools/skills/adaptive-workflow/references/transactional-recovery.md": {
-    "mtime": 1791547570.5701976,
-    "seen": 1791547614.3752966,
-    "ast_hash": "19e39149be3759f2046d844d16c705f5",
-    "semantic_hash": "19e39149be3759f2046d844d16c705f5"
+    "mtime": 1791562571.0336874,
+    "seen": 1791562654.9624755,
+    "ast_hash": "1e2b67ef3df5ba1f143a22c87e1e5d06",
+    "semantic_hash": "1e2b67ef3df5ba1f143a22c87e1e5d06"
   },
   "tools/skills/adaptive-workflow/references/verification-gates.md": {
     "mtime": 1791547218.367378,
@@ -3924,16 +3924,16 @@
     "semantic_hash": "d580a0637dab7873ae0c43c77ebcf7b3"
   },
   "sim/adaptive_orchestrator.py": {
-    "mtime": 1791560727.8044827,
-    "seen": 1791560808.5640116,
-    "ast_hash": "dec57953a9c68e04ef6a4568d286f84d",
-    "semantic_hash": "dec57953a9c68e04ef6a4568d286f84d"
+    "mtime": 1791562209.854132,
+    "seen": 1791562552.040504,
+    "ast_hash": "167035777a4d26e4254c83ad563bc2b7",
+    "semantic_hash": "167035777a4d26e4254c83ad563bc2b7"
   },
   "sim/test_adaptive_orchestrator.py": {
-    "mtime": 1791547094.5275733,
-    "seen": 1791547498.575437,
-    "ast_hash": "ca9ad8d1a6985847e8f55b887aa458a0",
-    "semantic_hash": "ca9ad8d1a6985847e8f55b887aa458a0"
+    "mtime": 1791562238.7906892,
+    "seen": 1791562552.040529,
+    "ast_hash": "5895c36cf0324557c2e38fd4f2376fe8",
+    "semantic_hash": "5895c36cf0324557c2e38fd4f2376fe8"
   },
   "tools/adaptive_engine.py": {
     "mtime": 1791553741.1537197,
@@ -3942,16 +3942,16 @@
     "semantic_hash": "5a994040aaa3678cb8f1d63899c07a65"
   },
   "tools/skills/adaptive-workflow/references/deterministic-zero-ai-protocol.md": {
-    "mtime": 1791547132.1402316,
-    "seen": 1791547498.5757651,
-    "ast_hash": "db96c434b916c093c435dd6d4219be37",
-    "semantic_hash": "db96c434b916c093c435dd6d4219be37"
+    "mtime": 1791562290.267004,
+    "seen": 1791562552.0407321,
+    "ast_hash": "bfd1bc728317c2f78cc3b5586974d336",
+    "semantic_hash": "bfd1bc728317c2f78cc3b5586974d336"
   },
   "tools/skills/adaptive-workflow/references/historical-provenance.md": {
-    "mtime": 1791547142.675522,
-    "seen": 1791547498.5757709,
-    "ast_hash": "e44912d1db7cf10b1720d4054455a602",
-    "semantic_hash": "e44912d1db7cf10b1720d4054455a602"
+    "mtime": 1791562312.007475,
+    "seen": 1791562552.0407362,
+    "ast_hash": "e4a93c34a8ae7e41b4d46a76a3ea0932",
+    "semantic_hash": "e4a93c34a8ae7e41b4d46a76a3ea0932"
   },
   "research/notes/2026-10-09_MILESTONE_ADAPTIVE_WORKFLOW_CALIBRATION_V3_7_0.md": {
     "mtime": 1791547858.918387,

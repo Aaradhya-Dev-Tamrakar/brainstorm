@@ -1,6 +1,6 @@
 # Standardized Cross-Tool Ecosystem Pipelines
 
-This document specifies the six canonical cross-repository execution pipelines connecting computational engines, presentation hubs, and utility tools across Aaradhya's ecosystem.
+This document specifies the seven canonical cross-repository execution pipelines connecting computational engines, presentation hubs, and utility tools across Aaradhya's ecosystem.
 
 ---
 
@@ -123,3 +123,26 @@ flowchart LR
 2. Execute `.\sync.bat -CrossPull` to safely rebase clean sibling repositories.
 3. Run `.\sync.bat -Reconcile` to auto-synchronize counts across `ecosystem.registry.json` and documentation.
 4. Execute `.\audit.bat` to certify 0 invariant errors across all 27 tool modules.
+
+---
+
+## Pipeline 7: Cloud GPU Acceleration, SLM Fine-Tuning & Edge Intent Routing
+
+Connects transcript dataset harvesting, remote GPU fine-tuning in Google Colab, quantized INT4 GGUF cloud streaming, and local sub-50ms intent and time allocation routing.
+
+```mermaid
+flowchart LR
+    Datasets["Task Datasets &\nSession Transcripts"] --> ColabGPU["colab-cloud-accelerator\n(Colab Pro L4 / Unsloth LoRA)"]
+    ColabGPU --> GGUF["Quantized INT4 GGUF\n(qwen_intent_router_q4_k_m)"]
+    GGUF --> Drive["Google Drive Sync\n(scripts/sync_drive.py --push)"]
+    Drive --> LMStudio["LM Studio Port 1234\n(<50ms Socket Ping)"]
+    LMStudio --> Adaptive["adaptive-workflow\n(Fast Intent Triage & Time Allocation)"]
+```
+
+### Protocol:
+1. Harvest task datasets using `Fleet-Orchestrator/tests/test_harvest_task_time_dataset.py`.
+2. Offload LoRA fine-tuning to Colab L4 GPU via `colab run` or `ColabCloudAdapter` using `notebooks/slm_time_router_forge.ipynb` (synced at `colab_train_intent_router`, Drive ID `1xlweNlXJ4maBCfUJVkReZLHMTWwKsYGh`).
+3. Export quantized INT4 GGUF model and push to Google Drive via `scripts/upload_large_model_to_drive.py`.
+4. Mount locally into LM Studio on port 1234 (`models/qwen_intent_router_q4_k_m.gguf`).
+5. Route incoming tasks with sub-50ms latency and dynamic task time allocation.
+

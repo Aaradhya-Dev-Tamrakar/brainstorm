@@ -977,6 +977,10 @@ class FleetFirstBridge:
         "embedded-firmware-scaffolder": "embedded-firmware-scaffold",
         "academic-workflow": "adaptive-workflow",
         "adaptive-orchestrator": "adaptive-workflow",
+        "colab": "colab-cloud-accelerator",
+        "colab-accelerator": "colab-cloud-accelerator",
+        "colab-cloud": "colab-cloud-accelerator",
+        "colab-mcp": "colab-cloud-accelerator",
     }
 
     @classmethod
@@ -1169,6 +1173,16 @@ class FleetFirstBridge:
                 "matrix_cell": "(V2, R0)",
                 "policy": "FLEET_SWARM",
                 "primary_skill": "fleet-orchestrator",
+                "latency_ms": round(elapsed, 2),
+                "source": "deterministic_heuristic",
+            }
+        elif any(k in p for k in ["colab", "gpu", "tpu", "fine-tune", "unsloth", "cuda"]):
+            return {
+                "archetype": "SWARM_ORCHESTRATION",
+                "tier": "Tier 1",
+                "matrix_cell": "(V1, R1)",
+                "policy": "STAR_SUBAGENTS",
+                "primary_skill": "colab-cloud-accelerator",
                 "latency_ms": round(elapsed, 2),
                 "source": "deterministic_heuristic",
             }

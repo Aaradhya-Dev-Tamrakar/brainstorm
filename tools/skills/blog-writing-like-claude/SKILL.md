@@ -13,6 +13,9 @@ origin:
 
 # Blog Writing Like Claude — The "Calm Authority" Engineering Standard
 
+> [!NOTE]
+> **Unified Standard**: This skill is part of the unified and task-adaptive **[`writing-like-claude`](../writing-like-claude/SKILL.md)** engine, which encompasses both narrative engineering blogs and formal frontier model reports, 144-page system cards, migration guides, and modular swarm capabilities.
+
 This skill codifies the writing philosophy, voice, structural mechanics, and editorial standards of the official **Claude / Anthropic engineering blog** (`claude.com/blog`). It transforms technical writing—across blog posts, case studies, product announcements, tutorials, portfolio entries, and project documentation—into authoritative, high-trust, hype-free communication.
 
 ---

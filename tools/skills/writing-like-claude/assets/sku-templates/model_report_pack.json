@@ -1,0 +1,33 @@
+{
+  "sku_id": "model_report_pack_v1",
+  "name": "Frontier Model Technical Report & System Card Batch Pack",
+  "description": "Declarative 4-stage batch pipeline for extracting benchmark evaluation logs, compiling calm-authority technical reports, executing adversarial audits, and syncing to Google Drive and NotebookLM fleets.",
+  "pipeline": [
+    {
+      "stage": "extract_benchmark_logs",
+      "worker_type": "gemini_flash",
+      "task_action": "Parse raw benchmark outputs across Terminal-Bench, OSWorld, and SWE-bench into structured JSON tables."
+    },
+    {
+      "stage": "draft_calm_dossier",
+      "worker_type": "copilot_headless",
+      "task_action": "Draft Tier L4 model release report and Tier L5 system card sections adhering strictly to writing-like-claude 10 Invariants."
+    },
+    {
+      "stage": "adversarial_audit",
+      "worker_type": "claude_cdp",
+      "task_action": "Run audit_calm_writing.py to verify elimination of banned hype adjectives and confirm presence of pinned benchmark baselines."
+    },
+    {
+      "stage": "drive_notebooklm_sync",
+      "worker_type": "fleet_sync",
+      "task_action": "Execute scripts/sync_drive.py --push to ingest living markdown dossiers into Google Drive and NotebookLM research fleets."
+    }
+  ],
+  "invariants": [
+    "ZERO_MARKETING_HYPE",
+    "PINNED_BENCHMARK_COLUMNS",
+    "AUTHENTIC_COMMIT_SHAS",
+    "SUPPRESS_COHORTS_N_LT_30"
+  ]
+}

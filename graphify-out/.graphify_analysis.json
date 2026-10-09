@@ -1,6 +1,6 @@
 {
-  "built_at_commit": "4d14a4a6dda2d2d1adf9baecef3bca97326c447d",
-  "built_timestamp": "2026-10-08T14:38:12.169315+00:00",
+  "built_at_commit": "8a052e6fd7714b0186ffbc789d316fccbe627dca",
+  "built_timestamp": "2026-10-09T05:32:29.429631+00:00",
   "lineage_type": "ancestor_snapshot",
   "communities": {
     "0": [
@@ -7564,12 +7564,12 @@
     {
       "type": "bridge_node",
       "question": "Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Brainstorm Research Laboratory (BRL) — Contributor Agreement` to `birth-registration-ward.civic.json`, `Community 373`, `Community 374`, `required`?",
-      "why": "High betweenness centrality (0.020) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.013) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
       "question": "Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `required` to `Community 458`, `Community 459`, `Community 460`, `Brainstorm Research Laboratory (BRL) — Contributor Agreement`, `Community 434`, `Community 435`, `Community 436`, `Community 375`, `Community 280`?",
-      "why": "High betweenness centrality (0.016) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.012) - this node is a cross-community bridge."
     },
     {
       "type": "verify_inferred",

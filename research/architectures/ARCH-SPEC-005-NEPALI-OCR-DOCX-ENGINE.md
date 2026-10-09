@@ -32,44 +32,19 @@ Existing spelling tools either only support Hindi or lack context-aware modern N
 
 ## 2. System Architecture: Lipikaar-AI Pipeline
 
-```
-                                  [ Scanned Document / PDF / Image / Text ]
-                                                     |
-                                                     v
-                                       +---------------------------+
-                                       | Vision OCR Engine         |
-                                       | - Flash Vision Multimodal |
-                                       | - Layout & Bounding Boxes |
-                                       +-------------+-------------+
-                                                     | Devanagari Unicode Text
-                                                     v
-                                       +---------------------------+
-                                       | Hybrid Grammar & Linter   |
-                                       | 1. Deterministic Lexicon  |
-                                       |    • Varnavinyas (ह्रस्व/दीर्घ) |
-                                       |    • Padayoga/Padaviyoga  |
-                                       | 2. LLM Contextual Sugg.   |
-                                       |    • Adar/Honorific Agree |
-                                       |    • Legal/Admin Register |
-                                       +-------------+-------------+
-                                                     | Linted & Corrected Unicode
-                      +------------------------------+------------------------------+
-                      v                                                             v
-       +-----------------------------+                               +-----------------------------+
-       | Mode 1: Modern Unicode DOCX |                               | Mode 2: Legacy Preeti DOCX  |
-       | - Target: Mangal / Kalimati |                               | - Syllabic AST Transcoder   |
-       | - Proper OpenXML font tags  |                               | - Prefix matra / reph shift |
-       | - Universal Searchability   |                               | - Injects Preeti font glyphs|
-       +--------------+--------------+                               +--------------+--------------+
-                      |                                                             |
-                      +------------------------------+------------------------------+
-                                                     v
-                                       +---------------------------+
-                                       | OpenXML DOCX Generator    |
-                                       | - Inline Proofing / Marks |
-                                       | - Paragraph & Table Styles|
-                                       | - Native Word Output      |
-                                       +---------------------------+
+```mermaid
+flowchart TD
+    in["[ Scanned Document / PDF / Image / Text ]"]
+    ocr["Vision OCR Engine<br>- Flash Vision Multimodal<br>- Layout & Bounding Boxes"]
+    
+    in --> ocr
+    ocr -- "Devanagari Unicode Text" --> lint["Hybrid Grammar & Linter<br>1. Deterministic Lexicon<br>   • Varnavinyas (ह्रस्व/दीर्घ)<br>   • Padayoga/Padaviyoga<br>2. LLM Contextual Sugg.<br>   • Adar/Honorific Agree<br>   • Legal/Admin Register"]
+    
+    lint -- "Linted & Corrected Unicode" --> mode1["Mode 1: Modern Unicode DOCX<br>- Target: Mangal / Kalimati<br>- Proper OpenXML font tags<br>- Universal Searchability"]
+    lint --> mode2["Mode 2: Legacy Preeti DOCX<br>- Syllabic AST Transcoder<br>- Prefix matra / reph shift<br>- Injects Preeti font glyphs"]
+    
+    mode1 --> gen["OpenXML DOCX Generator<br>- Inline Proofing / Marks<br>- Paragraph & Table Styles<br>- Native Word Output"]
+    mode2 --> gen
 ```
 
 ---

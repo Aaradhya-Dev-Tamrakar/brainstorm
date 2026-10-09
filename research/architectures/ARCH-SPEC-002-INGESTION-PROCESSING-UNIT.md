@@ -40,40 +40,25 @@ The thesis is:
 
 ## 2. IPU System Topology & Channel Decomposition
 
-```
-[ 6G Sub-THz Ingress / High-Speed Sensor Array ] (1 Tbps Burst Stream)
-                       │
-                       ▼
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                 THE INGESTION PROCESSING UNIT (IPU)                         │
-│                    (The Architectural Shock Absorber)                        │
-│                                                                             │
-│   ┌─────────────────────────────────────────────────────────────────────┐   │
-│   │ 1. Line-Rate Ingestion Buffer & Traffic Shaper                      │   │
-│   │    • Absorbs multi-gigabit bursts without host CPU/GPU interrupts   │   │
-│   │    • Dynamic Bank-Conflict & Jitter Predictor                       │   │
-│   └──────────────────────────────────┬──────────────────────────────────┘   │
-│                                      │ Filtered Stream                      │
-│   ┌──────────────────────────────────▼──────────────────────────────────┐   │
-│   │ 2. Inline Stream Transform & Reduction Engine (v+2 PIM Logic)        │   │
-│   │    • Baseband Channel Estimation & Massive MIMO Matrix Inversion    │   │
-│   │    • Semantic Tokenization & Attention Softmax Local Accumulation   │   │
-│   │    • Zero-Copy Discard: 99%+ raw entropy reduced at boundary        │   │
-│   └──────────────────────────────────┬──────────────────────────────────┘   │
-│                                      │ Clustered Bursts                     │
-│   ┌──────────────────────────────────▼──────────────────────────────────┐   │
-│   │ 3. Smart Coalescing & Interconnect Adapter (v+1 Logic)              │   │
-│   │    • Translates scattered payloads into optimal 64B cacheline bursts│   │
-│   │    • Presents a standard, legacy-compliant CXL / PCIe / AXI-4 face  │   │
-│   └─────────────────────────────────────────────────────────────────────┘   │
-└──────────────────────────────────────┬──────────────────────────────────────┘
-                                       │ Pristine, Low-Bandwidth Semantic Payloads
-                                       ▼ (PCIe 5.0/6.0, CXL 3.0, or AXI-4)
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                      LEGACY HOST SUBSYSTEM                                  │
-│   [ Host GPU / Vortex RISC-V Cores ] ── [ Commodity DDR5 / HBM Memory ]     │
-│   (Zero hardware changes required; operates unthrottled on digested data)   │
-└─────────────────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    ingress["[ 6G Sub-THz Ingress / High-Speed Sensor Array ]<br>(1 Tbps Burst Stream)"]
+    
+    subgraph IPU ["THE INGESTION PROCESSING UNIT (IPU)<br>(The Architectural Shock Absorber)"]
+        s1["1. Line-Rate Ingestion Buffer & Traffic Shaper<br>• Absorbs multi-gigabit bursts without host CPU/GPU interrupts<br>• Dynamic Bank-Conflict & Jitter Predictor"]
+        s2["2. Inline Stream Transform & Reduction Engine (v+2 PIM Logic)<br>• Baseband Channel Estimation & Massive MIMO Matrix Inversion<br>• Semantic Tokenization & Attention Softmax Local Accumulation<br>• Zero-Copy Discard: 99%+ raw entropy reduced at boundary"]
+        s3["3. Smart Coalescing & Interconnect Adapter (v+1 Logic)<br>• Translates scattered payloads into optimal 64B cacheline bursts<br>• Presents a standard, legacy-compliant CXL / PCIe / AXI-4 face"]
+        
+        s1 -- "Filtered Stream" --> s2
+        s2 -- "Clustered Bursts" --> s3
+    end
+    
+    subgraph Host ["LEGACY HOST SUBSYSTEM"]
+        h1["[ Host GPU / Vortex RISC-V Cores ] ── [ Commodity DDR5 / HBM Memory ]<br>(Zero hardware changes required; operates unthrottled on digested data)"]
+    end
+    
+    ingress --> s1
+    s3 -- "Pristine, Low-Bandwidth Semantic Payloads<br>(PCIe 5.0/6.0, CXL 3.0, or AXI-4)" --> h1
 ```
 
 ---

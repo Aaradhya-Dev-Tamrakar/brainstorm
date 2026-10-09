@@ -47,36 +47,22 @@ The `stop(context)` lifecycle handler explicitly invokes `httpd.shutdown()`, `ht
 
 ## 3. Architecture & Data Flow
 
-```
-+-------------------------------------------------------------------------+
-| AI Agent Client (Antigravity, Claude Desktop, Cursor)                   |
-| Config: http://127.0.0.1:9876/mcp                                       |
-+-----------------------------------+-------------------------------------+
-                                    | HTTP POST (JSON-RPC 2.0)
-                                    v
-+-------------------------------------------------------------------------+
-| Autodesk Fusion 360 Process (Embedded Python Runtime)                   |
-|                                                                         |
-|  [ Threaded HTTPServer (Background Daemon Thread) ]                     |
-|    - Bound to 127.0.0.1:9876                                            |
-|    - Handles /health (GET) for liveness probes                          |
-|    - Handles /mcp (POST) for MCP JSON-RPC protocol                      |
-|    - Registers request in pending_requests dict with threading.Event()  |
-|    - Calls app.fireCustomEvent(CUSTOM_EVENT_ID, {"req_id": ...})        |
-|    - Blocks on event.wait(timeout=60.0)                                 |
-|                               |                                         |
-|                               | CustomEvent Trigger                     |
-|                               v                                         |
-|  [ Main UI Thread (Single-Threaded CAD Lock Free) ]                     |
-|    - MCPCustomEventHandler.notify() catches the event                   |
-|    - Identifies tool_name & extracts arguments                          |
-|    - Executes CAD commands (adsk.core, adsk.fusion)                     |
-|    - Captures stdout, error traces, or renders viewport image           |
-|    - Sets req['result'] and signals event.set()                         |
-|                               |                                         |
-|                               v                                         |
-|    - Worker thread unblocks, formats JSON-RPC result, returns HTTP 200  |
-+-------------------------------------------------------------------------+
+```mermaid
+sequenceDiagram
+    participant Client as "AI Agent Client (Antigravity, Claude Desktop, Cursor)"
+    box "Autodesk Fusion 360 Process (Embedded Python Runtime)"
+        participant Daemon as "Threaded HTTPServer (Background Daemon Thread)"
+        participant MainUI as "Main UI Thread (Single-Threaded CAD Lock Free)"
+    end
+    
+    Client->>Daemon: HTTP POST (JSON-RPC 2.0)
+    Note over Daemon: Bound to 127.0.0.1:9876<br>Handles /health (GET) & /mcp (POST)<br>Registers req with threading.Event()<br>app.fireCustomEvent(CUSTOM_EVENT_ID)
+    Daemon->>MainUI: CustomEvent Trigger
+    Note over Daemon: Blocks on event.wait(timeout=60.0)
+    Note over MainUI: MCPCustomEventHandler.notify()<br>Executes CAD commands<br>Captures stdout/error/viewport<br>Sets req['result'] and signals event.set()
+    MainUI->>Daemon: event.set() (Signals Worker Thread)
+    Note over Daemon: Worker thread unblocks, formats JSON-RPC result
+    Daemon->>Client: returns HTTP 200 (JSON-RPC Result)
 ```
 
 ---

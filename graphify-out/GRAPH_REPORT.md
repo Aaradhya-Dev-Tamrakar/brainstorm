@@ -1,7 +1,7 @@
-# Graph Report - brainstorm  (2026-10-08)
+# Graph Report - brainstorm  (2026-10-09)
 
 ## Corpus Check
-- Large corpus: 615 files · ~990,706 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
+- Large corpus: 615 files · ~990,492 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
 
 ## Summary
 - 5870 nodes · 6504 edges · 525 communities (493 shown, 16 thin omitted)
@@ -2529,9 +2529,9 @@ Nodes (3): tracking_branch, description, type
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Brainstorm Research Laboratory (BRL) — Contributor Agreement` to `birth-registration-ward.civic.json`, `Community 373`, `Community 374`, `required`?**
-  _High betweenness centrality (0.020) - this node is a cross-community bridge._
+  _High betweenness centrality (0.013) - this node is a cross-community bridge._
 - **Why does `7. R&D Strategic Evaluation, 5-Horizon Forecast & Feasibility Analysis` connect `required` to `Community 458`, `Community 459`, `Community 460`, `Brainstorm Research Laboratory (BRL) — Contributor Agreement`, `Community 434`, `Community 435`, `Community 436`, `Community 375`, `Community 280`?**
-  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `BaseStateMachine` (e.g. with `run_benchmark()` and `SandboxReplayEngine`) actually correct?**
   _`BaseStateMachine` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `WordmarkProps`, `10. Key Lessons Learned`, `1. Problem Statement & Motivation` to the rest of the system?**
@@ -2544,6 +2544,6 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.08687943262411348 - nodes in this community are weakly interconnected._
 
 ## Graph Freshness
-- **Built at commit:** `4d14a4a6dda2d2d1adf9baecef3bca97326c447d`
-- **Built timestamp:** `2026-10-08T14:38:12.169315+00:00`
+- **Built at commit:** `8a052e6fd7714b0186ffbc789d316fccbe627dca`
+- **Built timestamp:** `2026-10-09T05:32:29.429631+00:00`
 - **Lineage type:** `ancestor_snapshot`

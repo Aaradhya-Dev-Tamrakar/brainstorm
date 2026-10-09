@@ -6,10 +6,10 @@
     "semantic_hash": "1f807d3a09fa490b7f5315226b97cf4b"
   },
   "schemas/ecosystem.registry.json": {
-    "mtime": 1791441091.5725658,
-    "seen": 1791441100.9747345,
-    "ast_hash": "ebfe27301c04b0cb01b2021815fad55e",
-    "semantic_hash": "ebfe27301c04b0cb01b2021815fad55e"
+    "mtime": 1791523945.2182198,
+    "seen": 1791523955.1105845,
+    "ast_hash": "bf57bcbdfeea9780237f2bf288f224c7",
+    "semantic_hash": "bf57bcbdfeea9780237f2bf288f224c7"
   },
   "schemas/examples/AI-Constraint-Solver.contract.json": {
     "mtime": 1790044861.17107,
@@ -78,10 +78,10 @@
     "semantic_hash": "89b3536ba107d7808fb85940a864108f"
   },
   "research/architectures/ARCH-SPEC-002-INGESTION-PROCESSING-UNIT.md": {
-    "mtime": 1790044861.129094,
-    "seen": 1790599964.4901383,
-    "ast_hash": "cbc0566753d4e73dc7c5fd2b21358dca",
-    "semantic_hash": "cbc0566753d4e73dc7c5fd2b21358dca"
+    "mtime": 1791522333.6045794,
+    "seen": 1791523955.1107502,
+    "ast_hash": "df7c82b557ac1e480b86cb51bbdbfe47",
+    "semantic_hash": "df7c82b557ac1e480b86cb51bbdbfe47"
   },
   "research/experiments/EXP-001-IPU-BREAKEVEN-SWEEP.md": {
     "mtime": 1790044861.1336224,
@@ -126,10 +126,10 @@
     "semantic_hash": "83b473ce17d955620312c64a58fae1b9"
   },
   "research/architectures/ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md": {
-    "mtime": 1790044861.129595,
-    "seen": 1790599964.4901402,
-    "ast_hash": "81f96c01d648bb96a5a98b0c8d340dd7",
-    "semantic_hash": "81f96c01d648bb96a5a98b0c8d340dd7"
+    "mtime": 1791522314.9277365,
+    "seen": 1791523955.1107528,
+    "ast_hash": "0e8fb02485eb35eb64f58ceb099a3bae",
+    "semantic_hash": "0e8fb02485eb35eb64f58ceb099a3bae"
   },
   "PROFILE.md": {
     "mtime": 1790322410.9970815,
@@ -258,10 +258,10 @@
     "semantic_hash": "792d897b4bb6d60976fb545a1e6c66ac"
   },
   "research/architectures/ARCH-SPEC-005-NEPALI-OCR-DOCX-ENGINE.md": {
-    "mtime": 1790044861.1300938,
-    "seen": 1790599964.490141,
-    "ast_hash": "6c57947d325a347de1436308a7bcad06",
-    "semantic_hash": "6c57947d325a347de1436308a7bcad06"
+    "mtime": 1791522307.9736843,
+    "seen": 1791523955.1107538,
+    "ast_hash": "7806a0a3d6d6dd50de5a31f262c4b0d1",
+    "semantic_hash": "7806a0a3d6d6dd50de5a31f262c4b0d1"
   },
   "research/hypotheses/HYP-003.yaml": {
     "mtime": 1790044861.1366224,
@@ -390,10 +390,10 @@
     "semantic_hash": "aa9152362fefa7e7070ab09525df992c"
   },
   "research/architectures/ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md": {
-    "mtime": 1790044861.1300938,
-    "seen": 1790599964.4901416,
-    "ast_hash": "304a2193baea1201f0bd66be2fb368a2",
-    "semantic_hash": "304a2193baea1201f0bd66be2fb368a2"
+    "mtime": 1791522322.6932056,
+    "seen": 1791523955.1107545,
+    "ast_hash": "56ec191cd6d6aa77f5cac790f394d23c",
+    "semantic_hash": "56ec191cd6d6aa77f5cac790f394d23c"
   },
   "research/experiments/EXP-FUSION360-MCP-001.md": {
     "mtime": 1790044861.1341221,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791470291.8874717,
-    "seen": 1791470296.2038262,
-    "ast_hash": "015b76e3ee1bdfad3ec761fb5c479944",
-    "semantic_hash": "015b76e3ee1bdfad3ec761fb5c479944"
+    "mtime": 1791523948.9998171,
+    "seen": 1791523955.1105793,
+    "ast_hash": "561a581bb6b3cd1be4933fca75e85ca1",
+    "semantic_hash": "561a581bb6b3cd1be4933fca75e85ca1"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1791470289.6282012,
-    "seen": 1791470296.2038243,
-    "ast_hash": "120382884465d8a0cb7e09c6b05a2745",
-    "semantic_hash": "120382884465d8a0cb7e09c6b05a2745"
+    "mtime": 1791523946.7113686,
+    "seen": 1791523955.1105776,
+    "ast_hash": "512eddfb9432d19043e0a9279d3a3231",
+    "semantic_hash": "512eddfb9432d19043e0a9279d3a3231"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,

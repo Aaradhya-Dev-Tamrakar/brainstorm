@@ -8958,7 +8958,7 @@
       "node_kind": "heading",
       "norm_label": "3. high-velocity ingress stress scenarios: telecom & ai workloads",
       "source_file": "research/architectures/ARCH-SPEC-002-INGESTION-PROCESSING-UNIT.md",
-      "source_location": "L81"
+      "source_location": "L66"
     },
     {
       "id": "research_architectures_arch_spec_002_ingestion_processing_unit_4_hardware_realization_open_predecessors",
@@ -8970,7 +8970,7 @@
       "node_kind": "heading",
       "norm_label": "4. hardware realization & open predecessors",
       "source_file": "research/architectures/ARCH-SPEC-002-INGESTION-PROCESSING-UNIT.md",
-      "source_location": "L93"
+      "source_location": "L78"
     },
     {
       "id": "research_architectures_arch_spec_002_ingestion_processing_unit_5_architectural_invariants_for_the_ipu",
@@ -8982,7 +8982,7 @@
       "node_kind": "heading",
       "norm_label": "5. architectural invariants for the ipu",
       "source_file": "research/architectures/ARCH-SPEC-002-INGESTION-PROCESSING-UNIT.md",
-      "source_location": "L103"
+      "source_location": "L88"
     },
     {
       "id": "research_daily_2026_09_19",
@@ -15715,7 +15715,7 @@
       "node_kind": "heading",
       "norm_label": "3.1 subsystem a: normal -> nightcore dsp transformer engine",
       "source_file": "research/architectures/ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md",
-      "source_location": "L84"
+      "source_location": "L70"
     },
     {
       "id": "research_architectures_arch_spec_004_youtube_transformer_cluster_3_2_subsystem_b_dynamic_lyrical_typography_alignment_engine",
@@ -15727,7 +15727,7 @@
       "node_kind": "heading",
       "norm_label": "3.2 subsystem b: dynamic lyrical typography & alignment engine",
       "source_file": "research/architectures/ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md",
-      "source_location": "L101"
+      "source_location": "L87"
     },
     {
       "id": "research_architectures_arch_spec_004_youtube_transformer_cluster_3_3_subsystem_c_hardware_accelerated_video_compositor_intel_arc_qsv",
@@ -15739,7 +15739,7 @@
       "node_kind": "heading",
       "norm_label": "3.3 subsystem c: hardware-accelerated video compositor (intel arc qsv)",
       "source_file": "research/architectures/ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md",
-      "source_location": "L111"
+      "source_location": "L97"
     },
     {
       "id": "research_architectures_arch_spec_004_youtube_transformer_cluster_3_4_subsystem_d_content_schedulers_autonomous_distribution",
@@ -15751,7 +15751,7 @@
       "node_kind": "heading",
       "norm_label": "3.4 subsystem d: content schedulers & autonomous distribution",
       "source_file": "research/architectures/ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md",
-      "source_location": "L124"
+      "source_location": "L110"
     },
     {
       "id": "research_architectures_arch_spec_004_youtube_transformer_cluster_3_subsystem_technical_specifications",
@@ -15763,7 +15763,7 @@
       "node_kind": "heading",
       "norm_label": "3. subsystem technical specifications",
       "source_file": "research/architectures/ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md",
-      "source_location": "L82"
+      "source_location": "L68"
     },
     {
       "id": "research_architectures_arch_spec_004_youtube_transformer_cluster_4_verification_testing_matrix",
@@ -15775,7 +15775,7 @@
       "node_kind": "heading",
       "norm_label": "4. verification & testing matrix",
       "source_file": "research/architectures/ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md",
-      "source_location": "L136"
+      "source_location": "L122"
     },
     {
       "id": "research_architectures_arch_spec_004_youtube_transformer_cluster_5_architectural_contract_tube_transformer_contract_json",
@@ -15787,7 +15787,7 @@
       "node_kind": "heading",
       "norm_label": "5. architectural contract: `tube-transformer.contract.json`",
       "source_file": "research/architectures/ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md",
-      "source_location": "L152"
+      "source_location": "L138"
     },
     {
       "id": "research_notebooklm_ecosystem_sources_07_brl_fellowship_and_cohort_onboarding_1_laboratory_philosophy_the_artifact_standard",
@@ -59466,7 +59466,7 @@
       "node_kind": "heading",
       "norm_label": "4.1 methods handled",
       "source_file": "research/architectures/ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md",
-      "source_location": "L88"
+      "source_location": "L74"
     },
     {
       "id": "research_architectures_arch_spec_006_fusion360_universal_mcp_bridge_4_2_standard_built_in_toolset",
@@ -59478,7 +59478,7 @@
       "node_kind": "heading",
       "norm_label": "4.2 standard built-in toolset",
       "source_file": "research/architectures/ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md",
-      "source_location": "L100"
+      "source_location": "L86"
     },
     {
       "id": "research_architectures_arch_spec_006_fusion360_universal_mcp_bridge_4_mcp_protocol_implementation_details",
@@ -59490,7 +59490,7 @@
       "node_kind": "heading",
       "norm_label": "4. mcp protocol implementation details",
       "source_file": "research/architectures/ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md",
-      "source_location": "L84"
+      "source_location": "L70"
     },
     {
       "id": "research_architectures_arch_spec_006_fusion360_universal_mcp_bridge_5_verification_performance_metrics",
@@ -59502,7 +59502,7 @@
       "node_kind": "heading",
       "norm_label": "5. verification & performance metrics",
       "source_file": "research/architectures/ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md",
-      "source_location": "L109"
+      "source_location": "L95"
     },
     {
       "id": "research_architectures_arch_spec_006_fusion360_universal_mcp_bridge_6_repository_integration",
@@ -59514,7 +59514,7 @@
       "node_kind": "heading",
       "norm_label": "6. repository integration",
       "source_file": "research/architectures/ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md",
-      "source_location": "L122"
+      "source_location": "L108"
     },
     {
       "id": "research_experiments_exp_fusion360_mcp_001",
@@ -63046,7 +63046,7 @@
       "node_kind": "heading",
       "norm_label": "3. core functional invariants",
       "source_file": "research/architectures/ARCH-SPEC-005-NEPALI-OCR-DOCX-ENGINE.md",
-      "source_location": "L77"
+      "source_location": "L52"
     },
     {
       "id": "research_architectures_arch_spec_005_nepali_ocr_docx_engine_4_verification_milestone_roadmap",
@@ -63058,7 +63058,7 @@
       "node_kind": "heading",
       "norm_label": "4. verification & milestone roadmap",
       "source_file": "research/architectures/ARCH-SPEC-005-NEPALI-OCR-DOCX-ENGINE.md",
-      "source_location": "L90"
+      "source_location": "L65"
     },
     {
       "id": "research_architectures_arch_spec_005_nepali_ocr_docx_engine_arch_spec_005_nepali_ocr_grammar_checker_font_agnostic_word_substrate_lipikaar_ai",
@@ -83618,17 +83618,6 @@
     },
     {
       "source": "research_architectures_arch_spec_002_ingestion_processing_unit",
-      "target": "research_architectures_arch_spec_002_ingestion_processing_unit_5_architectural_invariants_for_the_ipu",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-SPEC-002-INGESTION-PROCESSING-UNIT.md",
-      "source_location": "L103",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_spec_002_ingestion_processing_unit",
       "target": "research_architectures_arch_spec_002_ingestion_processing_unit_1_executive_philosophy_the_strangler_fig_evolutionary_transition",
       "relation": "contains",
       "_origin": "ast",
@@ -83657,7 +83646,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/architectures/ARCH-SPEC-002-INGESTION-PROCESSING-UNIT.md",
-      "source_location": "L81",
+      "source_location": "L66",
       "weight": 1.0
     },
     {
@@ -83668,7 +83657,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/architectures/ARCH-SPEC-002-INGESTION-PROCESSING-UNIT.md",
-      "source_location": "L93",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "research_architectures_arch_spec_002_ingestion_processing_unit",
+      "target": "research_architectures_arch_spec_002_ingestion_processing_unit_5_architectural_invariants_for_the_ipu",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/architectures/ARCH-SPEC-002-INGESTION-PROCESSING-UNIT.md",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -83789,7 +83789,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/architectures/ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md",
-      "source_location": "L136",
+      "source_location": "L122",
       "weight": 1.0
     },
     {
@@ -83800,7 +83800,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/architectures/ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md",
-      "source_location": "L152",
+      "source_location": "L138",
       "weight": 1.0
     },
     {
@@ -83833,7 +83833,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/architectures/ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md",
-      "source_location": "L82",
+      "source_location": "L68",
       "weight": 1.0
     },
     {
@@ -83860,35 +83860,13 @@
     },
     {
       "source": "research_architectures_arch_spec_004_youtube_transformer_cluster_3_subsystem_technical_specifications",
-      "target": "research_architectures_arch_spec_004_youtube_transformer_cluster_3_2_subsystem_b_dynamic_lyrical_typography_alignment_engine",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md",
-      "source_location": "L101",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_spec_004_youtube_transformer_cluster_3_subsystem_technical_specifications",
-      "target": "research_architectures_arch_spec_004_youtube_transformer_cluster_3_3_subsystem_c_hardware_accelerated_video_compositor_intel_arc_qsv",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md",
-      "source_location": "L111",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_spec_004_youtube_transformer_cluster_3_subsystem_technical_specifications",
       "target": "research_architectures_arch_spec_004_youtube_transformer_cluster_3_4_subsystem_d_content_schedulers_autonomous_distribution",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/architectures/ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md",
-      "source_location": "L124",
+      "source_location": "L110",
       "weight": 1.0
     },
     {
@@ -83899,7 +83877,29 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/architectures/ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md",
-      "source_location": "L84",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "research_architectures_arch_spec_004_youtube_transformer_cluster_3_subsystem_technical_specifications",
+      "target": "research_architectures_arch_spec_004_youtube_transformer_cluster_3_2_subsystem_b_dynamic_lyrical_typography_alignment_engine",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/architectures/ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "research_architectures_arch_spec_004_youtube_transformer_cluster_3_subsystem_technical_specifications",
+      "target": "research_architectures_arch_spec_004_youtube_transformer_cluster_3_3_subsystem_c_hardware_accelerated_video_compositor_intel_arc_qsv",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/architectures/ARCH-SPEC-004-YOUTUBE-TRANSFORMER-CLUSTER.md",
+      "source_location": "L97",
       "weight": 1.0
     },
     {
@@ -83943,7 +83943,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/architectures/ARCH-SPEC-005-NEPALI-OCR-DOCX-ENGINE.md",
-      "source_location": "L77",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -83954,18 +83954,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/architectures/ARCH-SPEC-005-NEPALI-OCR-DOCX-ENGINE.md",
-      "source_location": "L90",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_spec_006_fusion360_universal_mcp_bridge",
-      "target": "research_architectures_arch_spec_006_fusion360_universal_mcp_bridge_5_verification_performance_metrics",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md",
-      "source_location": "L109",
+      "source_location": "L65",
       "weight": 1.0
     },
     {
@@ -83976,7 +83965,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/architectures/ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md",
-      "source_location": "L122",
+      "source_location": "L108",
       "weight": 1.0
     },
     {
@@ -84020,7 +84009,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/architectures/ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md",
-      "source_location": "L84",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "research_architectures_arch_spec_006_fusion360_universal_mcp_bridge",
+      "target": "research_architectures_arch_spec_006_fusion360_universal_mcp_bridge_5_verification_performance_metrics",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/architectures/ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -84058,24 +84058,24 @@
     },
     {
       "source": "research_architectures_arch_spec_006_fusion360_universal_mcp_bridge_4_mcp_protocol_implementation_details",
-      "target": "research_architectures_arch_spec_006_fusion360_universal_mcp_bridge_4_2_standard_built_in_toolset",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "research/architectures/ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md",
-      "source_location": "L100",
-      "weight": 1.0
-    },
-    {
-      "source": "research_architectures_arch_spec_006_fusion360_universal_mcp_bridge_4_mcp_protocol_implementation_details",
       "target": "research_architectures_arch_spec_006_fusion360_universal_mcp_bridge_4_1_methods_handled",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "research/architectures/ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md",
-      "source_location": "L88",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "research_architectures_arch_spec_006_fusion360_universal_mcp_bridge_4_mcp_protocol_implementation_details",
+      "target": "research_architectures_arch_spec_006_fusion360_universal_mcp_bridge_4_2_standard_built_in_toolset",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "research/architectures/ARCH-SPEC-006-FUSION360-UNIVERSAL-MCP-BRIDGE.md",
+      "source_location": "L86",
       "weight": 1.0
     },
     {
@@ -142137,5 +142137,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4d14a4a6dda2d2d1adf9baecef3bca97326c447d"
+  "built_at_commit": "8a052e6fd7714b0186ffbc789d316fccbe627dca"
 }

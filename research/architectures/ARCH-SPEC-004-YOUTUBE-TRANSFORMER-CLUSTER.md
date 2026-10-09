@@ -46,35 +46,21 @@ To solve the cold-start problem, the cluster deploys two high-velocity programma
 
 ## 2. End-to-End Cluster Architecture
 
-```
-                                  [ Audio / Lyric Ingestion ]
-                                  (Public Domain / Free / Stems)
-                                                │
-                       ┌────────────────────────┴────────────────────────┐
-                       ▼                                                 ▼
-        [ Normal -> Nightcore DSP Engine ]               [ Alignment & Timing Engine ]
-        • Rubberband Pitch/Tempo Stretch                 • WhisperX Word/Phoneme Timestamps
-        • Sub-Bass Saturation (60 Hz punch)              • Syllable Split & Karaoke Generator
-        • ITU-R BS.1770 (-14 LUFS leveling)              • SSA/ASS Script Compilation (.ass)
-                       │                                                 │
-                       └────────────────────────┬────────────────────────┘
-                                                │ Transformed Audio + ASS Subtitles
-                                                ▼
-                                [ Hardware-Accelerated Compositor ]
-                                • Intel Core Ultra 7 155H QuickSync (QSV)
-                                • Encoders: h264_qsv / av1_qsv (Zero CPU Stall)
-                                • Audio-Reactive Visualizer (FFmpeg showwaves/vectorscope)
-                                • High-Contrast Vector Background (Kids/Nightcore Aesthetic)
-                                                │
-                                                ▼
-                                    [ Validated Video Output ]
-                                    (1080p60 / 4K MP4 Containers)
-                                                │
-                                                ▼
-                                 [ Autonomous Dispatch & Relay ]
-                                 • Scheduled Upload via YouTube Data API v3
-                                 • RTMP Stream Broadcast via yt-dlp-live Relay Engine
-                                 • SEO Metadata, Chapters & Thumbnail Injection
+```mermaid
+flowchart TD
+    in["[ Audio / Lyric Ingestion ]<br>(Public Domain / Free / Stems)"]
+    
+    in --> dsp["[ Normal -> Nightcore DSP Engine ]<br>• Rubberband Pitch/Tempo Stretch<br>• Sub-Bass Saturation (60 Hz punch)<br>• ITU-R BS.1770 (-14 LUFS leveling)"]
+    in --> align["[ Alignment & Timing Engine ]<br>• WhisperX Word/Phoneme Timestamps<br>• Syllable Split & Karaoke Generator<br>• SSA/ASS Script Compilation (.ass)"]
+    
+    dsp --> join1{{" "}}
+    align --> join1
+    
+    join1 -- "Transformed Audio + ASS Subtitles" --> comp["[ Hardware-Accelerated Compositor ]<br>• Intel Core Ultra 7 155H QuickSync (QSV)<br>• Encoders: h264_qsv / av1_qsv (Zero CPU Stall)<br>• Audio-Reactive Visualizer (FFmpeg showwaves/vectorscope)<br>• High-Contrast Vector Background (Kids/Nightcore Aesthetic)"]
+    
+    comp --> out["[ Validated Video Output ]<br>(1080p60 / 4K MP4 Containers)"]
+    
+    out --> dispatch["[ Autonomous Dispatch & Relay ]<br>• Scheduled Upload via YouTube Data API v3<br>• RTMP Stream Broadcast via yt-dlp-live Relay Engine<br>• SEO Metadata, Chapters & Thumbnail Injection"]
 ```
 
 ---

@@ -962,6 +962,8 @@ class FleetFirstBridge:
         "embedded-firmware": "embedded-firmware-scaffold",
         "embedded-firmware-adapter": "embedded-firmware-scaffold",
         "embedded-firmware-scaffolder": "embedded-firmware-scaffold",
+        "academic-workflow": "adaptive-workflow",
+        "adaptive-orchestrator": "adaptive-workflow",
     }
 
     @classmethod
@@ -971,6 +973,74 @@ class FleetFirstBridge:
             with socket.create_connection((host, port), timeout=timeout):
                 return True
         except (OSError, ConnectionRefusedError):
+            return False
+
+    @classmethod
+    def is_queue_worker_active(cls) -> bool:
+        """Checks whether an active copilot_queue_worker process is running."""
+        try:
+            import psutil
+            current_pid = os.getpid()
+            for p in psutil.process_iter(["pid", "cmdline"]):
+                try:
+                    if p.info["pid"] == current_pid:
+                        continue
+                    cmd = p.info.get("cmdline") or []
+                    cmd_str = " ".join(cmd)
+                    if "copilot_queue_worker.py" in cmd_str and not cmd_str.startswith("python -c"):
+                        return True
+                except (psutil.NoSuchProcess, psutil.AccessDenied):
+                    continue
+            return False
+        except Exception:
+            return False
+
+    @classmethod
+    def ensure_queue_worker_running(
+        cls,
+        concurrency: int = 4,
+        fleet_root: Optional[str] = None,
+    ) -> bool:
+        """
+        Ensures copilot_queue_worker.py is actively processing tasks.
+        Spawns headless detached daemon if not already running.
+        """
+        if cls.is_queue_worker_active():
+            return True
+
+        target_fleet = Path(fleet_root or r"F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator")
+        worker_script = target_fleet / "tools" / "copilot_queue_worker.py"
+        if not worker_script.exists():
+            return False
+
+        log_dir = target_fleet / "orchestrator-state" / "logs"
+        log_dir.mkdir(parents=True, exist_ok=True)
+        log_file = log_dir / "worker_daemon.log"
+
+        cmd = [
+            sys.executable,
+            str(worker_script),
+            "--concurrency",
+            str(concurrency),
+        ]
+
+        try:
+            flags = 0
+            if sys.platform == "win32":
+                flags = subprocess.CREATE_NEW_PROCESS_GROUP | 0x00000008  # DETACHED_PROCESS
+
+            with open(log_file, "a", encoding="utf-8") as out_f:
+                subprocess.Popen(
+                    cmd,
+                    cwd=str(target_fleet),
+                    stdout=out_f,
+                    stderr=out_f,
+                    creationflags=flags,
+                    close_fds=(sys.platform != "win32"),
+                )
+            time.sleep(0.3)
+            return True
+        except Exception:
             return False
 
     @classmethod
@@ -1146,6 +1216,8 @@ class FleetFirstBridge:
                 with open(file_path, "w", encoding="utf-8") as f:
                     json.dump(task_data, f, indent=2)
                 task_data["file_written"] = file_path
+                # Auto-spawn headless daemon if not running to prevent queue starvation
+                cls.ensure_queue_worker_running()
             except Exception:
                 pass
 

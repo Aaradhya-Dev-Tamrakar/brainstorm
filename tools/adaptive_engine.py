@@ -19,6 +19,7 @@ import os
 import sys
 import json
 import argparse
+import subprocess
 from pathlib import Path
 
 # Ensure brainstorm root is in sys.path
@@ -148,6 +149,53 @@ def cmd_rollback(args: argparse.Namespace) -> int:
     return 0 if success else 1
 
 
+def cmd_fleet_status(args: argparse.Namespace) -> int:
+    """Displays live status and remaining credit capacity of the 27-worker Copilot fleet."""
+    fleet_script = Path(r"F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator\tools\copilot_fleet.py")
+    if not fleet_script.exists():
+        print(json.dumps({"error": "copilot_fleet.py not found"}, indent=2), file=sys.stderr)
+        return 1
+    res = subprocess.run([sys.executable, str(fleet_script), "status"], check=False)
+    return res.returncode
+
+
+def cmd_fleet_merge(args: argparse.Namespace) -> int:
+    """Merges a completed task worktree branch (task/<task_id>) into the current repository branch."""
+    branch = f"task/{args.task_id}" if not args.task_id.startswith("task/") else args.task_id
+    repo_root = Path(args.repo or BRAINSTORM_ROOT)
+
+    # Check if branch exists
+    res = subprocess.run(
+        ["git", "rev-parse", "--verify", branch],
+        cwd=str(repo_root),
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        check=False,
+    )
+    if res.returncode != 0:
+        print(json.dumps({"error": f"Branch '{branch}' does not exist in {repo_root}."}, indent=2), file=sys.stderr)
+        return 1
+
+    merge_res = subprocess.run(
+        ["git", "merge", branch, "-m", f"feat(fleet): integrate completed task {args.task_id}"],
+        cwd=str(repo_root),
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        check=False,
+    )
+    success = (merge_res.returncode == 0)
+    output = {
+        "success": success,
+        "branch": branch,
+        "stdout": merge_res.stdout.strip(),
+        "stderr": merge_res.stderr.strip(),
+    }
+    print(json.dumps(output, indent=2))
+    return 0 if success else 1
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Unified CLI for Deterministic Zero-AI Adaptive Workflow Engine."
@@ -194,6 +242,16 @@ def main() -> int:
     p_roll = subparsers.add_parser("rollback", help="Restore Git recovery snapshot")
     p_roll.add_argument("--tag", default=None, help="Snapshot tag name")
     p_roll.set_defaults(func=cmd_rollback)
+
+    # fleet-status
+    p_status = subparsers.add_parser("fleet-status", help="Display live Copilot fleet capacity")
+    p_status.set_defaults(func=cmd_fleet_status)
+
+    # fleet-merge
+    p_merge = subparsers.add_parser("fleet-merge", help="Merge completed task worktree branch")
+    p_merge.add_argument("--task-id", required=True, help="Task ID or branch name (task/<task_id>)")
+    p_merge.add_argument("--repo", default=None, help="Repository path (defaults to brainstorm)")
+    p_merge.set_defaults(func=cmd_fleet_merge)
 
     args = parser.parse_args()
     return args.func(args)

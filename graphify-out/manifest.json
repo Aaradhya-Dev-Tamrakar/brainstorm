@@ -48,10 +48,10 @@
     "semantic_hash": "0748921e00526ceac63918a0383627c6"
   },
   "sync.ps1": {
-    "mtime": 1791531271.6541157,
-    "seen": 1791531320.6792383,
-    "ast_hash": "5e3a23d24f7a5096aea34ffb82d24344",
-    "semantic_hash": "5e3a23d24f7a5096aea34ffb82d24344"
+    "mtime": 1791532964.0491755,
+    "seen": 1791534099.6474211,
+    "ast_hash": "735ac1f3adbb37e8d7c560d3d991272c",
+    "semantic_hash": "735ac1f3adbb37e8d7c560d3d991272c"
   },
   "research/architectures/ARCH-RFC-001-RECORD-KEEPING-STANDARD.md": {
     "mtime": 1790044861.1275935,
@@ -138,10 +138,10 @@
     "semantic_hash": "361e8dd333417f7e3bcd00d97cd29842"
   },
   "README.md": {
-    "mtime": 1791531293.1722727,
-    "seen": 1791531320.6792855,
-    "ast_hash": "88002483b554e5e609948b7b70248985",
-    "semantic_hash": "88002483b554e5e609948b7b70248985"
+    "mtime": 1791533927.4232988,
+    "seen": 1791534099.647508,
+    "ast_hash": "ca34d272ba4367ab1f754f989c08cd75",
+    "semantic_hash": "ca34d272ba4367ab1f754f989c08cd75"
   },
   "research/architectures/README.md": {
     "mtime": 1790240407.9593427,
@@ -252,10 +252,10 @@
     "semantic_hash": "6bee96cc15622c5042de4003887bb39d"
   },
   "AARADHYA_MASTER_v165.md": {
-    "mtime": 1790044861.056255,
-    "seen": 1790599964.4901161,
-    "ast_hash": "792d897b4bb6d60976fb545a1e6c66ac",
-    "semantic_hash": "792d897b4bb6d60976fb545a1e6c66ac"
+    "mtime": 1791533089.2596042,
+    "seen": 1791534099.6474998,
+    "ast_hash": "f2a43244f2ad67299a7eb287cdddd17e",
+    "semantic_hash": "f2a43244f2ad67299a7eb287cdddd17e"
   },
   "research/architectures/ARCH-SPEC-005-NEPALI-OCR-DOCX-ENGINE.md": {
     "mtime": 1791522307.9736843,
@@ -312,10 +312,10 @@
     "semantic_hash": "611386add77e9093386d1adb811cd9e8"
   },
   "sim/run_experiments.py": {
-    "mtime": 1790044861.1795669,
-    "seen": 1790599911.6671238,
-    "ast_hash": "15e8e51d8e1620b120857e4fdd92f87a",
-    "semantic_hash": "15e8e51d8e1620b120857e4fdd92f87a"
+    "mtime": 1791532944.2699869,
+    "seen": 1791534099.6474006,
+    "ast_hash": "844a4dc585004c7be8cee17d96b4bdd6",
+    "semantic_hash": "844a4dc585004c7be8cee17d96b4bdd6"
   },
   "sim/test_reproducibility.py": {
     "mtime": 1790044861.1800666,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791532442.4980497,
-    "seen": 1791532448.5520098,
-    "ast_hash": "2ee9fcfd96fb054e68d66995da410050",
-    "semantic_hash": "2ee9fcfd96fb054e68d66995da410050"
+    "mtime": 1791534093.4466915,
+    "seen": 1791534099.647293,
+    "ast_hash": "f549a54597e10d2adfb1eb63affe4b34",
+    "semantic_hash": "f549a54597e10d2adfb1eb63affe4b34"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -558,10 +558,10 @@
     "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
   },
   "research/results/INV-BMK-001_results.json": {
-    "mtime": 1791532440.097942,
-    "seen": 1791532448.5520082,
-    "ast_hash": "d51af33d22ded2ba51d6024d59984fc5",
-    "semantic_hash": "d51af33d22ded2ba51d6024d59984fc5"
+    "mtime": 1791534022.7381911,
+    "seen": 1791534099.647291,
+    "ast_hash": "458da45934815c76accf974a93bdddff",
+    "semantic_hash": "458da45934815c76accf974a93bdddff"
   },
   "schemas/examples/downloader-scripts.contract.json": {
     "mtime": 1790230165.5902388,
@@ -618,10 +618,10 @@
     "semantic_hash": "5ce5b83bef1ba617e9fa7a54ac94c832"
   },
   "sim/invariant_engine/benchmark_runner.py": {
-    "mtime": 1790236598.7917664,
-    "seen": 1790599911.6671164,
-    "ast_hash": "6f24dba9538b80885e69d9004ccb55c2",
-    "semantic_hash": "6f24dba9538b80885e69d9004ccb55c2"
+    "mtime": 1791533993.2498653,
+    "seen": 1791534099.6473818,
+    "ast_hash": "92da6016ddf56177776babf50d4468da",
+    "semantic_hash": "92da6016ddf56177776babf50d4468da"
   },
   "sim/invariant_engine/contract_types.py": {
     "mtime": 1790236532.978223,
@@ -666,10 +666,10 @@
     "semantic_hash": "81e39e2291c1436a43d8ad2530f14564"
   },
   "sim/test_invariant_engine.py": {
-    "mtime": 1790923649.8540442,
-    "seen": 1790923675.6315007,
-    "ast_hash": "d99d7ce9d9484fa3c3301892906f2d92",
-    "semantic_hash": "d99d7ce9d9484fa3c3301892906f2d92"
+    "mtime": 1791534002.4056122,
+    "seen": 1791534099.6474054,
+    "ast_hash": "c18d30707292aaeeabe358d1f069fd20",
+    "semantic_hash": "c18d30707292aaeeabe358d1f069fd20"
   },
   "sim/test_nepal_law_harvester.py": {
     "mtime": 1790597949.8894143,
@@ -690,10 +690,10 @@
     "semantic_hash": "26f27dc72e6385a9f3cf9e96bdbb1153"
   },
   "RESEARCH_PROFILE.md": {
-    "mtime": 1790244753.2888792,
-    "seen": 1790599964.4901218,
-    "ast_hash": "11c5689730c495c2201f57587bf4a813",
-    "semantic_hash": "11c5689730c495c2201f57587bf4a813"
+    "mtime": 1791533054.5179954,
+    "seen": 1791534099.6475093,
+    "ast_hash": "d8afd99ece6fbfa1567f5897034aced9",
+    "semantic_hash": "d8afd99ece6fbfa1567f5897034aced9"
   },
   "research/architectures/ARCH-PLAN-002-SYSTEMS-ENGINEERING-MASTERY-PLAN.md": {
     "mtime": 1790090639.452395,
@@ -2172,10 +2172,10 @@
     "semantic_hash": "4fc339c568b0533d4b0cdce4a4ccf176"
   },
   "tools/preeti-converter/converter_engine.py": {
-    "mtime": 1791131479.3594313,
-    "seen": 1791131605.6162355,
-    "ast_hash": "7f726bbfde96554cf39b57cc95844f8c",
-    "semantic_hash": "7f726bbfde96554cf39b57cc95844f8c"
+    "mtime": 1791532921.202268,
+    "seen": 1791534099.6474288,
+    "ast_hash": "7fe339c954f1cdc5dc7a71e14de8d90a",
+    "semantic_hash": "7fe339c954f1cdc5dc7a71e14de8d90a"
   },
   "tools/preeti-converter/converter_gui.py": {
     "mtime": 1791129073.983323,
@@ -3904,5 +3904,17 @@
     "seen": 1791532448.552069,
     "ast_hash": "0d2e4f4b28333389c5d092d7266db3d7",
     "semantic_hash": "0d2e4f4b28333389c5d092d7266db3d7"
+  },
+  "sim/test_reconciliation_engine.py": {
+    "mtime": 1791533767.228567,
+    "seen": 1791534099.6474087,
+    "ast_hash": "2bb0562b81b86c30ce2c105120519827",
+    "semantic_hash": "2bb0562b81b86c30ce2c105120519827"
+  },
+  "sim/test_task_telemetry.py": {
+    "mtime": 1791533773.232921,
+    "seen": 1791534099.6474147,
+    "ast_hash": "56d8376ab55550be2feea9d98e8125d0",
+    "semantic_hash": "56d8376ab55550be2feea9d98e8125d0"
   }
 }

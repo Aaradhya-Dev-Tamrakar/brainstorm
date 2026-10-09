@@ -84,7 +84,7 @@ BS birth-date discrepancy flagged, NOT resolved
 
 2061-09-22 BS
 
-(06 January 2005 AD, 11:45 PM GMT+5:45, Chitwan 84.433°E 27.667°N) — this profile's stored DOB elsewhere has been carried as
+([REDACTED AD DATE, TIME, LOCATION]) — this profile's stored DOB elsewhere has been carried as
 
 2062-09-08 BS
 

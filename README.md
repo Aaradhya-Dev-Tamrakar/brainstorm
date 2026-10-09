@@ -174,6 +174,9 @@ The ecosystem encompasses **28 tool modules** cataloged in `schemas/ecosystem.re
 | 23  | `typora-mcp`                      | **Typora MCP Server**        | Publishing / Actuation | Local Desktop / Fleet MCP |    **E4**     | Programmatic Typora automation, process telemetry, hex history/draft recovery, CSS theme governance & HTML |
 | 24  | `Win-Vault`                       | **Win-Vault**                | Computation / Security | Local Desktop (Bare Metal)|    **E4**     | Zero-dependency native GUI privacy vault with kernel-level NTFS Access Control (ACL) denial                 |
 | 25  | `Cyber-Forensics`                 | **Cyber-Forensics**          | Computation / Security | Local Desktop (Bare Metal)|    **E4**     | Deterministic Windows DFIR triage, multi-layer stealth evasion detection, and cryptographic chain of custody|
+| 26  | `omnivault`                       | **OmniVault**                | Computation / Storage  | Local Desktop / Storage   |    **E4**     | Tri-tier archival and sub-second retrieval engine bridging Mobile, Laptop NVMe catalog, and External HDD   |
+| 27  | `Fleet-Orchestrator`              | **Fleet-Orchestrator**       | Computation / Fleet    | Local / Hybrid Cluster    |    **E4**     | Distributed agent swarm task coordinator, multi-account GitHub Copilot quota pooling, and lease engine     |
+| 28  | `agent-customization-sync`        | **Agent-Customization-Sync** | Computation / Workflow | Local Desktop / Cross-IDE |    **E4**     | Cross-IDE agent customization synchronization, cryptographic state snapshotting, and rule/skill projection  |
 
 ---
 

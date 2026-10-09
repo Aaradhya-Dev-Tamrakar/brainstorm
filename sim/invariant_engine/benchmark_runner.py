@@ -101,14 +101,14 @@ def build_benchmark_testbed():
             name="CXL Double-Free Bounds Check (Planted Bug)",
             state_machine_id="CXL_ALLOCATOR",
             classification=InvariantClassification.PLANTED_VIOLATION,
-            natural_language_spec="Credits free must never exceed total pool capacity (violated under double-free).",
-            predicate_symbolic="credits_free <= credits_total and credits_allocated >= 0",
+            natural_language_spec="Credits free and allocated conserved and non-negative (violated under unconstrained double-free).",
+            predicate_symbolic="credits_free + credits_allocated == credits_total and credits_allocated >= 0 and credits_free >= 0",
             expected_outcome="SAT"
         ),
         "machine": cxl_buggy,
         "actions": cxl_actions,
-        "sym_pred": lambda s: z3.And(s["credits_free"] <= s["credits_total"], s["credits_allocated"] >= 0),
-        "runtime_pred": lambda st: (st["credits_free"] <= st["credits_total"] and st["credits_allocated"] >= 0)
+        "sym_pred": lambda s: z3.And(s["credits_free"] + s["credits_allocated"] == s["credits_total"], s["credits_allocated"] >= 0, s["credits_free"] >= 0),
+        "runtime_pred": lambda st: (st["credits_free"] + st["credits_allocated"] == st["credits_total"] and st["credits_allocated"] >= 0 and st["credits_free"] >= 0)
     })
 
     cases.append({
@@ -260,21 +260,20 @@ def build_benchmark_testbed():
             name="Nonce Anti-Replay Monotonicity (Planted Bug)",
             state_machine_id="SEQUENCE_NONCE_TRACKER",
             classification=InvariantClassification.PLANTED_VIOLATION,
-            natural_language_spec="Receiving a lower or equal nonce must increment replay counter without reducing current nonce.",
+            natural_language_spec="Receiving arbitrary nonces must preserve non-negative nonce bounds (violated under unconstrained acceptance).",
             predicate_symbolic="current_nonce >= 0 and replays_detected >= 0",
-            # Buggy machine allows past nonces and sets current_nonce to negative or zero
             expected_outcome="SAT"
         ),
         "machine": nonce_buggy,
         "actions": nonce_actions,
-        "sym_pred": lambda s: (s["current_nonce"] >= 10),
-        "runtime_pred": lambda st: (st["current_nonce"] >= 10)
+        "sym_pred": lambda s: z3.And(s["current_nonce"] >= 0, s["replays_detected"] >= 0),
+        "runtime_pred": lambda st: (st["current_nonce"] >= 0 and st["replays_detected"] >= 0)
     })
 
     return cases
 
 
-def run_benchmark() -> BenchmarkEvaluationRecord:
+def run_benchmark(persist: bool = True) -> BenchmarkEvaluationRecord:
     print("=" * 85)
     print("   HEADLESS INVARIANT ASSURANCE BENCHMARK ENGINE (INV-BMK-001)")
     print("   Domain State Machines: 4 | Formal Verification: Z3 SMT-LIB2 | Execution: Python Sandbox")
@@ -401,13 +400,13 @@ def run_benchmark() -> BenchmarkEvaluationRecord:
     print(f"  * Mean Sandbox Replay Latency: {record.mean_replay_latency_ms:.2f} ms")
 
     # Persist Dossier
-    os.makedirs(RESULTS_DIR, exist_ok=True)
-    dossier_path = os.path.join(RESULTS_DIR, "INV-BMK-001_results.json")
-    with open(dossier_path, "w", encoding="utf-8") as f:
-        json.dump(record.__dict__, f, indent=2)
-        f.write("\n")
-
-    print(f"[+] Evidence dossier recorded: research/results/INV-BMK-001_results.json")
+    if persist:
+        os.makedirs(RESULTS_DIR, exist_ok=True)
+        dossier_path = os.path.join(RESULTS_DIR, "INV-BMK-001_results.json")
+        with open(dossier_path, "w", encoding="utf-8") as f:
+            json.dump(record.__dict__, f, indent=2)
+            f.write("\n")
+        print(f"[+] Evidence dossier recorded: research/results/INV-BMK-001_results.json")
     print("=" * 85)
     return record
 

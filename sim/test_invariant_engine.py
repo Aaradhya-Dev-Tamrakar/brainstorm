@@ -72,7 +72,7 @@ class InvariantAssuranceEngineTests(unittest.TestCase):
 
     def test_full_benchmark_execution_and_dossier_generation(self):
         """Executes full benchmark suite and asserts deterministic record metrics."""
-        record = run_benchmark()
+        record = run_benchmark(persist=False)
         self.assertEqual(record.discovery_recall_pct, 100.0)
         self.assertEqual(record.counterexample_validity_pct, 100.0)
         self.assertEqual(record.false_discovery_rate_pct, 0.0)

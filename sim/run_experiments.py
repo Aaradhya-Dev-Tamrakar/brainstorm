@@ -251,7 +251,7 @@ def _render_report(result: Dict[str, object]) -> str:
         "|---|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for variant, stats in inspect["speedup_distributions"].items():
-        lines.append("| {} | {} | {:.3f}x | {:.3f}x | {:.3f}x | {:.3f}x | {:.3f}x |".format(
+        lines.append("| {} | {} | {:.3f}x | {:.3f}x | {:.3f}x | {:.3f}x | {:.3f}x | {:.3f}x |".format(
             variant, stats["count"], stats["mean"], stats["p50"], stats["p95"],
             stats["p99"], stats["min"], stats["max"]))
     lines += [

@@ -327,14 +327,15 @@ function Find-StagedSecrets {
 
     $secretPatterns = @(
         'AKIA[0-9A-Z]{16}',                                              # AWS Access Key
-        'sk-[a-zA-Z0-9]{20,}',                                           # OpenAI API Key
+        'sk-(proj-)?[a-zA-Z0-9_\-]{20,}',                                # OpenAI API Key (Standard & Project-scoped)
+        'sk-or-v1-[a-zA-Z0-9]{32,}',                                     # OpenRouter API Key
         'sk-ant-[a-zA-Z0-9\-]{20,}',                                     # Anthropic API Key
         'ghp_[a-zA-Z0-9]{36}',                                           # GitHub Personal Token
         'github_pat_[a-zA-Z0-9_]{20,}',                                  # GitHub Fine-grained PAT
         'AIza[0-9A-Za-z\-_]{35}',                                        # Google / Gemini API Key
         'xox[baprs]-[0-9a-zA-Z\-]{10,}',                                 # Slack Token
         '-----BEGIN (RSA|EC|OPENSSH|PGP|DSA)? ?PRIVATE KEY-----',        # Private Keys
-        '(?i)(api[_-]?key|secret|password|token|passwd)\s*[:=]\s*[''"][^''"\s]{8,}[''"]' # Generic Secrets
+        '(?i)(api[_-]?key|secret|password|token|passwd)\s*[:=]\s*([''"][^''"\s]{8,}[''"]|[^\s''";]{8,})' # Generic Secrets
     )
 
     $hits = @()

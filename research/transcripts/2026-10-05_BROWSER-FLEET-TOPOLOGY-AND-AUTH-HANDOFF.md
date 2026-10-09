@@ -17,8 +17,8 @@ All three target authentication types were empirically tested, verified, and cer
 | Service | Active Account | Verification Command / Gate | Result & Proof | Vault Status |
 | :--- | :--- | :--- | :--- | :--- |
 | **GitHub Copilot CLI** (`copilot`) | `AaradhyaDT` (keyring) | `copilot -p "echo Copilot active" --allow-all` | **Exit 0**, returned `Copilot active`, 0.63 AI credits consumed, 31.1k tokens in / 99 tokens out | Keyring present in Windows Credential Manager |
-| **Antigravity CLI** (`agy`) | `aaradhyadevtmr@gmail.com` | `agy -p "PONG" --dangerously-skip-permissions` | **Exit 0**, returned `PING! Ready when you are. What would you like to work on?` | Active token cache in `~/.gemini/antigravity-cli` |
-| **Google AI Studio API Key** | `aaradhyadevtmr@gmail.com` | `Invoke-RestMethod -Uri "https://generativelanguage.googleapis.com/v1beta/models?key=$env:GEMINI_API_KEY"` | **HTTP 200 OK**, retrieved models `gemini-2.5-flash`, `gemini-2.5-pro`, `gemini-2.5-flash-preview-tts` | Saved in Bitwarden: `Google AI Studio API Key` (`eab48399-6626-4c91-9e45-b4da00fb824f`), cloud synced |
+| **Antigravity CLI** (`agy`) | `primary-auth@account.internal` | `agy -p "PONG" --dangerously-skip-permissions` | **Exit 0**, returned `PING! Ready when you are. What would you like to work on?` | Active token cache in `~/.gemini/antigravity-cli` |
+| **Google AI Studio API Key** | `primary-auth@account.internal` | `Invoke-RestMethod -Uri "https://generativelanguage.googleapis.com/v1beta/models?key=$env:GEMINI_API_KEY"` | **HTTP 200 OK**, retrieved models `gemini-2.5-flash`, `gemini-2.5-pro`, `gemini-2.5-flash-preview-tts` | Saved in Bitwarden: `Google AI Studio API Key` (`eab48399-6626-4c91-9e45-b4da00fb824f`), cloud synced |
 | **WinPilot Engine** | N/A | `winpilot.core.screen.Screen.capture_window()` | Verified silent Win32 GDI BitBlt capture (2584x1624) and UIA tree discovery | Operational in `F:\Aaradhya-Dev-Tamrakar\Utility\windows-pilot` |
 
 ---
@@ -29,22 +29,22 @@ Transcribed and cross-verified directly from user desktop screen captures (`medi
 
 | Browser | Image Ref | Fleet Tier / Purpose | Primary Account | Secondary & Logged-In Accounts |
 | :--- | :---: | :--- | :--- | :--- |
-| **Mozilla Firefox** | Image 1 | **Fleet Tier 1** (Claude Core) | **`aaradhyadevtm@gmail.com`**<br>(Aaradhya Dev Tamrakar) | • `aaradhya.claude.user0@gmail.com` (Claude User 0)<br>• `aaradhya.claude.user1@gmail.com` (Claude User 1)<br>• `kaaliz.official@gmail.com` (Kaaliz)<br>• `nabintmr@gmail.com` (Nabin TAMRAKAR)<br>• `aaradhyadevtmr@gmail.com` (Aaradhya Dev Tamrakar) |
-| **Vivaldi** | Image 2 | **Fleet Tier 2** (Claude Secondary) | **`aaradhyadevtmr@gmail.com`**<br>(Aaradhya Dev Tamrakar — Pro) | • `aaradhya.claude.user2@gmail.com` (Claude User 2)<br>• `aaradhya.claude.user3@gmail.com` (Claude User 3)<br>• `aaradhya.claude.user4@gmail.com` (Claude User 4)<br>• `aaradhya.claude.user5@gmail.com` (Claude User 5)<br>• `aaradhya.claude.user6@gmail.com` (Claude User 6)<br>• `xavier.valois007@gmail.com` (Xavier Valois)<br>• `adtgames2061@gmail.com` (Aaradhya Dev Tamrakar) |
-| **Microsoft Edge** | Image 3 | **Personal & Automation** | **`devtamrakaraaradhya83@gmail.com`**<br>(Aaradhya Dev Tamrakar) | • `aaradhyadevtmr@gmail.com` (Aaradhya Dev Tamrakar) |
-| **Google Chrome** | Image 4 | **Multi-Profile Container**<br>*(12 distinct profiles)* | *(Profile Manager Grid)* | • **Aaradhya Dev**: `aaradhyadtmr@gmail.com`<br>• **Aaradhya Dev**: `majorprj79001@gmail.com`<br>• **Aaradhya Dev**: `aaradhya.bei79001@gmail.com`<br>• **Work**: `aaradhya.devtamrakar@ieee.org`<br>• **Amulya Dev**: `amulyadevtamrakar@gmail.com`<br>• **IEEE**: `ieee.stb.kecktm@gmail.com`<br>• **KEC**: `kec.makerspace@gmail.com`<br>• **Rupesh**: `majorprj79034@gmail.com`<br>• **Sankalpa**: `majorprj79039@gmail.com`<br>• **Sonia**: `majorprj79043@gmail.com`<br>• **The Way To**: `offonthewaytoheart@gmail.com`<br>• **Your Chrome**: Unsynced / Local |
-| **Brave** | Image 5 | **Engineering / BEIE Container** | **`beie7923@gmail.com`**<br>(BEIE) | • `aaradhyadevtmr@gmail.com` *(Signed out)* |
+| **Mozilla Firefox** | Image 1 | **Fleet Tier 1** (Claude Core) | **`tier1-primary@account.internal`**<br>(Aaradhya Dev Tamrakar) | • `claude.worker.0@account.internal` (Claude User 0)<br>• `claude.worker.1@account.internal` (Claude User 1)<br>• `account-tier1-alt1@account.internal`<br>• `account-tier1-alt2@account.internal`<br>• `tier1-sync@account.internal` |
+| **Vivaldi** | Image 2 | **Fleet Tier 2** (Claude Secondary) | **`tier2-primary@account.internal`**<br>(Aaradhya Dev Tamrakar — Pro) | • `claude.worker.2@account.internal` (Claude User 2)<br>• `claude.worker.3@account.internal` (Claude User 3)<br>• `claude.worker.4@account.internal` (Claude User 4)<br>• `claude.worker.5@account.internal` (Claude User 5)<br>• `claude.worker.6@account.internal` (Claude User 6)<br>• `tier2-alt1@account.internal`<br>• `tier2-alt2@account.internal` |
+| **Microsoft Edge** | Image 3 | **Personal & Automation** | **`edge-automation@account.internal`**<br>(Aaradhya Dev Tamrakar) | • `edge-secondary@account.internal` |
+| **Google Chrome** | Image 4 | **Multi-Profile Container**<br>*(12 distinct profiles)* | *(Profile Manager Grid)* | • **Profile 1**: `chrome.worker.01@account.internal`<br>• **Profile 2**: `chrome.worker.02@account.internal`<br>• **Profile 3**: `chrome.worker.03@account.internal`<br>• **Work**: `work.academic@account.internal`<br>• **Profile 5**: `chrome.worker.05@account.internal`<br>• **Affiliate 1**: `affiliate.01@account.internal`<br>• **Affiliate 2**: `affiliate.02@account.internal`<br>• **Cohort 1**: `cohort.worker.01@account.internal`<br>• **Cohort 2**: `cohort.worker.02@account.internal`<br>• **Cohort 3**: `cohort.worker.03@account.internal`<br>• **Profile 11**: `chrome.worker.11@account.internal`<br>• **Your Chrome**: Unsynced / Local |
+| **Brave** | Image 5 | **Engineering / BEIE Container** | **`brave-engineering@account.internal`**<br>(BEIE) | • `brave-secondary@account.internal` *(Signed out)* |
 
 ---
 
 ## 3. Scope for the New Chat Session
 
-1. **Secondary Google AI Studio API Key (`devtamrakaraaradhya83@gmail.com`)**:
-   - Access Google AI Studio in **Microsoft Edge** where `devtamrakaraaradhya83@gmail.com` is active.
-   - Harvest/create key, validate REST endpoint (`generativelanguage.googleapis.com`), and store in Bitwarden vault as `Google AI Studio API Key (devtamrakaraaradhya83)` (`bw create item` + `bw sync`).
+1. **Secondary Google AI Studio API Key (`edge-automation@account.internal`)**:
+   - Access Google AI Studio in **Microsoft Edge** where `edge-automation@account.internal` is active.
+   - Harvest/create key, validate REST endpoint (`generativelanguage.googleapis.com`), and store in Bitwarden vault as `Google AI Studio API Key` (`bw create item` + `bw sync`).
 
 2. **Secondary GitHub Copilot CLI Authorization (`Aaradhya-claudeuser0`)**:
-   - Access **Mozilla Firefox** where `Claude User 0` (`aaradhya.claude.user0@gmail.com`) is active.
+   - Access **Mozilla Firefox** where `Claude User 0` (`claude.worker.0@account.internal`) is active.
    - Complete GitHub Device Code flow (`https://github.com/login/device`) via WinPilot.
    - Execute verification gate: `copilot -p "echo Copilot active (claudeuser0)" --allow-all`.
 

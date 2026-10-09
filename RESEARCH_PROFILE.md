@@ -2,7 +2,7 @@
 **Aaradhya Dev Tamrakar (ADT)**  
 Final-Year B.E. in Electronics, Communication & Information Engineering (ECIE / BEI)  
 Kathmandu Engineering College (KEC), Tribhuvan University | Expected Graduation: Jan 2027  
-**Email:** aaradhyadevtmr@gmail.com | **Phone:** +977-9844602050 | **Location:** Kathmandu, Nepal  
+**Contact:** Via Portfolio / GitHub | **Location:** Kathmandu, Nepal  
 **Portfolio:** [https://aaradhyadt.github.io](https://aaradhyadt.github.io) | **GitHub:** [https://github.com/AaradhyaDT](https://github.com/AaradhyaDT)
 
 ---

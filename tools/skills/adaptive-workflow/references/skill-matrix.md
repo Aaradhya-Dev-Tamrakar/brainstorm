@@ -15,13 +15,14 @@ This matrix provides deterministic routing rules mapping incoming task archetype
 | **`FRONTEND_PRODUCT`** | Web applications, UI components, styling, portfolio onboarding | `design-taste-frontend`<br>`modern-web-guidance`<br>`portfolio-project-manager` | `AaradhyaDT.github.io`<br>`Aaradhya-Dev-Tamrakar.github.io`<br>`react-workshop-ieeekecktm` | `shadcn-context`<br>`fluid-wordmark-collapse`<br>`google-stitch-integration`<br>`chrome-extensions` | `python scripts/verify.py`<br>(26 categories) |
 | **`SWARM_ORCHESTRATION`** | Autonomous teams, batch background workers, multi-account fleet pooling | `agent-teams-orchestration`<br>`fleet-orchestrator`<br>`colab-cloud-accelerator`<br>`pm-workflow-orchestrator`<br>`slm-router-forge` | `Fleet-Orchestrator`<br>`omnivault` | `colab-mcp`<br>`colab CLI`<br>`automation`<br>`cold-storage-archiver`<br>`systems-concurrency-harness` | `copilot_fleet.py status`<br>`colab whoami` |
 | **`SYSADMIN_SECURITY`** | Windows DFIR artifact triage, NTFS ACL locks, desktop automation | `cyber-forensics`<br>`win-vault`<br>`winpilot` | `Cyber-Forensics`<br>`Win-Vault`<br>`system-optimizer` | `bitwarden`<br>`downloader-scripts`<br>`security-guidance` | `pwsh tests\*.ps1`<br>`.\Vault.bat` |
+| **`AI_ENGINEERING_ML`** | Machine learning, deep learning, CV, NLP/NER, agentic loops, RAG, dual-track MLOps, fairness audits | `ai-engineering-fellowship`<br>`colab-cloud-accelerator`<br>`compliance-report-harmonizer` | `F:\FuseAIF2026` (`M1`–`M5`)<br>`BiasAperture`<br>`fuseAiF_*` repos | `colab-mcp`<br>`fuse_cli.py`<br>`super-nlm`<br>`security-guidance` | `fuse_cli.py list`<br>`fuse_cli.py resolve <N>`<br>`pytest` |
 | **`ECOSYSTEM_META`** | Skills creation, agent rules, plugin authoring, SLM forge, graphify | `skill-development`<br>`slm-router-forge`<br>`colab-cloud-accelerator`<br>`agy-customizations`<br>`graphify` | `brainstorm`<br>`Fleet-Orchestrator`<br>`~/.gemini/config/skills/` | `colab-mcp`<br>`graphify-optimizer`<br>`mcp-integration`<br>`find-skills`<br>`migrate-workflows` | `.\audit.bat --fix`<br>`graphify update .` |
 
 ---
 
 ## 2. Auxiliary Governance & Protection Skills
 
-The following 11 specialized skills serve as the sub-governors for the 2D Matrix, Flight Envelope, Quota Velocity, Transactional Recovery, and Cloud Compute subsystems:
+The following 12 specialized skills serve as the sub-governors for the 2D Matrix, Flight Envelope, Quota Velocity, Transactional Recovery, Cloud Compute, and Reference Architecture subsystems:
 
 | Companion Skill | Subsystem Responsibility | Primary Capability & Invariant | Verification Command |
 | :--- | :--- | :--- | :--- |
@@ -32,6 +33,7 @@ The following 11 specialized skills serve as the sub-governors for the 2D Matrix
 | **`control-systems-sim`** | Dynamic Flight Envelope | Regulates worker concurrency via closed-loop PID feedback ($K_p, K_i, K_d$) on latency and 429s. | `control_analyzer.py` |
 | **`fleet-orchestrator`** | Quota Velocity & Antigravity Bridge | Tracks account exhaustion ($H$) and projects Antigravity chat context and rules into worktrees. | `copilot_fleet.py status` |
 | **`colab-cloud-accelerator`**| Cloud Compute & GPU/TPU Gateway | Ephemeral VM allocation (T4/L4/A100/TPU), automated teardown (`INV-COLAB-LIFECYCLE`), non-TTY execution, and `colab-mcp` browser bridge. | `colab whoami` / `sessions` |
+| **`ai-engineering-fellowship`**| Instructor Reference & Quality Calibration | Enforces `INV-RESOLVE-FUSE` (Local-First `F:\FuseAIF2026` -> GitHub remote fallback), rates architectures by mentor grades ($\ge 95$ Golden, 80–94 Calibrated, <80 Cautionary Anti-Pattern), and provides SOTA standards across 17 curriculum domains. | `fuse_cli.py list` / `resolve` |
 | **`systems-concurrency-harness`**| Deadlock Avoidance Validator | Evaluates Banker's safety state on host RAM and locks before claiming new worktrees. | Banker's safety check |
 | **`pm-workflow-orchestrator`** | CPM & Velocity Tracking | Manages Macro-CPM float scheduling and tracks Earned Value ($CPI, SPI$) velocity. | EVM check formulas |
 | **`cyber-forensics`** | Cryptographic State Triage | Captures pre/post BLAKE3 file hashes to detect collateral mutations or masked binaries. | `EvasionHunter.ps1` |

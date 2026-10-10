@@ -5,7 +5,7 @@ description: Universal meta-orchestrator for Aaradhya's 28-tool ecosystem. Enfor
 
 # Adaptive Workflow Orchestrator (`adaptive-workflow`)
 
-Universal meta-orchestrator governing Aaradhya's tool ecosystem (28 modules, 32 tracking branches). Enforces context firebreak (`INV-CTX-FIREBREAK`), solves CPM DAGs mathematically, marshals 27-worker Fleet pool and Colab accelerators, drives local Fleet Master Brain (3B/7B) with Agent-Reflex self-healing, and enforces Antigravity Memory Guard.
+Universal meta-orchestrator for Aaradhya's ecosystem (28 modules, 32 branches). Enforces context firebreak (`INV-CTX-FIREBREAK`), solves CPM DAGs mathematically, marshals 27-worker Fleet pool & Colab GPU accelerators, routes 8 domain archetypes with `ai-engineering-fellowship`, and drives Fleet Master Brain (3B/7B) with Agent-Reflex.
 
 ---
 
@@ -28,7 +28,7 @@ flowchart TD
 ### Hierarchy Responsibilities:
 1. **Lead Agent**: Triage via `adaptive_engine.py triage`. Runs Tier 0 fast paths ($0 tokens). Solves CPM ($TS = 0$). Ephemeral Fleet Commander (`invoke_subagent`), context $<5,000$ tokens (`INV-CTX-FIREBREAK`).
 2. **Domain Commanders**: Writes task JSONs to `orchestrator-state/tasks/`. Absorbs logs/retries. Returns **<300w manifest** to Lead.
-3. **Headless Workers & Cloud Accelerator**: 27 accounts in `.worktrees/<task_id>` + `ColabCloudAdapter` (zero local `.ipynb` execution).
+3. **Headless Workers & Cloud**: 27 accounts in `.worktrees/<task_id>` + `ColabCloudAdapter` (zero local `.ipynb`).
 4. **Agent-Reflex**: Intercepts tool errors at port 1234 (`[Error] -> [Fix]`) for sub-second recovery (`INV-AGENT-REFLEX`).
 
 Protocols: [`references/fleet-command-architecture.md`](references/fleet-command-architecture.md).
@@ -82,7 +82,7 @@ python tools/adaptive_engine.py triage "refactor router" --files sim/routing_eng
 
 | Cell | Policy | Mechanism | Concurrency |
 | :--- | :--- | :--- | :--- |
-| **(V0, R0)** | `DIRECT_FAST` | Direct in-turn or Tier 0 fast path | In-turn |
+| **(V0, R0)** | `DIRECT_FAST` | In-turn or Tier 0 fast path | In-turn |
 | **(V0, R1)** | `BRANCH_GUARD` | Isolated branch with test gate | 1 subagent |
 | **(V0, R2)** | `SURGICAL_LOCK` | Sequential edit with git snapshots | Sequential |
 | **(V1, R0)** | `CONCURRENT_LOCAL` | Parallel edits; pre/post SHA-256 | Up to 4 |
@@ -90,7 +90,7 @@ python tools/adaptive_engine.py triage "refactor router" --files sim/routing_eng
 | **(V1, R2)** | `DECOUPLED_SLICES` | Micro-PR branches (`split-to-prs`) | Sequential |
 | **(V2, R0)** | `FLEET_SWARM` | Fleet-Orchestrator cloud pool | Up to 27 |
 | **(V2, R1)** | `THROTTLED_FLEET` | Batched sub-PR slices via Fleet | Throttled |
-| **(V2, R2)** | `STRICT_INTERLOCK` | Halted; requires user confirmation | Blocked |
+| **(V2, R2)** | `STRICT_INTERLOCK` | Halted; requires confirmation | Blocked |
 
 Matrix reference: [`references/orthogonal-execution-matrix.md`](references/orthogonal-execution-matrix.md).
 
@@ -109,7 +109,7 @@ Envelope reference: [`references/dynamic-flight-envelope.md`](references/dynamic
 
 ## 6. Transactional Recovery & Fencing
 
-- **Rolling Snapshots**: `python tools/adaptive_engine.py snapshot --tag <name>` (rollback: `rollback --tag <name>`).
+- **Rolling Snapshots**: `tools/adaptive_engine.py snapshot --tag <name>` (rollback: `rollback --tag <name>`).
 - **Pre-Existing File Guard (`INV-PRE-EXIST-GUARD`)**: Backs up pre-existing files to `<git_common_dir>/projection_backups/<task_id>/` outside git tracking, restoring on teardown.
 - **Fencing Tokens (`INV-FENCE-TOKEN`)**: Monotonic integer tokens reject split-brain writes from stale workers.
 
@@ -119,12 +119,13 @@ Recovery reference: [`references/transactional-recovery.md`](references/transact
 
 ## 7. Supporting References & Verification
 
-- [`references/agent-reflex-and-tool-speculator.md`](references/agent-reflex-and-tool-speculator.md): Agent-Reflex recovery & Tool-Speculator.
+- [`references/skill-matrix.md`](references/skill-matrix.md): 8-archetype routing & fellowship matrix.
+- [`references/agent-reflex-and-tool-speculator.md`](references/agent-reflex-and-tool-speculator.md): Agent-Reflex & Tool-Speculator.
 - [`references/fleet-master-brain-models.md`](references/fleet-master-brain-models.md): Dual-model (3B/7B), A100 training, Drive retrieval.
-- [`references/historical-provenance.md`](references/historical-provenance.md): Baseline lock ($v3.5.0 \to v3.9.0$) & 14 invariants.
+- [`references/historical-provenance.md`](references/historical-provenance.md): Baseline lock ($v3.5.0 \to v3.10.0$) & 15 invariants.
 - [`references/verification-gates.md`](references/verification-gates.md): Verification sequence (`INV-AUDIT-ORDER`).
-- [`references/worker-availability-ledger.md`](references/worker-availability-ledger.md): Worker exhaustion tracking & 3-to-4 state mapping.
-- [`references/quota-velocity-acceleration.md`](references/quota-velocity-acceleration.md): Credit trading for velocity acceleration.
-- [`references/antigravity-chat-context-injection.md`](references/antigravity-chat-context-injection.md): Customization projection into workers.
-- [`references/ecosystem-repos.md`](references/ecosystem-repos.md): Catalog across all 28 registered tool modules.
+- [`references/worker-availability-ledger.md`](references/worker-availability-ledger.md): Worker exhaustion & state mapping table.
+- [`references/quota-velocity-acceleration.md`](references/quota-velocity-acceleration.md): Credit trading for velocity.
+- [`references/antigravity-chat-context-injection.md`](references/antigravity-chat-context-injection.md): Customization projection to workers.
+- [`references/ecosystem-repos.md`](references/ecosystem-repos.md): Catalog of 28 registered tool modules.
 - [`examples/routing-scenarios.md`](examples/routing-scenarios.md): Walkthroughs across domain archetypes.

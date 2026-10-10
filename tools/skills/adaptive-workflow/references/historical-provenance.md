@@ -7,17 +7,17 @@ This document records the architectural baseline lock, historical provenance, an
 ## 1. Provenance & Version Lifecycle
 
 - **Origin Baseline**: `v3.5.0-adaptive-workflow` (Initial meta-orchestrator specification).
-- **Prior Calibration**: `v3.8.0-calibrated` (Cloud GPU/TPU Compute Accelerator, Dual Colab Gateway, Task Time Allocation, and 207-test Fleet-Orchestrator Adapter Mesh).
-- **Current Calibration**: `v3.9.0-calibrated` (Fleet Master Brain 3B/7B Dual-Model Hierarchy, Antigravity 504-Conversation Trajectory Harvester, Agent-Reflex Autonomous Self-Healing, and Tool-Speculator Prefetching).
+- **Prior Calibration**: `v3.9.0-calibrated` (Fleet Master Brain 3B/7B Dual-Model Hierarchy, Antigravity 504-Conversation Trajectory Harvester, Agent-Reflex Autonomous Self-Healing, and Tool-Speculator Prefetching).
+- **Current Calibration**: `v3.10.0-calibrated` (AI Engineering Fellowship SOTA Reference Integration, 8-Archetype Matrix, and `INV-RESOLVE-FUSE` Local-First / GitHub Fallback Gateway).
 - **Date of Inception**: 2026-10-09 (Official Day of Creation of the Adaptive Workflow meta-orchestrator).
 - **Architectural Scope**: Central meta-orchestration root for Aaradhya's personal ecosystem across **28 tool modules** (24 computational engines and 4 presentation hubs) across **32 Git tracking branches**.
-- **Execution Fleet**: $W = 27$ pooled GitHub Copilot worker accounts, Copilot Headless REST, Claude CDP, Colab Cloud GPU/TPU Accelerator (A100/L4), and Fleet Master Brain (3B & 7B GGUF) managed via `Fleet-Orchestrator`.
+- **Execution Fleet**: $W = 27$ pooled GitHub Copilot worker accounts, Copilot Headless REST, Claude CDP, Colab Cloud GPU/TPU Accelerator (A100/L4), Fleet Master Brain (3B & 7B GGUF), and AI Engineering Fellowship reference cluster managed via `Fleet-Orchestrator`.
 
 ---
 
 ## 2. Invariant Registry
 
-The adaptive workflow engine guarantees deterministic execution through fourteen non-negotiable architectural invariants:
+The adaptive workflow engine guarantees deterministic execution through fifteen non-negotiable architectural invariants:
 
 1. **`INV-FAST-PATH`**:
    Routine development mechanics (`audit.bat`, `sync.bat`, formatters, linters, unittests, simulation runs, git status) execute natively via pure Python and shell commands in <20 ms with 0 AI tokens and <10 MB RAM.
@@ -66,6 +66,9 @@ The adaptive workflow engine guarantees deterministic execution through fourteen
 
 14. **`INV-FIFO-ENQUEUE`**:
     Appending or modifying notebook cells during active cloud training is safe due to Jupyter's FIFO execution queue, preserving in-flight CUDA states.
+
+15. **`INV-RESOLVE-FUSE`**:
+    Local-First with GitHub Remote Fallback. All AI/ML engineering code lookups inspect local repository paths (`F:\FuseAIF2026\M{X}\WK{Y}`) first for 0ms latency offline execution; if unmounted (cloud VMs, Colab), resolve to the authenticated GitHub repository link (`https://github.com/AaradhyaDT/fuseAiF_*`).
 
 ---
 

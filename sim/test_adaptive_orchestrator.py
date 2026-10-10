@@ -516,7 +516,27 @@ class TestAdaptiveOrchestrator(unittest.TestCase):
         res2 = FleetFirstBridge.route_intent("Run CUDA benchmark in cloud TPU accelerator")
         self.assertEqual(res2["primary_skill"], "colab-cloud-accelerator")
 
+    @mock.patch.object(FleetFirstBridge, "is_lm_studio_online", return_value=False)
+    def test_20_ai_engineering_fellowship_intent_routing_and_aliases(self, _mock_online):
+        """Verifies AI Engineering Fellowship heuristic routing, archetypes, and aliases."""
+        # Test alias resolution
+        self.assertEqual(FleetFirstBridge.SKILL_ALIASES.get("fusemachines"), "ai-engineering-fellowship")
+        self.assertEqual(FleetFirstBridge.SKILL_ALIASES.get("fellowship"), "ai-engineering-fellowship")
+        self.assertEqual(FleetFirstBridge.SKILL_ALIASES.get("ai-fellowship"), "ai-engineering-fellowship")
+        self.assertEqual(FleetFirstBridge.SKILL_ALIASES.get("fuseaif"), "ai-engineering-fellowship")
+
+        # Test heuristic intent routing when LM Studio is offline
+        res1 = FleetFirstBridge.route_intent("Check Fusemachines week 5 assignment on tree ensembles with SHAP")
+        self.assertEqual(res1["primary_skill"], "ai-engineering-fellowship")
+        self.assertEqual(res1["archetype"], "AI_ENGINEERING_ML")
+        self.assertEqual(res1["policy"], "STAR_SUBAGENTS")
+
+        res2 = FleetFirstBridge.route_intent("Review Text-to-SQL architecture with AST validator")
+        self.assertEqual(res2["primary_skill"], "ai-engineering-fellowship")
+        self.assertEqual(res2["archetype"], "AI_ENGINEERING_ML")
+
 
 if __name__ == "__main__":
     unittest.main()
+
 

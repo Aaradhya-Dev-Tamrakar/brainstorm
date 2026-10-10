@@ -986,6 +986,14 @@ class FleetFirstBridge:
         "colab-cloud": "colab-cloud-accelerator",
         "colab-mcp": "colab-cloud-accelerator",
         "super-nlm-quantum": "colab-cloud-accelerator",
+        "fusemachines": "ai-engineering-fellowship",
+        "fusemachines-fellowship": "ai-engineering-fellowship",
+        "fellowship": "ai-engineering-fellowship",
+        "ai-fellowship": "ai-engineering-fellowship",
+        "ai-engineering": "ai-engineering-fellowship",
+        "ai-engineer": "ai-engineering-fellowship",
+        "fuse-fellowship": "ai-engineering-fellowship",
+        "fuseaif": "ai-engineering-fellowship",
     }
 
     @classmethod
@@ -1100,6 +1108,10 @@ class FleetFirstBridge:
             duration_s = 240
             time_tier = "T3_LONG"
             route = "FLEET_WORKER"
+        elif archetype == "AI_ENGINEERING_ML" or any(k in p for k in ["mlops", "text-to-sql", "vision transformers", "tree ensembles", "rag assistant", "fellowship", "fusemachines"]):
+            duration_s = 90
+            time_tier = "T2_MEDIUM"
+            route = "SUBAGENT"
         elif policy == "STAR_SUBAGENTS" or any(k in p for k in ["scaffold", "pipeline", "syllabus"]):
             duration_s = 120
             time_tier = "T2_MEDIUM"
@@ -1196,7 +1208,9 @@ class FleetFirstBridge:
         cls._router_telemetry["last_latency_ms"] = round(elapsed, 2)
 
         p = prompt.lower()
-        if any(k in p for k in ["iv-ii", "iv-i", "syllabus", "semester", "super-nlm", "notebooklm", "notes"]):
+        if any(k in p for k in ["fusemachines", "fellowship", "text-to-sql", "text2sql", "telco churn", "tree ensembles", "shap", "neu steel", "defect cnn", "vision transformers", "clip zero-shot", "ner sequence", "rag assistant", "eval harness", "mlops", "biasaperture", "fuseaif"]):
+            arch, tier, cell, pol, pskill = "AI_ENGINEERING_ML", "Tier 2", "(V1, R1)", "STAR_SUBAGENTS", "ai-engineering-fellowship"
+        elif any(k in p for k in ["iv-ii", "iv-i", "syllabus", "semester", "super-nlm", "notebooklm", "notes"]):
             arch, tier, cell, pol, pskill = "RESEARCH_ACADEMIC", "Tier 2", "(V1, R1)", "STAR_SUBAGENTS", "academic-notebook-architect"
         elif any(k in p for k in ["firmware", "dsp", "radar", "stm32", "freertos", "filter"]):
             arch, tier, cell, pol, pskill = "DOMAIN_HARDWARE", "Tier 2", "(V0, R1)", "BRANCH_GUARD", "embedded-firmware-scaffold"

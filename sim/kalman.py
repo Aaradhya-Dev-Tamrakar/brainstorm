@@ -48,6 +48,17 @@ class KalmanFilter:
         self.R = np.asarray(self.observation_noise, dtype=np.float64)
         self.x = np.asarray(self.initial_state, dtype=np.float64).reshape(-1, 1)
 
+        if self.F.ndim != 2 or self.F.shape[0] != self.F.shape[1]:
+            raise ValueError("State transition matrix must be square.")
+        if self.Q.shape != self.F.shape:
+            raise ValueError("Process noise matrix shape must match the state transition matrix.")
+        if self.H.ndim != 2 or self.H.shape[1] != self.F.shape[1]:
+            raise ValueError("Observation matrix shape must be (m, n) for state dimension n.")
+        if self.R.ndim != 2 or self.R.shape[0] != self.R.shape[1] or self.R.shape[0] != self.H.shape[0]:
+            raise ValueError("Observation noise matrix shape must be square and match measurement dimension.")
+        if self.x.shape[0] != self.F.shape[0]:
+            raise ValueError("Initial state dimension must match the state transition matrix.")
+
         if self.initial_covariance is None:
             self.P = np.eye(self.F.shape[0], dtype=np.float64)
         else:
@@ -57,8 +68,12 @@ class KalmanFilter:
 
         if self.state is not None:
             self.x = np.asarray(self.state, dtype=np.float64).reshape(-1, 1)
+            if self.x.shape[0] != self.F.shape[0]:
+                raise ValueError("State dimension does not match the filter dimension.")
         if self.covariance is not None:
             self.P = np.asarray(self.covariance, dtype=np.float64)
+            if self.P.shape != (self.F.shape[0], self.F.shape[0]):
+                raise ValueError("Covariance shape does not match the filter dimension.")
 
         self.last_measurement = None
         self.last_prediction = self.x.copy()
@@ -72,22 +87,26 @@ class KalmanFilter:
     def covariance_matrix(self) -> np.ndarray:
         return self.P.copy()
 
-    def predict(self, control: np.ndarray | Sequence[float] | None = None, dt: float | None = None) -> Tuple[np.ndarray, np.ndarray]:
+    def predict(
+        self,
+        control: np.ndarray | Sequence[float] | None = None,
+        dt: float | None = None,
+    ) -> Tuple[np.ndarray, np.ndarray]:
         """Project the state estimate one timestep forward."""
-        if dt is not None and self.F.shape[0] == 2 and self.F.shape[1] == 2:
-            # Kept for compatibility with very small 1D cases; generic F matrix is authoritative.
-            pass
+        if dt is not None:
+            if dt <= 0.0:
+                raise ValueError("dt must be positive.")
+            if self.F.shape[0] == 2 and self.F.shape[1] == 2:
+                self.F = np.asarray([[1.0, dt], [0.0, 1.0]], dtype=np.float64)
+                self.state_transition = self.F.copy()
 
-        x_pred = self.x.copy()
+        x_pred = self.F @ self.x
         if control is not None:
             u = np.asarray(control, dtype=np.float64).reshape(-1, 1)
-            if self.F.shape[1] != self.x.shape[0]:
-                raise ValueError("Control dimension does not match the state dimension.")
             if u.shape[0] != self.F.shape[1]:
                 raise ValueError("Control vector length must match the state dimension.")
-            x_pred = self.x + u
+            x_pred = x_pred + u
 
-        x_pred = self.F @ self.x if control is None else self.F @ self.x + u
         P_pred = self.F @ self.P @ self.F.T + self.Q
         self.x = x_pred
         self.P = P_pred
@@ -105,11 +124,12 @@ class KalmanFilter:
 
         innovation = z - (self.H @ self.x)
         S = self.H @ self.P @ self.H.T + self.R
-        K = self.P @ self.H.T @ np.linalg.inv(S)
+        K = np.linalg.solve(S.T, (self.P @ self.H.T).T).T
 
         self.x = self.x + K @ innovation
         I = np.eye(self.x.shape[0], dtype=np.float64)
-        self.P = (I - K @ self.H) @ self.P
+        KH = K @ self.H
+        self.P = (I - KH) @ self.P @ (I - KH).T + K @ self.R @ K.T
 
         self.last_measurement = z.copy()
         self.last_update = self.x.copy()
@@ -117,7 +137,7 @@ class KalmanFilter:
 
     def filter_sequence(self, measurements: Iterable[Sequence[float]]) -> List[np.ndarray]:
         """Apply a predict/update cycle across a sequence of measurements."""
-        tracked = []
+        tracked: List[np.ndarray] = []
         for measurement in measurements:
             self.predict()
             self.update(measurement)
@@ -189,16 +209,17 @@ class RadarTrackFilter:
         if dt <= 0.0:
             raise ValueError("dt must be positive.")
         if abs(dt - self.dt) > 1e-12:
-            # Rebuild the transition matrix when a custom dt is supplied.
+            self.dt = float(dt)
             self.kf.F = np.array(
                 [
-                    [1.0, 0.0, dt, 0.0],
-                    [0.0, 1.0, 0.0, dt],
+                    [1.0, 0.0, self.dt, 0.0],
+                    [0.0, 1.0, 0.0, self.dt],
                     [0.0, 0.0, 1.0, 0.0],
                     [0.0, 0.0, 0.0, 1.0],
                 ],
                 dtype=np.float64,
             )
+            self.kf.state_transition = self.kf.F.copy()
         return self.kf.predict()[0]
 
     def update(self, measurement: Sequence[float]) -> np.ndarray:

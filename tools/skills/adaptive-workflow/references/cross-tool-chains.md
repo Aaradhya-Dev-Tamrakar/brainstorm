@@ -1,6 +1,6 @@
 # Standardized Cross-Tool Ecosystem Pipelines
 
-This document specifies the seven canonical cross-repository execution pipelines connecting computational engines, presentation hubs, and utility tools across Aaradhya's ecosystem.
+This document specifies the eight canonical cross-repository execution pipelines connecting computational engines, presentation hubs, and utility tools across Aaradhya's ecosystem.
 
 ---
 
@@ -145,4 +145,30 @@ flowchart LR
 3. Export quantized INT4 GGUF model and push to Google Drive via `scripts/upload_large_model_to_drive.py`.
 4. Mount locally into LM Studio on port 1234 (`models/qwen_intent_router_q4_k_m.gguf`).
 5. Route incoming tasks with sub-50ms latency and dynamic task time allocation.
+
+---
+
+## Pipeline 8: AI Fellowship Curriculum & Golden Reference Architecture Pipeline
+
+Bridges incoming AI/ML engineering requirements with instructor-grade golden blueprints, local repository code (`F:\FuseAIF2026`), Google Colab GPU accelerators, and fairness compliance audits.
+
+```mermaid
+flowchart LR
+    Task["AI/ML Engineering Task"] --> AIE["ai-engineering-fellowship\n(INV-RESOLVE-FUSE Protocol)"]
+    AIE --> Codebase{"Local-First Probe\nF:\\FuseAIF2026\\M*\\WK*?"}
+    Codebase -- "Present" --> LocalCode["Inspect & Reuse Local Code\n(0 latency, offline)"]
+    Codebase -- "Unmounted" --> GHCode["GitHub Fallback Clone\n(AaradhyaDT/fuseAiF_wk*)"]
+    LocalCode --> ColabRun["colab-cloud-accelerator\n(Train on L4/A100 VM)"]
+    GHCode --> ColabRun
+    ColabRun --> Compliance["BiasAperture / compliance-report-harmonizer\n(Fairness & Disparate Impact Audit)"]
+    Compliance --> Delivery["Production Delivery & sync.bat"]
+```
+
+### Protocol:
+1. When `/adaptive-workflow` triages an `AI_ENGINEERING_ML` task, invoke `ai-engineering-fellowship` to look up relevant week dossiers (`references/weeks/wk*.md`) and SOTA best practices.
+2. Resolve code via `INV-RESOLVE-FUSE`: check local path `F:\FuseAIF2026\M{X}\WK{Y}` first; fall back to GitHub remote (`AaradhyaDT/fuseAiF_wk*`) if unmounted.
+3. If heavy GPU training is required, offload execution to `colab-cloud-accelerator` (A100/L4 GPU) with automated `runtime.unassign()` teardown.
+4. If auditing model fairness or demographic bias, route metrics through `BiasAperture` and format with `compliance-report-harmonizer`.
+5. Stage and deliver verified changes via `.\sync.bat`.
+
 

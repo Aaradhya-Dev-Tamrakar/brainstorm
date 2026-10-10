@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791600566.168959,
-    "seen": 1791600572.9205086,
-    "ast_hash": "1dbf3aeaa4ae6bf2b46400877a553cec",
-    "semantic_hash": "1dbf3aeaa4ae6bf2b46400877a553cec"
+    "mtime": 1791603054.9037693,
+    "seen": 1791603077.0800686,
+    "ast_hash": "c9fa7671636b33d87c10f34dd657bd1d",
+    "semantic_hash": "c9fa7671636b33d87c10f34dd657bd1d"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -876,10 +876,10 @@
     "semantic_hash": "7d778793512114b09a97e27b0d5c1e65"
   },
   "tools/skills/README.md": {
-    "mtime": 1791547847.555651,
-    "seen": 1791547898.7555063,
-    "ast_hash": "bd4de1cbd93e704c4dd67d20532d7b80",
-    "semantic_hash": "bd4de1cbd93e704c4dd67d20532d7b80"
+    "mtime": 1791602953.8816514,
+    "seen": 1791603077.080408,
+    "ast_hash": "6a8c882060f9480f9f9ac5de5658509a",
+    "semantic_hash": "6a8c882060f9480f9f9ac5de5658509a"
   },
   "tools/skills/agent-teams-orchestration/SKILL.md": {
     "mtime": 1791443948.1802576,
@@ -3780,10 +3780,10 @@
     "semantic_hash": ""
   },
   "tools/skills/adaptive-workflow/SKILL.md": {
-    "mtime": 1791600479.8978279,
-    "seen": 1791600572.9208164,
-    "ast_hash": "78a38ac4ce25faf58e93606af03a831e",
-    "semantic_hash": "78a38ac4ce25faf58e93606af03a831e"
+    "mtime": 1791602901.9073696,
+    "seen": 1791603077.080413,
+    "ast_hash": "a3a58109fca77589e04ffb37b4fbc3e5",
+    "semantic_hash": "a3a58109fca77589e04ffb37b4fbc3e5"
   },
   "tools/skills/adaptive-workflow/examples/routing-scenarios.md": {
     "mtime": 1791562329.8959343,
@@ -3810,10 +3810,10 @@
     "semantic_hash": "0b8a4307f84dae1b1d0d29c9ecf1cd67"
   },
   "tools/skills/adaptive-workflow/references/cross-tool-chains.md": {
-    "mtime": 1791562302.397931,
-    "seen": 1791562552.0407312,
-    "ast_hash": "783413fad21abde5c6dbacd7351cee6a",
-    "semantic_hash": "783413fad21abde5c6dbacd7351cee6a"
+    "mtime": 1791602827.564419,
+    "seen": 1791603077.0804205,
+    "ast_hash": "ef0b3644aa9561221e4a33bd07f4306b",
+    "semantic_hash": "ef0b3644aa9561221e4a33bd07f4306b"
   },
   "tools/skills/adaptive-workflow/references/dynamic-flight-envelope.md": {
     "mtime": 1791600381.8880408,
@@ -3834,10 +3834,10 @@
     "semantic_hash": "f4d3bca5beeaf89ad48fd549db50c468"
   },
   "tools/skills/adaptive-workflow/references/lifecycle-stages.md": {
-    "mtime": 1791529964.4126666,
-    "seen": 1791530271.7422976,
-    "ast_hash": "66c5a135ece5294ccbb49b31539d35f4",
-    "semantic_hash": "66c5a135ece5294ccbb49b31539d35f4"
+    "mtime": 1791602841.997569,
+    "seen": 1791603077.080429,
+    "ast_hash": "17459118599b3897d5d0dd866a92c75a",
+    "semantic_hash": "17459118599b3897d5d0dd866a92c75a"
   },
   "tools/skills/adaptive-workflow/references/orthogonal-execution-matrix.md": {
     "mtime": 1791547235.46464,
@@ -3852,10 +3852,10 @@
     "semantic_hash": "5f0869bfcb51cc4658183fd3c8167fb2"
   },
   "tools/skills/adaptive-workflow/references/skill-matrix.md": {
-    "mtime": 1791562277.300195,
-    "seen": 1791562552.04074,
-    "ast_hash": "cce31d591006c67338d2b67eebb32d5b",
-    "semantic_hash": "cce31d591006c67338d2b67eebb32d5b"
+    "mtime": 1791602808.0679498,
+    "seen": 1791603077.080432,
+    "ast_hash": "4d12fda2203b354ec63e0d0cf4a63943",
+    "semantic_hash": "4d12fda2203b354ec63e0d0cf4a63943"
   },
   "tools/skills/adaptive-workflow/references/transactional-recovery.md": {
     "mtime": 1791562571.0336874,
@@ -3924,16 +3924,16 @@
     "semantic_hash": "bbe7f0aa8fe920ba8c9d0028a94c80d7"
   },
   "sim/adaptive_orchestrator.py": {
-    "mtime": 1791564793.6146173,
-    "seen": 1791564862.864329,
-    "ast_hash": "8ba7cd5bd72ab5b15c004be7c2ef3c4c",
-    "semantic_hash": "8ba7cd5bd72ab5b15c004be7c2ef3c4c"
+    "mtime": 1791602774.6204655,
+    "seen": 1791603077.0801415,
+    "ast_hash": "66e49c3016b32c0a1f04ee60e9ee4593",
+    "semantic_hash": "66e49c3016b32c0a1f04ee60e9ee4593"
   },
   "sim/test_adaptive_orchestrator.py": {
-    "mtime": 1791564813.868798,
-    "seen": 1791564862.8643796,
-    "ast_hash": "addb7e6a7c22c9c722da489aba94c65b",
-    "semantic_hash": "addb7e6a7c22c9c722da489aba94c65b"
+    "mtime": 1791602790.8026469,
+    "seen": 1791603077.08017,
+    "ast_hash": "80bb73f037acfbd682056b6f6c5c2552",
+    "semantic_hash": "80bb73f037acfbd682056b6f6c5c2552"
   },
   "tools/adaptive_engine.py": {
     "mtime": 1791553741.1537197,
@@ -3948,10 +3948,10 @@
     "semantic_hash": "273b604fd15d7d82aba20da6ee5aa42d"
   },
   "tools/skills/adaptive-workflow/references/historical-provenance.md": {
-    "mtime": 1791600352.6387057,
-    "seen": 1791600572.920831,
-    "ast_hash": "0386243268ce018641a811d94c91c4f4",
-    "semantic_hash": "0386243268ce018641a811d94c91c4f4"
+    "mtime": 1791602860.477317,
+    "seen": 1791603077.0804281,
+    "ast_hash": "a8f5493978986e76e969cdba3c1b97bb",
+    "semantic_hash": "a8f5493978986e76e969cdba3c1b97bb"
   },
   "research/notes/2026-10-09_MILESTONE_ADAPTIVE_WORKFLOW_CALIBRATION_V3_7_0.md": {
     "mtime": 1791547858.918387,
@@ -3960,10 +3960,10 @@
     "semantic_hash": "c5f6df73535a4c7442cfc12fa42f8584"
   },
   "sim/kalman.py": {
-    "mtime": 1791558363.3992653,
-    "seen": 1791558985.8106213,
-    "ast_hash": "6089c03f38917c34bcf9a1804a6fffc2",
-    "semantic_hash": "6089c03f38917c34bcf9a1804a6fffc2"
+    "mtime": 1791600653.5729663,
+    "seen": 1791603077.0801554,
+    "ast_hash": "d8216ee53afa2a880ba63a3e777fde62",
+    "semantic_hash": "d8216ee53afa2a880ba63a3e777fde62"
   },
   "tools/skills/adaptive-workflow/references/agent-reflex-and-tool-speculator.md": {
     "mtime": 1791600340.0647547,
@@ -3976,5 +3976,149 @@
     "seen": 1791600572.9208302,
     "ast_hash": "39b63f77f48a3d3a979fabcf71cd2313",
     "semantic_hash": "39b63f77f48a3d3a979fabcf71cd2313"
+  },
+  "sim/__init__.py": {
+    "mtime": 1791600656.3487616,
+    "seen": 1791603077.0801396,
+    "ast_hash": "73bbbdc1599ed5d5acf520f5080de1b6",
+    "semantic_hash": "73bbbdc1599ed5d5acf520f5080de1b6"
+  },
+  "sim/test_kalman.py": {
+    "mtime": 1791600658.8490536,
+    "seen": 1791603077.080172,
+    "ast_hash": "9f84ee842da75885ee2d9f3061c65bea",
+    "semantic_hash": "9f84ee842da75885ee2d9f3061c65bea"
+  },
+  "tools/skills/ai-engineering-fellowship/scripts/fuse_cli.py": {
+    "mtime": 1791602366.7704651,
+    "seen": 1791603077.0802076,
+    "ast_hash": "f3a11320845deb49a4f7de30ae3c9454",
+    "semantic_hash": "f3a11320845deb49a4f7de30ae3c9454"
+  },
+  "tools/skills/ai-engineering-fellowship/SKILL.md": {
+    "mtime": 1791602352.6256385,
+    "seen": 1791603077.080446,
+    "ast_hash": "b1cea304c15e15e7af8735b5dc409ca2",
+    "semantic_hash": "b1cea304c15e15e7af8735b5dc409ca2"
+  },
+  "tools/skills/ai-engineering-fellowship/references/best_practices_index.md": {
+    "mtime": 1791602393.411298,
+    "seen": 1791603077.0804472,
+    "ast_hash": "b5907c7cdfd55fac157931e7c30d1b6b",
+    "semantic_hash": "b5907c7cdfd55fac157931e7c30d1b6b"
+  },
+  "tools/skills/ai-engineering-fellowship/references/quiz_bank.md": {
+    "mtime": 1791602407.9758284,
+    "seen": 1791603077.0804482,
+    "ast_hash": "5d079107da8b0ef6fe55b30417c705c8",
+    "semantic_hash": "5d079107da8b0ef6fe55b30417c705c8"
+  },
+  "tools/skills/ai-engineering-fellowship/references/weeks/capstone_bias_aperture.md": {
+    "mtime": 1791602526.940561,
+    "seen": 1791603077.0804493,
+    "ast_hash": "26f691199a504ccb769817d9dc481e58",
+    "semantic_hash": "26f691199a504ccb769817d9dc481e58"
+  },
+  "tools/skills/ai-engineering-fellowship/references/weeks/wk01_data_wrangling.md": {
+    "mtime": 1791602416.374295,
+    "seen": 1791603077.0804505,
+    "ast_hash": "fc9a4514a80baaa32f69fe2a2e9f066e",
+    "semantic_hash": "fc9a4514a80baaa32f69fe2a2e9f066e"
+  },
+  "tools/skills/ai-engineering-fellowship/references/weeks/wk02_software_dev_fastapi.md": {
+    "mtime": 1791602425.6412518,
+    "seen": 1791603077.0804513,
+    "ast_hash": "1e978e6c76226e60893635a60dd640a2",
+    "semantic_hash": "1e978e6c76226e60893635a60dd640a2"
+  },
+  "tools/skills/ai-engineering-fellowship/references/weeks/wk03_genai_text2sql.md": {
+    "mtime": 1791602432.3454692,
+    "seen": 1791603077.0804524,
+    "ast_hash": "12869ef6d516f0e6b4602472d10454cc",
+    "semantic_hash": "12869ef6d516f0e6b4602472d10454cc"
+  },
+  "tools/skills/ai-engineering-fellowship/references/weeks/wk04_linear_models.md": {
+    "mtime": 1791602438.578062,
+    "seen": 1791603077.0804532,
+    "ast_hash": "a7ae8bda1eae81770de34d65460f8260",
+    "semantic_hash": "a7ae8bda1eae81770de34d65460f8260"
+  },
+  "tools/skills/ai-engineering-fellowship/references/weeks/wk05_tree_ensembles.md": {
+    "mtime": 1791602444.7383378,
+    "seen": 1791603077.080454,
+    "ast_hash": "c1febb2a6f239d92498b2858150af104",
+    "semantic_hash": "c1febb2a6f239d92498b2858150af104"
+  },
+  "tools/skills/ai-engineering-fellowship/references/weeks/wk06_probabilistic_models.md": {
+    "mtime": 1791602451.2298405,
+    "seen": 1791603077.080455,
+    "ast_hash": "f93eeecd3a191b608b0ea49426461e37",
+    "semantic_hash": "f93eeecd3a191b608b0ea49426461e37"
+  },
+  "tools/skills/ai-engineering-fellowship/references/weeks/wk07_customer_segmentation.md": {
+    "mtime": 1791602457.144395,
+    "seen": 1791603077.0804563,
+    "ast_hash": "d3e2d349c3cac5444d958af16ca1adac",
+    "semantic_hash": "d3e2d349c3cac5444d958af16ca1adac"
+  },
+  "tools/skills/ai-engineering-fellowship/references/weeks/wk08_forecasting.md": {
+    "mtime": 1791602465.0498211,
+    "seen": 1791603077.080457,
+    "ast_hash": "b9c426972df5b1b2ead7a926369297ee",
+    "semantic_hash": "b9c426972df5b1b2ead7a926369297ee"
+  },
+  "tools/skills/ai-engineering-fellowship/references/weeks/wk09_cnn_neu_defects.md": {
+    "mtime": 1791602471.4203386,
+    "seen": 1791603077.0804577,
+    "ast_hash": "6104e090db2060e3f2bdf66aa0e3396e",
+    "semantic_hash": "6104e090db2060e3f2bdf66aa0e3396e"
+  },
+  "tools/skills/ai-engineering-fellowship/references/weeks/wk10_image_processing.md": {
+    "mtime": 1791602477.4638097,
+    "seen": 1791603077.0804584,
+    "ast_hash": "ed66c6be3b6b2a428d3c67fc244804b7",
+    "semantic_hash": "ed66c6be3b6b2a428d3c67fc244804b7"
+  },
+  "tools/skills/ai-engineering-fellowship/references/weeks/wk11_vision_transformers.md": {
+    "mtime": 1791602484.147001,
+    "seen": 1791603077.0804596,
+    "ast_hash": "69735ca5e15bd06fd8784362a856c806",
+    "semantic_hash": "69735ca5e15bd06fd8784362a856c806"
+  },
+  "tools/skills/ai-engineering-fellowship/references/weeks/wk12_ner_sequence_labeling.md": {
+    "mtime": 1791602489.881957,
+    "seen": 1791603077.0804603,
+    "ast_hash": "3f51179d5e453fe141f485031e9ca66d",
+    "semantic_hash": "3f51179d5e453fe141f485031e9ca66d"
+  },
+  "tools/skills/ai-engineering-fellowship/references/weeks/wk13_lstm_sequences.md": {
+    "mtime": 1791602495.363952,
+    "seen": 1791603077.080461,
+    "ast_hash": "d1b4b8c7b09eecd4519d59931eb14e05",
+    "semantic_hash": "d1b4b8c7b09eecd4519d59931eb14e05"
+  },
+  "tools/skills/ai-engineering-fellowship/references/weeks/wk14_agentic_routing_transformers.md": {
+    "mtime": 1791602500.9893854,
+    "seen": 1791603077.0804827,
+    "ast_hash": "552ce79f3840d0d5e9c6cfbc5f5c9b1d",
+    "semantic_hash": "552ce79f3840d0d5e9c6cfbc5f5c9b1d"
+  },
+  "tools/skills/ai-engineering-fellowship/references/weeks/wk15_engineering_rag_systems.md": {
+    "mtime": 1791602506.7330134,
+    "seen": 1791603077.0804837,
+    "ast_hash": "cd49aead2a555eae8152d9cb9f9187e6",
+    "semantic_hash": "cd49aead2a555eae8152d9cb9f9187e6"
+  },
+  "tools/skills/ai-engineering-fellowship/references/weeks/wk16_agentic_eval_harness.md": {
+    "mtime": 1791602513.1318297,
+    "seen": 1791603077.0804846,
+    "ast_hash": "13d880c8dffd118686e6ce6c435260c9",
+    "semantic_hash": "13d880c8dffd118686e6ce6c435260c9"
+  },
+  "tools/skills/ai-engineering-fellowship/references/weeks/wk17_mlops_dual_track.md": {
+    "mtime": 1791602519.6939924,
+    "seen": 1791603077.0804853,
+    "ast_hash": "dbb24765a7ca78250dc13f5e974a3b0e",
+    "semantic_hash": "dbb24765a7ca78250dc13f5e974a3b0e"
   }
 }

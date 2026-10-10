@@ -15,7 +15,7 @@ flowchart LR
 ## Stage 1: Scope & Intent Discovery
 
 ### 1. Archetype Classification
-Analyze incoming prompt text, referenced files, and user objectives against the seven core archetypes:
+Analyze incoming prompt text, referenced files, and user objectives against the eight core archetypes:
 1. `ENGINEERING_DEV`: Code writing, debugging, refactoring, API integration, unit testing.
 2. `DOMAIN_HARDWARE`: Bare-metal C/C++, DSP filters, control loops, RF link budgets, avionics math.
 3. `DOMAIN_AEC_CAD`: 3D CAD modeling, BIM parameters, FEM frame solvers, GIS geospatial layers.
@@ -23,6 +23,7 @@ Analyze incoming prompt text, referenced files, and user objectives against the 
 5. `FRONTEND_PRODUCT`: Web apps, UI components, design systems, portfolio updates.
 6. `SWARM_ORCHESTRATION`: Multi-agent swarms, batch background execution, overnight runs.
 7. `SYSADMIN_SECURITY`: DFIR triage, NTFS folder locks, desktop window automation, vault items.
+8. `AI_ENGINEERING_ML`: Machine learning pipelines, deep learning, CV, NLP/NER, agentic loops, RAG, dual-track MLOps, fairness audits.
 
 ### 2. Complexity Tier Assessment
 Classify the task into one of two tiers:
@@ -45,6 +46,7 @@ Calculate the task coordinates across the [2D Orthogonal Execution Matrix](ortho
 ### 1. Progressive Skill Activation
 - Identify primary and supporting skills from `references/skill-matrix.md`.
 - Read the corresponding `SKILL.md` files on demand to retrieve specialized procedures. Never preload unused skills into context.
+- For `AI_ENGINEERING_ML` tasks, invoke `ai-engineering-fellowship` to look up mentor-graded reference architectures ($\ge 95/100$), anti-pattern guards, and enforce Local-First (`F:\FuseAIF2026`) with GitHub fallback resolution (`INV-RESOLVE-FUSE`).
 
 ### 2. Dynamic Flight Envelope Pre-Flight Check
 Audit host resource readiness against the [Dynamic Flight Envelope](dynamic-flight-envelope.md):

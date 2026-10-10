@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791606333.660265,
-    "seen": 1791606342.8053384,
-    "ast_hash": "d6b88129263f4194961362c03d542ec6",
-    "semantic_hash": "d6b88129263f4194961362c03d542ec6"
+    "mtime": 1791609512.0959525,
+    "seen": 1791609520.465953,
+    "ast_hash": "1b071b58f907c4e59ec51ec2a6ea6bd7",
+    "semantic_hash": "1b071b58f907c4e59ec51ec2a6ea6bd7"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -3780,10 +3780,10 @@
     "semantic_hash": ""
   },
   "tools/skills/adaptive-workflow/SKILL.md": {
-    "mtime": 1791605965.6981778,
-    "seen": 1791606043.2339132,
-    "ast_hash": "02d59d1b3efd9fbae062ce24e73bc5c3",
-    "semantic_hash": "02d59d1b3efd9fbae062ce24e73bc5c3"
+    "mtime": 1791609257.2291007,
+    "seen": 1791609520.4662218,
+    "ast_hash": "8bd87b513db61bc5051c35f49a85ec34",
+    "semantic_hash": "8bd87b513db61bc5051c35f49a85ec34"
   },
   "tools/skills/adaptive-workflow/examples/routing-scenarios.md": {
     "mtime": 1791605565.5385928,
@@ -3918,16 +3918,16 @@
     "semantic_hash": "56d8376ab55550be2feea9d98e8125d0"
   },
   "tools/skills/slm-router-forge/SKILL.md": {
-    "mtime": 1791574343.1744044,
-    "seen": 1791600572.9211168,
-    "ast_hash": "bbe7f0aa8fe920ba8c9d0028a94c80d7",
-    "semantic_hash": "bbe7f0aa8fe920ba8c9d0028a94c80d7"
+    "mtime": 1791609306.6277804,
+    "seen": 1791609520.466547,
+    "ast_hash": "eda21d1a8c1bd81a98a06b847a9aac61",
+    "semantic_hash": "eda21d1a8c1bd81a98a06b847a9aac61"
   },
   "sim/adaptive_orchestrator.py": {
-    "mtime": 1791606230.7233615,
-    "seen": 1791606342.8054285,
-    "ast_hash": "d254e2b72e82bd385cc9a835c04a21c2",
-    "semantic_hash": "d254e2b72e82bd385cc9a835c04a21c2"
+    "mtime": 1791608145.9502645,
+    "seen": 1791609520.4660106,
+    "ast_hash": "584406afc49032fd08979f96027753d5",
+    "semantic_hash": "584406afc49032fd08979f96027753d5"
   },
   "sim/test_adaptive_orchestrator.py": {
     "mtime": 1791602790.8026469,
@@ -3936,10 +3936,10 @@
     "semantic_hash": "80bb73f037acfbd682056b6f6c5c2552"
   },
   "tools/adaptive_engine.py": {
-    "mtime": 1791553741.1537197,
-    "seen": 1791555271.170977,
-    "ast_hash": "5a994040aaa3678cb8f1d63899c07a65",
-    "semantic_hash": "5a994040aaa3678cb8f1d63899c07a65"
+    "mtime": 1791608197.0474367,
+    "seen": 1791609520.46605,
+    "ast_hash": "d96cb09e730cf1de1349eaec417370ac",
+    "semantic_hash": "d96cb09e730cf1de1349eaec417370ac"
   },
   "tools/skills/adaptive-workflow/references/deterministic-zero-ai-protocol.md": {
     "mtime": 1791605933.7470567,
@@ -3960,10 +3960,10 @@
     "semantic_hash": "c5f6df73535a4c7442cfc12fa42f8584"
   },
   "sim/kalman.py": {
-    "mtime": 1791605904.7462025,
-    "seen": 1791606043.233666,
-    "ast_hash": "57609304373fa371925809f9a4efddd4",
-    "semantic_hash": "57609304373fa371925809f9a4efddd4"
+    "mtime": 1791606393.4639435,
+    "seen": 1791609520.4660206,
+    "ast_hash": "096f5b24d9ea78d2f205df2e31b216b2",
+    "semantic_hash": "096f5b24d9ea78d2f205df2e31b216b2"
   },
   "tools/skills/adaptive-workflow/references/agent-reflex-and-tool-speculator.md": {
     "mtime": 1791600340.0647547,
@@ -3978,16 +3978,16 @@
     "semantic_hash": "39b63f77f48a3d3a979fabcf71cd2313"
   },
   "sim/__init__.py": {
-    "mtime": 1791600656.3487616,
-    "seen": 1791603077.0801396,
-    "ast_hash": "73bbbdc1599ed5d5acf520f5080de1b6",
-    "semantic_hash": "73bbbdc1599ed5d5acf520f5080de1b6"
+    "mtime": 1791606388.3734155,
+    "seen": 1791609520.4660094,
+    "ast_hash": "ea9590794e9f94c5f9f7f6495638cdd5",
+    "semantic_hash": "ea9590794e9f94c5f9f7f6495638cdd5"
   },
   "sim/test_kalman.py": {
-    "mtime": 1791600658.8490536,
-    "seen": 1791603077.080172,
-    "ast_hash": "9f84ee842da75885ee2d9f3061c65bea",
-    "semantic_hash": "9f84ee842da75885ee2d9f3061c65bea"
+    "mtime": 1791606405.7168217,
+    "seen": 1791609520.4660363,
+    "ast_hash": "17438a22aa9b6264fca9f991816eb2e9",
+    "semantic_hash": "17438a22aa9b6264fca9f991816eb2e9"
   },
   "tools/skills/ai-engineering-fellowship/scripts/fuse_cli.py": {
     "mtime": 1791602366.7704651,

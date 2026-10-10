@@ -40,9 +40,9 @@ Protocols: [`references/fleet-command-architecture.md`](references/fleet-command
 | Tier | Workload | Backend | Cost | Latency / RAM |
 | :--- | :--- | :--- | :--- | :--- |
 | **Tier 0** | Routine: `audit.bat`, `sync.bat`, thesis compile, tests | Shell / Python | **$0.00** | **<20 ms** / **<10 MB** |
-| **Tier 1A** | Intent triage, time allocation, matrix routing | `fleet-master-3b` / `qwen-router` | **$0.00** | **30-50 ms** / **380MB–1.8GB** |
-| **Tier 1B** | Agent-Reflex self-healing & action prefetch | `fleet-master-3b` (port 1234) | **$0.00** | **<50 ms** / **~1.8 GB** |
-| **Tier 1C** | Multi-file coding, batch tasks, test generation | `Fleet-Orchestrator` (27 workers) | **$0.00** | Cloud / **<30 MB** |
+| **Tier 1A** | Intent triage, time allocation, matrix routing | **Meteor Lake Tri-Hardware** (Intel NPU 11 TOPS / Arc iGPU via OpenVINO GenAI INT4 $\to$ LM Studio CPU) | **$0.00** | **15-40 ms** / **~2W envelope (0% CPU)** |
+| **Tier 1B** | Agent-Reflex self-healing & action prefetch | `fleet-master-3b` (NPU/port 1234) | **$0.00** | **<50 ms** / **~1.8 GB** |
+| **Tier 1C** | Multi-file coding, batch tasks, test generation | `Fleet-Orchestrator` (27 workers, `--auto-tier {efficiency,balance,intelligence}`) | **$0.00** | Cloud / **<30 MB** |
 | **Tier 1D** | Deep refactoring, test fixes, invariant audits | `fleet-master-7b` ($\ge 8\text{GB}$ RAM) | **$0.00** | **300-800 ms** / **~4.36 GB** |
 | **Tier 1E** | Cloud GPU/TPU training, CUDA, remote `.ipynb` | `colab-cloud-accelerator` | Compute units | Cloud VM / **0 MB** |
 | **Tier 2** | Interactive conversational reasoning | Gemini 3.8 Flash / Lite | **<$0.001** | Sub-second / **0 MB** |
@@ -70,7 +70,7 @@ Mechanics: [`references/cpm-concurrency-dispatch.md`](references/cpm-concurrency
 
 ---
 
-## 4. 2D Orthogonal Execution Matrix
+## 4. 2D Orthogonal Execution Matrix & 1st-Party Copilot Auto-Tier Mapping
 
 Decouples Workload Volume ($V0 \le 2$, $V1 = 3\text{–}15$, $V2 > 15$ files) from Blast Criticality ($R0 \le 0.10$, $R1 = 0.10\text{–}0.35$, $R2 > 0.35$):
 
@@ -80,17 +80,17 @@ $$C = \min\left(1.0, \max\left(0.0, \frac{2|D| + |T_{\text{ind}}|}{2(N - 1)}\rig
 python tools/adaptive_engine.py triage "refactor router" --files sim/routing_engine.py
 ```
 
-| Cell | Policy | Mechanism | Concurrency |
-| :--- | :--- | :--- | :--- |
-| **(V0, R0)** | `DIRECT_FAST` | In-turn or Tier 0 fast path | In-turn |
-| **(V0, R1)** | `BRANCH_GUARD` | Isolated branch with test gate | 1 subagent |
-| **(V0, R2)** | `SURGICAL_LOCK` | Sequential edit with git snapshots | Sequential |
-| **(V1, R0)** | `CONCURRENT_LOCAL` | Parallel edits; pre/post SHA-256 | Up to 4 |
-| **(V1, R1)** | `STAR_SUBAGENTS` | Disjoint subagents on scratch files | 3 subagents |
-| **(V1, R2)** | `DECOUPLED_SLICES` | Micro-PR branches (`split-to-prs`) | Sequential |
-| **(V2, R0)** | `FLEET_SWARM` | Fleet-Orchestrator cloud pool | Up to 27 |
-| **(V2, R1)** | `THROTTLED_FLEET` | Batched sub-PR slices via Fleet | Throttled |
-| **(V2, R2)** | `STRICT_INTERLOCK` | Halted; requires confirmation | Blocked |
+| Cell | Policy | Mechanism | Concurrency | Copilot Auto-Tier | Recommended Model |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **(V0, R0)** | `DIRECT_FAST` | In-turn or Tier 0 fast path | In-turn | `efficiency` | `LOCAL_SLM` / Fast Path |
+| **(V0, R1)** | `BRANCH_GUARD` | Isolated branch with test gate | 1 subagent | `balance` | `copilot` default |
+| **(V0, R2)** | `SURGICAL_LOCK` | Sequential edit with git snapshots | Sequential | `intelligence` | `gemini-3.8-flash` |
+| **(V1, R0)** | `CONCURRENT_LOCAL` | Parallel edits; pre/post SHA-256 | Up to 4 | `efficiency` | `copilot` default |
+| **(V1, R1)** | `STAR_SUBAGENTS` | Disjoint subagents on scratch files | 3 subagents | `balance` | `copilot` default |
+| **(V1, R2)** | `DECOUPLED_SLICES` | Micro-PR branches (`split-to-prs`) | Sequential | `intelligence` | `gemini-3.8-flash` |
+| **(V2, R0)** | `FLEET_SWARM` | Fleet-Orchestrator cloud pool | Up to 27 | `efficiency` | `copilot` pool |
+| **(V2, R1)** | `THROTTLED_FLEET` | Batched sub-PR slices via Fleet | Throttled | `balance` | `copilot` pool |
+| **(V2, R2)** | `STRICT_INTERLOCK` | Halted; requires confirmation | Blocked | `intelligence` | `gemini-3.8-flash` |
 
 Matrix reference: [`references/orthogonal-execution-matrix.md`](references/orthogonal-execution-matrix.md).
 

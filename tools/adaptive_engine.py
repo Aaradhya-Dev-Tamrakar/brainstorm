@@ -55,6 +55,16 @@ def cmd_flight_check(args: argparse.Namespace) -> int:
             "telemetry": router_telemetry,
         },
     }
+
+    try:
+        fleet_tools = Path(r"F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator\tools")
+        if str(fleet_tools) not in sys.path:
+            sys.path.insert(0, str(fleet_tools))
+        from npu_engine import TriHardwareEngine
+        output["tri_hardware_tile"] = TriHardwareEngine.get_hardware_status()
+    except Exception:
+        pass
+
     print(json.dumps(output, indent=2))
     return 0 if safe else 1
 
@@ -125,6 +135,8 @@ def cmd_fleet_task(args: argparse.Namespace) -> int:
         output_dir=args.out_dir,
         kind=getattr(args, "kind", "code"),
         parent_id=getattr(args, "parent_id", None),
+        model=getattr(args, "model", None),
+        auto_tier=getattr(args, "auto_tier", None),
     )
     print(json.dumps(manifest, indent=2))
     return 0
@@ -231,6 +243,8 @@ def main() -> int:
     p_fleet.add_argument("--kind", default="code", choices=["code", "text"], help="Task kind (code or text)")
     p_fleet.add_argument("--parent-id", default=None, help="Parent task ID if subtask")
     p_fleet.add_argument("--out-dir", default=None, help="Output directory for task JSON")
+    p_fleet.add_argument("--model", default=None, help="Explicit Copilot model (e.g. gemini-3.8-flash)")
+    p_fleet.add_argument("--auto-tier", default=None, choices=["efficiency", "balance", "intelligence"], help="Copilot auto-tier preference")
     p_fleet.set_defaults(func=cmd_fleet_task)
 
     # snapshot

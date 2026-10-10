@@ -660,6 +660,20 @@ class DeterministicTriageEngine:
         else:
             rec_tier = "Tier 2"
 
+        # 1st-party Copilot Auto-Tier and Model Escalation
+        if cell in ["(V2, R1)", "(V2, R2)"]:
+            auto_tier = "intelligence"
+            rec_model = "gemini-3.8-flash"
+        elif r_label == "R2" or policy in ["SURGICAL_LOCK", "DECOUPLED_SLICES"]:
+            auto_tier = "intelligence"
+            rec_model = None
+        elif r_label == "R1" or policy in ["BRANCH_GUARD", "STAR_SUBAGENTS"]:
+            auto_tier = "balance"
+            rec_model = None
+        else:
+            auto_tier = "efficiency"
+            rec_model = None
+
         return {
             "task": task_description,
             "is_fast_path": False,
@@ -670,6 +684,8 @@ class DeterministicTriageEngine:
             "criticality": r_label,
             "criticality_score": crit_score,
             "file_count": count,
+            "auto_tier": auto_tier,
+            "recommended_model": rec_model,
             "requires_interlock": cell == "(V2, R2)",
         }
 
@@ -1250,6 +1266,8 @@ class FleetFirstBridge:
         kind: str = "code",
         parent_id: Optional[str] = None,
         timeout: float = 420.0,
+        model: Optional[str] = None,
+        auto_tier: Optional[str] = None,
     ) -> Dict[str, Any]:
         """Generates declarative Fleet-Orchestrator task JSON conforming to SCHEMA.md with dynamic time allocation."""
         slug = re.sub(r"[^a-zA-Z0-9_\-]+", "-", title.lower()).strip("-")[:40]
@@ -1262,6 +1280,23 @@ class FleetFirstBridge:
         routing = cls.route_intent(prompt)
         time_alloc = routing.get("time_allocation", {})
         dynamic_timeout = float(time_alloc.get("timeout_ceiling_s", timeout)) if timeout == 420.0 else timeout
+
+        auto_tier_resolved = auto_tier or routing.get("auto_tier")
+        if not auto_tier_resolved:
+            cell = routing.get("matrix_cell", "(V0, R0)")
+            pol = routing.get("policy", "DIRECT_FAST")
+            if cell in ["(V2, R1)", "(V2, R2)"]:
+                auto_tier_resolved = "intelligence"
+            elif "(V0, R2)" in cell or "(V1, R2)" in cell or pol in ["SURGICAL_LOCK", "DECOUPLED_SLICES"]:
+                auto_tier_resolved = "intelligence"
+            elif "(V0, R1)" in cell or "(V1, R1)" in cell or pol in ["BRANCH_GUARD", "STAR_SUBAGENTS"]:
+                auto_tier_resolved = "balance"
+            else:
+                auto_tier_resolved = "efficiency"
+
+        model_resolved = model or routing.get("recommended_model") or routing.get("recommended_copilot_model")
+        if not model_resolved and routing.get("matrix_cell") in ["(V2, R1)", "(V2, R2)"]:
+            model_resolved = "gemini-3.8-flash"
 
         task_data = {
             "id": canonical_id,
@@ -1285,12 +1320,18 @@ class FleetFirstBridge:
             "max_retries": 3,
             "timeout": dynamic_timeout,
             "time_allocation": time_alloc,
+            "auto_tier": auto_tier_resolved,
+            "model": model_resolved,
+            "recommended_model": model_resolved,
+            "execution_route": time_alloc.get("execution_route", "FLEET_WORKER"),
             "routing": {
                 "archetype": routing.get("archetype"),
                 "tier": routing.get("tier"),
                 "matrix_cell": routing.get("matrix_cell"),
                 "policy": routing.get("policy"),
                 "primary_skill": routing.get("primary_skill"),
+                "auto_tier": auto_tier_resolved,
+                "recommended_model": model_resolved,
             },
         }
 

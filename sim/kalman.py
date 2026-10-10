@@ -31,9 +31,15 @@ def _as_vector(values: ArrayLike, *, size: Optional[int] = None, name: str = "va
 def _as_matrix(values: ArrayLike, *, shape: Optional[tuple[int, int]] = None, name: str = "value") -> np.ndarray:
     arr = np.asarray(values, dtype=np.float64)
     if arr.ndim == 0:
-        arr = arr.reshape(1, 1)
+        if shape is None:
+            arr = arr.reshape(1, 1)
+        else:
+            arr = np.full(shape, float(arr), dtype=np.float64)
     elif arr.ndim == 1:
-        arr = np.diag(arr)
+        if shape is not None and shape[0] == shape[1] and arr.size == shape[0]:
+            arr = np.diag(arr)
+        elif shape is None:
+            arr = np.diag(arr)
     if arr.ndim != 2:
         raise ValueError(f"{name} must be a 2D array-like object.")
     if shape is not None and arr.shape != shape:
@@ -181,7 +187,7 @@ class KalmanFilter:
 
         innovation = z - (H @ self.x)
         innovation_covariance = H @ self.P @ H.T + R
-        self.kalman_gain = self.P @ H.T @ np.linalg.inv(innovation_covariance)
+        self.kalman_gain = np.linalg.solve(innovation_covariance.T, (self.P @ H.T).T).T
 
         self.x = self.x + self.kalman_gain @ innovation
         identity = np.eye(self.state_dim, dtype=np.float64)

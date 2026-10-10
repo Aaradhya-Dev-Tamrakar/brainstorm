@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791605753.9847658,
-    "seen": 1791605776.1037197,
-    "ast_hash": "ee8efadb08884e8ae7874aa780ec719d",
-    "semantic_hash": "ee8efadb08884e8ae7874aa780ec719d"
+    "mtime": 1791606035.9247012,
+    "seen": 1791606043.2335854,
+    "ast_hash": "9290c8debd6826a9c10b3bb7254bccc8",
+    "semantic_hash": "9290c8debd6826a9c10b3bb7254bccc8"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -3780,10 +3780,10 @@
     "semantic_hash": ""
   },
   "tools/skills/adaptive-workflow/SKILL.md": {
-    "mtime": 1791605588.1774704,
-    "seen": 1791605776.104517,
-    "ast_hash": "347f62ef2fa96ed7ba49e866402de519",
-    "semantic_hash": "347f62ef2fa96ed7ba49e866402de519"
+    "mtime": 1791605965.6981778,
+    "seen": 1791606043.2339132,
+    "ast_hash": "02d59d1b3efd9fbae062ce24e73bc5c3",
+    "semantic_hash": "02d59d1b3efd9fbae062ce24e73bc5c3"
   },
   "tools/skills/adaptive-workflow/examples/routing-scenarios.md": {
     "mtime": 1791605565.5385928,
@@ -3852,10 +3852,10 @@
     "semantic_hash": "5f0869bfcb51cc4658183fd3c8167fb2"
   },
   "tools/skills/adaptive-workflow/references/skill-matrix.md": {
-    "mtime": 1791605545.6023402,
-    "seen": 1791605776.1045637,
-    "ast_hash": "dfc8e23218e971412a2659dd4c4652e4",
-    "semantic_hash": "dfc8e23218e971412a2659dd4c4652e4"
+    "mtime": 1791605926.8282487,
+    "seen": 1791606043.2339332,
+    "ast_hash": "3285872e265d27e2ee8e8254e50adc3a",
+    "semantic_hash": "3285872e265d27e2ee8e8254e50adc3a"
   },
   "tools/skills/adaptive-workflow/references/transactional-recovery.md": {
     "mtime": 1791562571.0336874,
@@ -3942,10 +3942,10 @@
     "semantic_hash": "5a994040aaa3678cb8f1d63899c07a65"
   },
   "tools/skills/adaptive-workflow/references/deterministic-zero-ai-protocol.md": {
-    "mtime": 1791605550.757591,
-    "seen": 1791605776.1045372,
-    "ast_hash": "3f3f3fcdd516fe1a06e1ffeb4699fd27",
-    "semantic_hash": "3f3f3fcdd516fe1a06e1ffeb4699fd27"
+    "mtime": 1791605933.7470567,
+    "seen": 1791606043.2339222,
+    "ast_hash": "e33b692fc94618b943b2d2237aed9e3b",
+    "semantic_hash": "e33b692fc94618b943b2d2237aed9e3b"
   },
   "tools/skills/adaptive-workflow/references/historical-provenance.md": {
     "mtime": 1791602860.477317,
@@ -3960,10 +3960,10 @@
     "semantic_hash": "c5f6df73535a4c7442cfc12fa42f8584"
   },
   "sim/kalman.py": {
-    "mtime": 1791600653.5729663,
-    "seen": 1791603077.0801554,
-    "ast_hash": "d8216ee53afa2a880ba63a3e777fde62",
-    "semantic_hash": "d8216ee53afa2a880ba63a3e777fde62"
+    "mtime": 1791605904.7462025,
+    "seen": 1791606043.233666,
+    "ast_hash": "57609304373fa371925809f9a4efddd4",
+    "semantic_hash": "57609304373fa371925809f9a4efddd4"
   },
   "tools/skills/adaptive-workflow/references/agent-reflex-and-tool-speculator.md": {
     "mtime": 1791600340.0647547,
@@ -4258,5 +4258,11 @@
     "seen": 1791605776.1057746,
     "ast_hash": "dbcccfff83efe7a4ccc3f8cd8d52ac1a",
     "semantic_hash": "dbcccfff83efe7a4ccc3f8cd8d52ac1a"
+  },
+  "tools/skills/adaptive-workflow/references/installed-work-tools-catalog.md": {
+    "mtime": 1791605910.1097727,
+    "seen": 1791606043.2339292,
+    "ast_hash": "8fdc81b5fdfcc8c5dfdd7a70b276dd60",
+    "semantic_hash": "8fdc81b5fdfcc8c5dfdd7a70b276dd60"
   }
 }

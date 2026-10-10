@@ -26,7 +26,7 @@ flowchart TD
 ```
 
 ### Hierarchy Responsibilities:
-1. **Lead Agent**: Triage via `adaptive_engine.py triage`. Runs Tier 0 fast paths ($0 tokens). Solves CPM ($TS = 0$). Ephemeral Fleet Commander (`invoke_subagent`), context $<5,000$ tokens (`INV-CTX-FIREBREAK`).
+1. **Lead Agent**: Triage via `adaptive_engine.py`. Tier 0 fast paths ($0). Solves CPM ($TS=0$). Ephemeral Commander (`invoke_subagent`), context $<5\text{k}$ tokens (`INV-CTX-FIREBREAK`).
 2. **Domain Commanders**: Writes task JSONs to `orchestrator-state/tasks/`. Absorbs logs/retries. Returns **<300w manifest** to Lead.
 3. **Headless Workers & Cloud**: 27 accounts in `.worktrees/<task_id>` + `ColabCloudAdapter` (zero local `.ipynb`).
 4. **Agent-Reflex**: Intercepts tool errors at port 1234 (`[Error] -> [Fix]`) for sub-second recovery (`INV-AGENT-REFLEX`).
@@ -56,7 +56,7 @@ Reflex: [`references/agent-reflex-and-tool-speculator.md`](references/agent-refl
 
 ## 3. Mathematical CPM Concurrency
 
-Schedule dates, critical paths, and slacks are solved in Python in [`sim/adaptive_orchestrator.py`](../../sim/adaptive_orchestrator.py) with zero prompt arithmetic:
+Dates, critical paths, and slacks are solved in [`sim/adaptive_orchestrator.py`](../../sim/adaptive_orchestrator.py) with zero prompt arithmetic:
 
 ```powershell
 python tools/adaptive_engine.py cpm --dag-json path/to/dag.json
@@ -72,7 +72,7 @@ Mechanics: [`references/cpm-concurrency-dispatch.md`](references/cpm-concurrency
 
 ## 4. 2D Orthogonal Execution Matrix
 
-Routes tasks by decoupling Workload Volume ($V0 \le 2$, $V1 = 3-15$, $V2 > 15$ files) from Blast Criticality ($R0 \le 0.10$, $R1 = 0.10-0.35$, $R2 > 0.35$):
+Decouples Workload Volume ($V0 \le 2$, $V1 = 3\text{–}15$, $V2 > 15$ files) from Blast Criticality ($R0 \le 0.10$, $R1 = 0.10\text{–}0.35$, $R2 > 0.35$):
 
 $$C = \min\left(1.0, \max\left(0.0, \frac{2|D| + |T_{\text{ind}}|}{2(N - 1)}\right)\right), \quad N = 28$$
 
@@ -101,7 +101,7 @@ Matrix reference: [`references/orthogonal-execution-matrix.md`](references/ortho
 Enforces Antigravity IDE stability and Banker's safety:
 - **Reserve Floor**: $2,048\text{ MB}$ free RAM permanently reserved for Antigravity IDE.
 - **Worker Concurrency**: $\lfloor (\text{Free RAM} - 2048) / 256 \rfloor$. $[2048, 2303]\text{MB} \implies 0$; $[2304, 4096]\text{MB} \implies 1\text{–}8$.
-- **Rate Governor**: Targets $L_{\text{target}} = 1200\text{ms}$. On $\ge 2$ HTTP 429s in 60s, multiplier $M$ halved to $\max(0.25, M/2)$ with 120s recovery window. Successes ramp $M$ by $+0.1$ up to $1.0$.
+- **Rate Governor**: Targets $L_{\text{target}} = 1200\text{ms}$. On $\ge 2$ 429s in 60s, $M$ halved to $\max(0.25, M/2)$ (120s window). Success ramps $M$ by $+0.1$ to $1.0$.
 
 Envelope reference: [`references/dynamic-flight-envelope.md`](references/dynamic-flight-envelope.md).
 
@@ -109,9 +109,9 @@ Envelope reference: [`references/dynamic-flight-envelope.md`](references/dynamic
 
 ## 6. Transactional Recovery & Fencing
 
-- **Rolling Snapshots**: `tools/adaptive_engine.py snapshot --tag <name>` (rollback: `rollback --tag <name>`).
-- **Pre-Existing File Guard (`INV-PRE-EXIST-GUARD`)**: Backs up pre-existing files to `<git_common_dir>/projection_backups/<task_id>/` outside git tracking, restoring on teardown.
-- **Fencing Tokens (`INV-FENCE-TOKEN`)**: Monotonic integer tokens reject split-brain writes from stale workers.
+- **Rolling Snapshots**: `adaptive_engine.py snapshot --tag <name>` (rollback: `rollback --tag <name>`).
+- **Pre-Existing File Guard (`INV-PRE-EXIST-GUARD`)**: Backs up existing files to `<git_common_dir>/projection_backups/<task_id>/`, restoring on teardown.
+- **Fencing Tokens (`INV-FENCE-TOKEN`)**: Monotonic tokens reject split-brain writes from stale workers.
 
 Recovery reference: [`references/transactional-recovery.md`](references/transactional-recovery.md).
 
@@ -119,7 +119,8 @@ Recovery reference: [`references/transactional-recovery.md`](references/transact
 
 ## 7. Supporting References & Verification
 
-- [`references/skill-matrix.md`](references/skill-matrix.md): 8-archetype routing, fellowship & latex-thesis.
+- [`references/skill-matrix.md`](references/skill-matrix.md): 8-archetype routing & fellowship matrix.
+- [`references/installed-work-tools-catalog.md`](references/installed-work-tools-catalog.md): Workstation software catalog.
 - [`references/agent-reflex-and-tool-speculator.md`](references/agent-reflex-and-tool-speculator.md): Agent-Reflex & Tool-Speculator.
 - [`references/fleet-master-brain-models.md`](references/fleet-master-brain-models.md): Dual-model (3B/7B), A100 training, Drive retrieval.
 - [`references/historical-provenance.md`](references/historical-provenance.md): Baseline lock ($v3.5.0 \to v3.10.0$) & 15 invariants.

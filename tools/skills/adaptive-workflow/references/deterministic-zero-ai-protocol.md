@@ -68,6 +68,8 @@ flowchart TD
    - **Daily Resident (Tier 1A/1B)**: `qwen-intent-router` (380 MB) or `fleet-master-3b` (1.8 GB). Operating footprint consumes only ~15% of available free RAM, leaving $>9.5\text{ GB}$ headroom.
    - **On-Demand Powerhouse (Tier 1D)**: `fleet-master-7b` (4.36 GB). Authorized strictly when host RAM $\ge 8.0\text{ GB}$ free, leaving $>3.5\text{ GB}$ headroom (protecting the 2,048 MB floor).
    - **Monolithic Prohibition**: Local models $>8\text{ GB}$ (14B/32B/70B) are strictly forbidden on-device. Large model training and heavy evaluations must be offloaded to **Tier 1E Cloud Accelerators** (`colab-cloud-accelerator`).
+4. **Workstation Runtime & Installed Tooling**:
+   - Host tool inventory (Python 3.12/3.14 via `uv`, Node/Deno via NVM, LM Studio, Ollama, Docker/WSL, Mosquitto, TeXstudio, Pandoc 3.11, etc.) is cataloged in [`references/installed-work-tools-catalog.md`](installed-work-tools-catalog.md).
 
 ---
 

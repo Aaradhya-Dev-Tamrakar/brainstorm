@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791609512.0959525,
-    "seen": 1791609520.465953,
-    "ast_hash": "1b071b58f907c4e59ec51ec2a6ea6bd7",
-    "semantic_hash": "1b071b58f907c4e59ec51ec2a6ea6bd7"
+    "mtime": 1791630246.4299927,
+    "seen": 1791630254.7635036,
+    "ast_hash": "e9919746996f4bfea3af28745a187fa5",
+    "semantic_hash": "e9919746996f4bfea3af28745a187fa5"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -4264,5 +4264,11 @@
     "seen": 1791606043.2339292,
     "ast_hash": "8fdc81b5fdfcc8c5dfdd7a70b276dd60",
     "semantic_hash": "8fdc81b5fdfcc8c5dfdd7a70b276dd60"
+  },
+  ".github/copilot-instructions.md": {
+    "mtime": 1791629678.0462441,
+    "seen": 1791630254.7636504,
+    "ast_hash": "0fff513ca2007f44f5fb5171f78b49ad",
+    "semantic_hash": "0fff513ca2007f44f5fb5171f78b49ad"
   }
 }

@@ -95,6 +95,19 @@ Before committing or syncing architectural updates, always execute the determini
 ```
 - Compiles the formal LaTeX research report into `report/main.pdf`.
 
+### 4. LaTeX Thesis & Presentation Verification (`latex-thesis-architect`)
+When developing or modifying academic thesis reports, project proposals, or Beamer defense decks:
+1. **Style & Structural Audit**:
+   ```powershell
+   python scripts/audit_latex_thesis.py <path-to-report>
+   ```
+   *Enforces 0 banned hype words, 0 broken `\cref` targets, 0 missing BibTeX citations, and $n \ge 30$ subgroup sample size guards.*
+2. **Automated Multi-Pass Compilation**:
+   ```powershell
+   python scripts/compile_thesis.py <path-to-report>
+   ```
+   *Executes `latexmk` / `pdflatex` + `makeglossaries` + `bibtex`, asserting exit code 0 and 0 undefined references.*
+
 ---
 
 ## 3. Portfolio Repository Verification (`AaradhyaDT.github.io`)

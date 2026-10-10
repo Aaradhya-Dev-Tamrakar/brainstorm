@@ -1,0 +1,14 @@
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.fdb_latexmk
+*.fls
+*.synctex*
+*.bbl
+*.blg
+*.vrb
+.DS_Store
+nice-fomratscrrenshots/

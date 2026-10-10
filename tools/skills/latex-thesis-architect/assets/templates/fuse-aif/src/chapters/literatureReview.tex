@@ -1,0 +1,274 @@
+\chapter{Literature Review}
+\label{chap:litreview}
+
+\Cref{chap:intro} established that while algorithmic fairness has evolved into a mature academic discipline, computer vision practitioners still lack a standardized, reusable, and statistically grounded auditing framework. To bridge this divide, this chapter conducts an in-depth synthesis of the scientific, mathematical, and regulatory literature that underpins the architecture of BiasAperture. 
+
+Rather than treating the literature as an uncurated catalogue of citations, we organize this review across seven coherent thematic pillars:
+\begin{enumerate}
+    \item \textbf{The Empirical Mandate}: Foundational evidence demonstrating persistent demographic and intersectional disparities in facial analysis systems;
+    \item \textbf{Mathematical Formulations of Fairness}: Formal definitions of error-rate and selection-rate parities, along with critiques of borrowed legal thresholds;
+    \item \textbf{Statistical Rigor and Demographic Inference Epistemology}: Uncertainty quantification, sample-size guards, and the mathematical bounds imposed by demographic inference accuracy;
+    \item \textbf{Explainability Foundations and Attribution Bounds}: Cooperative game theory, additive feature attribution, and impossibility theorems bounding post-hoc explanations;
+    \item \textbf{Standardized Documentation and Regulatory Governance}: Recognized reporting conventions and legal-to-technical verification mappings;
+    \item \textbf{The Pipeline and Workflow Void}: The structural gap between theoretical metrics and reusable, air-gapped auditing software; and
+    \item \textbf{Frontiers and Future Diagnostic Extensions}: Emerging directions in dataset-level bias profiling, contextual-intersectional stress testing, and continuous attribute partitioning.
+\end{enumerate}
+
+\Cref{tab:litreview} at the conclusion of this chapter consolidates these twenty contributing works, highlighting their specific architectural tier and operational role within BiasAperture.
+
+
+\section{The Empirical Mandate for Facial Analysis Bias Auditing}
+\label{sec:lit_empirical}
+
+The empirical foundation of demographic bias auditing in computer vision was established by Buolamwini and Gebru in their seminal \emph{Gender Shades} study \cite{buolamwini2018gendershades}. Auditing commercial gender-classification APIs across skin-type and gender intersections, the authors demonstrated that high aggregate accuracies masked severe subgroup disparities: while lighter-skinned males experienced error rates as low as 0.8\%, darker-skinned females suffered error rates as high as 34.7\%. This work proved that aggregate performance metrics are fundamentally insufficient for high-stakes biometric systems, establishing intersectional stratification as a mandatory evaluation paradigm. BiasAperture directly operationalizes this insight by automating intersectional cohort extraction across multi-demographic composite keys ($7 \times 2 \times 9$ strata), transforming what was originally an ad-hoc, manual empirical inquiry into a standardized software pipeline.
+
+While \emph{Gender Shades} audited model outputs against explicit demographic groups, Stanley et al. investigated the internal mechanisms through which convolutional networks acquire bias \cite{stanley2025bias}. Utilizing controlled synthetic medical imaging, the authors demonstrated that deep networks learn to exploit demographic characteristics through unrelated visual features---such as image texture, brightness, and background lighting---even when demographic labels are entirely absent during training. This finding reveals that detected subgroup disparities cannot simply be presumed to stem from direct label correlations; they may instead arise from proxy variable entanglement. BiasAperture addresses this vulnerability by incorporating a targeted explainability layer: whenever a demographic disparity is statistically flagged, the platform initiates surrogate attribution to evaluate whether proxy features drive the disparity before reporting it as evidence.
+
+Recent work by Nemavhola et al. reinforces this empirical mandate across modern computer vision backbones \cite{nemavhola2026reassessing}. Evaluating ResNet-50, MobileNetV3, and Vision Transformer (DeiT) architectures on FairFace (alongside UTKFace, which BiasAperture has cut from its operational scope), the authors demonstrated that racial disparities consistently dominate gender disparities by an order of magnitude, producing large effect sizes (Cohen's $d > 1.0$) across all evaluated models. Crucially, their findings proved that newer architectures and higher overall accuracies do not alleviate subgroup disparity gaps. This provides direct empirical justification for BiasAperture's architectural premise: fairness auditing is an essential, independent validation step that cannot be substituted by general model scaling or architectural refinement.
+
+
+\section{Mathematical Formulations of Group Fairness and Disparity}
+\label{sec:lit_fairness_math}
+
+To evaluate algorithmic fairness objectively, the machine learning community has formulated mathematical criteria that formalize what it means for a system to be fair. Hardt et al. introduced two foundational error-rate parity criteria in supervised learning: \emph{Equalized Odds} and \emph{Equal Opportunity} \cite{hardt2016equality}. Equalized Odds mandates that a classifier produce equal True Positive Rates (TPR) and equal False Positive Rates (FPR) across all demographic cohorts, conditioning predictions on the true ground-truth label:
+\begin{equation}
+    P(\hat{Y} = 1 \mid A = a, Y = y) = P(\hat{Y} = 1 \mid A = b, Y = y), \quad \forall y \in \{0, 1\}, \forall a, b.
+\end{equation}
+Equal Opportunity relaxes this criterion to require parity in TPR alone for the advantageous outcome ($Y=1$). Hardt et al. proved that these criteria answer distinct ethical and statistical questions, such that neither subsumes the other. BiasAperture implements both definitions directly as two pillars of its \textbf{Core Four} disparity metrics: Equalized Odds Difference (\gls{eod}) and Equal Opportunity Difference (\gls{eop}), harmonizing their multi-group max-of-gaps definitions across independent computing backends.
+
+However, naive adoption of fairness thresholds presents severe epistemic hazards. Watkins et al. delivered a critical analysis of the U.S. Equal Employment Opportunity Commission's ``four-fifths rule'' (the 80\% disparate impact ratio), describing its uncritical importation into computer science as an instance of ``epistemic trespassing'' \cite{watkins2022fourfifths}. The authors demonstrated that treating an arbitrary ratio threshold ($0.80$) as a binary pass/fail test grants a false sense of compliance while obfuscating underlying sample size dynamics and variance. BiasAperture directly adopts Watkins et al.'s critique as an architectural invariant: the platform never evaluates Disparate Impact Ratio (\gls{dir}) or Demographic Parity Difference (\gls{dpd}) against a bare, uncontextualized numerical threshold. Instead, every reported ratio and difference is paired with asymptotic significance testing and non-parametric bootstrap confidence intervals.
+
+Further scrutinizing metric stability, Howard et al. conducted a comprehensive meta-evaluation of face-recognition fairness measures against Functional Fairness Measure Criteria (FFMC), focusing on intuitive net contribution, bounded ranges, and calculability at zero-error edge cases \cite{howard2022evaluating}. Their analysis revealed that popular metrics such as the False Distribution Ratio (FDR) and Inequity Rate (IR) suffer from mathematical fragility, severe range compression, and uncalculability when error rates approach zero. Howard et al. demonstrated that algorithmic fairness rankings flip dramatically depending on metric choice. This provides rigorous justification for BiasAperture's dual-backend cross-validation strategy: by executing \textbf{Fairlearn} and \textbf{AIF360} in parallel, reconciling their zero-denominator edge-case contracts ($0/0 \to 1.0$, $x/0 \to 0.0$), and raising explicit divergence warnings ($|\Delta| > 0.01$), BiasAperture protects auditors against single-metric artifacts. While Howard et al.'s metric framing is tailored to biometric verification error rates (FMR/FNMR), BiasAperture adapts these stability principles to classification disparity metrics.
+
+
+\section{Statistical Rigor, Uncertainty, and Demographic Inference Epistemology}
+\label{sec:lit_statistics}
+
+A persistent vulnerability in algorithmic auditing is the reliance on unverified point estimates. Nemavhola et al. demonstrated that empirical face-attribute evaluations frequently report subgroup disparities without uncertainty quantification, leading practitioners to overstate apparent fairness or overreact to sample noise \cite{nemavhola2026reassessing}. To establish statistical reliability, their work paired disparity measurements with bootstrap confidence intervals, analysis of variance (ANOVA), and Cohen's $d$ effect sizes. BiasAperture builds upon this methodology by incorporating a vectorized, stratified Bias-Corrected and Accelerated (\gls{bca}) bootstrap engine ($B \ge 1,000$ resamples), calculating 95\% confidence intervals for every Core Four metric alongside Pearson's $\chi^2$ test of independence (with Fisher's exact test fallback for sparse $2 \times 2$ contingency tables).
+
+Crucially, statistical reliability depends on adequate sample support. When subgroup sample sizes fall below critical thresholds, variance explodes and disparity metrics become wildly distorted. BiasAperture enforces a strict invariant ($n < 30$): any demographic subgroup with fewer than 30 observations is automatically suppressed from disparity computation, returning \texttt{metric\_value = None} and flagging \texttt{insufficient\_sample = True}.
+
+Beyond sample variance, demographic auditing faces a deeper epistemic challenge: the provenance and reliability of demographic labels themselves. In a foundational study, Fournier-Montgieux et al. proved that fairness-audit validity is mathematically bounded by the error rate of the Demographic Attribute Inference (DAI) process used to label protected groups \cite{fourniermontgieux2025reliable}. Formulating formal bias and variance bounds, the authors proved that errors in demographic labeling directly corrupt downstream fairness metrics. Most significantly, Fournier-Montgieux et al. documented that FairFace's published training pipeline exhibits an open, unresolved reproducibility gap and that its ResNet-34 classifier trails improved demographic inference heads by 7 to 10 accuracy points.
+
+This finding establishes a critical epistemic boundary for BiasAperture. In the locked Milestone M1 architecture, BiasAperture utilizes Karkkainen and Joo's FairFace dataset \cite{karkkainen2021fairface}---comprising 97,698 released images across a balanced 7-race, 2-gender, and 9-age taxonomy---as its primary benchmark, while having cut and excluded UTKFace due to synthetic DEX model-estimated age noise and collapsed racial categories. However, pursuant to the findings of Fournier-Montgieux et al., BiasAperture's audit reports explicitly treat FairFace labels as an audited operational benchmark rather than infallible ground truth, documenting that demographic inference errors represent an unavoidable upper bound on audit certainty.
+
+
+\section{Explainability Foundations and Bounds on Feature Attribution}
+\label{sec:lit_xai}
+
+When a facial analysis system exhibits significant demographic disparity, auditors must determine whether the model is relying on justifiable visual features or impermissible proxies. The theoretical foundation of feature attribution originates in cooperative game theory. Lloyd Shapley established that for an $n$-player cooperative game, there exists exactly one payoff allocation that simultaneously satisfies four fundamental axioms: \emph{Efficiency} (full distribution of the surplus), \emph{Symmetry} (equal rewards for equal marginal contributions), \emph{Dummy/Null Player} (zero reward for non-contributing players), and \emph{Additivity} (linear separability across games) \cite{shapley1953value}:
+\begin{equation}
+    \phi_i(v) = \sum_{S \subseteq N \setminus \{i\}} \frac{|S|!(|N| - |S| - 1)!}{|N|!} \left[ v(S \cup \{i\}) - v(S) \right].
+\end{equation}
+Lundberg and Lee unified this game-theoretic formulation with additive feature attribution, proposing the SHAP (SHapley Additive exPlanations) framework (which informs our linear surrogate formulation, while full spatial SHAP is deferred) and deriving the optimal Shapley kernel for weighted linear regression \cite{lundberg2017unified}:
+\begin{equation}
+    \pi_x(z') = \frac{M - 1}{\binom{M}{|z'|} \cdot |z'| \cdot (M - |z'|)}.
+\end{equation}
+
+In BiasAperture, exact Shapley values ground our surrogate explainability implementation. Rather than attempting computationally intractable pixel-level Shapley estimation across high-resolution facial rasters ($50,176$ features per $224 \times 224$ image), BiasAperture implements an additive demographic surrogate attribution model ($X \to \hat{Y}_{\text{pred}}$ via linear logistic regression). Using the exact additive relationship $\phi_i = w_i \cdot (x_i - \mathbb{E}[x_i])$, the engine attributes model predictions across protected and proxy demographic axes whenever a disparity is statistically flagged ($p < 0.05, n \ge 30$). Full spatial feature attribution (via \texttt{shap.PartitionExplainer}) and Individual Typology Angle (\gls{ita}) colorimetry remain documented deferred capabilities.
+
+Critically, BiasAperture approaches feature attribution with strict epistemic caution, informed by two seminal theoretical critiques. Bilodeau et al. proved a series of impossibility theorems demonstrating that no feature attribution method satisfying completeness and linearity can reliably separate true causal features from spurious correlations in general deep neural networks \cite{bilodeau2022impossibility}. Simultaneously, Slack et al. proved that post-hoc explainers like LIME and SHAP (which motivates our deferred spatial design and surrogate fallback) can be circumvented by adversarial model scaffolding that detects perturbation distributions and disguises discriminatory logic during audit runs \cite{slack2020fooling} (reinforcing why BiasAperture restricts its explainability scope to surrogate attribution rather than claiming causal debiasing). In accordance with Bilodeau et al. and Slack et al., BiasAperture establishes a mandatory reporting policy: surrogate attribution findings are reported strictly as identifying observable proxy correlations, never as certifying the absence of bias or proving causal invariance.
+
+
+\section{Standardized Documentation, Governance, and Regulatory Compliance}
+\label{sec:lit_governance}
+
+A diagnostic audit is ineffective if its findings cannot be communicated clearly to multidisciplinary stakeholders and regulatory authorities. BiasAperture grounds its report generation engine in established documentation conventions and emerging regulatory standards.
+
+Mitchell et al. proposed \emph{Model Cards for Model Reporting}, establishing a standardized documentation format detailing a model's intended domain, performance characteristics, evaluation datasets, and ethical considerations \cite{mitchell2019modelcards}. Complementing this, Gebru et al. formulated \emph{Datasheets for Datasets}, mandating structured disclosure of dataset provenance, collection mechanisms, annotation protocols, and known demographic limitations \cite{gebru2018datasheets}. BiasAperture's zero-network HTML reporting engine adopts these twin conventions directly, structuring audit outputs into dedicated model performance profiles and dataset provenance sections (documenting the FairFace benchmark and formally recording the rationale for having cut and excluded UTKFace).
+
+On the regulatory frontier, Buscemi et al. formulated a systematic methodology for decomposing the high-risk requirements of the European Union Artificial Intelligence Act (Regulation EU 2024/1689 \cite{euaiact2024}, as amended by the Digital Omnibus Regulation EU 2026/1744 \cite{euomnibus2026}) into concrete, technology-agnostic technical verification activities \cite{buscemi2025assessing}. BiasAperture adopts Buscemi et al.'s decomposition methodology to implement a clause-level compliance crosswalk (\cref{sec:regmapping}). Specifically, the platform maps each Core Four metric, statistical test, and sample-size guard directly to Article 10(2)(f) (bias examination and mitigation), Article 10(3) (dataset representation), and Article 13 (transparency and interpretability).
+
+Furthermore, BiasAperture aligns its diagnostic controls with the \emph{Measure} core function of the National Institute of Standards and Technology AI Risk Management Framework (NIST AI RMF 1.0) \cite{nist2023aiframework}. Audit metrics directly instrument Measure 2.11 (evaluating fairness and bias across demographic cohorts), Measure 1.1 (formal documentation of sample-size limitations and unmeasurable cohorts), and Measure 1.3 (rigorous validation via independent dual backends).
+
+
+\section{The Pipeline and Workflow Void in Computer Vision Auditing}
+\label{sec:lit_workflow_gap}
+
+In their comprehensive survey of fairness and bias mitigation in computer vision, Dehdashtian et al. mapped the state of the discipline across the machine learning lifecycle: data collection, curation, annotation, model training, and post-deployment monitoring \cite{dehdashtian2024survey}. Their analysis uncovered a profound structural asymmetry: while the academic literature provides an extensive catalogue of theoretical fairness metrics and algorithmic mitigation techniques (such as adversarial de-biasing, contrastive loss re-weighting, and fair representation learning), there is a striking absence of standardized, reusable software pipelines designed specifically to execute multi-group computer vision audits repeatably. Existing fairness toolkits (such as Fairlearn and AIF360) were developed primarily for tabular datasets, requiring extensive custom wrapping and manual data engineering to ingest computer vision pipelines.
+
+BiasAperture is architected specifically to eliminate this workflow void. Rather than introducing another bespoke mitigation technique or competing mathematical metric, BiasAperture operates strictly as an independent diagnostic and evaluative platform. It provides a turn-key CLI orchestration engine that automates dataset ingestion, enforces schema invariants, executes cross-validating dual-backend fairness computation, calculates rigorous statistical significance and bootstrap confidence intervals, initiates targeted surrogate explainability, and compiles standalone, air-gapped HTML compliance reports. By deliberately declining to perform model retraining, weights debiasing, or synthetic augmentation, BiasAperture preserves absolute diagnostic neutrality.
+
+
+\section{Frontiers and Future Diagnostic Extensions}
+\label{sec:lit_future_frontiers}
+
+To maintain rigorous diagnostic relevance over extended development cycles, BiasAperture's research foundation incorporates three advanced works that delineate the future frontiers of algorithmic bias auditing.
+
+First, Cascone et al. established a formal framework for evaluating representational and stereotypical bias at the dataset level, prior to and independent of model training \cite{cascone2026framework}. Auditing CelebA, LFW, and MAAD-Face, the authors demonstrated that representational disparities collapse to a single latent factor, whereas stereotypical attribute correlations vary widely across datasets. This work motivates a future \textbf{Tier 2} extension for BiasAperture: an upstream dataset-profiling module that audits training and validation corpora for representational skew and stereotypical correlation before model predictions are ingested.
+
+Second, Aslam et al. introduced \emph{CIFA} (Contextual-Intersectional Fairness Auditing), demonstrating that traditional demographic-only audits fail to uncover severe ``hidden subgroup'' performance degradations caused by environmental and contextual factors \cite{aslam2026cifa}. Evaluating models across combined demographic and contextual axes (such as illumination variations, motion blur, and facial accessories), CIFA revealed performance drops of over 26\% in contextual subgroups that aggregate audits completely masked. While CIFA's proposed mitigation re-training is out of scope for BiasAperture's diagnostic mandate, its contextual-intersectional evaluation paradigm represents a direct candidate for future diagnostic stress testing.
+
+Finally, Shilova et al. addressed the limitations of fixed categorical demographic schemas in their \emph{FairGroups} framework \cite{shilova2025fairgroups}. The authors demonstrated that quantizing continuous biological attributes---such as skin tone represented in continuous CIELAB color space---into coarse, predefined discrete bins (such as the 6-point Fitzpatrick scale) can obscure substantial intra-group disparities. Using data-driven partitioning, FairGroups identified vulnerable subgroups that standard discrete bins missed. For BiasAperture, whose Milestone M1 schema is locked to discrete categorical axes ($7 \times 2 \times 9$), Shilova et al.'s work provides the theoretical blueprint for a future continuous-attribute auditing module that evaluates continuous skin reflectance (ITA) alongside discrete demographic taxonomies.
+
+
+\section{Summary of Reviewed Literature}
+\label{sec:lit_summary}
+
+\Cref{tab:litreview} consolidates the twenty works analyzed in this chapter, detailing their core contributions, their architectural tier, and their exact operational adoption within the BiasAperture diagnostic platform.
+
+\begin{center}
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{|p{2.2cm}|p{2.6cm}|p{4.4cm}|p{4.4cm}|}
+\caption{Comprehensive literature review matrix: 20 contributing works mapped to BiasAperture architectural tiers, core contributions, and adopted concepts.}
+\label{tab:litreview} \\
+\hline
+\textbf{Authors} & \textbf{Paper Title (Year)} & \textbf{Key Contribution} & \textbf{Architectural Tier \& Adopted Concepts} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{Authors} & \textbf{Paper Title (Year)} & \textbf{Key Contribution} & \textbf{Architectural Tier \& Adopted Concepts} \\
+\hline
+\endhead
+
+\hline \multicolumn{4}{r}{\textit{Continued on next page}} \\
+\endfoot
+
+\hline
+\endlastfoot
+
+\multicolumn{4}{|l|}{\textbf{Theme 1: Empirical Foundations of Intersectional Bias}} \\
+\hline
+Buolamwini \& Gebru \cite{buolamwini2018gendershades} &
+Gender Shades (2018) &
+Audits commercial facial analysis APIs; reveals error rates up to 34.7\% on darker females vs 0.8\% on lighter males. &
+\textbf{Core Foundation (Tier 1).} Motivated automated intersectional cohort stratification ($7 \times 2 \times 9$) over aggregate accuracy metrics. \\
+\hline
+
+Stanley et al. \cite{stanley2025bias} &
+Bias Encoding in CNNs (2025) &
+Proves CNNs encode demographic information as proxy variables via neutral visual features (texture, lighting). &
+\textbf{Core Foundation (Tier 1).} Direct justification for targeted explainability: surrogate attribution evaluates proxy reliance on flagged disparities. \\
+\hline
+
+Nemavhola et al. \cite{nemavhola2026reassessing} &
+Reassessing Demographic Bias (2026) &
+Multi-model audit on FairFace (alongside cut dataset UTKFace); proves racial disparities dominate gender gaps ($d > 1.0$) across modern backbones. &
+\textbf{Core Foundation (Tier 1).} Validates that model scaling does not eliminate bias; establishes empirical priors for FairFace evaluation. \\
+\hline
+
+\multicolumn{4}{|l|}{\textbf{Theme 2: Mathematical Formulations of Fairness}} \\
+\hline
+Hardt et al. \cite{hardt2016equality} &
+Equality of Opportunity (2016) &
+Formulates Equalized Odds (TPR+FPR parity) and Equal Opportunity (TPR parity) in supervised learning. &
+\textbf{Core Foundation (Tier 1).} Directly adopted as the mathematical definitions of \gls{eod} and \gls{eop} in the Core Four metric battery. \\
+\hline
+
+Watkins et al. \cite{watkins2022fourfifths} &
+Four-Fifths Rule Critique (2022) &
+Critiques importing employment law thresholds (80\%) into ML as epistemically unjustified bare ratios. &
+\textbf{Core Foundation (Tier 1).} Governs NFR-001: DIR is never reported as a bare ratio; always paired with $\chi^2$ testing and bootstrap CIs. \\
+\hline
+
+Howard et al. \cite{howard2022evaluating} &
+Evaluating Proposed Fairness Models (2022) &
+Evaluates FR fairness metrics against FFMC criteria; demonstrates metric instability and ranking inversions. &
+\textbf{Supporting Literature (Tier 1).} Grounds dual-backend cross-validation (Fairlearn + AIF360) and divergence monitoring ($|\Delta| > 0.01$). \\
+\hline
+
+\multicolumn{4}{|l|}{\textbf{Theme 3: Statistical Rigor \& Demographic Epistemology}} \\
+\hline
+Nemavhola et al. \cite{nemavhola2026reassessing} &
+Statistical Grounding in Bias (2026) &
+Demonstrates that point-estimate fairness audits overstate certainty; mandates bootstrap CIs and effect sizes. &
+\textbf{Core Foundation (Tier 1).} Grounds BiasAperture's vectorized BCa bootstrap engine ($B \ge 1,000$) and $n \ge 30$ sample guards. \\
+\hline
+
+Fournier-\\Montgieux et al. \cite{fourniermontgieux2025reliable} &
+Reliable Demographic Inference (2025) &
+Proves fairness audit validity is bounded by demographic inference quality; cites FairFace reproducibility gaps. &
+\textbf{Core Validity Threat (Tier 1).} Codified as Claim R-021: FairFace labels are audited as benchmark references, acknowledging DAI error bounds. \\
+\hline
+
+Karkkainen \& Joo \cite{karkkainen2021fairface} &
+FairFace Benchmark (2021) &
+Constructs balanced 97,698-image face dataset with 7-race, 2-gender, and 9-age categories to minimize skew. &
+\textbf{Core Benchmark (Tier 1).} Primary validation dataset (FR-001); UTKFace excluded due to synthetic age noise and race collapsing. \\
+\hline
+
+\multicolumn{4}{|l|}{\textbf{Theme 4: Explainability Foundations \& Theoretical Bounds}} \\
+\hline
+Shapley \cite{shapley1953value} &
+Value for $n$-Person Games (1953) &
+Axiomatic cooperative game theory proving Shapley value is the unique credit allocation satisfying four fairness axioms. &
+\textbf{XAI Foundation (Tier 1).} Theoretical bedrock of additive feature attribution framed as fair surplus allocation over baseline expectations. \\
+\hline
+
+Lundberg \& Lee \cite{lundberg2017unified} &
+Unified Approach to Interpretation (2017) &
+Unifies additive feature attribution (SHAP); derives optimal Shapley kernel for weighted linear surrogate regression. &
+\textbf{XAI Foundation (Tier 1).} Methodological foundation for demographic surrogate explainer and deferred spatial SHAP (\texttt{Partition-}\\ \texttt{Explainer}). \\
+\hline
+
+Bilodeau et al. \cite{bilodeau2022impossibility} &
+Impossibility Theorems (2022) &
+Proves no linear/complete attribution method can reliably separate true causal drivers from spurious correlations. &
+\textbf{XAI Theoretical Bound (Tier 1).} Governs reporting language: surrogate findings indicate proxy correlations, not causal proof of non-bias. \\
+\hline
+
+Slack et al. \cite{slack2020fooling} &
+Fooling LIME and SHAP (2020) &
+Demonstrates adversarial scaffolding can disguise discriminatory model behavior from post-hoc explainers (grounds surrogate attribution boundary). &
+\textbf{XAI Threat Model (Tier 1).} Bounds trust in post-hoc XAI; motivates dual model interfacing (predictions file vs in-process inference). \\
+\hline
+
+\multicolumn{4}{|l|}{\textbf{Theme 5: Standardized Documentation \& Governance}} \\
+\hline
+Mitchell et al. \cite{mitchell2019modelcards} &
+Model Cards (2019) &
+Proposes standardized, stakeholder-legible documentation format for model performance and intended use. &
+\textbf{Core Reporting (Tier 1).} Adopted as structural foundation for the model performance evaluation section of generated HTML reports. \\
+\hline
+
+Gebru et al. \cite{gebru2018datasheets} &
+Datasheets for Datasets (2018) &
+Proposes structured documentation for dataset provenance, collection mechanisms, and demographic composition. &
+\textbf{Core Reporting (Tier 1).} Adopted as structural foundation for the dataset provenance section; documents benchmark inclusion/cut criteria. \\
+\hline
+
+Buscemi et al. \cite{buscemi2025assessing} &
+Assessing High-Risk AI Systems (2025) &
+Decomposes EU AI Act high-risk obligations into concrete, technology-agnostic technical verification activities. &
+\textbf{Regulatory Crosswalk (Tier 1).} Methodological template for Article 10(2)(f), 10(3), and 13 technical compliance mapping (\cref{sec:regmapping}). \\
+\hline
+
+NIST \cite{nist2023aiframework} &
+AI Risk Management Framework (2023) &
+Consensus risk management taxonomy organizing AI governance into Govern, Map, Measure, and Manage functions. &
+\textbf{Regulatory Crosswalk (Tier 1).} Direct instrumentation of Measure 2.11 (bias auditing), Measure 1.1 (limitations), and Measure 1.3. \\
+\hline
+
+\multicolumn{4}{|l|}{\textbf{Theme 6: Pipeline Engineering \& Diagnostic Tooling}} \\
+\hline
+Dehdashtian et al. \cite{dehdashtian2024survey} &
+Fairness in CV: A Survey (2024) &
+Surveys bias sources across CV pipeline; reveals rich mitigation literature but immature reusable auditing pipelines. &
+\textbf{Workflow Gap (Tier 1).} Identifies the exact engineering void BiasAperture closes: a reusable, diagnostic-only, air-gapped pipeline. \\
+\hline
+
+\multicolumn{4}{|l|}{\textbf{Theme 7: Frontiers \& Future Diagnostic Extensions}} \\
+\hline
+Cascone et al. \cite{cascone2026framework} &
+Bias-Aware Dataset Evaluation (2026) &
+Taxonomy distinguishing model-output bias from dataset-level representational and stereotypical attribute bias. &
+\textbf{Future Extension (Tier 2).} Motivates candidate upstream dataset-profiling module prior to and distinct from model inference audits. \\
+\hline
+
+Aslam et al. \cite{aslam2026cifa} &
+CIFA: Contextual Auditing (2026) &
+Demonstrates demographic audits mask severe errors under contextual variations (illumination, blur, accessories). &
+\textbf{Future Extension (Tier 2).} Informs future contextual-intersectional stress testing layer; mitigation steps excluded per diagnostic scope. \\
+\hline
+
+Shilova et al. \cite{shilova2025fairgroups} &
+FairGroups: Continuous Variables (2025) &
+Data-driven partitioning of continuous sensitive attributes (skin tone in CIELAB) to expose hidden intra-group bias. &
+\textbf{Future Extension (Tier 2).} Theoretical basis for future continuous skin-tone (ITA) evaluation layer on top of locked discrete M1 schema. \\
+\hline
+
+\end{longtable}
+\end{center}
+
+By synthesizing these twenty foundational, empirical, statistical, explainability, and governance works, BiasAperture establishes an integrated diagnostic framework that bridges the gap between academic fairness research and actionable, regulator-legible compliance engineering. \Cref{chap:requirements,chap:methodology} formulate these principles into formal system requirements and architectural specifications.

@@ -84,6 +84,9 @@ When a user or agent prompt matches routine development mechanics, bypass genera
 | **Repository Status** | `git status`, `status` | `git status` | **0** | <20 ms | <10 MB |
 | **Simulation Sanity** | `sim`, `simulation`, `run sim` | `.\sim.bat` | **0** | <20 ms | <10 MB |
 | **Dossier Compilation** | `build report`, `compile report`, `report.pdf` | `.\build_report.bat` | **0** | <20 ms | <10 MB |
+| **LaTeX Thesis Audit** | `audit thesis`, `check thesis`, `audit beamer` | `python scripts/audit_latex_thesis.py <dir>` | **0** | <50 ms | <15 MB |
+| **LaTeX Thesis Compile** | `compile thesis`, `compile beamer`, `build thesis` | `python scripts/compile_thesis.py <dir>` | **0** | Multi-pass | <25 MB |
+| **LaTeX Thesis Scaffold** | `scaffold thesis`, `scaffold beamer`, `create thesis` | `python scripts/scaffold_thesis.py <dir> --template <tmpl>` | **0** | <30 ms | <10 MB |
 | **Cloud Accelerator** | `colab whoami`, `colab sessions`, `colab status` | `colab whoami` | **0** | Sub-second | <10 MB |
 
 ---

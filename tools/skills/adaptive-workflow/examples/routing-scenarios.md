@@ -159,3 +159,34 @@ This document contains end-to-end walkthroughs demonstrating how `adaptive-workf
 5. **Stage 5 (Sync)**:
    - Push updated model metadata to `drive-manifest.json`.
    - Mount local GGUF in LM Studio on port 1234, verifying sub-50ms intent and task time allocation.
+
+---
+
+## Scenario 10: Academic Engineering Thesis & Defense Presentation Architecture (`latex-thesis-architect`)
+
+**User Objective**: Scaffold an IEEE-compliant engineering thesis report and 16:9 Beamer defense deck for an edge AI project, draft chapters under CPM DAG firebreaks, audit calm-authority writing and $n \ge 30$ sample size invariants, and compile clean PDFs.
+
+1. **Stage 1 (Scope)**: Classified as `RESEARCH_ACADEMIC`, Tier 2 (Multi-Step).
+2. **Stage 2 (Route)**: Routed to `latex-thesis-architect`, `writing-like-claude`, `pm-workflow-orchestrator`.
+3. **Stage 3 (Plan)**:
+   - Execute Zero-AI scaffolding:
+     ```powershell
+     python F:\Aaradhya-Dev-Tamrakar\brainstorm\.agents\skills\latex-thesis-architect\scripts\scaffold_thesis.py report/ --template full-pack --title "Diagnostic Bias Auditing in Edge Vision" --author1 "Aaradhya Tamrakar"
+     ```
+   - Solve CPM Chapter DAG dependencies ($S0 \to S1 \to S2 \dots$).
+   - Writer subagent generates chapters in isolation ($<5{,}000$ tokens per context) using `engineering-report.cls` and `beamer-presentation.cls`.
+4. **Stage 4 (Verify)**:
+   - Audit calm authority, $n \ge 30$ sample size guards, and cross-reference integrity:
+     ```powershell
+     python F:\Aaradhya-Dev-Tamrakar\brainstorm\.agents\skills\latex-thesis-architect\scripts\audit_latex_thesis.py report/
+     ```
+     *Target: 0 hype violations, 0 broken references, 0 missing citations, PASS on sample size guards.*
+   - Compile PDF via automated multi-pass engine:
+     ```powershell
+     python F:\Aaradhya-Dev-Tamrakar\brainstorm\.agents\skills\latex-thesis-architect\scripts\compile_thesis.py report/
+     ```
+     *Target: Clean PDF exit code 0, 0 undefined citations `[?]`, 0 undefined references `??`.*
+5. **Stage 5 (Sync)**: Push to repository with CI runner bypass:
+   ```powershell
+   .\sync.bat -SkipCI -m "docs(thesis): scaffold and compile engineering thesis report and defense deck"
+   ```

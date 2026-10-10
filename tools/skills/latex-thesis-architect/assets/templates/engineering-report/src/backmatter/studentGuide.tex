@@ -1,0 +1,852 @@
+% COMPREHENSIVE LATEX GUIDE FOR STUDENTS
+
+\chapter{COMPREHENSIVE \LaTeX~GUIDE}
+This chapter provides a comprehensive guide to using this \LaTeX template effectively. It covers essential \LaTeX commands, formatting guidelines, and practical examples with rendered output to help you write high-quality technical documents following \gls{ieee} standards.
+
+\section*{Template Philosophy}
+
+This template is designed with three core principles:
+
+\begin{itemize}
+    \item \textbf{IEEE Compliance}: All formatting adheres to \gls{ieee} Transactions standards for academic publications
+    \item \textbf{Automation}: Cross-references, numbering, and bibliography are handled automatically
+    \item \textbf{Separation of Concerns}: Content is separated from formatting---you focus on writing, the template handles presentation
+\end{itemize}
+
+The template leverages modern \LaTeX packages (\texttt{newtxtext}, \texttt{newtxmath}, \texttt{cleveref}, \texttt{glossaries}, \texttt{booktabs}, \texttt{algorithmicx}) to produce professional, publication-ready documents.
+
+\section*{Quick Start Guide}
+
+\subsection*{Initial Setup}
+
+\begin{enumerate}
+    \item \textbf{Install \LaTeX Distribution}:
+          \begin{itemize}
+              \item Windows: MiKTeX or TeX Live
+              \item macOS: MacTeX
+              \item Linux: TeX Live (via package manager)
+          \end{itemize}
+
+    \item \textbf{Configure Your Information}:
+          Edit \texttt{vars.tex} with your personal details, project title, supervisors, and institutional information.
+
+    \item \textbf{Compilation Sequence}:
+          To properly generate all references, bibliography, and glossaries, compile in this order:
+          \begin{verbatim}
+    pdflatex main.tex
+    bibtex main
+    makeglossaries main
+    pdflatex main.tex
+    pdflatex main.tex
+    \end{verbatim}
+
+          Most \LaTeX editors (TeXstudio, Overleaf, VS Code with \LaTeX Workshop) handle this automatically. Using glossaries package on VS Code requires setting up shell escape.
+
+    \item \textbf{Project Structure}:
+          \begin{verbatim}
+    main.tex              - Main document file
+    vars.tex              - Your personal information
+    engineering-report.cls     - Template class (do not modify)
+    references.bib        - Bibliography database
+    src/
+      frontmatter/        - Abstract, acknowledgments, etc.
+      chapters/           - Your chapter content files
+      backmatter/         - Appendices, supplementary material
+      images/             - All figures and diagrams
+    \end{verbatim}
+\end{enumerate}
+
+\section*{Essential \LaTeX Concepts}
+
+\subsection*{Document Structure}
+
+Each chapter file should follow this structure:
+
+\begin{verbatim}
+\chapter{CHAPTER TITLE}
+
+Introduction paragraph for the chapter...
+
+\section{Section Title}
+
+Content for this section...
+
+\subsection{Subsection Title}
+
+Detailed content...
+
+\subsubsection{Subsubsection Title}
+
+Fine-grained details...
+\end{verbatim}
+
+\subsection*{Text Formatting}
+
+Basic text formatting commands:
+
+\begin{verbatim}
+\textbf{bold text}
+\textit{italic text}
+\texttt{monospace/code text}
+\underline{underlined text}
+\emph{emphasized text}
+\end{verbatim}
+
+\textbf{Rendered examples}:
+\begin{itemize}
+    \item \textbf{bold text} for emphasis
+    \item \textit{italic text} for terms and titles
+    \item \texttt{monospace text} for code, filenames, and commands
+    \item \underline{underlined text} (use sparingly)
+    \item \emph{emphasized text} (context-aware emphasis)
+\end{itemize}
+
+\subsection*{Lists}
+
+Three types of lists are available:
+
+\begin{verbatim}
+\begin{itemize}
+    \item First bullet point
+    \item Second bullet point
+    \item Third bullet point
+\end{itemize}
+
+\begin{enumerate}
+    \item First numbered item
+    \item Second numbered item
+    \item Third numbered item
+\end{enumerate}
+
+\begin{description}
+    \item[Term 1] Definition of term 1
+    \item[Term 2] Definition of term 2
+\end{description}
+\end{verbatim}
+
+\section*{Mathematical Notation}
+
+\subsection*{Inline vs Display Math}
+
+\LaTeX provides two modes for mathematics:
+
+\begin{verbatim}
+Inline math: $E = mc^2$ appears in text flow.
+
+Display math:
+\[
+E = mc^2
+\]
+appears centered on its own line.
+\end{verbatim}
+
+\textbf{Rendered}: Inline math like $E = mc^2$ flows with text, while display math is centered:
+\[
+    E = mc^2
+\]
+
+\subsection*{Numbered Equations}
+
+For important equations that need referencing:
+
+\begin{verbatim}
+\begin{equation}
+    f(x) = \sum_{i=1}^{n} w_i \cdot x_i + b
+    \label{eq:linear_model}
+\end{equation}
+
+Reference using: \cref{eq:linear_model}
+\end{verbatim}
+
+\textbf{Rendered}:
+\begin{equation}
+    f(x) = \sum_{i=1}^{n} w_i \cdot x_i + b
+    \label{eq:linear_example}
+\end{equation}
+
+where $f(x)$ is the output, $w_i$ are weights, $x_i$ are inputs, and $b$ is the bias term. Reference as: \cref{eq:linear_example}.
+
+\subsection*{IEEE Mathematical Notation}
+
+Follow \gls{ieee} conventions for mathematical symbols:
+
+\begin{verbatim}
+Variables (italic):     $x$, $y$, $n$
+Vectors (bold):         $\vect{v}$, $\vect{x}$
+Matrices (bold):        $\matr{A}$, $\matr{X}$
+Sets (calligraphic):    $\set{S}$, $\set{P}$
+Functions (roman):      $\sin(x)$, $\log(n)$
+\end{verbatim}
+
+\textbf{Rendered}: Variables $x$, $y$, $n$; vectors $\vect{v}$, $\vect{x}$; matrices $\matr{A}$, $\matr{X}$; sets $\set{S}$, $\set{P}$; functions $\sin(x)$, $\log(n)$.
+
+\section*{Figures and Images}
+
+\subsection*{Including Figures}
+
+Basic figure syntax following \gls{ieee} standards:
+
+\begin{verbatim}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/images/diagram.png}
+    \caption{System architecture showing main components.}
+    \label{fig:architecture}
+\end{figure}
+
+Reference using: \cref{fig:architecture}
+\end{verbatim}
+
+\textbf{Rendered output}:
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{src/images/logo.png}
+    \caption{System architecture showing main components and their interactions.}
+    \label{fig:example_architecture}
+\end{figure}
+
+As shown in \cref{fig:example_architecture}, the architecture demonstrates proper figure formatting with caption below.
+
+\textbf{Key points}:
+\begin{itemize}
+    \item \texttt{[htbp]} specifies placement: here, top, bottom, page
+    \item \texttt{\textbackslash centering} centers the figure
+    \item Width can be: \texttt{0.5\textbackslash textwidth}, \texttt{10cm}, \texttt{width=\textbackslash textwidth}
+    \item Caption appears \textbf{below} figure (\gls{ieee} standard)
+    \item Always use \texttt{\textbackslash label} for cross-referencing
+    \item Use \texttt{\textbackslash cref} for automatic ``Fig.'' prefix
+\end{itemize}
+
+\subsection*{Subfigures}
+
+For multiple related figures:
+
+\begin{verbatim}
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{image1.png}
+        \caption{First subfigure}
+        \label{fig:sub1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{image2.png}
+        \caption{Second subfigure}
+        \label{fig:sub2}
+    \end{subfigure}
+    \caption{Overall caption for both subfigures.}
+    \label{fig:combined}
+\end{figure}
+\end{verbatim}
+
+Reference individual subfigures: \texttt{\textbackslash cref\{fig:sub1\}} or the entire figure: \texttt{\textbackslash cref\{fig:combined\}}.
+
+\textbf{Rendered output}:
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{src/images/logo.png}
+        \caption{Training accuracy over epochs}
+        \label{fig:demo_train}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{src/images/logo.png}
+        \caption{Validation accuracy over epochs}
+        \label{fig:demo_val}
+    \end{subfigure}
+    \caption{Model performance during training showing both training and validation metrics.}
+    \label{fig:demo_performance}
+\end{figure}
+
+The subfigures (\cref{fig:demo_train,fig:demo_val}) show different aspects of the same experiment, while \cref{fig:demo_performance} references the entire figure.
+
+\section*{Tables}
+
+\subsection*{IEEE-Compliant Tables}
+
+\textbf{Critical}: Use \texttt{booktabs} package rules only. toprule, midrule and bottom rule. Never use vertical lines (for column separation) or \texttt{\textbackslash hline}. Look at this example! The top line and bottom lines are thick while the middle line is thin. This consistency is required throughout the report.
+Always label and cross reference all tables in the document.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Experimental parameters and their values.}
+    \label{tab:parameters}
+    \begin{tabular}{lcc}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} & \textbf{Unit} \\
+        \midrule
+        Population Size    & 100            & individuals   \\
+        Generations        & 500            & iterations    \\
+        Mutation Rate      & 0.05           & probability   \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
+\begin{verbatim}
+\begin{table}[htbp]
+    \centering
+    \caption{Experimental parameters and their values.}
+    \label{tab:parameters}
+    \begin{tabular}{lcc}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} & \textbf{Unit} \\
+        \midrule
+        Population Size    & 100            & individuals   \\
+        Generations        & 500            & iterations    \\
+        Mutation Rate      & 0.05           & probability   \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Reference using: \cref{tab:parameters}
+\end{verbatim}
+
+\textbf{Key points}:
+\begin{itemize}
+    \item Caption appears \textbf{above} table (\gls{ieee} standard)
+    \item Use \texttt{\textbackslash toprule}, \texttt{\textbackslash midrule}, \texttt{\textbackslash bottomrule} only
+    \item Column alignment: \texttt{l} (left), \texttt{c} (center), \texttt{r} (right)
+    \item Bold headers: \texttt{\textbackslash textbf\{Header\}}
+    \item Never use \texttt{|} for vertical lines
+\end{itemize}
+
+\section*{Code and Pseudocode in Academic Reports}
+
+\subsection*{IEEE Standard for Formal Reports}
+
+\textbf{Important Note}: For formal academic reports following \gls{ieee} standards, pseudocode using the \texttt{algorithmicx} package is \textbf{strongly preferred} over direct code embedding.
+
+\subsubsection*{Why Pseudocode is Preferred}
+
+\begin{itemize}
+    \item \textbf{Language-agnostic}: Focuses on logic rather than implementation details
+    \item \textbf{Professional presentation}: Consistent with academic publication standards
+    \item \textbf{Better readability}: Semantic structure with clear control flow
+    \item \textbf{Space efficient}: Avoids lengthy implementation details
+    \item \textbf{IEEE compliant}: Follows academic formatting conventions
+\end{itemize}
+
+\subsubsection*{When Direct Code May Be Acceptable}
+
+Direct code listings are generally \textbf{discouraged} in formal academic reports. However, they may be appropriate in:
+
+\begin{itemize}
+    \item \textbf{Appendices}: For reference or reproducibility
+    \item \textbf{Technical documentation}: Implementation guides or manuals
+    \item \textbf{Software-focused papers}: When code is the primary contribution
+    \item \textbf{API demonstrations}: Showing specific library usage
+\end{itemize}
+
+\subsection*{Inline Code References}
+
+For mentioning function names, variables, or commands in text:
+
+\begin{verbatim}
+Use the \texttt{calculate\_fitness()} function to evaluate solutions.
+Set the \texttt{population\_size} parameter to 100.
+\end{verbatim}
+
+\textbf{Rendered}: Use the \texttt{calculate\_fitness()} function to evaluate solutions. Set the \texttt{population\_size} parameter to 100.
+
+\section*{Algorithms and Pseudocode}
+
+\subsection*{Algorithm Environment}
+
+For formal algorithms, use \texttt{algorithmicx} with \texttt{algpseudocode}:
+
+\begin{verbatim}
+\begin{algorithm}[htbp]
+\caption{Genetic Algorithm for Optimization}
+\label{alg:genetic}
+\begin{algorithmic}[1]
+\Require Population size $N$, generations $G$
+\Ensure Optimized solution $\mathbf{x}^*$
+\State Initialize population $P \gets \text{random}(N)$
+\For{$g = 1$ to $G$}
+    \State Evaluate fitness for all individuals in $P$
+    \State $P' \gets \text{selection}(P)$
+    \State $P'' \gets \text{crossover}(P')$
+    \State $P \gets \text{mutation}(P'')$
+\EndFor
+\State \Return best individual from $P$
+\end{algorithmic}
+\end{algorithm}
+
+Reference using: \cref{alg:genetic}
+\end{verbatim}
+
+\textbf{Rendered output}:
+
+\begin{algorithm}[htbp]
+    \caption{Genetic Algorithm for Optimization}
+    \label{alg:genetic_rendered}
+    \begin{algorithmic}[1]
+        \Require Population size $N$, generations $G$
+        \Ensure Optimized solution $\mathbf{x}^*$
+        \State Initialize population $P \gets \text{random}(N)$
+        \For{$g = 1$ to $G$}
+        \State Evaluate fitness for all individuals in $P$
+        \State $P' \gets \text{selection}(P)$
+        \State $P'' \gets \text{crossover}(P')$
+        \State $P \gets \text{mutation}(P'')$
+        \EndFor
+        \State \Return best individual from $P$
+    \end{algorithmic}
+\end{algorithm}
+
+\textbf{Key commands}:
+\begin{itemize}
+    \item \texttt{\textbackslash State}: Single statement
+    \item \texttt{\textbackslash If....\textbackslash EndIf}: Conditional blocks
+    \item \texttt{\textbackslash For....\textbackslash EndFor}: Loops
+    \item \texttt{\textbackslash While....\textbackslash EndWhile}: While loops
+    \item \texttt{\textbackslash Require}: Input requirements
+    \item \texttt{\textbackslash Ensure}: Output guarantee
+    \item \texttt{\textbackslash Return}: Return statement
+\end{itemize}
+
+\section*{Citations and References}
+
+\subsection*{Adding References}
+
+Add entries to \texttt{references.bib} in BibTeX format:
+
+\begin{verbatim}
+@article{smith2020machine,
+    author  = {Smith, John and Doe, Jane},
+    title   = {Machine Learning for Optimization},
+    journal = {IEEE Transactions on Neural Networks},
+    year    = {2020},
+    volume  = {31},
+    number  = {5},
+    pages   = {1234--1245}
+}
+\end{verbatim}
+
+\subsection*{Citing References}
+
+Use \texttt{\textbackslash cite} command:
+
+\begin{verbatim}
+Machine learning has shown promising results \cite{smith2020machine}.
+Multiple citations can be combined \cite{ref1,ref2,ref3}.
+\end{verbatim}
+
+\textbf{Rendered}: Citations appear as numbers in square brackets: [1], [2--5].
+
+\section*{Acronyms and Glossaries}
+
+\subsection*{Defining Acronyms}
+
+Add definitions to \texttt{src/frontmatter/abbreviations.tex}:
+
+\begin{verbatim}
+\newacronym{ml}{ML}{Machine Learning}
+\newacronym{ai}{AI}{Artificial Intelligence}
+\newacronym{nn}{NN}{Neural Network}
+\end{verbatim}
+
+\subsection*{Using Acronyms}
+
+\begin{verbatim}
+\gls{ml}      - First use: Machine Learning (ML)
+              - Later uses: ML
+\glspl{nn}    - Plural form: NNs
+\Gls{ai}      - Capitalized: Artificial Intelligence (AI)
+\acrshort{ml} - Always shows: ML
+\acrlong{ml}  - Always shows: Machine Learning
+\end{verbatim}
+
+\textbf{Benefits}:
+\begin{itemize}
+    \item Automatic expansion on first use
+    \item Consistent abbreviation usage throughout document
+    \item Automatic generation of abbreviations list
+    \item Prevents undefined acronym errors
+\end{itemize}
+
+\section*{Cross-Referencing}
+
+\subsection*{Modern Cross-References with Cleveref}
+
+This template uses \texttt{cleveref} package for intelligent cross-referencing:
+
+\begin{verbatim}
+\cref{fig:arch}        → Fig. 1.1
+\cref{tab:results}     → Table 2.3
+\cref{eq:fitness}      → Eq. (3.4)
+\cref{alg:nsga}        → Algorithm 4.1
+\cref{sec:method}      → Section 5.2
+\cref{chap:intro}      → Chapter 1
+
+Multiple references:
+\cref{fig:a,fig:b,fig:c}    → Fig. 1.1, 1.2, and 1.3
+\cref{tab:x,eq:y}           → Table 2.1 and Eq. (3.5)
+\end{verbatim}
+
+\textbf{Advantages over manual referencing}:
+\begin{itemize}
+    \item Automatic prefix (Fig., Table, Eq., etc.)
+    \item Automatic number updating when content changes
+    \item Intelligent grouping of multiple references
+    \item Hyperlinks to referenced elements (in PDF)
+\end{itemize}
+
+\section*{Special Characters and Typography}
+
+\subsection*{Dashes}
+
+\LaTeX distinguishes between three types of dashes:
+
+\begin{verbatim}
+Hyphen:     state-of-the-art (single -)
+En-dash:    pages 10--20 (double --)
+Em-dash:    results---as shown---improved (triple ---)
+\end{verbatim}
+
+\textbf{Rendered}: state-of-the-art, pages 10--20, results---as shown---improved.
+
+\subsection*{Quotation Marks}
+
+Use proper typographic quotes:
+
+\begin{verbatim}
+``double quotes''
+`single quotes'
+\end{verbatim}
+
+\textbf{Rendered}: ``double quotes'' and `single quotes'.
+
+\textbf{Never} use straight quotes copied from Word or text editors.
+
+\subsection*{Special Symbols}
+
+Common special characters require backslashes:
+
+\begin{verbatim}
+\%    - Percent sign
+\$    - Dollar sign
+\&    - Ampersand
+\_    - Underscore
+\#    - Hash/pound
+\{    - Left brace
+\}    - Right brace
+\~{}  - Tilde
+\end{verbatim}
+
+\section*{Best Practices and Workflow}
+
+\subsection*{File Organization}
+
+\begin{itemize}
+    \item \textbf{One chapter per file}: Keep chapters in separate files for easier management
+    \item \textbf{Descriptive filenames}: Use names like \texttt{methodology.tex}, \texttt{results.tex}
+    \item \textbf{Image organization}: Store images in \texttt{src/images/} with subdirectories if needed
+    \item \textbf{Version control}: Use Git to track changes and collaborate
+\end{itemize}
+
+\subsection*{Compilation Tips}
+
+\begin{itemize}
+    \item \textbf{Clean auxiliary files}: Regularly delete \texttt{.aux}, \texttt{.log}, \texttt{.toc} files if errors persist
+    \item \textbf{Full recompile}: Run complete sequence (pdflatex → bibtex → makeglossaries → pdflatex × 2)
+    \item \textbf{Check errors}: Read error messages carefully---they indicate file and line number
+    \item \textbf{Incremental compilation}: Compile frequently to catch errors early
+\end{itemize}
+
+\subsection*{Common Mistakes to Avoid}
+
+\begin{itemize}
+    \item \textbf{UTF-8 characters}: Avoid smart quotes, em-dashes, and special characters copied from Word
+    \item \textbf{Unclosed braces}: Every \texttt{\{} must have matching \texttt{\}}
+    \item \textbf{Missing labels}: Always add \texttt{\textbackslash label} to figures, tables, equations, and algorithms
+    \item \textbf{Unreferenced elements}: Every figure, table, and equation must be referenced in text
+    \item \textbf{Manual numbering}: Never type ``Fig. 1'' manually---use \texttt{\textbackslash cref}
+    \item \textbf{Vertical lines in tables}: Use \texttt{booktabs} rules, not \texttt{|} or \texttt{\textbackslash hline}
+\end{itemize}
+
+\subsection*{Quality Checklist}
+
+Before final submission, verify:
+
+\begin{itemize}
+    \item[$\square$] Document compiles without errors or warnings
+    \item[$\square$] All figures, tables, and equations are referenced in text
+    \item[$\square$] All citations appear in bibliography
+    \item[$\square$] Abbreviations are defined and used consistently
+    \item[$\square$] Cross-references show numbers (no ``??'')
+    \item[$\square$] Table of contents has correct page numbers
+    \item[$\square$] All code listings have captions and proper formatting
+    \item[$\square$] Mathematical notation follows \gls{ieee} conventions
+    \item[$\square$] No UTF-8 encoding errors in bibliography
+    \item[$\square$] PDF bookmarks and hyperlinks work correctly
+\end{itemize}
+
+\section*{Advanced Features}
+
+\subsection*{Custom Commands}
+
+The template provides custom commands for convenience:
+
+\begin{verbatim}
+\vect{v}      - Bold vector notation
+\matr{A}      - Bold matrix notation
+\set{S}       - Calligraphic set notation
+\ie           - i.e.,
+\eg           - e.g.,
+\etc          - etc.
+\end{verbatim}
+
+\subsection*{Units with siunitx}
+
+For proper unit formatting:
+
+\begin{verbatim}
+\SI{5}{\meter}
+\SI{100}{\kilo\gram}
+\SI{3.5}{\giga\hertz}
+\SIrange{10}{20}{\celsius}
+\end{verbatim}
+
+\textbf{Rendered}: 5 m, 100 kg, 3.5 GHz, 10--20°C.
+
+\section*{Getting Help}
+
+\subsection*{Resources}
+
+\begin{itemize}
+    \item \textbf{This document}: Read all guideline chapters thoroughly
+    \item \textbf{LaTeX Stack Exchange}: \texttt{tex.stackexchange.com} for specific questions
+    \item \textbf{Overleaf Documentation}: Comprehensive \LaTeX tutorials
+    \item \textbf{Template class file}: See \texttt{engineering-report.cls} for implementation details
+\end{itemize}
+
+\subsection*{Common Issues}
+
+\begin{description}
+    \item[Bibliography not appearing] Run: pdflatex → bibtex → pdflatex × 2
+    \item[Acronyms not expanding] Run: pdflatex → makeglossaries → pdflatex × 2
+    \item[Undefined references (??)] Compile multiple times until stable
+    \item[Missing images] Check file paths and extensions (.png, .png, .jpg)
+    \item[UTF-8 errors] Replace special characters in .bib file with \LaTeX equivalents
+\end{description}
+
+
+
+% ============================================================================
+% PART II: DETAILED IEEE WRITING AND FORMATTING GUIDELINES
+% ============================================================================
+
+\section*{WRITING GUIDELINES}
+
+This section provides comprehensive guidance on technical writing following IEEE standards and best practices for academic publications \cite{ieee2022author, alley2018craft}.
+
+
+\subsection*{Avoiding Common Mistakes}
+
+\subsubsection*{Grammar and Style}
+
+\begin{itemize}
+    \item \textbf{Avoid}: ``The data was analyzed'' → \textbf{Use}: ``The data were analyzed'' (data is plural)
+    \item \textbf{Avoid}: ``very unique'', ``more optimal'' → \textbf{Use}: ``unique'', ``optimal'' (absolute adjectives)
+    \item \textbf{Avoid}: ``In this paper'' → \textbf{Use}: ``In this report'' or ``In this work''
+    \item \textbf{Avoid}: Contractions (don't, can't) → \textbf{Use}: Full forms (do not, cannot)
+\end{itemize}
+
+\subsubsection*{Technical Writing}
+
+\begin{itemize}
+    \item Define terms before using them extensively
+    \item Maintain consistency in terminology throughout
+    \item Use specific numbers rather than vague terms: ``15\% improvement'' not ``significant improvement''
+    \item Explain acronyms at first use, even if well-known in the field
+    \item Cross-reference related sections appropriately using \texttt{\textbackslash cref\{\}} commands
+\end{itemize}
+
+
+\section*{COMPILING AND TROUBLESHOOTING}
+
+This section provides practical guidance on compiling your report and resolving common issues.
+
+\subsection*{Compilation Process}
+
+\subsubsection*{Standard Compilation Sequence}
+
+To properly compile this report with all references, use this sequence:
+
+\begin{enumerate}
+    \item \textbf{pdf\LaTeX}: First pass to generate auxiliary files
+    \item \textbf{bibtex}: Process bibliography references
+    \item \textbf{makeglossaries}: Generate abbreviations list
+    \item \textbf{pdf\LaTeX}: Second pass to include bibliography
+    \item \textbf{pdf\LaTeX}: Third pass to resolve all cross-references
+\end{enumerate}
+
+\subsubsection*{Command Line Compilation}
+
+Open terminal in report directory and run:
+
+\begin{verbatim}
+pdflatex main.tex
+bibtex main
+makeglossaries main
+pdflatex main.tex
+pdflatex main.tex
+\end{verbatim}
+
+\subsubsection*{Using \LaTeX Editors}
+
+Most \LaTeX editors have "Build" buttons that handle the sequence automatically:
+
+\begin{itemize}
+    \item \textbf{TeXstudio}: Press F5 or click "Build \& View"
+    \item \textbf{Overleaf}: Compiles automatically on save
+    \item \textbf{VS Code}: With \LaTeX Workshop extension, use "Build \LaTeX project"
+\end{itemize}
+
+\subsection*{Common Compilation Errors}
+
+\subsubsection*{Missing Package Errors}
+
+\textbf{Error}: \texttt{! \LaTeX Error: File 'package.sty' not found}
+
+\textbf{Solution}: Install the missing package:
+\begin{itemize}
+    \item TeX Live: \texttt{tlmgr install package}
+    \item MiKTeX: Will prompt to install automatically
+    \item Or install full \LaTeX distribution
+\end{itemize}
+
+\subsubsection*{Undefined Reference Warnings}
+
+\textbf{Warning}: \texttt{\LaTeX Warning: Reference 'fig:example' undefined}
+
+\textbf{Solution}: Run pdf\LaTeX multiple times (2--3) after adding new labels. References require multiple passes to resolve.
+
+\subsubsection*{Citation Undefined}
+
+\textbf{Warning}: \texttt{Citation 'smith2020' undefined}
+
+\textbf{Solution}:
+\begin{itemize}
+    \item Check that citation key exists in \texttt{references.bib}
+    \item Run bibtex step
+    \item Run pdflatex again
+\end{itemize}
+
+\subsubsection*{Glossary Not Appearing}
+
+\textbf{Problem}: Abbreviations list is empty or doesn't appear
+
+\textbf{Solution}:
+\begin{itemize}
+    \item Ensure you've used \texttt{\textbackslash gls\{\}} commands in text
+    \item Run \texttt{makeglossaries} command
+    \item Run pdf\LaTeX again
+    \item Glossaries only shows acronyms actually used in document
+\end{itemize}
+
+\subsubsection*{Font Errors}
+
+\textbf{Error}: Font shape warnings or missing font files
+
+\textbf{Solution}:
+\begin{itemize}
+    \item Ensure newtx package is installed: \texttt{tlmgr install newtx}
+    \item Update \LaTeX distribution to latest version
+    \item Run \texttt{updmap} or \texttt{updmap-sys} to refresh font database
+\end{itemize}
+
+\subsection*{File Organization Issues}
+
+\subsubsection*{File Not Found Errors}
+
+\textbf{Error}: \texttt{! \LaTeX Error: File 'src/chapters/intro.tex' not found}
+
+\textbf{Solution}:
+\begin{itemize}
+    \item Verify file exists in correct directory
+    \item Check for typos in filename or path
+    \item Use forward slashes (/) not backslashes (\textbackslash) in paths
+    \item Ensure no special characters in filenames
+\end{itemize}
+
+\subsubsection*{Image Not Found}
+
+\textbf{Error}: \texttt{! Package pdftex.def Error: File 'img/figure.png' not found}
+
+\textbf{Solution}:
+\begin{itemize}
+    \item Check that image file exists in specified path
+    \item Verify file extension is correct (.pdf, .png, .jpg)
+    \item Use relative paths from main .tex file location
+    \item Ensure image is in supported format
+\end{itemize}
+
+\subsection*{Managing Large Documents}
+
+\subsubsection*{Compilation Time}
+
+For large theses with many figures:
+
+\begin{itemize}
+    \item Use \texttt{\textbackslash includeonly\{chap/chapter\_name\}} to compile only specific chapters during editing
+    \item Keep this in main .tex file, comment out when not needed
+    \item Final compilation should include all chapters
+\end{itemize}
+
+Example:
+\begin{verbatim}
+% Uncomment to compile only specific chapters:
+% \includeonly{chap/methodology,chap/results}
+\end{verbatim}
+
+\subsubsection*{Draft Mode}
+
+For faster compilation during editing:
+
+\begin{verbatim}
+\documentclass[draft]{scrreprt}
+\end{verbatim}
+
+Draft mode:
+\begin{itemize}
+    \item Shows boxes instead of images
+    \item Marks overfull boxes clearly
+    \item Compiles faster
+    \item Remember to remove \texttt{draft} option for final version
+\end{itemize}
+
+\subsection*{Quality Checks}
+
+\subsubsection*{Before Final Submission}
+
+Run these checks:
+
+\begin{enumerate}
+    \item \textbf{Complete compilation}: Full pdf\LaTeX → bibtex → makeglossaries → pdf\LaTeX × 2
+    \item \textbf{No warnings}: Address all \LaTeX warnings in log
+    \item \textbf{References check}: All citations appear in bibliography
+    \item \textbf{Cross-references}: No "??" in document
+    \item \textbf{Figures}: All figures appear correctly, not missing
+    \item \textbf{Page numbers}: TOC page numbers match actual pages
+    \item \textbf{Spelling}: Run spell checker
+    \item \textbf{Formatting}: Consistent throughout document
+\end{enumerate}
+
+\subsubsection*{PDF Quality}
+
+Verify final PDF:
+
+\begin{itemize}
+    \item \textbf{File size}: Reasonable (< 50 MB typically)
+    \item \textbf{Hyperlinks}: Internal links work correctly
+    \item \textbf{Bookmarks}: Chapter bookmarks appear in PDF viewer
+    \item \textbf{Fonts}: All fonts embedded properly
+    \item \textbf{Images}: Clear and readable at 100\% zoom
+\end{itemize}

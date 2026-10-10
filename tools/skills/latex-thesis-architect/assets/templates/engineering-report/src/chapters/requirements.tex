@@ -1,0 +1,43 @@
+\chapter{REQUIREMENTS ANALYSIS}
+\label{chap:requirements}
+
+CHAPTER GUIDE:
+Purpose: specify what the system must do (FRs) and how well (NFRs)
+Must include: Functional requirements, Non-functional requirements, System requirements
+LaTeX: use tables with caption and label, reference with Table ref
+
+This chapter specifies what the system must do (functional requirements) and how well it must do it (non-functional requirements). Hardware and software requirements belong here as \emph{system requirements} (i.e., what platform/environment is needed to build and run the system), while the next chapter (System Architecture and Methodology) should explain \emph{how} you will implement and validate these requirements.
+
+\section{Functional Requirements}
+List functional requirements using a consistent, testable format (e.g., IEEE 830 / “shall” statements).
+
+\begin{enumerate}
+    \item \textbf{FR-001:} The system shall \emph{[describe capability]}.
+    \item \textbf{FR-002:} The system shall \emph{[describe capability]}.
+\end{enumerate}
+
+\section{Non-Functional Requirements}
+Capture performance, reliability, usability, maintainability, portability, and security constraints.
+
+\begin{enumerate}
+    \item \textbf{NFR-001 (Performance):} The system shall \emph{[state measurable latency/throughput target]}.
+    \item \textbf{NFR-002 (Reliability):} The system shall \emph{[state uptime/robustness target]}.
+\end{enumerate}
+
+\section{System Requirements }
+This section has answers for “what machine + what software stack is required to build/run the project?”
+
+\subsection{Hardware Requirements}
+\begin{itemize}
+    \item \textbf{Minimum:} 64-bit CPU, 8 GB RAM, 5 GB free disk space.
+    \item \textbf{Recommended:} 4+ core CPU, 16 GB RAM, SSD storage.
+    \item \textbf{Optional (ML/large experiments):} Dedicated GPU with supported drivers and sufficient VRAM.
+\end{itemize}
+
+\subsection{Software Requirements}
+\begin{itemize}
+    \item Operating system: Windows / Linux / macOS (specify your target).
+    \item Build tools: \emph{[e.g., GCC, CMake, Maven, etc.]}.
+    \item Project runtime/development stack: \emph{[e.g., Python 3.x + required libraries, database, web framework]}.\newline
+          (Replace this line with the exact stack used in your implementation.)
+\end{itemize}

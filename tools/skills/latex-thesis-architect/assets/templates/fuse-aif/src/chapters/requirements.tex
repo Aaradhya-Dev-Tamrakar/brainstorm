@@ -1,0 +1,58 @@
+\chapter{Requirement Analysis}
+\label{chap:requirements}
+
+This chapter specifies what BiasAperture must do, its \glspl{fr}, and how well it must do it, its \glspl{nfr}. Hardware and software requirements are given as \emph{system requirements}: what platform and environment are needed to build and run the system. \Cref{chap:methodology} explains \emph{how} these requirements are implemented and validated.
+
+\section{Functional Requirements}
+
+Functional requirements are listed using IEEE~830-style ``shall'' statements, one capability per requirement.
+
+\begin{enumerate}
+    \item \textbf{FR-001 (Data Ingestion):} The system shall load, validate, and standardise the FairFace benchmark dataset or a compatible custom dataset, checking image integrity and aligning demographic annotation fields (race or ethnicity, perceived gender, age group) into a common internal schema.
+    \item \textbf{FR-002 (Dual-Mode Model Interface):} The system shall obtain predictions from a target facial-analysis model either by direct in-process inference against a supplied PyTorch or TensorFlow model object, or by batch ingestion of a precomputed predictions file in \gls{csv} or \gls{json} format.
+    \item \textbf{FR-003 (Fairness Metric Computation):} The system shall compute, per subgroup and per demographic intersection, the four Core~Four disparity metrics, \gls{dpd}, \gls{eod}, \gls{eop}, and \gls{dir}, using AIF360 and Fairlearn as independent, cross-validating computational backends.
+    \item \textbf{FR-004 (Statistical Significance Testing):} The system shall accompany every reported disparity with a chi-squared test of independence between the predicted-label distribution and the demographic subgroup, and with a bootstrap confidence interval on the subgroup accuracy difference.
+    \item \textbf{FR-005 (Explainability):} The system shall generate surrogate feature-attribution output (with spatial \gls{shap} analysis deferred) identifying which input features are most associated with a detected disparity, to support diagnosis of proxy-variable entanglement.
+    \item \textbf{FR-006 (Report Generation):} The system shall assemble the computed metrics, statistical tests, and dataset and model provenance information into a standardised, exportable \gls{html} fairness report, structurally informed by the Model Cards and Datasheets for Datasets conventions, with every metric row showing subgroup sample size, point estimate, 95\% confidence interval, and either a \(p\)-value or an insufficient-sample flag.
+    \item \textbf{FR-007 (Regulatory Traceability):} The system shall map every computed metric, in the generated report, to its corresponding clause under Article~10 or Annex~IV of the \gls{eu} \gls{ai} Act and to its corresponding function within the \gls{nist} \gls{ai} \gls{rmf}.
+    \item \textbf{FR-008 (Orchestration and Configuration):} The system shall expose a command-line configuration interface through which an auditor selects the benchmark dataset, the model or predictions source, and the metrics to compute, and shall re-run identically given the same configuration and inputs.
+    \item \textbf{FR-009 (Licensing Acknowledgement):} The system shall display and require explicit acknowledgement of the selected dataset's licensing terms before an audit is executed.
+    \item \textbf{FR-010 (Regulatory Evidence Traceability):} For every audit run and every reported metric, the system shall produce a machine-readable evidence manifest (manifest ID, timestamp, code version, dependency lockfile, dataset ID/checksum/licence, model ID and mode, CLI config, random seeds, and computed metrics with sample sizes) and embed it in the exported report bundle as \texttt{manifest.json}.
+    \item \textbf{FR-011 (Calibration and Threshold Audits):} The system shall support computing per-group calibration curves, expected calibration error (ECE), and thresholded metrics (precision@\(k\), recall at a fixed false positive rate), allowing auditors to request thresholded disparity tables and visualize calibration by subgroup.
+\end{enumerate}
+
+\section{Non-Functional Requirements}
+
+\begin{enumerate}
+    \item \textbf{NFR-001 (Statistical Rigour):} All significance testing shall use a threshold of \gls{symb:alpha} \(= 0.05\), and the system shall report exact \(p\)-values rather than only a pass/fail flag.
+    \item \textbf{NFR-002 (Uncertainty Quantification):} Every reported subgroup accuracy difference shall include a 95\% confidence interval computed from a minimum of 1{,}000 bootstrap resamples.
+    \item \textbf{NFR-003 (Data-Integrity Guard):} Any subgroup with a sample size below \(n = 30\) shall be automatically flagged as ``insufficient sample, not reported'' rather than assigned a computed metric value.
+    \item \textbf{NFR-004 (Performance):} A full-dataset evaluation over FairFace's 97{,}698 released images (86{,}744 train + 10{,}954 validation) shall complete within 4 hours on a single mid-range \gls{gpu}; a stratified development subset of \(n = 5{,}000\) images shall complete within 30 minutes on \gls{cpu} alone.
+    \item \textbf{NFR-005 (Modularity):} The system shall maintain strict separation of concerns across its architectural modules, each exposing a narrow, well-defined interface, so that any module can be unit-tested and extended independently of the others.
+    \item \textbf{NFR-006 (Reproducibility):} Bootstrap resampling shall use fixed random seeds, and third-party dependency versions (AIF360, Fairlearn, PyTorch or TensorFlow) shall be pinned in a lock-file to prevent silent behavioural drift between runs.
+    \item \textbf{NFR-007 (Portability):} The system shall run cross-platform on any environment supporting the pinned Python dependency stack, without requiring proprietary or platform-specific components.
+    \item \textbf{NFR-008 (Explainability Performance):} Surrogate feature attribution (with spatial \gls{shap} analysis deferred) shall be computed only on flagged disparities rather than the full dataset by default, to keep explainability overhead a small fraction of total runtime.
+    \item \textbf{NFR-009 (Reproducibility and Report Integrity):} Each report bundle shall include the code version (git commit SHA or container digest), a pinned dependency lockfile, CLI configuration, random seeds, \texttt{manifest.json}, and an integrity hash (SHA-256) for the report bundle, with optional HMAC signature support.
+    \item \textbf{NFR-010 (Statistical Power Guidance):} The system shall provide an on-demand power-analysis utility estimating minimum detectable effect size given subgroup sample sizes, significance level \gls{symb:alpha}, and statistical power (\(1-\beta\)), presenting sensitivity curves for small subgroups.
+\end{enumerate}
+
+\section{System Requirements}
+This section answers what machine and software stack are required to build and run BiasAperture.
+
+\subsection{Hardware Requirements}
+\begin{itemize}
+    \item \textbf{Minimum (development, stratified subset):} 64-bit \gls{cpu}, 4 or more cores, 8~GB \gls{ram}, 5~GB free disk space.
+    \item \textbf{Recommended (full-dataset audit, NFR-004 target):} A single mid-range \gls{gpu} with 8~GB or more \gls{vram}, for example an NVIDIA T4-class device, either a local workstation \gls{gpu} or a free-tier cloud notebook \gls{gpu} such as Google Colab.
+    \item No specialised or custom hardware is required; the platform performs inference and metric computation only, never model training from scratch.
+\end{itemize}
+
+\subsection{Software Requirements}
+\begin{itemize}
+    \item \textbf{Operating system:} Linux, Windows, or macOS; the stack is pure Python and cross-platform.
+    \item \textbf{Language and runtime:} Python~3.10 or later.
+    \item \textbf{Model interface:} PyTorch or TensorFlow, whichever framework the audited model was built in.
+    \item \textbf{Image preprocessing:} OpenCV, pandas, NumPy.
+    \item \textbf{Fairness computation:} AIF360, Fairlearn, scikit-learn, SciPy.
+    \item \textbf{Explainability:} Demographic-dummy surrogate attribution (scikit-learn; \gls{shap} deferred).
+    \item \textbf{Report generation:} Jinja2 for \gls{html} templating.
+\end{itemize}

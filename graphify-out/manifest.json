@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791603054.9037693,
-    "seen": 1791603077.0800686,
-    "ast_hash": "c9fa7671636b33d87c10f34dd657bd1d",
-    "semantic_hash": "c9fa7671636b33d87c10f34dd657bd1d"
+    "mtime": 1791605753.9847658,
+    "seen": 1791605776.1037197,
+    "ast_hash": "ee8efadb08884e8ae7874aa780ec719d",
+    "semantic_hash": "ee8efadb08884e8ae7874aa780ec719d"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -876,10 +876,10 @@
     "semantic_hash": "7d778793512114b09a97e27b0d5c1e65"
   },
   "tools/skills/README.md": {
-    "mtime": 1791602953.8816514,
-    "seen": 1791603077.080408,
-    "ast_hash": "6a8c882060f9480f9f9ac5de5658509a",
-    "semantic_hash": "6a8c882060f9480f9f9ac5de5658509a"
+    "mtime": 1791605523.146803,
+    "seen": 1791605776.1045043,
+    "ast_hash": "d15d08af6d57f12e1d609cfd2325e4cf",
+    "semantic_hash": "d15d08af6d57f12e1d609cfd2325e4cf"
   },
   "tools/skills/agent-teams-orchestration/SKILL.md": {
     "mtime": 1791443948.1802576,
@@ -3780,16 +3780,16 @@
     "semantic_hash": ""
   },
   "tools/skills/adaptive-workflow/SKILL.md": {
-    "mtime": 1791602901.9073696,
-    "seen": 1791603077.080413,
-    "ast_hash": "a3a58109fca77589e04ffb37b4fbc3e5",
-    "semantic_hash": "a3a58109fca77589e04ffb37b4fbc3e5"
+    "mtime": 1791605588.1774704,
+    "seen": 1791605776.104517,
+    "ast_hash": "347f62ef2fa96ed7ba49e866402de519",
+    "semantic_hash": "347f62ef2fa96ed7ba49e866402de519"
   },
   "tools/skills/adaptive-workflow/examples/routing-scenarios.md": {
-    "mtime": 1791562329.8959343,
-    "seen": 1791562552.040726,
-    "ast_hash": "7b03db73a7ff72a4c1c7c62db317c95a",
-    "semantic_hash": "7b03db73a7ff72a4c1c7c62db317c95a"
+    "mtime": 1791605565.5385928,
+    "seen": 1791605776.1045194,
+    "ast_hash": "fa9b7d2773c0e436d8fc14d6f136e0ea",
+    "semantic_hash": "fa9b7d2773c0e436d8fc14d6f136e0ea"
   },
   "tools/skills/adaptive-workflow/references/antigravity-chat-context-injection.md": {
     "mtime": 1791547310.20111,
@@ -3798,10 +3798,10 @@
     "semantic_hash": "98f2932fd5079bb9df59d1f34db3911a"
   },
   "tools/skills/adaptive-workflow/references/calm-authority-writing.md": {
-    "mtime": 1791528072.387292,
-    "seen": 1791530271.742292,
-    "ast_hash": "ed9804a5d57b800d3922a25a4103d043",
-    "semantic_hash": "ed9804a5d57b800d3922a25a4103d043"
+    "mtime": 1791605576.682044,
+    "seen": 1791605776.104529,
+    "ast_hash": "a891cb6c8e875c1716bdbe19d63729ff",
+    "semantic_hash": "a891cb6c8e875c1716bdbe19d63729ff"
   },
   "tools/skills/adaptive-workflow/references/cpm-concurrency-dispatch.md": {
     "mtime": 1791547270.108808,
@@ -3810,10 +3810,10 @@
     "semantic_hash": "0b8a4307f84dae1b1d0d29c9ecf1cd67"
   },
   "tools/skills/adaptive-workflow/references/cross-tool-chains.md": {
-    "mtime": 1791602827.564419,
-    "seen": 1791603077.0804205,
-    "ast_hash": "ef0b3644aa9561221e4a33bd07f4306b",
-    "semantic_hash": "ef0b3644aa9561221e4a33bd07f4306b"
+    "mtime": 1791605559.9456885,
+    "seen": 1791605776.1045349,
+    "ast_hash": "a9f96d3851882107cb13961b6400cccc",
+    "semantic_hash": "a9f96d3851882107cb13961b6400cccc"
   },
   "tools/skills/adaptive-workflow/references/dynamic-flight-envelope.md": {
     "mtime": 1791600381.8880408,
@@ -3852,10 +3852,10 @@
     "semantic_hash": "5f0869bfcb51cc4658183fd3c8167fb2"
   },
   "tools/skills/adaptive-workflow/references/skill-matrix.md": {
-    "mtime": 1791602808.0679498,
-    "seen": 1791603077.080432,
-    "ast_hash": "4d12fda2203b354ec63e0d0cf4a63943",
-    "semantic_hash": "4d12fda2203b354ec63e0d0cf4a63943"
+    "mtime": 1791605545.6023402,
+    "seen": 1791605776.1045637,
+    "ast_hash": "dfc8e23218e971412a2659dd4c4652e4",
+    "semantic_hash": "dfc8e23218e971412a2659dd4c4652e4"
   },
   "tools/skills/adaptive-workflow/references/transactional-recovery.md": {
     "mtime": 1791562571.0336874,
@@ -3864,10 +3864,10 @@
     "semantic_hash": "1e2b67ef3df5ba1f143a22c87e1e5d06"
   },
   "tools/skills/adaptive-workflow/references/verification-gates.md": {
-    "mtime": 1791547218.367378,
-    "seen": 1791547498.5757785,
-    "ast_hash": "25313216cf4411241180d98bbdc812d3",
-    "semantic_hash": "25313216cf4411241180d98bbdc812d3"
+    "mtime": 1791605571.2621653,
+    "seen": 1791605776.1045687,
+    "ast_hash": "bdb2778a4dd820945a935d227d3732b8",
+    "semantic_hash": "bdb2778a4dd820945a935d227d3732b8"
   },
   "tools/skills/adaptive-workflow/references/worker-availability-ledger.md": {
     "mtime": 1791547363.0771646,
@@ -3942,10 +3942,10 @@
     "semantic_hash": "5a994040aaa3678cb8f1d63899c07a65"
   },
   "tools/skills/adaptive-workflow/references/deterministic-zero-ai-protocol.md": {
-    "mtime": 1791600361.8246622,
-    "seen": 1791600572.920826,
-    "ast_hash": "273b604fd15d7d82aba20da6ee5aa42d",
-    "semantic_hash": "273b604fd15d7d82aba20da6ee5aa42d"
+    "mtime": 1791605550.757591,
+    "seen": 1791605776.1045372,
+    "ast_hash": "3f3f3fcdd516fe1a06e1ffeb4699fd27",
+    "semantic_hash": "3f3f3fcdd516fe1a06e1ffeb4699fd27"
   },
   "tools/skills/adaptive-workflow/references/historical-provenance.md": {
     "mtime": 1791602860.477317,
@@ -4120,5 +4120,143 @@
     "seen": 1791603077.0804853,
     "ast_hash": "dbb24765a7ca78250dc13f5e974a3b0e",
     "semantic_hash": "dbb24765a7ca78250dc13f5e974a3b0e"
+  },
+  "tools/skills/latex-thesis-architect/assets/templates/beamer-presentation/beamer-presentation.cls": {
+    "mtime": 1791605111.413555,
+    "seen": 1791605776.1040564,
+    "ast_hash": "b0e8ff1b4222878727dc9128a9e101b7",
+    "semantic_hash": "b0e8ff1b4222878727dc9128a9e101b7"
+  },
+  "tools/skills/latex-thesis-architect/assets/templates/engineering-report/engineering-report.cls": {
+    "mtime": 1791605108.1602702,
+    "seen": 1791605776.1040595,
+    "ast_hash": "866eb08827aa980665050c0fdde2e0af",
+    "semantic_hash": "866eb08827aa980665050c0fdde2e0af"
+  },
+  "tools/skills/latex-thesis-architect/assets/templates/fuse-aif/at_fuse_aif.cls": {
+    "mtime": 1791604760.4972422,
+    "seen": 1791605776.1040614,
+    "ast_hash": "1000d33d12291c007daa4d5739dee46b",
+    "semantic_hash": "1000d33d12291c007daa4d5739dee46b"
+  },
+  "tools/skills/latex-thesis-architect/scripts/audit_latex_thesis.py": {
+    "mtime": 1791604859.4402144,
+    "seen": 1791605776.104064,
+    "ast_hash": "80ca2ab113c2f800f87fae82229ece3a",
+    "semantic_hash": "80ca2ab113c2f800f87fae82229ece3a"
+  },
+  "tools/skills/latex-thesis-architect/scripts/compile_thesis.py": {
+    "mtime": 1791604222.4505582,
+    "seen": 1791605776.1040668,
+    "ast_hash": "5c8f9551f9f5b631b4a97c33b12c978f",
+    "semantic_hash": "5c8f9551f9f5b631b4a97c33b12c978f"
+  },
+  "tools/skills/latex-thesis-architect/scripts/scaffold_thesis.py": {
+    "mtime": 1791605223.284375,
+    "seen": 1791605776.1040692,
+    "ast_hash": "fd4f2a0e6b2ab8ab96d3cd84774ca6b7",
+    "semantic_hash": "fd4f2a0e6b2ab8ab96d3cd84774ca6b7"
+  },
+  "tools/skills/latex-thesis-architect/SKILL.md": {
+    "mtime": 1791605230.6957111,
+    "seen": 1791605776.1049178,
+    "ast_hash": "41654523b06a8f957c2d5248acabcada",
+    "semantic_hash": "41654523b06a8f957c2d5248acabcada"
+  },
+  "tools/skills/latex-thesis-architect/assets/templates/beamer-presentation/README.md": {
+    "mtime": 1791605091.735905,
+    "seen": 1791605776.1049206,
+    "ast_hash": "6c674d68d39e5430e5476a915c9db5aa",
+    "semantic_hash": "6c674d68d39e5430e5476a915c9db5aa"
+  },
+  "tools/skills/latex-thesis-architect/assets/templates/beamer-presentation/final-defense.md": {
+    "mtime": 1791604542.5608723,
+    "seen": 1791605776.1049228,
+    "ast_hash": "7bac3981ee37a2ab70af630a441dc0d4",
+    "semantic_hash": "7bac3981ee37a2ab70af630a441dc0d4"
+  },
+  "tools/skills/latex-thesis-architect/assets/templates/beamer-presentation/mid-defense.md": {
+    "mtime": 1791604542.565889,
+    "seen": 1791605776.1049254,
+    "ast_hash": "eab146c2c8e7a1537e5d52354d849f82",
+    "semantic_hash": "eab146c2c8e7a1537e5d52354d849f82"
+  },
+  "tools/skills/latex-thesis-architect/assets/templates/beamer-presentation/proposal.md": {
+    "mtime": 1791604825.156878,
+    "seen": 1791605776.1049278,
+    "ast_hash": "9a156003552d42dd2fd315c34aebc06e",
+    "semantic_hash": "9a156003552d42dd2fd315c34aebc06e"
+  },
+  "tools/skills/latex-thesis-architect/assets/templates/beamer-presentation/src/images/README.md": {
+    "mtime": 1791605091.7369049,
+    "seen": 1791605776.1049304,
+    "ast_hash": "065511852b972e2edd6e6bf2294ce113",
+    "semantic_hash": "065511852b972e2edd6e6bf2294ce113"
+  },
+  "tools/skills/latex-thesis-architect/assets/templates/engineering-report/1_proposal.md": {
+    "mtime": 1791604529.196007,
+    "seen": 1791605776.104932,
+    "ast_hash": "28d609e4954c89b5105bc6e1ec2edbaf",
+    "semantic_hash": "28d609e4954c89b5105bc6e1ec2edbaf"
+  },
+  "tools/skills/latex-thesis-architect/assets/templates/engineering-report/2_progress.md": {
+    "mtime": 1791604529.1965072,
+    "seen": 1791605776.1049342,
+    "ast_hash": "0329159c7662114849959ca18735a388",
+    "semantic_hash": "0329159c7662114849959ca18735a388"
+  },
+  "tools/skills/latex-thesis-architect/assets/templates/engineering-report/3_final.md": {
+    "mtime": 1791604529.1970074,
+    "seen": 1791605776.1049364,
+    "ast_hash": "5aa58effd436ec4ae5f6c5d1e46accc1",
+    "semantic_hash": "5aa58effd436ec4ae5f6c5d1e46accc1"
+  },
+  "tools/skills/latex-thesis-architect/assets/templates/engineering-report/README.md": {
+    "mtime": 1791605091.7248938,
+    "seen": 1791605776.1049387,
+    "ast_hash": "75485853743e06c2f3b0d9bf0fdfaf88",
+    "semantic_hash": "75485853743e06c2f3b0d9bf0fdfaf88"
+  },
+  "tools/skills/latex-thesis-architect/examples/biasaperture-case-study.md": {
+    "mtime": 1791604780.8084435,
+    "seen": 1791605776.1049411,
+    "ast_hash": "300f48fc1395430f900c4cbe5359bc2a",
+    "semantic_hash": "300f48fc1395430f900c4cbe5359bc2a"
+  },
+  "tools/skills/latex-thesis-architect/references/academic-engineering-guidelines.md": {
+    "mtime": 1791605210.6810224,
+    "seen": 1791605776.1049435,
+    "ast_hash": "8dd009c8c50ec3944a13f026d6e65729",
+    "semantic_hash": "8dd009c8c50ec3944a13f026d6e65729"
+  },
+  "tools/skills/latex-thesis-architect/references/calm-authority-academic-voice.md": {
+    "mtime": 1791604230.6368432,
+    "seen": 1791605776.104946,
+    "ast_hash": "caf0438afe9dd616a9d477089d161072",
+    "semantic_hash": "caf0438afe9dd616a9d477089d161072"
+  },
+  "tools/skills/latex-thesis-architect/references/cpm-thesis-orchestration.md": {
+    "mtime": 1791604244.534295,
+    "seen": 1791605776.1049483,
+    "ast_hash": "6f96f5e12cdde31ff6194087f94a301d",
+    "semantic_hash": "6f96f5e12cdde31ff6194087f94a301d"
+  },
+  "tools/skills/latex-thesis-architect/references/regulatory-and-standards-matrix.md": {
+    "mtime": 1791604251.177934,
+    "seen": 1791605776.1049502,
+    "ast_hash": "cd1c055e97a3dbb2d2bf73ae0cbeccee",
+    "semantic_hash": "cd1c055e97a3dbb2d2bf73ae0cbeccee"
+  },
+  "tools/skills/latex-thesis-architect/references/thesis-structure-and-invariants.md": {
+    "mtime": 1791604237.39706,
+    "seen": 1791605776.10505,
+    "ast_hash": "1206a42a97ab38a4b4017d02b71afc33",
+    "semantic_hash": "1206a42a97ab38a4b4017d02b71afc33"
+  },
+  "tools/skills/latex-thesis-architect/assets/templates/engineering-report/0_draft.md": {
+    "mtime": 1791604529.1955073,
+    "seen": 1791605776.1057746,
+    "ast_hash": "dbcccfff83efe7a4ccc3f8cd8d52ac1a",
+    "semantic_hash": "dbcccfff83efe7a4ccc3f8cd8d52ac1a"
   }
 }

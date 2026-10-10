@@ -39,7 +39,7 @@ Protocols: [`references/fleet-command-architecture.md`](references/fleet-command
 
 | Tier | Workload | Backend | Cost | Latency / RAM |
 | :--- | :--- | :--- | :--- | :--- |
-| **Tier 0** | Routine: `audit.bat`, `sync.bat`, lint, test, DAG math | Shell / Python | **$0.00** | **<20 ms** / **<10 MB** |
+| **Tier 0** | Routine: `audit.bat`, `sync.bat`, thesis compile, tests | Shell / Python | **$0.00** | **<20 ms** / **<10 MB** |
 | **Tier 1A** | Intent triage, time allocation, matrix routing | `fleet-master-3b` / `qwen-router` | **$0.00** | **30-50 ms** / **380MB–1.8GB** |
 | **Tier 1B** | Agent-Reflex self-healing & action prefetch | `fleet-master-3b` (port 1234) | **$0.00** | **<50 ms** / **~1.8 GB** |
 | **Tier 1C** | Multi-file coding, batch tasks, test generation | `Fleet-Orchestrator` (27 workers) | **$0.00** | Cloud / **<30 MB** |
@@ -119,7 +119,7 @@ Recovery reference: [`references/transactional-recovery.md`](references/transact
 
 ## 7. Supporting References & Verification
 
-- [`references/skill-matrix.md`](references/skill-matrix.md): 8-archetype routing & fellowship matrix.
+- [`references/skill-matrix.md`](references/skill-matrix.md): 8-archetype routing, fellowship & latex-thesis.
 - [`references/agent-reflex-and-tool-speculator.md`](references/agent-reflex-and-tool-speculator.md): Agent-Reflex & Tool-Speculator.
 - [`references/fleet-master-brain-models.md`](references/fleet-master-brain-models.md): Dual-model (3B/7B), A100 training, Drive retrieval.
 - [`references/historical-provenance.md`](references/historical-provenance.md): Baseline lock ($v3.5.0 \to v3.10.0$) & 15 invariants.

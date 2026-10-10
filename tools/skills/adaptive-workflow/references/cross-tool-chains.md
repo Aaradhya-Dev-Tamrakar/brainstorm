@@ -1,6 +1,6 @@
 # Standardized Cross-Tool Ecosystem Pipelines
 
-This document specifies the eight canonical cross-repository execution pipelines connecting computational engines, presentation hubs, and utility tools across Aaradhya's ecosystem.
+This document specifies the nine canonical cross-repository execution pipelines connecting computational engines, presentation hubs, and utility tools across Aaradhya's ecosystem.
 
 ---
 
@@ -170,5 +170,29 @@ flowchart LR
 3. If heavy GPU training is required, offload execution to `colab-cloud-accelerator` (A100/L4 GPU) with automated `runtime.unassign()` teardown.
 4. If auditing model fairness or demographic bias, route metrics through `BiasAperture` and format with `compliance-report-harmonizer`.
 5. Stage and deliver verified changes via `.\sync.bat`.
+
+---
+
+## Pipeline 9: Academic Thesis, Research Proposal & Beamer Defense Compilation Pipeline
+
+Connects curriculum research and notes to formal IEEE engineering thesis reports, capstone monographs, and 16:9 Beamer defense presentations with automated calm-authority auditing and multi-pass compilation.
+
+```mermaid
+flowchart LR
+    Notes["Curriculum & Notes\n(academic-notebook-architect / super-nlm)"] --> Scaffold["latex-thesis-architect\n(scaffold_thesis.py)"]
+    Scaffold --> Templates["Modular LaTeX / Beamer\n(engineering-report.cls / beamer-presentation.cls)"]
+    Templates --> CPM["CPM Chapter DAG\n(Context Firebreak <5k tokens)"]
+    CPM --> Audit["audit_latex_thesis.py\n(0 hype, n >= 30, cleveref check)"]
+    Audit --> Compile["compile_thesis.py\n(Multi-pass latexmk / pdflatex)"]
+    Compile --> Sync[".\\sync.bat -SkipCI\n(Version control release)"]
+```
+
+### Protocol:
+1. Gather core research, syllabus topics, and empirical data via `academic-notebook-architect` and `super-nlm`.
+2. Scaffold document workspace using `python scripts/scaffold_thesis.py <dir> --template <report|beamer|capstone|full-pack> --title "..." --author1 "..."`.
+3. Author chapters following mathematical CPM chapter DAG (`references/cpm-thesis-orchestration.md`), isolating writer subagents to $<5{,}000$ tokens per chapter.
+4. Audit prose against the 10 Invariants of LaTeX Thesis Architecture using `python scripts/audit_latex_thesis.py <dir>` (enforcing 0 banned hype words, valid `\cref` targets, authentic BibTeX keys, and $n \ge 30$ sample size guardrails).
+5. Compile document to publication-quality PDF via `python scripts/compile_thesis.py <dir>`.
+6. Commit and sync via `.\sync.bat -SkipCI -m "docs(thesis): <summary>"`.
 
 

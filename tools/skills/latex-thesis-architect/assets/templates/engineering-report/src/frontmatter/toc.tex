@@ -1,0 +1,24 @@
+% Standard document lists
+
+\renewcommand{\contentsname}{TABLE OF CONTENTS}
+
+\renewcommand{\listfigurename}{LIST OF FIGURES}
+
+\renewcommand{\listtablename}{LIST OF TABLES}
+
+\tableofcontents
+\listoffigures
+\listoftables
+\listofalgorithms
+
+% LIST OF ABBREVIATIONS
+% Automatically generated from acronyms used in the document
+\addcontentsline{toc}{chapter}{LIST OF ABBREVIATIONS}
+\printglossary[type=\acronymtype,title={LIST OF ABBREVIATIONS}]
+\clearpage
+
+% LIST OF SYMBOLS
+% Automatically generated from symbols used in the document
+\addcontentsline{toc}{chapter}{LIST OF SYMBOLS}
+\printglossary[type=symbols,title={LIST OF SYMBOLS}]
+\clearpage

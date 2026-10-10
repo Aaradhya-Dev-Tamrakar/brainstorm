@@ -27,6 +27,7 @@ $$\text{Trust} = \text{Precision} + \text{Scope Boundaries} + \text{Empirical Pr
 | **`L3`** | **Technical Spec**: Developer tutorials, SDK architecture, model migration guides, API payloads. | 1,000–3,000 | Load `references/migration-and-developer-specs.md`. |
 | **`L4`** | **Model Launch Dossier**: Frontier model releases, benchmark evaluations, Pareto cost tradeoffs. | 2,000–5,000 | Load `references/model-reports-and-benchmarks.md`. |
 | **`L5`** | **Exhaustive System Card**: Formal safety cards, RSP catastrophic risk evaluations, behavioral audits. | 5,000–30,000+ | Load `references/system-cards-and-safety.md`. |
+| **`LaTeX`** | **Academic Thesis & Defense**: Formal IEEE engineering reports, capstone monographs, 16:9 Beamer defense decks. | 5,000–25,000+ | Delegate to `latex-thesis-architect` (`engineering-report.cls`, `beamer-presentation.cls`). |
 
 ---
 

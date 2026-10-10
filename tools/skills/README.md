@@ -7,7 +7,7 @@
 
 ---
 
-## 📊 Complete Master Skills Matrix (Origin & Workflow Usage) (61 Skills)
+## 📊 Complete Master Skills Matrix (Origin & Workflow Usage) (62 Skills)
 
 | Category | Skill Name | Path | Origin | Usage in Workflow Pipeline |
 | :--- | :--- | :--- | :--- | :--- |
@@ -49,6 +49,7 @@
 | | [`modern-web-guidance`](modern-web-guidance/SKILL.md) | `tools/skills/modern-web-guidance/` | Google Chrome DevRel (`modern-web-guidance`) | **Web Platform Standards Phase:** Enforces modern HTML/CSS/JS patterns (Anchor Positioning, Popovers, View Transitions, CWV). |
 | | [`chrome-extensions`](chrome-extensions/SKILL.md) | `tools/skills/chrome-extensions/` | Google Chrome DevRel (`modern-web-guidance`) | **Browser Extension Phase:** Manifest V3 reference patterns, service worker lifecycle, declarativeNetRequest, and WebStore publishing. |
 | **Technical Writing & Security** | [`writing-like-claude`](writing-like-claude/SKILL.md) | `tools/skills/writing-like-claude/` | Ecosystem Standard / Global Config | **Universal Technical Writing Phase:** Unified, task-adaptive Anthropic calm-authority engine for engineering blogs, migration guides, frontier model release reports, 144p system cards, and swarm pipelines. |
+| | [`latex-thesis-architect`](latex-thesis-architect/SKILL.md) | `tools/skills/latex-thesis-architect/` | Academic Thesis & Defense Core | **Academic Thesis & Presentation Phase:** Fuses Anthropic calm authority (`writing-like-claude`) with CPM chapter DAG orchestration (`adaptive-workflow`) and $n \ge 30$ sample size guards to scaffold, audit, and compile IEEE engineering reports (`engineering-report.cls`) and Beamer defense decks (`beamer-presentation.cls`). |
 | | [`compliance-report-harmonizer`](compliance-report-harmonizer/SKILL.md) | `tools/skills/compliance-report-harmonizer/` | `BiasAperture` Project / Global Config | **Formal Audit Reporting Phase:** Harmonizes compliance & fairness audit reports across HTML/PDF with pre-calibrated regulatory terms & Blink rendering. |
 | | [`security-guidance`](security-guidance/SKILL.md) | `tools/skills/security-guidance/` | Global Antigravity Config | **Vulnerability Gate Phase:** Security audits preventing credential leaks, command injection, path traversal, XSS, SSRF, and unsafe deserialization. |
 | **Gemini API & Multimodal Media** | [`gemini-api-dev`](gemini-api-dev/SKILL.md) | `tools/skills/gemini-api-dev/` | Official `google-genai` SDK Plugin | **SDK Implementation Phase:** Code generation for text, structured JSON, multi-turn chat, function calling, and multimodal reasoning with Gemini models. |

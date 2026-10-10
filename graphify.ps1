@@ -385,7 +385,7 @@ if is_update and (out_dir / "graph.json").exists() and (out_dir / "manifest.json
             p = Path(f)
             extract_files.extend(collect_files(p) if p.is_dir() else [p])
             
-    ast_result = extract(extract_files, cache_root=target_root) if extract_files else {'nodes': [], 'edges': [], 'input_tokens': 0, 'output_tokens': 0}
+    ast_result = extract(extract_files, cache_root=target_root, parallel=(sys.platform != 'win32')) if extract_files else {'nodes': [], 'edges': [], 'input_tokens': 0, 'output_tokens': 0}
     
     prune = list(deleted) or None
     G = build_merge(
@@ -421,7 +421,7 @@ else:
             extract_files.extend(collect_files(p) if p.is_dir() else [p])
             
     print(f"Extracting AST & semantics across {len(extract_files)} files...")
-    ast_result = extract(extract_files, cache_root=target_root) if extract_files else {'nodes': [], 'edges': [], 'input_tokens': 0, 'output_tokens': 0}
+    ast_result = extract(extract_files, cache_root=target_root, parallel=(sys.platform != 'win32')) if extract_files else {'nodes': [], 'edges': [], 'input_tokens': 0, 'output_tokens': 0}
     print(f"Extracted: {len(ast_result['nodes'])} nodes, {len(ast_result['edges'])} edges")
     
     G = build_from_json(ast_result, root=str(target_root), directed=is_directed)

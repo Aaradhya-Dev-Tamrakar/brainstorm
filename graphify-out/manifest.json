@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791630246.4299927,
-    "seen": 1791630254.7635036,
-    "ast_hash": "e9919746996f4bfea3af28745a187fa5",
-    "semantic_hash": "e9919746996f4bfea3af28745a187fa5"
+    "mtime": 1791632263.658322,
+    "seen": 1791632271.4105754,
+    "ast_hash": "48a9effd33098488c419729c8757dd93",
+    "semantic_hash": "48a9effd33098488c419729c8757dd93"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -552,10 +552,10 @@
     "semantic_hash": ""
   },
   "graphify.ps1": {
-    "mtime": 1790955930.7556975,
-    "seen": 1790956091.8373315,
-    "ast_hash": "d968e8d0c9c99a6b697cff3ac07f04a6",
-    "semantic_hash": "d968e8d0c9c99a6b697cff3ac07f04a6"
+    "mtime": 1791632045.328258,
+    "seen": 1791632271.4105585,
+    "ast_hash": "be344a09a5ab4b5c14ab3672b6e80226",
+    "semantic_hash": "be344a09a5ab4b5c14ab3672b6e80226"
   },
   "research/results/INV-BMK-001_results.json": {
     "mtime": 1791534022.7381911,
@@ -3930,10 +3930,10 @@
     "semantic_hash": "584406afc49032fd08979f96027753d5"
   },
   "sim/test_adaptive_orchestrator.py": {
-    "mtime": 1791602790.8026469,
-    "seen": 1791603077.08017,
-    "ast_hash": "80bb73f037acfbd682056b6f6c5c2552",
-    "semantic_hash": "80bb73f037acfbd682056b6f6c5c2552"
+    "mtime": 1791632200.7562904,
+    "seen": 1791632271.4107327,
+    "ast_hash": "710be09e78939ce6e9730cf1677c83de",
+    "semantic_hash": "710be09e78939ce6e9730cf1677c83de"
   },
   "tools/adaptive_engine.py": {
     "mtime": 1791608197.0474367,
@@ -4270,5 +4270,305 @@
     "seen": 1791630254.7636504,
     "ast_hash": "0fff513ca2007f44f5fb5171f78b49ad",
     "semantic_hash": "0fff513ca2007f44f5fb5171f78b49ad"
+  },
+  ".github/prompts/academic-notebook-architect.prompt.md": {
+    "mtime": 1791631007.3910193,
+    "seen": 1791631502.5113974,
+    "ast_hash": "b6dd988ec70970cf54ce172d4d98d2f2",
+    "semantic_hash": "b6dd988ec70970cf54ce172d4d98d2f2"
+  },
+  ".github/prompts/adaptive-workflow.prompt.md": {
+    "mtime": 1791631007.3935237,
+    "seen": 1791631502.5113993,
+    "ast_hash": "150bea57c473e9152291e73e100fea26",
+    "semantic_hash": "150bea57c473e9152291e73e100fea26"
+  },
+  ".github/prompts/agent-teams-orchestration.prompt.md": {
+    "mtime": 1791631007.396537,
+    "seen": 1791631502.5114005,
+    "ast_hash": "a17b81b06d67a05d634ee1f5aae13b2d",
+    "semantic_hash": "a17b81b06d67a05d634ee1f5aae13b2d"
+  },
+  ".github/prompts/ai-engineering-fellowship.prompt.md": {
+    "mtime": 1791631007.4010792,
+    "seen": 1791631502.5114014,
+    "ast_hash": "a53bf414b9efcd9850a85f6d162c4248",
+    "semantic_hash": "a53bf414b9efcd9850a85f6d162c4248"
+  },
+  ".github/prompts/avionic-telecom-analyzer.prompt.md": {
+    "mtime": 1791631007.4046645,
+    "seen": 1791631502.5114026,
+    "ast_hash": "bd904c6bb5e557b5ab2d5238e29ee9c8",
+    "semantic_hash": "bd904c6bb5e557b5ab2d5238e29ee9c8"
+  },
+  ".github/prompts/bitwarden.prompt.md": {
+    "mtime": 1791631007.4101827,
+    "seen": 1791631502.5114036,
+    "ast_hash": "dd95fb5fe39b951d5e91052a15488ad1",
+    "semantic_hash": "dd95fb5fe39b951d5e91052a15488ad1"
+  },
+  ".github/prompts/chat-archiver.prompt.md": {
+    "mtime": 1791631007.4126794,
+    "seen": 1791631502.5114045,
+    "ast_hash": "5c05edc3258f98929e998ae2f0ac6092",
+    "semantic_hash": "5c05edc3258f98929e998ae2f0ac6092"
+  },
+  ".github/prompts/chrome-extensions.prompt.md": {
+    "mtime": 1791631007.415681,
+    "seen": 1791631502.5114055,
+    "ast_hash": "5d304ff2dab7e052fd772ca0cef61762",
+    "semantic_hash": "5d304ff2dab7e052fd772ca0cef61762"
+  },
+  ".github/prompts/colab-cloud-accelerator.prompt.md": {
+    "mtime": 1791632033.7329576,
+    "seen": 1791632271.4109018,
+    "ast_hash": "1985cabe16c581eca8ce58b9be223233",
+    "semantic_hash": "1985cabe16c581eca8ce58b9be223233"
+  },
+  ".github/prompts/cold-storage-archiver.prompt.md": {
+    "mtime": 1791631007.4206896,
+    "seen": 1791631502.5114074,
+    "ast_hash": "95399555312f27e14df063ea589ac3b5",
+    "semantic_hash": "95399555312f27e14df063ea589ac3b5"
+  },
+  ".github/prompts/compliance-report-harmonizer.prompt.md": {
+    "mtime": 1791631007.4236896,
+    "seen": 1791631502.5114083,
+    "ast_hash": "e477e53c92750233ece393348ddead44",
+    "semantic_hash": "e477e53c92750233ece393348ddead44"
+  },
+  ".github/prompts/control-systems-sim.prompt.md": {
+    "mtime": 1791631007.4261892,
+    "seen": 1791631502.5114095,
+    "ast_hash": "7a43cb7bcaf836a8ac37376989700d44",
+    "semantic_hash": "7a43cb7bcaf836a8ac37376989700d44"
+  },
+  ".github/prompts/cp-archive-harvester.prompt.md": {
+    "mtime": 1791631007.4281905,
+    "seen": 1791631502.5114102,
+    "ast_hash": "bf15471b2673c7c0d51c1e0169363cf5",
+    "semantic_hash": "bf15471b2673c7c0d51c1e0169363cf5"
+  },
+  ".github/prompts/customization-state-sync.prompt.md": {
+    "mtime": 1791631007.4306977,
+    "seen": 1791631502.5114112,
+    "ast_hash": "673e1ab108989b015c44d1e81c14ad0e",
+    "semantic_hash": "673e1ab108989b015c44d1e81c14ad0e"
+  },
+  ".github/prompts/cyber-forensics.prompt.md": {
+    "mtime": 1791631007.432697,
+    "seen": 1791631502.5114121,
+    "ast_hash": "75c65d5c1d16f25eba8cd04e3f5d0744",
+    "semantic_hash": "75c65d5c1d16f25eba8cd04e3f5d0744"
+  },
+  ".github/prompts/design-taste-frontend.prompt.md": {
+    "mtime": 1791631007.4366992,
+    "seen": 1791631502.511413,
+    "ast_hash": "47aaf41ef7676b7bc9e69000e90c3a39",
+    "semantic_hash": "47aaf41ef7676b7bc9e69000e90c3a39"
+  },
+  ".github/prompts/doc-archiver.prompt.md": {
+    "mtime": 1791631007.4397056,
+    "seen": 1791631502.511414,
+    "ast_hash": "33961377fc3ab5511074000ffb390ad3",
+    "semantic_hash": "33961377fc3ab5511074000ffb390ad3"
+  },
+  ".github/prompts/dsa-complexity-optimizer.prompt.md": {
+    "mtime": 1791631007.4417052,
+    "seen": 1791631502.511415,
+    "ast_hash": "1dfcc0a3e9129f3e65ac7723cca0ccbd",
+    "semantic_hash": "1dfcc0a3e9129f3e65ac7723cca0ccbd"
+  },
+  ".github/prompts/dsp-signal-engine.prompt.md": {
+    "mtime": 1791631007.444707,
+    "seen": 1791631502.511416,
+    "ast_hash": "cd816b9a230b760f6a74ba1fb5971614",
+    "semantic_hash": "cd816b9a230b760f6a74ba1fb5971614"
+  },
+  ".github/prompts/electronics-circuit-synth.prompt.md": {
+    "mtime": 1791631007.446207,
+    "seen": 1791631502.511417,
+    "ast_hash": "5ea2e8fda403c07df4f87e901b84881e",
+    "semantic_hash": "5ea2e8fda403c07df4f87e901b84881e"
+  },
+  ".github/prompts/embedded-firmware-scaffold.prompt.md": {
+    "mtime": 1791631007.447206,
+    "seen": 1791631502.5114179,
+    "ast_hash": "6e14905645d00e51cab801e25e033de0",
+    "semantic_hash": "6e14905645d00e51cab801e25e033de0"
+  },
+  ".github/prompts/feature-dev.prompt.md": {
+    "mtime": 1791631007.4492147,
+    "seen": 1791631502.5114188,
+    "ast_hash": "f6bf45587abf3834e7c767e78481332e",
+    "semantic_hash": "f6bf45587abf3834e7c767e78481332e"
+  },
+  ".github/prompts/find-skills.prompt.md": {
+    "mtime": 1791631007.451229,
+    "seen": 1791631502.51142,
+    "ast_hash": "0476fd5241929d216ffeab99166dcac4",
+    "semantic_hash": "0476fd5241929d216ffeab99166dcac4"
+  },
+  ".github/prompts/fleet-orchestrator.prompt.md": {
+    "mtime": 1791631007.4532268,
+    "seen": 1791631502.5114207,
+    "ast_hash": "ebed8b3fde0d7418772befc73bee77f3",
+    "semantic_hash": "ebed8b3fde0d7418772befc73bee77f3"
+  },
+  ".github/prompts/fluid-wordmark-collapse.prompt.md": {
+    "mtime": 1791631007.4547298,
+    "seen": 1791631502.5114217,
+    "ast_hash": "040b1e6d4bc6b491c60653f8a43fd7b9",
+    "semantic_hash": "040b1e6d4bc6b491c60653f8a43fd7b9"
+  },
+  ".github/prompts/github-workflow.prompt.md": {
+    "mtime": 1791631007.45623,
+    "seen": 1791631502.5114226,
+    "ast_hash": "ba883cdb239e5df613e6f3fc347971b6",
+    "semantic_hash": "ba883cdb239e5df613e6f3fc347971b6"
+  },
+  ".github/prompts/google-classroom.prompt.md": {
+    "mtime": 1791631007.4577305,
+    "seen": 1791631502.5114238,
+    "ast_hash": "2edb133dcf445235dd2ceb9fe6422afe",
+    "semantic_hash": "2edb133dcf445235dd2ceb9fe6422afe"
+  },
+  ".github/prompts/google-stitch-integration.prompt.md": {
+    "mtime": 1791631007.4597492,
+    "seen": 1791631502.5114248,
+    "ast_hash": "d8a6df776c2839553bf311b8dcc83dc5",
+    "semantic_hash": "d8a6df776c2839553bf311b8dcc83dc5"
+  },
+  ".github/prompts/graphify-code-search.prompt.md": {
+    "mtime": 1791631007.4717891,
+    "seen": 1791631502.5114255,
+    "ast_hash": "ac13234a74e88d7ca69a52e4f2cd157c",
+    "semantic_hash": "ac13234a74e88d7ca69a52e4f2cd157c"
+  },
+  ".github/prompts/graphify-optimizer.prompt.md": {
+    "mtime": 1791631007.482253,
+    "seen": 1791631502.5114264,
+    "ast_hash": "5bfad4f5761bdc073c9b7f9439d39ba2",
+    "semantic_hash": "5bfad4f5761bdc073c9b7f9439d39ba2"
+  },
+  ".github/prompts/graphify.prompt.md": {
+    "mtime": 1791631007.468265,
+    "seen": 1791631502.5114274,
+    "ast_hash": "cb214c32e239f9dcc0aa74c53d4fbf34",
+    "semantic_hash": "cb214c32e239f9dcc0aa74c53d4fbf34"
+  },
+  ".github/prompts/latex-thesis-architect.prompt.md": {
+    "mtime": 1791631007.5024087,
+    "seen": 1791631502.5114284,
+    "ast_hash": "fcd68019460a4743307bb485c7a2a288",
+    "semantic_hash": "fcd68019460a4743307bb485c7a2a288"
+  },
+  ".github/prompts/mcp-integration.prompt.md": {
+    "mtime": 1791631007.505418,
+    "seen": 1791631502.511429,
+    "ast_hash": "42843972583c1a4b3fe094eb5a0066f0",
+    "semantic_hash": "42843972583c1a4b3fe094eb5a0066f0"
+  },
+  ".github/prompts/modern-web-guidance.prompt.md": {
+    "mtime": 1791631007.506919,
+    "seen": 1791631502.5114298,
+    "ast_hash": "fb74582568bb4c03821ac6b892827df7",
+    "semantic_hash": "fb74582568bb4c03821ac6b892827df7"
+  },
+  ".github/prompts/oose-architecture-modeler.prompt.md": {
+    "mtime": 1791631007.5084174,
+    "seen": 1791631502.511431,
+    "ast_hash": "fdd1791b2526a4899ffe4c9470f8c23d",
+    "semantic_hash": "fdd1791b2526a4899ffe4c9470f8c23d"
+  },
+  ".github/prompts/pm-workflow-orchestrator.prompt.md": {
+    "mtime": 1791631007.50993,
+    "seen": 1791631502.5114317,
+    "ast_hash": "4c6f6281f358b97c68cd4b3cb3a0f95b",
+    "semantic_hash": "4c6f6281f358b97c68cd4b3cb3a0f95b"
+  },
+  ".github/prompts/portfolio-project-manager.prompt.md": {
+    "mtime": 1791631007.511438,
+    "seen": 1791631502.5114324,
+    "ast_hash": "10bdba7c7309cf035475c85e52e1d5f4",
+    "semantic_hash": "10bdba7c7309cf035475c85e52e1d5f4"
+  },
+  ".github/prompts/pr-review-toolkit.prompt.md": {
+    "mtime": 1791631007.5134356,
+    "seen": 1791631502.5114338,
+    "ast_hash": "1da5a4a3ceee1c98ed7f685ed515a8f3",
+    "semantic_hash": "1da5a4a3ceee1c98ed7f685ed515a8f3"
+  },
+  ".github/prompts/rf-link-budget-calc.prompt.md": {
+    "mtime": 1791631007.5149357,
+    "seen": 1791631502.5114346,
+    "ast_hash": "4579b9239e91633e1267963056d5cd0b",
+    "semantic_hash": "4579b9239e91633e1267963056d5cd0b"
+  },
+  ".github/prompts/security-guidance.prompt.md": {
+    "mtime": 1791631007.5184364,
+    "seen": 1791631502.5114355,
+    "ast_hash": "8a030f286ac889650697898a06b37af0",
+    "semantic_hash": "8a030f286ac889650697898a06b37af0"
+  },
+  ".github/prompts/shadcn-context.prompt.md": {
+    "mtime": 1791631007.5224547,
+    "seen": 1791631502.5114362,
+    "ast_hash": "e4e35b9fdcb14f33abb51ca3d4833508",
+    "semantic_hash": "e4e35b9fdcb14f33abb51ca3d4833508"
+  },
+  ".github/prompts/skill-development.prompt.md": {
+    "mtime": 1791631007.5239522,
+    "seen": 1791631502.511437,
+    "ast_hash": "30c950374c7be12e12fe4e84bf075542",
+    "semantic_hash": "30c950374c7be12e12fe4e84bf075542"
+  },
+  ".github/prompts/slm-router-forge.prompt.md": {
+    "mtime": 1791631007.5259533,
+    "seen": 1791631502.511438,
+    "ast_hash": "cd8041cdccddc64c76f20075cc2c15b8",
+    "semantic_hash": "cd8041cdccddc64c76f20075cc2c15b8"
+  },
+  ".github/prompts/split-to-prs.prompt.md": {
+    "mtime": 1791631007.5274544,
+    "seen": 1791631502.511439,
+    "ast_hash": "501c6615caea2d170556b94778a035dd",
+    "semantic_hash": "501c6615caea2d170556b94778a035dd"
+  },
+  ".github/prompts/super-nlm-downloads.prompt.md": {
+    "mtime": 1791631007.5299723,
+    "seen": 1791631502.5114398,
+    "ast_hash": "137f04b8cb91016a086974ddaa11e85a",
+    "semantic_hash": "137f04b8cb91016a086974ddaa11e85a"
+  },
+  ".github/prompts/super-nlm.prompt.md": {
+    "mtime": 1791631007.5284536,
+    "seen": 1791631502.511441,
+    "ast_hash": "0dab1447625fa062e8372b4475bf8080",
+    "semantic_hash": "0dab1447625fa062e8372b4475bf8080"
+  },
+  ".github/prompts/systems-concurrency-harness.prompt.md": {
+    "mtime": 1791631007.531491,
+    "seen": 1791631502.5114417,
+    "ast_hash": "6640a01b41d5864bdd96a001cb618519",
+    "semantic_hash": "6640a01b41d5864bdd96a001cb618519"
+  },
+  ".github/prompts/win-vault.prompt.md": {
+    "mtime": 1791631007.5324814,
+    "seen": 1791631502.5114424,
+    "ast_hash": "216e8755ecab15ca356671348e49b841",
+    "semantic_hash": "216e8755ecab15ca356671348e49b841"
+  },
+  ".github/prompts/winpilot.prompt.md": {
+    "mtime": 1791631007.533481,
+    "seen": 1791631502.5114434,
+    "ast_hash": "dd193acc7e1cd297554825c8caaf300e",
+    "semantic_hash": "dd193acc7e1cd297554825c8caaf300e"
+  },
+  ".github/prompts/writing-like-claude.prompt.md": {
+    "mtime": 1791631007.5359802,
+    "seen": 1791631502.5114443,
+    "ast_hash": "b431398dff83f5a35e4b1fa2176c772f",
+    "semantic_hash": "b431398dff83f5a35e4b1fa2176c772f"
   }
 }

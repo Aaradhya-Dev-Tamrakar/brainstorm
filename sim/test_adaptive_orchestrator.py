@@ -56,9 +56,13 @@ class TestAdaptiveOrchestrator(unittest.TestCase):
         self.assertIn("nova_state", status)
         self.assertGreater(status["total_mb"], 0)
 
-        # Assert headroom behavior
-        safe, msg = AntigravityMemoryGovernor.assert_headroom(required_mb=1000)
-        self.assertTrue(safe)
+        # Assert headroom behavior with deterministic mock
+        from unittest.mock import patch
+        with patch.object(AntigravityMemoryGovernor, "get_memory_status", return_value={"total_mb": 16384, "available_mb": 4096, "used_mb": 12288, "percent_used": 75.0, "is_antigravity_safe": True, "min_headroom_required_mb": 2048, "nova_state": "NOMINAL"}):
+            safe, msg = AntigravityMemoryGovernor.assert_headroom(required_mb=1000)
+            self.assertTrue(safe)
+            unsafe, msg_un = AntigravityMemoryGovernor.assert_headroom(required_mb=5000)
+            self.assertFalse(unsafe)
 
         # Assert local model safety limit (<= 500 MB)
         model_safe, _ = AntigravityMemoryGovernor.assert_model_safety(397)  # Qwen 0.5B GGUF

@@ -33,7 +33,7 @@ The governor ingests telemetry across five continuous channels:
 | **API Call Latency** | $\le 1200\text{ ms}$ | $1200 - 2500\text{ ms}$ | $> 2500\text{ ms}$ | Step down concurrency via PID damping ($K_d$) |
 | **HTTP 429 Rate Limits** | 0 responses | 1 response / 60s | $\ge 2$ responses / 60s | Pause queue dispatch for 60s; halve pool |
 | **Host System RAM** | $\ge 11.0\text{ GB}$ (NovaOptimizer Steady State) | $2048 - 4096\text{ MB}$ available | $< 2048\text{ MB}$ available | Assert Antigravity reserve; block local models; run NovaOptimizer |
-| **Local Model Footprint** | $\le 500\text{ MB}$ (Qwen-0.5B GGUF) | $400 - 500\text{ MB}$ | $> 500\text{ MB}$ | Reject on-device execution; delegate to Fleet Cloud Swarm |
+| **Local Model Footprint** | $\le 1.8\text{ GB}$ (Fleet Master 3B / Router 0.5B) | $1.8 - 4.5\text{ GB}$ (Fleet Master 7B, requires $\ge 8\text{ GB}$ free RAM) | $> 5.0\text{ GB}$ | Reject on-device execution; delegate to Fleet Swarm or Colab GPU |
 | **Worker Lease Age** | $< 300\text{ s}$ | $300 - 600\text{ s}$ | $> 900\text{ s}$ | Stale lease eviction; task rollover |
 | **Fleet Health Ratio ($H$)** | $H \ge 0.70$ ($N_{\text{avail}} \ge 19$) | $0.35 \le H < 0.70$ ($10 \le N_{\text{avail}} < 19$) | $H < 0.35$ ($N_{\text{avail}} < 10$) | Throttle velocity profile; disable speculative racing |
 

@@ -7,16 +7,17 @@ This document records the architectural baseline lock, historical provenance, an
 ## 1. Provenance & Version Lifecycle
 
 - **Origin Baseline**: `v3.5.0-adaptive-workflow` (Initial meta-orchestrator specification).
-- **Current Calibration**: `v3.8.0-calibrated` (Cloud GPU/TPU Compute Accelerator, Dual Colab Gateway, Task Time Allocation, and 207-test Fleet-Orchestrator Adapter Mesh).
+- **Prior Calibration**: `v3.8.0-calibrated` (Cloud GPU/TPU Compute Accelerator, Dual Colab Gateway, Task Time Allocation, and 207-test Fleet-Orchestrator Adapter Mesh).
+- **Current Calibration**: `v3.9.0-calibrated` (Fleet Master Brain 3B/7B Dual-Model Hierarchy, Antigravity 504-Conversation Trajectory Harvester, Agent-Reflex Autonomous Self-Healing, and Tool-Speculator Prefetching).
 - **Date of Inception**: 2026-10-09 (Official Day of Creation of the Adaptive Workflow meta-orchestrator).
 - **Architectural Scope**: Central meta-orchestration root for Aaradhya's personal ecosystem across **28 tool modules** (24 computational engines and 4 presentation hubs) across **32 Git tracking branches**.
-- **Execution Fleet**: $W = 27$ pooled GitHub Copilot worker accounts, Copilot Headless REST, Claude CDP, and Colab Cloud GPU/TPU Accelerator managed via `Fleet-Orchestrator` (207 tests, 100% pass rate).
+- **Execution Fleet**: $W = 27$ pooled GitHub Copilot worker accounts, Copilot Headless REST, Claude CDP, Colab Cloud GPU/TPU Accelerator (A100/L4), and Fleet Master Brain (3B & 7B GGUF) managed via `Fleet-Orchestrator`.
 
 ---
 
 ## 2. Invariant Registry
 
-The adaptive workflow engine guarantees deterministic execution through eight non-negotiable architectural invariants:
+The adaptive workflow engine guarantees deterministic execution through fourteen non-negotiable architectural invariants:
 
 1. **`INV-FAST-PATH`**:
    Routine development mechanics (`audit.bat`, `sync.bat`, formatters, linters, unittests, simulation runs, git status) execute natively via pure Python and shell commands in <20 ms with 0 AI tokens and <10 MB RAM.
@@ -37,16 +38,34 @@ The adaptive workflow engine guarantees deterministic execution through eight no
    Worktree projections resolve the canonical Git common directory and back up any pre-existing files before projection, ensuring clean restoration upon teardown.
 
 7. **`INV-COLAB-LIFECYCLE`**:
-   All Colab cloud execution tasks must execute non-interactively without TTY prompts, tear down rented VMs upon completion (`colab stop` in finally handler), and uphold the Jupyter Notebook Invariant (zero local headless `.ipynb` execution).
+   All Colab cloud execution tasks must execute non-interactively without TTY prompts, tear down rented VMs upon completion (`colab stop` in finally handler or `runtime.unassign()`), and uphold the Jupyter Notebook Invariant (zero local headless `.ipynb` execution).
 
 8. **`INV-AUDIT-ORDER`**:
    Deterministic verification sequence enforced before every commit:
    1. Unittest discovery (`python -m unittest discover -s sim -p "test_*.py"`)
-   2. Graph update (`graphify update .`)
+   2. Knowledge graph update (`graphify update .`)
    3. Document reconciliation (`python sim/reconciliation_engine.py --fix`)
    4. Staged zero-leak checks (`git grep --untracked "file:///" tools/skills/adaptive-workflow/`)
    5. SKILL.md budget check ($\le 8,192\text{ bytes}$)
    6. Full structural & behavioral audit (`.\audit.bat`, target: 0 errors)
+
+9. **`INV-AGENT-REFLEX`**:
+   Autonomous error recovery loop. Non-zero tool exit codes and tracebacks are intercepted by Agent-Reflex (Fleet Master Brain 3B/7B on port 1234) to synthesize corrective tool actions without consuming primary context.
+
+10. **`INV-SPECULATIVE-PREFETCH`**:
+    Incoming development requests predict upcoming action DAG sequences via Tool-Speculator, prefetching target files and warming execution runtimes in parallel.
+
+11. **`INV-DUAL-BRAIN`**:
+    Local SLM execution separates tasks between the 3B Daily Driver (1.8 GB for routing, reflex, speculation, and duration budgeting) and 7B Powerhouse (4.36 GB for deep refactoring, test repair, and invariant audits).
+
+12. **`INV-RESUMABLE-RETRIEVAL`**:
+    All cloud model pulls from Google Drive use `python -m gdown --continue` to automatically bypass large-file virus-scan redirects and resume interrupted chunks safely.
+
+13. **`INV-COLAB-TEARDOWN`**:
+    Autonomous cloud training notebooks conclude with `from google.colab import runtime; runtime.unassign()` to release expensive GPU/TPU VMs immediately upon artifact persistence.
+
+14. **`INV-FIFO-ENQUEUE`**:
+    Appending or modifying notebook cells during active cloud training is safe due to Jupyter's FIFO execution queue, preserving in-flight CUDA states.
 
 ---
 

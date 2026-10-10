@@ -1,11 +1,11 @@
 ---
 name: adaptive-workflow
-description: Universal meta-orchestrator for Aaradhya's 28-tool ecosystem. Enforces context firebreaks, routes tasks across a 2D matrix, executes zero-AI fast paths, solves CPM DAGs mathematically, and marshals 27 pooled Copilot workers and Cloud GPU accelerators.
+description: Universal meta-orchestrator for Aaradhya's 28-tool ecosystem. Enforces context firebreaks, routes tasks across a 2D matrix, executes zero-AI fast paths, solves CPM DAGs mathematically, marshals 27 pooled Copilot workers, and drives Fleet Master Brain (3B/7B), Agent-Reflex self-healing, and Colab GPU accelerators.
 ---
 
 # Adaptive Workflow Orchestrator (`adaptive-workflow`)
 
-Universal meta-orchestrator governing Aaradhya's tool ecosystem (28 modules, 32 tracking branches). Enforces an absolute context firebreak (`INV-CTX-FIREBREAK`), schedules tasks via mathematical Critical Path Method (CPM), marshals the 27-worker Fleet pool and Colab accelerators, protects IDE memory via the Antigravity Memory Guard, and guarantees zero-drift deterministic execution across all repositories.
+Universal meta-orchestrator governing Aaradhya's tool ecosystem (28 modules, 32 tracking branches). Enforces context firebreak (`INV-CTX-FIREBREAK`), solves CPM DAGs mathematically, marshals 27-worker Fleet pool and Colab accelerators, drives local Fleet Master Brain (3B/7B) with Agent-Reflex self-healing, and enforces Antigravity Memory Guard.
 
 ---
 
@@ -13,45 +13,44 @@ Universal meta-orchestrator governing Aaradhya's tool ecosystem (28 modules, 32 
 
 ```mermaid
 flowchart TD
-    User["User\nGoals & constraints"] --> Lead["Lead Agent (Main Chat)\n- Context <5k tokens\n- Tier 0 fast paths (<20 ms)\n- Routes intent via port 1234 (<40 ms)"]
-    
-    Lead -->|"Spawns Ephemeral Subagent"| CmdrA["Fleet Commander Subagent\nIsolated child context"]
-    Lead -->|"Spawns Ephemeral Subagent"| CmdrB["Domain Reviewer Subagent\nIsolated child context"]
-    
-    CmdrA -->|"Marshals Headless Workers"| FleetQueue["Fleet Task Queue\n(orchestrator-state/tasks/)"]
-    
-    FleetQueue --> Workers["Headless Worker Pool (27x Copilot Workers)\n- 5,400 monthly credits\n- Ephemeral worktrees (.worktrees/<task_id>)"]
-    
-    Workers --> Checkpoints["State Checkpoints"]
-    Checkpoints --> CmdrA
-    
-    CmdrA -->|"Returns <300 word manifest ONLY"| Lead
-    CmdrB -->|"Returns verification sign-off ONLY"| Lead
-    
-    Lead --> Delivery["Verified Milestone Delivery\n(sync.bat -CrossSync)"]
+    User["User Goals"] --> Lead["Lead Agent (Main Chat)\n- Context <5k tokens\n- Fast paths (<20 ms)\n- Port 1234 router"]
+    Lead -->|"Subagent"| Cmdr["Fleet Commander\nChild context"]
+    Cmdr -->|"Enqueue"| Q["Fleet Queue"]
+    Q --> W["27x Workers (.worktrees/<task_id>)"]
+    W --> Exec["Step Run"]
+    Exec --> Err{"Exit == 0?"}
+    Err -- No --> Reflex["Agent-Reflex (1234)\nAuto fix (<50 ms)"]
+    Reflex --> Exec
+    Err -- Yes --> CP["Checkpoints"]
+    CP --> Cmdr -->|"Manifest <300w"| Lead --> Delivery["Verified Delivery (sync.bat)"]
 ```
 
 ### Hierarchy Responsibilities:
-1. **Lead Agent**: Triages intent via `adaptive_engine.py triage`. Runs Tier 0 fast paths ($0 tokens). Solves CPM critical path ($TS = 0$). Delegates batch workloads to ephemeral Fleet Commander (`invoke_subagent`), keeping context $<5,000$ tokens (`INV-CTX-FIREBREAK`).
-2. **Domain Commanders**: Depth 1. Writes task JSONs to `orchestrator-state/tasks/`. Absorbs raw logs and retries. Returns **only a <300 word manifest** to Lead Agent.
-3. **Headless Workers & Cloud Accelerator**: 27 pooled accounts in `.worktrees/<task_id>` + `ColabCloudAdapter` for GPU/TPU runs (zero local `.ipynb` execution).
+1. **Lead Agent**: Triage via `adaptive_engine.py triage`. Runs Tier 0 fast paths ($0 tokens). Solves CPM ($TS = 0$). Ephemeral Fleet Commander (`invoke_subagent`), context $<5,000$ tokens (`INV-CTX-FIREBREAK`).
+2. **Domain Commanders**: Writes task JSONs to `orchestrator-state/tasks/`. Absorbs logs/retries. Returns **<300w manifest** to Lead.
+3. **Headless Workers & Cloud Accelerator**: 27 accounts in `.worktrees/<task_id>` + `ColabCloudAdapter` (zero local `.ipynb` execution).
+4. **Agent-Reflex**: Intercepts tool errors at port 1234 (`[Error] -> [Fix]`) for sub-second recovery (`INV-AGENT-REFLEX`).
 
 Protocols: [`references/fleet-command-architecture.md`](references/fleet-command-architecture.md).
 
 ---
 
-## 2. 5-Tier Execution Hierarchy & Fast Paths
+## 2. Multi-Tier Execution Hierarchy & Fast Paths
 
-| Tier | Target Workload | Backend | Cost | Latency / RAM |
+| Tier | Workload | Backend | Cost | Latency / RAM |
 | :--- | :--- | :--- | :--- | :--- |
-| **Tier 0** | Routine: `audit.bat`, `sync.bat`, lint, test, DAG math, git status | Native Python / shell | **$0.00** | **<20 ms** / **<10 MB** |
-| **Tier 1A** | Intent triage, time allocation, matrix routing | `qwen-intent-router` (port 1234) | **$0.00** | **30-50 ms** / **380 MB** |
-| **Tier 1B** | Multi-file coding, refactoring, batch tests | `Fleet-Orchestrator` (27 workers) | **$0.00** | Cloud / **<30 MB** |
-| **Tier 1C** | Cloud GPU/TPU training, CUDA, remote `.ipynb` | `colab-cloud-accelerator` | Compute units | Cloud VM / **0 MB** |
-| **Tier 2** | Interactive conversational reasoning | Gemini 3.8 Flash / Flash-Lite API | **<$0.001** | Sub-second / **0 MB** |
-| **Tier 3** | Complex deadlocks after test failure | Claude Opus/Sonnet, Gemini Pro | Standard API | Gated on test failure |
+| **Tier 0** | Routine: `audit.bat`, `sync.bat`, lint, test, DAG math | Shell / Python | **$0.00** | **<20 ms** / **<10 MB** |
+| **Tier 1A** | Intent triage, time allocation, matrix routing | `fleet-master-3b` / `qwen-router` | **$0.00** | **30-50 ms** / **380MB–1.8GB** |
+| **Tier 1B** | Agent-Reflex self-healing & action prefetch | `fleet-master-3b` (port 1234) | **$0.00** | **<50 ms** / **~1.8 GB** |
+| **Tier 1C** | Multi-file coding, batch tasks, test generation | `Fleet-Orchestrator` (27 workers) | **$0.00** | Cloud / **<30 MB** |
+| **Tier 1D** | Deep refactoring, test fixes, invariant audits | `fleet-master-7b` ($\ge 8\text{GB}$ RAM) | **$0.00** | **300-800 ms** / **~4.36 GB** |
+| **Tier 1E** | Cloud GPU/TPU training, CUDA, remote `.ipynb` | `colab-cloud-accelerator` | Compute units | Cloud VM / **0 MB** |
+| **Tier 2** | Interactive conversational reasoning | Gemini 3.8 Flash / Lite | **<$0.001** | Sub-second / **0 MB** |
+| **Tier 3** | Complex deadlocks after test failure | Claude Opus, Gemini Pro | Standard API | Gated on failure |
 
-Fast-path triggers: [`references/deterministic-zero-ai-protocol.md`](references/deterministic-zero-ai-protocol.md).
+Fast paths: [`references/deterministic-zero-ai-protocol.md`](references/deterministic-zero-ai-protocol.md).
+Models: [`references/fleet-master-brain-models.md`](references/fleet-master-brain-models.md).
+Reflex: [`references/agent-reflex-and-tool-speculator.md`](references/agent-reflex-and-tool-speculator.md).
 
 ---
 
@@ -64,7 +63,7 @@ python tools/adaptive_engine.py cpm --dag-json path/to/dag.json
 ```
 
 - **Dates**: $ES_j = \max_{i \in Pred(j)} EF_i$, $EF_j = ES_j + D_j$; $LF_i = \min_{j \in Succ(i)} LS_j$, $LS_i = LF_i - D_i$.
-- **Slacks**: Total Slack $TS_i = LF_i - EF_i$; Free Slack $FS_i = \min_{j \in Succ(i)} ES_j - EF_i$.
+- **Slacks**: $TS_i = LF_i - EF_i$; $FS_i = \min_{j \in Succ(i)} ES_j - EF_i$.
 - **Critical Path**: Tasks with $TS = 0$ (sequential). Parallel branches with $TS > 0$ dispatch concurrently.
 
 Mechanics: [`references/cpm-concurrency-dispatch.md`](references/cpm-concurrency-dispatch.md).
@@ -86,11 +85,11 @@ python tools/adaptive_engine.py triage "refactor router" --files sim/routing_eng
 | **(V0, R0)** | `DIRECT_FAST` | Direct in-turn or Tier 0 fast path | In-turn |
 | **(V0, R1)** | `BRANCH_GUARD` | Isolated branch with test gate | 1 subagent |
 | **(V0, R2)** | `SURGICAL_LOCK` | Sequential edit with git snapshots | Sequential |
-| **(V1, R0)** | `CONCURRENT_LOCAL` | Parallel edits; pre/post SHA-256 | Up to 4 tasks |
+| **(V1, R0)** | `CONCURRENT_LOCAL` | Parallel edits; pre/post SHA-256 | Up to 4 |
 | **(V1, R1)** | `STAR_SUBAGENTS` | Disjoint subagents on scratch files | 3 subagents |
 | **(V1, R2)** | `DECOUPLED_SLICES` | Micro-PR branches (`split-to-prs`) | Sequential |
-| **(V2, R0)** | `FLEET_SWARM` | Fleet-Orchestrator cloud pool | Up to 27 workers |
-| **(V2, R1)** | `THROTTLED_FLEET` | Batched sub-PR slices via Fleet | Throttled batch |
+| **(V2, R0)** | `FLEET_SWARM` | Fleet-Orchestrator cloud pool | Up to 27 |
+| **(V2, R1)** | `THROTTLED_FLEET` | Batched sub-PR slices via Fleet | Throttled |
 | **(V2, R2)** | `STRICT_INTERLOCK` | Halted; requires user confirmation | Blocked |
 
 Matrix reference: [`references/orthogonal-execution-matrix.md`](references/orthogonal-execution-matrix.md).
@@ -99,12 +98,10 @@ Matrix reference: [`references/orthogonal-execution-matrix.md`](references/ortho
 
 ## 5. Memory Guard & Flight Envelope
 
-Protects Antigravity IDE stability and enforces Banker's safety:
-- **Reserve Floor**: $2,048\text{ MB}$ free RAM permanently reserved for Antigravity.
-- **Worker Concurrency**: $\text{raw\_workers} = \lfloor (\text{Available RAM} - 2048) / 256 \rfloor$.
-  - $[2048, 2303]\text{ MB} \implies 0$ workers (strictly preserves reserve).
-  - $[2304, 4096]\text{ MB} \implies 1-8$ workers.
-- **Rate Governor**: Targets $L_{\text{target}} = 1200\text{ ms}$. Damping factor $\alpha = \max(0.1, \min(1.0, 1.0 - 0.5 e_L))$. On $\ge 2$ rate limit excursions (HTTP 429) within 60s, multiplier $M$ is halved to $\max(0.25, M/2)$ with a 120s recovery window. Successes ramp $M$ by $+0.1$ up to $1.0$.
+Enforces Antigravity IDE stability and Banker's safety:
+- **Reserve Floor**: $2,048\text{ MB}$ free RAM permanently reserved for Antigravity IDE.
+- **Worker Concurrency**: $\lfloor (\text{Free RAM} - 2048) / 256 \rfloor$. $[2048, 2303]\text{MB} \implies 0$; $[2304, 4096]\text{MB} \implies 1\text{–}8$.
+- **Rate Governor**: Targets $L_{\text{target}} = 1200\text{ms}$. On $\ge 2$ HTTP 429s in 60s, multiplier $M$ halved to $\max(0.25, M/2)$ with 120s recovery window. Successes ramp $M$ by $+0.1$ up to $1.0$.
 
 Envelope reference: [`references/dynamic-flight-envelope.md`](references/dynamic-flight-envelope.md).
 
@@ -112,9 +109,9 @@ Envelope reference: [`references/dynamic-flight-envelope.md`](references/dynamic
 
 ## 6. Transactional Recovery & Fencing
 
-- **Rolling Snapshots**: `python tools/adaptive_engine.py snapshot --tag <name>` (refs in `refs/backup/`). Rollback: `python tools/adaptive_engine.py rollback --tag <name>`.
-- **Pre-Existing File Guard (`INV-PRE-EXIST-GUARD`)**: Backs up pre-existing files to `<git_common_dir>/projection_backups/<task_id>/` outside git tracking, restoring them upon teardown.
-- **Orchestrator Fencing (`INV-FENCE-TOKEN`)**: Monotonic integer tokens reject split-brain writes from stale or evicted workers.
+- **Rolling Snapshots**: `python tools/adaptive_engine.py snapshot --tag <name>` (rollback: `rollback --tag <name>`).
+- **Pre-Existing File Guard (`INV-PRE-EXIST-GUARD`)**: Backs up pre-existing files to `<git_common_dir>/projection_backups/<task_id>/` outside git tracking, restoring on teardown.
+- **Fencing Tokens (`INV-FENCE-TOKEN`)**: Monotonic integer tokens reject split-brain writes from stale workers.
 
 Recovery reference: [`references/transactional-recovery.md`](references/transactional-recovery.md).
 
@@ -122,10 +119,12 @@ Recovery reference: [`references/transactional-recovery.md`](references/transact
 
 ## 7. Supporting References & Verification
 
-- **[`references/historical-provenance.md`](references/historical-provenance.md)**: Baseline lock ($v3.5.0 \to v3.8.0$) and invariant registry.
-- **[`references/verification-gates.md`](references/verification-gates.md)**: Verification sequence (`INV-AUDIT-ORDER`) and ecosystem audit standards.
-- **[`references/worker-availability-ledger.md`](references/worker-availability-ledger.md)**: Worker exhaustion tracking and 3-to-4 state mapping table.
-- **[`references/quota-velocity-acceleration.md`](references/quota-velocity-acceleration.md)**: Credit trading for velocity acceleration.
-- **[`references/antigravity-chat-context-injection.md`](references/antigravity-chat-context-injection.md)**: Customization projection into headless workers.
-- **[`references/ecosystem-repos.md`](references/ecosystem-repos.md)**: Catalog across all 28 registered tool modules.
-- **[`examples/routing-scenarios.md`](examples/routing-scenarios.md)**: Walkthroughs across domain archetypes.
+- [`references/agent-reflex-and-tool-speculator.md`](references/agent-reflex-and-tool-speculator.md): Agent-Reflex recovery & Tool-Speculator.
+- [`references/fleet-master-brain-models.md`](references/fleet-master-brain-models.md): Dual-model (3B/7B), A100 training, Drive retrieval.
+- [`references/historical-provenance.md`](references/historical-provenance.md): Baseline lock ($v3.5.0 \to v3.9.0$) & 14 invariants.
+- [`references/verification-gates.md`](references/verification-gates.md): Verification sequence (`INV-AUDIT-ORDER`).
+- [`references/worker-availability-ledger.md`](references/worker-availability-ledger.md): Worker exhaustion tracking & 3-to-4 state mapping.
+- [`references/quota-velocity-acceleration.md`](references/quota-velocity-acceleration.md): Credit trading for velocity acceleration.
+- [`references/antigravity-chat-context-injection.md`](references/antigravity-chat-context-injection.md): Customization projection into workers.
+- [`references/ecosystem-repos.md`](references/ecosystem-repos.md): Catalog across all 28 registered tool modules.
+- [`examples/routing-scenarios.md`](examples/routing-scenarios.md): Walkthroughs across domain archetypes.

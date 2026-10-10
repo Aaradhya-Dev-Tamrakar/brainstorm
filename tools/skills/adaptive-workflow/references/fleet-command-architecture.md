@@ -19,7 +19,13 @@ flowchart TD
     Batch --> Enqueue["Write Task JSONs to\norchestrator-state/tasks/<task_id>.json"]
     Enqueue --> Workers["27x Copilot Workers (5,400 Credits/Mo)\n- Ephemeral Worktrees (.worktrees/<task_id>)\n- 15-Minute Stale Lease Eviction"]
     
-    Workers --> Checkpoints["Write Checkpoints to\norchestrator-state/checkpoints/<task_id>.json"]
+    Workers --> ToolRun["Execute Assigned Sub-Step"]
+    ToolRun --> ErrorCheck{"Sub-Step Succeeded?"}
+    
+    ErrorCheck -- No --> Reflex["Agent-Reflex Interceptor (Port 1234)\n- Diagnoses traceback / error code\n- Generates corrective tool action (<50 ms)"]
+    Reflex --> ToolRun
+    
+    ErrorCheck -- Yes --> Checkpoints["Write Checkpoints to\norchestrator-state/checkpoints/<task_id>.json"]
     Checkpoints --> Monitor["Commander Polls / Awaits Checkpoints"]
     Monitor --> Verdict{"Checkpoint Status == 'done'?"}
     
@@ -32,12 +38,13 @@ flowchart TD
 ## 2. Multi-Provider Adapter Mesh & Fleet Health
 
 Fleet-Orchestrator aggregates heterogeneous compute providers into a unified execution mesh:
+- **Fleet Master Brain (Local SLM Mesh)**: `fleet-master-3b` (1.8 GB Q4_K_M Daily Driver) and `fleet-master-7b` (4.36 GB Q4_K_M Powerhouse) serving on port 1234 for sub-50ms intent triage, task duration allocation, and Agent-Reflex self-healing.
 - **Copilot CLI Workers**: 27 verified accounts (`copilot-w1` through `copilot-w27`) pooling $27 \times 200 = 5,400\text{ AI credits/month}$.
 - **Copilot Headless REST**: Low-overhead asynchronous HTTP REST adapter (~15 MB RAM per worker).
 - **Claude Desktop CDP**: Chrome DevTools Protocol adapter for adversarial QA review and architectural arbitration.
 - **Gemini 3.8 Flash API**: High-speed contextual analysis via `google-genai` SDK v2.25.0.
 - **Groq & Ollama Local**: Zero-latency classification and lightweight format translation.
-- **ColabCloudAdapter (`client/adapters/colab_adapter.py`)**: Remote execution on Google Colab GPU (NVIDIA T4, L4 24GB, A100) and TPU (v5e/v6e) runtimes for heavy ML fine-tuning, CUDA compilation, and notebook pipelines.
+- **ColabCloudAdapter (`client/adapters/colab_adapter.py`)**: Remote execution on Google Colab GPU (NVIDIA T4, L4 24GB, A100) and TPU (v5e/v6e) runtimes for heavy ML fine-tuning (`fleet_master_brain_forge.ipynb`), CUDA compilation, and notebook pipelines.
 - **Credential Isolation**: Separate session home directories under `C:\Users\Aaradhya\.copilot-workers\worker_<N>_<username>`.
 
 ### Fleet Health Verification Commands:

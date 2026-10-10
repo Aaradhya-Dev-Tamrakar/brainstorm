@@ -19,7 +19,7 @@ Analyze incoming prompt text, referenced files, and user objectives against the 
 1. `ENGINEERING_DEV`: Code writing, debugging, refactoring, API integration, unit testing.
 2. `DOMAIN_HARDWARE`: Bare-metal C/C++, DSP filters, control loops, RF link budgets, avionics math.
 3. `DOMAIN_AEC_CAD`: 3D CAD modeling, BIM parameters, FEM frame solvers, GIS geospatial layers.
-4. `RESEARCH_ACADEMIC`: IOE BE curriculum, NotebookLM fleets, paper dossiers, chat archives.
+4. `RESEARCH_ACADEMIC`: IOE BE curriculum, NotebookLM fleets, IEEE engineering thesis reports, Beamer defense decks, paper dossiers, chat archives.
 5. `FRONTEND_PRODUCT`: Web apps, UI components, design systems, portfolio updates.
 6. `SWARM_ORCHESTRATION`: Multi-agent swarms, batch background execution, overnight runs.
 7. `SYSADMIN_SECURITY`: DFIR triage, NTFS folder locks, desktop window automation, vault items.
@@ -46,6 +46,7 @@ Calculate the task coordinates across the [2D Orthogonal Execution Matrix](ortho
 ### 1. Progressive Skill Activation
 - Identify primary and supporting skills from `references/skill-matrix.md`.
 - Read the corresponding `SKILL.md` files on demand to retrieve specialized procedures. Never preload unused skills into context.
+- For `RESEARCH_ACADEMIC` or formal thesis deliverables, invoke `latex-thesis-architect` to scaffold IEEE-compliant reports (`engineering-report.cls`) or Beamer decks, enforcing CPM chapter DAG firebreaks and $n \ge 30$ sample size guards.
 - For `AI_ENGINEERING_ML` tasks, invoke `ai-engineering-fellowship` to look up mentor-graded reference architectures ($\ge 95/100$), anti-pattern guards, and enforce Local-First (`F:\FuseAIF2026`) with GitHub fallback resolution (`INV-RESOLVE-FUSE`).
 
 ### 2. Dynamic Flight Envelope Pre-Flight Check

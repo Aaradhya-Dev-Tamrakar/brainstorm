@@ -358,6 +358,8 @@ class DeterministicTriageEngine:
     }
 
     FAST_PATH_PATTERNS = [
+        (r"\b(audit\s*thesis|check\s*thesis|audit\s*beamer)\b", r"python scripts/audit_latex_thesis.py .", "thesis_audit"),
+        (r"\b(compile\s*thesis|compile\s*beamer|build\s*thesis)\b", r"python scripts/compile_thesis.py .", "thesis_compile"),
         (r"\b(audit|reconcil|verify)\b", r".\audit.bat", "audit"),
         (r"\b(sync|pull|push)\b", r".\sync.bat", "sync"),
         (r"\b(run\s*(\w+\s*)?tests?|pytest|unittest|test\s*suite)\b|^\s*test\b", "python -m unittest", "test"),
@@ -365,6 +367,7 @@ class DeterministicTriageEngine:
         (r"\b(git\s*status|status)\b", "git status", "status"),
         (r"\b(run\s*(\w+\s*)?sim|sim\.bat|simulation)\b", r".\sim.bat", "sim"),
         (r"\b(build\s*(\w+\s*)?report|compile\s*report|report\.pdf|build_report\.bat)\b", r".\build_report.bat", "report"),
+        (r"\b(colab\s*whoami|colab\s*sessions|colab\s*status)\b", r"colab whoami", "colab_status"),
     ]
 
     R2_PATTERNS = [

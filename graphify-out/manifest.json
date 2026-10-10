@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791606035.9247012,
-    "seen": 1791606043.2335854,
-    "ast_hash": "9290c8debd6826a9c10b3bb7254bccc8",
-    "semantic_hash": "9290c8debd6826a9c10b3bb7254bccc8"
+    "mtime": 1791606333.660265,
+    "seen": 1791606342.8053384,
+    "ast_hash": "d6b88129263f4194961362c03d542ec6",
+    "semantic_hash": "d6b88129263f4194961362c03d542ec6"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -3822,10 +3822,10 @@
     "semantic_hash": "0bfb337b20b57bfc8f6a22f92560bd68"
   },
   "tools/skills/adaptive-workflow/references/ecosystem-repos.md": {
-    "mtime": 1791547349.7405448,
-    "seen": 1791547498.5757682,
-    "ast_hash": "84415235c2a1b210932f405d28789311",
-    "semantic_hash": "84415235c2a1b210932f405d28789311"
+    "mtime": 1791606164.3161185,
+    "seen": 1791606342.8058658,
+    "ast_hash": "3eaaf369023e821d20bb286258287567",
+    "semantic_hash": "3eaaf369023e821d20bb286258287567"
   },
   "tools/skills/adaptive-workflow/references/fleet-command-architecture.md": {
     "mtime": 1791600373.2370596,
@@ -3834,10 +3834,10 @@
     "semantic_hash": "f4d3bca5beeaf89ad48fd549db50c468"
   },
   "tools/skills/adaptive-workflow/references/lifecycle-stages.md": {
-    "mtime": 1791602841.997569,
-    "seen": 1791603077.080429,
-    "ast_hash": "17459118599b3897d5d0dd866a92c75a",
-    "semantic_hash": "17459118599b3897d5d0dd866a92c75a"
+    "mtime": 1791606183.9998028,
+    "seen": 1791606342.8058758,
+    "ast_hash": "10c3480173942c047b24744859af63f1",
+    "semantic_hash": "10c3480173942c047b24744859af63f1"
   },
   "tools/skills/adaptive-workflow/references/orthogonal-execution-matrix.md": {
     "mtime": 1791547235.46464,
@@ -3924,10 +3924,10 @@
     "semantic_hash": "bbe7f0aa8fe920ba8c9d0028a94c80d7"
   },
   "sim/adaptive_orchestrator.py": {
-    "mtime": 1791602774.6204655,
-    "seen": 1791603077.0801415,
-    "ast_hash": "66e49c3016b32c0a1f04ee60e9ee4593",
-    "semantic_hash": "66e49c3016b32c0a1f04ee60e9ee4593"
+    "mtime": 1791606230.7233615,
+    "seen": 1791606342.8054285,
+    "ast_hash": "d254e2b72e82bd385cc9a835c04a21c2",
+    "semantic_hash": "d254e2b72e82bd385cc9a835c04a21c2"
   },
   "sim/test_adaptive_orchestrator.py": {
     "mtime": 1791602790.8026469,

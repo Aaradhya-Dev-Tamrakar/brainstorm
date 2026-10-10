@@ -86,3 +86,5 @@ To ensure multi-device portability across laptops, external storage, and seconda
 These utilities are tracked locally on disk but remain outside the formal 28-module ecosystem registry:
 - **`windows-pilot`** (`F:\Aaradhya-Dev-Tamrakar\Utility\windows-pilot`): Native UI Automation (UIA) tree inspector, screenshot perception, desktop driver.
 - **`IEEE-Xtreme-Archive`** (`F:\Aaradhya-Dev-Tamrakar\IEEE-Xtreme-Archive`): Competitive programming task and solution repository.
+- **`latex-engineering-report-template`** (`https://github.com/Aaradhya-Dev-Tamrakar/latex-engineering-report-template`): Pure-format IEEE engineering report class and template (`engineering-report.cls`).
+- **`latex-beamer-presentation-template`** (`https://github.com/Aaradhya-Dev-Tamrakar/latex-beamer-presentation-template`): Minimalist 16:9 widescreen academic Beamer defense presentation class and template (`beamer-presentation.cls`).

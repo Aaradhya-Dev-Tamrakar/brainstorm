@@ -1165,62 +1165,47 @@ class FleetFirstBridge:
 
     @classmethod
     def route_intent(cls, prompt: str, force_heuristic: bool = False) -> Dict[str, Any]:
-        """Routes intent through LM Studio port 1234 if active, else uses deterministic fallback."""
+        """Routes intent using the authoritative Fleet-Orchestrator fast_intent_router single source of truth."""
         start = time.perf_counter()
 
-        if not force_heuristic and not os.environ.get("FORCE_HEURISTIC_ROUTING") and cls.is_lm_studio_online():
-            payload = {
-                "model": "qwen-intent-router",
-                "messages": [
-                    {
-                        "role": "system",
-                        "content": (
-                            "You are the high-speed Intent, Skill, and Task Time Allocation Router for the Aaradhya development ecosystem. "
-                            "Classify the incoming user intent into the exact lifecycle archetype, tier, 2D matrix cell, "
-                            "primary skill, supporting skills, velocity profile, and task time allocation (tier, estimated_duration_s, "
-                            "timeout_ceiling_s, cpm_weight, execution_route) in strict JSON format."
-                        ),
-                    },
-                    {"role": "user", "content": prompt},
-                ],
-                "temperature": 0.0,
-                "max_tokens": 220,
-            }
-            try:
-                data = json.dumps(payload).encode("utf-8")
-                req = urllib.request.Request(
-                    cls.LM_STUDIO_URL,
-                    data=data,
-                    headers={"Content-Type": "application/json"},
-                    method="POST",
-                )
-                with urllib.request.urlopen(req, timeout=3.0) as resp:
-                    body = json.loads(resp.read().decode("utf-8"))
-                    content = body["choices"][0]["message"]["content"]
-                    result = json.loads(content.strip())
-                    elapsed = (time.perf_counter() - start) * 1000.0
-                    result["latency_ms"] = round(elapsed, 2)
-                    result["source"] = "lm_studio_qwen0.5b"
-                    cls._router_telemetry["total_requests"] += 1
-                    cls._router_telemetry["lm_studio_hits"] += 1
-                    cls._router_telemetry["last_latency_ms"] = round(elapsed, 2)
+        # Delegate to authoritative fast_intent_router in Fleet-Orchestrator
+        try:
+            fleet_tools = Path(r"F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator\tools")
+            if str(fleet_tools) not in sys.path:
+                sys.path.insert(0, str(fleet_tools))
+            import fast_intent_router
+            from fast_intent_router import route_intent as authoritative_route_intent
 
-                    ps = result.get("primary_skill")
-                    if ps in cls.SKILL_ALIASES:
-                        result["primary_skill"] = cls.SKILL_ALIASES[ps]
+            should_force_heuristic = force_heuristic or not cls.is_lm_studio_online()
 
-                    if "time_allocation" not in result:
-                        result["time_allocation"] = cls._compute_fallback_time_allocation(
-                            prompt,
-                            result.get("archetype", "ENGINEERING_DEV"),
-                            result.get("tier", "Tier 1"),
-                            result.get("policy", "DIRECT_FAST"),
-                        )
-                    return result
-            except Exception:
-                pass
+            if should_force_heuristic:
+                old_force = os.environ.get("FORCE_HEURISTIC_ROUTING")
+                os.environ["FORCE_HEURISTIC_ROUTING"] = "1"
+                old_online = getattr(fast_intent_router, "is_online", None)
+                fast_intent_router.is_online = lambda *args, **kwargs: False
+                try:
+                    result = authoritative_route_intent(prompt)
+                finally:
+                    if old_force is not None:
+                        os.environ["FORCE_HEURISTIC_ROUTING"] = old_force
+                    else:
+                        os.environ.pop("FORCE_HEURISTIC_ROUTING", None)
+                    if old_online is not None:
+                        fast_intent_router.is_online = old_online
+            else:
+                result = authoritative_route_intent(prompt)
 
-        # Deterministic fast heuristic fallback
+            cls._router_telemetry["total_requests"] += 1
+            if "lm_studio" in result.get("source", ""):
+                cls._router_telemetry["lm_studio_hits"] += 1
+            else:
+                cls._router_telemetry["fallback_count"] += 1
+            cls._router_telemetry["last_latency_ms"] = result.get("latency_ms", round((time.perf_counter() - start) * 1000, 2))
+            return result
+        except Exception:
+            pass
+
+        # Self-contained safe fallback matching the 9 archetypes
         elapsed = (time.perf_counter() - start) * 1000.0
         cls._router_telemetry["total_requests"] += 1
         cls._router_telemetry["fallback_count"] += 1
@@ -1229,12 +1214,22 @@ class FleetFirstBridge:
         p = prompt.lower()
         if any(k in p for k in ["fusemachines", "fellowship", "text-to-sql", "text2sql", "telco churn", "tree ensembles", "shap", "neu steel", "defect cnn", "vision transformers", "clip zero-shot", "ner sequence", "rag assistant", "eval harness", "mlops", "biasaperture", "fuseaif"]):
             arch, tier, cell, pol, pskill = "AI_ENGINEERING_ML", "Tier 2", "(V1, R1)", "STAR_SUBAGENTS", "ai-engineering-fellowship"
+        elif any(k in p for k in ["beamer", "thesis", "capstone report"]) or (any(k in p for k in ["latex", "tex"]) and "report" in p):
+            arch, tier, cell, pol, pskill = "RESEARCH_ACADEMIC", "Tier 2", "(V1, R1)", "STAR_SUBAGENTS", "latex-thesis-architect"
         elif any(k in p for k in ["iv-ii", "iv-i", "syllabus", "semester", "super-nlm", "notebooklm", "notes"]):
             arch, tier, cell, pol, pskill = "RESEARCH_ACADEMIC", "Tier 2", "(V1, R1)", "STAR_SUBAGENTS", "academic-notebook-architect"
-        elif any(k in p for k in ["firmware", "dsp", "radar", "stm32", "freertos", "filter"]):
+        elif any(k in p for k in ["antenna", "friis", "link budget", "microwave", "telecom"]):
+            arch, tier, cell, pol, pskill = "DOMAIN_HARDWARE", "Tier 2", "(V0, R1)", "BRANCH_GUARD", "rf-link-budget-calc"
+        elif any(k in p for k in ["filter", "bode", "nyquist", "pid"]):
+            arch, tier, cell, pol, pskill = "DOMAIN_HARDWARE", "Tier 2", "(V0, R1)", "BRANCH_GUARD", "control-systems-sim" if "pid" in p else "dsp-signal-engine"
+        elif any(k in p for k in ["firmware", "dsp", "radar", "stm32", "freertos"]):
             arch, tier, cell, pol, pskill = "DOMAIN_HARDWARE", "Tier 2", "(V0, R1)", "BRANCH_GUARD", "embedded-firmware-scaffold"
-        elif any(k in p for k in ["portfolio", "aaradhyadt.github.io", "access.js", "navbar", "css"]):
+        elif any(k in p for k in ["portfolio", "aaradhyadt.github.io", "access.js", "projects.html"]) or ("project" in p and "onboard" in p):
             arch, tier, cell, pol, pskill = "FRONTEND_PRODUCT", "Tier 1", "(V0, R2)" if "access.js" in p else "(V0, R1)", "SURGICAL_LOCK" if "access.js" in p else "BRANCH_GUARD", "portfolio-project-manager"
+        elif any(k in p for k in ["alternate data stream", "pe header", "forensic"]) or ("ads" in p.split()):
+            arch, tier, cell, pol, pskill = "SYSADMIN_SECURITY", "Tier 1", "(V0, R1)", "BRANCH_GUARD", "cyber-forensics"
+        elif any(k in p for k in ["win-vault", "vault.bat", "acl"]):
+            arch, tier, cell, pol, pskill = "SYSADMIN_SECURITY", "Tier 1", "(V0, R1)", "BRANCH_GUARD", "win-vault"
         elif any(k in p for k in ["swarm", "fleet", "worker", "copilot-w"]):
             arch, tier, cell, pol, pskill = "SWARM_ORCHESTRATION", "Tier 2", "(V2, R0)", "FLEET_SWARM", "fleet-orchestrator"
         elif any(k in p for k in ["colab", "gpu", "tpu", "fine-tune", "unsloth", "cuda"]):

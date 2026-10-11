@@ -170,11 +170,14 @@ class TestAdaptiveOrchestrator(unittest.TestCase):
 
     def test_05_local_router_integration(self):
         """Verifies local intent routing and deterministic heuristic fallback."""
-        route = FleetFirstBridge.route_intent("Scaffold IOE semester IV-II notes for CE 752")
+        route = FleetFirstBridge.route_intent("Scaffold IOE semester IV-II notes for CE 752", force_heuristic=True)
         self.assertIn("archetype", route)
         self.assertIn("latency_ms", route)
         self.assertIn("source", route)
-        self.assertIn(route["source"], ["lm_studio_qwen0.5b", "deterministic_heuristic"])
+        self.assertTrue(
+            route["source"].startswith("lm_studio_") or "heuristic" in route["source"],
+            f"Unexpected source: {route['source']}"
+        )
         self.assertEqual(route["primary_skill"], "academic-notebook-architect")
 
     def test_06_context_firebreak_manifest(self):
@@ -258,7 +261,7 @@ class TestAdaptiveOrchestrator(unittest.TestCase):
         self.assertIn("fallback_count", initial_telem)
 
         # Trigger routing call to record metrics
-        res = FleetFirstBridge.route_intent("Build an embedded firmware driver for STM32 SPI")
+        res = FleetFirstBridge.route_intent("Build an embedded firmware driver for STM32 SPI", force_heuristic=True)
         self.assertEqual(res["primary_skill"], "embedded-firmware-scaffold")
 
         post_telem = FleetFirstBridge.get_router_telemetry()

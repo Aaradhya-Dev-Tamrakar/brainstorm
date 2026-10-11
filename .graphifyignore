@@ -18,6 +18,7 @@ report/*.synctex.gz
 
 # Cache & Scratch
 .agents/
+.github/prompts/
 __pycache__/
 *.pyc
 scratch/

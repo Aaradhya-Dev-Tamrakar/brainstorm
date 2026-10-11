@@ -368,7 +368,7 @@ def sync_models(dry_run: bool = False) -> Tuple[int, int, List[str]]:
                 "license": "proprietary" if org_prefix in ["anthropic", "openai", "google", "xai"] else "apache-2.0",
                 "open_weights": org_prefix not in ["anthropic", "openai", "google", "xai"],
                 "api_available": True,
-                "local_runnable": org_prefix not in ["anthropic", "openai", "google", "xai"],
+                "local_runnable": False,
                 "vram_fp16_gb": None,
                 "vram_q4_gb": None,
                 "quantization_formats": [],

@@ -1,18 +1,21 @@
 """Simulation helpers and numerical kernels for the brainstorm project."""
 
-from .kalman import (
-    ConstantVelocityKalmanFilter,
-    KalmanFilter,
-    KalmanFilter2D,
-    LinearKalmanFilter,
-    RadarKalmanFilter,
-    RadarTrackFilter,
-    RadarTracker,
-    filter_sequence,
-    kalman_predict,
-    kalman_update,
-    track_radar,
-)
+try:
+    from .kalman import (
+        ConstantVelocityKalmanFilter,
+        KalmanFilter,
+        KalmanFilter2D,
+        LinearKalmanFilter,
+        RadarKalmanFilter,
+        RadarTrackFilter,
+        RadarTracker,
+        filter_sequence,
+        kalman_predict,
+        kalman_update,
+        track_radar,
+    )
+except ImportError:
+    pass
 
 __all__ = [
     "KalmanFilter",

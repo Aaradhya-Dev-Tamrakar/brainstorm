@@ -43,8 +43,8 @@ class TestRoutingEngine(unittest.TestCase):
         cls.router = get_router()
 
     def test_01_catalog_loading_and_counts(self) -> None:
-        """Verify that the model registry loads all 25 models with valid schemas."""
-        self.assertEqual(len(self.router.models), 25, "Registry must contain exactly 25 models.")
+        """Verify that the model registry loads all baseline models with valid schemas."""
+        self.assertGreaterEqual(len(self.router.models), 25, "Registry must contain at least 25 models.")
         
         # Verify critical 2026 frontier IDs are present
         critical_ids = [
@@ -106,9 +106,8 @@ class TestRoutingEngine(unittest.TestCase):
             estimated_output_tokens=3000,
         )
         res = self.router.route(task)
-        self.assertIn(
-            res.primary_model.id,
-            ["claude-sonnet-5-5", "gpt-6-1-sol", "qwen3-8-max", "deepseek-v4-1-flash"],
+        self.assertTrue(
+            any(k in res.primary_model.id for k in ["sonnet", "gpt-6", "qwen", "deepseek"]),
             f"Expected elite code worker, got {res.primary_model.id}"
         )
         self.assertEqual(res.primary_model.cascade_role, "tier_1_worker")

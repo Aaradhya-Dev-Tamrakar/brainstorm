@@ -6,10 +6,10 @@
     "semantic_hash": "1f807d3a09fa490b7f5315226b97cf4b"
   },
   "schemas/ecosystem.registry.json": {
-    "mtime": 1791724754.2469437,
-    "seen": 1791724782.6792183,
-    "ast_hash": "19f7c611608e31c97f211987058edf47",
-    "semantic_hash": "19f7c611608e31c97f211987058edf47"
+    "mtime": 1791726204.0207407,
+    "seen": 1791726224.1174953,
+    "ast_hash": "70fd6d644c463392c78787b021aa9a7f",
+    "semantic_hash": "70fd6d644c463392c78787b021aa9a7f"
   },
   "schemas/examples/AI-Constraint-Solver.contract.json": {
     "mtime": 1790044861.17107,
@@ -102,10 +102,10 @@
     "semantic_hash": "5b018a5335bcfda1d7e220f7b2eaa4d8"
   },
   "schemas/capability-ontology.md": {
-    "mtime": 1791724754.2564542,
-    "seen": 1791724782.679752,
-    "ast_hash": "b027dffb8400a060a434ab2b10fe09d6",
-    "semantic_hash": "b027dffb8400a060a434ab2b10fe09d6"
+    "mtime": 1791726204.0357413,
+    "seen": 1791726224.117878,
+    "ast_hash": "73826a1ec762cec79f0a67b1a8749748",
+    "semantic_hash": "73826a1ec762cec79f0a67b1a8749748"
   },
   "schemas/evidence-policy.md": {
     "mtime": 1790044861.17107,
@@ -192,10 +192,10 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1791724754.257271,
-    "seen": 1791724782.679513,
-    "ast_hash": "4676eded6cc172035e8933060aa20c08",
-    "semantic_hash": "4676eded6cc172035e8933060aa20c08"
+    "mtime": 1791726204.043742,
+    "seen": 1791726224.1177187,
+    "ast_hash": "22758814d88f464794019712a92d4496",
+    "semantic_hash": "22758814d88f464794019712a92d4496"
   },
   "report/economic-model.md": {
     "mtime": 1790234914.4392133,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791724772.9315164,
-    "seen": 1791724782.6792085,
-    "ast_hash": "18eb5743a5cd7e72aac467644e998b77",
-    "semantic_hash": "18eb5743a5cd7e72aac467644e998b77"
+    "mtime": 1791726217.8748653,
+    "seen": 1791726224.1174881,
+    "ast_hash": "8425db6ead4aff5766e1e576566339d4",
+    "semantic_hash": "8425db6ead4aff5766e1e576566339d4"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -2262,16 +2262,16 @@
     "semantic_hash": "21920552b61906dd3a86860e551d2215"
   },
   "sim/routing_engine.py": {
-    "mtime": 1791724488.7478335,
-    "seen": 1791724782.679353,
-    "ast_hash": "a137946e97405923f5a00d60f13ca735",
-    "semantic_hash": "a137946e97405923f5a00d60f13ca735"
+    "mtime": 1791726168.9571867,
+    "seen": 1791726224.117597,
+    "ast_hash": "c068627b1588b2039e2ce6f7960d526c",
+    "semantic_hash": "c068627b1588b2039e2ce6f7960d526c"
   },
   "sim/test_routing_engine.py": {
-    "mtime": 1791724508.7630794,
-    "seen": 1791724782.6793764,
-    "ast_hash": "6390c6c91888b601c17fa6d38e3267fa",
-    "semantic_hash": "6390c6c91888b601c17fa6d38e3267fa"
+    "mtime": 1791726168.9576857,
+    "seen": 1791726224.1176145,
+    "ast_hash": "2367abf1324cf63a10d01e37b2fb00f5",
+    "semantic_hash": "2367abf1324cf63a10d01e37b2fb00f5"
   },
   "tools/route_task.py": {
     "mtime": 1791169905.9135654,
@@ -2280,10 +2280,10 @@
     "semantic_hash": "ef77c39ded8e66d09e3b1d053c91cd2b"
   },
   "scripts/sync_realtime_models.py": {
-    "mtime": 1791724495.726929,
-    "seen": 1791724782.6793027,
-    "ast_hash": "6b6f9d531973289288d27e7b83cdb29c",
-    "semantic_hash": "6b6f9d531973289288d27e7b83cdb29c"
+    "mtime": 1791726168.9551907,
+    "seen": 1791726224.1175587,
+    "ast_hash": "948512a2660fb8a7f341410f70245ce6",
+    "semantic_hash": "948512a2660fb8a7f341410f70245ce6"
   },
   "schemas/examples/omnivault.contract.json": {
     "mtime": 1791174962.603241,
@@ -3978,8 +3978,8 @@
     "semantic_hash": "39b63f77f48a3d3a979fabcf71cd2313"
   },
   "sim/__init__.py": {
-    "mtime": 1791724432.785879,
-    "seen": 1791724782.679314,
+    "mtime": 1791726168.9556856,
+    "seen": 1791726224.1175687,
     "ast_hash": "1259c3e2f911d331844a5899c38b429e",
     "semantic_hash": "1259c3e2f911d331844a5899c38b429e"
   },

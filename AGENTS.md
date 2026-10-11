@@ -1,6 +1,6 @@
 # Agent Rules & Workflow Guidelines — Brainstorm & Ecosystem Orchestration
 
-Welcome, Agent. This repository (`F:\Aaradhya-Dev-Tamrakar\brainstorm`) serves as the **central architectural brain, R&D incubator, and capability mesh root** for Aaradhya's personal tool ecosystem across 28 tool modules (24 computational engines, 4 presentation hubs) and 33 Git tracking branches.
+Welcome, Agent. This repository (`F:\Aaradhya-Dev-Tamrakar\brainstorm`) serves as the **central architectural brain, R&D incubator, and capability mesh root** for Aaradhya's personal tool ecosystem across 28 tool modules (24 computational engines, 4 presentation hubs) and 34 Git tracking branches.
 
 To preserve repository integrity, avoid merge collisions, eliminate hallucinated claims, and maintain zero-drift deterministic verification, you **MUST** strictly adhere to the following operating principles.
 
@@ -172,7 +172,7 @@ The repository enforces a calibrated dual-track development model balancing foun
   3. **Local Verification Gate**: Runs staged secret scanner, dynamic documentation reconciliation (`sim/reconciliation_engine.py --fix`), and full regression audit (`audit.bat` certifying 300+ files, 26 behavioral tests, and 12 Z3 SMT invariants).
   4. **Remote Branch Push**: Pushes isolated feature branch to `origin` (`git push -u origin <branch>`).
   5. **Automated PR Dispatch**: Dispatches clean Pull Request via `gh pr create` with metadata, issue anchoring (`Closes #<id>`), and assigned reviewers.
-  6. **Clean-Room Remote CI & Peer Review**: Undergoes headless remote CI verification and peer review sign-off before merge. No fake auto-merges; PRs remain open for human review.
+  6. **Clean-Room Remote CI & Merge Governance**: Undergoes headless remote CI verification. For collaborative/cohort initiatives, peer review sign-off is required before merging. For solo project repositories, PRs can be merged directly once CI checks pass (`gh pr merge <id> --squash --delete-branch`).
 
 ### 2. Release SHA & Commit Integrity Invariant
 Whenever referencing ecosystem milestones, portfolio releases (`releases.js`), or repository commit links:

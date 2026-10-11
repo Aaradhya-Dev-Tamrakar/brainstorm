@@ -24718,7 +24718,7 @@
       "node_kind": "heading",
       "norm_label": "scenario 10: academic engineering thesis & defense presentation architecture (`latex-thesis-architect`)",
       "source_file": "tools/skills/adaptive-workflow/examples/routing-scenarios.md",
-      "source_location": "L165"
+      "source_location": "L167"
     },
     {
       "id": "tools_skills_adaptive_workflow_examples_routing_scenarios_scenario_1_non_trivial_engineering_feature_track_b_pr_workflow",
@@ -24742,7 +24742,7 @@
       "node_kind": "heading",
       "norm_label": "scenario 2: domain hardware & embedded signal pipeline",
       "source_file": "tools/skills/adaptive-workflow/examples/routing-scenarios.md",
-      "source_location": "L28"
+      "source_location": "L30"
     },
     {
       "id": "tools_skills_adaptive_workflow_examples_routing_scenarios_scenario_3_academic_curriculum_scaffolding_super_nlm_ingestion",
@@ -24754,7 +24754,7 @@
       "node_kind": "heading",
       "norm_label": "scenario 3: academic curriculum scaffolding & super-nlm ingestion",
       "source_file": "tools/skills/adaptive-workflow/examples/routing-scenarios.md",
-      "source_location": "L43"
+      "source_location": "L45"
     },
     {
       "id": "tools_skills_adaptive_workflow_examples_routing_scenarios_scenario_4_portfolio_project_onboarding_aaradhyadt_github_io",
@@ -24766,7 +24766,7 @@
       "node_kind": "heading",
       "norm_label": "scenario 4: portfolio project onboarding (`aaradhyadt.github.io`)",
       "source_file": "tools/skills/adaptive-workflow/examples/routing-scenarios.md",
-      "source_location": "L58"
+      "source_location": "L60"
     },
     {
       "id": "tools_skills_adaptive_workflow_examples_routing_scenarios_scenario_5_micro_bugfix_tier_1_direct_execution",
@@ -24778,7 +24778,7 @@
       "node_kind": "heading",
       "norm_label": "scenario 5: micro bugfix / tier 1 direct execution",
       "source_file": "tools/skills/adaptive-workflow/examples/routing-scenarios.md",
-      "source_location": "L77"
+      "source_location": "L79"
     },
     {
       "id": "tools_skills_adaptive_workflow_examples_routing_scenarios_scenario_6_high_volume_batch_task_delegated_to_fleet_orchestrator",
@@ -24790,7 +24790,7 @@
       "node_kind": "heading",
       "norm_label": "scenario 6: high-volume batch task delegated to fleet-orchestrator",
       "source_file": "tools/skills/adaptive-workflow/examples/routing-scenarios.md",
-      "source_location": "L92"
+      "source_location": "L94"
     },
     {
       "id": "tools_skills_adaptive_workflow_examples_routing_scenarios_scenario_7_drafting_an_engineering_release_dossier_writing_like_claude",
@@ -24802,7 +24802,7 @@
       "node_kind": "heading",
       "norm_label": "scenario 7: drafting an engineering release dossier (`writing-like-claude`)",
       "source_file": "tools/skills/adaptive-workflow/examples/routing-scenarios.md",
-      "source_location": "L107"
+      "source_location": "L109"
     },
     {
       "id": "tools_skills_adaptive_workflow_examples_routing_scenarios_scenario_8_autonomous_multi_agent_swarm_orchestration",
@@ -24814,7 +24814,7 @@
       "node_kind": "heading",
       "norm_label": "scenario 8: autonomous multi-agent swarm orchestration",
       "source_file": "tools/skills/adaptive-workflow/examples/routing-scenarios.md",
-      "source_location": "L123"
+      "source_location": "L125"
     },
     {
       "id": "tools_skills_adaptive_workflow_examples_routing_scenarios_scenario_9_cloud_gpu_model_fine_tuning_remote_notebook_execution",
@@ -24826,7 +24826,7 @@
       "node_kind": "heading",
       "norm_label": "scenario 9: cloud gpu model fine-tuning & remote notebook execution",
       "source_file": "tools/skills/adaptive-workflow/examples/routing-scenarios.md",
-      "source_location": "L144"
+      "source_location": "L146"
     },
     {
       "id": "tools_skills_adaptive_workflow_references_cpm_concurrency_dispatch",
@@ -38951,7 +38951,7 @@
       "node_kind": "heading",
       "norm_label": "1. synchronized version control",
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L146"
+      "source_location": "L147"
     },
     {
       "id": "tools_skills_adaptive_workflow_references_lifecycle_stages_1_wbs_decomposition_pm_workflow_orchestrator",
@@ -38975,7 +38975,7 @@
       "node_kind": "heading",
       "norm_label": "1. worktree context projection & native instruction loading",
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L112"
+      "source_location": "L113"
     },
     {
       "id": "tools_skills_adaptive_workflow_references_lifecycle_stages_2_complexity_tier_assessment",
@@ -39011,7 +39011,7 @@
       "node_kind": "heading",
       "norm_label": "2. epistemic calibrations (`arch-rfc-001`)",
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L118"
+      "source_location": "L119"
     },
     {
       "id": "tools_skills_adaptive_workflow_references_lifecycle_stages_2_governance_track_selection_github_workflow",
@@ -39035,7 +39035,7 @@
       "node_kind": "heading",
       "norm_label": "2. snapshot ring buffer rotation",
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L152"
+      "source_location": "L153"
     },
     {
       "id": "tools_skills_adaptive_workflow_references_lifecycle_stages_3_2d_orthogonal_matrix_triage",
@@ -39059,7 +39059,7 @@
       "node_kind": "heading",
       "norm_label": "3. deterministic verification gate",
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L125"
+      "source_location": "L126"
     },
     {
       "id": "tools_skills_adaptive_workflow_references_lifecycle_stages_3_knowledge_graph_reconciliation",
@@ -39071,7 +39071,7 @@
       "node_kind": "heading",
       "norm_label": "3. knowledge graph reconciliation",
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L155"
+      "source_location": "L156"
     },
     {
       "id": "tools_skills_adaptive_workflow_references_lifecycle_stages_3_repository_invariant_discovery",
@@ -39095,7 +39095,7 @@
       "node_kind": "heading",
       "norm_label": "3. velocity profile selection (`quota-velocity-acceleration.md`)",
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L88"
+      "source_location": "L89"
     },
     {
       "id": "tools_skills_adaptive_workflow_references_lifecycle_stages_4_antigravity_scope_living_chat_harvesting_antigravity_chat_context_injection_md",
@@ -39107,19 +39107,7 @@
       "node_kind": "heading",
       "norm_label": "4. antigravity scope & living chat harvesting (`antigravity-chat-context-injection.md`)",
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L94"
-    },
-    {
-      "id": "tools_skills_adaptive_workflow_references_lifecycle_stages_4_issue_closure",
-      "label": "4. Issue Closure",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "Gemini API Development Skill",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "4. issue closure",
-      "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L159"
+      "source_location": "L95"
     },
     {
       "id": "tools_skills_adaptive_workflow_references_lifecycle_stages_4_mcp_server_connectivity_check",
@@ -39134,6 +39122,18 @@
       "source_location": "L71"
     },
     {
+      "id": "tools_skills_adaptive_workflow_references_lifecycle_stages_4_pull_request_merge_issue_closure",
+      "label": "4. Pull Request Merge & Issue Closure",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "Gemini API Development Skill",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. pull request merge & issue closure",
+      "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
+      "source_location": "L160"
+    },
+    {
       "id": "tools_skills_adaptive_workflow_references_lifecycle_stages_4_silent_rollover_quota_tracking_worker_availability_ledger_md",
       "label": "4. Silent Rollover & Quota Tracking (`worker-availability-ledger.md`)",
       "_origin": "ast",
@@ -39143,7 +39143,7 @@
       "node_kind": "heading",
       "norm_label": "4. silent rollover & quota tracking (`worker-availability-ledger.md`)",
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L132"
+      "source_location": "L133"
     },
     {
       "id": "tools_skills_adaptive_workflow_references_lifecycle_stages_5_automated_rollback_on_verification_failure",
@@ -39155,7 +39155,7 @@
       "node_kind": "heading",
       "norm_label": "5. automated rollback on verification failure",
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L135"
+      "source_location": "L136"
     },
     {
       "id": "tools_skills_adaptive_workflow_references_lifecycle_stages_5_transactional_pre_flight_snapshot_ref",
@@ -39167,7 +39167,7 @@
       "node_kind": "heading",
       "norm_label": "5. transactional pre-flight snapshot ref",
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L99"
+      "source_location": "L100"
     },
     {
       "id": "tools_skills_adaptive_workflow_references_lifecycle_stages_stage_1_scope_intent_discovery",
@@ -39215,7 +39215,7 @@
       "node_kind": "heading",
       "norm_label": "stage 4: calibrated execution & verification gate",
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L110"
+      "source_location": "L111"
     },
     {
       "id": "tools_skills_adaptive_workflow_references_lifecycle_stages_stage_5_ecosystem_synchronization_delivery",
@@ -39227,7 +39227,7 @@
       "node_kind": "heading",
       "norm_label": "stage 5: ecosystem synchronization & delivery",
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L144"
+      "source_location": "L145"
     },
     {
       "id": "tools_skills_adaptive_workflow_references_lifecycle_stages_the_5_stage_adaptive_lifecycle_operating_procedure",
@@ -118373,7 +118373,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/examples/routing-scenarios.md",
-      "source_location": "L107",
+      "source_location": "L109",
       "weight": 1.0
     },
     {
@@ -118384,7 +118384,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/examples/routing-scenarios.md",
-      "source_location": "L123",
+      "source_location": "L125",
       "weight": 1.0
     },
     {
@@ -118395,7 +118395,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/examples/routing-scenarios.md",
-      "source_location": "L144",
+      "source_location": "L146",
       "weight": 1.0
     },
     {
@@ -118406,7 +118406,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/examples/routing-scenarios.md",
-      "source_location": "L165",
+      "source_location": "L167",
       "weight": 1.0
     },
     {
@@ -118417,7 +118417,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/examples/routing-scenarios.md",
-      "source_location": "L28",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -118428,7 +118428,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/examples/routing-scenarios.md",
-      "source_location": "L43",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -118439,7 +118439,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/examples/routing-scenarios.md",
-      "source_location": "L58",
+      "source_location": "L60",
       "weight": 1.0
     },
     {
@@ -118461,7 +118461,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/examples/routing-scenarios.md",
-      "source_location": "L77",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -118472,7 +118472,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/examples/routing-scenarios.md",
-      "source_location": "L92",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -119808,6 +119808,17 @@
     },
     {
       "source": "tools_skills_adaptive_workflow_references_lifecycle_stages_stage_3_plan_decompose_zero_waste",
+      "target": "tools_skills_adaptive_workflow_references_lifecycle_stages_5_transactional_pre_flight_snapshot_ref",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "tools_skills_adaptive_workflow_references_lifecycle_stages_stage_3_plan_decompose_zero_waste",
       "target": "tools_skills_adaptive_workflow_references_lifecycle_stages_1_wbs_decomposition_pm_workflow_orchestrator",
       "relation": "contains",
       "_origin": "ast",
@@ -119836,7 +119847,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L88",
+      "source_location": "L89",
       "weight": 1.0
     },
     {
@@ -119847,18 +119858,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L94",
-      "weight": 1.0
-    },
-    {
-      "source": "tools_skills_adaptive_workflow_references_lifecycle_stages_stage_3_plan_decompose_zero_waste",
-      "target": "tools_skills_adaptive_workflow_references_lifecycle_stages_5_transactional_pre_flight_snapshot_ref",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L99",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -119869,7 +119869,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L112",
+      "source_location": "L113",
       "weight": 1.0
     },
     {
@@ -119880,7 +119880,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L118",
+      "source_location": "L119",
       "weight": 1.0
     },
     {
@@ -119891,7 +119891,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L125",
+      "source_location": "L126",
       "weight": 1.0
     },
     {
@@ -119902,7 +119902,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L132",
+      "source_location": "L133",
       "weight": 1.0
     },
     {
@@ -119913,7 +119913,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L135",
+      "source_location": "L136",
       "weight": 1.0
     },
     {
@@ -119924,7 +119924,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L146",
+      "source_location": "L147",
       "weight": 1.0
     },
     {
@@ -119935,7 +119935,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L152",
+      "source_location": "L153",
       "weight": 1.0
     },
     {
@@ -119946,18 +119946,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L155",
+      "source_location": "L156",
       "weight": 1.0
     },
     {
       "source": "tools_skills_adaptive_workflow_references_lifecycle_stages_stage_5_ecosystem_synchronization_delivery",
-      "target": "tools_skills_adaptive_workflow_references_lifecycle_stages_4_issue_closure",
+      "target": "tools_skills_adaptive_workflow_references_lifecycle_stages_4_pull_request_merge_issue_closure",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L159",
+      "source_location": "L160",
       "weight": 1.0
     },
     {
@@ -119968,7 +119968,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L110",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -119979,7 +119979,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L144",
+      "source_location": "L145",
       "weight": 1.0
     },
     {
@@ -166751,7 +166751,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tools/skills/adaptive-workflow/references/lifecycle-stages.md",
-      "source_location": "L100",
+      "source_location": "L101",
       "weight": 1.0
     },
     {
@@ -169212,5 +169212,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "2a4c957098d255847aea0c3242e03ced36327a76"
+  "built_at_commit": "b4003a429ce9405d67b6b4cbd5237643ae6eacbc"
 }

@@ -84,6 +84,7 @@ Decompose multi-step tasks using the 100% Rule of WBS into uniquely identifiable
 ### 2. Governance Track Selection (`github-workflow`)
 - **Track A (Solo Maintainer Velocity Bridge - `DEC-003-A`)**: Authorized for solo maintainer operations on `main`. Verified locally with 100% pass rate, synchronized via `.\sync.bat -m "type(scope): summary"`.
 - **Track B (BRL Cohort & Contributor PR Standard)**: GitHub issue anchoring (`gh issue create`), branch isolation (`<type>/<slug>-#<id>`), progressive checkbox checking (`gh-task`), and PR dispatch via `.\sync.bat -PR`.
+- **PR Merge Governance (Solo vs. Collaborative)**: For solo project repositories, PRs can be merged directly once local verification gates and remote CI checks pass (`gh pr merge <id> --squash --delete-branch`). Collaborative/cohort repositories require peer review sign-off before merge.
 
 ### 3. Velocity Profile Selection (`quota-velocity-acceleration.md`)
 Select the operating compute-for-speed exchange:
@@ -156,8 +157,13 @@ Upon clean, certified verification and push, rotate the rolling snapshot ring bu
 Whenever modifying architectural specifications, RFCs, simulation scripts, or schemas:
 - Run `graphify update .` to keep the persistent knowledge graph current.
 
-### 4. Issue Closure
-Close tracked GitHub issues with verifiable evidence and authentic commit SHA:
-```bash
-gh issue close <ISSUE_NUMBER> --comment "Completed in commit <SHORT_SHA>. Verified with zero errors."
-```
+### 4. Pull Request Merge & Issue Closure
+- **Solo Project Repositories**: Once remote CI checks turn green, squash-merge directly:
+  ```bash
+  gh pr merge <PR_NUMBER> --squash --delete-branch
+  ```
+- **Collaborative / Cohort Repositories**: Require peer review sign-off before squash-merging.
+- Close tracked GitHub issues with verifiable evidence and authentic commit SHA:
+  ```bash
+  gh issue close <ISSUE_NUMBER> --comment "Completed in commit <SHORT_SHA>. Verified with zero errors."
+  ```

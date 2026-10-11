@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791726217.8748653,
-    "seen": 1791726224.1174881,
-    "ast_hash": "8425db6ead4aff5766e1e576566339d4",
-    "semantic_hash": "8425db6ead4aff5766e1e576566339d4"
+    "mtime": 1791727253.5075448,
+    "seen": 1791727260.181874,
+    "ast_hash": "3b0a86f8a01e4dc8b382df78381e8a3a",
+    "semantic_hash": "3b0a86f8a01e4dc8b382df78381e8a3a"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -3786,10 +3786,10 @@
     "semantic_hash": "8bd87b513db61bc5051c35f49a85ec34"
   },
   "tools/skills/adaptive-workflow/examples/routing-scenarios.md": {
-    "mtime": 1791605565.5385928,
-    "seen": 1791605776.1045194,
-    "ast_hash": "fa9b7d2773c0e436d8fc14d6f136e0ea",
-    "semantic_hash": "fa9b7d2773c0e436d8fc14d6f136e0ea"
+    "mtime": 1791727104.386963,
+    "seen": 1791727260.1825395,
+    "ast_hash": "9188d70166ef9fbcf4cc19d3c76e691d",
+    "semantic_hash": "9188d70166ef9fbcf4cc19d3c76e691d"
   },
   "tools/skills/adaptive-workflow/references/antigravity-chat-context-injection.md": {
     "mtime": 1791547310.20111,
@@ -3834,10 +3834,10 @@
     "semantic_hash": "f4d3bca5beeaf89ad48fd549db50c468"
   },
   "tools/skills/adaptive-workflow/references/lifecycle-stages.md": {
-    "mtime": 1791606183.9998028,
-    "seen": 1791606342.8058758,
-    "ast_hash": "10c3480173942c047b24744859af63f1",
-    "semantic_hash": "10c3480173942c047b24744859af63f1"
+    "mtime": 1791727098.9908774,
+    "seen": 1791727260.1825798,
+    "ast_hash": "5c70615d47c7055c717eca083cd8299d",
+    "semantic_hash": "5c70615d47c7055c717eca083cd8299d"
   },
   "tools/skills/adaptive-workflow/references/orthogonal-execution-matrix.md": {
     "mtime": 1791547235.46464,

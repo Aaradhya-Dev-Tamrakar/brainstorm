@@ -1,7 +1,7 @@
 # Graph Report - brainstorm  (2026-10-11)
 
 ## Corpus Check
-- Large corpus: 716 files · ~1,125,473 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
+- Large corpus: 716 files · ~1,125,580 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
 
 ## Summary
 - 6934 nodes · 7790 edges · 607 communities (573 shown, 16 thin omitted)
@@ -2928,8 +2928,12 @@ Nodes (3): fail(), Dependency-free validation for the canonical ecosystem verifi
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `ARCH-PLAN-003: Intelligent Systems Engineering & Research Conversion Roadmap` connect `Gemini Interactions API Skill` to `ARCH-PLAN-002: Dual-Track Systems Engineering & Software Mastery Roadmap`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Critical Path Method (CPM) Concurrency Scheduling` to `Identify heavy-running JavaScript`, `Identify causes of poor INP`, `Optimize image priority`, `Plugins`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **Why does `DAGCycleError` connect `fusion360-mcp.contract.json` to `CSS: Modern Architecture`, `Gemini Live API Development Skill`, `Defensible Economic Accounting & R&D Resource Allocation Model`?**
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **Are the 9 inferred relationships involving `TestAdaptiveOrchestrator` (e.g. with `AdaptiveRateGovernor` and `AntigravityMemoryGovernor`) actually correct?**
   _`TestAdaptiveOrchestrator` has 9 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 24 inferred relationships involving `ValueError` (e.g. with `extract_plot_from_notebook()` and `bdecode()`) actually correct?**
@@ -2938,12 +2942,8 @@ _Questions this graph is uniquely positioned to answer:_
   _3831 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `4. Step-by-Step Implementation Timeline` be split into smaller, more focused modules?**
   _Cohesion score 0.051228070175438595 - nodes in this community are weakly interconnected._
-- **Should `generate_video.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
-- **Should `MCP Integration for Claude Code Plugins` be split into smaller, more focused modules?**
-  _Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected._
 
 ## Graph Freshness
-- **Built at commit:** `2a4c957098d255847aea0c3242e03ced36327a76`
-- **Built timestamp:** `2026-10-11T13:43:38.315282+00:00`
+- **Built at commit:** `b4003a429ce9405d67b6b4cbd5237643ae6eacbc`
+- **Built timestamp:** `2026-10-11T14:00:54.049920+00:00`
 - **Lineage type:** `ancestor_snapshot`

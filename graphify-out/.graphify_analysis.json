@@ -1,6 +1,6 @@
 {
-  "built_at_commit": "2a4c957098d255847aea0c3242e03ced36327a76",
-  "built_timestamp": "2026-10-11T13:43:38.315282+00:00",
+  "built_at_commit": "b4003a429ce9405d67b6b4cbd5237643ae6eacbc",
+  "built_timestamp": "2026-10-11T14:00:54.049920+00:00",
   "lineage_type": "ancestor_snapshot",
   "communities": {
     "0": [
@@ -1075,8 +1075,8 @@
       "tools_skills_adaptive_workflow_references_lifecycle_stages_3_repository_invariant_discovery",
       "tools_skills_adaptive_workflow_references_lifecycle_stages_3_velocity_profile_selection_quota_velocity_acceleration_md",
       "tools_skills_adaptive_workflow_references_lifecycle_stages_4_antigravity_scope_living_chat_harvesting_antigravity_chat_context_injection_md",
-      "tools_skills_adaptive_workflow_references_lifecycle_stages_4_issue_closure",
       "tools_skills_adaptive_workflow_references_lifecycle_stages_4_mcp_server_connectivity_check",
+      "tools_skills_adaptive_workflow_references_lifecycle_stages_4_pull_request_merge_issue_closure",
       "tools_skills_adaptive_workflow_references_lifecycle_stages_4_silent_rollover_quota_tracking_worker_availability_ledger_md",
       "tools_skills_adaptive_workflow_references_lifecycle_stages_5_automated_rollback_on_verification_failure",
       "tools_skills_adaptive_workflow_references_lifecycle_stages_5_transactional_pre_flight_snapshot_ref",
@@ -8873,8 +8873,18 @@
   "questions": [
     {
       "type": "bridge_node",
+      "question": "Why does `ARCH-PLAN-003: Intelligent Systems Engineering & Research Conversion Roadmap` connect `Gemini Interactions API Skill` to `ARCH-PLAN-002: Dual-Track Systems Engineering & Software Mastery Roadmap`?",
+      "why": "High betweenness centrality (0.007) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
       "question": "Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Critical Path Method (CPM) Concurrency Scheduling` to `Identify heavy-running JavaScript`, `Identify causes of poor INP`, `Optimize image priority`, `Plugins`?",
-      "why": "High betweenness centrality (0.010) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.006) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `DAGCycleError` connect `fusion360-mcp.contract.json` to `CSS: Modern Architecture`, `Gemini Live API Development Skill`, `Defensible Economic Accounting & R&D Resource Allocation Model`?",
+      "why": "High betweenness centrality (0.006) - this node is a cross-community bridge."
     },
     {
       "type": "verify_inferred",
@@ -8895,16 +8905,6 @@
       "type": "low_cohesion",
       "question": "Should `4. Step-by-Step Implementation Timeline` be split into smaller, more focused modules?",
       "why": "Cohesion score 0.051228070175438595 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `generate_video.py` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `MCP Integration for Claude Code Plugins` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected."
     }
   ]
 }

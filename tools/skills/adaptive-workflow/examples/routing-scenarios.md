@@ -18,10 +18,12 @@ This document contains end-to-end walkthroughs demonstrating how `adaptive-workf
    uv run --extra dev ruff check src/
    uv run --extra dev pytest tests/test_queue.py
    ```
-5. **Stage 5 (Sync)**: Automated PR dispatch via `sync.bat`:
-   ```powershell
-   .\sync.bat -PR -m "feat(queue): implement dynamic queue with backoff" -Issue 42 -Reviewer tiixsha
-   ```
+5. **Stage 5 (Sync & Merge)**:
+   - Automated PR dispatch via `sync.bat`:
+     ```powershell
+     .\sync.bat -PR -m "feat(queue): implement dynamic queue with backoff" -Issue 42 -Reviewer tiixsha
+     ```
+   - **PR Merge Governance**: In solo project repositories, merge directly once remote CI passes green (`gh pr merge 42 --squash --delete-branch`). In collaborative cohort repositories, await peer review sign-off.
 
 ---
 

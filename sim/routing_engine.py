@@ -283,7 +283,7 @@ class ModelRouter:
             # 4. VRAM ceiling check (for local workstations)
             if req.local_only and req.max_vram_gb is not None:
                 model_vram = m.vram_q4_gb or m.vram_fp16_gb
-                if model_vram is not None and model_vram > req.max_vram_gb:
+                if model_vram is None or model_vram > req.max_vram_gb:
                     continue
 
             # 5. Cost ceiling constraints

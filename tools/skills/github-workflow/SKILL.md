@@ -1,7 +1,7 @@
 ---
 name: github-workflow
 description: Default, authoritative workflow for all GitHub development, feature work, bug fixes, refactoring, issue tracking, branch isolation, ecosystem multi-remote synchronization, and pull request reviews. This skill should be used whenever working on GitHub repositories, implementing features, fixing bugs, creating issues, switching branches, syncing code, opening pull requests, or following standard Git development lifecycles.
-version: 1.3.0
+version: 1.4.0
 ---
 
 # Default GitHub Development Workflow
@@ -32,6 +32,7 @@ This skill defines the canonical standard operating procedure (SOP) for all soft
    - **Track B: BRL Cohort & Contributor Automated PR Standard**: All multi-contributor feature work and cohort initiatives **MUST** execute the automated Pull Request workflow (`.\sync.bat -PR -m "type(scope): summary" -Issue <ID> -Reviewer <handle>`).
    - **Explicit Usernames**: Always assign explicit GitHub usernames (e.g. `--assignee AaradhyaDT`, `--reviewer tiixsha`). Never use ambiguous `@me` in collaborative repositories.
    - **Reciprocal Peer Review**: When Developer A opens a PR, request review from Developer B; when Developer B opens a PR, request review from Developer A.
+   - **PR Merge Governance (Solo vs. Collaborative)**: For multi-contributor/cohort initiatives, peer review sign-off is required before merging. For solo project repositories, PRs can be merged directly once local verification gates and remote CI checks pass (`gh pr merge <ID> --squash --delete-branch`).
 9. **Collaborative Privacy & Boundary Isolation (Zero Personal Leakage)**:
    > [!CAUTION]
    > **Never commit or log personal developer resources into collaborative/public repositories.**
@@ -43,6 +44,10 @@ This skill defines the canonical standard operating procedure (SOP) for all soft
 11. **Agent Rules Architecture (`AGENTS.md` Single Source of Truth)**:
     - Always maintain full operational guidelines, verification rules, and ecosystem invariants in `AGENTS.md`.
     - Keep `GEMINI.md` lean by referencing `[@AGENTS.md](AGENTS.md)` in backticks to prevent documentation duplication and rule drift across tools.
+12. **Shell Escaping & Body-File Invariant (`INV-GH-BODY-FILE`)**:
+    - **Zero Shell Interpolation Glitches**: When creating or editing GitHub issues, PRs, or comments on Windows (PowerShell/CMD), **never pass complex multi-line Markdown with backticks, LaTeX math (`$`), or backslashes (`\`) directly via inline `--body "..."`**.
+    - PowerShell expands `$`, strips backslashes, and corrupts characters into Unicode diamond replacement glyphs (e.g. `\sp-nn\`, `\^dge-ai-model-forge\`).
+    - **Mandatory Pattern**: Always write the markdown content to a temporary clean file (e.g. `scratch/issue_body.md`) and pass it using `--body-file "<path>"` (or `--input -` for `gh api` JSON payloads). This guarantees 100% byte-exact UTF-8 markdown rendering without shell escaping artifacts.
 
 ---
 
@@ -72,9 +77,9 @@ flowchart TD
     More -- Yes --> CodeB
     More -- No --> VerifyB["Step 5: Pre-Commit Verification (make verify / tests)"]
     VerifyB --> PRSync["Step 6: Automated PR Sync (make sync / sync.bat -PR)"]
-    PRSync --> Review{"Peer Review & CI Check"}
+    PRSync --> Review{"CI & Review Check"}
     Review -- Changes Requested --> CodeB
-    Review -- Approved / Green CI --> Merge["Step 8: Squash Merge & Prune Stale Branch"]
+    Review -- "Approved CI (Solo) / Peer Approved" --> Merge["Step 8: Squash Merge & Prune Stale Branch"]
 ```
 
 ---
@@ -90,22 +95,44 @@ Define requirements, acceptance criteria, and technical boundaries before touchi
    See [templates.md](examples/templates.md) for pre-built formats.
 
 2. **Create via GitHub CLI**:
-   ```bash
-   gh issue create \
-     --title "[Feature] Add Statistical Parity Disparity Metric" \
-     --assignee "AaradhyaDT" \
-     --label "enhancement,WP4" \
-     --body "$(cat << 'EOF'
-   ## Overview
-   Implement statistical parity difference calculation with BCa confidence intervals.
+   - **POSIX / Linux / macOS (Heredoc)**:
+     ```bash
+     gh issue create \
+       --title "[Feature] Add Statistical Parity Disparity Metric" \
+       --assignee "AaradhyaDT" \
+       --label "enhancement,WP4" \
+       --body "$(cat << 'EOF'
+     ## Overview
+     Implement statistical parity difference calculation with BCa confidence intervals.
 
-   ## Tasks
-   - [ ] Implement mathematical metric in src/fairness/metrics.py
-   - [ ] Add unit tests with synthetic distribution fixtures
-   - [ ] Verify test suite passing (pytest) and linting (ruff)
-   EOF
-   )"
-   ```
+     ## Tasks
+     - [ ] Implement mathematical metric in src/fairness/metrics.py
+     - [ ] Add unit tests with synthetic distribution fixtures
+     - [ ] Verify test suite passing (pytest) and linting (ruff)
+     EOF
+     )"
+     ```
+   - **Windows PowerShell / Complex Markdown (INV-GH-BODY-FILE)**:
+     *Avoids PowerShell string interpolation, backtick stripping, and Unicode diamond glyph corruption:*
+     ```powershell
+     # 1. Write exact markdown content to a clean temporary file
+     Set-Content -Path "scratch/issue_body.md" -Encoding UTF8 -Value @"
+     ## Overview
+     Implement statistical parity difference calculation with BCa confidence intervals.
+
+     ## Tasks
+     - [ ] Implement mathematical metric in src/fairness/metrics.py
+     - [ ] Add unit tests with synthetic distribution fixtures
+     - [ ] Verify test suite passing (pytest) and linting (ruff)
+     "@
+
+     # 2. Dispatch via --body-file
+     gh issue create `
+       --title "[Feature] Add Statistical Parity Disparity Metric" `
+       --assignee "AaradhyaDT" `
+       --label "enhancement,WP4" `
+       --body-file "scratch/issue_body.md"
+     ```
 
 3. **Record Issue Number**: Note `#<ISSUE_NUMBER>` (e.g., `#28`).
 
@@ -377,13 +404,21 @@ gh issue edit <ISSUE_NUMBER> --milestone "<Milestone Title>"
 1. **Addressing Review Feedback**:
    Make edits, rerun verification tests, and run `.\sync.bat -m "fix(fairness): address review comments (#28)"`. New commits automatically attach to the open PR.
 
-2. **Closing Tracked Issues with Verifiable Evidence**:
+2. **Squash-Merge Execution (Solo vs. Collaborative)**:
+   - **Solo Project Repositories**: Once remote CI passes green, merge directly:
+     ```bash
+     gh pr merge <PR_NUMBER> --squash --delete-branch
+     ```
+   - **Collaborative / Cohort Repositories**: Wait for required peer review approval before squash-merging.
+
+3. **Closing Tracked Issues with Verifiable Evidence**:
    When resolving an anchored issue (either upon PR merge or via maintainer Track A), always close with authentic verification proof and head commit SHA:
    ```bash
    gh issue close <ISSUE_NUMBER> --comment "Completed in commit <SHORT_SHA>. Verified 100% test pass (X tests passing, 0 lint errors, dual-layer verification certified)."
    ```
+   *Note for multi-line or formatted markdown comments on Windows*: If adding multi-line closing details, use `gh issue comment <ISSUE_NUMBER> --body-file "scratch/close_comment.md"` or pass JSON via `gh api` to prevent shell escaping artifacts (`INV-GH-BODY-FILE`).
 
-3. **After PR Merge**:
+4. **After PR Merge**:
    Switch back to `main`, pull the merged changes, and prune stale local branches:
    ```powershell
    git switch main

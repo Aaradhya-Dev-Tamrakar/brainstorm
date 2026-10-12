@@ -1,6 +1,6 @@
 {
-  "built_at_commit": "89231bb927dfcfc29128fa70a9e9db087d9daf26",
-  "built_timestamp": "2026-10-12T09:21:07.415300+00:00",
+  "built_at_commit": "6a8419bbef7df3a0b587c82a58c22bdbe608b3c5",
+  "built_timestamp": "2026-10-12T18:19:54.139633+00:00",
   "lineage_type": "ancestor_snapshot",
   "communities": {
     "0": [
@@ -8881,6 +8881,17 @@
   ],
   "surprises": [
     {
+      "source": "cmd_flight_check()",
+      "target": "AntigravityMemoryGovernor",
+      "source_files": [
+        "tools/adaptive_engine.py",
+        "sim/adaptive_orchestrator.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
       "source": "cmd_cpm()",
       "target": "DAGCycleError",
       "source_files": [
@@ -8914,17 +8925,6 @@
       "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
     },
     {
-      "source": "cmd_flight_check()",
-      "target": "AntigravityMemoryGovernor",
-      "source_files": [
-        "tools/adaptive_engine.py",
-        "sim/adaptive_orchestrator.py"
-      ],
-      "confidence": "INFERRED",
-      "relation": "uses",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
-    },
-    {
       "source": "cmd_triage()",
       "target": "DeterministicTriageEngine",
       "source_files": [
@@ -8937,6 +8937,11 @@
     }
   ],
   "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `2. Calibrated Architectural Pillars` to `Web Components Orientation`, `Coordinating Global Events with Temporal`, `Deterministic Verification Gates & Reality Layer`, `TaskRequirements`?",
+      "why": "High betweenness centrality (0.007) - this node is a cross-community bridge."
+    },
     {
       "type": "verify_inferred",
       "question": "Are the 9 inferred relationships involving `TestAdaptiveOrchestrator` (e.g. with `AdaptiveRateGovernor` and `AntigravityMemoryGovernor`) actually correct?",
@@ -8953,6 +8958,11 @@
       "why": "Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected."
     },
     {
+      "type": "bridge_node",
+      "question": "Why does `2026-09-19 — Guest Lecture: Agentic AI in Industry (Ayush Kumar Shah, Meta)` connect `2. Granular Claims Audit Register` to `Dos and Don'ts`?",
+      "why": "High betweenness centrality (0.007) - this node is a cross-community bridge."
+    },
+    {
       "type": "verify_inferred",
       "question": "Are the 24 inferred relationships involving `ValueError` (e.g. with `extract_plot_from_notebook()` and `bdecode()`) actually correct?",
       "why": "`ValueError` has 24 INFERRED edges - model-reasoned connections that need verification."
@@ -8961,16 +8971,6 @@
       "type": "low_cohesion",
       "question": "Should `generate_video.py` be split into smaller, more focused modules?",
       "why": "Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `MCP Integration for Claude Code Plugins` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `Accessibility Coding Guidelines` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected."
     }
   ]
 }

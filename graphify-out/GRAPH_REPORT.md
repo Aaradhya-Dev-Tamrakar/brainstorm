@@ -1,7 +1,7 @@
-# Graph Report - brainstorm  (2026-10-12)
+# Graph Report - brainstorm  (2026-10-13)
 
 ## Corpus Check
-- Large corpus: 716 files · ~1,126,302 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
+- Large corpus: 716 files · ~1,126,627 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
 
 ## Summary
 - 6967 nodes · 7854 edges · 618 communities (559 shown, 59 thin omitted)
@@ -615,13 +615,13 @@
 10. `How to implement` - 20 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `cmd_flight_check()` --uses--> `AntigravityMemoryGovernor`  [INFERRED]
+  tools/adaptive_engine.py → sim/adaptive_orchestrator.py
 - `cmd_cpm()` --uses--> `DAGCycleError`  [INFERRED]
   tools/adaptive_engine.py → sim/adaptive_orchestrator.py
 - `cmd_cpm()` --uses--> `DeterministicCPMScheduler`  [INFERRED]
   tools/adaptive_engine.py → sim/adaptive_orchestrator.py
 - `cmd_fast_path()` --uses--> `DeterministicTriageEngine`  [INFERRED]
-  tools/adaptive_engine.py → sim/adaptive_orchestrator.py
-- `cmd_flight_check()` --uses--> `AntigravityMemoryGovernor`  [INFERRED]
   tools/adaptive_engine.py → sim/adaptive_orchestrator.py
 - `cmd_triage()` --uses--> `DeterministicTriageEngine`  [INFERRED]
   tools/adaptive_engine.py → sim/adaptive_orchestrator.py
@@ -2875,22 +2875,22 @@ Nodes (3): description, type, definition_en
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `2. Calibrated Architectural Pillars` to `Web Components Orientation`, `Coordinating Global Events with Temporal`, `Deterministic Verification Gates & Reality Layer`, `TaskRequirements`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Are the 9 inferred relationships involving `TestAdaptiveOrchestrator` (e.g. with `AdaptiveRateGovernor` and `AntigravityMemoryGovernor`) actually correct?**
   _`TestAdaptiveOrchestrator` has 9 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `capabilities`, `location`, `module` to the rest of the system?**
   _90 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `4. Step-by-Step Implementation Timeline` be split into smaller, more focused modules?**
   _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._
+- **Why does `2026-09-19 — Guest Lecture: Agentic AI in Industry (Ayush Kumar Shah, Meta)` connect `2. Granular Claims Audit Register` to `Dos and Don'ts`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Are the 24 inferred relationships involving `ValueError` (e.g. with `extract_plot_from_notebook()` and `bdecode()`) actually correct?**
   _`ValueError` has 24 INFERRED edges - model-reasoned connections that need verification._
 - **Should `generate_video.py` be split into smaller, more focused modules?**
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
-- **Should `MCP Integration for Claude Code Plugins` be split into smaller, more focused modules?**
-  _Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected._
-- **Should `Accessibility Coding Guidelines` be split into smaller, more focused modules?**
-  _Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected._
 
 ## Graph Freshness
-- **Built at commit:** `89231bb927dfcfc29128fa70a9e9db087d9daf26`
-- **Built timestamp:** `2026-10-12T09:21:07.415300+00:00`
+- **Built at commit:** `6a8419bbef7df3a0b587c82a58c22bdbe608b3c5`
+- **Built timestamp:** `2026-10-12T18:19:54.139633+00:00`
 - **Lineage type:** `ancestor_snapshot`

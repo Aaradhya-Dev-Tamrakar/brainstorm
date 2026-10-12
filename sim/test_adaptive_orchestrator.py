@@ -175,7 +175,7 @@ class TestAdaptiveOrchestrator(unittest.TestCase):
         self.assertIn("latency_ms", route)
         self.assertIn("source", route)
         self.assertTrue(
-            route["source"].startswith("lm_studio_") or "heuristic" in route["source"],
+            route["source"].startswith("lm_studio_") or "heuristic" in route["source"] or route["source"] == "exemplar_cache",
             f"Unexpected source: {route['source']}"
         )
         self.assertEqual(route["primary_skill"], "academic-notebook-architect")

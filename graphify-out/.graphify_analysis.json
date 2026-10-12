@@ -1,6 +1,6 @@
 {
-  "built_at_commit": "49bfc062fe788ff25420e12c41c441af919e4f81",
-  "built_timestamp": "2026-10-12T08:27:43.605458+00:00",
+  "built_at_commit": "d512bb586f2b6cdebeb3a561ef9cfe66615f7a03",
+  "built_timestamp": "2026-10-12T09:11:59.436018+00:00",
   "lineage_type": "ancestor_snapshot",
   "communities": {
     "0": [
@@ -353,57 +353,14 @@
       "tools_skills_latex_thesis_architect_skill_the_three_foundational_pillars"
     ],
     "7": [
-      "object",
-      "sim_adaptive_orchestrator_dagcycleerror",
-      "sim_adaptive_orchestrator_dagcycleerror_init",
-      "sim_adaptive_orchestrator_deterministiccpmscheduler_calculate_schedule",
-      "sim_adaptive_orchestrator_deterministiccpmscheduler_calculate_schedule_get_task_duration",
-      "sim_adaptive_orchestrator_find_directed_cycle",
-      "sim_adaptive_orchestrator_fleetfirstbridge_compute_fallback_time_allocation",
-      "sim_adaptive_orchestrator_fleetfirstbridge_format_context_firebreak_manifest",
-      "sim_adaptive_orchestrator_fleetfirstbridge_route_intent",
-      "sim_adaptive_orchestrator_rationale_1149",
-      "sim_adaptive_orchestrator_rationale_1195",
-      "sim_adaptive_orchestrator_rationale_1390",
-      "sim_adaptive_orchestrator_rationale_714",
-      "sim_adaptive_orchestrator_rationale_729",
-      "sim_adaptive_orchestrator_rationale_768",
-      "sim_test_adaptive_orchestrator_rationale_129",
-      "sim_test_adaptive_orchestrator_rationale_153",
-      "sim_test_adaptive_orchestrator_rationale_186",
-      "sim_test_adaptive_orchestrator_rationale_199",
-      "sim_test_adaptive_orchestrator_rationale_210",
-      "sim_test_adaptive_orchestrator_rationale_218",
-      "sim_test_adaptive_orchestrator_rationale_263",
-      "sim_test_adaptive_orchestrator_rationale_272",
-      "sim_test_adaptive_orchestrator_rationale_290",
-      "sim_test_adaptive_orchestrator_rationale_40",
-      "sim_test_adaptive_orchestrator_rationale_548",
-      "sim_test_adaptive_orchestrator_rationale_574",
-      "sim_test_adaptive_orchestrator_rationale_590",
-      "sim_test_adaptive_orchestrator_testadaptiveorchestrator",
-      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_setup",
-      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_teardown",
-      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_03_zero_ai_fast_path_detection",
-      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_04_cpm_mathematical_solver",
-      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_05_local_router_integration",
-      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_05b_authoritative_fleet_router_contract",
-      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_05c_standalone_fallback_router_contract",
-      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_06_context_firebreak_manifest",
-      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_08_cpm_cycle_deadlock_detection",
-      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_09_cpm_cycle_detailed_diagnostics_and_remediation",
-      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_10_router_telemetry_tracking_and_state_transitions",
-      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_18_calm_authority_zero_rpg_and_emojis",
-      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_19_colab_intent_routing_and_aliases",
-      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_20_ai_engineering_fellowship_intent_routing_and_aliases"
-    ],
-    "8": [
       "ctypes",
       "hashlib",
       "pathlib",
       "random",
       "shutil",
       "sim_adaptive_orchestrator",
+      "sim_adaptive_orchestrator_dagcycleerror",
+      "sim_adaptive_orchestrator_dagcycleerror_init",
       "sim_adaptive_orchestrator_get_git_common_dir",
       "sim_adaptive_orchestrator_preexistingfileguard",
       "sim_adaptive_orchestrator_preexistingfileguard_get_backup_dir",
@@ -413,18 +370,19 @@
       "sim_adaptive_orchestrator_rationale_108",
       "sim_adaptive_orchestrator_rationale_117",
       "sim_adaptive_orchestrator_rationale_46",
+      "sim_adaptive_orchestrator_rationale_733",
       "sim_adaptive_orchestrator_rationale_81",
-      "sim_adaptive_orchestrator_rationale_878",
-      "sim_adaptive_orchestrator_rationale_885",
-      "sim_adaptive_orchestrator_rationale_899",
-      "sim_adaptive_orchestrator_rationale_926",
+      "sim_adaptive_orchestrator_rationale_897",
+      "sim_adaptive_orchestrator_rationale_904",
+      "sim_adaptive_orchestrator_rationale_918",
+      "sim_adaptive_orchestrator_rationale_945",
       "sim_adaptive_orchestrator_resilient_rmtree",
       "sim_adaptive_orchestrator_resilient_unlink",
       "sim_adaptive_orchestrator_rmtree_onerror",
       "sim_test_adaptive_orchestrator",
       "sim_test_adaptive_orchestrator_rationale_1",
-      "sim_test_adaptive_orchestrator_rationale_360",
-      "sim_test_adaptive_orchestrator_rationale_477",
+      "sim_test_adaptive_orchestrator_rationale_377",
+      "sim_test_adaptive_orchestrator_rationale_494",
       "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_12_windows_resilient_cleanup",
       "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_16_worktree_gitlink_and_pre_existing_file_guard",
       "socket",
@@ -437,7 +395,7 @@
       "urllib_error",
       "urllib_request"
     ],
-    "9": [
+    "8": [
       "ref_architectural_review_session",
       "ref_cohort_1_quest_lead_eligible",
       "ref_compute_guidance_kaggle_gpu",
@@ -477,7 +435,7 @@
       "research_fellows_merit_ledger_xp_tiers_high_distinction",
       "research_fellows_merit_ledger_xp_tiers_pass"
     ],
-    "10": [
+    "9": [
       "sim_adaptive_orchestrator_deterministiccpmscheduler",
       "sim_adaptive_orchestrator_deterministictransactionalrecovery",
       "sim_adaptive_orchestrator_deterministictransactionalrecovery_create_snapshot",
@@ -485,14 +443,14 @@
       "sim_adaptive_orchestrator_fleetfirstbridge",
       "sim_adaptive_orchestrator_fleetfirstbridge_get_router_telemetry",
       "sim_adaptive_orchestrator_fleetfirstbridge_is_lm_studio_online",
-      "sim_adaptive_orchestrator_rationale_1036",
-      "sim_adaptive_orchestrator_rationale_1124",
-      "sim_adaptive_orchestrator_rationale_1429",
-      "sim_adaptive_orchestrator_rationale_1476",
-      "sim_adaptive_orchestrator_rationale_1520",
-      "sim_adaptive_orchestrator_rationale_764",
-      "sim_adaptive_orchestrator_rationale_990",
-      "sim_test_adaptive_orchestrator_rationale_431",
+      "sim_adaptive_orchestrator_rationale_1009",
+      "sim_adaptive_orchestrator_rationale_1055",
+      "sim_adaptive_orchestrator_rationale_1143",
+      "sim_adaptive_orchestrator_rationale_1472",
+      "sim_adaptive_orchestrator_rationale_1519",
+      "sim_adaptive_orchestrator_rationale_1563",
+      "sim_adaptive_orchestrator_rationale_783",
+      "sim_test_adaptive_orchestrator_rationale_448",
       "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_14_temp_repo_snapshot_rollback",
       "tools_adaptive_engine",
       "tools_adaptive_engine_cmd_cpm",
@@ -516,6 +474,44 @@
       "tools_adaptive_engine_rationale_41",
       "tools_adaptive_engine_rationale_73",
       "tools_adaptive_engine_rationale_85"
+    ],
+    "10": [
+      "object",
+      "sim_adaptive_orchestrator_deterministiccpmscheduler_calculate_schedule",
+      "sim_adaptive_orchestrator_deterministiccpmscheduler_calculate_schedule_get_task_duration",
+      "sim_adaptive_orchestrator_find_directed_cycle",
+      "sim_adaptive_orchestrator_fleetfirstbridge_compute_fallback_time_allocation",
+      "sim_adaptive_orchestrator_fleetfirstbridge_route_intent",
+      "sim_adaptive_orchestrator_rationale_1168",
+      "sim_adaptive_orchestrator_rationale_1214",
+      "sim_adaptive_orchestrator_rationale_748",
+      "sim_adaptive_orchestrator_rationale_787",
+      "sim_test_adaptive_orchestrator_rationale_129",
+      "sim_test_adaptive_orchestrator_rationale_153",
+      "sim_test_adaptive_orchestrator_rationale_186",
+      "sim_test_adaptive_orchestrator_rationale_199",
+      "sim_test_adaptive_orchestrator_rationale_210",
+      "sim_test_adaptive_orchestrator_rationale_263",
+      "sim_test_adaptive_orchestrator_rationale_272",
+      "sim_test_adaptive_orchestrator_rationale_290",
+      "sim_test_adaptive_orchestrator_rationale_40",
+      "sim_test_adaptive_orchestrator_rationale_565",
+      "sim_test_adaptive_orchestrator_rationale_591",
+      "sim_test_adaptive_orchestrator_rationale_607",
+      "sim_test_adaptive_orchestrator_testadaptiveorchestrator",
+      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_setup",
+      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_teardown",
+      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_03_zero_ai_fast_path_detection",
+      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_04_cpm_mathematical_solver",
+      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_05_local_router_integration",
+      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_05b_authoritative_fleet_router_contract",
+      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_05c_standalone_fallback_router_contract",
+      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_08_cpm_cycle_deadlock_detection",
+      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_09_cpm_cycle_detailed_diagnostics_and_remediation",
+      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_10_router_telemetry_tracking_and_state_transitions",
+      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_18_calm_authority_zero_rpg_and_emojis",
+      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_19_colab_intent_routing_and_aliases",
+      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_20_ai_engineering_fellowship_intent_routing_and_aliases"
     ],
     "11": [
       "research_architectures_arch_rfc_001_record_keeping_standard",
@@ -2707,13 +2703,13 @@
       "sim_adaptive_orchestrator_deterministictriageengine_detect_fast_path",
       "sim_adaptive_orchestrator_deterministictriageengine_get_registered_module_count",
       "sim_adaptive_orchestrator_deterministictriageengine_triage",
-      "sim_adaptive_orchestrator_rationale_362",
-      "sim_adaptive_orchestrator_rationale_431",
-      "sim_adaptive_orchestrator_rationale_447",
-      "sim_adaptive_orchestrator_rationale_476",
-      "sim_adaptive_orchestrator_rationale_508",
-      "sim_adaptive_orchestrator_rationale_599",
-      "sim_adaptive_orchestrator_rationale_650",
+      "sim_adaptive_orchestrator_rationale_381",
+      "sim_adaptive_orchestrator_rationale_450",
+      "sim_adaptive_orchestrator_rationale_466",
+      "sim_adaptive_orchestrator_rationale_495",
+      "sim_adaptive_orchestrator_rationale_527",
+      "sim_adaptive_orchestrator_rationale_618",
+      "sim_adaptive_orchestrator_rationale_669",
       "sim_test_adaptive_orchestrator_rationale_89",
       "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_02_matrix_triage_boundaries"
     ],
@@ -3124,14 +3120,14 @@
       "sim_adaptive_orchestrator_adaptiverategovernor_record_checkpoint",
       "sim_adaptive_orchestrator_adaptiverategovernor_record_rate_limit",
       "sim_adaptive_orchestrator_adaptiverategovernor_reset",
-      "sim_adaptive_orchestrator_rationale_268",
-      "sim_adaptive_orchestrator_rationale_282",
-      "sim_adaptive_orchestrator_rationale_289",
-      "sim_adaptive_orchestrator_rationale_303",
-      "sim_adaptive_orchestrator_rationale_310",
-      "sim_adaptive_orchestrator_rationale_337",
-      "sim_adaptive_orchestrator_rationale_348",
-      "sim_test_adaptive_orchestrator_rationale_385",
+      "sim_adaptive_orchestrator_rationale_287",
+      "sim_adaptive_orchestrator_rationale_301",
+      "sim_adaptive_orchestrator_rationale_308",
+      "sim_adaptive_orchestrator_rationale_322",
+      "sim_adaptive_orchestrator_rationale_329",
+      "sim_adaptive_orchestrator_rationale_356",
+      "sim_adaptive_orchestrator_rationale_367",
+      "sim_test_adaptive_orchestrator_rationale_402",
       "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_13_adaptive_rate_governor"
     ],
     "117": [
@@ -3142,10 +3138,10 @@
       "sim_adaptive_orchestrator_antigravitymemorygovernor_get_memory_status",
       "sim_adaptive_orchestrator_rationale_143",
       "sim_adaptive_orchestrator_rationale_153",
-      "sim_adaptive_orchestrator_rationale_227",
-      "sim_adaptive_orchestrator_rationale_240",
-      "sim_adaptive_orchestrator_rationale_253",
-      "sim_test_adaptive_orchestrator_rationale_461",
+      "sim_adaptive_orchestrator_rationale_246",
+      "sim_adaptive_orchestrator_rationale_259",
+      "sim_adaptive_orchestrator_rationale_272",
+      "sim_test_adaptive_orchestrator_rationale_478",
       "sim_test_adaptive_orchestrator_rationale_50",
       "sim_test_adaptive_orchestrator_rationale_75",
       "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_01_antigravity_memory_guard",
@@ -4091,12 +4087,12 @@
       "sim_adaptive_orchestrator_fleetfirstbridge_ensure_queue_worker_running",
       "sim_adaptive_orchestrator_fleetfirstbridge_get_fleet_root",
       "sim_adaptive_orchestrator_fleetfirstbridge_is_queue_worker_active",
-      "sim_adaptive_orchestrator_rationale_1045",
-      "sim_adaptive_orchestrator_rationale_1065",
-      "sim_adaptive_orchestrator_rationale_1080",
-      "sim_adaptive_orchestrator_rationale_1298",
+      "sim_adaptive_orchestrator_rationale_1064",
+      "sim_adaptive_orchestrator_rationale_1084",
+      "sim_adaptive_orchestrator_rationale_1099",
+      "sim_adaptive_orchestrator_rationale_1317",
       "sim_test_adaptive_orchestrator_rationale_306",
-      "sim_test_adaptive_orchestrator_rationale_332",
+      "sim_test_adaptive_orchestrator_rationale_333",
       "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_11_fleet_task_manifest_contract_compatibility",
       "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_11b_cross_repo_task_contract_schema_conformance"
     ],
@@ -4944,11 +4940,11 @@
       "sim_adaptive_orchestrator_orchestratorfencingmanager_acquire_lease",
       "sim_adaptive_orchestrator_orchestratorfencingmanager_evict_stale_lease",
       "sim_adaptive_orchestrator_orchestratorfencingmanager_verify_branch_merge",
-      "sim_adaptive_orchestrator_rationale_954",
-      "sim_adaptive_orchestrator_rationale_963",
-      "sim_adaptive_orchestrator_rationale_970",
-      "sim_adaptive_orchestrator_rationale_977",
-      "sim_test_adaptive_orchestrator_rationale_533",
+      "sim_adaptive_orchestrator_rationale_973",
+      "sim_adaptive_orchestrator_rationale_982",
+      "sim_adaptive_orchestrator_rationale_989",
+      "sim_adaptive_orchestrator_rationale_996",
+      "sim_test_adaptive_orchestrator_rationale_550",
       "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_17_orchestrator_fencing_manager"
     ],
     "243": [
@@ -7263,8 +7259,8 @@
     "466": [
       "sim_adaptive_orchestrator_deterministictransactionalrecovery_compute_file_hashes",
       "sim_adaptive_orchestrator_deterministictransactionalrecovery_verify_integrity",
-      "sim_adaptive_orchestrator_rationale_1433",
-      "sim_adaptive_orchestrator_rationale_1452",
+      "sim_adaptive_orchestrator_rationale_1476",
+      "sim_adaptive_orchestrator_rationale_1495",
       "sim_test_adaptive_orchestrator_rationale_233",
       "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_07_transactional_integrity_and_hashing"
     ],
@@ -7905,288 +7901,294 @@
       "scripts_convert_media_show_notification"
     ],
     "551": [
+      "sim_adaptive_orchestrator_fleetfirstbridge_format_context_firebreak_manifest",
+      "sim_adaptive_orchestrator_rationale_1433",
+      "sim_test_adaptive_orchestrator_rationale_218",
+      "sim_test_adaptive_orchestrator_testadaptiveorchestrator_test_06_context_firebreak_manifest"
+    ],
+    "552": [
       "templates_boilerplates_fluid_wordmark_navbar_navbar",
       "templates_boilerplates_fluid_wordmark_navbar_navbar_initscrollwatcher",
       "templates_boilerplates_fluid_wordmark_navbar_navbar_initscrollwatcher_updatenavstate",
       "templates_boilerplates_fluid_wordmark_navbar_navbar_renderdecomposedwordmark"
     ],
-    "552": [
+    "553": [
       "tools_skills_academic_notebook_architect_references_fleet_integration",
       "tools_skills_academic_notebook_architect_references_fleet_integration_1_super_nlm_multi_account_fleet_schema",
       "tools_skills_academic_notebook_architect_references_fleet_integration_2_fleet_orchestrator_swarm_sku_reference",
       "tools_skills_academic_notebook_architect_references_fleet_integration_fleet_integration_reference_super_nlm_fleet_orchestrator"
     ],
-    "553": [
+    "554": [
       "tools_skills_fleet_orchestrator_references_sku_dag_reference",
       "tools_skills_fleet_orchestrator_references_sku_dag_reference_1_sku_template_schema_sku_templates_json",
       "tools_skills_fleet_orchestrator_references_sku_dag_reference_2_pipeline_stage_semantics",
       "tools_skills_fleet_orchestrator_references_sku_dag_reference_declarative_sku_dag_pipeline_reference"
     ],
-    "554": [
+    "555": [
       "tools_skills_fleet_orchestrator_references_worker_architecture",
       "tools_skills_fleet_orchestrator_references_worker_architecture_1_multi_account_credit_pooling_n_times_200",
       "tools_skills_fleet_orchestrator_references_worker_architecture_2_worktree_sandboxing",
       "tools_skills_fleet_orchestrator_references_worker_architecture_fleet_orchestrator_worker_architecture_concurrency"
     ],
-    "555": [
+    "556": [
       "tools_skills_graphify_references_add_watch",
       "tools_skills_graphify_references_add_watch_for_graphify_add",
       "tools_skills_graphify_references_add_watch_for_watch",
       "tools_skills_graphify_references_add_watch_graphify_reference_add_a_url_and_watch_a_folder"
     ],
-    "556": [
+    "557": [
       "tools_skills_graphify_references_hooks",
       "tools_skills_graphify_references_hooks_for_git_commit_hook",
       "tools_skills_graphify_references_hooks_for_native_claude_md_integration",
       "tools_skills_graphify_references_hooks_graphify_reference_commit_hook_and_native_claude_md_integration"
     ],
-    "557": [
+    "558": [
       "tools_skills_graphify_references_update",
       "tools_skills_graphify_references_update_for_cluster_only",
       "tools_skills_graphify_references_update_for_update_incremental_re_extraction",
       "tools_skills_graphify_references_update_graphify_reference_incremental_update_and_cluster_only"
     ],
-    "558": [
+    "559": [
       "tools_skills_latex_thesis_architect_assets_templates_beamer_presentation_src_images_readme",
       "tools_skills_latex_thesis_architect_assets_templates_beamer_presentation_src_images_readme_images_directory",
       "tools_skills_latex_thesis_architect_assets_templates_beamer_presentation_src_images_readme_recommended_images",
       "tools_skills_latex_thesis_architect_assets_templates_beamer_presentation_src_images_readme_usage"
     ],
-    "559": [
+    "560": [
       "tools_skills_modern_web_guidance_guides_css_child_state_based_styling",
       "tools_skills_modern_web_guidance_guides_css_child_state_based_styling_child_state_based_styling",
       "tools_skills_modern_web_guidance_guides_css_child_state_based_styling_fallback_strategies",
       "tools_skills_modern_web_guidance_guides_css_child_state_based_styling_implementing_state_based_container_styling"
     ],
-    "560": [
+    "561": [
       "tools_skills_modern_web_guidance_guides_css_content_based_styling",
       "tools_skills_modern_web_guidance_guides_css_content_based_styling_content_based_styling",
       "tools_skills_modern_web_guidance_guides_css_content_based_styling_fallback_strategies",
       "tools_skills_modern_web_guidance_guides_css_content_based_styling_implementing_content_based_container_styling"
     ],
-    "561": [
+    "562": [
       "tools_skills_modern_web_guidance_guides_css_responsive_design",
       "tools_skills_modern_web_guidance_guides_css_responsive_design_overall_best_practices",
       "tools_skills_modern_web_guidance_guides_css_responsive_design_responsive_design",
       "tools_skills_modern_web_guidance_guides_css_responsive_design_responsive_typography"
     ],
-    "562": [
+    "563": [
       "tools_skills_modern_web_guidance_guides_forms_form_fields_automatically_fit_contents",
       "tools_skills_modern_web_guidance_guides_forms_form_fields_automatically_fit_contents_auto_sizing_form_controls",
       "tools_skills_modern_web_guidance_guides_forms_form_fields_automatically_fit_contents_fallback_strategies",
       "tools_skills_modern_web_guidance_guides_forms_form_fields_automatically_fit_contents_form_fields_automatically_fit_contents"
     ],
-    "563": [
+    "564": [
       "tools_skills_modern_web_guidance_guides_performance_calculate_total_foreground_time",
       "tools_skills_modern_web_guidance_guides_performance_calculate_total_foreground_time_calculate_total_foreground_time",
       "tools_skills_modern_web_guidance_guides_performance_calculate_total_foreground_time_fallbacks_browser_support",
       "tools_skills_modern_web_guidance_guides_performance_calculate_total_foreground_time_implementing_foreground_time_calculation"
     ],
-    "564": [
+    "565": [
       "tools_skills_modern_web_guidance_guides_performance_deliver_optimized_decorative_images",
       "tools_skills_modern_web_guidance_guides_performance_deliver_optimized_decorative_images_deliver_optimized_decorative_images",
       "tools_skills_modern_web_guidance_guides_performance_deliver_optimized_decorative_images_fallback_strategies",
       "tools_skills_modern_web_guidance_guides_performance_deliver_optimized_decorative_images_implementation"
     ],
-    "565": [
+    "566": [
       "tools_skills_modern_web_guidance_guides_performance_detect_initial_visibility_state",
       "tools_skills_modern_web_guidance_guides_performance_detect_initial_visibility_state_detect_initial_visibility_state",
       "tools_skills_modern_web_guidance_guides_performance_detect_initial_visibility_state_detecting_initial_visibility_and_background_time",
       "tools_skills_modern_web_guidance_guides_performance_detect_initial_visibility_state_fallback_strategies"
     ],
-    "566": [
+    "567": [
       "tools_skills_modern_web_guidance_guides_performance_resolution_optimized_pseudo_elements",
       "tools_skills_modern_web_guidance_guides_performance_resolution_optimized_pseudo_elements_fallback_strategies",
       "tools_skills_modern_web_guidance_guides_performance_resolution_optimized_pseudo_elements_implementation",
       "tools_skills_modern_web_guidance_guides_performance_resolution_optimized_pseudo_elements_resolution_optimized_pseudo_elements"
     ],
-    "567": [
+    "568": [
       "tools_skills_modern_web_guidance_guides_performance_schedule_tasks_by_priority",
       "tools_skills_modern_web_guidance_guides_performance_schedule_tasks_by_priority_fallback_strategies",
       "tools_skills_modern_web_guidance_guides_performance_schedule_tasks_by_priority_schedule_tasks_by_priority",
       "tools_skills_modern_web_guidance_guides_performance_schedule_tasks_by_priority_scheduling_tasks_by_priority"
     ],
-    "568": [
+    "569": [
       "tools_skills_modern_web_guidance_guides_ui_behaviors_dynamic_sibling_animations",
       "tools_skills_modern_web_guidance_guides_ui_behaviors_dynamic_sibling_animations_creating_a_stagger_animation",
       "tools_skills_modern_web_guidance_guides_ui_behaviors_dynamic_sibling_animations_fallback_strategies",
       "tools_skills_modern_web_guidance_guides_ui_behaviors_dynamic_sibling_animations_stagger_animations_with_sibling_index"
     ],
-    "569": [
+    "570": [
       "tools_skills_modern_web_guidance_guides_ui_behaviors_group_element_transitions",
       "tools_skills_modern_web_guidance_guides_ui_behaviors_group_element_transitions_fallback_strategies",
       "tools_skills_modern_web_guidance_guides_ui_behaviors_group_element_transitions_group_element_transitions",
       "tools_skills_modern_web_guidance_guides_ui_behaviors_group_element_transitions_implementation_steps"
     ],
-    "570": [
+    "571": [
       "tools_skills_modern_web_guidance_guides_ui_behaviors_interest_triggered_action_previews",
       "tools_skills_modern_web_guidance_guides_ui_behaviors_interest_triggered_action_previews_fallback_strategies",
       "tools_skills_modern_web_guidance_guides_ui_behaviors_interest_triggered_action_previews_how_to_implement",
       "tools_skills_modern_web_guidance_guides_ui_behaviors_interest_triggered_action_previews_interest_triggered_action_previews"
     ],
-    "571": [
+    "572": [
       "tools_skills_modern_web_guidance_guides_ui_behaviors_motion",
       "tools_skills_modern_web_guidance_guides_ui_behaviors_motion_accessibility",
       "tools_skills_modern_web_guidance_guides_ui_behaviors_motion_motion",
       "tools_skills_modern_web_guidance_guides_ui_behaviors_motion_performance"
     ],
-    "572": [
+    "573": [
       "tools_skills_modern_web_guidance_guides_ui_behaviors_persistent_top_layer_ui",
       "tools_skills_modern_web_guidance_guides_ui_behaviors_persistent_top_layer_ui_fallback_strategies",
       "tools_skills_modern_web_guidance_guides_ui_behaviors_persistent_top_layer_ui_persistent_top_layer_ui",
       "tools_skills_modern_web_guidance_guides_ui_behaviors_persistent_top_layer_ui_reparenting_open_top_layer_elements"
     ],
-    "573": [
+    "574": [
       "tools_skills_skill_development_skill_complete_skill",
       "tools_skills_skill_development_skill_minimal_skill",
       "tools_skills_skill_development_skill_quick_reference",
       "tools_skills_skill_development_skill_standard_skill_recommended"
     ],
-    "574": [
+    "575": [
       "tools_skills_skill_development_skill_imperative_infinitive_form",
       "tools_skills_skill_development_skill_objective_instructional_language",
       "tools_skills_skill_development_skill_third_person_in_description",
       "tools_skills_skill_development_skill_writing_style_requirements"
     ],
-    "575": [
+    "576": [
       "tools_skills_writing_like_claude_scripts_audit_calm_writing",
       "tools_skills_writing_like_claude_scripts_audit_calm_writing_audit_file",
       "tools_skills_writing_like_claude_scripts_audit_calm_writing_main",
       "tools_skills_writing_like_claude_scripts_audit_calm_writing_py_path"
     ],
-    "576": [
+    "577": [
       "tools_validate_ecosystem",
       "tools_validate_ecosystem_fail",
       "tools_validate_ecosystem_rationale_1",
       "tools_validate_ecosystem_validate"
     ],
-    "577": [
+    "578": [
       "schemas_domain_lexicon_contract_v1_definition_en_description",
       "schemas_domain_lexicon_contract_v1_definition_en_type",
       "schemas_domain_lexicon_contract_v1_properties_definition_en"
     ],
-    "578": [
+    "579": [
       "scripts_create_c0_intake_form",
       "scripts_create_c0_intake_form_addcomfortquestion",
       "scripts_create_c0_intake_form_createbrlcohort0form"
     ],
-    "579": [
+    "580": [
       "sim_invariant_engine_sandbox_replay_py_any",
       "sim_invariant_engine_sandbox_replay_rationale_31",
       "sim_invariant_engine_sandbox_replay_sandboxreplayengine_replay_counterexample"
     ],
-    "580": [
+    "581": [
       "sim_readme",
       "sim_readme_strangler_ipu_pipeline_runner",
       "sim_readme_strangler_ipu_reproducibility_package"
     ],
-    "581": [
+    "582": [
       "tools_skills_academic_notebook_architect_scripts_scaffold_semester",
       "tools_skills_academic_notebook_architect_scripts_scaffold_semester_extract_markdown_section",
       "tools_skills_academic_notebook_architect_scripts_scaffold_semester_main"
     ],
-    "582": [
+    "583": [
       "tools_skills_fluid_wordmark_collapse_examples_react_tailwind",
       "tools_skills_fluid_wordmark_collapse_examples_react_tailwind_fluidwordmark",
       "tools_skills_fluid_wordmark_collapse_examples_react_tailwind_wordmarkprops"
     ],
-    "583": [
+    "584": [
       "tools_skills_graphify_references_github_and_merge",
       "tools_skills_graphify_references_github_and_merge_graphify_reference_github_clone_and_cross_repo_merge",
       "tools_skills_graphify_references_github_and_merge_step_0_clone_github_repo_s_only_if_a_github_url_was_given"
     ],
-    "584": [
+    "585": [
       "tools_skills_graphify_references_transcribe",
       "tools_skills_graphify_references_transcribe_graphify_reference_transcribe_video_and_audio",
       "tools_skills_graphify_references_transcribe_step_2_5_transcribe_video_audio_files_only_if_video_files_detected"
     ],
-    "585": [
+    "586": [
       "tools_skills_modern_web_guidance_guides_html_form_associated_custom_elements",
       "tools_skills_modern_web_guidance_guides_html_form_associated_custom_elements_fallback_strategies",
       "tools_skills_modern_web_guidance_guides_html_form_associated_custom_elements_form_associated_custom_elements"
     ],
-    "586": [
+    "587": [
       "tools_skills_modern_web_guidance_guides_ui_behaviors_anchor_positioning_tab_underline",
       "tools_skills_modern_web_guidance_guides_ui_behaviors_anchor_positioning_tab_underline_anchor_positioning_tab_underline",
       "tools_skills_modern_web_guidance_guides_ui_behaviors_anchor_positioning_tab_underline_fallback_strategies"
     ],
-    "587": [
+    "588": [
       "tools_skills_modern_web_guidance_guides_ui_behaviors_platform_controls_dismiss_dialog",
       "tools_skills_modern_web_guidance_guides_ui_behaviors_platform_controls_dismiss_dialog_fallback_strategies",
       "tools_skills_modern_web_guidance_guides_ui_behaviors_platform_controls_dismiss_dialog_platform_controls_dismiss_dialog"
     ],
-    "588": [
+    "589": [
       "audit",
       "audit_sh__entry"
     ],
-    "589": [
+    "590": [
       "scripts_add_brl_to_google_calendar",
       "scripts_add_brl_to_google_calendar_addbrlcohort0calendar"
     ],
-    "590": [
+    "591": [
       "scripts_extract_fuse_notebook_plots",
       "scripts_extract_fuse_notebook_plots_inspect_notebook"
     ],
-    "591": [
+    "592": [
       "scripts_verify",
       "scripts_verify_main"
     ],
-    "592": [
+    "593": [
       "tools_preeti_converter_shuvayatra_preeti",
       "tools_preeti_converter_shuvayatra_preeti_preeti"
     ],
-    "593": [
+    "594": [
       "tools_skills_chrome_extensions_references_webstore_chromewebstore_template",
       "tools_skills_chrome_extensions_references_webstore_chromewebstore_template_chromewebstore_md_template"
     ],
-    "594": [
+    "595": [
       "tools_skills_graphify_references_extraction_spec",
       "tools_skills_graphify_references_extraction_spec_graphify_reference_extraction_subagent_prompt"
     ],
-    "595": [
+    "596": [
       "tools_skills_modern_web_guidance_guides_accessibility_accessible_generated_content",
       "tools_skills_modern_web_guidance_guides_accessibility_accessible_generated_content_accessible_generated_content"
     ],
-    "596": [
+    "597": [
       "scripts_bootstrap_environment"
     ],
-    "597": [
+    "598": [
       "scripts_list_portfolio_projects"
     ],
-    "598": [
+    "599": [
       "scripts_seed_dataset"
     ],
-    "599": [
+    "600": [
       "scripts_setup_hotkeys"
     ],
-    "600": [
+    "601": [
       "scripts_setup_user_shell_folders"
     ],
-    "601": [
+    "602": [
       "scripts_start_marketplace"
     ],
-    "602": [
+    "603": [
       "scripts_yt"
     ],
-    "603": [
+    "604": [
       "scripts_yt_music"
     ],
-    "604": [
+    "605": [
       "sim_adaptive_orchestrator_py_any"
     ],
-    "605": [
+    "606": [
       "sim_adaptive_orchestrator_py_path"
     ],
-    "606": [
+    "607": [
       "sim_routing_engine_py_path"
     ],
-    "607": [
+    "608": [
       "tools_skills_latex_thesis_architect_assets_templates_beamer_presentation_beamer_presentation"
     ],
-    "608": [
+    "609": [
       "tools_skills_latex_thesis_architect_assets_templates_engineering_report_engineering_report"
     ],
-    "609": [
+    "610": [
       "tools_skills_latex_thesis_architect_assets_templates_fuse_aif_at_fuse_aif"
     ]
   },
@@ -8198,10 +8200,10 @@
     "4": 0.0425531914893617,
     "5": 0.06262626262626263,
     "6": 0.044444444444444446,
-    "7": 0.05647840531561462,
-    "8": 0.08392603129445235,
-    "9": 0.05263157894736842,
-    "10": 0.09103840682788052,
+    "7": 0.07682926829268293,
+    "8": 0.05263157894736842,
+    "9": 0.09103840682788052,
+    "10": 0.06825396825396825,
     "11": 0.08571428571428572,
     "12": 0.05714285714285714,
     "13": 0.058823529411764705,
@@ -8766,11 +8768,11 @@
     "572": 0.5,
     "573": 0.5,
     "574": 0.5,
-    "575": 0.8333333333333334,
-    "576": 0.6666666666666666,
+    "575": 0.5,
+    "576": 0.8333333333333334,
     "577": 0.6666666666666666,
-    "578": 1.0,
-    "579": 0.6666666666666666,
+    "578": 0.6666666666666666,
+    "579": 1.0,
     "580": 0.6666666666666666,
     "581": 0.6666666666666666,
     "582": 0.6666666666666666,
@@ -8779,7 +8781,7 @@
     "585": 0.6666666666666666,
     "586": 0.6666666666666666,
     "587": 0.6666666666666666,
-    "588": 1.0,
+    "588": 0.6666666666666666,
     "589": 1.0,
     "590": 1.0,
     "591": 1.0,
@@ -8800,7 +8802,8 @@
     "606": 1.0,
     "607": 1.0,
     "608": 1.0,
-    "609": 1.0
+    "609": 1.0,
+    "610": 1.0
   },
   "gods": [
     {
@@ -8914,8 +8917,8 @@
   "questions": [
     {
       "type": "bridge_node",
-      "question": "Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Path` to `2026-10-03_BEI_CURRICULUM_SKILLS_AND_CAPABILITY_ONTOLOGY.md`, `Stabilize Reactive State with Temporal`, `Supporting Global Calendar Systems with Temporal`, `upload_file.py`?",
-      "why": "High betweenness centrality (0.006) - this node is a cross-community bridge."
+      "question": "Why does `Brainstorm Research Laboratory — Cohort 0 Overview` connect `Service Worker Lifetime & State Management` to `adaptive-workflow/SKILL.md`?",
+      "why": "High betweenness centrality (0.010) - this node is a cross-community bridge."
     },
     {
       "type": "verify_inferred",
@@ -8924,13 +8927,18 @@
     },
     {
       "type": "isolated_nodes",
-      "question": "What connects `ARCHITECTURAL_REVIEW_SESSION`, `COHORT_1_QUEST_LEAD_ELIGIBLE`, `COMPUTE_GUIDANCE_KAGGLE_GPU` to the rest of the system?",
+      "question": "What connects `capabilities`, `location`, `module` to the rest of the system?",
       "why": "90 weakly-connected nodes found - possible documentation gaps or missing edges."
     },
     {
       "type": "low_cohesion",
       "question": "Should `4. Step-by-Step Implementation Timeline` be split into smaller, more focused modules?",
       "why": "Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `/graphify` connect `ARCH-PLAN-003: Intelligent Systems Engineering & Research Conversion Roadmap` to `Dos and Don'ts`?",
+      "why": "High betweenness centrality (0.004) - this node is a cross-community bridge."
     },
     {
       "type": "verify_inferred",
@@ -8941,11 +8949,6 @@
       "type": "low_cohesion",
       "question": "Should `generate_video.py` be split into smaller, more focused modules?",
       "why": "Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `MCP Integration for Claude Code Plugins` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.08687943262411348 - nodes in this community are weakly interconnected."
     }
   ]
 }

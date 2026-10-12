@@ -188,6 +188,25 @@ class AntigravityMemoryGovernor:
                         is_measured = True
                 except Exception:
                     pass
+            elif os.path.exists("/proc/meminfo"):
+                try:
+                    meminfo: Dict[str, int] = {}
+                    with open("/proc/meminfo", "r", encoding="utf-8") as mf:
+                        for line in mf:
+                            parts = line.split(":")
+                            if len(parts) == 2:
+                                key = parts[0].strip()
+                                val_str = parts[1].strip().split()[0]
+                                if val_str.isdigit():
+                                    meminfo[key] = int(val_str)  # kB
+                    if "MemTotal" in meminfo:
+                        total_mb = meminfo["MemTotal"] // 1024
+                        avail_mb = meminfo.get("MemAvailable", meminfo.get("MemFree", 0)) // 1024
+                        used_mb = total_mb - avail_mb
+                        percent = round((used_mb / total_mb) * 100.0, 1) if total_mb > 0 else 0.0
+                        is_measured = True
+                except Exception:
+                    pass
 
         if not is_measured:
             return {
@@ -1324,6 +1343,21 @@ class FleetFirstBridge:
         if not model_resolved and routing.get("matrix_cell") in ["(V2, R1)", "(V2, R2)"]:
             model_resolved = "gemini-3.8-flash"
 
+        PRIORITY_MAP = {
+            "low": 1,
+            "normal": 5,
+            "medium": 5,
+            "high": 8,
+            "urgent": 10,
+            "critical": 10,
+        }
+        if isinstance(priority, int):
+            canonical_priority_int = priority
+            priority_label = "normal"
+        else:
+            canonical_priority_int = PRIORITY_MAP.get(str(priority).lower(), 5)
+            priority_label = str(priority)
+
         task_data = {
             "id": canonical_id,
             "parent_id": parent_id,
@@ -1332,6 +1366,7 @@ class FleetFirstBridge:
             "kind": kind,
             "spec": prompt,
             "status": "pending",
+            "priority": canonical_priority_int,
             "owner_account": None,
             "branch_name": f"task/{canonical_id}",
             "blocked_reason": None,
@@ -1343,7 +1378,7 @@ class FleetFirstBridge:
             "repository": repo,
             "prompt": prompt,
             "branch": f"feat/{legacy_task_id.lower()}",
-            "priority": priority,
+            "priority_label": priority_label,
             "assigned_worker": None,
             "max_retries": 3,
             "timeout": dynamic_timeout,
@@ -1364,16 +1399,24 @@ class FleetFirstBridge:
         }
 
         target_dir = output_dir or str(cls.get_fleet_root() / "orchestrator-state" / "tasks")
+        file_written = None
+        persistence_error = None
         if os.path.exists(target_dir):
             file_path = os.path.join(target_dir, f"{canonical_id}.json")
             try:
                 with open(file_path, "w", encoding="utf-8") as f:
                     json.dump(task_data, f, indent=2)
-                task_data["file_written"] = file_path
+                file_written = file_path
                 # Auto-spawn headless daemon if not running to prevent queue starvation
                 cls.ensure_queue_worker_running()
-            except Exception:
-                pass
+            except Exception as e:
+                persistence_error = f"Failed to persist task manifest: {e}"
+        else:
+            persistence_error = f"Target directory not found: {target_dir}"
+
+        task_data["file_written"] = file_written
+        if persistence_error:
+            task_data["persistence_error"] = persistence_error
 
         return task_data
 

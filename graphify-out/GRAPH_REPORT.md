@@ -1,10 +1,10 @@
 # Graph Report - brainstorm  (2026-10-12)
 
 ## Corpus Check
-- Large corpus: 716 files · ~1,126,039 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
+- Large corpus: 716 files · ~1,126,266 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
 
 ## Summary
-- 6966 nodes · 7853 edges · 610 communities (551 shown, 59 thin omitted)
+- 6966 nodes · 7853 edges · 611 communities (550 shown, 61 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 108 edges (avg confidence: 0.89)
 - Token cost: 0 input · 0 output
 
@@ -555,7 +555,6 @@
 - audit_file
 - validate_ecosystem.py
 - Community 549
-- .replay_counterexample
 - STRANGLER-IPU reproducibility package
 - Community 553
 - scaffold_semester.py
@@ -583,17 +582,18 @@
 - yt.ps1
 - yt-music.ps1
 - Community 578
-- Community 580
-- Community 582
+- Community 579
+- Community 581
 - Community 583
 - Community 584
 - Community 585
 - Community 586
 - Community 587
 - Community 588
-- Community 593
+- Community 589
 - Community 594
 - Community 595
+- Community 596
 
 ## God Nodes (most connected - your core abstractions)
 1. `TestAdaptiveOrchestrator` - 37 edges
@@ -622,7 +622,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (610 total, 59 thin omitted)
+## Communities (611 total, 61 thin omitted)
 
 ### Community 0 - "4. Step-by-Step Implementation Timeline"
 Cohesion: 0.08
@@ -653,18 +653,14 @@ Cohesion: 0.04
 Nodes (40): 1. Project Lifecycle & Report Deliverables, 2. Minimalist Beamer Presentation Protocol (`beamer-presentation.cls`), 3. Fast Scaffolding with `latex-thesis-architect`, Academic Engineering Report & Presentation Guidelines, Defense Deck Blueprints, Phase 1: Project Proposal Report, Phase 2: Mid-Term Progress Report, Phase 3: Final Defense Report & Thesis (+32 more)
 
 ### Community 7 - "Mandatory Rules"
-Cohesion: 0.06
-Nodes (3): DAGCycleError, _find_directed_cycle(), TestAdaptiveOrchestrator
+Cohesion: 0.08
+Nodes (6): DAGCycleError, get_git_common_dir(), PreExistingFileGuard, resilient_rmtree(), resilient_unlink(), _rmtree_onerror()
 
 ### Community 8 - "Fluid Wordmark Collapse & Navigation Fixation"
-Cohesion: 0.08
-Nodes (5): get_git_common_dir(), PreExistingFileGuard, resilient_rmtree(), resilient_unlink(), _rmtree_onerror()
-
-### Community 9 - "cdp_router_manager.js"
 Cohesion: 0.05
 Nodes (37): ARCHITECTURAL_REVIEW_SESSION, COHORT_1_QUEST_LEAD_ELIGIBLE, COMPUTE_GUIDANCE_KAGGLE_GPU, METRIC_BACKED_LOR_ELIGIBLE, PAPER_CO_AUTHORSHIP_PRIORITY, PORTFOLIO_AUTHORSHIP, PUBLIC_GIT_COMMIT_CREDIT, RANK_D_BADGE (+29 more)
 
-### Community 10 - "ValueError"
+### Community 9 - "cdp_router_manager.js"
 Cohesion: 0.09
 Nodes (13): DeterministicCPMScheduler, DeterministicTransactionalRecovery, FleetFirstBridge, cmd_cpm(), cmd_fast_path(), cmd_fleet_merge(), cmd_fleet_status(), cmd_fleet_task() (+5 more)
 
@@ -2732,126 +2728,126 @@ Nodes (4): 7.9 Economic Strategy: Zero-Cost Bootstrapping & The Superlinear Comp
 Cohesion: 0.50
 Nodes (3): Experiment Log: INV-[ID], Findings & Epistemic Classification, Quantitative Metrics
 
-### Community 552 - "STRANGLER-IPU reproducibility package"
+### Community 553 - "Community 553"
 Cohesion: 0.50
 Nodes (3): 1. Super-NLM Multi-Account Fleet Schema, 2. Fleet-Orchestrator Swarm SKU Reference, Fleet Integration Reference: Super-NLM & Fleet-Orchestrator
 
-### Community 553 - "Community 553"
+### Community 554 - "scaffold_semester.py"
 Cohesion: 0.50
 Nodes (3): 1. SKU Template Schema (`sku-templates/*.json`), 2. Pipeline Stage Semantics, Declarative SKU DAG Pipeline Reference
 
-### Community 554 - "scaffold_semester.py"
+### Community 555 - "react-tailwind.tsx"
 Cohesion: 0.50
 Nodes (3): 1. Multi-Account Credit Pooling ($N \times 200$), 2. Worktree Sandboxing, Fleet-Orchestrator Worker Architecture & Concurrency
 
-### Community 555 - "react-tailwind.tsx"
+### Community 556 - "graphify reference: GitHub clone and cross-repo merge"
 Cohesion: 0.50
 Nodes (3): For /graphify add, For --watch, graphify reference: add a URL and watch a folder
 
-### Community 556 - "graphify reference: GitHub clone and cross-repo merge"
+### Community 557 - "graphify reference: transcribe video and audio"
 Cohesion: 0.50
 Nodes (3): For git commit hook, For native CLAUDE.md integration, graphify reference: commit hook and native CLAUDE.md integration
 
-### Community 557 - "graphify reference: transcribe video and audio"
+### Community 558 - "Form-Associated Custom Elements"
 Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
-### Community 558 - "Form-Associated Custom Elements"
+### Community 559 - "Anchor Positioning Tab Underline"
 Cohesion: 0.50
 Nodes (3): Images Directory, Recommended Images, Usage
 
-### Community 559 - "Anchor Positioning Tab Underline"
+### Community 560 - "Platform Controls Dismiss Dialog"
 Cohesion: 0.50
 Nodes (3): Child State Based Styling, Fallback strategies, Implementing state-based container styling
 
-### Community 560 - "Platform Controls Dismiss Dialog"
+### Community 561 - "audit.sh"
 Cohesion: 0.50
 Nodes (3): Content Based Styling, Fallback strategies, Implementing content-based container styling
 
-### Community 561 - "audit.sh"
+### Community 562 - "add_brl_to_google_calendar.js"
 Cohesion: 0.50
 Nodes (3): Overall best practices, Responsive design, Responsive typography
 
-### Community 562 - "add_brl_to_google_calendar.js"
+### Community 563 - "extract_fuse_notebook_plots.py"
 Cohesion: 0.50
 Nodes (3): Auto-sizing form controls, Fallback strategies, Form Fields Automatically Fit Contents
 
-### Community 563 - "extract_fuse_notebook_plots.py"
+### Community 564 - "verify.py"
 Cohesion: 0.50
 Nodes (3): Calculate total foreground time, Fallbacks & browser support, Implementing foreground time calculation
 
-### Community 564 - "verify.py"
+### Community 565 - "sim.sh"
 Cohesion: 0.50
 Nodes (3): Deliver Optimized Decorative Images, Fallback strategies, Implementation
 
-### Community 565 - "sim.sh"
+### Community 566 - "shuvayatra_preeti.js"
 Cohesion: 0.50
 Nodes (3): Detect Initial Visibility State, Detecting initial visibility and background time, Fallback strategies
 
-### Community 566 - "shuvayatra_preeti.js"
+### Community 567 - "chromewebstore-template.md"
 Cohesion: 0.50
 Nodes (3): Fallback strategies, Implementation, Resolution Optimized Pseudo Elements
 
-### Community 567 - "chromewebstore-template.md"
+### Community 568 - "extraction-spec.md"
 Cohesion: 0.50
 Nodes (3): Fallback strategies, Schedule Tasks By Priority, Scheduling tasks by priority
 
-### Community 568 - "extraction-spec.md"
+### Community 569 - "accessible-generated-content.md"
 Cohesion: 0.50
 Nodes (3): Creating a stagger animation, Fallback strategies, Stagger animations with `sibling-index()`
 
-### Community 569 - "accessible-generated-content.md"
+### Community 570 - "bootstrap-environment.ps1"
 Cohesion: 0.50
 Nodes (3): Fallback strategies, Group Element Transitions, Implementation steps
 
-### Community 570 - "bootstrap-environment.ps1"
+### Community 571 - "list_portfolio_projects.py"
 Cohesion: 0.50
 Nodes (3): Fallback strategies, How to implement, Interest Triggered Action Previews
 
-### Community 571 - "list_portfolio_projects.py"
+### Community 572 - "seed_dataset.ps1"
 Cohesion: 0.50
 Nodes (3): Accessibility, Motion, Performance
 
-### Community 572 - "seed_dataset.ps1"
+### Community 573 - "setup-hotkeys.ps1"
 Cohesion: 0.50
 Nodes (3): Fallback strategies, Persistent Top Layer UI, Reparenting open top-layer elements
 
-### Community 573 - "setup-hotkeys.ps1"
+### Community 574 - "setup-user-shell-folders.ps1"
 Cohesion: 0.50
 Nodes (4): Complete Skill, Minimal Skill, Quick Reference, Standard Skill (Recommended)
 
-### Community 574 - "setup-user-shell-folders.ps1"
+### Community 575 - "start_marketplace.ps1"
 Cohesion: 0.50
 Nodes (4): Imperative/Infinitive Form, Objective, Instructional Language, Third-Person in Description, Writing Style Requirements
 
-### Community 577 - "yt-music.ps1"
+### Community 578 - "Community 578"
 Cohesion: 0.67
 Nodes (3): description, type, definition_en
 
 ## Knowledge Gaps
-- **90 isolated node(s):** `ARCHITECTURAL_REVIEW_SESSION`, `COHORT_1_QUEST_LEAD_ELIGIBLE`, `COMPUTE_GUIDANCE_KAGGLE_GPU`, `METRIC_BACKED_LOR_ELIGIBLE`, `PAPER_CO_AUTHORSHIP_PRIORITY` (+85 more)
+- **90 isolated node(s):** `capabilities`, `location`, `module`, `runtime`, `$schema` (+85 more)
   These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 4596 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **59 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **61 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Personal Tool Ecosystem & Jarvis Architecture — Brainstorm Log` connect `Path` to `2026-10-03_BEI_CURRICULUM_SKILLS_AND_CAPABILITY_ONTOLOGY.md`, `Stabilize Reactive State with Temporal`, `Supporting Global Calendar Systems with Temporal`, `upload_file.py`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **Why does `Brainstorm Research Laboratory — Cohort 0 Overview` connect `Service Worker Lifetime & State Management` to `adaptive-workflow/SKILL.md`?**
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **Are the 9 inferred relationships involving `TestAdaptiveOrchestrator` (e.g. with `AdaptiveRateGovernor` and `AntigravityMemoryGovernor`) actually correct?**
   _`TestAdaptiveOrchestrator` has 9 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `ARCHITECTURAL_REVIEW_SESSION`, `COHORT_1_QUEST_LEAD_ELIGIBLE`, `COMPUTE_GUIDANCE_KAGGLE_GPU` to the rest of the system?**
+- **What connects `capabilities`, `location`, `module` to the rest of the system?**
   _90 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `4. Step-by-Step Implementation Timeline` be split into smaller, more focused modules?**
   _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._
+- **Why does `/graphify` connect `ARCH-PLAN-003: Intelligent Systems Engineering & Research Conversion Roadmap` to `Dos and Don'ts`?**
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **Are the 24 inferred relationships involving `ValueError` (e.g. with `extract_plot_from_notebook()` and `bdecode()`) actually correct?**
   _`ValueError` has 24 INFERRED edges - model-reasoned connections that need verification._
 - **Should `generate_video.py` be split into smaller, more focused modules?**
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
-- **Should `MCP Integration for Claude Code Plugins` be split into smaller, more focused modules?**
-  _Cohesion score 0.08687943262411348 - nodes in this community are weakly interconnected._
 
 ## Graph Freshness
-- **Built at commit:** `49bfc062fe788ff25420e12c41c441af919e4f81`
-- **Built timestamp:** `2026-10-12T08:27:43.605458+00:00`
+- **Built at commit:** `d512bb586f2b6cdebeb3a561ef9cfe66615f7a03`
+- **Built timestamp:** `2026-10-12T09:11:59.436018+00:00`
 - **Lineage type:** `ancestor_snapshot`

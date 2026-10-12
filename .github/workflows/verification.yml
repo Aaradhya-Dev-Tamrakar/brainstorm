@@ -52,6 +52,13 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Checkout Fleet-Orchestrator (Integration Dependency)
+        uses: actions/checkout@v4
+        with:
+          repository: AaradhyaDT/Fleet-Orchestrator
+          path: ../Fleet-Orchestrator
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -65,8 +72,12 @@ jobs:
       - name: Reconciliation audit & ledger certification
         run: python sim/reconciliation_engine.py --ledger
       - name: Dynamic simulation test suite regression
+        env:
+          FLEET_ORCHESTRATOR_ROOT: ${{ github.workspace }}/../Fleet-Orchestrator
         run: python -m unittest discover -s sim -p "test_*.py"
       - name: Task telemetry regression
+        env:
+          FLEET_ORCHESTRATOR_ROOT: ${{ github.workspace }}/../Fleet-Orchestrator
         run: python sim/task_telemetry.py --test
       - name: Upload verification ledger artifact
         uses: actions/upload-artifact@v4

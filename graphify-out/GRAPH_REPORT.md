@@ -608,11 +608,11 @@
 10. `How to implement` - 20 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `cmd_flight_check()` --uses--> `AntigravityMemoryGovernor`  [INFERRED]
+  tools/adaptive_engine.py → sim/adaptive_orchestrator.py
 - `cmd_cpm()` --uses--> `DAGCycleError`  [INFERRED]
   tools/adaptive_engine.py → sim/adaptive_orchestrator.py
 - `cmd_fast_path()` --uses--> `DeterministicTriageEngine`  [INFERRED]
-  tools/adaptive_engine.py → sim/adaptive_orchestrator.py
-- `cmd_flight_check()` --uses--> `AntigravityMemoryGovernor`  [INFERRED]
   tools/adaptive_engine.py → sim/adaptive_orchestrator.py
 - `cmd_triage()` --uses--> `DeterministicTriageEngine`  [INFERRED]
   tools/adaptive_engine.py → sim/adaptive_orchestrator.py
@@ -2832,7 +2832,7 @@ Nodes (3): description, type, definition_en
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Brainstorm Research Laboratory — Cohort 0 Overview` connect `Service Worker Lifetime & State Management` to `adaptive-workflow/SKILL.md`?**
+- **Why does `🏛️ Research Protocol & Experiment Dossier: EXP-012` connect `How to implement` to `2026-10-03_BEI_CURRICULUM_SKILLS_AND_CAPABILITY_ONTOLOGY.md`?**
   _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **Are the 9 inferred relationships involving `TestAdaptiveOrchestrator` (e.g. with `AdaptiveRateGovernor` and `AntigravityMemoryGovernor`) actually correct?**
   _`TestAdaptiveOrchestrator` has 9 INFERRED edges - model-reasoned connections that need verification._
@@ -2840,14 +2840,14 @@ _Questions this graph is uniquely positioned to answer:_
   _90 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `4. Step-by-Step Implementation Timeline` be split into smaller, more focused modules?**
   _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._
-- **Why does `/graphify` connect `ARCH-PLAN-003: Intelligent Systems Engineering & Research Conversion Roadmap` to `Dos and Don'ts`?**
-  _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **Are the 24 inferred relationships involving `ValueError` (e.g. with `extract_plot_from_notebook()` and `bdecode()`) actually correct?**
   _`ValueError` has 24 INFERRED edges - model-reasoned connections that need verification._
 - **Should `generate_video.py` be split into smaller, more focused modules?**
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
+- **Should `MCP Integration for Claude Code Plugins` be split into smaller, more focused modules?**
+  _Cohesion score 0.08687943262411348 - nodes in this community are weakly interconnected._
 
 ## Graph Freshness
-- **Built at commit:** `d512bb586f2b6cdebeb3a561ef9cfe66615f7a03`
-- **Built timestamp:** `2026-10-12T09:11:59.436018+00:00`
+- **Built at commit:** `03b3f1cf33cc5ef11d8b393701f9695e2fae79aa`
+- **Built timestamp:** `2026-10-12T09:14:26.305824+00:00`
 - **Lineage type:** `ancestor_snapshot`

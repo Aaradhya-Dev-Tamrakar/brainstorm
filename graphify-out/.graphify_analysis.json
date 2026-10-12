@@ -1,6 +1,6 @@
 {
-  "built_at_commit": "d512bb586f2b6cdebeb3a561ef9cfe66615f7a03",
-  "built_timestamp": "2026-10-12T09:11:59.436018+00:00",
+  "built_at_commit": "03b3f1cf33cc5ef11d8b393701f9695e2fae79aa",
+  "built_timestamp": "2026-10-12T09:14:26.305824+00:00",
   "lineage_type": "ancestor_snapshot",
   "communities": {
     "0": [
@@ -8859,6 +8859,17 @@
   ],
   "surprises": [
     {
+      "source": "cmd_flight_check()",
+      "target": "AntigravityMemoryGovernor",
+      "source_files": [
+        "tools/adaptive_engine.py",
+        "sim/adaptive_orchestrator.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
       "source": "cmd_cpm()",
       "target": "DAGCycleError",
       "source_files": [
@@ -8872,17 +8883,6 @@
     {
       "source": "cmd_fast_path()",
       "target": "DeterministicTriageEngine",
-      "source_files": [
-        "tools/adaptive_engine.py",
-        "sim/adaptive_orchestrator.py"
-      ],
-      "confidence": "INFERRED",
-      "relation": "uses",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
-    },
-    {
-      "source": "cmd_flight_check()",
-      "target": "AntigravityMemoryGovernor",
       "source_files": [
         "tools/adaptive_engine.py",
         "sim/adaptive_orchestrator.py"
@@ -8917,7 +8917,7 @@
   "questions": [
     {
       "type": "bridge_node",
-      "question": "Why does `Brainstorm Research Laboratory — Cohort 0 Overview` connect `Service Worker Lifetime & State Management` to `adaptive-workflow/SKILL.md`?",
+      "question": "Why does `🏛️ Research Protocol & Experiment Dossier: EXP-012` connect `How to implement` to `2026-10-03_BEI_CURRICULUM_SKILLS_AND_CAPABILITY_ONTOLOGY.md`?",
       "why": "High betweenness centrality (0.010) - this node is a cross-community bridge."
     },
     {
@@ -8936,11 +8936,6 @@
       "why": "Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected."
     },
     {
-      "type": "bridge_node",
-      "question": "Why does `/graphify` connect `ARCH-PLAN-003: Intelligent Systems Engineering & Research Conversion Roadmap` to `Dos and Don'ts`?",
-      "why": "High betweenness centrality (0.004) - this node is a cross-community bridge."
-    },
-    {
       "type": "verify_inferred",
       "question": "Are the 24 inferred relationships involving `ValueError` (e.g. with `extract_plot_from_notebook()` and `bdecode()`) actually correct?",
       "why": "`ValueError` has 24 INFERRED edges - model-reasoned connections that need verification."
@@ -8949,6 +8944,11 @@
       "type": "low_cohesion",
       "question": "Should `generate_video.py` be split into smaller, more focused modules?",
       "why": "Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `MCP Integration for Claude Code Plugins` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.08687943262411348 - nodes in this community are weakly interconnected."
     }
   ]
 }

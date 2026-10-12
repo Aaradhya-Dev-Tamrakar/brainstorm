@@ -399,6 +399,24 @@ def auto_reconcile_counts():
         except Exception as e:
             print(f"[!] Warning during repository-audit.md reconciliation: {e}")
 
+    # 4b. Reconcile report/limitations.md Section 2.4
+    limitations_file = os.path.join(REPORT_DIR, "limitations.md")
+    if os.path.exists(limitations_file):
+        try:
+            with open(limitations_file, "r", encoding="utf-8") as lf:
+                lim_text = lf.read()
+            new_lim = re.sub(
+                r'Maintaining\s+\d+\s+Git(?:\s+tracking)?\s+branches(?:\s*,\s*\d+\s+active\s+projects,)?\s+and\s+\d+\s+tool\s+modules(?:\s*\([^)]*\))?',
+                f"Maintaining {total_remote_branches} Git tracking branches and {total_modules} tool modules ({comp_modules} computational engines, {pres_modules} presentation hubs)",
+                lim_text
+            )
+            if new_lim != lim_text:
+                with open(limitations_file, "w", encoding="utf-8") as lf:
+                    lf.write(new_lim)
+                reconciled_actions.append(f"report/limitations.md -> {total_remote_branches} Git tracking branches, {total_modules} tool modules ({comp_modules} comp, {pres_modules} pres)")
+        except Exception as e:
+            print(f"[!] Warning during limitations.md reconciliation: {e}")
+
     # 5. Dynamic Skill Matrix & Evaluation Note Reconciliation
     skills_dir = os.path.join(BRAINSTORM_ROOT, "tools", "skills")
     if os.path.exists(skills_dir):
@@ -888,6 +906,17 @@ def audit_layer_1_consistency():
                 "type": "AUDIT_TAXONOMY_ERROR",
                 "file": "report/repository-audit.md",
                 "detail": f"repository-audit.md missing canonical '{canonical_artifact_count} Research Artifacts' declaration."
+            })
+
+    limitations_file = os.path.join(REPORT_DIR, "limitations.md")
+    if os.path.exists(limitations_file):
+        with open(limitations_file, "r", encoding="utf-8") as lf:
+            lim_text = lf.read()
+        if f"{canonical_branches} Git tracking branches" not in lim_text or f"{canonical_modules} tool modules" not in lim_text:
+            discrepancies.append({
+                "type": "LIMITATIONS_TAXONOMY_ERROR",
+                "file": "report/limitations.md",
+                "detail": f"limitations.md Section 2.4 contains stale counts (expected '{canonical_branches} Git tracking branches' and '{canonical_modules} tool modules'). Run .\\audit.bat --fix to reconcile."
             })
 
     # Validate economic model invariants

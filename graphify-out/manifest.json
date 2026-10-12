@@ -24,10 +24,10 @@
     "semantic_hash": "fe271b9b041d088da4e4a171e190aa7c"
   },
   "sim/reconciliation_engine.py": {
-    "mtime": 1791362624.9871628,
-    "seen": 1791362770.6910658,
-    "ast_hash": "bda16d249bb5d5f95dc8f159d576e4f1",
-    "semantic_hash": "bda16d249bb5d5f95dc8f159d576e4f1"
+    "mtime": 1791788184.5304785,
+    "seen": 1791788920.5412102,
+    "ast_hash": "dd86fa73b2e568d743f6f67b8e33d512",
+    "semantic_hash": "dd86fa73b2e568d743f6f67b8e33d512"
   },
   "sim/sweep_ipu_breakeven.py": {
     "mtime": 1790044861.1795669,
@@ -210,10 +210,10 @@
     "semantic_hash": "6d45e3daeb205a0ca782b9868e607e6b"
   },
   "report/limitations.md": {
-    "mtime": 1791207193.2551248,
-    "seen": 1791207230.924505,
-    "ast_hash": "b97edd289783d68fea6ffb1528ae3920",
-    "semantic_hash": "b97edd289783d68fea6ffb1528ae3920"
+    "mtime": 1791788127.61523,
+    "seen": 1791788920.541315,
+    "ast_hash": "14012618733bae459f8bf3f03ab70556",
+    "semantic_hash": "14012618733bae459f8bf3f03ab70556"
   },
   "report/quantitative-claims-audit.md": {
     "mtime": 1790044861.125093,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791777766.7105246,
-    "seen": 1791777771.848619,
-    "ast_hash": "50697bd74b771faa3f8312d758df3785",
-    "semantic_hash": "50697bd74b771faa3f8312d758df3785"
+    "mtime": 1791788910.7537127,
+    "seen": 1791788920.5411277,
+    "ast_hash": "c849e0f72301e7e0e7609521ede19ba9",
+    "semantic_hash": "c849e0f72301e7e0e7609521ede19ba9"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -3924,16 +3924,16 @@
     "semantic_hash": "eda21d1a8c1bd81a98a06b847a9aac61"
   },
   "sim/adaptive_orchestrator.py": {
-    "mtime": 1791693423.1585617,
-    "seen": 1791724782.6793165,
-    "ast_hash": "7f4e23eb4a71949768e184e2fa12a3c8",
-    "semantic_hash": "7f4e23eb4a71949768e184e2fa12a3c8"
+    "mtime": 1791788085.9063718,
+    "seen": 1791788920.541195,
+    "ast_hash": "129ad61f2045a525f1c1d304452a7e29",
+    "semantic_hash": "129ad61f2045a525f1c1d304452a7e29"
   },
   "sim/test_adaptive_orchestrator.py": {
-    "mtime": 1791777566.4333513,
-    "seen": 1791777771.8487074,
-    "ast_hash": "e61eba0e10cadbd840709b944e27b82e",
-    "semantic_hash": "e61eba0e10cadbd840709b944e27b82e"
+    "mtime": 1791788049.310905,
+    "seen": 1791788920.5412204,
+    "ast_hash": "5e9f54004cf7bbfa9b6fe751f8f46575",
+    "semantic_hash": "5e9f54004cf7bbfa9b6fe751f8f46575"
   },
   "tools/adaptive_engine.py": {
     "mtime": 1791608197.0474367,

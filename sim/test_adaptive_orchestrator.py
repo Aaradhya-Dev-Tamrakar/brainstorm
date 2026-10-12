@@ -71,6 +71,20 @@ class TestAdaptiveOrchestrator(unittest.TestCase):
         model_violation, _ = AntigravityMemoryGovernor.assert_model_safety(4500)  # Heavy 7B model
         self.assertFalse(model_violation)
 
+    def test_01b_memory_governor_fails_safe_on_probe_failure(self):
+        """Verifies that complete memory probe failure halts safely rather than fabricating 4GB."""
+        from unittest.mock import patch
+        import sys
+        with patch.dict(sys.modules, {"psutil": None}):
+            with patch("sys.platform", "unknown_os"):
+                status = AntigravityMemoryGovernor.get_memory_status()
+                self.assertFalse(status["is_measured"])
+                self.assertFalse(status["is_antigravity_safe"])
+                self.assertEqual(status["available_mb"], 0)
+                self.assertEqual(status["nova_state"], "TELEMETRY_UNAVAILABLE_HALT")
+                safe_workers = AntigravityMemoryGovernor.calculate_worker_concurrency(status["available_mb"])
+                self.assertEqual(safe_workers, 0)
+
     def test_02_matrix_triage_boundaries(self):
         """Asserts V0, V1, V2 and R0, R1, R2 cell mapping against matrix definitions."""
         # Volume boundary tests
@@ -174,11 +188,31 @@ class TestAdaptiveOrchestrator(unittest.TestCase):
         self.assertIn("archetype", route)
         self.assertIn("latency_ms", route)
         self.assertIn("source", route)
+        self.assertIn("router_backend", route)
         self.assertTrue(
             route["source"].startswith("lm_studio_") or "heuristic" in route["source"] or route["source"] == "exemplar_cache",
             f"Unexpected source: {route['source']}"
         )
         self.assertEqual(route["primary_skill"], "academic-notebook-architect")
+
+    def test_05b_authoritative_fleet_router_contract(self):
+        """Verifies that FleetFirstBridge connects to authoritative Fleet-Orchestrator fast_intent_router."""
+        fleet_root = FleetFirstBridge.get_fleet_root()
+        self.assertTrue(fleet_root.exists(), f"Fleet root does not exist: {fleet_root}")
+        self.assertTrue((fleet_root / "tools" / "fast_intent_router.py").exists())
+        route = FleetFirstBridge.route_intent("Build autonomous multi-agent task dispatch swarm", force_heuristic=True)
+        self.assertIn("router_backend", route)
+        self.assertEqual(route["router_backend"], "authoritative_fleet_fast_intent_router")
+        self.assertEqual(route["archetype"], "SWARM_ORCHESTRATION")
+        self.assertEqual(route["primary_skill"], "fleet-orchestrator")
+
+    def test_05c_standalone_fallback_router_contract(self):
+        """Verifies that if Fleet root is unreachable, standalone fallback routes cleanly with explicit backend tag."""
+        from unittest.mock import patch
+        with patch.object(FleetFirstBridge, "get_fleet_root", return_value=Path("/nonexistent/fleet")):
+            route = FleetFirstBridge.route_intent("Scaffold IOE semester IV-II notes for CE 752", force_heuristic=True)
+            self.assertEqual(route["router_backend"], "brainstorm_standalone_fallback")
+            self.assertEqual(route["primary_skill"], "academic-notebook-architect")
 
     def test_06_context_firebreak_manifest(self):
         """Tests that subagent delivery manifests are strictly bounded to <300 words."""

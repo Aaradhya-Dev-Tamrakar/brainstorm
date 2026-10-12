@@ -151,7 +151,8 @@ class AntigravityMemoryGovernor:
     @classmethod
     def get_memory_status(cls) -> Dict[str, Any]:
         """Samples current system RAM using psutil or Win32 GlobalMemoryStatusEx fallback."""
-        total_mb, avail_mb, used_mb, percent = 16384, 4096, 12288, 75.0
+        total_mb, avail_mb, used_mb, percent = 0, 0, 0, 0.0
+        is_measured = False
 
         try:
             import psutil  # type: ignore
@@ -160,6 +161,7 @@ class AntigravityMemoryGovernor:
             avail_mb = int(vm.available / (1024 * 1024))
             used_mb = int(vm.used / (1024 * 1024))
             percent = float(vm.percent)
+            is_measured = True
         except Exception:
             if sys.platform == "win32":
                 try:
@@ -183,8 +185,21 @@ class AntigravityMemoryGovernor:
                         avail_mb = int(stat_buf.ullAvailPhys / (1024 * 1024))
                         used_mb = total_mb - avail_mb
                         percent = round((used_mb / total_mb) * 100.0, 1) if total_mb > 0 else 0.0
+                        is_measured = True
                 except Exception:
                     pass
+
+        if not is_measured:
+            return {
+                "total_mb": 0,
+                "available_mb": 0,
+                "used_mb": 0,
+                "percent_used": 100.0,
+                "is_antigravity_safe": False,
+                "min_headroom_required_mb": cls.MIN_RESERVE_FLOOR_MB,
+                "nova_state": "TELEMETRY_UNAVAILABLE_HALT",
+                "is_measured": False,
+            }
 
         is_safe = avail_mb >= cls.MIN_RESERVE_FLOOR_MB
         if avail_mb >= cls.NOVA_OPTIMIZED_THRESHOLD_MB:
@@ -204,6 +219,7 @@ class AntigravityMemoryGovernor:
             "is_antigravity_safe": is_safe,
             "min_headroom_required_mb": cls.MIN_RESERVE_FLOOR_MB,
             "nova_state": nova_state,
+            "is_measured": True,
         }
 
     @classmethod
@@ -1045,6 +1061,17 @@ class FleetFirstBridge:
             return False
 
     @classmethod
+    def get_fleet_root(cls) -> Path:
+        """Resolves Fleet-Orchestrator root dynamically from environment or workspace layout."""
+        env_root = os.getenv("FLEET_ORCHESTRATOR_ROOT")
+        if env_root and Path(env_root).exists():
+            return Path(env_root)
+        sibling = BRAINSTORM_ROOT.parent / "Fleet-Orchestrator"
+        if sibling.exists():
+            return sibling
+        return Path(r"F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator")
+
+    @classmethod
     def ensure_queue_worker_running(
         cls,
         concurrency: int = 4,
@@ -1057,7 +1084,7 @@ class FleetFirstBridge:
         if cls.is_queue_worker_active():
             return True
 
-        target_fleet = Path(fleet_root or r"F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator")
+        target_fleet = Path(fleet_root) if fleet_root else cls.get_fleet_root()
         worker_script = target_fleet / "tools" / "copilot_queue_worker.py"
         if not worker_script.exists():
             return False
@@ -1170,7 +1197,9 @@ class FleetFirstBridge:
 
         # Delegate to authoritative fast_intent_router in Fleet-Orchestrator
         try:
-            fleet_tools = Path(r"F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator\tools")
+            fleet_tools = cls.get_fleet_root() / "tools"
+            if not fleet_tools.exists():
+                raise FileNotFoundError(f"Fleet tools directory not found at {fleet_tools}")
             if str(fleet_tools) not in sys.path:
                 sys.path.insert(0, str(fleet_tools))
             import fast_intent_router
@@ -1195,6 +1224,7 @@ class FleetFirstBridge:
             else:
                 result = authoritative_route_intent(prompt)
 
+            result["router_backend"] = "authoritative_fleet_fast_intent_router"
             cls._router_telemetry["total_requests"] += 1
             if "lm_studio" in result.get("source", ""):
                 cls._router_telemetry["lm_studio_hits"] += 1
@@ -1202,8 +1232,8 @@ class FleetFirstBridge:
                 cls._router_telemetry["fallback_count"] += 1
             cls._router_telemetry["last_latency_ms"] = result.get("latency_ms", round((time.perf_counter() - start) * 1000, 2))
             return result
-        except Exception:
-            pass
+        except Exception as exc:
+            cls._router_telemetry["last_fallback_reason"] = f"{type(exc).__name__}: {exc}"
 
         # Self-contained safe fallback matching the 9 archetypes
         elapsed = (time.perf_counter() - start) * 1000.0
@@ -1248,6 +1278,7 @@ class FleetFirstBridge:
             "time_allocation": time_alloc,
             "latency_ms": round(elapsed, 2),
             "source": "deterministic_heuristic",
+            "router_backend": "brainstorm_standalone_fallback",
         }
 
     @classmethod
@@ -1330,7 +1361,7 @@ class FleetFirstBridge:
             },
         }
 
-        target_dir = output_dir or r"F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator\orchestrator-state\tasks"
+        target_dir = output_dir or str(cls.get_fleet_root() / "orchestrator-state" / "tasks")
         if os.path.exists(target_dir):
             file_path = os.path.join(target_dir, f"{canonical_id}.json")
             try:

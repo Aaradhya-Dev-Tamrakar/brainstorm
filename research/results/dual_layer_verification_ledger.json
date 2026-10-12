@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-12T12:53:30.697157+05:45",
-  "evaluated_commit": "a6e00697bb917c58e36f383b1a414a3be5ff5799",
+  "timestamp": "2026-10-12T14:12:43.189518+05:45",
+  "evaluated_commit": "49bfc062fe788ff25420e12c41c441af919e4f81",
   "lineage_type": "ancestor_snapshot",
   "provenance_note": "Persisted snapshot from pre-commit reconciliation; automated CI generates per-run ledger matching exact tested HEAD.",
   "layer_1_structural_consistency": {
@@ -10,7 +10,7 @@
   },
   "layer_2_behavioral_reproducibility": {
     "status": "PASSED",
-    "tests_run": 66,
+    "tests_run": 67,
     "errors": 0,
     "tier": "E4"
   },

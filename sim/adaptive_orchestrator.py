@@ -1327,6 +1327,8 @@ class FleetFirstBridge:
         task_data = {
             "id": canonical_id,
             "parent_id": parent_id,
+            "stage": "execution",
+            "stage_order": 1,
             "kind": kind,
             "spec": prompt,
             "status": "pending",

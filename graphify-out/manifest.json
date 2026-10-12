@@ -24,10 +24,10 @@
     "semantic_hash": "fe271b9b041d088da4e4a171e190aa7c"
   },
   "sim/reconciliation_engine.py": {
-    "mtime": 1791788184.5304785,
-    "seen": 1791788920.5412102,
-    "ast_hash": "dd86fa73b2e568d743f6f67b8e33d512",
-    "semantic_hash": "dd86fa73b2e568d743f6f67b8e33d512"
+    "mtime": 1791796656.5751722,
+    "seen": 1791796873.7934787,
+    "ast_hash": "81145eceeaf1ad896aa4119ef0b9e117",
+    "semantic_hash": "81145eceeaf1ad896aa4119ef0b9e117"
   },
   "sim/sweep_ipu_breakeven.py": {
     "mtime": 1790044861.1795669,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791796465.9657054,
-    "seen": 1791796471.8970792,
-    "ast_hash": "ce78351ee169875e611db6b24782c772",
-    "semantic_hash": "ce78351ee169875e611db6b24782c772"
+    "mtime": 1791796867.0022357,
+    "seen": 1791796873.7932596,
+    "ast_hash": "20b45c9cd0f026d9acd665abe7c99cf2",
+    "semantic_hash": "20b45c9cd0f026d9acd665abe7c99cf2"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -3924,16 +3924,16 @@
     "semantic_hash": "eda21d1a8c1bd81a98a06b847a9aac61"
   },
   "sim/adaptive_orchestrator.py": {
-    "mtime": 1791795606.5039382,
-    "seen": 1791796327.2695045,
-    "ast_hash": "a6272bd6a2c926f3c5463e17bdde7300",
-    "semantic_hash": "a6272bd6a2c926f3c5463e17bdde7300"
+    "mtime": 1791796671.3939257,
+    "seen": 1791796873.7934284,
+    "ast_hash": "ba59bfc842755b2ff4965ce14183493b",
+    "semantic_hash": "ba59bfc842755b2ff4965ce14183493b"
   },
   "sim/test_adaptive_orchestrator.py": {
-    "mtime": 1791796281.689602,
-    "seen": 1791796327.269551,
-    "ast_hash": "6502f0d8c3f818e8cf4680915ff63290",
-    "semantic_hash": "6502f0d8c3f818e8cf4680915ff63290"
+    "mtime": 1791796764.623434,
+    "seen": 1791796873.7935083,
+    "ast_hash": "5a8bb511bb3a693f9df367f0c8636b17",
+    "semantic_hash": "5a8bb511bb3a693f9df367f0c8636b17"
   },
   "tools/adaptive_engine.py": {
     "mtime": 1791608197.0474367,

@@ -75,8 +75,15 @@ class TestAdaptiveOrchestrator(unittest.TestCase):
         """Verifies that complete memory probe failure halts safely rather than fabricating 4GB."""
         from unittest.mock import patch
         import sys
+        orig_exists = os.path.exists
+
+        def fake_exists(p):
+            if str(p) == "/proc/meminfo":
+                return False
+            return orig_exists(p)
+
         with patch.dict(sys.modules, {"psutil": None}):
-            with patch("sys.platform", "unknown_os"):
+            with patch("sys.platform", "unknown_os"), patch("os.path.exists", side_effect=fake_exists):
                 status = AntigravityMemoryGovernor.get_memory_status()
                 self.assertFalse(status["is_measured"])
                 self.assertFalse(status["is_antigravity_safe"])

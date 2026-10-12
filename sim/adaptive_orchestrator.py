@@ -1085,9 +1085,15 @@ class FleetFirstBridge:
         env_root = os.getenv("FLEET_ORCHESTRATOR_ROOT")
         if env_root and Path(env_root).exists():
             return Path(env_root)
-        sibling = BRAINSTORM_ROOT.parent / "Fleet-Orchestrator"
-        if sibling.exists():
-            return sibling
+        candidate_paths = [
+            BRAINSTORM_ROOT / ".fleet-orchestrator",
+            BRAINSTORM_ROOT.parent / "Fleet-Orchestrator",
+            BRAINSTORM_ROOT.parent / ".fleet-orchestrator",
+            Path(r"F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator"),
+        ]
+        for p in candidate_paths:
+            if p.exists():
+                return p
         return Path(r"F:\Aaradhya-Dev-Tamrakar\Fleet-Orchestrator")
 
     @classmethod

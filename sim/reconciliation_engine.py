@@ -480,7 +480,7 @@ def audit_layer_1_consistency():
     
     all_files = {}
     for root, dirs, files in os.walk(BRAINSTORM_ROOT):
-        if ".git" in root or "node_modules" in root or "graphify-out" in root:
+        if ".git" in root or "node_modules" in root or "graphify-out" in root or ".fleet-orchestrator" in root or ".venv" in root:
             continue
         for f in files:
             if f.endswith((".md", ".py", ".json", ".yaml", ".yml")):

@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1792031392.9825983,
-    "seen": 1792031414.8874843,
-    "ast_hash": "89487ad425f233ec46e73acc655c2006",
-    "semantic_hash": "89487ad425f233ec46e73acc655c2006"
+    "mtime": 1792061915.95717,
+    "seen": 1792061925.8270636,
+    "ast_hash": "4ac214d8b57b8ced9a6b00e0c52098b6",
+    "semantic_hash": "4ac214d8b57b8ced9a6b00e0c52098b6"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -4270,5 +4270,23 @@
     "seen": 1791630254.7636504,
     "ast_hash": "0fff513ca2007f44f5fb5171f78b49ad",
     "semantic_hash": "0fff513ca2007f44f5fb5171f78b49ad"
+  },
+  "tools/gemini_onboarding_automation.py": {
+    "mtime": 1792061684.040154,
+    "seen": 1792061778.3905826,
+    "ast_hash": "f120790985e1db16f02e667e18a6500f",
+    "semantic_hash": "f120790985e1db16f02e667e18a6500f"
+  },
+  "tools/verify_gemini_key.py": {
+    "mtime": 1792061799.7751358,
+    "seen": 1792061851.8179262,
+    "ast_hash": "ea7a15357ad212a95027603565b84af6",
+    "semantic_hash": "ea7a15357ad212a95027603565b84af6"
+  },
+  "research/notes/SOP-GEMINI-001_virgin_account_onboarding.md": {
+    "mtime": 1792061870.7682142,
+    "seen": 1792061925.8275235,
+    "ast_hash": "0152bf3eac898a2a2c172f101c6eb3e2",
+    "semantic_hash": "0152bf3eac898a2a2c172f101c6eb3e2"
   }
 }

@@ -6,10 +6,10 @@
     "semantic_hash": "1f807d3a09fa490b7f5315226b97cf4b"
   },
   "schemas/ecosystem.registry.json": {
-    "mtime": 1792031370.8748224,
-    "seen": 1792031414.8874946,
-    "ast_hash": "29e3d851f61b8f52efa01f4c3d3f4530",
-    "semantic_hash": "29e3d851f61b8f52efa01f4c3d3f4530"
+    "mtime": 1792062324.935768,
+    "seen": 1792062354.6076224,
+    "ast_hash": "61758bb208376731a04cce67d53fab62",
+    "semantic_hash": "61758bb208376731a04cce67d53fab62"
   },
   "schemas/examples/AI-Constraint-Solver.contract.json": {
     "mtime": 1790044861.17107,
@@ -24,10 +24,10 @@
     "semantic_hash": "fe271b9b041d088da4e4a171e190aa7c"
   },
   "sim/reconciliation_engine.py": {
-    "mtime": 1791796656.5751722,
-    "seen": 1791796873.7934787,
-    "ast_hash": "81145eceeaf1ad896aa4119ef0b9e117",
-    "semantic_hash": "81145eceeaf1ad896aa4119ef0b9e117"
+    "mtime": 1792062261.8142715,
+    "seen": 1792062354.6077778,
+    "ast_hash": "a80bc51da369c6fd5a6e18a6aa7da6c9",
+    "semantic_hash": "a80bc51da369c6fd5a6e18a6aa7da6c9"
   },
   "sim/sweep_ipu_breakeven.py": {
     "mtime": 1790044861.1795669,
@@ -102,10 +102,10 @@
     "semantic_hash": "5b018a5335bcfda1d7e220f7b2eaa4d8"
   },
   "schemas/capability-ontology.md": {
-    "mtime": 1791726204.0357413,
-    "seen": 1791726224.117878,
-    "ast_hash": "73826a1ec762cec79f0a67b1a8749748",
-    "semantic_hash": "73826a1ec762cec79f0a67b1a8749748"
+    "mtime": 1792062324.944278,
+    "seen": 1792062354.6082776,
+    "ast_hash": "5930d90ade8a3d868c5f83ce5dd545e8",
+    "semantic_hash": "5930d90ade8a3d868c5f83ce5dd545e8"
   },
   "schemas/evidence-policy.md": {
     "mtime": 1790044861.17107,
@@ -192,10 +192,10 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1791726204.043742,
-    "seen": 1791726224.1177187,
-    "ast_hash": "22758814d88f464794019712a92d4496",
-    "semantic_hash": "22758814d88f464794019712a92d4496"
+    "mtime": 1792062324.9462883,
+    "seen": 1792062354.607988,
+    "ast_hash": "8cfc5a324b84aa01505e96cf4427cb03",
+    "semantic_hash": "8cfc5a324b84aa01505e96cf4427cb03"
   },
   "report/economic-model.md": {
     "mtime": 1790234914.4392133,
@@ -210,10 +210,10 @@
     "semantic_hash": "6d45e3daeb205a0ca782b9868e607e6b"
   },
   "report/limitations.md": {
-    "mtime": 1791788127.61523,
-    "seen": 1791788920.541315,
-    "ast_hash": "14012618733bae459f8bf3f03ab70556",
-    "semantic_hash": "14012618733bae459f8bf3f03ab70556"
+    "mtime": 1792062324.9487882,
+    "seen": 1792062354.6080103,
+    "ast_hash": "a1e014b040ad10be74ad8e92068e230a",
+    "semantic_hash": "a1e014b040ad10be74ad8e92068e230a"
   },
   "report/quantitative-claims-audit.md": {
     "mtime": 1790044861.125093,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1792061915.95717,
-    "seen": 1792061925.8270636,
-    "ast_hash": "4ac214d8b57b8ced9a6b00e0c52098b6",
-    "semantic_hash": "4ac214d8b57b8ced9a6b00e0c52098b6"
+    "mtime": 1792062344.524623,
+    "seen": 1792062354.6076105,
+    "ast_hash": "da3f0de949380fcde68d489cc8f6823c",
+    "semantic_hash": "da3f0de949380fcde68d489cc8f6823c"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -4272,21 +4272,21 @@
     "semantic_hash": "0fff513ca2007f44f5fb5171f78b49ad"
   },
   "tools/gemini_onboarding_automation.py": {
-    "mtime": 1792061684.040154,
-    "seen": 1792061778.3905826,
-    "ast_hash": "f120790985e1db16f02e667e18a6500f",
-    "semantic_hash": "f120790985e1db16f02e667e18a6500f"
+    "mtime": 1792061991.9471047,
+    "seen": 1792062354.6078453,
+    "ast_hash": "741b3a5eaad0e4a77020bedfc8fb21e9",
+    "semantic_hash": "741b3a5eaad0e4a77020bedfc8fb21e9"
   },
   "tools/verify_gemini_key.py": {
-    "mtime": 1792061799.7751358,
-    "seen": 1792061851.8179262,
-    "ast_hash": "ea7a15357ad212a95027603565b84af6",
-    "semantic_hash": "ea7a15357ad212a95027603565b84af6"
+    "mtime": 1792061991.9471047,
+    "seen": 1792062354.6079774,
+    "ast_hash": "5de5d8127b12aae05635138fb8441136",
+    "semantic_hash": "5de5d8127b12aae05635138fb8441136"
   },
   "research/notes/SOP-GEMINI-001_virgin_account_onboarding.md": {
-    "mtime": 1792061870.7682142,
-    "seen": 1792061925.8275235,
-    "ast_hash": "0152bf3eac898a2a2c172f101c6eb3e2",
-    "semantic_hash": "0152bf3eac898a2a2c172f101c6eb3e2"
+    "mtime": 1792061991.9461048,
+    "seen": 1792062354.6082249,
+    "ast_hash": "08cf0870b204868413f5c92ed4a135f9",
+    "semantic_hash": "08cf0870b204868413f5c92ed4a135f9"
   }
 }

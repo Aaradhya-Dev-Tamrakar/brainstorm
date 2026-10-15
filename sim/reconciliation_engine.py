@@ -116,18 +116,21 @@ def get_git_branch_info():
             else:
                 branches.add(b)
 
-        # In shallow/CI checkouts where only 1 ref was fetched, query ls-remote as fallback
+        # In shallow/CI checkouts or forks where only 1 ref was fetched, query ls-remote as fallback
         if len(branches) < 20:
-            try:
-                ls_out = subprocess.check_output(["git", "ls-remote", "--heads", "origin"], cwd=BRAINSTORM_ROOT, text=True, stderr=subprocess.DEVNULL)
-                for line in ls_out.splitlines():
-                    parts = line.strip().split()
-                    if len(parts) >= 2 and parts[1].startswith('refs/heads/'):
-                        rb = parts[1].replace('refs/heads/', '')
-                        branches.add(rb)
-                        remote_branches.add(rb)
-            except Exception:
-                pass
+            for remote_target in ["origin", "upstream", "https://github.com/Aaradhya-Dev-Tamrakar/brainstorm.git"]:
+                try:
+                    ls_out = subprocess.check_output(["git", "ls-remote", "--heads", remote_target], cwd=BRAINSTORM_ROOT, text=True, stderr=subprocess.DEVNULL)
+                    for line in ls_out.splitlines():
+                        parts = line.strip().split()
+                        if len(parts) >= 2 and parts[1].startswith('refs/heads/'):
+                            rb = parts[1].replace('refs/heads/', '')
+                            branches.add(rb)
+                            remote_branches.add(rb)
+                    if len(branches) >= 20:
+                        break
+                except Exception:
+                    pass
 
         return branches, remote_branches, len(branches), len(remote_branches)
     except Exception as e:

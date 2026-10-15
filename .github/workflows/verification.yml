@@ -55,9 +55,11 @@ jobs:
 
       - name: Checkout Fleet-Orchestrator (Integration Dependency)
         uses: actions/checkout@v4
+        continue-on-error: true
         with:
           repository: AaradhyaDT/Fleet-Orchestrator
           path: .fleet-orchestrator
+          token: ${{ secrets.GH_PAT || github.token }}
 
       - uses: actions/setup-python@v5
         with:

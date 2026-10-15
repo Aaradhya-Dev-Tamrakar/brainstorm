@@ -95,10 +95,162 @@ export function resolveSubjectFolder(notebookId) {
 }
 
 /**
+ * Checks whether a filename already has a numeric prefix (e.g. "1 - ", "0.2 - ").
+ * Returns true if the name starts with a numbering pattern we would produce.
+ */
+function hasNumericPrefix(name) {
+  return /^\d+(\.\d+)?\s*-\s/.test(name);
+}
+
+/**
+ * Checks whether a folder name already has a numeric prefix (e.g. "0. ", "3. ").
+ */
+function hasFolderNumericPrefix(name) {
+  return /^\d+\.\s/.test(name);
+}
+
+/**
+ * Enumerates files in a directory with ascending numeric prefixes, oldest-generated first.
+ *
+ * Modes:
+ * - Single-notebook (folderIndex === null): files get "1 - Title.ext", "2 - Title.ext", ...
+ * - Multi-notebook  (folderIndex is a number): files get "N.1 - Title.ext", "N.2 - Title.ext", ...
+ *
+ * Already-numbered files (matching the prefix pattern) are skipped entirely when ALL files
+ * in the directory already have prefixes. Otherwise all files are re-numbered cleanly.
+ * Sorting uses birthtime (creation time) ascending so oldest-generated comes first.
+ */
+export function enumerateFiles(dir, folderIndex = null) {
+  const entries = fs.readdirSync(dir, { withFileTypes: true }).filter((e) => e.isFile());
+  if (entries.length === 0) return;
+
+  // Skip if all files already have numeric prefixes
+  const unnumbered = entries.filter((e) => !hasNumericPrefix(e.name));
+  if (unnumbered.length === 0) {
+    console.log(`[Enumerate] Skipping ${path.basename(dir)} — all files already numbered.`);
+    return;
+  }
+
+  // Sort all files by creation time ascending (oldest first)
+  const filesWithStats = entries.map((e) => {
+    const fullPath = path.join(dir, e.name);
+    const stat = fs.statSync(fullPath);
+    return { name: e.name, fullPath, birthtime: stat.birthtime };
+  });
+  filesWithStats.sort((a, b) => a.birthtime - b.birthtime);
+
+  // Rename each file with its ascending index
+  // Two-pass rename to prevent collisions (e.g. "1 - X.mp4" being overwritten before it's renamed)
+  const renames = [];
+  for (let i = 0; i < filesWithStats.length; i++) {
+    const file = filesWithStats[i];
+    // Strip any existing numeric prefix before re-numbering
+    const cleanName = file.name.replace(/^\d+(\.\d+)?\s*-\s*/, "");
+    const seqNum = i + 1;
+    const prefix = folderIndex !== null ? `${folderIndex}.${seqNum}` : `${seqNum}`;
+    const newName = `${prefix} - ${cleanName}`;
+
+    if (newName !== file.name) {
+      // Pass 1: rename to a temp name to avoid mid-loop collisions
+      const tmpName = `__enum_tmp_${i}_${Date.now()}${path.extname(file.name)}`;
+      const tmpPath = path.join(dir, tmpName);
+      fs.renameSync(file.fullPath, tmpPath);
+      renames.push({ tmpPath, finalPath: path.join(dir, newName), oldName: file.name, newName });
+    }
+  }
+
+  // Pass 2: rename temps to final names
+  for (const { tmpPath, finalPath, oldName, newName } of renames) {
+    fs.renameSync(tmpPath, finalPath);
+    console.log(`[Enumerate] ${oldName} → ${newName}`);
+  }
+}
+
+/**
+ * Enumerates folders (and files within each) for multi-notebook batch downloads.
+ *
+ * Folders are numbered "0. FolderName", "1. FolderName", ... sorted by the oldest
+ * file creation time within each folder (i.e., the notebook whose artifacts were
+ * generated first gets index 0).
+ *
+ * Files inside each numbered folder get sub-indices: "0.1 - Title.ext", etc.
+ *
+ * If no subfolders exist (single-notebook download), falls back to flat file enumeration.
+ */
+export function enumerateFolders(rootDir) {
+  const entries = fs.readdirSync(rootDir, { withFileTypes: true });
+  const subDirs = entries.filter((e) => e.isDirectory());
+  const topFiles = entries.filter((e) => e.isFile());
+
+  if (subDirs.length === 0 && topFiles.length > 0) {
+    // Single-notebook mode: only files at root level
+    console.log(`[Enumerate] Single-notebook mode — numbering ${topFiles.length} file(s).`);
+    enumerateFiles(rootDir, null);
+    return;
+  }
+
+  if (subDirs.length === 0) return;
+
+  // Multi-notebook mode: number folders, then files within each
+
+  // For each subfolder, find the oldest file birthtime as the folder's sort key
+  const foldersWithAge = subDirs.map((d) => {
+    const dirPath = path.join(rootDir, d.name);
+    const files = fs.readdirSync(dirPath, { withFileTypes: true }).filter((e) => e.isFile());
+    let oldestBirth = new Date(); // fallback to now if empty
+    for (const f of files) {
+      const stat = fs.statSync(path.join(dirPath, f.name));
+      if (stat.birthtime < oldestBirth) oldestBirth = stat.birthtime;
+    }
+    return { name: d.name, dirPath, oldestBirth };
+  });
+
+  // Sort folders by their oldest contained file (oldest-generated notebook first)
+  foldersWithAge.sort((a, b) => a.oldestBirth - b.oldestBirth);
+
+  // Two-pass rename to prevent collisions (e.g. "1. X" blocking "0. X" rename)
+  const folderRenames = [];
+  for (let i = 0; i < foldersWithAge.length; i++) {
+    const folder = foldersWithAge[i];
+    const cleanFolderName = folder.name.replace(/^\d+\.\s*/, "");
+    const newFolderName = `${i}. ${cleanFolderName}`;
+
+    if (newFolderName !== folder.name) {
+      const tmpName = `__enum_dir_tmp_${i}_${Date.now()}`;
+      const tmpPath = path.join(rootDir, tmpName);
+      fs.renameSync(folder.dirPath, tmpPath);
+      folderRenames.push({ tmpPath, finalPath: path.join(rootDir, newFolderName), oldName: folder.name, newName: newFolderName, index: i });
+    } else {
+      folderRenames.push({ tmpPath: null, finalPath: folder.dirPath, oldName: folder.name, newName: newFolderName, index: i });
+    }
+  }
+
+  // Pass 2: rename temps to final folder names
+  for (const r of folderRenames) {
+    if (r.tmpPath) {
+      fs.renameSync(r.tmpPath, r.finalPath);
+      console.log(`[Enumerate] Folder: ${r.oldName} → ${r.newName}`);
+    }
+  }
+
+  // Pass 3: enumerate files inside each (now-renamed) folder
+  for (const r of folderRenames) {
+    enumerateFiles(r.finalPath, r.index);
+  }
+
+  // Also number any loose files at the root level (rare, but handle gracefully)
+  if (topFiles.length > 0) {
+    enumerateFiles(rootDir, null);
+  }
+}
+
+/**
  * Downloads all completed artifacts into the subject directory.
  * Guarantee: Downloads are staged outside of repository, then moved into target subject folder.
+ * After download, files are auto-enumerated with ascending numeric prefixes (oldest first).
  */
-export function downloadArtifacts(notebookId, targetDir) {
+export function downloadArtifacts(notebookId, targetDir, options = {}) {
+  const { enumerate = true } = options;
   console.log(`[Super-NLM] Downloading artifacts for notebook ${notebookId}...`);
   console.log(`[Super-NLM] Target Subject Directory: ${targetDir}`);
 
@@ -135,6 +287,11 @@ export function downloadArtifacts(notebookId, targetDir) {
     if (fs.existsSync(stagingDir)) {
       fs.rmSync(stagingDir, { recursive: true, force: true });
     }
+  }
+
+  // Auto-enumerate files (single-notebook: flat file numbering)
+  if (enumerate) {
+    enumerateFiles(targetDir, null);
   }
 
   return targetDir;
@@ -255,6 +412,7 @@ async function main() {
   if (args.length === 0 || args.includes("--help") || args.includes("-h")) {
     console.log(`
 Usage: node download_and_share.mjs <notebook_url_or_id> [options]
+       node download_and_share.mjs --enumerate-output <path>
 
 Options:
   --to <alias>               Target LocalSend peer (default: V2029)
@@ -263,8 +421,24 @@ Options:
   --files-only               Bundle requested/downloaded files into a dated subfolder (<name>_YYYY-MM-DD) and share
   --filter <keyword>         Filter specific files (can specify multiple times)
   --subfolder-name <name>    Custom prefix for the dated subfolder
+  --no-enumerate             Skip automatic file numbering after download
+  --enumerate-output <path>  Number files/folders in an existing output directory
+                             (auto-detects single vs multi-notebook layout)
     `);
     process.exit(0);
+  }
+
+  // Standalone enumerate mode: number an existing folder without downloading
+  if (args.includes("--enumerate-output")) {
+    const outputPath = args[args.indexOf("--enumerate-output") + 1];
+    if (!outputPath || !fs.existsSync(outputPath)) {
+      console.error(`[Enumerate] Directory not found: ${outputPath}`);
+      process.exit(1);
+    }
+    console.log(`[Enumerate] Numbering files in: ${outputPath}`);
+    enumerateFolders(outputPath);
+    console.log(`[Enumerate] Done.`);
+    return;
   }
 
   const inputUrl = args[0];
@@ -277,6 +451,7 @@ Options:
   const peerAlias = args.includes("--to") ? args[args.indexOf("--to") + 1] : "V2029";
   const shouldShare = args.includes("--share") || args.includes("--share-only");
   const filesOnly = args.includes("--files-only");
+  const noEnumerate = args.includes("--no-enumerate");
   const subfolderPrefix = args.includes("--subfolder-name") ? args[args.indexOf("--subfolder-name") + 1] : null;
 
   const filters = [];
@@ -289,7 +464,7 @@ Options:
   const { targetDir } = resolveSubjectFolder(notebookId);
 
   if (!args.includes("--share-only")) {
-    downloadArtifacts(notebookId, targetDir);
+    downloadArtifacts(notebookId, targetDir, { enumerate: !noEnumerate });
   }
 
   if (shouldShare || filesOnly) {

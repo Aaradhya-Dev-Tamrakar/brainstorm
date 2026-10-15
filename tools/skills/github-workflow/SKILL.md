@@ -1,7 +1,7 @@
 ---
 name: github-workflow
 description: Default, authoritative workflow for all GitHub development, feature work, bug fixes, refactoring, issue tracking, branch isolation, ecosystem multi-remote synchronization, and pull request reviews. This skill should be used whenever working on GitHub repositories, implementing features, fixing bugs, creating issues, switching branches, syncing code, opening pull requests, or following standard Git development lifecycles.
-version: 1.4.0
+version: 1.4.1
 ---
 
 # Default GitHub Development Workflow
@@ -284,6 +284,9 @@ This guarantees that documentation commits, research transcripts, and operationa
 ---
 
 ### Step 6: Multi-Remote Ecosystem Synchronization
+
+**Wrapper preflight and post-merge cleanup:** Before passing `/?`, `--help`, or another help switch to a repository sync wrapper, inspect its argument routing or use its documented `-WhatIf` preview. A wrapper that does not recognize help may run a normal push. After a PR merge, do not sync the merged feature branch: that can recreate its deleted remote ref. Switch to the base branch, run the wrapper's safe pull-only mode, and verify the merged PR, branch refs, and clean working tree.
+
 
 Check the repository for synchronization automation in order of precedence:
 1. **Root `Makefile` / `make.bat`**: Universal entrypoint across Linux, macOS, and Windows.

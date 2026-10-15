@@ -6,10 +6,10 @@
     "semantic_hash": "1f807d3a09fa490b7f5315226b97cf4b"
   },
   "schemas/ecosystem.registry.json": {
-    "mtime": 1791829176.5110676,
-    "seen": 1791829201.856472,
-    "ast_hash": "05e8ab8d123a341bd181e2a8d47f1008",
-    "semantic_hash": "05e8ab8d123a341bd181e2a8d47f1008"
+    "mtime": 1792031370.8748224,
+    "seen": 1792031414.8874946,
+    "ast_hash": "29e3d851f61b8f52efa01f4c3d3f4530",
+    "semantic_hash": "29e3d851f61b8f52efa01f4c3d3f4530"
   },
   "schemas/examples/AI-Constraint-Solver.contract.json": {
     "mtime": 1790044861.17107,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1791829193.4605522,
-    "seen": 1791829201.8564665,
-    "ast_hash": "3bcb77f3602ec603cc5e3690dcce2903",
-    "semantic_hash": "3bcb77f3602ec603cc5e3690dcce2903"
+    "mtime": 1792031392.9825983,
+    "seen": 1792031414.8874843,
+    "ast_hash": "89487ad425f233ec46e73acc655c2006",
+    "semantic_hash": "89487ad425f233ec46e73acc655c2006"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -1158,10 +1158,10 @@
     "semantic_hash": "dde485e0a985382fbbd85d1544a74653"
   },
   "tools/skills/github-workflow/SKILL.md": {
-    "mtime": 1791829153.9345,
-    "seen": 1791829201.856839,
-    "ast_hash": "eca22c221406a6316fbe2e75b6bcdd77",
-    "semantic_hash": "eca22c221406a6316fbe2e75b6bcdd77"
+    "mtime": 1792029227.4556196,
+    "seen": 1792031414.888366,
+    "ast_hash": "f533324e95fbb56af2797764e204a2c8",
+    "semantic_hash": "f533324e95fbb56af2797764e204a2c8"
   },
   "tools/skills/github-workflow/examples/templates.md": {
     "mtime": 1791439845.3062901,
@@ -1266,22 +1266,22 @@
     "semantic_hash": "e849b1b0ab1fb6b82522b68e07c67e17"
   },
   "tools/skills/super-nlm-downloads/scripts/download_and_share.mjs": {
-    "mtime": 1790923072.3596606,
-    "seen": 1790923418.870812,
-    "ast_hash": "35a3527cdd0729d69f5ccef44cd06bca",
-    "semantic_hash": "35a3527cdd0729d69f5ccef44cd06bca"
+    "mtime": 1792030870.5571084,
+    "seen": 1792031414.8877733,
+    "ast_hash": "d0cf24a6eac2074dbd274fa61b4fc6d3",
+    "semantic_hash": "d0cf24a6eac2074dbd274fa61b4fc6d3"
   },
   "tools/skills/super-nlm-downloads/SKILL.md": {
-    "mtime": 1790923116.549851,
-    "seen": 1790923418.8709698,
-    "ast_hash": "4142f289d55ed2e069879f6551f62656",
-    "semantic_hash": "4142f289d55ed2e069879f6551f62656"
+    "mtime": 1792030266.2995298,
+    "seen": 1792031414.8888204,
+    "ast_hash": "f105b9b00a2e49e5cc1478d3b32463cd",
+    "semantic_hash": "f105b9b00a2e49e5cc1478d3b32463cd"
   },
   "tools/skills/super-nlm/SKILL.md": {
-    "mtime": 1790923185.8411875,
-    "seen": 1790923418.870971,
-    "ast_hash": "0fb01a1bc7ae1ec472d63ae1f7d83ab4",
-    "semantic_hash": "0fb01a1bc7ae1ec472d63ae1f7d83ab4"
+    "mtime": 1792029227.4266193,
+    "seen": 1792031414.8888228,
+    "ast_hash": "f9a8db951e4f06ef2270c4bdc5ad0a8d",
+    "semantic_hash": "f9a8db951e4f06ef2270c4bdc5ad0a8d"
   },
   "GEMINI.md": {
     "mtime": 1790923556.006012,

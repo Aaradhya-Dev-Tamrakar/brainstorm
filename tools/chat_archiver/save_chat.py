@@ -4,7 +4,19 @@ import re
 import json
 import argparse
 import urllib.request
+import subprocess
+import shutil
 from datetime import datetime
+
+try:
+    from bs4 import BeautifulSoup
+except ImportError:
+    BeautifulSoup = None
+
+try:
+    from markdownify import markdownify as md
+except ImportError:
+    md = None
 
 def clean_text(text: str) -> str:
     """Normalize text and remove citation markers / artifacts."""
@@ -14,6 +26,23 @@ def clean_text(text: str) -> str:
     text = re.sub(r'cite.*?', '', text)
     text = re.sub(r'[\ue200\ue201\ue202\ufffd]|turn[0-9]+view[0-9]+', '', text)
     return text.strip()
+
+def find_browser_executable() -> str:
+    """Locate headless Chromium binary (Chrome or Edge) on Windows or Unix."""
+    paths = [
+        r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+        r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+        r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
+        r"C:\Program Files\Microsoft\Edge\Application\msedge.exe"
+    ]
+    for p in paths:
+        if os.path.exists(p):
+            return p
+    for cmd in ["chrome", "google-chrome", "msedge", "edge", "chromium"]:
+        found = shutil.which(cmd)
+        if found:
+            return found
+    return None
 
 def parse_chatgpt_share(url: str):
     headers = {
@@ -109,39 +138,122 @@ def parse_chatgpt_share(url: str):
 
     return title, turns
 
+def parse_gemini_share(url: str):
+    """Parses Google Gemini public shared chat links (share.gemini.google or gemini.google.com/share)."""
+    if not BeautifulSoup:
+        raise RuntimeError("beautifulsoup4 is required to parse Gemini shared links. Please install it with 'pip install beautifulsoup4'.")
+    if not md:
+        raise RuntimeError("markdownify is required to parse Gemini shared links. Please install it with 'pip install markdownify'.")
+
+    browser_exe = find_browser_executable()
+    if not browser_exe:
+        raise RuntimeError("No Chromium browser (Chrome or Edge) found to render Gemini dynamic share pages.")
+
+    cmd = [
+        browser_exe,
+        '--headless=new',
+        '--disable-gpu',
+        '--virtual-time-budget=8000',
+        '--dump-dom',
+        url
+    ]
+    res = subprocess.run(cmd, capture_output=True, text=True, encoding='utf-8', errors='ignore')
+    if res.returncode != 0 and not res.stdout:
+        raise RuntimeError(f"Headless browser failed to render Gemini share link: {res.stderr}")
+
+    soup = BeautifulSoup(res.stdout, 'html.parser')
+
+    # Extract conversation title
+    title = "Gemini Conversation"
+    h1 = soup.find('h1')
+    if h1 and h1.get_text(strip=True):
+        title = h1.get_text(strip=True)
+    else:
+        og_title = soup.find('meta', property='og:title')
+        if og_title and og_title.get('content'):
+            cleaned = og_title['content'].replace('\u200e', '').replace('Gemini - direct access to Google AI', '').strip()
+            if cleaned:
+                title = cleaned
+
+    turns = []
+    turn_viewers = soup.find_all('share-turn-viewer')
+    for tv in turn_viewers:
+        # Extract user query
+        uq = tv.find('user-query')
+        if uq:
+            query_lines = [p.get_text(strip=True) for p in uq.find_all('p', class_='query-text-line')]
+            if not query_lines:
+                for hidden in uq.find_all(class_=re.compile(r'visually-hidden|screen-reader')):
+                    hidden.decompose()
+                u_text = uq.get_text('\n', strip=True)
+                if u_text.startswith('You said'):
+                    u_text = u_text[len('You said'):].strip()
+            else:
+                u_text = '\n\n'.join(query_lines)
+            if u_text:
+                turns.append({'role': 'User', 'text': clean_text(u_text)})
+
+        # Extract assistant response
+        mc = tv.find('message-content')
+        if mc:
+            md_div = mc.find('div', class_='markdown') or mc
+            resp_md = md(str(md_div), heading_style='ATX').strip()
+            resp_md = re.sub(r'\n{3,}', '\n\n', resp_md)
+            if resp_md:
+                turns.append({'role': 'Assistant', 'text': clean_text(resp_md)})
+
+    if not turns:
+        raise ValueError("Could not extract conversation turns from Gemini share link. The link may be invalid or expired.")
+
+    return title, turns
+
+def dispatch_share_parser(url: str):
+    """Detects provider and delegates to the appropriate conversation extractor."""
+    lower_url = url.lower()
+    if 'gemini.google' in lower_url or 'share.gemini' in lower_url or 'bard.google' in lower_url:
+        return parse_gemini_share(url)
+    elif 'chatgpt.com' in lower_url or 'openai.com' in lower_url:
+        return parse_chatgpt_share(url)
+    else:
+        # Default fallback: try ChatGPT format first, then Gemini format
+        try:
+            return parse_chatgpt_share(url)
+        except Exception:
+            return parse_gemini_share(url)
+
 def slugify(value: str) -> str:
     value = re.sub(r'[^\w\s-]', '', value).strip().lower()
     return re.sub(r'[-\s]+', '-', value)
 
 def format_markdown(title: str, url: str, turns: list) -> str:
     date_str = datetime.now().strftime("%Y-%m-%d")
-    md = [f"# {title}\n"]
-    md.append(f"- **Source URL:** [{url}]({url})")
-    md.append(f"- **Archived Date:** {date_str}")
-    md.append(f"- **Total Turns:** {len(turns)}\n")
-    md.append("---\n")
+    md_lines = [f"# {title}\n"]
+    md_lines.append(f"- **Source URL:** [{url}]({url})")
+    md_lines.append(f"- **Archived Date:** {date_str}")
+    md_lines.append(f"- **Total Turns:** {len(turns)}\n")
+    md_lines.append("---\n")
 
     turn_num = 1
     i = 0
     while i < len(turns):
         t = turns[i]
         if t['role'] == 'User':
-            md.append(f"## Turn {turn_num}\n")
-            md.append("### User\n")
-            md.append(t['text'] + "\n")
+            md_lines.append(f"## Turn {turn_num}\n")
+            md_lines.append("### User\n")
+            md_lines.append(t['text'] + "\n")
             if i + 1 < len(turns) and turns[i+1]['role'] == 'Assistant':
-                md.append("### Assistant\n")
-                md.append(turns[i+1]['text'] + "\n")
+                md_lines.append("### Assistant\n")
+                md_lines.append(turns[i+1]['text'] + "\n")
                 i += 1
-            md.append("---\n")
+            md_lines.append("---\n")
             turn_num += 1
         else:
-            md.append(f"### {t['role']}\n")
-            md.append(t['text'] + "\n")
-            md.append("---\n")
+            md_lines.append(f"### {t['role']}\n")
+            md_lines.append(t['text'] + "\n")
+            md_lines.append("---\n")
         i += 1
 
-    return "\n".join(md)
+    return "\n".join(md_lines)
 
 def find_last_transcript_doc(target_dir: str) -> str:
     """Finds the most recently modified or committed markdown transcript in target_dir."""
@@ -154,7 +266,6 @@ def find_last_transcript_doc(target_dir: str) -> str:
     ]
     if not md_files:
         return None
-    # Sort by modification time descending
     md_files.sort(key=lambda x: os.path.getmtime(x), reverse=True)
     return md_files[0]
 
@@ -162,7 +273,7 @@ def format_appendix(title: str, url: str, turns: list) -> str:
     date_str = datetime.now().strftime("%Y-%m-%d")
     appendix = [
         "\n\n---\n",
-        f"# 📎 Appendix: {title} (ChatGPT Session Continuation)\n",
+        f"# 📎 Appendix: {title} (Session Continuation)\n",
         f"> **Source URL:** [{url}]({url})",
         f"> **Appended:** {date_str}",
         f"> **Total Turns:** {len(turns)}\n",
@@ -201,20 +312,17 @@ def resolve_target_directory(specified_dir: str) -> str:
         return specified_dir
 
     cwd = os.getcwd()
-    # Check if inside brainstorm repo
     if os.path.exists(os.path.join(cwd, "research", "transcripts")):
         return os.path.join(cwd, "research", "transcripts")
     
-    # Check if inside docs folder exists
     if os.path.exists(os.path.join(cwd, "docs")):
         return os.path.join(cwd, "docs", "chat_history")
 
-    # Default dedicated subfolder in any repo
     return os.path.join(cwd, "chat_history")
 
 def main():
-    parser = argparse.ArgumentParser(description="Universal Chat Archiver for AI share links (ChatGPT, etc.)")
-    parser.add_argument("url", help="Share URL (e.g. https://chatgpt.com/share/...)")
+    parser = argparse.ArgumentParser(description="Universal Chat Archiver for AI share links (ChatGPT, Google Gemini, etc.)")
+    parser.add_argument("url", help="Share URL (e.g. https://chatgpt.com/share/... or https://share.gemini.google/...)")
     parser.add_argument("-o", "--output", help="Output filepath. If omitted, generates from title in dedicated subfolder.")
     parser.add_argument("--dir", help="Target directory for output file", default="")
     parser.add_argument(
@@ -229,12 +337,11 @@ def main():
 
     print(f"Fetching and parsing: {args.url}")
     try:
-        title, turns = parse_chatgpt_share(args.url)
+        title, turns = dispatch_share_parser(args.url)
         print(f"Parsed '{title}' ({len(turns)} message turns)")
         
         target_dir = resolve_target_directory(args.dir)
 
-        # Handle append mode
         if args.append is not None:
             if args.append == "__LATEST__":
                 target_file = find_last_transcript_doc(target_dir)

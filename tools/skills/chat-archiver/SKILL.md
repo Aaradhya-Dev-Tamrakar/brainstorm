@@ -2,7 +2,7 @@
 name: chat-archiver
 description: >-
   Universal AI chat archiver for downloading and archiving shared conversation links
-  (such as ChatGPT share URLs, etc.) as clean, structured Markdown history files directly
+  (such as ChatGPT, Google Gemini share URLs, etc.) as clean, structured Markdown history files directly
   into the active repository, workspace, or research archives (e.g. brainstorm/research/transcripts).
 ---
 

@@ -48,10 +48,10 @@
     "semantic_hash": "0748921e00526ceac63918a0383627c6"
   },
   "sync.ps1": {
-    "mtime": 1791532964.0491755,
-    "seen": 1791534099.6474211,
-    "ast_hash": "735ac1f3adbb37e8d7c560d3d991272c",
-    "semantic_hash": "735ac1f3adbb37e8d7c560d3d991272c"
+    "mtime": 1792063857.7318134,
+    "seen": 1792063891.7862842,
+    "ast_hash": "ec6f582b354d32e7d4b19e9b0084993c",
+    "semantic_hash": "ec6f582b354d32e7d4b19e9b0084993c"
   },
   "research/architectures/ARCH-RFC-001-RECORD-KEEPING-STANDARD.md": {
     "mtime": 1790044861.1275935,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1792063432.8537512,
-    "seen": 1792063440.882532,
-    "ast_hash": "3e16bd2d4dc2d350c55991bc1fe950e6",
-    "semantic_hash": "3e16bd2d4dc2d350c55991bc1fe950e6"
+    "mtime": 1792063884.874051,
+    "seen": 1792063891.7861865,
+    "ast_hash": "e4e336ae3d2adfa8c88a10f363d0c3d8",
+    "semantic_hash": "e4e336ae3d2adfa8c88a10f363d0c3d8"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,

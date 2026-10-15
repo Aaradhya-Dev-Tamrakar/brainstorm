@@ -1,6 +1,6 @@
 {
-  "built_at_commit": "33dd785460e7435afa6f4b9bd0497efec6502b00",
-  "built_timestamp": "2026-10-15T11:23:53.265138+00:00",
+  "built_at_commit": "c5ef968da553542754aee64240a13553615d8b8f",
+  "built_timestamp": "2026-10-15T11:31:25.214726+00:00",
   "lineage_type": "ancestor_snapshot",
   "communities": {
     "0": [
@@ -9000,7 +9000,7 @@
     {
       "type": "bridge_node",
       "question": "Why does `main()` connect `Companion policies (deploy in parallel)` to `Research & Product Plan: Constitution of Nepal Plain-Language & Multi-Tier Explanation Engine`, `Migration Reference`?",
-      "why": "High betweenness centrality (0.083) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.077) - this node is a cross-community bridge."
     },
     {
       "type": "verify_inferred",
@@ -9020,7 +9020,7 @@
     {
       "type": "bridge_node",
       "question": "Why does `Canonical Capability & Ecosystem Ontology` connect `Migration Reference` to `2. Granular Module Specifications`?",
-      "why": "High betweenness centrality (0.080) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.075) - this node is a cross-community bridge."
     },
     {
       "type": "low_cohesion",
@@ -9030,7 +9030,7 @@
     {
       "type": "bridge_node",
       "question": "Why does `3. Authoritative Ecosystem Count Reconciliation` connect `Migration Reference` to `Companion policies (deploy in parallel)`?",
-      "why": "High betweenness centrality (0.080) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.075) - this node is a cross-community bridge."
     }
   ]
 }

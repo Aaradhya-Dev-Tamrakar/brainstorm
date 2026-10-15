@@ -1,0 +1,68 @@
+name: Automatic Upstream Fork Sync
+
+on:
+  schedule:
+    # Runs every 6 hours to keep the fork completely in sync with upstream
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: sync-fork-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  sync-main:
+    name: Sync Main Branch via GitHub Merge-Upstream API
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Merge-Upstream for main
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Only execute if running in a fork
+          IS_FORK=$(gh api /repos/${{ github.repository }} --jq '.fork')
+          if [ "$IS_FORK" != "true" ]; then
+            echo "[INFO] Repository is upstream/parent, not a fork. Skipping fork sync cleanly."
+            exit 0
+          fi
+
+          echo "[*] Requesting GitHub merge-upstream for branch: main..."
+          gh api -X POST /repos/${{ github.repository }}/merge-upstream \
+            -f branch=main || echo "[WARN] Branch main was already up to date or encountered fast-forward skip."
+
+  sync-branches:
+    name: Sync Ecosystem Tool Branches
+    needs: [sync-main]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Fork
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fast-Forward Tool Branches from Upstream
+        run: |
+          IS_FORK=$(gh api /repos/${{ github.repository }} --jq '.fork')
+          if [ "$IS_FORK" != "true" ]; then
+            echo "[INFO] Repository is upstream, skipping branch sync."
+            exit 0
+          fi
+
+          PARENT_REPO=$(gh api /repos/${{ github.repository }} --jq '.parent.full_name')
+          if [ -z "$PARENT_REPO" ]; then
+            echo "[WARN] Could not resolve parent repository. Exiting."
+            exit 0
+          fi
+
+          echo "[*] Adding upstream remote: https://github.com/${PARENT_REPO}.git"
+          git remote add upstream "https://github.com/${PARENT_REPO}.git" || true
+          git fetch upstream --prune
+
+          echo "[*] Mirroring tracking branches from upstream to origin fork..."
+          git push origin 'refs/remotes/upstream/*:refs/heads/*' --prune || echo "[WARN] Some protected branch refs were skipped."
+          echo "[+] Fork synchronization completed successfully."
+        env:
+          GH_TOKEN: ${{ github.token }}

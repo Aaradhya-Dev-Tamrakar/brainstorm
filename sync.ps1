@@ -1479,6 +1479,19 @@ try {
 
     Write-Success "Repository synchronized successfully with origin/$currentBranch."
 
+    # 7.1 Optional Fork Mirror Synchronization (Token-Zero Dual-Remote Sync)
+    try {
+        $remotes = @(git remote 2>$null)
+        if ($remotes -contains "fork") {
+            Write-Status "Mirroring changes to fork/$currentBranch (https://github.com/AaradhyaDT/brainstorm.git)..."
+            git push fork $currentBranch 2>$null
+            if ($LASTEXITCODE -eq 0) {
+                Write-Success "Fork mirror synchronized with fork/$currentBranch."
+            }
+        }
+    }
+    catch {}
+
     # 8. BRL Pull Request Dispatch
     if ($PullRequest) {
         Invoke-BrlPullRequest -FeatureBranch $currentBranch -Title $Message -Issue $Issue -Reviewer $Reviewer

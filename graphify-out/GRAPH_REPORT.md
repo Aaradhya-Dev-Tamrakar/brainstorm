@@ -1,7 +1,7 @@
 # Graph Report - brainstorm  (2026-10-15)
 
 ## Corpus Check
-- Large corpus: 719 files · ~1,140,032 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
+- Large corpus: 720 files · ~1,140,344 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
 
 ## Summary
 - 7009 nodes · 7858 edges · 624 communities (546 shown, 78 thin omitted)
@@ -2811,7 +2811,7 @@ Nodes (3): description, type, definition_en
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `main()` connect `Companion policies (deploy in parallel)` to `Research & Product Plan: Constitution of Nepal Plain-Language & Multi-Tier Explanation Engine`, `Migration Reference`?**
-  _High betweenness centrality (0.083) - this node is a cross-community bridge._
+  _High betweenness centrality (0.077) - this node is a cross-community bridge._
 - **Are the 24 inferred relationships involving `ValueError` (e.g. with `extract_plot_from_notebook()` and `bdecode()`) actually correct?**
   _`ValueError` has 24 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `ARCHITECTURAL_REVIEW_SESSION`, `COHORT_1_QUEST_LEAD_ELIGIBLE`, `COMPUTE_GUIDANCE_KAGGLE_GPU` to the rest of the system?**
@@ -2819,13 +2819,13 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `4. Step-by-Step Implementation Timeline` be split into smaller, more focused modules?**
   _Cohesion score 0.07547169811320754 - nodes in this community are weakly interconnected._
 - **Why does `Canonical Capability & Ecosystem Ontology` connect `Migration Reference` to `2. Granular Module Specifications`?**
-  _High betweenness centrality (0.080) - this node is a cross-community bridge._
+  _High betweenness centrality (0.075) - this node is a cross-community bridge._
 - **Should `generate_video.py` be split into smaller, more focused modules?**
   _Cohesion score 0.05187074829931973 - nodes in this community are weakly interconnected._
 - **Why does `3. Authoritative Ecosystem Count Reconciliation` connect `Migration Reference` to `Companion policies (deploy in parallel)`?**
-  _High betweenness centrality (0.080) - this node is a cross-community bridge._
+  _High betweenness centrality (0.075) - this node is a cross-community bridge._
 
 ## Graph Freshness
-- **Built at commit:** `33dd785460e7435afa6f4b9bd0497efec6502b00`
-- **Built timestamp:** `2026-10-15T11:23:53.265138+00:00`
+- **Built at commit:** `c5ef968da553542754aee64240a13553615d8b8f`
+- **Built timestamp:** `2026-10-15T11:31:25.214726+00:00`
 - **Lineage type:** `ancestor_snapshot`

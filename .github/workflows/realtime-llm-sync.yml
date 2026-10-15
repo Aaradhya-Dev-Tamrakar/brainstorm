@@ -83,11 +83,14 @@ jobs:
               BRANCH_NAME="auto/llm-dataset-sync-$(date +%Y%m%d%H%M%S)"
               git checkout -b "$BRANCH_NAME"
               git push -u origin "$BRANCH_NAME"
-              gh pr create \
+              if gh pr create \
                 --title "feat(datasets): auto-sync realtime frontier LLM telemetry ($(date +%Y-%m-%d))" \
                 --body "Automated CI/CD sync detected new frontier model releases or per-token pricing updates from live provider registries. All 36 regression tests and Z3 SMT invariants certified clean." \
-                --label "datasets,automated"
-              echo "[+] Automated PR dispatched successfully."
+                --label "datasets,automated"; then
+                echo "[+] Automated PR dispatched successfully."
+              else
+                echo "[!] Note: gh pr create returned non-zero (check workflow pull-request permissions). Dataset sync branch '$BRANCH_NAME' is preserved on origin."
+              fi
             fi
           else
             echo "[OK] No dataset drift or price changes detected. Working tree clean."

@@ -1,7 +1,7 @@
 # Graph Report - brainstorm  (2026-10-15)
 
 ## Corpus Check
-- Large corpus: 719 files · ~1,139,993 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
+- Large corpus: 719 files · ~1,140,032 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
 
 ## Summary
 - 7009 nodes · 7858 edges · 624 communities (546 shown, 78 thin omitted)
@@ -2826,6 +2826,6 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.080) - this node is a cross-community bridge._
 
 ## Graph Freshness
-- **Built at commit:** `086b1d2534e33c0179dbc5d2b104438d8824d7ab`
-- **Built timestamp:** `2026-10-15T11:17:15.435615+00:00`
+- **Built at commit:** `33dd785460e7435afa6f4b9bd0497efec6502b00`
+- **Built timestamp:** `2026-10-15T11:23:53.265138+00:00`
 - **Lineage type:** `ancestor_snapshot`

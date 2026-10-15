@@ -43,7 +43,11 @@ jobs:
           GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
           GDRIVE_CLIENT_SECRET_JSON: ${{ secrets.GDRIVE_CLIENT_SECRET_JSON }}
         run: |
-          python scripts/sync_drive.py
+          if [ -z "$GDRIVE_CLIENT_ID" ] || [ -z "$GDRIVE_CLIENT_SECRET" ] || [ -z "$GDRIVE_REFRESH_TOKEN" ]; then
+            echo "[INFO] Google Drive credentials not present in repository secrets (common in forks or standalone clones). Skipping live Drive sync cleanly."
+          else
+            python scripts/sync_drive.py
+          fi
 
       - name: Commit Manifest Updates If Modified
         env:

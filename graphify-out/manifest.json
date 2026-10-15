@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1792062344.524623,
-    "seen": 1792062354.6076105,
-    "ast_hash": "da3f0de949380fcde68d489cc8f6823c",
-    "semantic_hash": "da3f0de949380fcde68d489cc8f6823c"
+    "mtime": 1792062640.6810045,
+    "seen": 1792062648.5576978,
+    "ast_hash": "84b1ec5cc4065e5209ce64dbb0d2687d",
+    "semantic_hash": "84b1ec5cc4065e5209ce64dbb0d2687d"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -3930,10 +3930,10 @@
     "semantic_hash": "ba59bfc842755b2ff4965ce14183493b"
   },
   "sim/test_adaptive_orchestrator.py": {
-    "mtime": 1791796764.623434,
-    "seen": 1791796873.7935083,
-    "ast_hash": "5a8bb511bb3a693f9df367f0c8636b17",
-    "semantic_hash": "5a8bb511bb3a693f9df367f0c8636b17"
+    "mtime": 1792062589.9906874,
+    "seen": 1792062648.5578043,
+    "ast_hash": "e917479fed84072f95ea774a560cdb1b",
+    "semantic_hash": "e917479fed84072f95ea774a560cdb1b"
   },
   "tools/adaptive_engine.py": {
     "mtime": 1791608197.0474367,

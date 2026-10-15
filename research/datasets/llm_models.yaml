@@ -1,14 +1,14 @@
 version: 2.0.0
-last_updated: '2026-10-05'
+last_updated: '2026-10-15'
 schema_version: dataset.llm.v2
 author: Aaradhya Dev Tamrakar
 repository: brainstorm/research/datasets
 purpose: Authoritative 2026 Realtime LLM Dataset, Benchmarking & Dynamic MoE Routing
   Matrix
-total_models: 25
+total_models: 91
 tiers_summary:
-  frontier_proprietary: 11
-  open_weight_frontier: 8
+  frontier_proprietary: 68
+  open_weight_frontier: 17
   small_edge: 5
   moe_reference: 1
 models:
@@ -40,7 +40,7 @@ models:
   pricing:
     input_per_m: 4.0
     output_per_m: 20.0
-    cached_input_per_m: 0.4
+    cached_input_per_m: 0.2
     batch_input_per_m: 2.0
     batch_output_per_m: 10.0
     free_tier: false
@@ -127,7 +127,7 @@ models:
   pricing:
     input_per_m: 2.0
     output_per_m: 10.0
-    cached_input_per_m: 0.2
+    cached_input_per_m: 0.1
     batch_input_per_m: 1.0
     batch_output_per_m: 5.0
     free_tier: false
@@ -209,9 +209,9 @@ models:
     ollama_tag: null
     huggingface_id: null
   pricing:
-    input_per_m: 1.5
-    output_per_m: 7.5
-    cached_input_per_m: 0.15
+    input_per_m: 10.0
+    output_per_m: 50.0
+    cached_input_per_m: 0.25
     batch_input_per_m: 0.75
     batch_output_per_m: 3.75
     free_tier: false
@@ -278,7 +278,7 @@ models:
     active_params_b: null
     num_experts: null
     top_k_experts: null
-    context_window: 1000000
+    context_window: 1050000
     output_limit: 65536
     training_cutoff: 2026-03
   access:
@@ -294,7 +294,7 @@ models:
   pricing:
     input_per_m: 10.0
     output_per_m: 50.0
-    cached_input_per_m: 2.5
+    cached_input_per_m: 1.0
     batch_input_per_m: 5.0
     batch_output_per_m: 25.0
     free_tier: false
@@ -363,7 +363,7 @@ models:
     active_params_b: null
     num_experts: null
     top_k_experts: null
-    context_window: 1000000
+    context_window: 1050000
     output_limit: 32768
     training_cutoff: 2026-05
   access:
@@ -379,7 +379,7 @@ models:
   pricing:
     input_per_m: 2.0
     output_per_m: 10.0
-    cached_input_per_m: 0.5
+    cached_input_per_m: 0.1
     batch_input_per_m: 1.0
     batch_output_per_m: 5.0
     free_tier: false
@@ -462,7 +462,7 @@ models:
   pricing:
     input_per_m: 2.0
     output_per_m: 10.0
-    cached_input_per_m: 0.5
+    cached_input_per_m: 0.1
     batch_input_per_m: 1.0
     batch_output_per_m: 5.0
     free_tier: true
@@ -531,7 +531,7 @@ models:
     active_params_b: null
     num_experts: null
     top_k_experts: null
-    context_window: 1000000
+    context_window: 1048576
     output_limit: 65536
     training_cutoff: 2026-04
   access:
@@ -545,9 +545,9 @@ models:
     ollama_tag: null
     huggingface_id: null
   pricing:
-    input_per_m: 0.2
-    output_per_m: 0.8
-    cached_input_per_m: 0.05
+    input_per_m: 0.75
+    output_per_m: 3.75
+    cached_input_per_m: 0.075
     batch_input_per_m: 0.1
     batch_output_per_m: 0.4
     free_tier: true
@@ -628,9 +628,9 @@ models:
     ollama_tag: null
     huggingface_id: null
   pricing:
-    input_per_m: 2.5
-    output_per_m: 10.0
-    cached_input_per_m: 0.625
+    input_per_m: 2.0
+    output_per_m: 6.0
+    cached_input_per_m: 0.5
     batch_input_per_m: 1.25
     batch_output_per_m: 5.0
     free_tier: false
@@ -711,9 +711,9 @@ models:
     ollama_tag: null
     huggingface_id: null
   pricing:
-    input_per_m: 1.0
-    output_per_m: 3.0
-    cached_input_per_m: 0.25
+    input_per_m: 0.45
+    output_per_m: 15.0
+    cached_input_per_m: 0.28
     batch_input_per_m: 0.5
     batch_output_per_m: 1.5
     free_tier: false
@@ -864,7 +864,7 @@ models:
     active_params_b: 49.0
     num_experts: 512
     top_k_experts: 8
-    context_window: 1000000
+    context_window: 1048576
     output_limit: 65536
     training_cutoff: 2026-02
   access:
@@ -880,9 +880,9 @@ models:
     ollama_tag: deepseek-v4-pro:latest
     huggingface_id: deepseek-ai/DeepSeek-V4-Pro
   pricing:
-    input_per_m: 0.5
-    output_per_m: 1.5
-    cached_input_per_m: 0.1
+    input_per_m: 0.9553
+    output_per_m: 1.9105
+    cached_input_per_m: 0.0796
     batch_input_per_m: 0.25
     batch_output_per_m: 0.75
     free_tier: false
@@ -951,7 +951,7 @@ models:
     active_params_b: 13.0
     num_experts: 256
     top_k_experts: 8
-    context_window: 1000000
+    context_window: 1048576
     output_limit: 16384
     training_cutoff: 2026-02
   access:
@@ -967,9 +967,9 @@ models:
     ollama_tag: deepseek-v4-1-flash:latest
     huggingface_id: deepseek-ai/DeepSeek-V4.1-Flash
   pricing:
-    input_per_m: 0.15
-    output_per_m: 0.3
-    cached_input_per_m: 0.03
+    input_per_m: 0.0238
+    output_per_m: 0.72
+    cached_input_per_m: 0.0054
     batch_input_per_m: 0.075
     batch_output_per_m: 0.15
     free_tier: false
@@ -1036,7 +1036,7 @@ models:
     active_params_b: null
     num_experts: null
     top_k_experts: null
-    context_window: 1000000
+    context_window: 1050000
     output_limit: 16384
     training_cutoff: 2026-04
   access:
@@ -1052,7 +1052,7 @@ models:
   pricing:
     input_per_m: 0.1
     output_per_m: 0.5
-    cached_input_per_m: 0.025
+    cached_input_per_m: 0.01
     batch_input_per_m: 0.05
     batch_output_per_m: 0.25
     free_tier: true
@@ -1120,7 +1120,7 @@ models:
     active_params_b: null
     num_experts: null
     top_k_experts: null
-    context_window: 1000000
+    context_window: 1048576
     output_limit: 32768
     training_cutoff: 2026-04
   access:
@@ -1134,9 +1134,9 @@ models:
     ollama_tag: null
     huggingface_id: null
   pricing:
-    input_per_m: 0.8
-    output_per_m: 2.4
-    cached_input_per_m: 0.2
+    input_per_m: 1.25
+    output_per_m: 4.25
+    cached_input_per_m: 0.15
     batch_input_per_m: 0.4
     batch_output_per_m: 1.2
     free_tier: false
@@ -1202,7 +1202,7 @@ models:
     active_params_b: null
     num_experts: null
     top_k_experts: null
-    context_window: 1000000
+    context_window: 1050000
     output_limit: 16384
     training_cutoff: 2026-05
   access:
@@ -1216,9 +1216,9 @@ models:
     ollama_tag: null
     huggingface_id: null
   pricing:
-    input_per_m: 0.13
-    output_per_m: 0.26
-    cached_input_per_m: 0.03
+    input_per_m: 0.435
+    output_per_m: 0.87
+    cached_input_per_m: 0.0036
     batch_input_per_m: 0.065
     batch_output_per_m: 0.13
     free_tier: true
@@ -1283,7 +1283,7 @@ models:
     active_params_b: null
     num_experts: null
     top_k_experts: null
-    context_window: 1000000
+    context_window: 1048576
     output_limit: 32768
     training_cutoff: 2026-06
   access:
@@ -1297,9 +1297,9 @@ models:
     ollama_tag: null
     huggingface_id: null
   pricing:
-    input_per_m: 0.8
-    output_per_m: 2.4
-    cached_input_per_m: 0.2
+    input_per_m: 0.03
+    output_per_m: 4.8
+    cached_input_per_m: 0.029
     batch_input_per_m: 0.4
     batch_output_per_m: 1.2
     free_tier: false
@@ -1364,7 +1364,7 @@ models:
     active_params_b: 95.0
     num_experts: 256
     top_k_experts: 8
-    context_window: 262144
+    context_window: 1048576
     output_limit: 16384
     training_cutoff: 2026-06
   access:
@@ -1380,9 +1380,9 @@ models:
     ollama_tag: qwen3.8:2.4t-a95b
     huggingface_id: Qwen/Qwen3.8-2.4T-A95B
   pricing:
-    input_per_m: 0.8
-    output_per_m: 2.16
-    cached_input_per_m: 0.2
+    input_per_m: 2.0
+    output_per_m: 6.0
+    cached_input_per_m: 0.25
     batch_input_per_m: 0.4
     batch_output_per_m: 1.08
     free_tier: false
@@ -1447,7 +1447,7 @@ models:
     active_params_b: null
     num_experts: null
     top_k_experts: null
-    context_window: 1000000
+    context_window: 1048576
     output_limit: 16384
     training_cutoff: 2026-03
   access:
@@ -1461,9 +1461,9 @@ models:
     ollama_tag: null
     huggingface_id: null
   pricing:
-    input_per_m: 0.05
-    output_per_m: 0.2
-    cached_input_per_m: 0.0125
+    input_per_m: 0.3
+    output_per_m: 2.5
+    cached_input_per_m: 0.03
     batch_input_per_m: 0.025
     batch_output_per_m: 0.1
     free_tier: true
@@ -1529,7 +1529,7 @@ models:
     active_params_b: 3.0
     num_experts: 32
     top_k_experts: 4
-    context_window: 128000
+    context_window: 262144
     output_limit: 8192
     training_cutoff: 2026-03
   access:
@@ -1546,8 +1546,8 @@ models:
     ollama_tag: qwen3.6:35b-a3b
     huggingface_id: Qwen/Qwen3.6-35B-A3B
   pricing:
-    input_per_m: 0.2
-    output_per_m: 0.4
+    input_per_m: 0.15
+    output_per_m: 1.0
     cached_input_per_m: 0.05
     batch_input_per_m: 0.1
     batch_output_per_m: 0.2
@@ -1715,8 +1715,8 @@ models:
     ollama_tag: phi4:14b
     huggingface_id: microsoft/phi-4
   pricing:
-    input_per_m: 0.1
-    output_per_m: 0.2
+    input_per_m: 0.07
+    output_per_m: 0.14
     cached_input_per_m: null
     batch_input_per_m: null
     batch_output_per_m: null
@@ -1885,8 +1885,8 @@ models:
     ollama_tag: deepseek-r1:671b
     huggingface_id: deepseek-ai/DeepSeek-R1
   pricing:
-    input_per_m: 0.55
-    output_per_m: 2.19
+    input_per_m: 0.7
+    output_per_m: 2.5
     cached_input_per_m: 0.14
     batch_input_per_m: null
     batch_output_per_m: null
@@ -2108,3 +2108,4399 @@ models:
     evidence_tier: EMPIRICALLY_VERIFIED
     sources:
     - https://mistral.ai/news/mixtral-8x22b/
+- id: gpt-6-1-sol-pro
+  name: 'OpenAI: GPT-6.1 Sol Pro'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1050000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 2.0
+    output_per_m: 10.0
+    cached_input_per_m: 0.1
+    batch_input_per_m: 1.0
+    batch_output_per_m: 5.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-6-1-sol-pro)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 2
+    - 6
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 700
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-6-luna-pro
+  name: 'OpenAI: GPT-6 Luna Pro'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1050000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.1
+    output_per_m: 0.5
+    cached_input_per_m: 0.01
+    batch_input_per_m: 0.05
+    batch_output_per_m: 0.25
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-6-luna-pro)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 2
+    - 6
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 700
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-6-sol-pro
+  name: 'OpenAI: GPT-6 Sol Pro'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1050000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 2.0
+    output_per_m: 10.0
+    cached_input_per_m: 0.2
+    batch_input_per_m: 1.0
+    batch_output_per_m: 5.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-6-sol-pro)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 2
+    - 6
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 700
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-6-sol
+  name: 'OpenAI: GPT-6 Sol'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1050000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 2.0
+    output_per_m: 10.0
+    cached_input_per_m: 0.2
+    batch_input_per_m: 1.0
+    batch_output_per_m: 5.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-6-sol)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 2
+    - 6
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 700
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-6-astra-pro
+  name: 'OpenAI: GPT-6 Astra Pro'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1050000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 10.0
+    output_per_m: 50.0
+    cached_input_per_m: 1.0
+    batch_input_per_m: 5.0
+    batch_output_per_m: 25.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-6-astra-pro)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: true
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 7
+    - 10
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains:
+    - low_cost_micro_triage
+    cascade_role: tier_3_escalation
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 700
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: deepseek-v4-flash-vision-exp
+  name: 'DeepSeek: DeepSeek V4 Flash Vision Exp'
+  provider: DeepSeek
+  family: DeepSeek
+  tier: open_weight_frontier
+  release_date: '2026-10-15'
+  architecture:
+    type: moe
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1048576
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: apache-2.0
+    open_weights: true
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.2156
+    output_per_m: 0.6468
+    cached_input_per_m: 0.0069
+    batch_input_per_m: 0.1078
+    batch_output_per_m: 0.3234
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (deepseek-v4-flash-vision-exp)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 2
+    - 6
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 699
+    cache_discount_pct: 50
+    cognitive_council_role: The Synthesizer & Living Repository
+- id: gemini-3-7-flash
+  name: 'Google: Gemini 3.7 Flash'
+  provider: Google
+  family: Google
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1048576
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.75
+    output_per_m: 3.75
+    cached_input_per_m: 0.075
+    batch_input_per_m: 0.375
+    batch_output_per_m: 1.875
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gemini-3-7-flash)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 699
+    cache_discount_pct: 90
+    cognitive_council_role: The Synthesizer & Living Repository
+- id: deepseek-v4-pro-0813
+  name: 'DeepSeek: DeepSeek V4 Pro 0813'
+  provider: DeepSeek
+  family: DeepSeek
+  tier: open_weight_frontier
+  release_date: '2026-10-15'
+  architecture:
+    type: moe
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1048576
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: apache-2.0
+    open_weights: true
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.66
+    output_per_m: 1.98
+    cached_input_per_m: 0.022
+    batch_input_per_m: 0.33
+    batch_output_per_m: 0.99
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (deepseek-v4-pro-0813)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 7
+    - 10
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains:
+    - low_cost_micro_triage
+    cascade_role: tier_3_escalation
+    latency_tier: standard
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 699
+    cache_discount_pct: 50
+    cognitive_council_role: The Synthesizer & Living Repository
+- id: grok-4-6
+  name: 'SpaceXAI: Grok 4.6'
+  provider: xAI
+  family: xAI
+  tier: open_weight_frontier
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 500000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: apache-2.0
+    open_weights: true
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 2.0
+    output_per_m: 6.0
+    cached_input_per_m: 0.5
+    batch_input_per_m: 1.0
+    batch_output_per_m: 3.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (grok-4-6)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 333
+    cache_discount_pct: 50
+    cognitive_council_role: The Unfiltered First-Principles Provocateur
+- id: deepseek-v4-flash-0731
+  name: 'DeepSeek: DeepSeek V4 Flash 0731'
+  provider: DeepSeek
+  family: DeepSeek
+  tier: open_weight_frontier
+  release_date: '2026-10-15'
+  architecture:
+    type: moe
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1048576
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: apache-2.0
+    open_weights: true
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.016
+    output_per_m: 0.64
+    cached_input_per_m: 0.016
+    batch_input_per_m: 0.008
+    batch_output_per_m: 0.32
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (deepseek-v4-flash-0731)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 2
+    - 6
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 699
+    cache_discount_pct: 50
+    cognitive_council_role: The Synthesizer & Living Repository
+- id: claude-opus-5
+  name: 'Anthropic: Claude Opus 5'
+  provider: Anthropic
+  family: Anthropic
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1000000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 5.0
+    output_per_m: 25.0
+    cached_input_per_m: 0.5
+    batch_input_per_m: 2.5
+    batch_output_per_m: 12.5
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (claude-opus-5)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: true
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 7
+    - 10
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains:
+    - low_cost_micro_triage
+    cascade_role: tier_3_escalation
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 666
+    cache_discount_pct: 90
+    cognitive_council_role: The Systems & Code Craftsman
+- id: gemini-3-6-flash
+  name: 'Google: Gemini 3.6 Flash'
+  provider: Google
+  family: Google
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1048576
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.75
+    output_per_m: 3.75
+    cached_input_per_m: 0.075
+    batch_input_per_m: 0.375
+    batch_output_per_m: 1.875
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gemini-3-6-flash)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 699
+    cache_discount_pct: 90
+    cognitive_council_role: The Synthesizer & Living Repository
+- id: gpt-5-6-luna-pro
+  name: 'OpenAI: GPT-5.6 Luna Pro'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1050000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.2
+    output_per_m: 1.2
+    cached_input_per_m: 0.02
+    batch_input_per_m: 0.1
+    batch_output_per_m: 0.6
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-6-luna-pro)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 2
+    - 6
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 700
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-5-6-luna
+  name: 'OpenAI: GPT-5.6 Luna'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1050000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.2
+    output_per_m: 1.2
+    cached_input_per_m: 0.02
+    batch_input_per_m: 0.1
+    batch_output_per_m: 0.6
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-6-luna)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 2
+    - 6
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 700
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-5-6-terra-pro
+  name: 'OpenAI: GPT-5.6 Terra Pro'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1050000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 2.0
+    output_per_m: 12.0
+    cached_input_per_m: 0.2
+    batch_input_per_m: 1.0
+    batch_output_per_m: 6.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-6-terra-pro)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 7
+    - 10
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains:
+    - low_cost_micro_triage
+    cascade_role: tier_3_escalation
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 700
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-5-6-terra
+  name: 'OpenAI: GPT-5.6 Terra'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1050000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 2.0
+    output_per_m: 12.0
+    cached_input_per_m: 0.2
+    batch_input_per_m: 1.0
+    batch_output_per_m: 6.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-6-terra)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 700
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-5-6-sol-pro
+  name: 'OpenAI: GPT-5.6 Sol Pro'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1050000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 4.0
+    output_per_m: 20.0
+    cached_input_per_m: 0.4
+    batch_input_per_m: 2.0
+    batch_output_per_m: 10.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-6-sol-pro)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 2
+    - 6
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 700
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-5-6-sol
+  name: 'OpenAI: GPT-5.6 Sol'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1050000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 4.0
+    output_per_m: 20.0
+    cached_input_per_m: 0.4
+    batch_input_per_m: 2.0
+    batch_output_per_m: 10.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-6-sol)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 2
+    - 6
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 700
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: grok-4-5
+  name: 'SpaceXAI: Grok 4.5'
+  provider: xAI
+  family: xAI
+  tier: open_weight_frontier
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 500000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: apache-2.0
+    open_weights: true
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 2.0
+    output_per_m: 6.0
+    cached_input_per_m: 0.3
+    batch_input_per_m: 1.0
+    batch_output_per_m: 3.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (grok-4-5)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 333
+    cache_discount_pct: 50
+    cognitive_council_role: The Unfiltered First-Principles Provocateur
+- id: claude-sonnet-5
+  name: 'Anthropic: Claude Sonnet 5'
+  provider: Anthropic
+  family: Anthropic
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1000000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 2.0
+    output_per_m: 10.0
+    cached_input_per_m: 0.2
+    batch_input_per_m: 1.0
+    batch_output_per_m: 5.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (claude-sonnet-5)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: true
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    - ast_code_refactoring
+    - multi_file_editing
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 666
+    cache_discount_pct: 90
+    cognitive_council_role: The Systems & Code Craftsman
+- id: gemini-3-1-flash-lite-image
+  name: 'Google: Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)'
+  provider: Google
+  family: Google
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 65536
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.25
+    output_per_m: 1.5
+    cached_input_per_m: 0.0
+    batch_input_per_m: 0.125
+    batch_output_per_m: 0.75
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gemini-3-1-flash-lite-image)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 43
+    cache_discount_pct: 90
+    cognitive_council_role: The Synthesizer & Living Repository
+- id: gemini-3-1-flash-image
+  name: 'Google: Nano Banana 2 (Gemini 3.1 Flash Image)'
+  provider: Google
+  family: Google
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 131072
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.5
+    output_per_m: 3.0
+    cached_input_per_m: 0.0
+    batch_input_per_m: 0.25
+    batch_output_per_m: 1.5
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gemini-3-1-flash-image)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 87
+    cache_discount_pct: 90
+    cognitive_council_role: The Synthesizer & Living Repository
+- id: gemini-3-pro-image
+  name: 'Google: Nano Banana Pro (Gemini 3 Pro Image)'
+  provider: Google
+  family: Google
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 131072
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 2.0
+    output_per_m: 12.0
+    cached_input_per_m: 0.2
+    batch_input_per_m: 1.0
+    batch_output_per_m: 6.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gemini-3-pro-image)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 87
+    cache_discount_pct: 90
+    cognitive_council_role: The Synthesizer & Living Repository
+- id: claude-opus-4-8
+  name: 'Anthropic: Claude Opus 4.8'
+  provider: Anthropic
+  family: Anthropic
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1000000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 5.0
+    output_per_m: 25.0
+    cached_input_per_m: 0.5
+    batch_input_per_m: 2.5
+    batch_output_per_m: 12.5
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (claude-opus-4-8)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: true
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 7
+    - 10
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains:
+    - low_cost_micro_triage
+    cascade_role: tier_3_escalation
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 666
+    cache_discount_pct: 90
+    cognitive_council_role: The Systems & Code Craftsman
+- id: gemini-3-5-flash
+  name: 'Google: Gemini 3.5 Flash'
+  provider: Google
+  family: Google
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1048576
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 1.5
+    output_per_m: 9.0
+    cached_input_per_m: 0.15
+    batch_input_per_m: 0.75
+    batch_output_per_m: 4.5
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gemini-3-5-flash)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 699
+    cache_discount_pct: 90
+    cognitive_council_role: The Synthesizer & Living Repository
+- id: gemini-3-1-flash-lite
+  name: 'Google: Gemini 3.1 Flash Lite'
+  provider: Google
+  family: Google
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1048576
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.25
+    output_per_m: 1.5
+    cached_input_per_m: 0.025
+    batch_input_per_m: 0.125
+    batch_output_per_m: 0.75
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gemini-3-1-flash-lite)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 699
+    cache_discount_pct: 90
+    cognitive_council_role: The Synthesizer & Living Repository
+- id: grok-4-3
+  name: 'SpaceXAI: Grok 4.3'
+  provider: xAI
+  family: xAI
+  tier: open_weight_frontier
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1000000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: apache-2.0
+    open_weights: true
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 1.25
+    output_per_m: 2.5
+    cached_input_per_m: 0.2
+    batch_input_per_m: 0.625
+    batch_output_per_m: 1.25
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (grok-4-3)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 666
+    cache_discount_pct: 50
+    cognitive_council_role: The Synthesizer & Living Repository
+- id: gpt-5-5-pro
+  name: 'OpenAI: GPT-5.5 Pro'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1050000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 30.0
+    output_per_m: 180.0
+    cached_input_per_m: 0.0
+    batch_input_per_m: 15.0
+    batch_output_per_m: 90.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-5-pro)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 7
+    - 10
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains:
+    - low_cost_micro_triage
+    cascade_role: tier_3_escalation
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 700
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-5-5
+  name: 'OpenAI: GPT-5.5'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1050000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 5.0
+    output_per_m: 30.0
+    cached_input_per_m: 0.5
+    batch_input_per_m: 2.5
+    batch_output_per_m: 15.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-5)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 700
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: deepseek-v4-flash
+  name: 'DeepSeek: DeepSeek V4 Flash 0423'
+  provider: DeepSeek
+  family: DeepSeek
+  tier: open_weight_frontier
+  release_date: '2026-10-15'
+  architecture:
+    type: moe
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1048576
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: apache-2.0
+    open_weights: true
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.091
+    output_per_m: 0.182
+    cached_input_per_m: 0.0182
+    batch_input_per_m: 0.0455
+    batch_output_per_m: 0.091
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (deepseek-v4-flash)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 2
+    - 6
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 699
+    cache_discount_pct: 50
+    cognitive_council_role: The Synthesizer & Living Repository
+- id: gpt-5-4-image-2
+  name: 'OpenAI: GPT-5.4 Image 2'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 272000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 8.0
+    output_per_m: 15.0
+    cached_input_per_m: 2.0
+    batch_input_per_m: 4.0
+    batch_output_per_m: 7.5
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-4-image-2)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 181
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: claude-opus-4-7
+  name: 'Anthropic: Claude Opus 4.7'
+  provider: Anthropic
+  family: Anthropic
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1000000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 5.0
+    output_per_m: 25.0
+    cached_input_per_m: 0.5
+    batch_input_per_m: 2.5
+    batch_output_per_m: 12.5
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (claude-opus-4-7)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: true
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 7
+    - 10
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains:
+    - low_cost_micro_triage
+    cascade_role: tier_3_escalation
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 666
+    cache_discount_pct: 90
+    cognitive_council_role: The Systems & Code Craftsman
+- id: grok-4-20-multi-agent
+  name: 'SpaceXAI: Grok 4.20 Multi-Agent'
+  provider: xAI
+  family: xAI
+  tier: open_weight_frontier
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 2000000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: apache-2.0
+    open_weights: true
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 1.25
+    output_per_m: 2.5
+    cached_input_per_m: 0.2
+    batch_input_per_m: 0.625
+    batch_output_per_m: 1.25
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (grok-4-20-multi-agent)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 800
+    cache_discount_pct: 50
+    cognitive_council_role: The Synthesizer & Living Repository
+- id: grok-4-20
+  name: 'SpaceXAI: Grok 4.20'
+  provider: xAI
+  family: xAI
+  tier: open_weight_frontier
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 2000000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: apache-2.0
+    open_weights: true
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 1.25
+    output_per_m: 2.5
+    cached_input_per_m: 0.2
+    batch_input_per_m: 0.625
+    batch_output_per_m: 1.25
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (grok-4-20)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 800
+    cache_discount_pct: 50
+    cognitive_council_role: The Synthesizer & Living Repository
+- id: gpt-5-4-nano
+  name: 'OpenAI: GPT-5.4 Nano'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 400000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.2
+    output_per_m: 1.25
+    cached_input_per_m: 0.02
+    batch_input_per_m: 0.1
+    batch_output_per_m: 0.625
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-4-nano)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 266
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-5-4-mini
+  name: 'OpenAI: GPT-5.4 Mini'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 400000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.75
+    output_per_m: 4.5
+    cached_input_per_m: 0.075
+    batch_input_per_m: 0.375
+    batch_output_per_m: 2.25
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-4-mini)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 266
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-5-4-pro
+  name: 'OpenAI: GPT-5.4 Pro'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1050000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 30.0
+    output_per_m: 180.0
+    cached_input_per_m: 0.0
+    batch_input_per_m: 15.0
+    batch_output_per_m: 90.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-4-pro)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 7
+    - 10
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains:
+    - low_cost_micro_triage
+    cascade_role: tier_3_escalation
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 700
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-5-4
+  name: 'OpenAI: GPT-5.4'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1050000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 2.5
+    output_per_m: 15.0
+    cached_input_per_m: 0.25
+    batch_input_per_m: 1.25
+    batch_output_per_m: 7.5
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-4)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 700
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gemini-3-1-flash-lite-preview
+  name: 'Google: Gemini 3.1 Flash Lite Preview'
+  provider: Google
+  family: Google
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1048576
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.25
+    output_per_m: 1.5
+    cached_input_per_m: 0.025
+    batch_input_per_m: 0.125
+    batch_output_per_m: 0.75
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gemini-3-1-flash-lite-preview)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 699
+    cache_discount_pct: 90
+    cognitive_council_role: The Synthesizer & Living Repository
+- id: gemini-3-1-flash-image-preview
+  name: 'Google: Nano Banana 2 (Gemini 3.1 Flash Image Preview)'
+  provider: Google
+  family: Google
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 65536
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.5
+    output_per_m: 3.0
+    cached_input_per_m: 0.0
+    batch_input_per_m: 0.25
+    batch_output_per_m: 1.5
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gemini-3-1-flash-image-preview)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 43
+    cache_discount_pct: 90
+    cognitive_council_role: The Synthesizer & Living Repository
+- id: gemini-3-1-pro-preview-customtools
+  name: 'Google: Gemini 3.1 Pro Preview Custom Tools'
+  provider: Google
+  family: Google
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1048576
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 2.0
+    output_per_m: 12.0
+    cached_input_per_m: 0.2
+    batch_input_per_m: 1.0
+    batch_output_per_m: 6.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gemini-3-1-pro-preview-customtools)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 699
+    cache_discount_pct: 90
+    cognitive_council_role: The Synthesizer & Living Repository
+- id: gpt-5-3-codex
+  name: 'OpenAI: GPT-5.3-Codex'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 400000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 1.75
+    output_per_m: 14.0
+    cached_input_per_m: 0.175
+    batch_input_per_m: 0.875
+    batch_output_per_m: 7.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-3-codex)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    - ast_code_refactoring
+    - multi_file_editing
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 266
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gemini-3-1-pro-preview
+  name: 'Google: Gemini 3.1 Pro Preview'
+  provider: Google
+  family: Google
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1048576
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 2.0
+    output_per_m: 12.0
+    cached_input_per_m: 0.2
+    batch_input_per_m: 1.0
+    batch_output_per_m: 6.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gemini-3-1-pro-preview)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 699
+    cache_discount_pct: 90
+    cognitive_council_role: The Synthesizer & Living Repository
+- id: claude-sonnet-4-6
+  name: 'Anthropic: Claude Sonnet 4.6'
+  provider: Anthropic
+  family: Anthropic
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1000000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 3.0
+    output_per_m: 15.0
+    cached_input_per_m: 0.3
+    batch_input_per_m: 1.5
+    batch_output_per_m: 7.5
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (claude-sonnet-4-6)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: true
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    - ast_code_refactoring
+    - multi_file_editing
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 666
+    cache_discount_pct: 90
+    cognitive_council_role: The Systems & Code Craftsman
+- id: claude-opus-4-6
+  name: 'Anthropic: Claude Opus 4.6'
+  provider: Anthropic
+  family: Anthropic
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1000000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 5.0
+    output_per_m: 25.0
+    cached_input_per_m: 0.5
+    batch_input_per_m: 2.5
+    batch_output_per_m: 12.5
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (claude-opus-4-6)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: true
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 7
+    - 10
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains:
+    - low_cost_micro_triage
+    cascade_role: tier_3_escalation
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 666
+    cache_discount_pct: 90
+    cognitive_council_role: The Systems & Code Craftsman
+- id: gpt-5-2-codex
+  name: 'OpenAI: GPT-5.2-Codex'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 400000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 1.75
+    output_per_m: 14.0
+    cached_input_per_m: 0.175
+    batch_input_per_m: 0.875
+    batch_output_per_m: 7.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-2-codex)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    - ast_code_refactoring
+    - multi_file_editing
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 266
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gemini-3-flash-preview
+  name: 'Google: Gemini 3 Flash Preview'
+  provider: Google
+  family: Google
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1048576
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.5
+    output_per_m: 3.0
+    cached_input_per_m: 0.05
+    batch_input_per_m: 0.25
+    batch_output_per_m: 1.5
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gemini-3-flash-preview)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - multi_turn_instruction_following
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 699
+    cache_discount_pct: 90
+    cognitive_council_role: The Synthesizer & Living Repository
+- id: gpt-5-2-chat
+  name: 'OpenAI: GPT-5.2 Chat'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 128000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 1.75
+    output_per_m: 14.0
+    cached_input_per_m: 0.175
+    batch_input_per_m: 0.875
+    batch_output_per_m: 7.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-2-chat)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 85
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-5-2-pro
+  name: 'OpenAI: GPT-5.2 Pro'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 400000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 21.0
+    output_per_m: 168.0
+    cached_input_per_m: 0.0
+    batch_input_per_m: 10.5
+    batch_output_per_m: 84.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-2-pro)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 7
+    - 10
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains:
+    - low_cost_micro_triage
+    cascade_role: tier_3_escalation
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 266
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-5-2
+  name: 'OpenAI: GPT-5.2'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 400000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 1.75
+    output_per_m: 14.0
+    cached_input_per_m: 0.175
+    batch_input_per_m: 0.875
+    batch_output_per_m: 7.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-2)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 266
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-5-1-codex-max
+  name: 'OpenAI: GPT-5.1-Codex-Max'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 400000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 1.25
+    output_per_m: 10.0
+    cached_input_per_m: 0.125
+    batch_input_per_m: 0.625
+    batch_output_per_m: 5.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-1-codex-max)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 7
+    - 10
+    best_domains:
+    - multi_turn_instruction_following
+    - ast_code_refactoring
+    - multi_file_editing
+    avoid_domains:
+    - low_cost_micro_triage
+    cascade_role: tier_3_escalation
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 266
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: claude-opus-4-5
+  name: 'Anthropic: Claude Opus 4.5'
+  provider: Anthropic
+  family: Anthropic
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 200000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 5.0
+    output_per_m: 25.0
+    cached_input_per_m: 0.5
+    batch_input_per_m: 2.5
+    batch_output_per_m: 12.5
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (claude-opus-4-5)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: true
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 7
+    - 10
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains:
+    - low_cost_micro_triage
+    cascade_role: tier_3_escalation
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 133
+    cache_discount_pct: 90
+    cognitive_council_role: The Systems & Code Craftsman
+- id: gemini-3-pro-image-preview
+  name: 'Google: Nano Banana Pro (Gemini 3 Pro Image Preview)'
+  provider: Google
+  family: Google
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 65536
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 2.0
+    output_per_m: 12.0
+    cached_input_per_m: 0.2
+    batch_input_per_m: 1.0
+    batch_output_per_m: 6.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gemini-3-pro-image-preview)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.94
+    instruction_drift_threshold_k: 43
+    cache_discount_pct: 90
+    cognitive_council_role: The Synthesizer & Living Repository
+- id: gpt-5-1
+  name: 'OpenAI: GPT-5.1'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 400000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 1.25
+    output_per_m: 10.0
+    cached_input_per_m: 0.125
+    batch_input_per_m: 0.625
+    batch_output_per_m: 5.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-1)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 266
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-5-1-codex
+  name: 'OpenAI: GPT-5.1-Codex'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 400000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 1.25
+    output_per_m: 10.0
+    cached_input_per_m: 0.13
+    batch_input_per_m: 0.625
+    batch_output_per_m: 5.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-1-codex)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    - ast_code_refactoring
+    - multi_file_editing
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 266
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-5-1-codex-mini
+  name: 'OpenAI: GPT-5.1-Codex-Mini'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 400000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.25
+    output_per_m: 2.0
+    cached_input_per_m: 0.03
+    batch_input_per_m: 0.125
+    batch_output_per_m: 1.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-1-codex-mini)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - multi_turn_instruction_following
+    - ast_code_refactoring
+    - multi_file_editing
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 266
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-5-image-mini
+  name: 'OpenAI: GPT-5 Image Mini'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 400000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 2.5
+    output_per_m: 2.0
+    cached_input_per_m: 0.25
+    batch_input_per_m: 1.25
+    batch_output_per_m: 1.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-image-mini)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 266
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: claude-haiku-4-5
+  name: 'Anthropic: Claude Haiku 4.5'
+  provider: Anthropic
+  family: Anthropic
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 200000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 1.0
+    output_per_m: 5.0
+    cached_input_per_m: 0.1
+    batch_input_per_m: 0.5
+    batch_output_per_m: 2.5
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (claude-haiku-4-5)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: true
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: fast
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 133
+    cache_discount_pct: 90
+    cognitive_council_role: The Systems & Code Craftsman
+- id: gpt-5-image
+  name: 'OpenAI: GPT-5 Image'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 400000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 10.0
+    output_per_m: 10.0
+    cached_input_per_m: 1.25
+    batch_input_per_m: 5.0
+    batch_output_per_m: 5.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-image)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 266
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-5-pro
+  name: 'OpenAI: GPT-5 Pro'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 400000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 15.0
+    output_per_m: 120.0
+    cached_input_per_m: 0.0
+    batch_input_per_m: 7.5
+    batch_output_per_m: 60.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-pro)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 7
+    - 10
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains:
+    - low_cost_micro_triage
+    cascade_role: tier_3_escalation
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 266
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: claude-sonnet-4-5
+  name: 'Anthropic: Claude Sonnet 4.5'
+  provider: Anthropic
+  family: Anthropic
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 1000000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 3.0
+    output_per_m: 15.0
+    cached_input_per_m: 0.3
+    batch_input_per_m: 1.5
+    batch_output_per_m: 7.5
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (claude-sonnet-4-5)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: true
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    - ast_code_refactoring
+    - multi_file_editing
+    - massive_context_synthesis
+    - multi_document_distillation
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 666
+    cache_discount_pct: 90
+    cognitive_council_role: The Systems & Code Craftsman
+- id: gpt-5
+  name: 'OpenAI: GPT-5'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 400000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 1.25
+    output_per_m: 10.0
+    cached_input_per_m: 0.125
+    batch_input_per_m: 0.625
+    batch_output_per_m: 5.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 266
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-5-mini
+  name: 'OpenAI: GPT-5 Mini'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 400000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.25
+    output_per_m: 2.0
+    cached_input_per_m: 0.025
+    batch_input_per_m: 0.125
+    batch_output_per_m: 1.0
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-mini)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 266
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: gpt-5-nano
+  name: 'OpenAI: GPT-5 Nano'
+  provider: OpenAI
+  family: OpenAI
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 400000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 0.05
+    output_per_m: 0.4
+    cached_input_per_m: 0.005
+    batch_input_per_m: 0.025
+    batch_output_per_m: 0.2
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (gpt-5-nano)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: false
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 1
+    - 3
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains: []
+    cascade_role: tier_0_triage
+    latency_tier: ultra_fast
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 266
+    cache_discount_pct: 50
+    cognitive_council_role: The Adversarial Skeptic / Reviewer
+- id: claude-opus-4-1
+  name: 'Anthropic: Claude Opus 4.1'
+  provider: Anthropic
+  family: Anthropic
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 200000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 15.0
+    output_per_m: 75.0
+    cached_input_per_m: 1.5
+    batch_input_per_m: 7.5
+    batch_output_per_m: 37.5
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (claude-opus-4-1)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: true
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 7
+    - 10
+    best_domains:
+    - multi_turn_instruction_following
+    avoid_domains:
+    - low_cost_micro_triage
+    cascade_role: tier_3_escalation
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 133
+    cache_discount_pct: 90
+    cognitive_council_role: The Systems & Code Craftsman
+- id: claude-sonnet-4
+  name: 'Anthropic: Claude Sonnet 4'
+  provider: Anthropic
+  family: Anthropic
+  tier: frontier_proprietary
+  release_date: '2026-10-15'
+  architecture:
+    type: dense
+    total_params_b: null
+    active_params_b: null
+    num_experts: null
+    top_k_experts: null
+    context_window: 200000
+    output_limit: 32000
+    training_cutoff: 2026-06
+  access:
+    license: proprietary
+    open_weights: false
+    api_available: true
+    local_runnable: false
+    vram_fp16_gb: null
+    vram_q4_gb: null
+    quantization_formats: []
+    ollama_tag: null
+    huggingface_id: null
+  pricing:
+    input_per_m: 3.0
+    output_per_m: 15.0
+    cached_input_per_m: 0.3
+    batch_input_per_m: 1.5
+    batch_output_per_m: 7.5
+    free_tier: false
+    notes: Auto-ingested from live OpenRouter telemetry (claude-sonnet-4)
+  benchmarks:
+    swe_bench_verified: null
+    aider_polyglot: null
+    gpqa_diamond: null
+    math_500: null
+    mmlu_pro: null
+    arena_elo: null
+    arc_agi: null
+    humaneval_plus: null
+  capabilities:
+    extended_thinking: false
+    tool_use: true
+    vision: true
+    audio_input: false
+    video_input: false
+    computer_use: true
+    code_execution: false
+    structured_output: true
+    streaming: true
+  routing_profile:
+    complexity_range:
+    - 4
+    - 8
+    best_domains:
+    - multi_turn_instruction_following
+    - ast_code_refactoring
+    - multi_file_editing
+    avoid_domains: []
+    cascade_role: tier_1_worker
+    latency_tier: standard
+    tool_calling_reliability: 0.98
+    instruction_drift_threshold_k: 133
+    cache_discount_pct: 90
+    cognitive_council_role: The Systems & Code Craftsman

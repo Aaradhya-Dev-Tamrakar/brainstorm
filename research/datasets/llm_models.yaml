@@ -1,5 +1,5 @@
 version: 2.0.0
-last_updated: '2026-10-15'
+last_updated: '2026-10-17'
 schema_version: dataset.llm.v2
 author: Aaradhya Dev Tamrakar
 repository: brainstorm/research/datasets
@@ -545,9 +545,9 @@ models:
     ollama_tag: null
     huggingface_id: null
   pricing:
-    input_per_m: 0.75
-    output_per_m: 3.75
-    cached_input_per_m: 0.075
+    input_per_m: 0.825
+    output_per_m: 4.125
+    cached_input_per_m: 0.0825
     batch_input_per_m: 0.1
     batch_output_per_m: 0.4
     free_tier: true
@@ -711,9 +711,9 @@ models:
     ollama_tag: null
     huggingface_id: null
   pricing:
-    input_per_m: 0.45
-    output_per_m: 15.0
-    cached_input_per_m: 0.28
+    input_per_m: 0.304
+    output_per_m: 11.936
+    cached_input_per_m: 0.21
     batch_input_per_m: 0.5
     batch_output_per_m: 1.5
     free_tier: false
@@ -880,9 +880,9 @@ models:
     ollama_tag: deepseek-v4-pro:latest
     huggingface_id: deepseek-ai/DeepSeek-V4-Pro
   pricing:
-    input_per_m: 0.9553
-    output_per_m: 1.9105
-    cached_input_per_m: 0.0796
+    input_per_m: 0.2088
+    output_per_m: 0.4176
+    cached_input_per_m: 0.0174
     batch_input_per_m: 0.25
     batch_output_per_m: 0.75
     free_tier: false
@@ -967,9 +967,9 @@ models:
     ollama_tag: deepseek-v4-1-flash:latest
     huggingface_id: deepseek-ai/DeepSeek-V4.1-Flash
   pricing:
-    input_per_m: 0.0238
-    output_per_m: 0.72
-    cached_input_per_m: 0.0054
+    input_per_m: 0.15
+    output_per_m: 0.6
+    cached_input_per_m: 0.003
     batch_input_per_m: 0.075
     batch_output_per_m: 0.15
     free_tier: false
@@ -1297,9 +1297,9 @@ models:
     ollama_tag: null
     huggingface_id: null
   pricing:
-    input_per_m: 0.03
+    input_per_m: 0.079
     output_per_m: 4.8
-    cached_input_per_m: 0.029
+    cached_input_per_m: 0.078
     batch_input_per_m: 0.4
     batch_output_per_m: 1.2
     free_tier: false
@@ -2738,8 +2738,8 @@ models:
     huggingface_id: null
   pricing:
     input_per_m: 0.016
-    output_per_m: 0.64
-    cached_input_per_m: 0.016
+    output_per_m: 0.9653
+    cached_input_per_m: 0.0034
     batch_input_per_m: 0.008
     batch_output_per_m: 0.32
     free_tier: false

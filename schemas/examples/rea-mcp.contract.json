@@ -1,0 +1,98 @@
+{
+  "$schema": "https://aaradhyadt.dev/schemas/capability.contract.v1.json",
+  "module": "rea-mcp",
+  "version": "6.5.0",
+  "location": "F:\\AaradhyaDT\\rea",
+  "tracking_branch": "rea",
+  "runtime": "node26",
+  "mcp_endpoint": {
+    "transport": "stdio",
+    "command": "C:\\nvm4w\\nodejs\\node.exe",
+    "args": ["F:\\AaradhyaDT\\rea\\scripts\\rea.mjs", "mcp"],
+    "env": {
+      "NODE_ENV": "production"
+    }
+  },
+  "capabilities": [
+    {
+      "id": "binary_diagnostics",
+      "category": "analysis",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "E4",
+      "inputs": {
+        "file_path": "string"
+      },
+      "outputs": {
+        "format": "string",
+        "pe_resources": "object",
+        "rust_metadata": "object",
+        "go_metadata": "object"
+      }
+    },
+    {
+      "id": "electron_fuse_inspection",
+      "category": "analysis",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "E4",
+      "inputs": {
+        "executable_path": "string"
+      },
+      "outputs": {
+        "fuses": "array"
+      }
+    },
+    {
+      "id": "javascript_application_analysis",
+      "category": "analysis",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "E4",
+      "inputs": {
+        "target_path": "string",
+        "detail": "string"
+      },
+      "outputs": {
+        "modules": "array",
+        "ipc_boundaries": "array",
+        "evidence_id": "string"
+      }
+    },
+    {
+      "id": "managed_assembly_analysis",
+      "category": "analysis",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "E4",
+      "inputs": {
+        "assembly_path": "string"
+      },
+      "outputs": {
+        "members": "array",
+        "pinvoke_boundaries": "array"
+      }
+    },
+    {
+      "id": "sqlite_snapshot_inspection",
+      "category": "analysis",
+      "deterministic": true,
+      "side_effects": false,
+      "verification_tier": "E4",
+      "inputs": {
+        "database_path": "string"
+      },
+      "outputs": {
+        "tables": "array",
+        "triggers": "array",
+        "schema": "object"
+      }
+    }
+  ],
+  "metadata": {
+    "author": "Aaradhya Dev Tamrakar (ADT)",
+    "license": "MIT",
+    "repository_url": "https://github.com/AaradhyaDT/rea",
+    "last_updated": "2026-10-17"
+  }
+}

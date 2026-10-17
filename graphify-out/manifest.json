@@ -6,10 +6,10 @@
     "semantic_hash": "1f807d3a09fa490b7f5315226b97cf4b"
   },
   "schemas/ecosystem.registry.json": {
-    "mtime": 1792065090.6394007,
-    "seen": 1792065156.1310291,
-    "ast_hash": "9424a4edec70caf523c4f693bb04ac97",
-    "semantic_hash": "9424a4edec70caf523c4f693bb04ac97"
+    "mtime": 1792254416.8194792,
+    "seen": 1792254518.7230265,
+    "ast_hash": "3a28a1cbbd7a820d86192fe49ac6559e",
+    "semantic_hash": "3a28a1cbbd7a820d86192fe49ac6559e"
   },
   "schemas/examples/AI-Constraint-Solver.contract.json": {
     "mtime": 1790044861.17107,
@@ -102,10 +102,10 @@
     "semantic_hash": "5b018a5335bcfda1d7e220f7b2eaa4d8"
   },
   "schemas/capability-ontology.md": {
-    "mtime": 1792065090.6474352,
-    "seen": 1792065156.1318285,
-    "ast_hash": "e2ef93a080e1e3b210ebb96822cccdff",
-    "semantic_hash": "e2ef93a080e1e3b210ebb96822cccdff"
+    "mtime": 1792254416.8290474,
+    "seen": 1792254518.7237372,
+    "ast_hash": "a9fafc853c2f72860fb3c365f39a896d",
+    "semantic_hash": "a9fafc853c2f72860fb3c365f39a896d"
   },
   "schemas/evidence-policy.md": {
     "mtime": 1790044861.17107,
@@ -138,10 +138,10 @@
     "semantic_hash": "361e8dd333417f7e3bcd00d97cd29842"
   },
   "README.md": {
-    "mtime": 1792065090.6439366,
-    "seen": 1792065156.1315148,
-    "ast_hash": "991c55728564a480023ad2f0f000c7d5",
-    "semantic_hash": "991c55728564a480023ad2f0f000c7d5"
+    "mtime": 1792254416.8255036,
+    "seen": 1792254518.723453,
+    "ast_hash": "de5f8215489f0cedcabad9d0d98de6da",
+    "semantic_hash": "de5f8215489f0cedcabad9d0d98de6da"
   },
   "research/architectures/README.md": {
     "mtime": 1790240407.9593427,
@@ -222,10 +222,10 @@
     "semantic_hash": "7f05ad0aeab58323fb428bb660a57c7f"
   },
   "report/repository-audit.md": {
-    "mtime": 1792065090.6504345,
-    "seen": 1792065156.1315348,
-    "ast_hash": "2b8d633b0fd477f25680d25e1e1a5008",
-    "semantic_hash": "2b8d633b0fd477f25680d25e1e1a5008"
+    "mtime": 1792254416.832518,
+    "seen": 1792254518.7234764,
+    "ast_hash": "ceabc01b3c79913775d6aedb9dbd2713",
+    "semantic_hash": "ceabc01b3c79913775d6aedb9dbd2713"
   },
   "research/experiments/COMPOSE-001.md": {
     "mtime": 1790044861.1331217,
@@ -504,10 +504,10 @@
     "semantic_hash": "4ec04b8704446dd23c4f5cabfc070d1f"
   },
   "research/results/dual_layer_verification_ledger.json": {
-    "mtime": 1792070535.3514853,
-    "seen": 1792070545.5367026,
-    "ast_hash": "e24f7815568572c090553076c5015274",
-    "semantic_hash": "e24f7815568572c090553076c5015274"
+    "mtime": 1792254505.2672296,
+    "seen": 1792254518.7230127,
+    "ast_hash": "d99b291c751410df1113d02386946083",
+    "semantic_hash": "d99b291c751410df1113d02386946083"
   },
   "research/decisions/DEC-001-MEMORY-STRATIFICATION.md": {
     "mtime": 1790044861.1310956,
@@ -4294,5 +4294,17 @@
     "seen": 1792065156.13165,
     "ast_hash": "3e769b66786c7ddd3eb827304b91ca71",
     "semantic_hash": "3e769b66786c7ddd3eb827304b91ca71"
+  },
+  "schemas/examples/rea-mcp.contract.json": {
+    "mtime": 1792254375.158389,
+    "seen": 1792254518.7230816,
+    "ast_hash": "f0ce2ade49d7940d262d809a67d69b65",
+    "semantic_hash": "f0ce2ade49d7940d262d809a67d69b65"
+  },
+  "research/experiments/EXP-REA-001.md": {
+    "mtime": 1792254367.5411105,
+    "seen": 1792254518.7235873,
+    "ast_hash": "636c17cbb51c27a325464f0328a194e7",
+    "semantic_hash": "636c17cbb51c27a325464f0328a194e7"
   }
 }
